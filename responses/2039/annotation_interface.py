@@ -16,7 +16,8 @@ INFFeat=INFA[3:] ##e.g., 'TU_Gramm', 'U_Answer', etc.
 INFFeat2 = INFFeat.split('_')[1]
 INFItem=INFA.split('_')[0] ##e.g., 'I06TU', 'I11T'
 INFPIN=INFB.split('.')[0] ##e.g., '2039'
-ipath = '../../../all_items/figures_300_400/'
+ipath = '../../all_items/figures_300_400/'
+FeatNames = ['Gramm', 'Nativ', 'Interp', 'Core', 'Verif', 'Answer']
 
 def get_allresponses(csv_in):
 	allresponses = []
@@ -33,24 +34,31 @@ RespStringList = get_allresponses(inputfilename)
 RespDenominator = len(RespStringList)
 
 header = [INFItem, INFItem+'_'+INFFeat2]
-with open('anno_'+inputfilename, 'w') as cfile:
+with open('TEMP_'+inputfilename, 'w') as cfile:
 	cwriter = csv.writer(cfile, dialect=csv.excel)
 	cwriter.writerow(header)
 
 def write_type_csv(resp, anno):
 	row=[resp,anno]
-	with open('anno_'+inputfilename, 'a') as cfile:
+	with open('TEMP_'+inputfilename, 'a') as cfile:
 		cwriter = csv.writer(cfile, dialect=csv.excel)
 		cwriter.writerow(row)
 		
 def EndOfFile():
-	InputName = 'anno_'+inputfilename
-	FinishedName = InputName.split('.')[0]+"FIN.csv"
-	copyfile(InputName, FinishedName)
+	InputName = 'TEMP_'+inputfilename
+	FinishedName = 'anno'+InputName[4:]
+	try:
+		for fn in FeatNames:
+			if fn in FinishedName:
+				copyfile(InputName, './'+fn+'/'+FinishedName)
+			else: pass	
+	except:
+		copyfile(InputName, FinishedName)
+	os.remove(InputName)
 		
 def back_button_edit():
 	oldrows=[]
-	with open('anno_'+inputfilename) as oldfile:
+	with open('TEMP_'+inputfilename) as oldfile:
 		oldreader = csv.reader(oldfile, dialect=csv.excel)
 		for orow in oldreader:
 			oldrows.append(orow)
@@ -59,8 +67,8 @@ def back_button_edit():
 		newwriter = csv.writer(newfile, dialect=csv.excel)
 		for nrow in oldrows:
 			newwriter.writerow(nrow)
-	os.remove('anno_'+inputfilename)
-	os.rename('TEMP_GO_BACK_anno_'+inputfilename, 'anno_'+inputfilename)
+	os.remove('TEMP_'+inputfilename)
+	os.rename('TEMP_GO_BACK_anno_'+inputfilename, 'TEMP_'+inputfilename)
 
 
 FeatDict = {
@@ -71,7 +79,7 @@ FeatDict = {
     'U_Core':'Based on the image and question, does the (untargeted) response meet the criteria for CORE EVENT?',
     'T_Core':'Based on the image and question, does the (targeted) response meet the criteria for CORE EVENT?',
     'U_Interp':'Based on the image and question, does the (untargeted) response meet the criteria for INTERPRETABILITY?',
-    'T_Interp':'Based on the image and question, does the (targeted) response meet the criteria for INTERPRETABILITY?',
+    'T_Interp':'Does the (targeted) response meet the criteria for INTERPRETABILITY?',
     'U_Verif':'Based on the image and question, does the (untargeted) response meet the criteria for VERIFIABILITY?',
     'T_Verif':'Based on the image and question, does the (targeted) response meet the criteria for VERIFIABILITY?'}
 
