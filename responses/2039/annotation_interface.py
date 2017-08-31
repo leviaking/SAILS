@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-##6/9/2017: Functionality to be added: Go back; Review "Maybes"; Resume;
-
+##usage example: python annotation_interface.py I03T_Interp-2039.csv
 from Tkinter import *
 import tkFont, sys, csv, itertools, os
 from PIL import ImageTk, Image
@@ -87,7 +86,36 @@ TargFeats = ['T_Answer', 'T_Core', 'T_Interp', 'T_Verif']
 UntargFeats = ['U_Answer', 'U_Core', 'U_Interp', 'U_Verif']
 CombinedFeats = ['TU_Gramm', 'TU_Nativ']
 UntargetedQ = 'What is happening?'
-TargetedQs = ['What is the boy doing?', 'What is the boy doing?', 'What is the man doing?', 'What is the boy doing?', 'What is the teacher doing?', 'What is the boy doing?', 'What is the bird doing?', 'What is the waiter doing?', 'What is the girl doing?', 'What is the baby doing?', 'What is the boy doing?', 'What is the woman doing?', 'What is the man doing?', 'What is the man doing?', 'What is the man doing?', 'What is the frog doing?', 'What is the man doing?', 'What is the girl doing?', 'What is the man doing?', 'What is the woman doing?', 'What is the girl doing?', 'What is the boy doing?', 'What is the woman doing?', 'What is the doctor doing?', 'What is the boy doing?', 'What is the dog doing?', 'What is the man doing?', 'What is the girls doing?', 'What is the man doing?', 'What is the woman doing?', 'What is the woman doing?']
+TargetedQs = ['What is the boy doing?',
+			  'What is the boy doing?',
+			  'What is the man doing?',
+			  'What is the boy doing?',
+			  'What is the teacher doing?',
+			  'What is the boy doing?',
+			  'What is the bird doing?',
+			  'What is the waiter doing?',
+			  'What is the girl doing?',
+			  'What is the baby doing?',
+			  'What is the boy doing?',
+			  'What is the woman doing?',
+			  'What is the man doing?',
+			  'What is the man doing?',
+			  'What is the man doing?',
+			  'What is the frog doing?',
+			  'What is the girl doing?',
+			  'What is the man doing?',
+			  'What is the woman doing?',
+			  'What is the girl doing?',
+			  'What is the boy doing?',
+			  'What is the woman doing?',
+			  'What is the doctor doing?',
+			  'What is the boy doing?',
+			  'What is the dog doing?',
+			  'What is the man doing?',
+			  'What is the girl doing?',
+			  'What is the man doing?',
+			  'What is the woman doing?',
+			  'What is the woman doing?']
 CombinedQ = ''
 
 AP = FeatDict[INFFeat]
