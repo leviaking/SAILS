@@ -430,15 +430,15 @@ Untargeted (I11U): What is happening? \\
 
 \subsection{Verifiability} \label{subsec:verifiability}
 
-The verifiability feature primarily considers the following question: \textit{Exactly as written, is all information in the response verifiable and relevant based on the image?}
+The verifiability feature primarily considers the following question: \textit{Exactly as written, is all information in the response verifiable (or reasonably inferred) based on the image?}
 
-This feature is mainly concerned with identifying four issues in responses: modality, inaccurate information, unverifiable inferences and irrelevant information. 
+This feature is mainly concerned with identifying inaccurate information and unverifiable inferences. 
 
 \subsubsection{Contextuality of verifiability} Annotation for the verifiability feature is contextual; it must consider the image presented in the item. 
 
 \subsubsection{Language problems} Responses that are unintelligible should be annotated ``no'' for verifiability; if the information in the response cannot be clearly understood, then it cannot be verified. However, grammar and spelling problems do not automatically result in a ``no'' for verifiability. Responses that contain errors but remain reasonably clear and interpretable should be judged for verifiability like any other response.
 
-\subsubsection{Alternative interpretations} Although every effort was made to produce unambiguous PDT images, reasonable alternative interpretations are seen among the responses for a very small number of items. For example, Figure~\ref{fig:deliver-package} shows a woman seated behind a desk and a man holding a package in front of the desk. Most participants interpret the scene as the man delivering a package to the woman. However, a small number of participants interpret this scene as a man picking up a package from the woman -- a reasonable alternative. Such reasonable alternatives should be annotated ``yes'' for verifiability. Annotators should use their own in judgement in annotating responses that contain variations in interpretation.
+\subsubsection{Alternative interpretations} Although every effort was made to produce unambiguous PDT images, reasonable alternative interpretations are seen among the responses for a very small number of items. For example, Figure~\ref{fig:deliver-package} shows a woman seated behind a desk and a uniformed man standing across from her holding a package. Most participants interpret the scene as the man delivering a package to the woman. However, a small number of participants interpret this scene as a man picking up a package from the woman -- a reasonable alternative. Such reasonable alternatives should be annotated ``yes'' for verifiability. Annotators should use their own in judgement in annotating responses that contain variations in interpretation.
 
 \begin{figure}[h]
 \begin{center}
@@ -446,17 +446,25 @@ This feature is mainly concerned with identifying four issues in responses: moda
 \hline
 \includegraphics[width=0.4\columnwidth,trim=0 0 0 -3]{figures/I03.jpg}\\
 \hline
-Targeted (I11T): What is the man doing?\\
+Targeted (I03T): What is the man doing?\\
 \hline
-Untargeted (I11U): What is happening? \\
+Untargeted (I03U): What is happening? \\
 \hline
 \end{tabular}
 \end{center}
-\caption{Item 3, for which the core event is roughly \textit{man delivering a package}.}
+%\caption{Item 3, for which the core event is roughly \textit{man delivering a package}.}
+\caption{Item 3, in the targeted and untargeted versions.}
 \label{fig:deliver-package}
 \end{figure}
 
 \subsubsection{Responses in the form of a question} \label{subsubsec:verif-question} A small number of responses among the data take the form of a question. In general, such responses are not considered verifiable; the content of the question is not an assertion of facts and cannot be compared against the facts of the image. 
+
+\paragraph{INTERP: Questions and modals} \lk{I pasted this here for reference. It needs to be removed when the issue is resolved.} \label{para:interp-question} A small number of responses among the data take the form of a question. Some of these responses nonetheless present an assertion. For example, \textit{Why is the baby crying?} indicates that \textit{the baby is crying}. This response should be annotated ``yes'' for interpretability, because the assertion it contains meets the criteria for interpretability.
+
+Some responses in the form of a question lack an assertion that can be judged for interpretability, e.g., \textit{Do you think the boy likes pizza?} Such responses are not interpretable.
+%In general, such responses are not considered interpretable; the content of the question is not an assertion and thus the response could not be illustrated without some level of abstraction or symbolic representation.
+
+Responses that use modality may be considered interpretable if the modality does not effect information crucial to producing a visual representation. For example, \textit{The boy is eating so much pizza he may get fat}, it is stated as fact that a boy is eating pizza, so this could be visually represented. The modal part of this sentence contains unnecessary detail and could be ignored. In contrast, in \textit{The man may be proposing marriage to the woman} the modality has scope over the whole predicate, so this response should be marked ``no'' for interpretability. (The man \textit{may} be proposing marriage to the woman, but there is no limit to the number of things he \textit{may} be doing.)
 
 \subsubsection{Modality} Modality in a response can impact the verifiability. For annotation purposes, a sentence is \textit{modal} if it conveys the speaker's belief about the possibility of that sentence, using a modal verb (\textit{may, should,} etc.), or a modal adverb (\textit{maybe, perhaps,} etc.). (This is known as epistemic modality, because it involves the speaker's belief about the facts of the world.)
 
@@ -553,19 +561,81 @@ A less common problem to be considered under this feature is the presentation of
 
 \subsection{Answerhood} \label{subsec:answerhood}
 
-The answerhood feature primarily considers the following question: \textit{Exactly as written, does the response make an attempt to answer the question?}
+The answerhood feature primarily considers the following question: \textit{Exactly as written, does the response make an attempt to answer the specific question asked?}
 
-\subsubsection{Contextuality of answerhood} Annotation for the answerhood feature is contextual; it must consider the image and question presented in the item.
+\subsubsection{Contextuality of answerhood} Annotation for the answerhood feature is contextual; it must consider the question presented in the item. The image is not considered as context here.
 
-\subsubsection{Accuracy} Answerhood should be annotated without regard to the accuracy of the response. Consider Figure~\ref{fig:eat-pizza} for example. The response \textit{He's eating a sandwich} should be annotated ``yes'' because it does attempt to answer the question, even though the boy is clearly eating pizza. The accuracy of the response is accounted for with the core event and verifiability features.
+\subsubsection{Defining \textit{answerhood}} As noted above, responses should address the specific question in the prompt. In other words, the response must answer the exact question given; merely answering a \textit{similar} or \textit{related} question is not adequate. Figure~\ref{fig:answerhood-examples} presents a number of example responses and answerhood annotations. 
 
-\subsubsection{Targeted vs. untargeted items} The answerhood feature, like \textit{core event}, is dependent on the differences in the targeted and untargeted versions of the items. In other words, a sentence that may receive a ``no'' annotation as a targeted response could receive a ``yes'' annotation as an untargeted response. (The opposite should not be possible, as the targeted version of an item always asks a more specific question than its untargeted counterpart.) For example, consider Figure~\ref{fig:deliver-package} and the targeted and untargeted questions: \textit{What is the man doing?} and \textit{What is happening?} The response \textit{The man is delivering a package} would be annotated ``yes'' for core event for either version, while \textit{The woman is receiving a package} would be annotated ``yes'' only for the untargeted version.
+\begin{figure}[h!]
+\begin{center}
+\begin{tabular}{|r|l|c|l|}
+\hline
+\multicolumn{4}{|c|}{\includegraphics[width=0.4\columnwidth,trim=-4 0 -4 -4]{figures/ex01.jpg}}\\
+\hline
+& \textbf{Response} & \textbf{An.} & \textbf{Appropriate question} \\
+\hline
+1 & Giving a patient flowers. & yes & (prompt) \\
+\hline
+2 & She's giving flowers to a patient. & yes & (prompt) \\
+\hline
+3 & The nurse is giving away flowers. & yes & (prompt) \\
+\hline
+4 & A nurse is giving away flowers. & no & What is happening? \\
+\hline
+5 & A young nurse is giving away flowers. & no & What is happening? \\
+\hline
+6 & The woman is giving the patient flowers. & no & What is the woman doing? \\
+\hline
+7 & The nurse is happy. & no & How is the nurse? \\
+\hline
+8 & The nurse is smiling. & yes & (prompt) \\
+\hline
+9 & The nurse gives flowers away. & no & What does the nurse do? \\
+\hline
+10 & The nurse gave the patient roses. & no & What did the nurse do? \\
+\hline
+11 & The young nurse is giving out flowers. & no & What is the young nurse doing? \\
+\hline
+12 & The smiling nurse is giving away roses. & no & What is the smiling nurse doing? \\
+\hline
+13 & This nurse is giving away flowers. & no & What is this nurse doing? \\
+\hline
+14 & That nurse is giving her patient flowers. & no & What is that nurse doing? \\
+\hline
+15 & Nurse is giving away flowers. & no & What is Nurse doing? \\
+\hline
+16 & The patient is receiving roses from the nurse. & no & What is the patient doing?\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Example responses to targeted Item 2 (\textit{What is the nurse doing?}) and their answerhood annotations (``An.''). A particular response could be appropriate for multiple questions, but a likely example is given for each.}
+\label{fig:answerhood-examples}
+\end{figure}
 
-\paragraph{Verb forms} As all items depict some core event or action and ask about that action in the present progressive, responses should contain a dynamic verb to describe that action. This is a key consideration. Even targeted items receive a number of responses that contain only a stative verb describing the state of the situation depicted in the image. Such responses leave the action of the item for the reader to infer and do not directly answer the question, so they receive a ``no'' annotation for this feature. For example, ``The boy is confused,'' a response to Item 11 (Figure~\ref{fig:ask-question}), should receive a ``no'' annotation (for both the targeted and untargeted versions) because it describes a state depicted in the image but does not directly answer the question. Likewise, ``The boy is hungry,'' a response to Item 2 (Figure~\ref{fig:eat-pizza}) is annotated ``no'' for answerhood, because it does not directly answer the question. 
 
-The PDT items ask what \textit{is happening} or what a particular figure in the image \textit{is doing}. Dynamic verbs are appropriate for responses because they describe an event or action that happens and typically has a beginning and end. Dynamic verbs often take the progressive form (\textit{is eating}, \textit{was dancing}), and the majority of responses use progressive forms. Stative verbs are generally inappropriate for this task as they describe a state or condition. Stative verbs cannot be used in the progressive form (with rare and arguably non-stative exceptions). Roughly speaking, stative verbs can be categorized as verbs of cognition (\textit{Susan \textbf{knows} karate}; \textit{Sabrina \textbf{believes} in science}) and verbs of relation (\textit{Alex \textbf{resembles} his father}).
+\subsubsection{Accuracy} Answerhood should be annotated without regard to the accuracy of the response. Consider Figure~\ref{fig:eat-pizza} for example. The targeted version asks \textit{What is the boy doing?}; the response \textit{He's eating a sandwich} should be annotated ``yes'' because it does attempt to answer the question, even though the boy is clearly eating pizza. Moreover, \textit{The boy is riding a bicycle} would also be annotated ``yes'', despite the fact that no bicycle appears. The accuracy of the response is accounted for with the core event and verifiability features.
 
-Although most responses use a present progressive  verb (e.g., ``He \textit{is eating} pizza''), responses using the simple present form of a verb (``He eats pizza'') are also common among the data. This form is commonly used to describe general truths or habitual actions, like \textit{The horse eats grass} or \textit{The river flows east}. In most situations, in English the simple present would not be used to describe the actions in the PDT items, and particularly not in response to the present progressive questions in the PDT. In annotating this feature, however, this is not a hard rule. While it may not seem native-like, a response with the present simple form of a verb may still be annotated as ``yes'' for this feature if it could reasonably be interpreted to describe the particular event shown in the image. Thus, an annotator should annotate ``He eats pizza'' as ``yes'', because the response could be interpreted to refer to this particular event, rather than a habitual action. (The oddness of such a response is captured under the \textit{native-likeness} feature.)
+\subsubsection{Targeted vs. untargeted items} The answerhood feature, like \textit{core event}, is dependent on the differences in the targeted and untargeted versions of the items. In other words, a sentence that may receive a ``no'' annotation as a targeted response could receive a ``yes'' annotation as an untargeted response. (The opposite should not be possible, as the targeted version of an item always asks a more specific question than its untargeted counterpart.) For example, consider Figure~\ref{fig:deliver-package} and the targeted and untargeted questions: \textit{What is the man doing?} and \textit{What is happening?} The response \textit{The man is delivering a package} would be annotated ``yes'' for answerhood for either version, while \textit{The woman is receiving a package} would be annotated ``yes'' only for the untargeted version.
+
+\subsubsection{Common answerhood concerns}
+
+\paragraph{Verb forms} 
+The PDT items ask what \textit{is happening} or what a particular figure in the image \textit{is doing}. Therefore, responses should contain a dynamic verb to describe the action in the image. (Some acceptable responses may contain only noun phrases; see Section~\ref{para:answerhood-events}.) This is a key consideration. A significant number of responses merely describe the state of affairs depicted in the image. Such responses leave the action of the item for the reader to infer and do not directly answer the question, so they receive a ``no'' annotation for this feature. For example, ``The nurse is happy,'' shown in Figure~\ref{fig:answerhood-examples}, should receive a ``no'' annotation (for both the targeted and untargeted versions) because it describes a state depicted in the image but does not directly answer the question of what the nurse is \textit{doing}. Likewise, ``The boy loves pizza,'' a response to Item 2 (Figure~\ref{fig:eat-pizza}) is annotated ``no'' for answerhood, because it does not directly answer the question.
+
+Dynamic verbs are appropriate for responses because they describe an event or action that happens and typically has a beginning and end. Dynamic verbs often take the progressive form (\textit{is eating}, \textit{was dancing}), and the majority of responses use progressive forms. Stative verbs are inappropriate for this task as they describe a state or condition. Stative verbs cannot be used in the progressive form (with rare and arguably non-stative exceptions). Roughly speaking, stative verbs can be categorized as verbs of cognition (\textit{Susan \textbf{knows} karate}; \textit{Sabrina \textbf{believes} in the team}) and verbs of relation (\textit{Josh \textbf{resembles} his father}). Likewise, sentences that use only a copula and a complement (e.g., \textit{The nurse is happy; The girl is tall; The boy seems tired}) do not satisfy the answerhood requirements.
+
+Although most responses use a present progressive  verb (e.g., ``He \textit{is eating} pizza''), responses using the simple present form of a verb (``He eats pizza'') are also common among the data. This form is commonly used to describe general truths or habitual actions, like \textit{The horse eats grass} or \textit{The river flows east}. Responses that use the simple present should be annotated ``no'' for answerhood. In most situations, in English the simple present would not be used to describe the actions in the PDT items, and particularly not in response to the present progressive questions in the PDT. 
+%In annotating this feature, however, this is not a hard rule. While it may not seem native-like, a response with the present simple form of a verb may still be annotated as ``yes'' for this feature if it could reasonably be interpreted to describe the particular event shown in the image. Thus, an annotator should annotate ``He eats pizza'' as ``yes'', because the response could be interpreted to refer to this particular event, rather than a habitual action.
+
+\paragraph{Events and activities}
+\label{para:answerhood-events}
+In some cases, a noun phrase may be an adequate and natural response to the PDT questions. For targeted items (\textit{What is the X doing?}), a response in the form of a noun or noun phrase that can be \textit{done} should be accepted. For example, \textit{gymnastics}, \textit{origami} and \textit{the laundry} are acceptable in response to \textit{What is the woman doing?}. Likewise, for untargeted items, a response in the form of a noun or noun phrase that can \textit{happen} should be accepted. For example, \textit{an interview}, \textit{a volleyball game} and \textit{a math class} are acceptable responses to \textit{What is happening?}.
+
+\paragraph{Variations on the targeted subject}
+All targeted questions take the form of \textit{What is the X doing?}. Responses should use the same subject provided in the question. This subject should be in the subject position of the response; if the response contains only a predicate, the subject of the question should be understood as the subject of the response. Responses should not alter the subject in any way, or move it from the subject position (as in passivization). This is in keeping with the requirement to answer the question exactly as it is asked. Several relevant examples are presented in Figure~\ref{fig:answerhood-examples}.
+
+To put this concisely, responses to targeted items must either repeat the subject exactly as presented in the question or drop the subject so that it is understood from the question. To clarify, the subject should not be altered in terms of definiteness, number, specificity, role or any other characteristic. Such responses add context to the question, and in order to evaluate answerhood, this new information would need to verified to ensure that the subject presented in the response is indeed the subject provided in the question. Verifying information for the sake of answerhood adds noise and complication, so verifiability is left to its own feature. For answerhood purposes, \textit{a nurse} is not the same as \textit{the nurse}. Likewise, neither \textit{nurse}, \textit{the young nurse}, \textit{the nurse who is standing}, or \textit{this nurse} is the same as \textit{the nurse}. 
 
 \clearpage
 
@@ -592,139 +662,139 @@ I03T: What is the man doing? & I11T: What is the boy doing? \\
 
 \clearpage 
 
-\begin{table}[h]
-\begin{center}
-\begin{tabular}{|l|p{11cm}|c|c|c|c|c|c|}
-\hline
-& Response & G & N & I & C & V & A \\
-\hline
-\hline
-1 & dancing & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-2 & the boy is dancing along the music & 0 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-3 & the man is dancing with song & 0 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-4 & the boy dances with music on & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-5 & a boy is dancing around with his smile on his face & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-\hline
-6 & the kid is eating the pizza & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-7 & the boy enjoys his pizza & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-8 & pizza is this boy's favorite food & 1 & 1 & 0 & 0 & 0 & 0 \\
-\hline
-9 & he's pigging out & 1 & 1 & 1 & 0 & 1 & 1 \\
-\hline
-10 & the boy is eating pepperoni pizza & 1 & 1 & 1 & 1 & 0 & 1 \\
-\hline
-\hline
-11 & the man is giving a box to a woman & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-12 & a woman is receiving a box from a man & 1 & 1 & 1 & 0 & 1 & 0 \\
-\hline
-13 & he is handing a package & 0 & 0 & 0 & 0 & 1 & 1 \\
-\hline
-14 & the man is putting the package to the woman & 0 & 0 & 1 & 0 & 1 & 1 \\
-\hline
-15 & he is giving a gift to a young woman & 1 & 1 & 1 & 0 & 0 & 1 \\
-\hline
-16 & the man is sending a package to a woman & 1 & 1 & 1 & 0 & 0 & 1 \\
-\hline
-17 & the delivery man is picking up a woman's package & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-\hline
-18 & the boy is asking a question & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-19 & questioning & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-20 & the boy is asking the older guy a question & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-21 & he's asking his dad a question & 1 & 1 & 1 & 1 & 0 & 1 \\
-\hline
-22 & the little is asking a question & 0 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-23 & the boy asks a question to his father & 1 & 0 & 1 & 1 & 0 & 1 \\
-\hline
-24 & the man is listening to the boy & 1 & 1 & 1 & 0 & 1 & 0 \\
-\hline
-25 & a man is being asked questions by a boy & 1 & 1 & 1 & 1 & 1 & 0 \\
-\hline
+%\begin{table}[h]
+%\begin{center}
+%\begin{tabular}{|l|p{11cm}|c|c|c|c|c|c|}
 %\hline
-\end{tabular}
-\end{center}
-\caption{Targeted example responses and annotations for the items shown in Figure~\ref{fig:appendix1}.}
-\label{tab:targeted}
-\end{table}
-
-
-\begin{table}[h]
-\begin{center}
-\begin{tabular}{|l|p{11cm}|c|c|c|c|c|c|}
-\hline
-& Response & G & N & I & C & V & A \\
-\hline
-\hline
-1 & dancing & 1 & 1 & 0 & 0 & 1 & 1 \\
-\hline
-2 & the boy is dancing along the music & 0 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-3 & the man is dancing with song & 0 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-4 & the boy dances with music on & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-5 & a boy is dancing around with his smile on his face & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-\hline
-6 & the kid is eating the pizza & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-7 & the boy enjoys his pizza & 1 & 0 & 1 & 1 & 1 & 1 \\
-\hline
-8 & pizza is this boy's favorite food & 1 & 1 & 0 & 0 & 0 & 0 \\
-\hline
-9 & he's pigging out & 1 & 1 & 1 & 0 & 1 & 1 \\
-\hline
-10 & the boy is eating pepperoni pizza & 1 & 1 & 1 & 1 & 0 & 1 \\
-\hline
-\hline
-11 & the man is giving a box to a woman & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-12 & a woman is receiving a box from a man & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-13 & he is handing a package & 0 & 0 & 0 & 0 & 1 & 1 \\
-\hline
-14 & the man is putting the package to the woman & 0 & 0 & 1 & 0 & 1 & 1 \\
-\hline
-15 & he is giving a gift to a young woman & 1 & 1 & 1 & 0 & 0 & 1 \\
-\hline
-16 & the man is sending a package to a woman & 1 & 1 & 1 & 0 & 0 & 1 \\
-\hline
-17 & the delivery man is picking up a woman's package & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-\hline
-18 & the boy is asking a question & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-19 & questioning & 1 & 1 & 0 & 0 & 1 & 1 \\
-\hline
-20 & the boy is asking the older guy a question & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-21 & he's asking his dad a question & 1 & 1 & 1 & 1 & 0 & 1 \\
-\hline
-22 & the little is asking a question & 0 & 0 & 0 & 0 & 0 & 0 \\
-\hline
-23 & the boy asks a question to his father & 1 & 0 & 1 & 1 & 0 & 1 \\
-\hline
-24 & the man is listening to the boy & 1 & 1 & 1 & 0 & 1 & 0 \\
-\hline
-25 & a man is being asked questions by a boy & 1 & 1 & 1 & 1 & 1 & 1 \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Untargeted example responses and annotations for the items shown in Figure~\ref{fig:appendix1}.}
-\label{tab:untargeted}
-\end{table}
+%& Response & G & N & I & C & V & A \\
+%\hline
+%\hline
+%1 & dancing & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%2 & the boy is dancing along the music & 0 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%3 & the man is dancing with song & 0 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%4 & the boy dances with music on & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%5 & a boy is dancing around with his smile on his face & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%\hline
+%6 & the kid is eating the pizza & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%7 & the boy enjoys his pizza & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%8 & pizza is this boy's favorite food & 1 & 1 & 0 & 0 & 0 & 0 \\
+%\hline
+%9 & he's pigging out & 1 & 1 & 1 & 0 & 1 & 1 \\
+%\hline
+%10 & the boy is eating pepperoni pizza & 1 & 1 & 1 & 1 & 0 & 1 \\
+%\hline
+%\hline
+%11 & the man is giving a box to a woman & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%12 & a woman is receiving a box from a man & 1 & 1 & 1 & 0 & 1 & 0 \\
+%\hline
+%13 & he is handing a package & 0 & 0 & 0 & 0 & 1 & 1 \\
+%\hline
+%14 & the man is putting the package to the woman & 0 & 0 & 1 & 0 & 1 & 1 \\
+%\hline
+%15 & he is giving a gift to a young woman & 1 & 1 & 1 & 0 & 0 & 1 \\
+%\hline
+%16 & the man is sending a package to a woman & 1 & 1 & 1 & 0 & 0 & 1 \\
+%\hline
+%17 & the delivery man is picking up a woman's package & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%\hline
+%18 & the boy is asking a question & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%19 & questioning & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%20 & the boy is asking the older guy a question & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%21 & he's asking his dad a question & 1 & 1 & 1 & 1 & 0 & 1 \\
+%\hline
+%22 & the little is asking a question & 0 & 0 & 0 & 0 & 0 & 0 \\
+%\hline
+%23 & the boy asks a question to his father & 1 & 0 & 1 & 1 & 0 & 1 \\
+%\hline
+%24 & the man is listening to the boy & 1 & 1 & 1 & 0 & 1 & 0 \\
+%\hline
+%25 & a man is being asked questions by a boy & 1 & 1 & 1 & 1 & 1 & 0 \\
+%\hline
+%%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Targeted example responses and annotations for the items shown in Figure~\ref{fig:appendix1}.}
+%\label{tab:targeted}
+%\end{table}
+%
+%
+%\begin{table}[h]
+%\begin{center}
+%\begin{tabular}{|l|p{11cm}|c|c|c|c|c|c|}
+%\hline
+%& Response & G & N & I & C & V & A \\
+%\hline
+%\hline
+%1 & dancing & 1 & 1 & 0 & 0 & 1 & 1 \\
+%\hline
+%2 & the boy is dancing along the music & 0 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%3 & the man is dancing with song & 0 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%4 & the boy dances with music on & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%5 & a boy is dancing around with his smile on his face & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%\hline
+%6 & the kid is eating the pizza & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%7 & the boy enjoys his pizza & 1 & 0 & 1 & 1 & 1 & 1 \\
+%\hline
+%8 & pizza is this boy's favorite food & 1 & 1 & 0 & 0 & 0 & 0 \\
+%\hline
+%9 & he's pigging out & 1 & 1 & 1 & 0 & 1 & 1 \\
+%\hline
+%10 & the boy is eating pepperoni pizza & 1 & 1 & 1 & 1 & 0 & 1 \\
+%\hline
+%\hline
+%11 & the man is giving a box to a woman & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%12 & a woman is receiving a box from a man & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%13 & he is handing a package & 0 & 0 & 0 & 0 & 1 & 1 \\
+%\hline
+%14 & the man is putting the package to the woman & 0 & 0 & 1 & 0 & 1 & 1 \\
+%\hline
+%15 & he is giving a gift to a young woman & 1 & 1 & 1 & 0 & 0 & 1 \\
+%\hline
+%16 & the man is sending a package to a woman & 1 & 1 & 1 & 0 & 0 & 1 \\
+%\hline
+%17 & the delivery man is picking up a woman's package & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%\hline
+%18 & the boy is asking a question & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%19 & questioning & 1 & 1 & 0 & 0 & 1 & 1 \\
+%\hline
+%20 & the boy is asking the older guy a question & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%21 & he's asking his dad a question & 1 & 1 & 1 & 1 & 0 & 1 \\
+%\hline
+%22 & the little is asking a question & 0 & 0 & 0 & 0 & 0 & 0 \\
+%\hline
+%23 & the boy asks a question to his father & 1 & 0 & 1 & 1 & 0 & 1 \\
+%\hline
+%24 & the man is listening to the boy & 1 & 1 & 1 & 0 & 1 & 0 \\
+%\hline
+%25 & a man is being asked questions by a boy & 1 & 1 & 1 & 1 & 1 & 1 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Untargeted example responses and annotations for the items shown in Figure~\ref{fig:appendix1}.}
+%\label{tab:untargeted}
+%\end{table}
 
 \bibliographystyle{plainnat}
 \bibliography{levi-bib}

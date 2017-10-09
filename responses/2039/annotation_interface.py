@@ -83,7 +83,9 @@ FeatDict = {
     'T_Verif':'Based on the image and question, does the (targeted) response meet the criteria for VERIFIABILITY?'}
 
 TargFeats = ['T_Answer', 'T_Core', 'T_Interp', 'T_Verif']
+NoImgTargFeats = ['T_Answer', 'T_Interp']
 UntargFeats = ['U_Answer', 'U_Core', 'U_Interp', 'U_Verif']
+NoImgUntargFeats = ['U_Answer', 'U_Interp']
 CombinedFeats = ['TU_Gramm', 'TU_Nativ']
 UntargetedQ = 'What is happening?'
 TargetedQs = ['What is the boy doing?',
@@ -165,7 +167,7 @@ class App(Frame):
 		self.AnnotationPromptStringVar.set(self.AnnotationPrompt)
 
 		# ## IMAGE DISPLAY (working)
-		if INFFeat not in CombinedFeats:
+		if INFFeat not in CombinedFeats and INFFeat not in NoImgTargFeats and INFFeat not in NoImgUntargFeats:
 			self.TempImage = ImageTk.PhotoImage(Image.open(self.imagepath))
 			self.CurrentImage = Label(self, image=self.TempImage)
 			self.CurrentImage.grid(row=1, column=0, sticky=EW)
