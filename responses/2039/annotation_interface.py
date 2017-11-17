@@ -15,7 +15,8 @@ INFFeat=INFA[3:] ##e.g., 'TU_Gramm', 'U_Answer', etc.
 INFFeat2 = INFFeat.split('_')[1]
 INFItem=INFA.split('_')[0] ##e.g., 'I06TU', 'I11T'
 INFPIN=INFB.split('.')[0] ##e.g., '2039'
-ipath = '../../all_items/figures_300_400/'
+# ipath = '../../all_items/figures_300_400/'
+ipath = '../../all_items/figures_200_266/'
 FeatNames = ['Gramm', 'Nativ', 'Interp', 'Core', 'Verif', 'Answer']
 
 def get_allresponses(csv_in):
@@ -83,7 +84,7 @@ FeatDict = {
     'T_Verif':'Based on the image and question, does the (targeted) response meet the criteria for VERIFIABILITY?'}
 
 TargFeats = ['T_Answer', 'T_Core', 'T_Interp', 'T_Verif']
-NoImgTargFeats = ['T_Answer', 'T_Interp']
+NoImgTargFeats = ['T_Interp']
 UntargFeats = ['U_Answer', 'U_Core', 'U_Interp', 'U_Verif']
 NoImgUntargFeats = ['U_Answer', 'U_Interp']
 CombinedFeats = ['TU_Gramm', 'TU_Nativ']

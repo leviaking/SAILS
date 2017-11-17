@@ -1,0 +1,56 @@
+2017-11-02
+I've had to revisit the Answerhood annotation this week. I realized that in my attempts to automate some of the untargeted annotation based on the targeted annotation, I made some mistakes. I simply reannotated the entire targeted response set under the guidelines for the untargeted responses. Some of this was automated, some was manual. What I should have done instead was this: where appropriate, automatically apply the targeted annotations to any identical responses in the untargeted set, and then manually annotate the remaining responses.
+
+So I now have a set of annotated targeted responses for which it would be appropriate to apply the annotation to any untargeted duplicates. My current task is to write a short script to do the string matching and autoannote the duplicates. I'm calling this applyTargetedAnnoToUntargeted.py.
+
+KitsuneMBP:answerhood_working leviking$ for UF in $(ls *.csv); do cp $UF ${UF/.csv/TOTALLYTEMP.csv} ; rm $UF ; perl -pe 's/\r\n|\n|\r/\r\n/g' ${UF/.csv/TOTALLYTEMP.csv} > $UF ; done
+
+
+2017-11-06. Meeting with Markus.
+
+Accomplished since last week:
+Re-annotated the untargeted Answerhood responses after a mix-up.
+Annotated targeted Core Event.
+Read Turner (2000)
+
+
+Discuss Turner (2000) ("Rater Voices").
+Developing rating scales: (See also Turner & Upshur (1996))
+0. Consensus on testing construct
+1. Divide sample into two halves -- UPPER, LOWER.
+2. Discuss, revise, consensus
+3. Find (binary) characteristics that distinguish upper & lower
+
+
+November/December timeline:
+Complete untargeted Core Event annotation (11/8 Wed)
+Re-annotate all "maybe" responses (11/20 Mon)
+Write Task/Participants/Data sections (11/24 Fri)
+
+Read Turner & Upshur (1996) [PAYWALLED; find offline?], Chalhoub-Deville (1997)
+Establish holistic rating scale [performance-based rubrics, such as empirically derived, binary choice, boundary definition (EBB) scales]
+	3 item sample
+		Split into Upper & Lower; Examine/discuss (11/10 Fri) [Ask Sabrina to help here]
+		Split Upper (into L3 & L4?); Examine/discuss (11/24 Fri)
+		Split Lower (into L1 & L2?); Examine/discuss (11/24 Fri)
+	Write up holistic rating guidelines (11/30 Fri)
+		
+Implement holistic rating scale for all responses (12/14 Thurs)
+Collect binary and holistic ratings (samples) from Annotator 2 (12/7 Thurs)
+Apply *type* annotations to all response *tokens* (12/18 Mon)
+Calculate inter-rater agreement (12/20 Wed)
+
+
+
+RE: Answerhood "maybe": How should I handle "going to/getting ready to/about to/fixing to" <verb>?
+
+Learn: A* search, beam search.
+
+NTS: data cleanup: "the happening is a horse show" (I09U); "the image did not load" (and similar throughout); "how many more examples do you need to see one ends their sentences with a noun? enough already" (I18U);
+
+#####################################################
+NOTES FOR NEXT MEETING:
+
+NTS: Could I use NER to downweight responses that use names/proper nouns? There are very few legitimate appearances of named entities in the responses. [exceptions: "riding English style", "Australian crawl", maybe others]
+
+Could we get away with a simple yes/no holistic scale?? That would be AWESOME!
