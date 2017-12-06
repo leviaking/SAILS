@@ -9,13 +9,13 @@ from shutil import copyfile
 hour = '2039'
 
 for n in range(1,31):
-	backupfilename='BACKUP/BACKUP_I'+str(n).zfill(2)+'U_Answer-'+hour+'.csv'
-	automaticfilename='AUTO/I'+str(n).zfill(2)+'U_Answer-'+hour+'ANNOTATED-YES.csv'
-	manualfilename='MANUAL/MANUAL_I'+str(n).zfill(2)+'U_Answer-'+hour+'.csv'
-	outputfilename='OUTPUT/I'+str(n).zfill(2)+'U_Answer-'+hour+'.csv'
+	backupfilename='BACKUP/BACKUP_I'+str(n).zfill(2)+'T_Answer-'+hour+'.csv'
+	automaticfilename='AUTO/I'+str(n).zfill(2)+'T_Answer-'+hour+'ANNOTATED-YES.csv'
+	manualfilename='MANUAL/MANUAL_I'+str(n).zfill(2)+'T_Answer-'+hour+'.csv'
+	outputfilename='OUTPUT/I'+str(n).zfill(2)+'T_Answer-'+hour+'.csv'
 	backupresponses=[]
 	annotatedresponses=[]
-	outheader=['I'+str(n).zfill(2)+'U', 'I'+str(n).zfill(2)+'U_Answer']
+	outheader=['I'+str(n).zfill(2)+'T', 'I'+str(n).zfill(2)+'T_Answer']
 	with open(backupfilename) as backupfile:
 		backupreader=csv.reader(backupfile, dialect=csv.excel)
 		skipheader=next(backupreader, None)
