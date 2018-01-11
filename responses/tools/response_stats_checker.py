@@ -51,8 +51,8 @@ def get_stats(n, hour):
 			if u not in intersection:
 				intersection.append(u)
 	exs = [] ##exclusives
-	tex = []
-	uex = []
+	tex = [] 
+	uex = [] 
 	for t in trs:
 		if t not in urs:
 			tex.append(t)
@@ -61,7 +61,7 @@ def get_stats(n, hour):
 		if u not in trs:
 			uex.append(u)
 			exs.append(u)
-	print n
+	print n 
 	tt = len(trs)
 	print 'Targeted types: ', tt
 	ut = len(urs)

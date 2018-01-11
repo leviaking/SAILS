@@ -49,8 +49,149 @@ Learn: A* search, beam search.
 NTS: data cleanup: "the happening is a horse show" (I09U); "the image did not load" (and similar throughout); "how many more examples do you need to see one ends their sentences with a noun? enough already" (I18U);
 
 #####################################################
-NOTES FOR NEXT MEETING:
+NOTES FOR 11/21 MEETING:
 
 NTS: Could I use NER to downweight responses that use names/proper nouns? There are very few legitimate appearances of named entities in the responses. [exceptions: "riding English style", "Australian crawl", maybe others]
 
 Could we get away with a simple yes/no holistic scale?? That would be AWESOME!
+
+Can I work some kind of machine learning in here?
+
+MD says: Using GS data, can we predict something about NNS data? Compare to grammatical error detection...
+	Responses with 5/5 binary features ("yes") or 0/0 ("no") are clear 1 and 0 in holistic scale. Examine the 4/5 and 1/5 to get an idea of how to approach holistic annotation. [Pin down the construct by looking at the existing binary feature annotations.]
+
+
+#####################################################
+
+Re: Annotation and holistic modeling and scoring
+
+Markus,
+
+I just had a long talk with Xuefu about my work. I wanted to write it up while it's fresh in my mind. We discussed with two possible approaches for moving forward.
+
+Approach 1:
+I would set aside the completed binary feature annotation for now.
+I would complete the holistic rating via the EBB process. (Whether this results in a 2 or 4 point scale is up for debate.)
+The binary features may or may not appear to be salient in the resulting holistic ratings, which means that their main role in the dissertation would simply be to provide observation and discussion about the data and report on these features in a SLS/Linguistics oriented chapter.
+The CL work would proceed more or less as expected, where the dependency-based system predicts holistic scores for responses.
+
+Approach 2:
+I would derive holistic scores from the (weighted) feature annotations. (Again, the scale itself is TBD.) This would be done with a small(?) sample and some kind of cross-validation would be used. Part of the argument here is that this kind of feature annotation is expensive, so we are exploring an approach that could be repeated with less expense. Future test/game/etc. developers could do feature annotation for a sample of responses and use that to derive a model or models which could then complete the holistic annotation.
+Again, the CL work would be the same -- use the dependency-based system to predict the holistic scores.
+
+Xuefu likes Approach 2. I don't dislike it, but I think I'd need to sell it a little and try to justify it somehow with literature, etc. I would basically need to say, "I examined the data, did some preliminary annotation, and decided that these features have the most bearing on the 'goodness' of a response. [All of which is true, up to this point.] I also used my judgment and intuitions from this process to assign weights to the features in order to derive a holistic score." This probably makes the most use of the work completed so far, where I attempted the holistic annotation, then decided it couldn't be easily done without somehow considering the features we arrived at.
+In Xuefu's words, "We're providing a framework for developing an automatic rating system. We're not claiming that relying on these five features is absolutely the best approach, but we're examining the feasability of such a framework (i.e., deriving holistic scores based on a sample of linguistic feature annotations and approximating those scores with an automated system.)"
+
+Prior to my meeting with you today, I was staring at the data and wondering how I can make the holistic judgments. It felt like I was back at square one, before I started the feature annotation. It's difficult and feels arbitrary, and this makes me think it would result in very low inter-annotator agreement. I need to either:
+A) have a well-defined testing construct and clear guidelines OR,
+B) as EBB handles this, simply divide the data into two halves by quality (which of course still requires a clear testing construct) and then determine what criteria separate the halves, and repeat the dividing process as necessary.
+I think Approach 2 here largely avoids those problems.
+
+I'll be thinking about this more in the coming days as I complete the feature annotation and tidy up the data. I'm interested to hear your thoughts too, now that I've better articulated the concerns. But it's Thanksgiving Break, so enjoy yourself and reply whenever it's convenient -- I have plenty to work on in the meantime.
+
+Regards,
+Levi
+
+#####################################################
+
+NTS: 11/21: I'm only finding the untargeted re-merged answerhood files. Troubleshoot this and find or generate the targeted files.
+
+11/22: I found the targeted files, but they need to be sorted back to the original order -- use another feature file to do this. I'm writing a quick script to sort one csv according to another. See '.../responses/2039/sort_csvX_with_csvY.py'
+
+OK, this problem is solved. The targeted answerhood files have been sorted with the python script.
+
+#####################################################
+
+Binary Feature Annotation TO DO [11/25]:
+[DONE] 1. Finish remaining Verifiability items
+1.b. Revisit Answerhood for responses that show immiment action: "about to/going to/getting ready to/etc."
+2. Finish remaining Core Event items
+	2.b. For items 1-16 (T&U), I need to revisit and ensure that no subject/object in the core event is referred to by a proper name. I updated this in the guidelines and annotated accordingly from 17 onward.
+	2.c. There seems to be no clear instruction for how to handle responses that give a subject (or object?) with the incorrect number ("the women is buying a car", etc.) [As of I19U, I have updated this to say that a response that contains a subject or object with the incorrect number (singular/plural) as a part of the core event should be annotated "no" for core event. I'll need to do some clean up in I01-I19T... maybe just some ctrl+f for a few variations on the subjects and objects... ]
+3. Finish second pass (annotate 'maybe' responses)
+	* Write script to handle second pass annotation; it should preserve the first pass annotations! Because we may want to know later which responses were difficult to annotate.
+4. Write script to reapply type annotations to tokens.
+5. Clean up! Remove "The image did not load", etc.
+
+#####################################################
+
+NEXT MEETING [for MD meeting, 12/4]:
+
+11/25: So, something just occurred to me, and I think it might be kind of important. If the holistic score is a function of weighted features, then we probably wouldn't simply use one holistic model, or one model per point on the holistic score... Instead, we'd have two models ('yes' & 'no') per feature... so a test response could be compared with each of these to determine its feature scores, and these could be multiplied by the feature weights to arrive at a holistic score. I'm not completely clear on how to make this work, but I think this deserves further consideration.
+
+11/27: I think I've got the holistic scale figured out!
+3: Perfect response (All binary features = 1)
+2: Passing response (Core Event = 1, but one or more other binary features = 0)
+1: Non-passing response (Core Event = 0)
+
+Idea: Consider targeted responses. Some targeted responses are very short, consisting of only a verb phrase (e.g., "eating pizza"). Any such very short response that is annotated as having the core event is extra valuable, because we know there isn't any fluff here -- these dependencies are the essence of the item.* On the other end of the spectrum, we have long, rambling responses, and many of these are also annotated as having the core event. In the pilot study (if you will), we tossed all the gold standard dependencies into the same bag. I'm sure you see where I'm going with this -- I think each dependency in a GS (or whatever kind of dependency-based model we end up with) should be weighted more thoughtfully. A single response should have a weight of 1, and each dependency it that response should have a weight of 1/D, where D is the total number of dependencies in the response.
+*(I may even want to think about implementing a check to see if the subject was dropped, and then automatically adding it back in so that the subject dependency is represented in the models. But this is a side thought... )
+
+######################################################
+
+From above:
+	2.b. For items 1-16 (T&U), I need to revisit and ensure that no subject/object in the core event is referred to by a proper name. I updated this in the guidelines and annotated accordingly from 17 onward.
+	2.c. There seems to be no clear instruction for how to handle responses that give a subject (or object?) with the incorrect number ("the women is buying a car", etc.) [As of I19U, I have updated this to say that a response that contains a subject or object with the incorrect number (singular/plural) as a part of the core event should be annotated "no" for core event. I'll need to do some clean up in I01-I19T... maybe just some ctrl+f for a few variations on the subjects and objects... ]
+Regarding all this... I think I need to take a break and reflect on exactly what core event is, what it does for the process and how it relates to the philosophy of wthis project... Do we want to allow for proper names? Wrong pronouns? Plurals that should be singular? Shouldn't these problems be reflected through other features, like Grammaticality? [I think so...] Part of my concern is with the idea of a Gold Standard -- do "The women is taking a picture" and "The girl is using a camara" make it into a GS? I think the answer is 'no', because GS responses should fulfill all five features, and these will fail Grammaticality.
+
+######################################################
+
+12/4 (prior to meeting today):
+I need to get a few example items ready... Let's use items 1-3. Double check for any 'maybe' annotations. I'm going to edit the individual feature files before compiling them. Then I'll sort them into the 3 point scale.
+
+######################################################
+12/4 Meeting with MD:
+Core Event:
+cf LFG: coherence, consistency, completeness
+Maybe the criteria for Core Event is: it cannot be in conflict with the context. So a named subject (of correct gender) is ok. A pronoun of the incorrect gender is not okay. A subject that is plural but should be singular is okay -- consider lemmas here.
+Avoid overlap with verifiability, grammaticality, etc. -- a response should be penalized for a given offense only once, whenever possible.
+
+######################################################
+
+12/5
+
+Not really in the mood to wade back into the core event annotation and clean up. One thing I can do right now is this: The grammaticality responses (types) were combined into one file (containing targeted and untargeted) and then annotated. I need separate files -- 1 for targeted, 1 for untargeted. I need a script to do this.
+
+I think it worked... check after returning from trivia!
+Yes, it did work. The separated grammaticality files are now in the 'Gramm' folder, in the same configuration as the other feature files.
+
+######################################################
+12/13
+
+I'm back in the core annotation now.
+
+######################################################
+12/19
+
+Core event guidelines have been mostly updated. Check against the notes from previous meeting.
+Core event annotation is finished, but some early items may need double checking. [WAIT -- A few items were skipped... revisit this.]
+I have started a script for compiling all the annotation layers into one spreadsheet, but this is not yet working.
+###
+Meeting with MD:
+
+We're aiming for Feb or March for a paper submission date for a paper about the dataset. (BEA or ACL)
+Look at LREC and LAW proceedings for examples of papers based on dataset (and annotation schemes) releases.
+
+Do over break:
+Revisit timeline; what's happening in the spring; try to hit the ground running in January;
+Continue working on the final compilation script and try to get the processing pipeline set up to read from the final compiled version of the data.
+
+###
+
+2018-01-09 Meeting with MD:
+
+To do:
+By Friday 1/12:
+Re-examine Core Event annotation for Items 1-18 (targeted and untargeted); Per updated guidelines, review all "no" annotations. Some "no" annotations will need to be changed to "yes".
+Ask Annotator 2 for some written feedback about the annotation scheme and the process. What's difficult, unclear, etc.?
+Conference with Annotator 2 to compare annotations. Try to reach consensus; ask Annotator 2 to re-annotate if necessary. 
+Compile all annotation layers from all annotators into a single CSV file; (response types).
+Apply the annotations from the compiled response types file to the original response tokens file. Be careful as some minor changes were made in condensing tokens to types (punctuation stripped, etc.).
+
+Begin data writeup / BEA paper (submissions due 3/20) or ACL paper (2/22).
+
+Per MD:
+Email out a brief update to committee, including this timeline (actually, put completed tasks back in the timeline to show progress).
+
+
+
