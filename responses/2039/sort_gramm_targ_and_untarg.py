@@ -22,7 +22,8 @@ csvAtail=csvAparts[1]
 # if not os.path.exists('csvUnsorted_Temp_BKP/'):
 #     os.makedirs('csvUnsorted_Temp_BKP/')
 
-for n in range(1,31):
+#for n in range(1,31):
+for n in range(1,4):
 	csvAfilename = csvAnose+str(n).zfill(2)+csvAtail
 	csvA = open(csvAfilename, 'r')
 	csvAreader=csv.reader(csvA, dialect=csv.excel)
