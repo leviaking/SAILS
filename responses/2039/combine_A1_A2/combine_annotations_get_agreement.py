@@ -57,3 +57,4 @@ combinedwriter=csv.writer(combinedfile, dialect=csv.excel)
 for c in combinedrows:
 	combinedwriter.writerow(c)
 combinedfile.close()
+

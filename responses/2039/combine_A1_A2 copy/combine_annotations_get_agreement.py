@@ -4,6 +4,7 @@
 ##A1secondpassanno_I21T_Core-2039.csv
 ##A2secondpassanno_I41T_Core-2039.csv
 ##These files must be stored in the same folder. The command is like this, and takes only one argument, which is the filename for the A1 file.
+##python combine_annotations_get_agreement.py A1secondpassanno_I01T_Answer-2039.csv
 ##The combined file will be output to the same location and named as this:
 ##agreesecondpassanno_I41T_Core-2039.csv
 
@@ -56,3 +57,4 @@ combinedwriter=csv.writer(combinedfile, dialect=csv.excel)
 for c in combinedrows:
 	combinedwriter.writerow(c)
 combinedfile.close()
+

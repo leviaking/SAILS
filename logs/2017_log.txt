@@ -44,8 +44,6 @@ Calculate inter-rater agreement (12/20 Wed)
 
 RE: Answerhood "maybe": How should I handle "going to/getting ready to/about to/fixing to" <verb>?
 
-Learn: A* search, beam search.
-
 NTS: data cleanup: "the happening is a horse show" (I09U); "the image did not load" (and similar throughout); "how many more examples do you need to see one ends their sentences with a noun? enough already" (I18U);
 
 #####################################################
@@ -182,13 +180,13 @@ Continue working on the final compilation script and try to get the processing p
 
 To do:
 By Friday 1/12:
-Re-examine Core Event annotation for Items 1-18 (targeted and untargeted); Per updated guidelines, review all "no" annotations. Some "no" annotations will need to be changed to "yes".
-Ask Annotator 2 for some written feedback about the annotation scheme and the process. What's difficult, unclear, etc.?
-Conference with Annotator 2 to compare annotations. Try to reach consensus; ask Annotator 2 to re-annotate if necessary. 
+[DONE] Re-examine Core Event annotation for Items 1-18 (targeted and untargeted); Per updated guidelines, review all "no" annotations. Some "no" annotations will need to be changed to "yes".
+[DONE] Ask Annotator 2 for some written feedback about the annotation scheme and the process. What's difficult, unclear, etc.?
+[DONE/NA] Conference with Annotator 2 to compare annotations. Try to reach consensus; ask Annotator 2 to re-annotate if necessary. 
 Compile all annotation layers from all annotators into a single CSV file; (response types).
 Apply the annotations from the compiled response types file to the original response tokens file. Be careful as some minor changes were made in condensing tokens to types (punctuation stripped, etc.).
-
 Begin data writeup / BEA paper (submissions due 3/20) or ACL paper (2/22).
+Email committee update
 
 Per MD:
 Email out a brief update to committee, including this timeline (actually, put completed tasks back in the timeline to show progress).
@@ -224,3 +222,75 @@ Interpretability: many respondents assume that the reader knows details or even 
 Core event: For most items, it was very clear from the image what core event the item was intended to elicit. Slightly less so for items with more than one interpretation -- is the man delivering a package or picking one up?
 Verifiability: These were mostly easy to determine, but embellishments sometimes pose a challenge. "Lunch"/"a snack" or "pepperoni"/etc. were common but not verifiable.
 Answerhood: Some respondents didn't take the task seriously at all. The items were very answerable, but some people didn't try. It's easy to overlook minor changes to the form of the targeted subject, but it's not a problem if you keep this in mind. There is also some gray area between active verbs, descriptions of states, and states that indicate imminent action.
+
+####
+1/22 Meeting with MD:
+
+We discussed agreement scores.
+MD: Next step, for writing paper, would be to examine individual cases of disagreement.
+Why does Core Event break the general trend of targeted having higher agreement than untargeted?
+Calculate kappa scores (this accounts for chance, which is high because this is a binary choice, and because some items are biased toward 'yes' annotations, etc.). There may be better measures for this task; see the paper Markus sent
+
+
+Hypothetical / probable Gold Standard versions:
+All Familar NS
+All Crowdsourced NS
+All perfect annotations from NS ("Oracle"?)
+All "yes" Core Event responses
+
+
+### Back to cleaning up Core #4-18 "no" annotations.
+DONE!
+ALL Core annotations are now in line with the most recent updates to the guidelines.
+
+
+Now it is time to complete the re-annotation of any outstanding "maybe" annotations. (I did an earlier, manual pass at this, but left many undecided...)
+I will begin with the Core annotations for items 4-30 (Items 1-3 are completed).
+DONE!
+The Core folder inside the sequestered_maybe folder now contains "firstpass" versions (containing maybes) and "secondpass" versions, which do not contain maybes.
+
+KitsuneMBP:2039 leviking$
+diff sequestered_maybe/Core/firstpassanno_I03T_Core-2039.csv sequestered_no/Core/firstpassanno_I03T_Core-2039.csv 
+
+
+####
+FIRST PASS annotations are now all in the "firstpass" folder and its feature subfolders.
+
+The 'sequestered_no' folder has been deleted. The (Core) files we needed to generate there were renamed and moved to the 'firstpass' folder, as necessary. 
+
+We should now be working only in the 'sequestered_maybe' folder. (Core is complete -- the firstpass files there reflect any rechecked 'no' annotations, and the secondpass files there do not have 'maybe' annotations). The 'sequestered_maybe' folder should be used to generate secondpass annotation files. We will then move those files to a "secondpass" folder, or something like that.
+
+
+
+OK, I realized there was a problem/inconsistency with the answerhood annotations. Markus and I decided to accept responses that indicate "imminent action" (The boy is about to eat the pizza) whether they use a progressive verb or not. I had not yet updated the guidelines [DONE now] or the annotations themselves.
+DONE -- all the relevant response annotations have been updated re: answerhood & "imminent action". The effected files have been copied back into the "firstpass" folder. In other words, this issue is closed! Move on to the reannotation of "maybe" responses.
+
+###
+ANNOTATING REMAINING "MAYBE" RESPONSES:
+DONE. Core Event
+DONE. Answerhood
+DONE. Verifiability
+DONE. Grammaticality
+DONE. Interpretability
+
+###
+Fri Feb  2 16:26:51 EST 2018
+The second pass annotation is 100% complete. There are no "maybe" annotations in the secondpass* files.
+Now I need to get the type annotations applied back onto the token files, so we can calculate kappa.
+
+#############
+KAPPA scores
+OK, everything above is resolved (I think). I now have Cohen's Kappa scores for annotation agreement. See the file agreement_stats_output.xlsx.
+Now my task is to look at cases of agreement and disagreement and see if I can find any patterns.
+Then I should be ready to write the paper/chapter.
+
+
+####
+Re: interp disagreements:
+"enjoy" & "like" "celebrate" -- A2 does not find these interpretable
+Previous disagreement stemmed from A2 being more strict with regard to gender of subjects and objects (human). We since agreed that gender is an exception to the rule about use of vague subjects/objects like "someone". I'll need to specify this more clearly in the guidelines. If the gender of a particular figure in the image is not really important or relevant to the event, i.e., if picturing a person of any gender in that position is possible, a subject or object that does not specify gender should be okay. The current rule about vague subjects/objects was really to discriminate against responses like "a man is doing something for someone".
+In discussion of disagreements in item 3, A2 states that she previously accepted some telic verbs (not sure how to say this, but ~"receptive" verbs?) like "accept" and "receive" without an indirect object ("from the man"). Upon discussion of disagreements, A2 concludes that such verbs cannot be interpretable without a specified indirect object; the telicity of the event demands that the indirect object, who takes a direct role in the event, must be present. A2 notes that this is in contrast to atelic or repeated actions ("delivering a package" or "delivering packages"), because while these are likely to involve an indirect object, the indirect object is not strictly necessary.
+[I think the above distinction is a function of thematic roles more than telicity. When the subject has a thematic role of Recipient, the indirect object (agent) must be present. When the subject is the agent, the indirect object may not be necessary, depending more on the required verb arguments (and telicity might have some bearing on this.)]
+
+
+

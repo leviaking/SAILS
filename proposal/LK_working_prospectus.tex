@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.2in]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+\usepackage{parskip}
+%\usepackage{styles/naaclhlt2013}
+%\usepackage{styles/naaclhlt2013levi}
+%\usepackage{times}
+%\usepackage{latexsym}
+%\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+\usepackage{rotating}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{graphicx}
+\usepackage{tikz-dependency}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{color,soul}
+\usepackage{gb4e}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{tikz-qtree}
+
+%\usepackage{multirow}
+%\usepackage{rotating}
+%\usepackage{booktabs}
+
+
+%%%\documentclass[11pt]{article}
+%%%\usepackage[margin=1.2in]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+%%%\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%%%%\geometry{landscape}                % Activate for for rotated page geometry
+%%%%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%%%\usepackage{parskip}
+%%%%\usepackage{graphicx}
+%%%%\usepackage{amssymb}
+%%%%\usepackage{epstopdf}
+%%%%%
+%%%%\usepackage{rotating}
+%%%%\usepackage{tikz}
+%%%%\usetikzlibrary{shapes,arrows}
+%%%%\usepackage{graphicx}
+%%%%\usepackage{tikz-dependency}
+%%%\usepackage{natbib}
+%%%\usepackage{url}
+%%%\usepackage{color,soul}
+%%%%
+
+
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\setlength{\parindent}{15pt} %Paragraphs will not be indented
+%\parskip=10pt
+\linespread{1.1}
+
+\title{\vspace{-5em}Semantic Analysis of Learner Sentences}
+%\vspace{-5em}
+\author{\vspace{-8em}Levi King, Dissertation Prospectus} %\date{\today}}
+\date{\vspace{-2em}}
+
+\begin{document}
+\maketitle
+
+%\section{Summary}
+\noindent Research from the field of second language studies indicates that second language learners benefit from communicative and task based learning methods \citep{CelceMurcia:1991:GrammarPedagogy, CelceMurcia:2002:GrammarThroughContext, LarsenFreeman:1991:TeachingGrammar, Ellis:2006:CurrentIssues}. In the field of intelligent computer assisted language learning (ICALL), many applications overlook these findings and focus instead on grammar instruction and correction or menu based choices, approaches which are less beneficial to learners \citep{bailey:meurers:08,Amaral.Meurers-11}. The thesis proposed here is motivated by this disconnect.
+%Despite much current interest in analyzing relationships between visual and linguistic information, this research has generally not involved learner language (for exceptions, see \cite{somasundaran:chodorow:14} and \cite{somasundaran2015automated}).
+The research will focus on assessment of the appropriateness of English non-native speakers' (NNSs) responses to a picture description task (PDT) by comparing them to native speakers' (NSs) responses via an evaluation system constructed with existing language resources and natural language processing (NLP) tools. By varying the degree to which responses are restricted by the PDT, this work will examine the effect of the elicitation task on automatic semantic assessment and thus explore the limits of current NLP tools for related ICALL and testing uses.
+
+\noindent \textbf{Background.} 
+%%%***This work sits at the intersection of .... (M)y own previous work blah blah ...
+This work sits at the intersection of NLP, ICALL and language testing, and related work from these fields will be examined. My own previous work on this task used a markedly different method than what is proposed here; it used only one type of PDT and parsed responses with an existing tool, then used custom rules for extracting \textit{subject-verb-object} semantic triples and attempted to match these NNS triples against NS triples (see \citet{king:dickinson:13,king:dickinson:14}). I will present the findings from this past work, such as the need to explore more restricted tasks and to move from rule-based to probabilistic approaches.
+%, the limitations of rule-based approaches compared to probabilistic approaches, and the need to explore other forms of sentence representation beyond semantic triples.
+
+\noindent \textbf{Research Questions.} In this work I will explore the following research questions, which primarily relate to NNS variation, how it compares to NS variation and the tools necessary to automatically analyze contextual meaning in the face of such variation.
+%A selection of these questions follows.
+
+\begin{enumerate}
+%%%**in this PDT environment (which is a proxy for more real settings) or other constrained setting, what are appropriate representations and GS that allow one to provide (non-grammar-based) feedback (or for some "useful" evaluation)?
+\item{Are the responses of intermediate and advanced L2 English learners sufficiently \textit{similar} to those of NSs to allow automatic evaluation based on a collection of NS responses? Do learners demonstrate significant overlap with native-like usage in a PDT setting?} %What differences exist and what NLP tools are needed to account for them?
+%The images of the communication task serve as a rough simulation of real world scenes; given the lack (and desirability) of learner tools that analyze language content in visual contexts, the second research question is:
+
+\item{In the constrained visual environment of a PDT, what are appropriate response representations for the purpose of providing meaning-oriented analysis? In other words, which linguistic components are crucial and which are superfluous?}
+%As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
+
+\item{Can NLP tools and language resources be successfully integrated to form a content analysis system for open response language learning tasks?}
+
+\item{What does it mean for a response to be appropriate for this task and how can this be captured with an annotation scheme?}
+\end{enumerate}
+
+\noindent \textbf{Data.}
+%The use of PDTs in language research is well-established in areas of study ranging from second language acquisition (SLA) to Alzheimer's disease \citep{ellis2000task, forbes2005detecting}. 
+In the current work, PDTs serve not only as a research tool but as a proxy for language use in visual settings, extending the impact of this work beyond ICALL and second language testing and into many areas of NLP where contextual NNS language may require processing, such as dialog systems, machine translation and gaming.
+%In the current work, PDTs serve not only as a research tool but as a proxy for meaning-based communication, extending the impact of this work beyond ICALL and second language testing and into many areas of NLP where contextual NNS language may require processing, such as dialog systems, speech-to-text engines, machine translation and gaming.
+PDT responses will be collected primarily from ESL students through an arrangement with the English Language Improvement Program (ELIP) at Indiana University. The PDT will include items which rely on verbal or visual cues for targeted elicitation as well as less restricted versions of the items, allowing for an evaluation of the approach itself across task settings. I will also develop an annotation scheme for responses (in order to evaluate the system's performance).
+%used to annotate the responses and evaluate our system, and details about the actual responses collected, including the distribution of various forms (\textit{declaratives} vs. \textit{passives}; \textit{intransitives, transitives, ditransitives}, etc.).
+
+\noindent \textbf{Method.} First, to reduce spelling errors, responses will be preprocessed with existing tools. A major focus of the research will be establishing representations of NNS sentences and a corresponding gold standard (GS) derived from NS responses with which the NNS responses can be compared. Previous attempts used an existing tool \citep{demarneffe:ea:06, klein:manning:03} to obtain a dependency parse (\ref{exfig:depparse}), which provides labeled grammatical relations such as \textit{subject} between word pairs, and extracted individual words into a semantic triple (\ref{exfig:triple}). Among other potential representations, the current work will instead convert these parses into lists of dependencies (\ref{exfig:deplist}). This richer representation captures linguistic information not utilized in the previous work.
+
+%\begin{center}
+\hspace{-4em}
+\begin{tabular}{cccccc}
+    \begin{minipage}{0.02\hsize}
+    \begin{center}
+    \begin{exe}
+	\vspace{1em}
+		\ex\label{exfig:depparse}
+	\end{exe}
+	\end{center}
+    \end{minipage}
+    & 
+    \begin{minipage}{.45\hsize}
+    	\begin{dependency}[arc edge,text only label,label style={above}]
+    	\begin{deptext}[column sep=.5em]
+      	\textit{root} \& The \&[1em] kid \&[1em] kicked \& a \&[1em] ball \\
+    	\end{deptext}
+    	\depedge{4}{3}{nsubj}
+    	\depedge[arc angle=90]{1}{4}{root}
+    	\depedge[arc angle=90]{4}{6}{nobj}
+    	\depedge[arc angle=35]{6}{5}{det}
+    	\depedge{3}{2}{det}
+  		\end{dependency}
+    \end{minipage}
+    &
+%\end{tabular}
+%\end{center}
+%\vspace{-1em}
+%\begin{center}
+%\begin{tabular}{rlrl}
+    \begin{minipage}{0.05\hsize}
+    \begin{exe}
+%    \vspace{-1em}
+		\ex\label{exfig:triple}
+	\end{exe}
+    \end{minipage}
+    &
+    \begin{minipage}{0.2\hsize}
+    \vspace{1em}
+	kick(kid, ball)
+    \end{minipage}
+    &
+    \hspace{-1em}
+    \begin{minipage}{0.05\hsize}
+    \vspace{1em}
+    \begin{exe}
+		\ex\label{exfig:deplist}
+	\end{exe}
+    \end{minipage}
+    &
+    \begin{minipage}{0.2\hsize}
+	root, \textit{root}, kick \\
+	nsubj, kick, kid \\
+	nobj, kick, ball \\
+	det, kid, the \\
+	det, ball, a \\	
+    \end{minipage}
+\end{tabular}
+%\end{center}
+\smallskip
+
+%Currently, the core representation of a response comes from the output of the Stanford Dependency Parser \citep{demarneffe:ea:06, klein:manning:03}, which labels the syntactic relationships between words, known as \textit{dependencies}. For each dependency, the label is concatenated with the lemmatized dependent and head, e.g., \texttt{subj\#boy\#kick} (label\#dependent\#head). 
+%Use of the full dependency will be compared with use of partially abstracted dependencies where either the label, head, or dependent is replaced with a dummy word, as in \texttt{subj\#X\#kick} and \texttt{X\#boy\#kick}. The most effective representation is expected to make use of some weighted combination of these variations.
+
+\noindent
+%The GS for communicative tasks is arguably the keystone of this project.
+Unlike other ICALL systems that offer menu-based activities or simply analyze a user's grammar, the current system and its GS will need to handle novel responses and focus on content over form. The GS for a given PDT item will be a collection of representations of individual NS responses to that item. In addition, I will explore different possibilities for automatically improving coverage of NNS responses. For example, existing synonym lists could be used to expand the dependencies in (\ref{exfig:deplist}) by replacing \textit{kid} with \textit{child}.
+%for example, the GS will include expansions of the NS responses using lexical substitutions via resources such as WordNet.
+%I will also examine the reliability of extrapolating additional GS content from the NS responses. For example, if the set of all NS responses for an item consists of the sentences \textit{The woman mailed letters} and \textit{The lady sent mail}, by recombining subjects, objects and verbs, it becomes possible to add \texttt{subj\#woman\#sent} and \texttt{obj\#sent\#letters} to the GS.
+
+\noindent I will explore various methods of comparing the NNS responses to the GS in order to find the method or methods that most consistently score responses in agreement with the human annotation. These methods will consider the frequencies of words and dependencies in the GS and NNS response. Comparisons will also use techniques from tasks like automatic indexing to upweight the most important words and dependencies.
+
+\noindent This work will bring insights about the nature of NNS and NS variation in visual settings to the fields of language testing, ICALL and second language studies. More broadly, it will demonstrate methods for meaning-based analysis of contextual sentences, particularly when given an incomplete GS and potential errors in spelling and grammar. These findings will be valuable in tasks like image captioning, information retrieval and conversational agents.
+
+\bibliographystyle{plainnat}
+\bibliography{levi-bib}
+
+\end{document}
+
+%Start putting together BEA paper based on the work from this semester (clustering, etc.). Identify any gaps in what we need. (BEA deadline early March).
+
+%%from 1/13 meeting:
+%%research questions for proposal
+%%writing diss intro and/or BEA paper
+%%recover the BEA paper status (what remains to be done, etc.)
+%%new data collection materials; what kind of things do we want? what are the criteria for new materials?
+
+%% Next meeting, Tuesday, 2/2, 11am.
+
+%%%motivation, looking toward BEA: various sentence types, there's more than yes or no to the quality of a response. Our scoring (vs. strict matching) also lends itself better to interesting feedback.
+%%% We know the GS will be limited; we want to optimize it, but still, we need a more robust way of judging (SCORING) responses.
+
+%%%BEA paper, prospectus.
+

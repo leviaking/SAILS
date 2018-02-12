@@ -23,9 +23,9 @@ tempinputfilename=sys.argv[1]  ##inputfilename will be like this: Core/firstpass
 # else:
 # 	pass
 reviewfilename=tempinputfilename.replace('firstpass', 'tempreview')
-print 'reviewfilename', reviewfilename
+#print 'reviewfilename', reviewfilename
 exemptfilename=tempinputfilename.replace('firstpass', 'tempexempt')
-print 'exemptfilename', exemptfilename
+#print 'exemptfilename', exemptfilename
 
 tempincsv = open(tempinputfilename, 'r')
 tempincsvreader=csv.reader(tempincsv, dialect=csv.excel)
@@ -53,7 +53,7 @@ for erow in exemptrows:
 exemptfile.close()
 
 originalname=tempinputfilename.split('/')[1]
-print 'tempinputfilename', tempinputfilename
+#print 'tempinputfilename', tempinputfilename
 
 inputfilename=str(reviewfilename) ## the original version (below) looks for this variable
 
@@ -64,18 +64,18 @@ inputfilename=str(reviewfilename) ## the original version (below) looks for this
 slashsplit=inputfilename.split('/')
 #INFFeat2=slashsplit[0]
 INF=slashsplit[1]
-print 'INF', INF
+#print 'INF', INF
 INFA,INFB=INF.split('-')
-print 'INFA, INFB', INFA, INFB
+#print 'INFA, INFB', INFA, INFB
 INFNum=INFA[16:18]
-print "INFNum", INFNum
+#print "INFNum", INFNum
 INFFeat=INFA[18:] ##e.g., 'TU_Gramm', 'U_Answer', etc.
-print "INFFeat", INFFeat
+#print "INFFeat", INFFeat
 INFFeat2 = INFFeat.split('_')[1] ##e.g., 'Core'
-print "INFFeat2", INFFeat2
+#print "INFFeat2", INFFeat2
 #INFItem=INFA[19:] ##e.g., 'I06TU', 'I11T'
 INFItem=INFA.split('_')[1] ##e.g., 'I06TU', 'I11T'
-print "INFItem", INFItem
+#print "INFItem", INFItem
 INFPIN=INFB.split('.')[0] ##e.g., '2039'
 # ipath = '../../all_items/figures_300_400/'
 ipath = '../../../all_items/figures_200_266/' ##double check this 1/18
@@ -301,7 +301,7 @@ class App(Frame):
 		## ANNOTATION PROMPT
 		self.AnnotationPromptStringVar = StringVar()
 		#print AP
-		self.counter=' (Response #: '+str(self.CurrentRespNum+1)+'/'+str(RespDenominator)+'):'
+		self.counter=' (Response #: '+str(self.CurrentRespNum+1)+'/'+str(RespDenominator)+'):\nDo you wish to change the annotation?'
 		self.AnnotationPrompt = Label(self, font=tf, text=AP+self.counter, width=65, anchor='w', wraplength=500, justify='left')
 		self.AnnotationPrompt.grid(column=0, pady=8, row=4, columnspan=1, sticky="W")
 		self.AnnotationPromptStringVar.set(self.AnnotationPrompt)
