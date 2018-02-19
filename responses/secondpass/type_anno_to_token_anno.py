@@ -5,7 +5,7 @@ from shutil import copyfile
 
 ##This is probably the ugliest script I've ever written, but I only need it once, so fast and dirty it is! This applies the annotations from the response type files to the response tokens and writes a new file.
 
-A2annoitems=[1,2,3]
+A2annoitems=[28,29,30]
 
 def transform_response(myresp):
 	tresp=' '.join(myresp.split())
@@ -13,7 +13,7 @@ def transform_response(myresp):
 	tresp=tresp.lower()
 	return tresp
 
-for n in range(1,31):
+for n in range(28,31):
 	nstr=str(n).zfill(2)
 	masterTfilename='masters/I'+nstr+'T_master_no_anno.csv'
 	#print masterTfilename

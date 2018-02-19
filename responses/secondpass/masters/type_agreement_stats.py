@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-##This script takes the agreement files and outputs a single csv with many different agreement measures. This includes agreement scores per item per feature, but also averages per item, and per feature, and for targeted/untargeted.
+##This script takes the annotation files and outputs a single csv with many different agreement measures. This includes agreement scores per item per feature, but also averages per item, and per feature, and for targeted/untargeted.
 
 
 import sys, re, csv, datetime, os
