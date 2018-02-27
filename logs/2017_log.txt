@@ -332,23 +332,34 @@ Apply A2's (type) annotations to the token master files. [DONE]
 Calculate agreement/kappa for the test sample. [DONE]
 (Start writing the corpus paper.)
 
-The test agreement scores are in and look about right to me. I need to move these from the "test_sample" folder on the desktop back into the main project folders and tidy up a bit.
 
-needs work:
-too low:
-28Tcore
-28Ucore
-29Tcore
-29Ucore
-30Ucore
+The test agreement scores are in and look about right to me. I need to move these from the "test_sample" folder on the desktop back into the main project folders and tidy up a bit. 
 
-slightly too low:
-28Tgramm
-28Ugramm
-30Tgramm
-30Ugramm
+2/19/2018 meeting with MD.
 
-slightly too high:
-Verif: 29T, 29U, 30T
+Why did adjudication boost the Interp score so much?
 
-A129T: delete line 64, then line 40
+From dev to test, why did some features improve and why did the others decline?
+(Why is Core lower now?)
+
+####
+Explaining raw and kappa scores by feature:
+
+Core: Core is lower than expected based on dev set adjudicated scores. For all test items, core has a lower chance agreement than other features (less skewed). Core has the lowest rate of "yes" annotations among all features -- this feature seems to be stricter than others.
+	The ditransitive ("a man is giving directions to a woman") item drags down the average Core kappa. This was a difficult item to define by core event.
+	Key disagreements: A2 accepts "pet"; for "giving directions", A1 sees the individuals as strangers having a brief interaction, A2 more often accepts answers that describe the figures as a pair engaged in some activity ("reading a map") together; A1 requires an "asymmetry" to the transaction -- man is pointing or relaying some directional information, but A2 is more likely to accept responses that less specifically indicate giving directions. Re: "jogging", both annotators show some inconsistency with regard to responses that only indicate "exercising" and not some form of running.
+
+Answer: Highest kappa & raw agreement scores among the 5 features. Test scores are between initial dev scores and adjudicated test scores, as expected. Chance agreement is 72.11%, second highest after Gramm (76.82%).
+	Key disagreements: Few disagreements, but most seem to stem from fatigue or error. From both annotators, there is some inconsistent application of the rule that targeted response subject is exactly the same as the subject in the question. A few disagreements involve responses where it is unclear if the the response refers to the specific ongoing action in the image or simply the action in general: e.g., "running is this woman's chosen activity".
+
+Gramm: Scores --> No surprises, really. k=82.6, but raw agreement is much higher. Gramm tends to be more heavily skewed (toward 'yes') than any other feature.
+	Disagreements: Fatigue is an issue -- some disagreements stem from an obviously incorrect annotation from one annotator. Inconsistent application of the "no bare nouns" rule. Some responses simply are ambiguous re: gramm.
+
+Interp: A little lower than expected. Lowest kappa scores among the 5 features. Annotators note that this feature is the most difficult to judge consistently.
+	Disagreements: For the 3 items in the sample, more than half of the disagreements come from the ditransitive. Many of these disagreements involve ditransitives that omit the indirect object: "he is indicating the way", "the man is giving direction" -- both annotators show some inconsistency here. There seems to be disagreement over the level of allowable inference: A1 allows some general statements like "the woman loves her dog", "jogging is one of her hobbies" and similar -- does this response equate to a visualizable action, or should it be taken as an abstraction? (A2 accepts no such general responses.)
+
+Verif: No surprises re Kappa.
+	Disagreements: A small number of errors/fatigue -- inconsistent annotation of "cat" and "pet" responses. Most disagreements, however, stem from judging which inferences are acceptable and which are not: "the man is showing the hiker points of interest on the map" and "the woman is cuddling her dog after coming home"
+	
+
+
