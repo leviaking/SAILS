@@ -67,27 +67,69 @@ My abstract ...
 
 \section{Introduction}
 
-Background, purpose of the corpus; (variability within NS and NNS groups; and these groups vary from each other?)
+The (written) data of second language learners poses many challenges,
+whether it is being analyzed for grammatical errors (CITE), for
+linguistic patterns (CITE), for content analysis (CITE), or for
+interactions with intelligent computer-assisted language learning
+(ICALL) systems (CITE).  One of the core issues in doing anything with
+learner data is the inherent amount of variability in how linguistic
+forms are used to convey meaning (CITE Meurers \& Dickinson 2017?).
+It may indeed seem like learners can use an infinite variety of forms
+to express a particular meaning.  But this question has hardly been
+investigated: how big is the problem of variability?  And how does it
+differ from native speaker (NS) variability, given that all users of a
+language, native or non-native (NNS), can be creative in their
+language usage?  To investigate these questions, we control for
+meaning by collecting a dataset of picture description task (PDT)
+responses among a number of NSs and NNSs, and annotating along a
+handful of dimensions, to capture the multifaceted ways in which
+responses can vary.
 
-Motivate this for people who don't do this kind of work; measuring 'goodness' of responses; decomposing them into features; (this is not like grammatical error detection or parsing work); Getting a handle on variability, especially under different circumstances; is a response 'native-like'? in what ways (by which features?); breaking variability down into our features;
+% \begin{itemize}
+% \item Background, purpose of the corpus; (variability within NS and NNS groups; and these groups vary from each other?)
+% \end{itemize}
 
+In other words, we are interested in how variable linguistic behavior
+is \emph{for the same content}, both within and among NSs and NNSs.
+There is a long-standing notion that systems processing learner data
+would be wise to constrain the data in some way (CITE), but we do not
+know the specific effect of these constraints.  In some ways, the
+enterprises of ICALL and grammatical error correction (GEC) started
+off without knowing how easy or difficult the problems were, under
+different kinds of conditions.
 
-Cite previous work:
+In annotating different dimensions of PDT responses, not only are we
+able to see how variable they are, but we are able to get a better
+handle on what makes a particular response ``better'' or ``worse'' for
+different kinds of purposes.  For example, knowing that a person has
+gotten the main content of a picture correct, but has also added
+information not strictly present in the picture, may be treated
+differently than one who made no such inferences but seemed to be
+addressing a different questions about the picture (see section~XX).
+The goals of this work are thus distinct from GEC (CITE), or even from
+more linguistically driven work such as parsing (CITE), in that the
+acceptability of a response must be taken as a function of several
+interacting features.
 
-ours \citep{king:dickinson:13} 
-
-
-and others' \citep{somasundaran:ea:15}
+\begin{itemize}
+\item Motivate this for people who don't do this kind of work; measuring 'goodness' of responses; decomposing them into features; (this is not like grammatical error detection or parsing work); Getting a handle on variability, especially under different circumstances; is a response 'native-like'? in what ways (by which features?); breaking variability down into our features;
+\item Cite previous work:
+  \begin{itemize}
+  \item ours \citep{king:dickinson:13} 
+  \item and others' \citep{somasundaran:ea:15}
+  \end{itemize}
+\end{itemize}
 
 \section{Picture Description Task}
 
-The PDT is built around 30 cartoon-like vector graphics. The images were modified to remove any non-essential detail or background. Two images contain numerals, two contain music notes, and one contains a question mark, but the rest are completely devoid of any text or symbols. Each image depicts an ongoing or imminent action, performed by a person or an animal. The images are divided evenly into intransitive, transitive and ditransitive actions. 
+The PDT is built around 30 cartoon-like vector graphics. The images were modified to remove any non-essential detail or background; some examples are in Table~\ref{tab:test-sample-items}. To factor out the influence of previous linguistic context, images are devoid of any text or symbols, with the exceptions of two images containing numerals, two with music notes, and one with a question mark. Each image depicts an ongoing or imminent action, performed by a person or an animal. The images are divided evenly into intransitive, transitive and ditransitive actions. 
 
-Two main versions of the PDT were used. In each version, the first half contains ``targeted'' items, where questions take the form of \textit{What is $<$subject$>$ doing?}, where the subject (e.g., \textit{the boy}, \textit{the bird}) is provided. The second half contains ``untargeted'' items, where each question asks \textit{What is happening?}. A roughly equal number of targeted and untargeted responses were collected for each item.
+\marginpar{MD: Why do we distinguish targeted from untargeted items?}
+Two main versions of the PDT were used. In each version, the first half contains ``targeted'' items, where questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the boy}, \textit{the bird}). The second half contains ``untargeted'' items, where each question asks \textit{What is happening?}. A roughly equal number of targeted and untargeted responses were collected for each item.
 
-Each half (targeted and untargeted) is introduced with instructions including an example item and responses. The instructions ask participants to focus on the main event depicted in the image and to respond with one complete sentence. The PDT was presented as an online survey and all participants typed their own responses. Participants were instructed not to use any reference materials, but they were permitted to use browser-based spell checking.
+Each half (targeted and untargeted) is introduced with instructions, including an example item and responses. The instructions ask participants to focus on the main event depicted in the image and to respond with one complete sentence. The PDT was presented as an online survey and all participants typed their own responses. Participants were instructed not to use any reference materials, but they were permitted to use browser-based spell checking.
 
-In previous similar work \citep{king:dickinson:13,king:dickinson:16}, NSs were found to produce less variation than NNSs. Many NSs provided the same or very similar response with the most canonical way of expressing the main action. A primary purpose of the current corpus is to assess NNS response content by comparing against the NS responses, so NSs were asked to provide two nonidentical responses in the hopes that this would result in more variation among NS responses.
+In previous similar work \citep{king:dickinson:13,king:dickinson:16}, NSs were found to produce less variation than NNSs. Many NSs provided the same or very similar response with the most canonical way of expressing the main action. One purpose of the current corpus is to be able to assess NNS response content by comparing against the NS responses; thus, NSs were asked to provide two non-identical responses, in the hopes that this would result in more examples of native-like responses for the variability of NNS responses to compare against.
 
 \subsection{Data Collection}
 PDT versions;
