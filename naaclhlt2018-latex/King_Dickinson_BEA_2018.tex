@@ -73,7 +73,7 @@ linguistic patterns (CITE), for content analysis (CITE), or for
 interactions with intelligent computer-assisted language learning
 (ICALL) systems (CITE).  One of the core issues in doing anything with
 learner data is the inherent amount of variability in how linguistic
-forms are used to convey meaning (CITE Meurers \& Dickinson 2017?).
+forms are used to convey meaning \citep{Meurers.Dickinson-17}.
 It may indeed seem like learners can use an infinite variety of forms
 to express a particular meaning.  But this question has hardly been
 investigated: how big is the problem of variability?  And how does it
@@ -105,7 +105,7 @@ different kinds of purposes.  For example, knowing that a person has
 gotten the main content of a picture correct, but has also added
 information not strictly present in the picture, may be treated
 differently than one who made no such inferences but seemed to be
-addressing a different questions about the picture (see section~XX).
+addressing a different questions about the picture (see section~\ref{sec:scheme}).
 The goals of this work are thus distinct from GEC (CITE), or even from
 more linguistically driven work such as parsing (CITE), in that the
 acceptability of a response must be taken as a function of several
@@ -129,7 +129,7 @@ Two main versions of the PDT were used. In each version, the first half contains
 
 Each half (targeted and untargeted) is introduced with instructions, including an example item and responses. The instructions ask participants to focus on the main event depicted in the image and to respond with one complete sentence. The PDT was presented as an online survey and all participants typed their own responses. Participants were instructed not to use any reference materials, but they were permitted to use browser-based spell checking.
 
-In previous similar work \citep{king:dickinson:13,king:dickinson:16}, NSs were found to produce less variation than NNSs. Many NSs provided the same or very similar response with the most canonical way of expressing the main action. One purpose of the current corpus is to be able to assess NNS response content by comparing against the NS responses; thus, NSs were asked to provide two non-identical responses, in the hopes that this would result in more examples of native-like responses for the variability of NNS responses to compare against.
+In previous similar work \citep{king:dickinson:13,king:dickinson:16}, NSs were found to produce less variation than NNSs. Many NSs provided the same or very similar response with the most canonical way of expressing the main action. One purpose of the current corpus is to be able to assess NNS response content by comparing it against the NS responses; thus, NSs were asked to provide two non-identical responses, in the hopes that this would result in more examples of native-like responses for the variability of NNS responses to compare against.
 
 \subsection{Data Collection}
 PDT versions;
@@ -143,25 +143,34 @@ NSs demographics and sources (known persons vs crowdsourced);
 Response counts (types, tokens)
 
 \section{Annotation}
-The data were annotated with the aim of providing information that would be useful for the automatic assessment of NNS responses via comparison with the NS responses.
+The data were annotated with the aim of providing information that would be useful for the automatic assessment of NNS responses via comparison with the NS responses.  A five-dimension annotation, discussed in section~\ref{sec:scheme}, was developed to capture different facets of assessment; insights gained from the annotation, and in particular an interannotator agreement study, are covered in section~\ref{sec:agreement}.
 
 \subsection{Scheme}
-The annotation scheme was developed through an iterative process of annotation, discussion and revision, with input from two annotators and multiple language professionals. The initial scheme was planned as a three point scale, ranging from \textit{accurate and native-like} to \textit{accurate but not native-like} to \textit{not accurate}. This proved problematic. \textit{Accuracy} and \textit{native-likeness} could not be adequately defined and applied to the data. Eventually, five binary features were settled on, with each feature having some relation to the original concepts of accuracy and native-likeness. A set of annotation guidelines were produced with definitions, rules and examples for each feature. The features and brief descriptions are listed here:
+\label{sec:scheme}
+The annotation scheme was developed through an iterative process of annotation, discussion and revision, with input from two annotators and multiple language professionals. The initial scheme was planned as a three-point scale, ranging from \textit{accurate and native-like} (2) to \textit{accurate but not native-like} (1) to \textit{not accurate} (0). This proved problematic, however, as \textit{accuracy} and \textit{native-likeness} could not be adequately defined and applied to the data.
+%\marginpar{MD: A quick example of inadequacy would be nice here.}
+For example, in the middle picture of Table~\ref{tab:test-sample-items}, it is not clear how accurate or native-like \textit{She is happy with the dog} is.  Grammatically, it is native-like, but it does not seem like an appropriate answer to the question, \textit{What is the woman doing?}
+
+To address the specifics of appropriate answers, five binary features were eventually settled on, with each feature having some relation to the original concepts of accuracy and native-likeness. A set of annotation guidelines were produced with definitions, rules and examples for each feature. The features and brief descriptions are listed here and discussed further in the following sections:
 
 \begin{enumerate}
-\item \textbf{Core Event}: Does the response capture the core event depicted in the image? Core events are not pre-defined but should be fairly obvious given the nature of the images. The response should link an appropriate subject to the event.
-\item \textbf{Answerhood}: Does the response make a clear attempt to answer the question? This generally requires a progressive verb. For targeted items, the subject of the question must be used as the subject of the response; appropriate pronouns are also acceptable.
-\item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?
-\item \textbf{Interpretability}: Does the response evoke a clear mental image? Any required verb arguments must be present and unambiguous.
-\item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial relationship between persons depicted in the image.
+\item \textbf{Core Event}: Does the response capture the core event depicted in the image? Core events are not pre-defined but should be fairly obvious given the nature of the images. The response should link an appropriate subject to the event.  In the top picture of Table~\ref{tab:test-sample-items}, \textit{The woman is running} clearly captures the core event, while \textit{She is wearing a red shirt} is irrelevant to the event happening.
+\item \textbf{Answerhood}: Does the response make a clear attempt to answer the question? This generally requires a progressive verb. For targeted items, the subject of the question must be used as the subject of the response; appropriate pronouns are also acceptable.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} is answering a question other than \textit{What is the woman doing?}
+\marginpar{MD: Add faulty example, as this feature is non-obvious}
+\item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?  While the focus of GEC work, in our data set, this is a relatively straightforward feature to annotate (see section~\ref{sec:agreement}).
+\item \textbf{Interpretability}: Does the response evoke a clear mental image? Any required verb arguments must be present and unambiguous.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} is too vague to generate a clear mental image.
+\marginpar{MD: Add faulty example, as this feature is non-obvious}
+\item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial relationship between persons depicted in the image.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} conveys information that is irrelevant to the core event but is nonetheless recoverable from the photo (annotation=1), while \textit{YYY} has information that cannot be inferred from the picture.
+\marginpar{MD: Add examples}
 \end{enumerate}
 
 \subsection{Agreement}
-Two annotators participated in the annotation. Both are native speakers of English and each has several years of language teaching experience with both children and adult learners. Annotator 1 (A1) annotated the complete corpus. Annotator 2 (A2) annotated only the development set and the test set.
+\label{sec:agreement}
+Two annotators participated in the annotation. Both are native speakers of English, and each has several years of language teaching experience with both children and adult learners. Annotator 1 (A1) annotated the complete corpus. Annotator 2 (A2) annotated only the development set and the test set, data subsets described next.
 
-Three items were used as a development set for creating and revising the annotation scheme. These items were also used as examples in the guidelines. They represent one intransitive, one transitive and one ditransitive item. Both annotators annotated the full development multiple times throughout the process, discussing and adjudicating disagreeing annotations before moving on to the test set, which was completed with consultation between the annotatorst.
+Three items were used as a development set for creating and revising the annotation scheme. These items were also used as examples in the guidelines. They represent one intransitive, one transitive and one ditransitive item. Both annotators annotated the full development set multiple times throughout the process, discussing and adjudicating disagreeing annotations before moving on to the test set, which was completed with consultation between the annotators.
 
-The test set parallels the development set and consists of one intransitive, one transitive and one ditransitive item, and is shown in Table~\ref{tab:test-sample-items}. Agreement and Cohen's kappa scores are given in Table~\ref{tab:agreement}.
+The test set parallels the development set and consists of one intransitive, one transitive and one ditransitive item; it is shown in Table~\ref{tab:test-sample-items}. Agreement and Cohen's kappa scores are given in Table~\ref{tab:agreement}, broken down by different criteria.  We will now walk through these results.
 
 \subsubsection{Intransitives, transitives \& ditransitives} Comparisons of the intransitive, transitive and ditransitive items reveal an association between lower item complexity and higher agreement. The highest raw agreement and Cohen's kappa scores are found with the intransitive item, and the lowest are found with the ditransitive item. \marginpar{LK: A type-token ratio table would be helpful here.}
 
