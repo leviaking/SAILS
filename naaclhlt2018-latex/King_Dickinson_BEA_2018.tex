@@ -45,6 +45,12 @@
 % smaller than 5cm (the original size); we will check this
 % in the camera-ready version and ask you to change it back.
 
+\newcommand{\param}[1]{\texttt{#1}}
+\newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
+\newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
+% for removing all marginpars ==> good for final submission! %%nice trick!
+%%\renewcommand{\marginpar}[1]{}
+
 \newcommand\BibTeX{B{\sc ib}\TeX}
 \title{Annotating Picture Description Task Responses for Content Analysis}
 
@@ -85,11 +91,12 @@ Our work:
 \item variability is based on form-meaning matches, and to understand it means knowing what the person intended the meaning to be.  To study variability, we need to control for meaning.  (trick: we don't really know intention, but we do know what the acceptable meaning is for a picture.)
 \end{itemize}
 
+%%Chapter 3, “Special Problems of Language Learners,” outlines the special properties of learner errors, which are often very different from the errors that native speakers make because of the influence of the learner’s native language. We go into some detail presenting three common errors in learner language: those involving prepositions, articles, and collocations.
+
 The (written) data of second language learners poses many challenges,
-whether it is being analyzed for grammatical errors (CITE), for
-linguistic patterns (CITE), for content analysis (CITE), or for
-interactions with intelligent computer-assisted language learning
-(ICALL) systems (CITE).  One of the core issues in doing anything with
+whether it is being analyzed for grammatical errors \citep{leacock:ea:14}, for
+linguistic patterns \citep{kyle2015automatically}, for content analysis \citep{weigle2013english}, or for interactions with intelligent computer-assisted language learning
+(ICALL) systems \citep{amaral:meurers:user:07}.  One of the core issues in doing anything with
 learner data is the inherent amount of variability in how linguistic
 forms are used to convey meaning \citep{Meurers.Dickinson-17}.
 It may indeed seem like learners can use an infinite variety of forms
@@ -110,7 +117,7 @@ responses can vary.
 In other words, we are interested in how variable linguistic behavior
 is \emph{for the same content}, both within and among NSs and NNSs.
 There is a long-standing notion that systems processing learner data
-would be wise to constrain the data in some way (CITE), but we do not
+would be wise to constrain the data in some way \citep{somasundaran:chodorow:14, somasundaran:ea:15}, \lk{Is this kind of what you had in mind?} but we do not
 know the specific effect of these constraints.  In some ways, the
 enterprises of ICALL and grammatical error correction (GEC) started
 off without knowing how easy or difficult the problems were, under
