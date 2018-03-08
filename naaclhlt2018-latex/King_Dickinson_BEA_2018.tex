@@ -149,8 +149,9 @@ interacting features.
 
 The PDT is built around 30 cartoon-like vector graphics. The images were modified to remove any non-essential detail or background; some examples are in Table~\ref{tab:test-sample-items}. To factor out the influence of previous linguistic context, images are devoid of any text or symbols, with the exceptions of two images containing numerals, two with music notes, and one with a question mark. Each image depicts an ongoing or imminent action, performed by a person or an animal. The images are divided evenly into intransitive, transitive and ditransitive actions. 
 
-\marginpar{MD: Why do we distinguish targeted from untargeted items?}
-Two main versions of the PDT were used. In each version, the first half contains ``targeted'' items, where questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the boy}, \textit{the bird}). The second half contains ``untargeted'' items, where each question asks \textit{What is happening?}. A roughly equal number of targeted and untargeted responses were collected for each item.
+\md{Why do we distinguish targeted from untargeted items?}
+\lk{Does it make sense now?}
+Two main versions of the PDT were used. In each version, the first half contains ``targeted'' items, where questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the boy}, \textit{the bird}). The second half contains ``untargeted'' items, where each question asks \textit{What is happening?}. Collecting both versions allows for the examination of response variation with and without a subject constraint, which should help inform approaches to task design and automatic content assessment. A roughly equal number of targeted and untargeted responses were collected for each item.
 
 Each half (targeted and untargeted) is introduced with instructions, including an example item and responses. The instructions ask participants to focus on the main event depicted in the image and to respond with one complete sentence. The PDT was presented as an online survey and all participants typed their own responses. Participants were instructed not to use any reference materials, but they were permitted to use browser-based spell checking.
 
@@ -181,12 +182,12 @@ To address the specifics of appropriate answers, five binary features were event
 \begin{enumerate}
 \item \textbf{Core Event}: Does the response capture the core event depicted in the image? Core events are not pre-defined but should be fairly obvious given the nature of the images. The response should link an appropriate subject to the event.  In the top picture of Table~\ref{tab:test-sample-items}, \textit{The woman is running} clearly captures the core event, while \textit{She is wearing a red shirt} is irrelevant to the event happening.
 \item \textbf{Answerhood}: Does the response make a clear attempt to answer the question? This generally requires a progressive verb. For targeted items, the subject of the question must be used as the subject of the response; appropriate pronouns are also acceptable.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} is answering a question other than \textit{What is the woman doing?}
-\marginpar{MD: Add faulty example, as this feature is non-obvious}
+\md{Add faulty example, as this feature is non-obvious}
 \item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?  While the focus of GEC work, in our data set, this is a relatively straightforward feature to annotate (see section~\ref{sec:agreement}).
 \item \textbf{Interpretability}: Does the response evoke a clear mental image? Any required verb arguments must be present and unambiguous.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} is too vague to generate a clear mental image.
-\marginpar{MD: Add faulty example, as this feature is non-obvious}
+\md{Add faulty example, as this feature is non-obvious}
 \item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial relationship between persons depicted in the image.  For example, in Table~\ref{tab:test-sample-items}, \textit{XXX} conveys information that is irrelevant to the core event but is nonetheless recoverable from the photo (annotation=1), while \textit{YYY} has information that cannot be inferred from the picture.
-\marginpar{MD: Add examples}
+\md{Add examples}
 \end{enumerate}
 
 \subsection{Agreement}
@@ -197,11 +198,11 @@ Three items were used as a development set for creating and revising the annotat
 
 The test set parallels the development set and consists of one intransitive, one transitive and one ditransitive item; it is shown in Table~\ref{tab:test-sample-items}. Agreement and Cohen's kappa scores are given in Table~\ref{tab:agreement}, broken down by different criteria.  We will now walk through these results.
 
-\subsubsection{Intransitives, transitives \& ditransitives} Comparisons of the intransitive, transitive and ditransitive items reveal an association between lower item complexity and higher agreement. The highest raw agreement and Cohen's kappa scores are found with the intransitive item, and the lowest are found with the ditransitive item. \marginpar{LK: A type-token ratio table would be helpful here.}
+\subsubsection{Intransitives, transitives \& ditransitives} Comparisons of the intransitive, transitive and ditransitive items reveal an association between lower item complexity and higher agreement. The highest raw agreement and Cohen's kappa scores are found with the intransitive item, and the lowest are found with the ditransitive item. \lk{A type-token ratio table would be helpful here.}
 
 This is as expected, as ditransitive sentences are longer with more verb arguments, meaning there are a greater number of opportunities for responses to vary, and thus more opportunities for annotators to disagree on a given response. This trend also matches annotator feedback; both ranked the ditransitive item as the most difficult to annotate (for all features) and the intransitive as the easiest.
 
-\subsubsection{Targeted \& untargeted} When the annotations are grouped into targeted and untargeted sets, the raw agreement scores are comparable: 94.9\% for targeted and 95.2\% for untargeted items. However, despite a greater degree of response variation, the untargeted group has a higher kappa score: 87.2\% compared to 82.3\%. \marginpar{are kappa scores percentages?} This may appear counterintuitive, but can most likely be attributed to the stricter annotation rules for targeted items. For example, \textit{answerhood} does not allow targeted responses to modify the subject provided in the question in any way. The untargeted questions elicit a greater degree of variation, but the annotation scheme accommodates this. 
+\subsubsection{Targeted \& untargeted} When the annotations are grouped into targeted and untargeted sets, the raw agreement scores are comparable: 94.9\% for targeted and 95.2\% for untargeted items. However, despite a greater degree of response variation, the untargeted group has a higher kappa score: 87.2\% compared to 82.3\%. \lk{kappa scores are normally reported as decimals, not percentages.} This may appear counterintuitive, but can most likely be attributed to the stricter annotation rules for targeted items. For example, \textit{answerhood} does not allow targeted responses to modify the subject provided in the question in any way. The untargeted questions elicit a greater degree of variation, but the annotation scheme accommodates this. 
 
 When asked to compare the annotation of targeted and untargeted responses, A2 noted that targeted responses require more concentration and closer consultation of the guidelines. Both A1 and A2 describe the annotation of untargeted items as less restrictive.
 
