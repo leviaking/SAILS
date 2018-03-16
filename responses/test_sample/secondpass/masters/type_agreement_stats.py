@@ -483,8 +483,8 @@ header=['Source', 'Response', 'A1', 'A2']
 
 ##items+TU+feature
 for fn in allfns:
-	fnagreesfile=open('agreement_files/'+fn+'_type_agrees.csv', 'w')
-	fndisagreesfile=open('agreement_files/'+fn+'_type_disagrees.csv', 'w')
+	fnagreesfile=open('agreement_files/combined/'+fn+'_type_agrees.csv', 'w')
+	fndisagreesfile=open('agreement_files/combined/'+fn+'_type_disagrees.csv', 'w')
 	fnagreeswriter=csv.writer(fnagreesfile, dialect=csv.excel)
 	fndisagreeswriter=csv.writer(fndisagreesfile, dialect=csv.excel)
 	fnagreeswriter.writerow(header)
@@ -502,10 +502,10 @@ for fn in allfns:
 for n in range(28,31):
 	numstr=str(n).zfill(2)
 	for tu in tuversions:
-		itemtuagreesfile=open('agreement_files/'+'I'+numstr+tu+'_type_agrees.csv', 'w')
+		itemtuagreesfile=open('agreement_files/combined/'+'I'+numstr+tu+'_type_agrees.csv', 'w')
 		itemtuagreeswriter=csv.writer(itemtuagreesfile, dialect=csv.excel)
 		itemtuagreeswriter.writerow(header)
-		itemtudisagreesfile=open('agreement_files/'+'I'+numstr+tu+'_type_disagrees.csv', 'w')
+		itemtudisagreesfile=open('agreement_files/combined/'+'I'+numstr+tu+'_type_disagrees.csv', 'w')
 		itemtudisagreeswriter=csv.writer(itemtudisagreesfile, dialect=csv.excel)
 		itemtudisagreeswriter.writerow(header)
 		for fn in allfns:
@@ -523,10 +523,10 @@ for n in range(28,31):
 for n in range(28,31):
 	numstr=str(n).zfill(2)
 	for feat in feats:
-		itemfeatagreesfile=open('agreement_files/'+'I'+numstr+feat+'_type_agrees.csv', 'w')
+		itemfeatagreesfile=open('agreement_files/combined/'+'I'+numstr+feat+'_type_agrees.csv', 'w')
 		itemfeatagreeswriter=csv.writer(itemfeatagreesfile, dialect=csv.excel)
 		itemfeatagreeswriter.writerow(header)
-		itemfeatdisagreesfile=open('agreement_files/'+'I'+numstr+feat+'_type_disagrees.csv', 'w')
+		itemfeatdisagreesfile=open('agreement_files/combined/'+'I'+numstr+feat+'_type_disagrees.csv', 'w')
 		itemfeatdisagreeswriter=csv.writer(itemfeatdisagreesfile, dialect=csv.excel)
 		itemfeatdisagreeswriter.writerow(header)
 		for fn in allfns:
@@ -543,10 +543,10 @@ for n in range(28,31):
 ##TU+features
 for tu in tuversions:
 	for feat in feats:
-		feattuagreesfile=open('agreement_files/'+tu+'_'+feat+'_type_agrees.csv', 'w')
+		feattuagreesfile=open('agreement_files/combined/'+tu+'_'+feat+'_type_agrees.csv', 'w')
 		feattuagreeswriter=csv.writer(feattuagreesfile, dialect=csv.excel)
 		feattuagreeswriter.writerow(header)
-		feattudisagreesfile=open('agreement_files/'+tu+'_'+feat+'_type_disagrees.csv', 'w')
+		feattudisagreesfile=open('agreement_files/combined/'+tu+'_'+feat+'_type_disagrees.csv', 'w')
 		feattudisagreeswriter=csv.writer(feattudisagreesfile, dialect=csv.excel)
 		feattudisagreeswriter.writerow(header)
 		for fn in allfns:
@@ -563,10 +563,10 @@ for tu in tuversions:
 ##item
 for n in range(28,31):
 	numstr=str(n).zfill(2)
-	itemfeatagreesfile=open('agreement_files/'+'I'+numstr+'_type_agrees.csv', 'w')
+	itemfeatagreesfile=open('agreement_files/combined/'+'I'+numstr+'_type_agrees.csv', 'w')
 	itemfeatagreeswriter=csv.writer(itemfeatagreesfile, dialect=csv.excel)
 	itemfeatagreeswriter.writerow(header)
-	itemfeatdisagreesfile=open('agreement_files/'+'I'+numstr+'_type_disagrees.csv', 'w')
+	itemfeatdisagreesfile=open('agreement_files/combined/'+'I'+numstr+'_type_disagrees.csv', 'w')
 	itemfeatdisagreeswriter=csv.writer(itemfeatdisagreesfile, dialect=csv.excel)
 	itemfeatdisagreeswriter.writerow(header)
 	for fn in allfns:
@@ -583,10 +583,10 @@ for n in range(28,31):
 
 ##TU (targeted vs untargeted)
 for tu in tuversions:
-	tuagreesfile=open('agreement_files/'+tu+'_type_agrees.csv', 'w')
+	tuagreesfile=open('agreement_files/combined/'+tu+'_type_agrees.csv', 'w')
 	tuagreeswriter=csv.writer(tuagreesfile, dialect=csv.excel)
 	tuagreeswriter.writerow(header)
-	tudisagreesfile=open('agreement_files/'+tu+'_type_disagrees.csv', 'w')
+	tudisagreesfile=open('agreement_files/combined/'+tu+'_type_disagrees.csv', 'w')
 	tudisagreeswriter=csv.writer(tudisagreesfile, dialect=csv.excel)
 	tudisagreeswriter.writerow(header)
 	for fn in allfns:
@@ -602,10 +602,10 @@ for tu in tuversions:
 
 ##features
 for feat in feats:
-	featagreesfile=open('agreement_files/'+feat+'_type_agrees.csv', 'w')
+	featagreesfile=open('agreement_files/combined/'+feat+'_type_agrees.csv', 'w')
 	featagreeswriter=csv.writer(featagreesfile, dialect=csv.excel)
 	featagreeswriter.writerow(header)
-	featdisagreesfile=open('agreement_files/'+feat+'_type_disagrees.csv', 'w')
+	featdisagreesfile=open('agreement_files/combined/'+feat+'_type_disagrees.csv', 'w')
 	featdisagreeswriter=csv.writer(featdisagreesfile, dialect=csv.excel)
 	featdisagreeswriter.writerow(header)
 	for fn in allfns:
@@ -623,7 +623,7 @@ for feat in feats:
 
 	
 statsname='type_agreement_stats_output.csv'
-#statsfile=open('agreement_files/'+statsname, 'w')
+#statsfile=open('agreement_files/combined/'+statsname, 'w')
 statsfile=open(statsname, 'w')
 statswriter=csv.writer(statsfile, dialect=csv.excel)
 #print outrows
