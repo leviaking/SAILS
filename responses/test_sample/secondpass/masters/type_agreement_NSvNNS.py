@@ -40,7 +40,7 @@ Crowds=[
 	]
 
 speakers={
-	'NS':[
+	'L1':[
 	'NSv1pt1',
 	'NSv1pt2',
 	'NSv2pt1',
@@ -48,7 +48,7 @@ speakers={
 	'NSv1',
 	'NSv2'
 		],
-	'NNS':[
+	'L2':[
 	'NNSv1',
 	'NNSv2'
 		]
