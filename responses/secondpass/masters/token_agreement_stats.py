@@ -25,7 +25,7 @@ allfns=[]
 allstatsdict={}
 allagrees={}
 alldisagrees={}
-for num in range(1,4):
+for num in range(28,31):
 	numstr=str(num).zfill(2)
 	for tu in tuversions:
 		myfilename='I'+numstr+tu+'_master_anno.csv'
@@ -130,7 +130,7 @@ for fn in allfns:
 
 ##item+TU
 ##[0 fn, 1 myfagrees, 2 pagree, 3 myfdisagrees, 4 pdisagree, 5 myftotal, 6 kappa, 7 A1yes, 8 A1yesp, 9 A1no, 10 A1nop, 11 A2yes, 12 A2yesp, 13 A2no, 14 A2nop, 15 yeschanceagree, 16 nochanceagree, 17 chanceagree]
-for num in range(1,4):
+for num in range(28,31):
 	numstr=str(num).zfill(2)
 	for tu in tuversions:
 		A1yes=0
@@ -186,7 +186,7 @@ for num in range(1,4):
 		outrows.append(ftrow)
 		
 ##item+feat
-for num in range(1,4):
+for num in range(28,31):
 	numstr=str(num).zfill(2)
 	for feat in feats:
 		A1yes=0
@@ -298,7 +298,7 @@ for feat in feats:
 		outrows.append(ftrow)
 
 ##item
-for num in range(1,4):
+for num in range(28,31):
 	numstr=str(num).zfill(2)
 	A1yes=0
 	A1no=0
@@ -488,7 +488,7 @@ for fn in allfns:
 	fndisagreesfile.close()
 
 ##item+TU
-for n in range(1,4):
+for n in range(28,31):
 	numstr=str(n).zfill(2)
 	for tu in tuversions:
 		itemtuagreesfile=open('agreement_files/'+'I'+numstr+tu+'_token_agrees.csv', 'w')
@@ -509,7 +509,7 @@ for n in range(1,4):
 		itemtudisagreesfile.close()
 
 ##item+features
-for n in range(1,4):
+for n in range(28,31):
 	numstr=str(n).zfill(2)
 	for feat in feats:
 		itemfeatagreesfile=open('agreement_files/'+'I'+numstr+feat+'_token_agrees.csv', 'w')
@@ -550,7 +550,7 @@ for tu in tuversions:
 		feattudisagreesfile.close()
 
 ##item
-for n in range(1,4):
+for n in range(28,31):
 	numstr=str(n).zfill(2)
 	itemfeatagreesfile=open('agreement_files/'+'I'+numstr+'_token_agrees.csv', 'w')
 	itemfeatagreeswriter=csv.writer(itemfeatagreesfile, dialect=csv.excel)
