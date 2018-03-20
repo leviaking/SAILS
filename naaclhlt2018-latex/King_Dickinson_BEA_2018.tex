@@ -98,7 +98,7 @@ But the question of how large the problem of variability is for computational pr
 
 Our overarching goal is to investigate these questions of variability and acceptability, both for non-native speakers (NNSs) and native speakers (NSs), given that all users of a language can be creative in their language usage.
 %
-To that end---and taking \textit{variability} to concern different mappings between linguistic form and its meaning---in this paper we control for meaning by collecting a dataset of picture description task (PDT) responses from a number of NSs and NNSs, and we annotate a handful of dimensions, thereby capturing the multifaceted ways in which responses can vary and can be acceptable or unacceptable.  Outlining the decisions to be made highlights questions needing to be addressed by anyone working with learner language properties such as variability, acceptability and native-likeness.
+To that end---and taking \textit{variability} to concern different mappings between linguistic form and its meaning---in this paper we control for meaning by collecting a dataset of picture description task (PDT) responses from a number of NSs and NNSs, and we annotate a handful of dimensions, thereby capturing the multifaceted ways in which responses can vary and can be acceptable or unacceptable. We call this the SAILS Corpus, for \textit{semantic analysis of image-based learner sentences}. \lk{We should declare the name, I think. How about this?} Outlining the decisions to be made highlights questions needing to be addressed by anyone working with learner language properties such as variability, acceptability and native-likeness.
 
 % \begin{itemize}
 % \item Background, purpose of the corpus; (variability within NS and NNS groups; and these groups vary from each other?)
@@ -140,6 +140,7 @@ The PDT is built around 30 cartoon-like vector graphics. The images were modifie
 
 Two main versions of the PDT were used. In each version, the first half contains \textbf{targeted} items, where questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the boy}, \textit{the bird}). The second half contains \textbf{untargeted} items, where each question asks \textit{What is happening?}. Collecting both versions allows for the examination of response variation with and without a subject constraint, which should help inform approaches to task design and automatic content assessment. A roughly equal number of targeted and untargeted responses were collected for each item.
 \md{Can we add a citation or two to work on task design / content assessment?}
+\lk{I'll do it Tuesday}
 
 Each half (targeted and untargeted) is introduced with instructions, including an example item and responses. The instructions ask participants to focus on the main event depicted in the image and to respond with one complete sentence per response. The PDT was presented as an online survey, and all participants typed their responses. Participants were instructed not to use any reference materials, but were permitted to use browser-based spell checking.
 
@@ -289,10 +290,6 @@ Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \label{sec:agreement}
 Two annotators participated in the annotation. Both are native speakers of English, and each has several years of language teaching experience with both children and adult learners. Annotator 1 (A1) annotated the complete corpus. Annotator 2 (A2) annotated only the development set and the test set, data subsets described next.
 
-Three items were used as a development set for creating and revising the annotation scheme. These items were also used as examples in the guidelines. They represent one intransitive, one transitive and one ditransitive item. Both annotators annotated the full development set multiple times throughout the process, discussing and adjudicating disagreeing annotations before moving on to the test set, which was completed without consultation between the annotators.
-
-The test set parallels the development set and consists of one intransitive, one transitive and one ditransitive item; it is shown in Table~\ref{tab:test-sample-items}. Agreement and Cohen's kappa scores are given in Table~\ref{tab:agreement}, broken down by different criteria.  We will now walk through these results.
-
 \begin{table*}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|l|l||l|l||l|}
@@ -327,6 +324,10 @@ Gramm & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \end{center}
 \end{table*}
 
+Three items were used as a development set for creating and revising the annotation scheme. These items were also used as examples in the guidelines. They represent one intransitive, one transitive and one ditransitive item. Both annotators annotated the full development set multiple times throughout the process, discussing and adjudicating disagreeing annotations before moving on to the test set, which was completed without consultation between the annotators.
+
+The test set parallels the development set and consists of one intransitive, one transitive and one ditransitive item; it is shown in Table~\ref{tab:test-sample-items}. Agreement and Cohen's kappa scores are given in Table~\ref{tab:agreement}, broken down by different criteria.  We will now walk through these results.
+
 \subsection{Transitivity} 
 \label{sec:transitivity}
 Comparisons of the intransitive, transitive and ditransitive items reveal an association between lower item complexity and higher agreement. The highest raw agreement and Cohen's kappa scores are found with the intransitive item ($97.8\%$, $\kappa=0.91$), and the lowest are found with the ditransitive item ($92.4\%$, $\kappa=0.76$). 
@@ -349,7 +350,7 @@ Grouped by feature, the annotations all show raw agreement scores above 91\% and
 
 \feat{Core event} has the second lowest inter-annotator agreement kappa score, at 0.808. This is somewhat lower than expected, as the pre-adjudication development set score was 0.889. This appears to be largely attributable to the difficulty of the ditransitive item, which was challenging for both participants and annotators (section~\ref{sec:transitivity}). 
 
-The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and many participants were familiar with the appropriate vocabulary and constructions. The test set item shows a man giving directions to a woman (Table~\ref{tab:test-sample-items}), and this resulted in a greater degree of variation, as many NNSs did not describe this in a canonical way. \lk{Need to back this up with some numbers!}\md{Should we report Table~\ref{tab:agreement} broken down by NS and NNS agreements?} Rather than constructions like \textit{asking X for directions} or \textit{giving directions to X}, many NNSs describe the item with phrases like \textit{pointing}, \textit{guiding}, \textit{helping a lost person} or \textit{reading a map}, and most disagreeing core event annotations involve such responses, with A2 more likely than A1 to accept these less specific descriptions.
+The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and many participants were familiar with the appropriate vocabulary and constructions. The test set item shows a man giving directions to a woman (Table~\ref{tab:test-sample-items}), and this resulted in a greater degree of variation, as many NNSs did not describe this in a canonical way. \lk{Need to back this up with some numbers!} Rather than constructions like \textit{asking X for directions} or \textit{giving directions to X}, many NNSs describe the item with phrases like \textit{pointing}, \textit{guiding}, \textit{helping a lost person} or \textit{reading a map}, and most disagreeing core event annotations involve such responses, with A2 more likely than A1 to accept these less specific descriptions.
 
 Similarly, but to a lesser extent, the transitive item, which shows a woman hugging a dog (Table~\ref{tab:test-sample-items}), resulted in disagreements where A2 accepts the word \textit{pet} as the object, but A1 rejects such responses as too vague. Despite the acceptable scores for \feat{core event} agreement, the fact that many disagreements hinge on particular word choice or annotators having minor differences in interpretation of the event suggest that greater agreement could be easily achieved by providing annotators with suggestions about the acceptable content for each response. In other words: by more clearly determining the desired level of specificity of a response---for the verb or its arguments---agreement could be higher. Naturally, the desired specificity may vary in accordance with the intended use of the annotations. In the current annotations, the standard discussed between annotators and in the guidelines included pragmatic considerations like naturalness, native-likeness and effort.
 \md{Would determining the appropriate level of specificity require knowing the end use of the annotation?}
@@ -385,15 +386,14 @@ Grammaticality has a raw agreement score of 93.0\% and a kappa of 0.827. Among 5
 
 The remainder reflect an unavoidable level of disagreement. Many of these stem from differing interpretations of bare nouns as either errors or as acceptable mass nouns, as in \textit{The man is giving \textbf{direction} to the tourist}. In several cases, annotators disagree over prepositions, which are known to be a common source of disagreement and pose special challenges in the context of learner language \citep{tetreault-chodorow:2008:HJCL,tetreault:chodorow:08}. For example, annotators could not agree on the grammaticality of the prepositions in \textit{The girl is asking for help \textbf{to} the man} and \textit{The girl is hugging \textbf{with} her cat}. 
 
-\smallskip
-
-
+\subsection{NS \& NNS responses}
+Agreement scores were also calculated separately for NS and NNS responses, as shown in Table~\ref{tab:NSvNNSagreement}. Comparing the average rate of \textit{yes} annotations shows that the NNSs outperform the NSs by between roughly 8\% and 12\% on all features except \feat{grammaticality}. It is not surprising that NSs outperform NNSs on this feature (90.2\% to 79.3\%), but to account for their superior performance on the other features, one must consider the fact that the NNSs were recruited from ESL courses and performed the task with peers and researchers present. The NNSs were more likely to make a good faith effort than the NSs, the majority of whom performed the task anonymously and remotely. Only NSs are asked to provide two responses to each item, and related task effects and fatigue are also likely contributing factors.
 
 %% LK NTS:
 %%intransitive is I30 (woman is running)
 %%transitive is I29 (woman is hugging dog)
 %%ditransitive is I28 (man is giving directions)
-\begin{table*}[t!]
+\begin{table*}[htb!]
 \begin{center}
 \begin{tabular}{|l||l|l||l|l||l|l||l|l||l|l|}
 \hline
@@ -429,42 +429,52 @@ Gramm & 870 & 423 & 0.902 & 0.793 & 0.823 & 0.671 & 0.962 & 0.955 & 0.786 & 0.86
 \end{center}
 \end{table*}
 
+Raw agreement scores are high among both groups, ranging from 91\% to 99.3\%. Notably, for \feat{core event}, \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS responses; i.e., annotators are more likely to agree on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} is focused on correctness of forms.
 
-\smallskip
+The lower kappa score for NS \feat{answerhood} is also attributable to task effects--a second response (as required of NSs), is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas scores for annotator agreement are higher for NNS responses. A relatively low rate of expected chance agreement contributes to this fact. Additionally, discussion of example disagreements with annotators confirmed that in many cases, NNS grammaticality is quickly discernible as ``good'' or ``bad'', but in NS data, \lk{example would help here} the line between ``bad grammar'' and slang or dialectal differences is less clear.
 
 
 \section{Discussion}
 
-\subsection{Annotator feedback}
-Annotators' impressions of the task; 
+%\subsection{Annotator feedback}
+The SAILS corpus was created and annotated with specific future research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were developed with an eye toward content analysis and ICALL, but we believe the annotations and responses could be useful in applications involving question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items; guidelines, task materials and annotation tools are included with the corpus. \footnote{I think we need to list an address for corpus files, etc. My Github would not be anonymous, but I could create an anonymous one temporarily, and switch the address in the published version (assuming this gets accepted).}
 
-what is difficult? what is easy?
+In hindsight, and as advice for similar work, the researchers and annotators note that the inclusion of any symbols or numerals resulted in avoidable complications; some participants give clever ``meta'' responses referring directly to the symbols (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focus on these specifics to the exclusion of the abstract concepts they are intended to represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}).
 
-\subsection{Trends (Agreement, etc)}
-(Do trends align with annotator feedback?)
-
-What kinds of items \& responses were challenging?
-
-Are the trends for individual features? Recurring disagreements?
+For examining variation broadly, we believe the current work to be appropriate, but with more specific research questions in mind, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency \lk{Or however we might want to say this} in terms of effort and expense. For example, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. Moreover, given that crowdsourced data appears to be less on target for most features than in-person NNS data, for straightforward language testing applications, the use of expert annotators and constructed reference materials or gold standards may be more appropriate. \citep{somasundaran:chodorow:14}.
 
 
-\subsection{Limitations}
-what we'd do differently:
+%\subsection{Annotator feedback}
+%Annotators' impressions of the task; 
 
-which images are problematic and why (symbols, ambiguity); 
+%what is difficult? what is easy?
+%
+%\subsection{Trends (Agreement, etc)}
+%(Do trends align with annotator feedback?)
+%
+%What kinds of items \& responses were challenging?
+%
+%Are the trends for individual features? Recurring disagreements?
+%
+%
+%\subsection{Limitations}
+%
+%which images are problematic and why (symbols, ambiguity); 
+%
+%Which features are problematic; useful/not useful;
+%
+\subsection{Aaargh!}
+%Use of corpus in the next phase of my work;
+%
+If I delete this line, latex fails to generate the PDF
+%
+%\section*{Acknowledgments}
 
-Which features are problematic; useful/not useful;
+%(Advisors, annotators)
 
-\subsection{Potential Uses}
-Use of corpus in the next phase of my work;
-
-Suggestions of other projects and research questions for this corpus.
-
-\section*{Acknowledgments}
-
-(Advisors, annotators)
 \bibliographystyle{acl_natbib.bst}
 \bibliography{levi-bib.bib}
+
 
 %The acknowledgments should go immediately before the references.  Do
 %not number the acknowledgments section. Do not include this section
