@@ -49,7 +49,7 @@
 \newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
 \newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
 % for removing all marginpars ==> good for final submission! %%nice trick!
-%%\renewcommand{\marginpar}[1]{}
+\renewcommand{\marginpar}[1]{}
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 \title{Annotating Picture Description Task Responses for Content Analysis}
@@ -66,7 +66,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Given that all users of a language can be creative in their language usage, the overarching goal of this work is to investigate issues of variability and acceptability in written text, for both non-native speakers (NNSs) and native speakers (NSs).  We control for meaning by collecting a dataset of picture description task (PDT) responses from a number of NSs and NNSs, and we annotate a handful of dimensions, to capture the multifaceted ways in which responses can vary and can be acceptable.  Outlining the decisions to be made highlights questions needing to be addressed by anyone working with learner language properties such as variability, acceptability and native-likeness.  We find reliable inter-annotator agreement, though areas of disagreement point to difficult areas for establishing a link between form and meaning.
+Given that all users of a language can be creative in their language usage, the overarching goal of this work is to investigate issues of variability and acceptability in written text, for both non-native speakers (NNSs) and native speakers (NSs).  We control for meaning by collecting a dataset of picture description task (PDT) responses from a number of NSs and NNSs, and we annotate a handful of dimensions, to capture the multifaceted ways in which responses can vary and can be acceptable.  By examining the decisions made in this corpus development, we highlight the questions facing anyone working with learner language properties such as variability, acceptability and native-likeness.  We find reliable inter-annotator agreement, though areas of disagreement point to difficult areas for establishing a link between form and meaning.
 \end{abstract}
 
 \section{Introduction}
@@ -101,13 +101,12 @@ Our overarching goal is to investigate these questions of variability and accept
 To that end---and taking \textit{variability} to concern different mappings between linguistic form and its meaning---in this paper we control for meaning by collecting a dataset of picture description task (PDT) responses from a number of NSs and NNSs, and we annotate a handful of dimensions, thereby capturing the multifaceted ways in which responses can vary and can be acceptable or unacceptable. We call this the SAILS Corpus, for \textit{semantic analysis of image-based learner sentences}---our intended use. 
 %\lk{We should declare the name, I think. How about this?} 
 %\md{I like it!}
-Outlining the decisions to be made highlights questions needing to be addressed by anyone working with learner language properties such as variability, acceptability and native-likeness.
-
+By examining the decisions made in this corpus development, we highlight the questions facing anyone working with learner language properties such as variability, acceptability and native-likeness. 
 % \begin{itemize}
 % \item Background, purpose of the corpus; (variability within NS and NNS groups; and these groups vary from each other?)
 % \end{itemize}
 
-Given the form-meaning aspect of variability, we are interested in how variable linguistic behavior is \emph{for the same content}, both within and among NSs and NNSs.  There is a long-standing notion that systems processing learner data would be wise to constrain the data in some way \citep[e.g.,][]{heift:schulze:07, somasundaran:chodorow:14, somasundaran:ea:15}, but we do not know how much constraint is needed---or whether we sacrifice the possibility of observing particular learner behavior for the sake of a constraint---without knowing more about the ways in which variation happens \citep[cf., in particular,][]{bailey:meurers:08}.  
+Given the form-meaning aspect of variability, we are interested in how variable linguistic behavior is \emph{for the same content}, both within and between NS and NNS groups.  There is a long-standing notion that systems processing learner data would be wise to constrain the data in some way \citep[e.g.,][]{heift:schulze:07, somasundaran:chodorow:14, somasundaran:ea:15}, but we do not know how much constraint is needed---or whether we sacrifice the possibility of observing particular learner behavior for the sake of a constraint---without knowing more about the ways in which variation happens \citep[cf., in particular,][]{bailey:meurers:08}.  
 
 Using responses to PDT stimuli ensures that respondents are discussing the same content.  In further annotating multiple dimensions of these PDT responses, not only are we able to see how variable they are, but we are able to get a better handle on what could make them more appropriate for different purposes.  For example, knowing that a person has gotten the main content of a picture correct, while adding information not present in the picture, may be treated differently than one who has made no such inferences but seems to be addressing a question about a different person in the picture (see section~\ref{sec:scheme}).  The acceptability of a response is thus taken as a function of several interacting features, most of which relate the text to the known semantic content.  Relating to known content is distinct from typical grammatical error correction (GEC) \citep{leacock:ea:14} and from more linguistically driven work such as parsing \citep[e.g.,][]{cahill-et-al:14, ragheb:dickinson:14a}, but providing the dimensions of acceptability and elucidating how they are applied provides insight for any enterprise desiring to connect learner text with semantic content, in addition to unpacking the sources of variation and of difficulty in processing a range of learner data.
 
@@ -195,7 +194,7 @@ The man is is telling her where to go & 1 & 0 \\
 
 \subsection{Data Collection}
 
-Responses were collected from 499 participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses for English as a Second Language students attending a large public university in the US. These participants were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese. 
+Responses were collected from 499 participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses for English as a Second Language students attending a large public university in the US. These participants performed the task in a computer lab with the researchers present. They were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese. 
 
 Of the 358 NS participants, 29 were personally known by the researchers. Responses from the remaining 329 NSs were purchased via an online survey platform where participants earn credits they can redeem for gift cards and prizes. Due to length restrictions for purchased surveys, these NSs each completed only half of the task, so their data is equivalent to 164.5 full participants.
 
@@ -249,7 +248,7 @@ To address the specifics of appropriate answers, five binary features were event
 \item \textbf{Core Event}: Does the response capture the core event depicted in the image? Core events are not pre-defined but should be fairly obvious given the nature of the images. The response should link an appropriate subject to the event.  In the top picture of Table~\ref{tab:test-sample-items}, \textit{The woman is running} clearly captures the core event, while \textit{She is wearing a red shirt} is irrelevant to the event happening.
 \item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial relationship between persons depicted in the image.  For example, in Table~\ref{tab:test-sample-items}, \textit{She is wearing a red shirt} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (annotation=1), while \textit{Trying to run from her bad decisions} has information that cannot be inferred from the picture.
 \item \textbf{Answerhood}: Does the response make a clear attempt to answer the question? This generally requires a progressive verb. For targeted items, the subject of the question, or an appropriate pronoun, must be used as the subject of the response.  For example, \textit{The dog is happy} is answering a question other than \textit{What is the woman doing?} (Table~\ref{tab:test-sample-items}).
-\item \textbf{Interpretability}: Does the response evoke a clear mental image (even if different from the item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{The map is hard to read} is too vague to generate a clear mental image (see Table~\ref{tab:test-sample-items}).
+\item \textbf{Interpretability}: Does the response evoke a clear mental image (even if different from the item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{The map is hard to read} is too vague to generate a clear mental image (Table~\ref{tab:test-sample-items}).
 \item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?  
 %While the focus of GEC work, 
 In our data set, this is a relatively straightforward feature to annotate (see section~\ref{sec:agreement}).
@@ -346,7 +345,7 @@ The test set parallels the development set and consists of one intransitive, one
 \label{sec:transitivity}
 Comparing the intransitive, transitive and ditransitive items reveals an association between agreement and item complexity. The highest raw agreement and Cohen's kappa scores are found with the intransitive item ($97.8\%$, $\kappa=0.910$) and the lowest with the ditransitive ($92.4\%$, $\kappa=0.764$). 
 
-This is as expected, as ditransitive sentences are longer and have more verbal arguments, making for more opportunities for responses to vary (see Table~\ref{tab:ttr}), and thus more opportunities for annotators to disagree on a response. This trend also matches annotator feedback: both ranked the ditransitive item as the most difficult to annotate, for all features, and the intransitive as the easiest.
+This is as expected, as ditransitive sentences are longer and have more verbal arguments, making for more opportunities for responses to vary (see Table~\ref{tab:ttr}), and thus more opportunities for annotators to disagree on a response. This trend also matches annotator feedback: both ranked the ditransitive item as the most difficult to annotate overall, and the intransitive as the easiest.
 
 \subsection{Targeting} 
 \label{sec:prompts}
@@ -364,7 +363,7 @@ Grouped by feature, the annotations all show raw agreement scores above 91\% and
 
 \feat{Core event} has the second lowest inter-annotator agreement kappa score, at 0.808. This is somewhat lower than expected, as the pre-adjudication development set score was 0.889. This appears to be largely attributable to the difficulty of the ditransitive item, challenging for both participants and annotators (section~\ref{sec:transitivity}). 
 
-The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction. The test set item shows a man giving directions to a woman (Table~\ref{tab:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
+The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Table~\ref{tab:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
 %\textit{guiding}, 
 \textit{helping a lost person} or \textit{reading a map}, with A2 more likely than A1 to accept these less specific descriptions.
 
@@ -386,10 +385,12 @@ The majority of participants do attempt to follow the instructions and answer th
 Of 23 disagreements, seven stem from one annotator failing to enforce the requirement that a targeted response subject be either an appropriate pronoun or the exact subject given in the question, without adjectives, relative clauses or other modifiers. Given the question \textit{What is \textbf{the woman} doing?}, for example, the responses \textit{The \textbf{lady} is running} and \textit{The woman \textbf{who in pink} is running} were incorrectly accepted by one annotator.  While this criterion may seem strict, this subject-identity rule separates the task of identifying an attempt to answer the question from the task of verifying information (see \feat{verifiability} above).
 
 Another ten disagreements involve responses lacking a progressive verb, generally required as an indication that the response refers to the specific action in the image and does not merely describe a state or a general truth (cf., e.g., \textit{The woman is running} vs. \textit{The woman runs}). Annotator fatigue thus accounts for the majority of \feat{answerhood} disagreements.
+\smallskip
 
 \paragraph{Interpretability} The average \textit{yes} rate for \feat{interpretability} is 0.802; only \feat{core event} is less skewed: responses were thus also more likely to be unacceptable.
 %
-The raw agreement score is 91.9\% and kappa is 0.744, the lowest scores among the five features. This was anticipated, because \feat{interpretability} is perhaps the most difficult to define, leaving room for annotators' personal judgments. Annotators must decide whether a given response evokes a clear mental image, regardless of how well that mental image matches the PDT image.  In this way, responses such as \textit{The man is working} which may contain all \feat{core event} information and be completely \feat{verifiable} may still fall short, in that the man could be picking fruit, building a bridge, and so forth.
+The raw agreement score is 91.9\% and kappa is 0.744, the lowest scores among the five features. This was anticipated, because \feat{interpretability} is perhaps the most difficult to define, leaving room for annotators' personal judgments. Annotators must decide whether a given response evokes a clear mental image, regardless of how well that mental image matches the PDT image.  In this way, responses such as \textit{The man is working} which may %contain all \feat{core event} information and 
+be completely \feat{verifiable} may still fall short, in that the man could be picking fruit, building a bridge, and so forth.
 
 The guidelines place some restrictions on what it means to be a clear mental image. To begin with, if one were to illustrate the response, the result would be a complete, representational, canonical image. It would not be necessary to guess at major elements, like subjects or objects. 
 %
@@ -397,9 +398,9 @@ All necessary semantic arguments would be identifiable from the sentence and thu
 %
 Vague language should be avoided, but human gender does not need to be specified, especially when a non-gendered word like \textit{doctor} or \textit{teacher} is natural. 
 
-Consider a response like \textit{A woman is receiving a package}.  By these criteria, the response is annotated as 0 because the person or entity delivering the package is not specified, and an illustrator would need to either guess or compose the image with the deliverer out of the frame. \textit{A man is delivering a package}, on the other hand, would be accepted. An illustrator could simply show a delivery person carrying a package, as an indirect object would not be necessary for the verb \textit{deliver}.
+Consider a response like \textit{A woman is receiving a package}.  By these criteria, the response is annotated as 0 because the person or entity delivering the package is not specified, and an illustrator would need to either guess or compose the image with the deliverer oddly out of the frame. \textit{A man is delivering a package}, on the other hand, would be accepted. An illustrator could simply show a delivery person carrying a package, as an indirect object would not be necessary for the verb \textit{deliver}.
 
-Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog.} In discussion, A2 explained that these are too vague to illustrate as an action; A1 disagreed, and this seems to indicate differing judgments regarding the use of \textit{love} as a dynamic verb.
+Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog} (Table~\ref{tab:test-sample-items}). In discussion, A2 explained that these are too vague to illustrate as an action; A1 disagreed, and this seems to indicate differing judgments regarding the use of \textit{love} as a dynamic verb.
 
 \paragraph{Grammaticality} The \feat{grammaticality} feature is the most heavily skewed one, with an average \textit{yes} rate of 86.6\%.  As the only non-semantic annotation, this is perhaps not surprising.
 
@@ -409,9 +410,10 @@ Grammaticality has a raw agreement score of 96.0\% and a kappa of 0.827. Among 5
 The remainder reflect an unavoidable level of disagreement. Many of these stem from differing interpretations of bare nouns as either errors or as acceptable mass nouns, as in \textit{The man is giving \textbf{direction} to the tourist}. In several cases, annotators disagree over prepositions, which are known to be a common source of disagreement and pose special challenges in the context of learner language \citep{tetreault-chodorow:2008:HJCL,tetreault:chodorow:08}. For example, annotators could not agree on the grammaticality of the prepositions in \textit{The girl is asking for help \textbf{to} the man} and \textit{The girl is hugging \textbf{with} her cat}. 
 
 \subsection{NS \& NNS responses}
+\label{NSandNNSagreement}
 Agreement scores were also calculated separately for NS and NNS responses, as shown in Table~\ref{tab:NSvNNSagreement}. Comparing the average rate of \textit{yes} annotations shows that the NNSs outperform the NSs by between roughly 8\% and 12\% on all features except \feat{grammaticality}. It is not surprising that NSs outperform NNSs on this feature (90.2\% to 79.3\%), but to account for their superior performance on the other features, one must consider the fact that the NNSs were recruited from ESL courses and performed the task with peers and researchers present. The NNSs were more likely to make a good faith effort than the NSs, the majority of whom performed the task anonymously and remotely. Furthermore, 
 %only NSs were asked to provide two responses to each item; 
-with twice as many responses to provide for each item for NSs, fatigue may have been a contributing factor.
+with twice as many responses to provide for each item for NSs, fatigue and boredom may have been a contributing factor.
 %; related task effects and fatigue are also likely contributing factors.
 
 %% LK NTS:
@@ -462,18 +464,18 @@ with twice as many responses to provide for each item for NSs, fatigue may have 
  Set & NS & NNS & NS & NNS \\
 \hline
 \hline
-Intrans  & 0.814 & 0.952 & 0.914 & 0.859 \\
-\hline
-Trans  & 0.768 & 0.796 & 0.857 & 0.843 \\ %%LK: Yes, 0.949 is correct in both cases here
-\hline
-Ditrans  & 0.794 & 0.808 & 0.762 & 0.767 \\ 
-\hline
-\hline
-Target  & 0.812 & 0.849 & 0.829 & 0.807 \\
-\hline
-Untarg  & 0.768 & 0.855 & 0.856 & 0.833 \\
-\hline
-\hline
+%Intrans  & 0.814 & 0.952 & 0.914 & 0.859 \\
+%\hline
+%Trans  & 0.768 & 0.796 & 0.857 & 0.843 \\ %%LK: Yes, 0.949 is correct in both cases here
+%\hline
+%Ditrans  & 0.794 & 0.808 & 0.762 & 0.767 \\ 
+%\hline
+%\hline
+%Target  & 0.812 & 0.849 & 0.829 & 0.807 \\
+%\hline
+%Untarg  & 0.768 & 0.855 & 0.856 & 0.833 \\
+%\hline
+%\hline
 Core  & 0.686 & 0.805 & 0.819 & 0.767 \\
 \hline
 Verif  & 0.807 & 0.882 & 0.904 & 0.819 \\
@@ -493,7 +495,7 @@ Gramm  & 0.902 & 0.793 & 0.786 & 0.863 \\
 
 Raw agreement scores are high among both groups, ranging from 91\% to 99.3\% (not shown). Notably, for \feat{core event}, \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS ones; i.e., annotators agree more on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form correctness.
 
-The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, annotators note that many grammar problems with NNS responses are obvious, e.g., \textit{The \textbf{man who in yellow} is showing the way to a girl} (see Table~\ref{tab:test-sample-items}), but the few grammar problems in NS data are mostly typos and more easily overlooked due to fatigue, e.g., \textit{The man is giving \textbf{ditections}}.
+The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, annotators note that many grammar problems with NNS responses are obvious (e.g., \textit{The \textbf{man who in yellow} is showing the way to a girl}, see Table~\ref{tab:test-sample-items}), but the few grammar problems in NS data are mostly typos and more easily overlooked due to fatigue (e.g., \textit{The man is giving \textbf{ditections}}).
 
 
 \section{Conclusion}
@@ -501,12 +503,14 @@ The lower kappa score for NS \feat{answerhood} is also attributable to task effe
 %\md{It's solid - "Conclusion" strikes me as a little better than "Conclusions", though.}
 
 %\subsection{Annotator feedback}
-The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus.\footnote{A non-anonymous github link will be included here in the final version.}
-%\footnote{I think we need to list an address for corpus files, etc. My Github would not be anonymous, but I could create an anonymous one temporarily, and switch the address in the published version (assuming this gets accepted).}
+The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus. \footnote{https://github.com/sailscorpus/sails}
+%\footnote{A non-anonymous github link will be included here in the final version.}
 
+\smallskip
 A number of lessons have been learned in this process for future data collection. The inclusion of any symbols or numerals resulted in response complications; some participants give clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focus on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of mostly crowdsourced NS data with the NNS student data makes it clear that motivations and task environment can effect the quality of responses, and these factors must be considered during data collection.
 
-The current work is appropriate for a broad examination of variation; if one has more specific research questions in mind, however, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency in terms of effort and expense. For example, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. Moreover, given that crowdsourced data appears to be less on target for most features than in-person NNS data, for straightforward language testing applications, the use of expert annotators and constructed reference materials or gold standards may be more appropriate. \citep{somasundaran:chodorow:14}.
+\smallskip
+The current work is appropriate for a broad examination of variation; if one has more specific research questions in mind, however, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency in terms of effort and expense. For example, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. Moreover, given that crowdsourced data appears to be less on target for most features than in-person NNS data, the use of expert annotators and constructed reference materials or gold standards may be more appropriate for straightforward language testing applications \citep{somasundaran:chodorow:14}.
 
 
 %\subsection{Annotator feedback}
