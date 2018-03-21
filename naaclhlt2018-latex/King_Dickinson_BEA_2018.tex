@@ -89,7 +89,7 @@ Given that all users of a language can be creative in their language usage, the 
 % \item variability is based on form-meaning matches, and to understand it means knowing what the person intended the meaning to be.  To study variability, we need to control for meaning.  (trick: we don't really know intention, but we do know what the acceptable meaning is for a picture.)
 % \end{itemize}
 
-%%Chapter 3, “Special Problems of Language Learners,” outlines the special properties of learner errors, which are often very different from the errors that native speakers make because of the influence of the learner’s native language. We go into some detail presenting three common errors in learner language: those involving prepositions, articles, and collocations.
+%%Chapter 3, ?Special Problems of Language Learners,? outlines the special properties of learner errors, which are often very different from the errors that native speakers make because of the influence of the learner?s native language. We go into some detail presenting three common errors in learner language: those involving prepositions, articles, and collocations.
 
 The (written) data of second language learners poses many challenges, whether it is being analyzed for grammatical errors \citep{leacock:ea:14}, for linguistic patterns \citep{kyle2015automatically}, for content analysis \citep{weigle2013english}, or for interactions with intelligent computer-assisted language learning (ICALL) systems \citep{amaral:meurers:user:07}. One of the core issues in doing anything with learner data is the inherent amount of variability in how linguistic forms are used to convey meaning \citep[cf., e.g.,][]{Meurers.Dickinson-17}. It may indeed seem like learners can use an infinite variety of forms to express a particular meaning. 
 %
@@ -188,7 +188,7 @@ The man is reading a map. & 0 & 0 \\
 The man is is telling her where to go & 1 & 0 \\
 \hline
 \end{tabular}
-\caption{\label{tab:test-sample-items} Test items and responses with \feat{Core Event} annotations from Annotators 1 and 2.}
+\caption{\label{tab:test-sample-items} Test sample items and example responses with Core Event annotations from Annotators 1 and 2.}
 \end{center}
 \end{table}
 
@@ -493,11 +493,7 @@ Gramm  & 0.902 & 0.793 & 0.786 & 0.863 \\
 
 Raw agreement scores are high among both groups, ranging from 91\% to 99.3\% (not shown). Notably, for \feat{core event}, \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS ones; i.e., annotators agree more on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form correctness.
 
-<<<<<<< HEAD
-The lower kappa score for NS \feat{answerhood} is also attributable to task effects--a second response (as required of NSs), is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected chance agreement contributes to this fact. Additionally, discussion of example disagreements with annotators confirmed that in many cases, NNS grammaticality is quickly discernible as ``good'' or ``bad'', but in NS data, \lk{example would help here} the line between ``bad grammar'' and slang or dialectal differences is less clear.
-=======
 The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas scores for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, discussion of disagreements confirms that, in many cases, NNS grammaticality is quickly discernible as ``good'' or ``bad'', but in NS data, \lk{example would help here} the line between ``bad grammar'' and slang or dialectal differences is less clear.
->>>>>>> 8ef70e51886c4141a3237383f9aedfc4853dbeb7
 
 
 \section{Conclusion}
@@ -505,12 +501,8 @@ The lower kappa score for NS \feat{answerhood} is also attributable to task effe
 %\md{It's solid - "Conclusion" strikes me as a little better than "Conclusions", though.}
 
 %\subsection{Annotator feedback}
-<<<<<<< HEAD
-The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus. \footnote{https://github.com/sailscorpus/sails}
-=======
 The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus.\footnote{A non-anonymous github link will be included here in the final version.}
 %\footnote{I think we need to list an address for corpus files, etc. My Github would not be anonymous, but I could create an anonymous one temporarily, and switch the address in the published version (assuming this gets accepted).}
->>>>>>> 8ef70e51886c4141a3237383f9aedfc4853dbeb7
 
 A number of lessons have been learned in this process for future data collection. The inclusion of any symbols or numerals resulted in response complications; some participants give clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focus on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of mostly crowdsourced NS data with the NNS student data makes it clear that motivations and task environment can effect the quality of responses, and these factors must be considered during data collection.
 
