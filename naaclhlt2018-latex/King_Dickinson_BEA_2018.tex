@@ -36,7 +36,7 @@
 %\usepackage{gb4e}
 %%%LK: I added the lines above
 
-%\aclfinalcopy % Uncomment this line for the final submission
+\aclfinalcopy % Uncomment this line for the final submission
 %\def\aclpaperid{***} %  Enter the acl Paper ID here
 
 %\setlength\titlebox{5cm}
@@ -49,7 +49,7 @@
 \newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
 \newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
 % for removing all marginpars ==> good for final submission! %%nice trick!
-\renewcommand{\marginpar}[1]{}
+%\renewcommand{\marginpar}[1]{}
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 \title{Annotating Picture Description Task Responses for Content Analysis}
@@ -117,13 +117,14 @@ Given the form-meaning aspect of variability, we are interested in how variable 
 %
 %\textbf{\citet{somasundaran:ea:15}} ``Six-Picture Narration'' task; ASR transcriptions; 3440 responses to 6 prompts, about 60 seconds each; ``human expert raters'', 1-4 points; Five features: Relevance (calculated via overlap with expert picture descriptions and narratives); collocation -- a measure of language use based on the PMI of bigrams and trigrams (trained on Google 1T corpus); Discourse -- measured by counting temporal and causal discourse cues (terms); Detailing, a measure of adjectives, adverbs and proper nouns; Sentiment, a score based on use of a sentiment lexicon (ASSESS) and a ``subjectivity'' lexicon (MPQA).
 
-The corpus presented here bears some similarities to other task-based learner corpora. \citet{meurers2011evaluating} examined German learner responses to short-answer reading comprehension questions. A target answer was produced by an expert, and annotators used this target to label the meaning of responses as correct or incorrect, along with a more detailed set of labels related to form, meaning, and task appropriateness. In our own previous work \citep{king:dickinson:16, king:dickinson:13}, we annotated a small set of PDT responses as correct or incorrect, with incorrect responses further labeled as errors of form or meaning. Our current work provides a much larger dataset annotated by multiple experts for more fine-grained features. \citet{somasundaran:chodorow:14} presented work on PDT responses in which respondents used provided vocabulary words. Responses were manually annotated on a holistic four point scale, and a set of five features (relating to meaning, relevance and language use) were calculated based on statistical assumptions. \citet{somasundaran:ea:15} performed a very similar analysis with transcribed texts from a six picture narration task, but neither of these datasets is publicly available. Like the studies mentioned here, our work with the SAILS Corpus involves collecting task-constrained responses, then mapping an overall measure of response goodness to more fine-grained features concerning relevance, meaning and language use. 
+The corpus presented here bears some similarities to other task-based learner corpora. \citet{meurers2011evaluating} examined German learner responses to short-answer reading comprehension questions. A target answer was produced by an expert, and annotators used this target to label the meaning of responses as correct or incorrect, along with a more detailed set of labels related to form, meaning, and task appropriateness. In our own previous work \citep{king:dickinson:16, king:dickinson:13}, we annotated a small set of PDT responses as correct or incorrect, with incorrect responses further labeled as errors of form or meaning. Our current work provides a much larger dataset annotated by multiple experts for more fine-grained features. \citet{somasundaran:chodorow:14} presented work on PDT responses in which respondents used provided vocabulary words. Responses were manually annotated on a holistic four point scale, and a set of five features (relating to meaning, relevance and language use) were calculated based on statistical assumptions. \citet{somasundaran:ea:15} performed a very similar analysis with transcribed texts from a six-picture narration task, but neither of these datasets is publicly available.\md{Is there anything other than public availability that makes our work unique from theirs?} Like the studies mentioned here, our work with the SAILS Corpus involves collecting task-constrained responses, then mapping an overall measure of response goodness to more fine-grained features concerning relevance, meaning and language use. \md{Do we really map \textbf{from} an overall goodness measure?  Maybe simply ``then annotating fine-grained features ...''?}
 
+\md{First half of this \P could be shortened/excised?}
 Using responses to PDT stimuli ensures that respondents are discussing the same content.  In  annotating multiple dimensions of these PDT responses, we are able to get a better handle on what could make them more appropriate for different purposes.  For example, a response may present the main content of an item correctly but add information not present in the picture, while another 
-may make no such inferences but seem address a question about a different person in the picture (see section~\ref{sec:scheme}). The acceptability of a response is thus taken as a function of several interacting features, most of which relate the text to the known semantic content.  Relating to known content is distinct from typical grammatical error correction (GEC) \citep{leacock:ea:14} and from more linguistically driven work such as parsing \citep[e.g.,][]{cahill-et-al:14, ragheb:dickinson:14a}, but providing the dimensions of acceptability and elucidating how they are applied provides insight for any enterprise desiring to connect learner text with semantic content, in addition to unpacking the sources of variation and of difficulty in processing a range of learner data.
+may make no such inferences but seem to address a question about a different person in the picture (see section~\ref{sec:scheme}). The acceptability of a response is thus taken as a function of several interacting features, most of which relate the text to the known semantic content.  Relating to known content is distinct from typical grammatical error correction (GEC) \citep{leacock:ea:14} and from more linguistically driven work such as parsing \citep[e.g.,][]{cahill-et-al:14, ragheb:dickinson:14a}, but providing the dimensions of acceptability and elucidating how they are applied provides insight for any enterprise desiring to connect learner text with semantic content, in addition to unpacking the sources of variation and of difficulty in processing a range of learner data.
 
 %Taking a cue from \citet{king:dickinson:13}, 
-In section~\ref{sec:pdt} we outline the picture description task (PDT) we use, designed with items that elicit specific types of linguistic behavior.  Section~\ref{sec:scheme} outlines the annotation, specifically tackling the five-dimensional scheme; inter-anntotator agreement results are provided in section~\ref{sec:agreement}.  While agreement seems reliable, highlighting areas of disagreement showcases difficult areas for establishing a link between form and meaning \citep[cf., e.g.,][]{Meurers.Dickinson-17}.
+In section~\ref{sec:pdt} we outline the picture description task (PDT) we use, designed with items that elicit specific types of linguistic behavior.  Section~\ref{sec:scheme} outlines the annotation, tackling the five-dimensional scheme; inter-anntotator agreement results are in section~\ref{sec:agreement}.  While agreement seems reliable, highlighting areas of disagreement showcases difficult areas for establishing a link between form and meaning \citep[cf., e.g.,][]{Meurers.Dickinson-17}.
 
 \section{Picture Description Task}
 \label{sec:pdt}
@@ -186,7 +187,7 @@ The man is is telling her where to go & 1 & 0 \\
 
 \subsection{Data Collection}
 
-A total of approximately 16,000 responses were collected from 499 participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses for English as a Second Language students attending a large public university in the US. Nearly 90\% of these recruits were native speakers of Mandarin Chinese, which could have important implications for conclusions drawn from the corpus. These participants performed the task in a computer lab with the researchers present. They were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese.
+A total of approximately 16,000 responses were collected from 499 participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses for English as a Second Language students attending Indiana University. Nearly 90\% of these recruits were native speakers of Mandarin Chinese, which could have important implications for conclusions drawn from the corpus. These participants performed the task in a computer lab with the researchers present. They were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese.
 
 Of the 358 NS participants, 29 were personally known by the researchers. Responses from the remaining 329 NSs were purchased via an online survey platform where participants earn credits they can redeem for gift cards and prizes. Due to length restrictions for purchased surveys, these NSs each completed only half of the task, so their data is equivalent to 164.5 full participants.
 
@@ -297,6 +298,7 @@ Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \label{sec:agreement}
 Two annotators participated in the annotation. Both are native speakers of (US) English, and each has several years of language teaching experience with both children and adult learners. Annotator 1 (A1) annotated the complete corpus. Annotator 2 (A2) annotated only the development set and the test set, data subsets described next.
 
+\md{We had the horizontal space, so I spelled all the features out - is it too much?}
 \begin{table*}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|l|l||l|l||l|}
@@ -304,27 +306,27 @@ Two annotators participated in the annotation. Both are native speakers of (US) 
 Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Agree & Kappa \\
 \hline
 \hline
-Intrans & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
+Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
 \hline
-Trans & 2155 & 0.780 & 0.774 & 0.777 & 0.653 & 0.949 & 0.853 \\
+Transitive & 2155 & 0.780 & 0.774 & 0.777 & 0.653 & 0.949 & 0.853 \\
 \hline
-Ditrans & 2155 & 0.812 & 0.786 & 0.799 & 0.678 & 0.924 & 0.764 \\ 
-\hline
-\hline
-Target & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
-\hline
-Untarg & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
+Ditransitive & 2155 & 0.812 & 0.786 & 0.799 & 0.678 & 0.924 & 0.764 \\ 
 \hline
 \hline
-Core & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
+Targeted & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
 \hline
-Verif & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
 \hline
-Answer & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
 \hline
-Interp & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+Core Event & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
 \hline
-Gramm & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
+Verifiability & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+\hline
+Answerhood & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+\hline
+Interpretability & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+\hline
+Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \hline
 \end{tabular}
 \caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual raw agreement (\textit{Agree}) and Cohen's kappa (\textit{Kappa}).}
@@ -359,7 +361,7 @@ Grouped by feature, the annotations all show raw agreement scores above 91\% and
 
 The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Table~\ref{tab:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
 %\textit{guiding}, 
-\textit{helping a lost person} or \textit{reading a map}, with A2 more likely than A1 to accept these less specific descriptions.
+\textit{helping a lost person} or \textit{reading a map}, with A2 more likely to accept these less specific descriptions.
 
 Similarly, but to a lesser extent, the transitive item, which shows a woman hugging a dog (Table~\ref{tab:test-sample-items}), resulted in disagreements where A2 accepts the word \textit{pet} as the object, but A1 rejects such responses as too vague. Despite the acceptable scores for \feat{core event} agreement, the fact that many disagreements hinge on particular word choice or annotators having minor differences in interpretation of the event suggest that greater agreement could be achieved by providing annotators with suggestions about the acceptable content for each response. In other words: by more clearly determining the desired level of specificity of a response---for the verb or its arguments---agreement could be higher. The desired specificity may vary in accordance with the intended use of the annotations; in the current annotations, the standard discussed between annotators and in the guidelines included pragmatic considerations like naturalness, native-likeness and effort.
 % \md{Would determining the appropriate level of specificity require knowing the end use of the annotation?}
@@ -394,7 +396,7 @@ Vague language should be avoided, but human gender does not need to be specified
 
 Consider a response like \textit{A woman is receiving a package}.  By these criteria, the response is annotated as 0 because the person or entity delivering the package is not specified, and an illustrator would need to either guess or compose the image with the deliverer oddly out of the frame. \textit{A man is delivering a package}, on the other hand, would be accepted. An illustrator could simply show a delivery person carrying a package, as an indirect object would not be necessary for the verb \textit{deliver}.
 
-Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog} (Table~\ref{tab:test-sample-items}). In discussion, A2 explained that these are too vague to illustrate as an action; A1 disagreed, and this seems to indicate differing judgments regarding the use of \textit{love} as a dynamic verb.
+Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog} (Table~\ref{tab:test-sample-items}). A2 explained that these are too vague to illustrate as an action; A1 disagreed, and this seems to indicate differing judgments regarding the use of \textit{love} as a dynamic verb.
 
 \paragraph{Grammaticality} The \feat{grammaticality} feature is the most heavily skewed one, with an average \textit{yes} rate of 86.6\%.  As the only non-semantic annotation, this is perhaps not surprising.
 
@@ -497,7 +499,7 @@ The lower kappa score for NS \feat{answerhood} is also attributable to task effe
 %\md{It's solid - "Conclusion" strikes me as a little better than "Conclusions", though.}
 
 %\subsection{Annotator feedback}
-The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus. \footnote{https://github.com/sailscorpus/sails}
+The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}
 %\footnote{A non-anonymous github link will be included here in the final version.}
 
 \smallskip
