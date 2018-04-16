@@ -49,7 +49,7 @@
 \newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
 \newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
 % for removing all marginpars ==> good for final submission! %%nice trick!
-%\renewcommand{\marginpar}[1]{}
+\renewcommand{\marginpar}[1]{}
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 \title{Annotating Picture Description Task Responses for Content Analysis}
@@ -102,7 +102,6 @@ To investigate variability and the mappings between linguistic form and meaning,
 By examining the decisions made in this corpus development, we highlight the questions facing anyone working with learner language properties such as variability, acceptability and native-likeness. 
 
 Given the form-meaning aspect of variability, we are interested in how variable linguistic behavior is \emph{for the same content}, both within and between NS and NNS groups, and the potential use of NS responses to evaluate NNS responses.  There is a long-standing notion that systems processing learner data would be wise to constrain the data in some way \citep[e.g.,][]{heift:schulze:07, somasundaran:ea:15}, but we do not know how much constraint is needed---or whether we sacrifice the possibility of observing particular learner behavior for the sake of a constraint---without knowing more about the ways in which variation happens \citep[cf.][]{bailey:meurers:08}.  
-
 %\textbf{Compare with other task-based learner corpora here.}
 %
 %\textbf{\citet{king:dickinson:13, king:dickinson:16}}; Small data set (530 responses), No inter-annotator agreement scores, no annotation guidelines. Only 1 dimension (acceptability).
@@ -117,11 +116,18 @@ Given the form-meaning aspect of variability, we are interested in how variable 
 %
 %\textbf{\citet{somasundaran:ea:15}} ``Six-Picture Narration'' task; ASR transcriptions; 3440 responses to 6 prompts, about 60 seconds each; ``human expert raters'', 1-4 points; Five features: Relevance (calculated via overlap with expert picture descriptions and narratives); collocation -- a measure of language use based on the PMI of bigrams and trigrams (trained on Google 1T corpus); Discourse -- measured by counting temporal and causal discourse cues (terms); Detailing, a measure of adjectives, adverbs and proper nouns; Sentiment, a score based on use of a sentiment lexicon (ASSESS) and a ``subjectivity'' lexicon (MPQA).
 
-The corpus presented here bears some similarities to other task-based learner corpora. \citet{meurers2011evaluating} examined German learner responses to short-answer reading comprehension questions. A target answer was produced by an expert, and annotators used this target to label the meaning of responses as correct or incorrect, along with a more detailed set of labels related to form, meaning, and task appropriateness. In our own previous work \citep{king:dickinson:16, king:dickinson:13}, we annotated a small set of PDT responses as correct or incorrect, with incorrect responses further labeled as errors of form or meaning. Our current work provides a much larger dataset annotated by multiple experts for more fine-grained features. \citet{somasundaran:chodorow:14} presented work on PDT responses in which respondents used provided vocabulary words. Responses were manually annotated on a holistic four point scale, and a set of five features (relating to meaning, relevance and language use) were calculated based on statistical assumptions. \citet{somasundaran:ea:15} performed a very similar analysis with transcribed texts from a six-picture narration task, but neither of these datasets is publicly available.\md{Is there anything other than public availability that makes our work unique from theirs?} Like the studies mentioned here, our work with the SAILS Corpus involves collecting task-constrained responses, then mapping an overall measure of response goodness to more fine-grained features concerning relevance, meaning and language use. \md{Do we really map \textbf{from} an overall goodness measure?  Maybe simply ``then annotating fine-grained features ...''?}
+The corpus presented here bears some similarities to other task-based learner corpora. \citet{meurers2011evaluating} examined German learner responses to short-answer reading comprehension questions. A target answer was produced by an expert, and annotators used this target to label the meaning of responses as correct or incorrect, along with a more detailed set of labels related to form, meaning, and task appropriateness. In our own previous work \citep{king:dickinson:16, king:dickinson:13}, we annotated a small set of PDT responses as correct or incorrect, with incorrect responses further labeled as errors of form or meaning.
+%Our current work provides a much larger dataset annotated by multiple experts for more fine-grained features.
+\citet{somasundaran:chodorow:14} presented work on PDT responses in which respondents used provided vocabulary words. Responses were manually annotated on a holistic four point scale, and a set of five features (relating to meaning, relevance and language use) were calculated based on statistical assumptions. \citet{somasundaran:ea:15} performed a nearly identical analysis with transcribed texts from a six-picture narration task, but neither of these datasets is publicly available.
+%\md{Is there anything other than public availability that makes our work unique from theirs?} 
+%Similarly, our current work involves collecting task-constrained responses and annotating them for features that impact their overall goodness for the task. However, our feature values are manually annotated rather than automatically derived.
 
-\md{First half of this \P could be shortened/excised?}
-Using responses to PDT stimuli ensures that respondents are discussing the same content.  In  annotating multiple dimensions of these PDT responses, we are able to get a better handle on what could make them more appropriate for different purposes.  For example, a response may present the main content of an item correctly but add information not present in the picture, while another 
-may make no such inferences but seem to address a question about a different person in the picture (see section~\ref{sec:scheme}). The acceptability of a response is thus taken as a function of several interacting features, most of which relate the text to the known semantic content.  Relating to known content is distinct from typical grammatical error correction (GEC) \citep{leacock:ea:14} and from more linguistically driven work such as parsing \citep[e.g.,][]{cahill-et-al:14, ragheb:dickinson:14a}, but providing the dimensions of acceptability and elucidating how they are applied provides insight for any enterprise desiring to connect learner text with semantic content, in addition to unpacking the sources of variation and of difficulty in processing a range of learner data.
+%Like the studies mentioned here, our work with the SAILS Corpus involves collecting task-constrained responses, then mapping an overall measure of response goodness to more fine-grained features concerning relevance, meaning and language use. \md{Do we really map \textbf{from} an overall goodness measure?  Maybe simply ``then annotating fine-grained features ...''?}
+
+%\md{First half of this \P could be shortened/excised?}
+%Using responses to PDT stimuli ensures that respondents are discussing the same content.
+Our work reverses this mapping by providing manually annotated features, which we hope will be useful for mapping to holistic scores.
+For example, a response may present the main content of an item correctly but add imaginary details, while another may address background information not asked about in the prompt (see section~\ref{sec:scheme}). The acceptability of a response is thus taken as a function of several interacting features, most of which relate the text to the known semantic content.  Relating to known content is distinct from typical grammatical error correction (GEC) \citep{leacock:ea:14} and from more linguistically driven work such as parsing \citep[e.g.,][]{cahill-et-al:14, ragheb:dickinson:14a}, but providing the dimensions of acceptability and elucidating how they are applied provides insight for any enterprise desiring to connect learner text with semantic content, in addition to unpacking the sources of variation and of difficulty in processing a range of learner data.
 
 %Taking a cue from \citet{king:dickinson:13}, 
 In section~\ref{sec:pdt} we outline the picture description task (PDT) we use, designed with items that elicit specific types of linguistic behavior.  Section~\ref{sec:scheme} outlines the annotation, tackling the five-dimensional scheme; inter-anntotator agreement results are in section~\ref{sec:agreement}.  While agreement seems reliable, highlighting areas of disagreement showcases difficult areas for establishing a link between form and meaning \citep[cf., e.g.,][]{Meurers.Dickinson-17}.
@@ -298,7 +304,7 @@ Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \label{sec:agreement}
 Two annotators participated in the annotation. Both are native speakers of (US) English, and each has several years of language teaching experience with both children and adult learners. Annotator 1 (A1) annotated the complete corpus. Annotator 2 (A2) annotated only the development set and the test set, data subsets described next.
 
-\md{We had the horizontal space, so I spelled all the features out - is it too much?}
+%\md{We had the horizontal space, so I spelled all the features out - is it too much?}
 \begin{table*}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|l|l||l|l||l|}
@@ -381,7 +387,7 @@ The majority of participants do attempt to follow the instructions and answer th
 Of 23 disagreements, seven stem from one annotator failing to enforce the requirement that a targeted response subject be either an appropriate pronoun or the exact subject given in the question, without adjectives, relative clauses or other modifiers. Given the question \textit{What is \textbf{the woman} doing?}, for example, the responses \textit{The \textbf{lady} is running} and \textit{The woman \textbf{who in pink} is running} were incorrectly accepted by one annotator.  While this criterion may seem strict, this subject-identity rule separates the task of identifying an attempt to answer the question from the task of verifying information (see \feat{verifiability} above).
 
 Another ten disagreements involve responses lacking a progressive verb, generally required as an indication that the response refers to the specific action in the image and does not merely describe a state or a general truth (cf., e.g., \textit{The woman is running} vs. \textit{The woman runs}). Annotator fatigue thus accounts for the majority of \feat{answerhood} disagreements.
-\smallskip
+%\smallskip
 
 \paragraph{Interpretability} The average \textit{yes} rate for \feat{interpretability} is 0.802; only \feat{core event} is less skewed: responses were thus also more likely to be unacceptable.
 %
@@ -502,11 +508,13 @@ The lower kappa score for NS \feat{answerhood} is also attributable to task effe
 The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. We have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but we believe the annotations and raw responses could find uses in question answering, dialogs, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. Guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}
 %\footnote{A non-anonymous github link will be included here in the final version.}
 
-\smallskip
-A number of lessons have been learned in this process for future data collection. The inclusion of any symbols or numerals resulted in response complications; some participants give clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focus on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of mostly crowdsourced NS data with the NNS student data makes it clear that motivations and task environment can effect the quality of responses, and these factors must be considered during data collection.
+%\smallskip
+A number of lessons have been learned in this process, and as we intend this work to be extendable, a few suggestions are in order. The inclusion of any symbols or numerals should be avoided as they resulted in response complications; some participants gave clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focused on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of crowdsourced NS data with the data of known NS participants and the NNS student data makes it clear that motivations and task environment can effect the quality of responses.
+%, and these factors must be considered during data collection.
 
-\smallskip
-The current work is appropriate for a broad examination of variation; if one has more specific research questions in mind, however, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency in terms of effort and expense. For example, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. Moreover, given that crowdsourced data appears to be less on target for most features than in-person NNS data, the use of expert annotators and constructed reference materials or gold standards may be more appropriate for straightforward language testing applications \citep{somasundaran:chodorow:14}.
+%\smallskip
+%The current work is appropriate for a broad examination of variation; if one has more specific research questions in mind, however, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency in terms of effort and expense. 
+Additionally, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. While we intend the NS responses collected here to be useful for comparing with NNS responses and addressing related research questions, for specific applications like language testing, the use of expert annotators and constructed reference materials or gold standards may be more appropriate \citep{somasundaran:chodorow:14}.
 
 
 %\subsection{Annotator feedback}
