@@ -1,0 +1,1 @@
+This backup was created on May 7, 2018, from the version of the corpus hosted on GitHub. I'm trying to merge the formats of the targeted and untargeted files, so that the demographic info in left several columns is identical for all files; i.e., all participants are listed on all files, even if they did not respond to the item in a given file.

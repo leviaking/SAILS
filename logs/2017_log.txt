@@ -467,8 +467,24 @@ Writing:
 	GS and thresholds (May 24)
 	Process for scoring (July 20)
 	Results (August 3)
+	Intro (August 10)
 	Conclusions (August 17)
 
 **Present at BEA (June 5)
+Complete BEA poster (May 30)
 
-	
+
+
+###
+May 7
+Today I want to work on the GS.
+Let's compile three versions:
+1. Perfect annotations
+2. 4/5 annotations, but Core Event *must* be "1"
+3. Everything else; i.e., Core Event = "0"
+
+
+I want to revise my scripts to work exclusively with the csv format I'm currently using, rather than having to save each response in several different files for different formats, etc.
+
+## May 8
+Still trying to merge the demographic columns to a single "template". See "corpus_demographic_merge.py"; so far, this script just identifies problem cases, it doesn't fix anything. Some RespondentIDs appear with non-identical demographic info. They are all minor differences: sometimes '' vs '0', sometimes inconsistent use of whitespace, and sometimes e.g., 'USA 34 ' vs 'USA 34 years'

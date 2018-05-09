@@ -1,0 +1,3 @@
+2018-05-09a
+This version of the corpus has all of the demographic entries corrected for consistency. Every instance of a given RespondentID will contain identical demographic information. Previously, there were slight inconsistencies: '0' vs. 'None' vs. '', for example, or "mouths" vs. "months". This version of the corpus was normalized using the corpus_cleanup.py script.
+This version does NOT have all respondents listed on all files; there are differences between T & U files. This has been corrected in later versions, so that all files are based on an identical template containing respondent IDs and demographic columns.
