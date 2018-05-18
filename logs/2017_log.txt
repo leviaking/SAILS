@@ -477,14 +477,79 @@ Complete BEA poster (May 30)
 
 ###
 May 7
-Today I want to work on the GS.
-Let's compile three versions:
-1. Perfect annotations
-2. 4/5 annotations, but Core Event *must* be "1"
-3. Everything else; i.e., Core Event = "0"
-
 
 I want to revise my scripts to work exclusively with the csv format I'm currently using, rather than having to save each response in several different files for different formats, etc.
 
 ## May 8
 Still trying to merge the demographic columns to a single "template". See "corpus_demographic_merge.py"; so far, this script just identifies problem cases, it doesn't fix anything. Some RespondentIDs appear with non-identical demographic info. They are all minor differences: sometimes '' vs '0', sometimes inconsistent use of whitespace, and sometimes e.g., 'USA 34 ' vs 'USA 34 years'
+
+
+
+####
+May 10
+
+Current goal is to get the distribution of distances between single GS responses and the full GS; I want to do a cross-validation on each response in the GS to see what kind of distances occur. This will help establish thresholds for acceptability when we test NNS responses.
+
+I need to get the pipeline revised and reconstructed in my current environment. I'm currently migrating scripts and files from the SAILS2014 folder.
+
+####
+May 11 (continued)
+
+
+####
+May 14. Meeting with Markus.
+
+I want to ask Markus about this idea:
+RE: GS.
+
+GS Experiment 1:
+Let's compile three versions:
+1. Perfect annotations (5/5)
+2. #1 + 4/5 annotations, but Core Event *must* be "1"
+3. Everything else; i.e., Core Event = "0" AND/OR 3/5 or less.
+
+MD:
+1. perfect
+2. 4/5 including core event
+3. any with core=1
+
+MD: let's try to optimize the GS using experment 
+
+GS Experiment 2:
+1. All NSs
+2. All FNSs
+3. All CNSs
+*Experiment should look at different sample sizes for the GS
+
+GS Experiment 3:
+1. 1st responses
+2. 2nd responses
+3. Combined
+
+MD: One possibility: Maybe later, just think about for now:
+Try using all NS responses, but weighted by the annotation score: 5/5 = 1, 4/5 = .8; so dependencies are weighted in the GS.
+
+Let's do something like use a dev set of 3 items per intrans/trans/ditrans; use leave-one-out testing (or whatever kind of annotation based experiments we decided on above) to establish thresholds (re: distance from the GS), then use remaining items as test set and see how well these thresholds generalize to new items. To be clear, we'd want to establish thresholds separately for intransitive, transitive, ditransitive.
+
+
+empties:  46347
+responses:  13533
+NNS responses:  4290
+NS responses:  9243
+NSC responses:  7960
+NSF responses:  1283
+first responses:  4634
+second responses:  4609
+NSC firsts:  3992
+NSC seconds:  3968
+NSF firsts:  642
+NSF seconds:  641
+
+
+
+
+
+
+
+
+
