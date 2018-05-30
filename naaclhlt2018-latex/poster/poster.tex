@@ -29,7 +29,6 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{caption}
-%\captionsetup{font=normalsize,labelfont=normalsize}
 \setbeamerfont{caption}{size=\normalsize}
 
 \definecolor{light-gray}{gray}{0.9}
@@ -56,7 +55,6 @@
 
 \begin{document}
 \begin{frame}{}
-%\vspace{-1.3em}
   \begin{columns}[t]
     \begin{column}{.33\linewidth}
 
@@ -92,49 +90,6 @@
     }
 \end{itemize}
 
-%    \begin{center}
-%      \mbox{}\\[-1em]\textbf{Past Approach}
-%    \end{center}
-%      \begin{center}\begin{minipage}{.8\textwidth}
-%      \begin{enumerate}
-%      \item Dependency parse NNS responses \& GS
-%      \item Use custom rules to extract and lemmatize
-%        \textit{verb-subject-object} triple for each response
-%      \item Attempt to match NNS triple to GS triples
-%      \end{enumerate}
-%      \end{minipage}\end{center}
-%
-%    \begin{center}
-%      \textbf{Past Limitations} 
-%    \end{center}
-%      \begin{center}\begin{minipage}{.8\textwidth}
-%      \begin{enumerate}
-%      \item GS is small
-%      \item NNS responses show more variation than NS responses
-%      \item Matching exact triples is restrictive (no partial matching)
-%        \begin{itemize}
-%        \item{\textit{kick(boy, ball) $\neq$ kick(boy, football)}}
-%        \end{itemize}
-%      \end{enumerate}
-%      \begin{center}
-%        Upshot: low coverage (50.8\%)
-%      \end{center}
-%      \end{minipage}\end{center}
-%
-%  \begin{center}
-%    \mbox{}\\\textbf{Current Approach} 
-%  \end{center}
-%    Generalize methods by:\\[0.5em]
-%    \begin{minipage}{.9\textwidth}
-%    \begin{enumerate}
-%    \item Representing responses as lists of dependencies
-%    \item Scoring NNS response representation according to how closely it resembles GS representation
-%  	\begin{itemize}
-%		\item{partial matching: \textbf{\textcolor{forestgreen}{subj\_boy\_kick} \texttt{+} \textcolor{carnelian}{obj\_ball\_kick}} vs. \textbf{\textcolor{forestgreen}{subj\_boy\_kick} \texttt{+} \textcolor{carnelian}{obj\_football\_kick}}}
-%
-%	\end{itemize}
-%    \end{enumerate}
-
 \end{minipage}
 \end{center}
 \end{block}
@@ -164,14 +119,13 @@
 \setlength{\fboxsep}{3pt}
 \setlength{\fboxrule}{0pt}
 \begin{table}[htb!]
-%\begin{table}[t!] This line is giving me trouble when I go to typeset
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
 Intransitive & Transitive & Ditransitive \\
 \hline
-{\includegraphics[width=0.29\columnwidth]{../figures/I01.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I02.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I03.jpg}} \\
-What is the boy doing? & What is the boy doing? & What is the man doing? \\
+{\includegraphics[width=0.29\columnwidth]{../figures/I30.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I29.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I28.jpg}} \\
+What is the woman doing? & What is the woman doing? & What is the man doing? \\
 \hline
 %\hline
 %{\includegraphics[width=0.29\columnwidth]{../figures/I20.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I16.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I17.jpg}} \\
@@ -182,32 +136,13 @@ What is the boy doing? & What is the boy doing? & What is the man doing? \\
 \caption{\label{tab:example-pdt-items} Example PDT images with their \textbf{targeted} questions. In the \textbf{untargeted} form, the question for each is \textit{What is happening?}} %From left to right, the examples represent two intransitive, transitive and ditransitive items.}
 \end{center}
 \end{table}
-	
-%	\begin{table}
-%	\begin{tabular}{|@{}c@{}|}
-%		\hline
-%		\myimg \\ %%%LK: this is defined before '\begin{document}'
-%		\hline
-%		\textbf{Example Response (L1)} \\
-%		\hline
-%		The man killing the beard. (Arabic)\\
-%		\hline
-%		A man is shutting a bird. (Chinese) \\
-%		\hline
-%		A man is shooting a bird. (English) \\
-%		\hline
-%		The man shouted the bird. (Spanish)\\
-%		\hline
-%	\end{tabular}
-%	\end{table}
-%	\vspace{-1em}
-%\end{block}
+
 \begin{itemize}
-	\item PDT Instructions:
-	\begin{itemize}
-		\item Focus on the main action
-		\item Respond in a complete sentence
-	\end{itemize}
+	\item PDT Instructions: Focus on main action; Respond with complete sentence
+%	\begin{itemize}
+%		\item Focus on the main action
+%		\item Respond in a complete sentence
+%	\end{itemize}
 	\item Task administered as online survey (SurveyMonkey.com)
 	\item Multiple versions
 	\begin{itemize}
@@ -220,20 +155,12 @@ What is the boy doing? & What is the boy doing? & What is the man doing? \\
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
-%\begin{center}
-%\begin{minipage}{.8\textwidth}
-%\begin{itemize}
-%	\item{Response Representation: By moving to a ``bag of dependencies'' approach, we loosen the strict evaluation from \textit{covered/not covered}; partial dependencies further loosen matching.}
-%	\item{Response Scoring: Averaging response term scores or calculating cosine distances allows for gradable rather than binary response scoring.}
-%\end{itemize}
+
 \end{minipage}
 \end{center}
 \vspace{-.5em}
 \end{block}
 
-%\begin{column}{.64\linewidth}
-%\begin{columns}
-%\begin{column}{.48\linewidth}
 
 \begin{block}{Participants}
 
@@ -243,7 +170,8 @@ What is the boy doing? & What is the boy doing? & What is the man doing? \\
 	\begin{itemize}
 		\item 141 NNSs
 		\begin{itemize}
-			\item Recruited from intermediate \& advanced English as a Second Language writing courses at Indiana University
+%			\item Recruited from intermediate \& advanced English as a Second Language writing courses at Indiana University
+			\item Recruited from intermediate \& advanced ESL writing courses at Indiana University
 			%\item Performed task in computer lab with researchers present
 			\item L1s: 125 Chinese (90\%), 4 Korean, 3 Burmese, 2 Hindi; 1 each: Arabic, Indonesian, German, Gujarati, Spanish, Thai, Vietnamese
 		\end{itemize}
@@ -252,14 +180,14 @@ What is the boy doing? & What is the boy doing? & What is the man doing? \\
 			%\item All NSs performed task remotely
 			\item 29 Familiar Native Speakers (FNSs)
 			\begin{itemize}
-				\item Relatives or friends of researchers
-				\item Responses are assumed to be high quality
+				\item Relatives or friends of researchers; assumed to be high quality
+%				\item Responses are assumed to be high quality
 			\end{itemize}
 			\item 329 Crowdsourced Native Speakers (CNSs)
 			\begin{itemize}
-				\item Responses purchased via SurveyMonkey
+				\item Responses purchased via SurveyMonkey; assumed to be lower quality
 				%\item Limited by SurveyMonkey to only 15 items per participant
-				\item Responses are assumed to be lower quality
+%				\item Responses are assumed to be lower quality
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
@@ -276,6 +204,7 @@ What is the boy doing? & What is the boy doing? & What is the man doing? \\
 \begin{minipage}{.85\textwidth}
 
 The SAILS Corpus contains a total of 13,533 PDT responses.
+\vspace{.5em}
 \begin{table}[htb!]
 \begin{center}
 \begin{tabular}{|l||r|r||r|}
@@ -288,7 +217,7 @@ The SAILS Corpus contains a total of 13,533 PDT responses.
 NNS & 4290 & 0 & 4290 \\
 \hline
 \hline
-NS (all) & 4634 & 4609 & 9243 \\ %%LK: Yes, 0.949 is correct in both cases here
+NS (all) & 4634 & 4609 & 9243 \\ 
 \hline
 \multicolumn{1}{|r||}{FNS} & 642 & 641 & 1283 \\ 
 \hline
@@ -304,7 +233,7 @@ Total & 8924 & 4609 & 13,533 \\
 
 \vspace{1em}
 In order to examine the level of variation among responses, type to token ratios (TTRs) were calculated on the response level. Capitalization and final punctuation were ignored. We can see that variation increases with item complexity (intransitives $<$ transitives $<$ ditransitives) and that untargeted responses vary more than targeted responses.
-
+\vspace{.5em}
 \begin{table}[h!]
 \begin{center}
 \begin{tabular}{|l||l|l||l|l|}
@@ -316,7 +245,7 @@ In order to examine the level of variation among responses, type to token ratios
 \hline
 Intransitives & 0.628 & 0.381 & 0.782 & 0.492 \\
 \hline
-Transitives & 0.752 & 0.655 & 0.859 & 0.779 \\ %%LK: Yes, 0.949 is correct in both cases here
+Transitives & 0.752 & 0.655 & 0.859 & 0.779 \\
 \hline
 Ditransitives & 0.835 & 0.817 & 0.942 & 0.936 \\ 
 \hline
@@ -327,6 +256,7 @@ Ditransitives & 0.835 & 0.817 & 0.942 & 0.936 \\
 
 \vspace{1em}
 TTRs were also calculated to compare the variability among NSs' first responses versus their second responses. As the TTRs for second responses are considerably higher than those for first responses, asking for two non-identical responses appears to effectively increase the variety of NS responses available for use in a GS.
+\vspace{.5em}
 \begin{table}[hb!]
 \begin{center}
 \begin{tabular}{|l||l|l||l|l|}
@@ -338,7 +268,7 @@ TTRs were also calculated to compare the variability among NSs' first responses 
 \hline
 Intransitives & 0.343 & 0.819 & 0.549 & 0.939 \\
 \hline
-Transitives & 0.509 & 0.895 & 0.682 & 0.926 \\ %%LK: Yes, 0.949 is correct in both cases here
+Transitives & 0.509 & 0.895 & 0.682 & 0.926 \\
 \hline
 Ditransitives & 0.641 & 0.948 & 0.864 & 0.955  \\ 
 \hline
@@ -352,7 +282,7 @@ Ditransitives & 0.641 & 0.948 & 0.864 & 0.955  \\
 \vspace{-.5em}
 \end{block} 
 
-\begin{block}{Annotation}
+\begin{block}{Annotation Scheme}
 \begin{center}
 \begin{minipage}{.85\textwidth}
 Two annotators:
@@ -363,26 +293,47 @@ Two annotators:
 \vspace{1em}
 
 Initial scheme (\textit{accurate $+$ native-like} $>$ \textit{accurate $+$ not native-like} $>$ \textit{not accurate}) proved problematic; evolved to five binary features related to accuracy \& native-likeness.
-
+\vspace{.5em}
 \begin{enumerate}
 \item \textbf{Core Event}: Does the response capture the core event depicted in the image?
 %Core events are not pre-defined for annotators but should be obvious given the nature of the images. The response should link an appropriate subject to the event.  In Table~\ref{tab:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
+\vspace{.5em}
 \item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences allowed only when necessary; e.g., familial relationships between persons in image. 
 %For example, in Table~\ref{tab:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (core event=0, verifiability=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be inferred from the picture (core event=1, verifiability=0).
+\vspace{.5em}
 \item \textbf{Answerhood}: Does the response make a clear attempt to answer the question? This generally requires a progressive verb. For targeted items, the subject of the question or an appropriate pronoun must be used as the subject of the response.
 %For example, \textit{The dog is so happy!} is answering a question other than \textit{What is the woman doing?}. 
+\vspace{.5em}
 \item \textbf{Interpretability}: Does the response evoke a clear mental image (even if different from the actual item image)? Any required verb arguments must be present and unambiguous.
 %For example, \textit{She loves her pet} is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a horse, etc.
+\vspace{.5em}
 \item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?  
 %In the SAILS responses, this is a relatively straightforward feature to annotate. For example, from Table~\ref{tab:sample-responses}, \textit{She is wear a blue dress} contains an ungrammatical verb form.
 
 \end{enumerate}
 
+
+
+\end{minipage}
+\end{center}
+\vspace{-.5em}
+\end{block}
+
+\end{column}
+
+\begin{column}{.33\linewidth}
+\vspace{-1em}
+\begin{block}{Annotation Results}
+\begin{center}
+\begin{minipage}{.85\textwidth}
+
 %\begin{table}[htb!]
 %\begin{center}
 %\begin{tabular}{|l|c|c|c|c|c|}
 %\hline
-%\textit{What is the boy doing?} & C & V & A & I & G \\
+%\multicolumn{6}{|c|}{\includegraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
+%\hline
+%\textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
 %\hline
 %\hline
 %eating food. & 0 & 1 & 1 & 1 & 1 \\
@@ -395,7 +346,7 @@ Initial scheme (\textit{accurate $+$ native-like} $>$ \textit{accurate $+$ not n
 %\hline
 %\hline
 %\hline
-%\textit{What is happening?} & C & V & A & I & G \\
+%\textit{What is happening?} (Untargeted) & C & V & A & I & G \\
 %\hline
 %\hline
 %Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
@@ -407,157 +358,135 @@ Initial scheme (\textit{accurate $+$ native-like} $>$ \textit{accurate $+$ not n
 %Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 %\hline
 %\end{tabular}
-%\caption{\label{tab:devo-transitive} Targeted and untargeted sample responses from the development set transitive item, shown with adjudicated annotations for the five features: core event (\textit{C}), verifiability (\textit{V}), answerhood (\textit{A}), interpretability (\textit{I}) and grammaticality (\textit{G}).}
+%\caption{\label{tab:devo-transitive} Sample responses from the development set transitive item, shown with adjudicated annotations for the five features: core event (\textit{C}), verifiability (\textit{V}), answerhood (\textit{A}), interpretability (\textit{I}) and grammaticality (\textit{G}).}
 %\end{center}
 %\end{table}
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l|c|c|c|c|c|c|l|c|c|c|c|c|}
+\begin{tabular}{|l||l|c|c|c|c|c|}
 \hline
-\textit{What is the boy doing?} & C & V & A & I & G && \textit{What is happening?} & C & V & A & I & G \\
-\hline
-\hline
-eating food. & 0 & 1 & 1 & 1 & 1 && Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
-\hline
-eatting. & 0 & 1 & 1 & 1 & 0 && Tommy is eating pizza. & 1 & 0 & 1 & 1 & 1 \\
-\hline
-The child is about to eat pizza. & 1 & 1 & 0 & 1 & 1 && The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
-\hline
-He may get fat eating pizza. & 1 & 0 & 0 & 1 & 1 && Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
+\multirow{10}{*}{\includegraphics[width=0.25\columnwidth]{../figures/I01.jpg}}& \textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
+\cline{2-7}
+\cline{2-7}
+& eating food. & 0 & 1 & 1 & 1 & 1 \\
+\cline{2-7}
+& eatting. & 0 & 1 & 1 & 1 & 0 \\
+\cline{2-7}
+& The child is about to eat pizza. & 1 & 1 & 0 & 1 & 1 \\
+\cline{2-7}
+& He may get fat eating pizza. & 1 & 0 & 0 & 1 & 1 \\
+\cline{2-7}
+& \multicolumn{6}{c|}{} \\
+\cline{2-7}
+& \textit{What is happening?} (Untargeted) & C & V & A & I & G \\
+\cline{2-7}
+\cline{2-7}
+& Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
+\cline{2-7}
+& Tommy is eating pizza. & 1 & 0 & 1 & 1 & 1 \\
+\cline{2-7}
+& The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
+\cline{2-7}
+& Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \hline
 \end{tabular}
-\caption{\label{tab:devo-transitive} Targeted and untargeted sample responses shown with adjudicated annotations for the development set transitive item (see Table~\ref{tab:example-pdt-items}).}
+\caption{\label{tab:devo-transitive} Sample responses from the development set transitive item, shown with adjudicated annotations for the five features: core event (\textit{C}), verifiability (\textit{V}), answerhood (\textit{A}), interpretability (\textit{I}) and grammaticality (\textit{G}).}
 \end{center}
 \end{table}
 
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|l|c|c|c|c|c|c|l|c|c|c|c|c|}
+%\hline
+%\multicolumn{13}{|c|}{\includegraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
+%\hline
+%\textit{What is the boy doing?} & C & V & A & I & G && \textit{What is happening?} & C & V & A & I & G \\
+%\hline
+%\hline
+%eating food. & 0 & 1 & 1 & 1 & 1 && Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
+%\hline
+%eatting. & 0 & 1 & 1 & 1 & 0 && Tommy is eating pizza. & 1 & 0 & 1 & 1 & 1 \\
+%\hline
+%The child is about to eat pizza. & 1 & 1 & 0 & 1 & 1 && The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
+%\hline
+%He may get fat eating pizza. & 1 & 0 & 0 & 1 & 1 && Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:devo-transitive} Targeted and untargeted sample responses shown with adjudicated annotations for the development set transitive item (see Table~\ref{tab:example-pdt-items}).}
+%\end{center}
+%\end{table}
+
+\vspace{1em}
+Using the items shown in Table~\ref{tab:example-pdt-items}, we calculated inter-annotator agreement for each feature, for targeted vs. untargeted items, and for the three verb types.
+%, as shown in Table~\ref{tab:agreement}. 
+\vspace{1em}
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l||l|l||l|}
+\hline
+Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Agree & Kappa \\
+\hline
+\hline
+Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
+\hline
+Transitive & 2155 & 0.780 & 0.774 & 0.777 & 0.653 & 0.949 & 0.853 \\
+\hline
+Ditransitive & 2155 & 0.812 & 0.786 & 0.799 & 0.678 & 0.924 & 0.764 \\ 
+\hline
+\hline
+Targeted & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
+\hline
+Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
+\hline
+\hline
+Core Event & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
+\hline
+Verifiability & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+\hline
+Answerhood & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+\hline
+Interpretability & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+\hline
+Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
+\hline
+\end{tabular}
+\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual raw agreement (\textit{Agree}) and Cohen's kappa (\textit{Kappa}).}
+\end{center}
+\end{table}
+\vspace{1em}
+
+Observations from Table~\ref{tab:agreement}:
+\begin{itemize}
+	\vspace{.5em}
+	\item Average \textit{yes} rates are included to show that all features skew toward \textit{yes} annotations; Cohen's kappa is thus used as a measure of inter-annotator agreement;
+	\vspace{.5em}
+	\item Cohen's kappas well above the conventional 0.67 threshold for meaningful agreement, so we believe the annotation scheme can be implemented reliably by following the guidelines;
+	\vspace{.5em}
+	\item Inter-annotator agreement decreases with item complexity, from intransitive to transitive to ditransitive verbs;
+	\vspace{.5em}
+	\item Agreement is slightly higher for untargeted items than targeted items, likely due to the fact that annotation guidelines are less complicated for untargeted items;
+	\vspace{.5em}
+	\item Among the features, answerhood has the highest kappa and interpretability has the lowest. This is unsurprising, as annotators reported these to be the easiest and hardest features to annotate, respectively.
+\end{itemize}
+
 \end{minipage}
 \end{center}
-\vspace{-.5em}
+\end{block}
+
+\begin{block}{Accessing the SAILS Corpus}
+The entire annotated SAILS Corpus, the PDTs and annotation guidelines are available to anyone at:
+
+\vspace{.5em}
+\textbf{https://github.com/sailscorpus/sails}
+
+\vspace{.5em}
+We believe the corpus can be a useful resource for language testing and ICALL, as well as other areas of research like question answering, dialog systems, pragmatic modeling, and visual references. We hope that other researchers will make use of the existing data or expand on it with new participants, items, and approaches for processing.
+
 \end{block}
 
 \end{column}
 
-\begin{column}{.33\linewidth}
-\vspace{-1em}
-\begin{block}{PLACEHOLDER One}
-More annotation
-\end{block}
-
-\begin{block}{PLACEHOLDER Two}
-
-
-\end{block}
-
-\end{column}
-%\end{columns}
-
-%\begin{block}{PLACEHOLDER Three}
-%We used hierarchical clustering to explore for patterns among the items and parameters.\\
-%\mbox{}\hfill Set-up: cluster PDT items using features from response (e.g., type/token counts for terms) \& features from system performance (i.e., average error score for parameter setting).\hfill\mbox{}
-%\\\mbox{}\hfill Goal: new PDT items could be placed into known clusters via response features \& optimal parameter settings for that cluster could be applied automatically\\ 
-%
-%\bigskip
-%\bigskip
-%
-%\begin{minipage}{.45\textwidth}
-%\begin{figure}
-%\begin{center}
-%\begin{tikzpicture}[sloped]
-%\node (5) at (-16,0) {\textcolor{darkblue}{5}};
-%\node (9) at (-14.5,0) {\textcolor{darkblue}{9}};
-%\node (1) at (-12.5,0) {\textcolor{persimmon}{1}};
-%\node (4) at (-11,0) {\textcolor{persimmon}{4}};
-%\node (6) at (-9.0,0) {6};
-%\node (2) at (-7,0) {2};
-%\node (8) at (-5.5,0) {8};
-%\node (10) at (-3.5,0) {10};
-%\node (3) at (-1.5,0) {3};
-%\node (7) at (0,0) {7};
-%\node (59) at (-15.3,1) {};
-%\node (14) at (-11.8,1) {};
-%\node (28) at (-6.2,1) {};
-%\node (37) at (-0.8,1) {};
-%\node (1037) at (-2.3,1.7) {};
-%\node (281037) at (-4.5,2.5) {};
-%\node (6281037) at (-7.5,3.2) {};
-%\node (146281037) at (-10,4) {};
-%\node (59146281037) at (-13.5,4.7) {};
-%\draw  (5)  |- (59.center);
-%\draw  (9)  |- (59.center);
-%\draw  (1)  |- (14.center);
-%\draw  (4)  |- (14.center);
-%\draw  (2)  |- (28.center);
-%\draw  (8)  |- (28.center);
-%\draw  (3)  |- (37.center);
-%\draw  (7)  |- (37.center);
-%\draw (10) |- (1037.center);
-%\draw (37) |- (1037.center);
-%\draw (1037) |- (281037.center);
-%\draw (28) |- (281037.center);
-%\draw (6) |- (6281037.center);
-%\draw (281037) |- (6281037.center);
-%\draw (14) |- (146281037.center);
-%\draw (6281037) |- (146281037.center);
-%\draw (59) |- (59146281037.center);
-%\draw (146281037) |- (59146281037.center);
-%\end{tikzpicture}
-%\end{center}
-%\caption{PDT items clustered by type and token counts of all NS, NNSO and NNSLM responses.} 
-%\label{fig:response-clusters}
-%\end{figure}
-%\end{minipage}
-%\begin{minipage}{.45\textwidth}
-%\begin{figure}
-%\begin{center}
-%\begin{tikzpicture}[sloped]
-%\node (5) at (-16,0) {\textcolor{darkblue}{5}};
-%\node (9) at (-14.5,0) {\textcolor{darkblue}{9}};
-%\node (8) at (-12.5,0) {8};
-%\node (3) at (-10.5,0) {3};
-%\node (2) at (-8.5,0) {2};
-%\node (10) at (-7.0,0) {10};
-%\node (1) at (-5,0) {\textcolor{persimmon}{1}};
-%\node (4) at (-3.5,0) {\textcolor{persimmon}{4}};
-%\node (6) at (-1.5,0) {6};
-%\node (7) at (-0,0) {7};
-%\node (59) at (-15.2,1) {};
-%\node (210) at (-7.7,1) {};
-%\node (14) at (-4.3,1) {};
-%\node (67) at (-.8,1) {};
-%\node (3210) at (-9.0,1.7) {};
-%\node (83210) at (-10.8,2.5) {};
-%\node (1467) at (-2.5,2.5) {};
-%\node (832101467) at (-6,3.5) {};
-%\node (all) at (-6,4.7) {};
-%\draw  (5) |- (59.center);
-%\draw  (9) |- (59.center);
-%\draw  (2) |- (210.center);
-%\draw  (10) |- (210.center);
-%\draw  (1) |- (14.center);
-%\draw  (4) |- (14.center);
-%\draw  (6) |- (67.center);
-%\draw  (7) |- (67.center);
-%\draw  (3) |- (3210.center);
-%\draw  (210) |- (3210.center);
-%\draw  (3210) |- (83210.center);
-%\draw  (8) |- (83210.center);
-%\draw  (14) |- (1467.center);
-%\draw  (67) |- (1467.center);
-%\draw  (83210) |- (832101467.center);
-%\draw  (1467)  |- (832101467.center);
-%\draw  (59)  |- (all.center);
-%\draw  (832101467)  |- (all.center);
-%\end{tikzpicture}
-%\end{center}
-%\caption{PDT items clustered by parameter performance.} 
-%\label{fig:parameter-clusters}
-%\end{figure}
-%\end{minipage}
-%
-%\end{block}
-
-%\end{column}
 \end{columns}
 \end{frame}
 \end{document}
