@@ -9,6 +9,9 @@
 \usepackage{rotating}
 \usepackage{wrapfig}
 
+\usepackage{verbatimbox}
+\newcommand\includeneatgraphics[2][]{\addvbuffer[3pt 0pt]{\includegraphics[#1]{#2}}}
+
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
 \usepackage{graphicx}
@@ -48,7 +51,7 @@
 \date[]{5 June 2018}
 \newcommand{\myimg}{
   \framebox{
-   \includegraphics[width=.95\textwidth]{../figures/exampleprompt2.jpg}}}
+   \includeneatgraphics[width=.95\textwidth]{../figures/exampleprompt2.jpg}}}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{itemize/enumerate body begin}{\normalsize}
 \setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}
@@ -169,11 +172,11 @@
 \hline
 Intransitive & Transitive & Ditransitive \\
 \hline
-{\includegraphics[width=0.29\columnwidth]{../figures/I30.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I29.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I28.jpg}} \\
+{\includeneatgraphics[width=0.29\columnwidth]{../figures/I30.jpg}} & {\includeneatgraphics[width=0.3\columnwidth]{../figures/I29.jpg}} & {\includeneatgraphics[width=0.3\columnwidth]{../figures/I28.jpg}} \\
 What is the woman doing? & What is the woman doing? & What is the man doing? \\
 \hline
 %\hline
-%{\includegraphics[width=0.29\columnwidth]{../figures/I20.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I16.jpg}} & {\includegraphics[width=0.3\columnwidth]{../figures/I17.jpg}} \\
+%{\includeneatgraphics[width=0.29\columnwidth]{../figures/I20.jpg}} & {\includeneatgraphics[width=0.3\columnwidth]{../figures/I16.jpg}} & {\includeneatgraphics[width=0.3\columnwidth]{../figures/I17.jpg}} \\
 %What is the girl doing? & What is the frog doing? & What is the girl doing? \\
 %\hline
 \end{tabular}
@@ -500,7 +503,7 @@ Two annotators:
 %\begin{center}
 %\begin{tabular}{|l|c|c|c|c|c|}
 %\hline
-%\multicolumn{6}{|c|}{\includegraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
+%\multicolumn{6}{|c|}{\includeneatgraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
 %\hline
 %\textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
 %\hline
@@ -540,7 +543,7 @@ Two annotators:
 \setlength{\tabcolsep}{0.45em}
 \begin{tabular}{|l||l|c|c|c|c|c|}
 \hline
-\multirow{17}{*}{\includegraphics[width=0.35\columnwidth]{../figures/I02.jpg}}& \textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
+\multirow{17}{*}{\includeneatgraphics[width=0.35\columnwidth]{../figures/I02.jpg}}& \textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
 \cline{2-7}
 \cline{2-7}
 & eating pizza & 1 & 1 & 1 & 1 & 1 \\
@@ -585,7 +588,7 @@ Two annotators:
 %\begin{center}
 %\begin{tabular}{|l|c|c|c|c|c|c|l|c|c|c|c|c|}
 %\hline
-%\multicolumn{13}{|c|}{\includegraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
+%\multicolumn{13}{|c|}{\includeneatgraphics[width=0.29\columnwidth]{../figures/I01.jpg}} \\ 
 %\hline
 %\textit{What is the boy doing?} & C & V & A & I & G && \textit{What is happening?} & C & V & A & I & G \\
 %\hline
