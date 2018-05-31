@@ -1,4 +1,5 @@
-\documentclass[final,t]{beamer}
+\documentclass[final,14pt,t]{beamer}
+%\documentclass[final,17pt,t]{beamer}
 \mode<presentation>{\usetheme{Purdue}}
 
 \usepackage{natbib,url}
@@ -31,12 +32,12 @@
 \usepackage{caption}
 \setbeamerfont{caption}{size=\normalsize}
 
-\definecolor{light-gray}{gray}{0.9}
-\definecolor{forestgreen}{rgb}{0.13, 0.55, 0.13}
-\definecolor{carnelian}{rgb}{0.7, 0.11, 0.11}
-\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
-\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
-\definecolor{persimmon}{rgb}{0.93, 0.35, 0.0}
+%\definecolor{light-gray}{gray}{0.9}
+%\definecolor{forestgreen}{rgb}{0.13, 0.55, 0.13}
+%\definecolor{carnelian}{rgb}{0.7, 0.11, 0.11}
+%\definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}
+%\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+%\definecolor{persimmon}{rgb}{0.93, 0.35, 0.0}
 
 \usepackage[size=custom,width=120,height=90,scale=1]{beamerposter}
 \usepackage{gb4e}
@@ -57,15 +58,19 @@
 \begin{frame}{}
   \begin{columns}[t]
     \begin{column}{.33\linewidth}
+\begin{minipage}[t][\textheight]{\linewidth} 
 
-\begin{block}{Overview \& Background}
+\vspace{-1.7em}
+\begin{block}{Overview}
 \begin{center}
 \begin{minipage}{.85\textwidth}
 
+\vspace{.6em}
   \begin{itemize}
     \itemsep1em
   \item{\textbf{Semantic Analysis of Image-based Learner Sentences (SAILS) Corpus}
-   \begin{itemize}
+   \medskip
+	\begin{itemize}
    \item 13,533 picture description task (PDT) responses
      %from native (NS) \& non-native speakers (NNS)
    \item Both native (NS) \& non-native speakers (NNS)
@@ -73,6 +78,9 @@
       \end{itemize}
     }
 \end{itemize}
+
+\vspace{.6em}
+
   \begin{itemize}
     \itemsep1em
   \item{\textbf{Goal:} Evaluate content of NNS sentences 
@@ -81,7 +89,9 @@
       \end{itemize}
     }
 \end{itemize}
-  
+
+\vspace{.6em}
+
   \begin{itemize}
     \itemsep1em
   \item{\textbf{Need:}  Adequate data, appropriately constrained
@@ -97,14 +107,18 @@
 \end{center}
 \end{block}
 
+
+
 \begin{block}{Picture Description Task}
 \begin{center}
 \begin{minipage}{.85\textwidth}
 
-  \vspace{-.38em}
+  \vspace{1em}
   \begin{itemize}
   \item{PDT elicits natural productions but constrains form \& content}
+  \vspace{.6em}
   \item{60 \textbf{items}: 30 images $x$ 2 prompts}
+  \vspace{.6em}
     % \begin{itemize}
     % \item 30 images
     % \begin{itemize}
@@ -119,7 +133,8 @@
     %     \end{itemize}
   \end{itemize}
   \begin{tabular}{cc}
-    \begin{minipage}{.48\textwidth}
+  \vspace{1em}
+    \begin{minipage}{.45\textwidth}
       \begin{center}
         \vspace{1ex}
         30 images
@@ -127,11 +142,11 @@
         \vspace{-1ex}
     \begin{itemize}
     \item Simple vector graphics
-    \item 10 transitive, 10 intransitive, 10 ditransitive
+    \item 10 intransitive, 10 trans, 10 ditrans
     \end{itemize}
     \end{minipage}
     & 
-    \begin{minipage}{.47\textwidth}
+    \begin{minipage}{.51\textwidth}
       \begin{center}
         \vspace{1ex}
         2 prompts
@@ -167,27 +182,36 @@ What is the woman doing? & What is the woman doing? & What is the man doing? \\
 \end{center}
 \end{table}
 
-\begin{center}
+Administered as online survey (SurveyMonkey.com)
+
+%\begin{center}
+%  \textit{PDT Instructions}
+%  % Focus on main action; Respond with complete sentence
+%\end{center}
+%\begin{center}
+%  \begin{minipage}{.4\textwidth}
+%    \begin{itemize}
+%    \item Focus on the main action
+%    \item Respond in a complete sentence
+%    \end{itemize}
+%  \end{minipage}
+%\end{center}
+\vspace{.6em}
   \textit{PDT Instructions}
   % Focus on main action; Respond with complete sentence
-\end{center}
-\begin{center}
-  \begin{minipage}{.4\textwidth}
     \begin{itemize}
     \item Focus on the main action
     \item Respond in a complete sentence
     \end{itemize}
-  \end{minipage}
-\end{center}
 
-\begin{itemize}
+\vspace{.6em}
 	% \item PDT Instructions: 
         %   %Focus on main action; Respond with complete sentence
 	% \begin{itemize}
 	% 	\item Focus on the main action
 	% 	\item Respond in a complete sentence
 	% \end{itemize}
-	\item Multiple versions
+Multiple versions
 	\begin{itemize}
 		\item Most participants completed 30 items
 		\item Roughly equal number of targeted \& untargeted responses % collected per image
@@ -199,17 +223,15 @@ What is the woman doing? & What is the woman doing? & What is the man doing? \\
                 %           More robust GS
 		% \end{itemize}
 	\end{itemize}
-\end{itemize}
 
-\begin{center}
-  Task administered as online survey (SurveyMonkey.com)
-\end{center}
+%\begin{center}
+%  Task administered as online survey (SurveyMonkey.com)
+%\end{center}
 
 \end{minipage}
 \end{center}
 \vspace{-.5em}
 \end{block}
-
 
 \begin{block}{Participants}
 
@@ -219,21 +241,25 @@ What is the woman doing? & What is the woman doing? & What is the man doing? \\
 499 total participants
 \end{center}
 	\begin{itemize}
-		\item 141 NNSs
+		\item 141 NNSs: students in intermediate \& advanced ESL writing courses at IU
 		\begin{itemize}
+		\vspace{.3em}
 %			\item Recruited from intermediate \& advanced English as a Second Language writing courses at Indiana University
-			\item From intermediate \& advanced ESL writing courses at IU
+			%\item From intermediate \& advanced ESL writing courses at IU
 			%\item Performed task in computer lab with researchers present
 			\item L1s: 125 Chinese (90\%), 4 Korean, 3 Burmese, 2 Hindi; 1 each: Arabic, Indonesian, German, Gujarati, Spanish, Thai, Vietnamese
 		\end{itemize}
+		\vspace{.8em}
 		\item 358 NSs
 		\begin{itemize}
+			\vspace{.4em}
 			%\item All NSs performed task remotely
 			\item 29 Familiar Native Speakers (FNSs)
 			\begin{itemize}
 				\item Relatives or friends of researchers (assumedly higher quality)
 %				\item Responses are assumed to be high quality
 			\end{itemize}
+			\vspace{.4em}
 			\item 329 Crowdsourced Native Speakers (CNSs)
 			\begin{itemize}
 				\item Responses purchased via SurveyMonkey (assumedly lower quality)
@@ -242,27 +268,33 @@ What is the woman doing? & What is the woman doing? & What is the man doing? \\
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
+	\vspace{1.3em}
 \end{minipage}
 \end{center}
 \vspace{-.5em}
 \end{block}
+\end{minipage}
 \end{column}
 
 \begin{column}{.33\linewidth}
+\begin{minipage}[t][\textheight]{\linewidth} 
+
+\vspace{-1.7em}
 
 \begin{block}{Responses}
 \begin{center}
 \begin{minipage}{.85\textwidth}
 
-The SAILS Corpus contains a total of 13,533 PDT responses
+%The SAILS Corpus contains a total of 13,533 PDT responses
 
 \begin{center}
   \textbf{Response Counts}
 \end{center}
 
-\vspace{.5em}
+%\vspace{.1em}
 \begin{table}[htb!]
 \begin{center}
+\setlength{\tabcolsep}{0.65em}
 \begin{tabular}{|l||r|r||r|}
 \hline
 & \multicolumn{3}{|c|}{Response Counts} \\
@@ -288,7 +320,7 @@ Total & 8924 & 4609 & 13,533 \\
 \end{center}
 \end{table}
 
-% \vspace{1em}
+\vspace{1.3em}
 % In order to examine the level of variation among responses, type to token ratios (TTRs) were calculated on the response level. Capitalization and final punctuation were ignored. We can see that variation increases with item complexity (intransitives $<$ transitives $<$ ditransitives) and that untargeted responses vary more than targeted responses.
 % \vspace{.5em}
 
@@ -298,6 +330,7 @@ Total & 8924 & 4609 & 13,533 \\
 
 \begin{table}[h!]
 \begin{center}
+\setlength{\tabcolsep}{0.65em}
 \begin{tabular}{|l||l|l||l|l|}
 \hline
  & \multicolumn{2}{|c||}{Targeted} & \multicolumn{2}{|c|}{Untargeted} \\
@@ -312,7 +345,7 @@ Transitives & 0.752 & 0.655 & 0.859 & 0.779 \\
 Ditransitives & 0.835 & 0.817 & 0.942 & 0.936 \\ 
 \hline
 \end{tabular}
-\caption{\label{tab:ttr} Type-to-token ratios (TTR) for complete responses (not words), for full corpus}
+\caption{\label{tab:ttr} TTRs for \textit{complete responses} (not words), for full corpus}
 \end{center}
 \end{table}
 
@@ -320,24 +353,28 @@ Ditransitives & 0.835 & 0.817 & 0.942 & 0.936 \\
 % In order to examine the level of variation among responses, type to token ratios (TTRs) were calculated on the response level. 
 \begin{itemize}
 \item Capitalization \& final punctuation ignored
+\vspace{.3em}
 \item Variation increases with:
   \begin{itemize}
-  \item Item complexity (intransitives $<$ transitives $<$ ditransitives) 
+  \vspace{.3em}
+  \item Item complexity (intransitives $<$ transitives $<$ ditransitives)
+  \vspace{.3em}
   \item Less targeting (targeted $<$ untargeted)
   \end{itemize}
 \end{itemize}
 \vspace{1em}
 
-% \vspace{1em}
+\vspace{1.3em}
 % TTRs were also calculated to compare the variability among NSs' first responses versus their second responses. As the TTRs for second responses are considerably higher than those for first responses, asking for two non-identical responses appears to effectively increase the variety of NS responses available for use in a GS.
 % \vspace{.5em}
 
 \begin{center}
-  \textbf{Type-Token Ratios (TTRs): first vs. second responses (NSs)}
+  \textbf{Type-Token Ratios (TTRs): first vs. second responses (NSs only)}
 \end{center}
 
 \begin{table}[hb!]
 \begin{center}
+\setlength{\tabcolsep}{0.65em}
 \begin{tabular}{|l||l|l||l|l|}
 \hline
  & \multicolumn{2}{|c||}{Targeted} & \multicolumn{2}{|c|}{Untargeted} \\
@@ -361,6 +398,7 @@ Ditransitives & 0.641 & 0.948 & 0.864 & 0.955  \\
 \begin{itemize}
 \item TTRs for R2s considerably higher than for R1s
   \begin{itemize}
+  \vspace{.3em}
   \item[$\Rightarrow$] Asking for two responses increases variety of
     language available for use in GS
   \end{itemize}
@@ -371,6 +409,8 @@ Ditransitives & 0.641 & 0.948 & 0.864 & 0.955  \\
 \end{center}
 \vspace{-.5em}
 \end{block} 
+
+
 
 \begin{block}{Annotation Scheme}
 \begin{center}
@@ -384,30 +424,33 @@ Ditransitives & 0.641 & 0.948 & 0.864 & 0.955  \\
 
 \textbf{Initial scheme:} \textit{accurate $+$ native-like} $>$ \textit{accurate $+$ not native-like} $>$ \textit{not accurate})
 
-\medskip
-
+\vspace{.5em}
 \textbf{Final scheme:} five binary features related to accuracy \&
 native-likeness: 
-\vspace{.5em}
+\vspace{.6em}
 \begin{enumerate}
 \item \textbf{Core Event (C)}: Does response capture the core event depicted in image?
 %Core events are not pre-defined for annotators but should be obvious given the nature of the images. The response should link an appropriate subject to the event.  In Table~\ref{tab:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
-\vspace{.5em}
-\item \textbf{Verifiability (V)}: Does response contain only true \& verifiable information, based on image? 
+\vspace{.6em}
+\item \textbf{Verifiability (V)}: Does response contain only true \& verifiable info, based on image? 
 \begin{itemize}
-\item Inferences allowed only when necessary; e.g., familial relationships between persons in image
+\vspace{.4em}
+\item Inferences allowed only when necessary; e.g., familial relationships of persons in image
 \end{itemize}
 %For example, in Table~\ref{tab:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (core event=0, verifiability=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be inferred from the picture (core event=1, verifiability=0).
 \vspace{.5em}
 \item \textbf{Answerhood (A)}: Does response make a clear attempt to answer the question?
 \begin{itemize}
+\vspace{.4em}
 \item Generally requires a progressive verb
+\vspace{.4em}
 \item For targeted items: subject of question or appropriate pronoun must be response subject
 \end{itemize}
 %For example, \textit{The dog is so happy!} is answering a question other than \textit{What is the woman doing?}. 
 \vspace{.5em}
-\item \textbf{Interpretability (I)}: Does response evoke clear mental image (even if different from actual)? 
+\item \textbf{Interpretability (I)}: Does response evoke clear mental image (even if different from PDT)? 
 \begin{itemize}
+\vspace{.4em}
 \item Any required verb arguments must be present \& unambiguous
 \end{itemize}
 %For example, \textit{She loves her pet} is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a horse, etc.
@@ -424,25 +467,31 @@ native-likeness:
 \vspace{-.5em}
 \end{block}
 
+
+
 \begin{block}{Annotators}
 \begin{center}
 \begin{minipage}{.85\textwidth}
 Two annotators:
 \begin{itemize}
+\vspace{.5em}
 	\item NSs (US English), both with language teaching experience (child \& adult learners).
+	\vspace{.4em}
 	\item Annotator 1 (A1): complete corpus
-        \item Annotator 2 (A2): development \& test sets, each with 1 intransitive, 1 transitive, 1 ditransitive
+	\vspace{.4em}
+    \item Annotator 2 (A2): development \& test sets, each with 1 intransitive, 1 trans, 1 ditrans
 \end{itemize}
 \end{minipage}
 \end{center}
-\vspace{-.5em}
+%\vspace{-.5em}
 \end{block}
 
-
+\end{minipage}
 \end{column}
 
 \begin{column}{.33\linewidth}
-%\vspace{-1em}
+\begin{minipage}[t][\textheight]{\linewidth} 
+\vspace{-1.7em}
 \begin{block}{Annotation Results}
 \begin{center}
 \begin{minipage}{.85\textwidth}
@@ -482,25 +531,38 @@ Two annotators:
 %\end{center}
 %\end{table}
 
+\begin{center}
+  \textbf{Annotation Examples}
+\end{center}
+
 \begin{table}[htb!]
 \begin{center}
+\setlength{\tabcolsep}{0.45em}
 \begin{tabular}{|l||l|c|c|c|c|c|}
 \hline
-\multirow{10}{*}{\includegraphics[width=0.25\columnwidth]{../figures/I01.jpg}}& \textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
+\multirow{17}{*}{\includegraphics[width=0.35\columnwidth]{../figures/I02.jpg}}& \textit{What is the boy doing?} (Targeted) & C & V & A & I & G \\
 \cline{2-7}
+\cline{2-7}
+& eating pizza & 1 & 1 & 1 & 1 & 1 \\
 \cline{2-7}
 & eating food. & 0 & 1 & 1 & 1 & 1 \\
 \cline{2-7}
 & eatting. & 0 & 1 & 1 & 1 & 0 \\
 \cline{2-7}
-& The child is about to eat pizza. & 1 & 1 & 0 & 1 & 1 \\
+& The child is eating pizza. & 1 & 1 & 0 & 1 & 1 \\
 \cline{2-7}
 & He may get fat eating pizza. & 1 & 0 & 0 & 1 & 1 \\
+\cline{2-7}
+& The boy is hungry. & 0 & 1 & 0 & 0 & 1 \\
+\cline{2-7}
+& Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \cline{2-7}
 & \multicolumn{6}{c|}{} \\
 \cline{2-7}
 & \textit{What is happening?} (Untargeted) & C & V & A & I & G \\
 \cline{2-7}
+\cline{2-7}
+& The kid's eating pizza & 1 & 1 & 1 & 1 & 1 \\
 \cline{2-7}
 & Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
 \cline{2-7}
@@ -508,7 +570,11 @@ Two annotators:
 \cline{2-7}
 & The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
 \cline{2-7}
-& Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
+& A youngster anticipates the taste of pizza & 1 & 1 & 0 & 1 & 1 \\
+\cline{2-7}
+& Pepperoni pizza makes the boy smile & 0 & 0 & 0 & 1 & 1 \\
+\cline{2-7}
+& He sure is happy. & 0 & 1 & 0 & 1 & 1 \\
 \hline
 \end{tabular}
 \caption{\label{tab:devo-transitive} Sample responses from development transitive item, with adjudicated annotations} % for the five features: core event (\textit{C}), verifiability (\textit{V}), answerhood (\textit{A}), interpretability (\textit{I}) and grammaticality (\textit{G}).}
@@ -542,10 +608,10 @@ Two annotators:
 \begin{center}
   \bf Inter-Annotator Agreement
 \end{center}
-
+\vspace{-.5em}
 % Using test set items from Table~\ref{tab:example-pdt-items}, we calculated inter-annotator agreement for each feature, for targeted vs. untargeted items, and for the three verb types.
 % %, as shown in Table~\ref{tab:agreement}. 
-\vspace{1em}
+%\vspace{1em}
 \begin{table}[htb!]
 \begin{center}
 % MD: this gives a bit more spacing between columns:
@@ -588,61 +654,73 @@ Two annotators:
   Observations from Table~\ref{tab:agreement}
 \end{center}
 \begin{itemize}
-	\vspace{.5em}
+	\vspace{.2em}
 	\item Average \textit{yes} rates (\textit{AvgYes}) show all features skew toward \textit{yes} annotations
           \begin{itemize}
+          \vspace{.2em}
           \item Cohen's kappa needed as measure of inter-annotator agreement
           \end{itemize}
 	\vspace{.5em}
 	\item Cohen's kappas well above conventional 0.67 threshold for meaningful agreement
           \begin{itemize}
-          \item Annotation scheme can be implemented reliably by following guidelines
+          \vspace{.2em}
+          \item[$\Rightarrow$] Annotation scheme can be implemented reliably by following guidelines
           \end{itemize}
 	\vspace{.5em}
-	\item \textbf{Verb Type:} Agreement decreases with item complexity (intransitive $>$ transitive $>$ ditransitive)
+	\item \textbf{Verb Type:} Agreement decreases with item complexity (intransitive $>$ trans $>$ ditrans)
 	\vspace{.5em}
 	\item \textbf{Prompt:} Agreement slightly higher for untargeted than targeted items
           \begin{itemize}
+          \vspace{.2em}
           \item Guidelines less complicated for untargeted items
           \end{itemize}
 	\vspace{.5em}
 	\item \textbf{Feature:} Answerhood has highest kappa, interpretability has lowest
           \begin{itemize}
+          \vspace{.2em}
           \item Matches annotator reporting of easiest \& hardest features to annotate
           \end{itemize}
 %. This is unsurprising, as annotators reported these to be the easiest and hardest features to annotate, respectively.
 \end{itemize}
-
+\vspace{1.3em}
 \end{minipage}
 \end{center}
 \end{block}
+
+
 
 \begin{block}{Accessing the SAILS Corpus}
 \begin{center}
 \begin{minipage}{.85\textwidth}
-Entire annotated SAILS Corpus, PDTs, \& annotation guidelines available at:
-
+Download the entire annotated SAILS Corpus, PDTs, \& annotation guidelines at:
+\vspace{.3em}
 \begin{center}
 \textbf{https://github.com/sailscorpus/sails}
 \end{center}
+\vspace{.6em}
 
 SAILS corpus can be used for:
 \begin{itemize}
+\vspace{.3em}
 \item Language testing \& ICALL
+\vspace{.3em}
 \item Question answering, dialog systems, pragmatic modeling, visual references
 \end{itemize}
 
-\bigskip
+\vspace{.6em}
+
 
 Possibilities for expansion from other researchers: 
 \begin{itemize}
+\vspace{.3em}
 \item New participants, items, approaches for processing
 \end{itemize}
 
+\vspace{1.2em}
 \end{minipage}
 \end{center}
 \end{block}
-
+\end{minipage}
 \end{column}
 
 \end{columns}
