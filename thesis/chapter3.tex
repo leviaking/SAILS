@@ -70,7 +70,32 @@ This study involved a total of 499 PDT participants. Of these, 141 were NNSs, re
 
 Of the 358 NS participants, 29 were personally known and recruited by the researcher. Throughout this work, these participants will be referred to as the \textbf{Familiar Native Speakers (FNSs)}. Responses from the remaining 329 NSs were purchased via Survey Monkey, where survey takers can earn credits that they can redeem for prizes or convert to donations to charities. These participants will be referred to as the \textbf{Crowdsourced Native Speakers (CNSs)}. Due to survey length restrictions for purchased responses, these NSs each completed only half of the task, so their data is equivalent to that of 164.5 full participants.
 
-All participants completed a background questionnaire at the beginning of the PDT. This included questions about first and second languages, gender, age, national origin, amount of English language instruction and length of residency in English-speaking locations. This questionnaire is included as part of the PDT in Appendix XYX, and the background information \lk{Per MD: demographics overview table} provided by participants is included in the SAILS Corpus files. \lk{XYZ}
+All participants completed a background questionnaire at the beginning of the PDT. This included questions about first and second languages, gender, age, national origin, amount of English language instruction and length of residency in English-speaking locations. This questionnaire is included as part of the PDT in Appendix XYX, and the background information provided by participants is included in the SAILS Corpus files. \lk{XYZ} A summary of some of the demographic information is shown in Table~\ref{tab:demographics}.
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|rr|rr|rr|}
+\hline
+& \multicolumn{2}{|c|}{NNS} & \multicolumn{2}{|c|}{CNS} & \multicolumn{2}{|c|}{FNS} \\
+\hline
+\hline
+Mean age & \multicolumn{2}{|r|}{18.7} & \multicolumn{2}{|r|}{45.0} & \multicolumn{2}{|r|}{39.1} \\
+\hline
+Median age & \multicolumn{2}{|r|}{18.0} & \multicolumn{2}{|r|}{44.0} & \multicolumn{2}{|r|}{35.0} \\
+\hline
+\hline
+Male & 56 & (39.7\%) & 138 & (41.9\%) & 17 & (58.8\%) \\
+\hline
+Female & 76 & (53.2\%) & 172 & (52.3\%) & 11 & (37.9\%) \\
+\hline
+Unknown & 9 & (6.4\%) & 19 & (5.8\%) & 1 & (3.4\%) \\
+\hline
+\end{tabular}
+\caption{\label{tab:demographics} Age and gender information for the three participant groups.}
+\end{center}
+\end{table}
+%& \multicolumn{3}{|c|}{Response Counts} \\
+
 
 In previous similar work \citep{king:dickinson:13},
 %\citep{king:dickinson:13,king:dickinson:16},
@@ -79,7 +104,7 @@ NSs were found to produce less variation than NNSs. Many NSs provided identical 
 \section{Responses}
 \label{sec:responses}
 
-A total of 13,533 responses were collected. The response counts for each participant group are presented in Table~\ref{tab:response-counts}. Including the second responses collected from NSs, roughly two thirds of the corpus come from the NS groups. The overwhelming majority of responses appear to be given in good faith, but a small number of responses (primarily from the CNS group) are problematic in this regard, as shown in Table~\ref{tab:bad-faith}. These may contain gibberish or obscenities or are otherwise inappropriate for the task. Such responses would also be expected in an ICALL environment, so they were not removed from the corpus. Instead, these responses were simply annotated like all others (see Chapter~\ref{chapter:annotation}). Indeed, automatically assigning low scores to inappropriate responses is a central challenge and goal in this project (see Chapter XYZ)\lk{XYZ}.
+A total of 13,533 responses were collected. The response counts for each participant group are presented in Table~\ref{tab:response-counts}. Including the second responses collected from NSs, roughly two thirds of the corpus come from the NS groups. The overwhelming majority of responses appear to be given in good faith, but a small number of responses (primarily from the CNS group) are problematic in this regard, as shown in Table~\ref{tab:bad-faith}. These may contain gibberish or obscenities or are otherwise inappropriate for the task. Such responses would also be expected in an ICALL environment, so they were not removed from the corpus. Instead, these responses were simply annotated like all others (see Chapter~\ref{chap:annotation}). Indeed, automatically assigning low scores to inappropriate responses is a central challenge and goal in this project (see Chapter XYZ)\lk{XYZ}.
 
 \begin{table}[htb!]
 \begin{center}
@@ -111,13 +136,21 @@ Total & 8924 & 4609 & 13,533 \\
 \begin{center}
 \begin{tabular}{|l|}
 \hline
+Exemplar: \textit{The girl is laughing.} \\
+\hline
 Girl ate a 2x4 and is vomiting toothpicks. \\
 \hline
 I have to poop so bad. \\
 \hline
+\hline
+Exemplar: \textit{The boy is eating pizza.} \\
+\hline
 How is the pizza staying perfectly horizontal when the boy is holding it so close to the tip? \\
 \hline
 see my last statement \\
+\hline
+\hline
+Exemplar: \textit{The girl is feeding a carrot to a horse.} \\
 \hline
 Creepy clown child grinding her carrot down on poor Ed's beaver teeth \\
 \hline
@@ -126,12 +159,12 @@ Hoj \\
 %Hey man \\
 %\hline
 \end{tabular}
-\caption{\label{tab:bad-faith} Examples of problematic or bad faith responses from crowdsourced participants for the items shown in Table~\ref{tab:example-pdt-items}.}
+\caption{\label{tab:bad-faith} Crowdsourced responses for the items shown in Table~\ref{tab:example-pdt-items}, showing one exemplar response and two examples of problematic or bad faith responses for each item.}
 \end{center}
 \end{table}
 
 
-Type-to-token ratios (TTR) are commonly used as an indication of how varied or homogenous a set of data is. This number ranges between 0 and 1. \lk{Per MD: Give a textbook blurb and citation about TTRs} In a set of data where most instances or \textit{tokens} are unique (\textit{types}), the number of types per tokens approaches 1. In a set of data where most tokens are identical, the number of types per tokens approaches 0. With regard to language data, TTRs are often used on the word level, to calculate the lexical complexity of a document, for example. In this study, however, type-to-token ratios (TTR) were calculated on the response level for the entire set of items. For this calculation, final punctuation was ignored, and all responses were converted to lowercase. To illustrate, the first three response \textit{tokens} in Table~\ref{tab:type-token-examples} would constitute a single response \textit{type}.
+Type-to-token ratios (TTR) are commonly used as an indication of how varied or homogenous a set of data is. This number ranges between 0 and 1. In a set of data where most instances or \textit{tokens} are unique (\textit{types}), the number of types per tokens approaches 1. In a set of data where most tokens are identical, the number of types per tokens approaches 0. With regard to language data, TTRs are often used on the word level, to calculate the lexical density of a document, for example \citep{granger2002computer}. In this study, however, type-to-token ratios (TTR) were calculated on the response level for the entire set of items. For this calculation, final punctuation was ignored, and all responses were converted to lowercase. To illustrate, the first three response \textit{tokens} in Table~\ref{tab:type-token-examples} would constitute a single response \textit{type}.
 
 \begin{table}[htb!]
 \begin{center}
@@ -150,7 +183,7 @@ Types & Tokens & Response \\
 3 & 5 & The woman squeezed a dog. \\
 \hline
 \end{tabular}
-\caption{\label{tab:type-token-examples} Ignoring punctuation and capitalization, the first three response tokens here constitute a single response type. The TTR for this toy data set would be 3:5, or 0.6.}
+\caption{\label{tab:type-token-examples} This toy dataset shows how TTR is calculated on the response level. Ignoring punctuation and capitalization, the first three response tokens here constitute a single response type. The TTR for this set would be 3:5, or 0.6.}
 \end{center}
 \end{table}
 

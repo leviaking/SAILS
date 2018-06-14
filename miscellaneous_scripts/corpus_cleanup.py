@@ -16,7 +16,7 @@ def get_file_respondents():
 			file_id='I'+str(n).zfill(2)+v
 			all_file_ids.append(file_id)
 			file_demographics=[] ##this is the first 11 columns of the file, starting with Respondentid
-			myfile=open('../corpus/'+file_id+'_master_anno.csv', 'rU')
+			myfile=open('../sails/corpus/'+file_id+'_master_anno.csv', 'rU')
 			myreader=csv.reader(myfile, dialect=csv.excel)
 			skip_header=next(myreader, None)
 			for row in myreader:
@@ -66,7 +66,7 @@ def check_demographic_consistency():
 	print "TOTAL Mismatches: "+str(total_mismatches)
 
 
-def check_template_response_ids(): ##i have merged the demographic info into a single template for each file; i.e., the first 11 columns contain identical entries for all files. now I want to make sure that the Responseid column is indeed identical across all files. If so, I plan to replace the long Responseids with a shorter id.
+def check_template_response_ids(): ##i have merged the demographic info into a single template for each file; i.e., the first 11 columns contain identical entries for all files. now I want to make sure that the Responseid column is indeed identical across all files. If so, I plan to replace the long RespondentIDs with a shorter id.
 	all_respondents_dict={}
 	match_count=1
 	for file_id in all_file_ids:
@@ -116,7 +116,7 @@ def renumber_respondents(): ##I have checked and double-checked that all files c
 				step_up+=1
 		outfile.close()
 		
-def change_ResponseID_to_Participant(): ##I'm simply changing "ResponseID" to "Participant" in the header of each file. This is because I'm going to add a unique ID to each response, and I want to have separate abbreviations to indicate "Participant" and "Response" (vs. "Respondent" and "Response"; see "def add_response_id()")
+def change_ResponseID_to_Participant(): ##I'm simply changing "ResponseID" to "Participant" in the header of each file. This is because I'm going to add a unique ID to each response, and I want to have separate abbreviations to indicate "Participant" and "Response" (vs. "Respondent" and "Response"; see "def insert_response_id()")
 	for file_id in all_file_ids:
 		myfile=open('../corpus/'+file_id+'_master_anno.csv', 'rU')
 		myreader=csv.reader(myfile, dialect=csv.excel)
@@ -133,24 +133,25 @@ def change_ResponseID_to_Participant(): ##I'm simply changing "ResponseID" to "P
 
 def insert_response_id(): ##This function will insert a unique response ID to each response (even blank responses). This ID will be: i<item>-g<group>-p<participant>-r<response>, where: item is 01-30 + T or U; group is NNS (non-native speaker) or NSC (native speaker crowdsourced) or NSF (native speaker familiar); participant is the participant number, 001-498; and response is 1 or 2, for first or second response. So a response ID might look like: i03T-gNNS-p355-r1 or i29U-gNSC-p041-r2 etc.
 	for file_id in all_file_ids:
-		myfile=open('../corpus/'+file_id+'_master_anno.csv', 'rU')
+		myfile=open('../sails/corpus/'+file_id+'_master_anno.csv', 'rU')
 		myreader=csv.reader(myfile, dialect=csv.excel)
 		header=next(myreader, None)
-		header.insert(12, 'ResponseID')
-		outfile=open('../corpus/'+file_id+'_ResponseID.csv', 'w')
+		#header.insert(12, 'ResponseID') ##commented this out because I'm running this a second time on some files
+		outfile=open('../sails/corpus/'+file_id+'_ResponseID.csv', 'w')
 		outwriter=csv.writer(outfile, dialect=csv.excel)
 		outwriter.writerow(header)
 		for row in myreader:
+			dummy=row.pop(12) ##added this because i'm running the script on some files a second time and need to remove the old (faulty) ResponseIDs
 			item=file_id
 			source=row[2]
-			if source in ['NNSv1', 'NNSv2']:
+			if source=='NNSv1' or source=='NNSv2':
 				group='gNNS'
-			elif source in ['NSv1pt1', 'NSv1pt2', 'NSv2pt1', 'NSv2pt2']:
+			elif source=='NSv1pt1' or source=='NSv1pt2' or source=='NSv2pt1' or source=='NSv2pt2':
 				group='gNSC'
-			elif source in ['NSV1', 'NSv2']:
+			elif source=='NSv1' or source=='NSv2':
 				group='gNSF'
 			else: pass
-			participant='p'+row[0]
+			participant='p'+str(row[0]).zfill(3)
 			response='r'+row[11]
 			response_id='-'.join([item, group, participant, response])
 			row.insert(12, response_id)
