@@ -552,6 +552,8 @@ ditrans=['03', '05', '08', '11', '14', '17', '21', '23', '26', '28']
 These are the type to token ratios obtained from response_explorer.py. This represents all NS responses (and no NNS responses). These are broken down by targeted vs untargeted, verb type, and first vs second response. The 3 numbers for each are: type, token, TTR
 
 
-
+6/21:
+CORPUS NOTE:
+I found that the corpus file for I19U has some problems. Specifically, the Core Event column is empty! Everything else looks normal... I checked to make sure the annotation columns weren't simply shifted to the right by one, with the last one cut off, and that is definitely not what happened. The remaining annotation columns made perfect sense. So I simply quickly reannotated the Core column directly in place in the main sails folder (the one that I sync with GitHub). I have also updated the GitHub repo with the corrected file.
 
 
