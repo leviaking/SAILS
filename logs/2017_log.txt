@@ -557,3 +557,407 @@ CORPUS NOTE:
 I found that the corpus file for I19U has some problems. Specifically, the Core Event column is empty! Everything else looks normal... I checked to make sure the annotation columns weren't simply shifted to the right by one, with the last one cut off, and that is definitely not what happened. The remaining annotation columns made perfect sense. So I simply quickly reannotated the Core column directly in place in the main sails folder (the one that I sync with GitHub). I have also updated the GitHub repo with the corrected file.
 
 
+7/2: Meeting with MD:
+OK, for now, we've decided to proceed with GS experiments like so:
+We will do leave one out (LOO) tests on the various GSs, without downsampling. For now, we are going to rely only on the GS responses -- no NNS responses. The immediate goal is to implement this with the complete set of NS responses. We take a naive approach -- the five binary annotations are converted to one annotation score consisting of one of the following: 0.0, 0.2, 0.4, 0.6, 0.8, 1.0. We then get system output scores for each response in the GS (via LOO). To assess the GS, we will look at some statistical measure (we don't know exactly what that will be yet) that indicates the degree of correlation between the annotation scores and the system scores. 
+This should work for the GSs where the annotation isn't considered, but seems inappropriate for those sets that are already filtered by annotation (the "perfect" GS, etc.).
+I wonder if we may be better off working with a development set of NNS responses for each GS -- a set of annotated responses that cover as wide a range of annotations as possible (some 5/5 responses, some 4/5, some 3/5, etc). I think we can consider this a little later and just proceed as discussed for now.
+
+##
+
+OK, I think what I need to get now is a parsed corpus, organized in some way that I can easily query it as necessary for GS & processing stuff. I imagine this will be some kind of dictionary (csv) with ResponseID as key and the CONLL parse as value.
+1 first line
+1 second line
+1 third line
+1 fourth line
+
+2 first line
+2 second line
+2 third line
+2 fourth line
+
+
+##
+7/09.
+I've been working on getting the gold standards parsed & lemmatized. There's a snag in my process, however. I've found a couple of instances where the parser (during the first step -- constituency parsing) and the lemmatizer both incorrectly combine two separate responses. In I02T_all_cns.*, for example, there's a response:
+The b
+(That's the whole response.) My csv to text script changes this to:
+The b.
+And from there, the parser tools combine this with the next sentence:
+1	the	_	DT	DT	_	2	det	_	_
+2	b.	_	NN	NN	_	0	root	_	_
+3	get	_	VBG	VBG	_	4	dep	_	_
+4	ready	_	JJ	JJ	_	2	partmod	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	take	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	bite	_	NN	NN	_	6	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	pizza	_	NN	NN	_	8	prep_of	_	_
+11	.	_	.	.	_	2	punct	_	_
+
+I have to find a way to force the parsers to handle these as two separate sentences.
+I also think I'll still have a problem with responses that have internal periods or are otherwise segmented into multiple sentences, e.g.:
+The happening is a horse show. (You have a typo in this question, perhaps.)
+(from I09U_master_anno.csv)
+
+I changed the shell such that it handles each line as a single sentence. However, by my calculation, it will take about 50 hours to run on my laptop. This is not reasonable. The process is really redundant, which wasn't a problem until I had to reload the lemmatizer before each sentence -- this is a major time suck. Because the "all_ns" GS file contains all ns responses, and the other GS files are subsets of this, there's no need to parse these same responses over and over when they appear in different files. It would be more efficient and much faster to simply process the "all_ns" files for each item, then copy the parse info over to the individual subset files ("all_cns", "firsts", etc.) using the ResponseID.
+
+Okay, I ran I01-I10 (20 items) "all_ns" through the pipeline, but numerous files are not processing correctly. In many cases, lots of sentences are missing from the final lemma_conll file. I'm in no frame of mind to sort this out tonight, so I'll get to it first thing tomorrow morning.
+
+###
+2018-07-11
+Back at the helm, trying to fix the above concern.
+
+OK, I wrote a script to compare the number of responses in each of the 6 files involved in getting from the original GS csv to the final lemma_conll file. Here's what I found:
+Non-Matches:
+the fields represent:
+file_id csvcount txtcount lxcount pcount lkcount lccount
+Non-Matches:
+##off by one:
+I03T_all_ns	157	157	157	157	157	156
+I06T_all_ns	154	154	154	154	154	153
+I08T_all_ns	145	145	145	145	145	144
+##off by more than one:
+I02U_all_ns	184	184	184	184	184	124
+I04U_all_ns	176	176	176	176	176	43
+I05T_all_ns	156	156	156	156	156	42
+I08U_all_ns	158	158	158	158	158	39
+I09U_all_ns	158	158	158	158	158	26
+I10U_all_ns	156	156	156	156	156	53
+
+Matches:
+I01T_all_ns	161	161	161	161	161	161
+I01U_all_ns	190	190	190	190	190	190
+I02T_all_ns	157	157	157	157	157	157
+I03U_all_ns	180	180	180	180	180	180
+I04T_all_ns	156	156	156	156	156	156
+I05U_all_ns	170	170	170	170	170	170
+I06U_all_ns	166	166	166	166	166	166
+I07T_all_ns	148	148	148	148	148	148
+I07U_all_ns	162	162	162	162	162	162
+I09T_all_ns	140	140	140	140	140	140
+I10T_all_ns	138	138	138	138	138	138
+
+I01T_all_ns
+I01U_all_ns
+I02T_all_ns
+I03U_all_ns
+I04T_all_ns
+I05U_all_ns
+I06U_all_ns
+I07T_all_ns
+I07U_all_ns
+I09T_all_ns
+I10T_all_ns
+
+OK, so I can see that in each of the non-matching cases, the first five files all have matching counts, but the lemma_conll file is the odd one out. So there must be a problem in my script that combines the conll file and the lemmaxml file.
+
+###################
+SIDE PROBLEM: Somewhere in the process, somethings are not being properly lowercased...
+THE BOY IS EATING PIZZA. (txt)
+the boy be EATING PIZZA . (lemma_conll)
+
+Pizza is being eaten by a boy. (txt)
+Pizza be be eat by a boy . (lemma_conll)
+####################
+
+Main problem:
+Here's one case where things get out of alignment:
+I02U_all_ns:
+
+116	A slice of pizza is about to be eaten by a little boy.
+116	a slice of pizza be about to be eat by a little boy .
+
+117	Littler. It eating pizza.
+117	it eat pizza .
+
+118	Guy eating pizza.
+118	little boy .  ##actually 123
+
+119	The boy is eating pizza.
+119	a blonde boy with freckle be eat a slice of pizza . ##actually 131
+
+120	The child is going to bite the pizza.
+120	the boy be eat pizza . ##unsure -- many matches; probably 135, 147 or 149
+
+121	the boy eats the pizza.
+121	a piece of pizza be be eat by a boy . ##actually 152
+
+122	The pizza is eaten by the boy.
+122	that boy be about to eat the pizza . ##162
+
+123	little boy.
+123	the child be eat pizza . ##165
+
+124	eating pizza.
+124	Pizza make the boy happy . ##174
+
+125	A boy is eating a slice of pizza.
+125	EMPTY (lemma_conll)
+
+126	A boy is about to enjoy eating a slice of pizza.
+126	EMPTY (lemma_conll)
+
+127	The boy is eating pizza.
+127	EMPTY (lemma_conll)
+
+128	The pizza is being eaten by a boy.
+128	EMPTY (lemma_conll)
+##
+#Here's what it looks like in the txt file: (lines 116-128)
+A slice of pizza is about to be eaten by a little boy.
+Littler. It eating pizza.
+Guy eating pizza.
+The boy is eating pizza.
+The child is going to bite the pizza.
+the boy eats the pizza.
+The pizza is eaten by the boy.
+little boy.
+eating pizza.
+A boy is eating a slice of pizza.
+A boy is about to enjoy eating a slice of pizza.
+The boy is eating pizza.
+The pizza is being eaten by a boy.
+
+OK, so the text file sentence is always fine. It seems that when the process encounters a response that contains a non-final period, things get wacky. The problem has to be in my lemmatize_conll.py. I'm not sure why it skips so wildly through the remaining responses.
+
+###
+2018/07/12.
+
+OK, I made some changes to lemmatize_conll.py, and the results are getting better. Among the all_ns files, only these have problems:
+file_id csvcount txtcount lxcount pcount lkcount lccount
+Non-Matches:
+I03T_all_ns	157	157	157	157	157	156
+I06T_all_ns	154	154	154	154	154	153
+I08T_all_ns	145	145	145	145	145	144
+
+And here are the problem sentences:
+#
+137	T.he man is accepting a package.
+137	the man be deliver the package .
+
+138	The man is delivering the package.
+138	the woman be accept the package delivery .
+#
+108	This boy is carrying a large sack filled with groceries.See all the fruit in this sack?
+108	see all of the fruit in this bag ?
+
+109	See all of the fruit in this bag?
+109	the little boy be try to help carry in the grocery .
+#
+87	T.he waiter is showing the woman a roasted turkey.
+87	the waiter be serve the woman a roasted turkey .
+
+88	The waiter is serving the woman a roasted turkey.
+88	the waiter be bring the food .
+#
+
+
+And oddly, some sentences like this have some capital letters slipping through:
+59	HELPING CARRY GROCERIES IN THE HOUSE.
+59	help CARRY GROCERIES in the HOUSE .
+
+
+####
+I wrote find_ugly_responses.py to scan through the master_anno files and identify any sentence that contains a '.', '?', or '!' in a non-final position. Next I will simply manually modify the master_anno files to correct for this. Here are the problematic responses:
+I02U_responses_only.txt
+Littler. It eating pizza
+
+
+I03T_responses_only.txt
+T.he man is accepting a package
+
+
+I04U_responses_only.txt
+Good Morning Sunshine. It's a beautiful day.
+A boy is waking up at 2 p.m.
+
+
+I05T_responses_only.txt
+The teacher is teaching the student..
+She's showing them how to do the assignment. .
+
+
+I06T_responses_only.txt
+This boy is carrying a large sack filled with groceries.See all the fruit in this sack?
+
+
+I08T_responses_only.txt
+T.he waiter is showing the woman a roasted turkey
+
+
+I08U_responses_only.txt
+The wait-person is asking her if the roasted chicken meets her approval. And if she is ready for the meal or continue to wait.
+She,s thinking, "There goes my diet!"
+"Your dinner is served, madam.".
+
+
+I09U_responses_only.txt
+The happening is a horse show. (You have a typo in this question, perhaps.)
+she is enjoying the moment!~ the horse is not sure
+
+
+I10U_responses_only.txt
+The baby is not happy about something. He may need a bottle or his diaper changed or just needs Mommies to hold him.
+CHANGE MY DIAPER!!!!!!!
+FEED ME!!!!!!!
+
+
+I11T_responses_only.txt
+Since the right index finger is pointing upwards, he may be asking the older male person, "Why is the sky blue?" or he may be pointing to a burnt-out light bulb and asking why it hasn't been replaced.
+
+
+I12T_responses_only.txt
+The woman is holding a strangely dead-eyed grin while cutting a jagged line through a piece of paper. She may be hypnotized, possessed, or otherwise not fully in control of her executive functions.
+
+
+I12U_responses_only.txt
+Where's the rock? (Rock, Paper, Scissors)
+
+
+I14T_responses_only.txt
+The man is happily exchanging a set of car keys for what appears to be a single bill of paper currency--maybe $100? It could be for a short term rental.
+
+
+I14U_responses_only.txt
+She just bought a new car. Hurrah for her.
+He just sold the lady a new red lemon. Hurrah for him.
+
+
+I15T_responses_only.txt
+the man is taking the young tree out for his dinner. he haven't eat anything for 3 days.
+
+
+I15U_responses_only.txt
+The boy is planting trees right now.,
+
+
+I16U_responses_only.txt
+The frog is trying to catch a bug.The bug is trying to get away from the frog.
+
+
+I17T_responses_only.txt
+A girl is giving a carrot to.a horse.
+Carrots make a crunchy noise when feeding them to a horse.!
+
+
+I17U_responses_only.txt
+The person is feeding a carrot to the horse..
+
+
+I18T_responses_only.txt
+a superman is ...?
+The .man is hitting himself.
+
+
+I18U_responses_only.txt
+Fist surprise punches Elivis in the mouth! WHAM!
+An adult is coughing and covering his mouth. How many more examples do you need to see one ends their sentences with a noun? Enough already.
+An adult is coughing and covering his mouth. How many more examples do you need to see one ends their sentences with a noun? Enough already.
+
+
+I19U_responses_only.txt
+The young woman is trying totake a photo of someone not seen. She is asking that they smile.
+Hey! Quit taking my picture!
+
+
+I20U_responses_only.txt
+The girl is la.ughing histerically.
+???
+
+
+I22U_responses_only.txt
+The lady is showing what the weather forecast is across the U.S.
+??
+
+
+I23U_responses_only.txt
+Little Veronica is worried that the flu vaccine that Dr. Anderson is about to give her will hurt.
+
+
+I25U_responses_only.txt
+The dog is chasing the cat who jumped toward the wall and the dog jumped toward the wall. When the dog realised he was "flying" he froze and fell to the ground.
+The dog chasing the cat didn't really want to catch the cat because he knew the cat would jist grab him with his claws. He knows just how much it hurts.
+Dog and cat seen 1.3 seconds after being launched from animal gun.
+Rover is enjoying his favorite pastime, chasing Mrs. Franklin's cat, Barney.
+
+
+I26U_responses_only.txt
+Hey little girl... do you want some candy?
+
+
+I27U_responses_only.txt
+??
+Sing. Sing a song. Sing it loud. Sing it long! Etc.
+Sing. Sing a song. Sing it loud. Sing it long! Etc.
+Margaret is trying out for the school talent show by singing her favorite song, "Stand by Me."
+
+
+I28T_responses_only.txt
+Fixing to be in trouble for not asking for directions before they got to the park. She is frustrated by his lack of planning and she is going to leave him when they get back home for a more responsible person.
+
+
+I28U_responses_only.txt
+The girl needed directions..
+
+
+I29T_responses_only.txt
+She is happy. She holds her dog. She seems talk to this dog.
+
+
+I29U_responses_only.txt
+cindy just get her birthday gift which is a dog. she loves him so much
+This kitten obviously has a very loving owner. It would appear that the pet's diet is top of the line.
+Yes... they are tasty when they are this small... just be sure to remove ALL the fur.
+Yes.. I have given up on men.
+
+
+I30T_responses_only.txt
+Janet set a New Years resolution to get in shape. By Jan 9th, she was back on the sofa with a box of bon-bons.
+She's wondering if anyone thinks her pony tail is sexy. (by the way, it is)
+She is trying to be someone that the magazine tells her she should be. She would rather stay at home and eat a whole lot of cupcakes.
+
+
+I30U_responses_only.txt
+The runner is training for the upcomming soccer season. Running or jogging are excellent ways to develope endurance strength.
+??
+
+#####
+2018/07/15
+ALMOST there. A few of the all_ns gs files are still off a little:
+file_id csvcount txtcount lxcount pcount lkcount lccount
+Non-Matches:
+I11T_all_ns	139	139	278	139	139	139
+I11U_all_ns	154	154	308	154	154	154
+I12T_all_ns	138	138	276	138	138	138
+I12U_all_ns	152	152	304	152	152	152
+I21T_all_ns	168	168	168	168	168	167 ##this seems to be the only *real* mismatch, and it's caused by a ";)" emoticon.
+
+For those where the lxcount is double the other counts, I think that's just because the lemmaxml file wasn't deleted from an earlier run, and that step of the pipeline just appends to the existing file, so it basically wrote the contents twice. I'm going to try to run those again right now.
+
+
+
+From I21T:
+
+89	He is throwing the ball.
+89	he be throw the ball .
+
+90	He is wishing he could throw her his ball ;).
+90	s.
+
+91	s.
+91	sad .
+
+92	sad.
+92	he be play catch .
+
+DONE. All the all_ns gs files are now correct in terms of sentence counts and lemma-parse alignments.
+
+NEXT: From the all_ns files, add the lemma parses to the other gs files (which are all subsets of all_ns)...
+see add_parses_to_gscsv.py
+DONE.
+
+##
+2018/07/20.
+Time to start a new log...

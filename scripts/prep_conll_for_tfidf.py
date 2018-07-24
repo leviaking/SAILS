@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 
-## 2015/07/14. LK. This script iterates over a conll file (10 column conll), extracts dependency triples, then joins them as a single string. See also: lemmatize_conll.py. This script should take the output of lemmatize_conll.py, which is a lemmatized conll file, then prepare strings of the following form for the purpose of doing dependency-based tf-idf with an existing tool. In other words, we're doing tf-idf, but the atomic unit here is not a TERM but a DEPENDENCY.
+##2018-07-20 update. I'm modifying this script to work on the lemma-parse csv files. See them here: /Users/leviking/Documents/dissertation/SAILS/gold_standards/finalcsvs
+##This script will write directly to the csv, with each of the five formats of "dependency strings" written to a new column in the csv.
+
+##NOTICE: Name change: In the 2015-2016 SAILS work, this script was called prep_conll_for_tfidf.py and the shell script was called prep_conll_for_tfidf.sh
+
+#### 2015/07/14. LK. This script iterates over a conll file (10 column conll), extracts dependency triples, then joins them as a single string. See also: lemmatize_conll.py. This script should take the output of lemmatize_conll.py, which is a lemmatized conll file, then prepare strings of the following form for the purpose of doing dependency-based tf-idf with an existing tool. In other words, we're doing tf-idf, but the atomic unit here is not a TERM but a DEPENDENCY.
 
 ##USAGE:
 ##python prep_conll_for_tfidf.py myfile.lemma_conll
@@ -14,136 +19,81 @@
 #  *_dep_* # *_kick_* #x_d_x
 #  *_*_head # *_*_boy #x_x_h
 
-import sys, os
+import sys, re, csv, datetime, os
+from shutil import copyfile
 
-conllname = sys.argv[1]
-fileprefix = conllname.split('.')[0]
+scriptdir = os.getcwd()
 
-conllsents = []
-ccounter = 1
-with open(conllname) as conllfile:
-	current_csent = []
-	for cline in conllfile:
-		cline = cline.strip()
-		if cline == '':
-			pass
-		else:		
-			if cline.startswith('1\t') and current_csent: ## "and current_csent" bc we don't want to append the empty list when we initialize on the first line
-				conllsents.append(current_csent)
-				current_csent=[cline]
-			else:
-				current_csent.append(cline)
-	conllsents.append(current_csent)
-#for c in conllsents:
-#	for d in c:
-#		print d
-#	print ""
+sourcename = sys.argv[1]
+#print sourcename
+handle = sourcename.split('.')[0]
+#print handle
+rootdir=os.path.dirname(scriptdir)
+#print rootdir
+sourcedir=rootdir+'/gold_standards/finalcsvs'
+destdir=rootdir+'/gold_standards/depstrings'
+source=sourcedir+sourcename
+dest=destdir+handle+'_depstrings.csv'
+#print source
+js="$@%" ##this is the string we use to join the elements in a depstring; it's a delimiter
 
-all_sents = []
-for cs in conllsents:
-	current_sent = []
-	for wline in cs:
-		wlist = wline.split()
-		word, headindex, label = wlist[1], int(wlist[6]), wlist[7]
-		if headindex == 0 and label == "root":
-			head = "VROOT"
-		elif headindex == 0 and label == "erased":
-			head = "WORDERASED"
-		else:
-			#headline = cs[(headindex-1)]
-			head = cs[(headindex-1)].split()[1]
-		current_sent.append([label, word, head])
-	all_sents.append(current_sent)
 
-all_ldh=[]
-all_xdh=[]
-all_ldx=[]
-all_lxh=[]
-all_lxx=[]
-all_xdx=[]
-all_xxh=[]
 
-js="$@%"
-for tripsent in all_sents:
+#print sourcename, destname
+
+###2018-07-20
+
+def form_depstrings(cs):
 	ldh_list=[]
-	xdh_list=[]
 	ldx_list=[]
 	lxh_list=[]
-	lxx_list=[]
+	xdh_list=[]
 	xdx_list=[]
-	xxh_list=[]
-	for trip in tripsent:
+	for trip in cs:
 		ldh = js.join([trip[0], trip[1], trip[2]])
 		ldh_list.append(ldh)
-		xdh = js.join(['x', trip[1], trip[2]])
-		xdh_list.append(xdh)
 		ldx = js.join([trip[0], trip[1], 'x'])
 		ldx_list.append(ldx)
 		lxh = js.join([trip[0], 'x', trip[2]])
-		lxh_list.append(lxh)
-		lxx = js.join([trip[0], 'x', 'x'])
-		lxx_list.append(lxx)
+		lxh_list.append(lxh)				
+		xdh = js.join(['x', trip[1], trip[2]])
+		xdh_list.append(xdh)
 		xdx = js.join(['x', trip[1], 'x'])
 		xdx_list.append(xdx)
-		xxh = js.join(['x', 'x', trip[2]])
-		xxh_list.append(xxh)
-	all_ldh.append(ldh_list)
-	all_xdh.append(xdh_list)
-	all_ldx.append(ldx_list)
-	all_lxh.append(lxh_list)
-	all_lxx.append(lxx_list)
-	all_xdx.append(xdx_list)
-	all_xxh.append(xxh_list)
+	#print sds
+	sds=[ldh_list, ldx_list, lxh_list, xdh_list, xdx_list] ##sentence depstrings
+	return sds
 
-#for k in all_ldh:
-#	k = " ".join(k)
-#	print k, '\n'
-#	
-ldhfile=open(fileprefix+".ldh", 'w+')
-for k in all_ldh:
-	k = " ".join(k)
-	ldhfile.write(k)
-	ldhfile.write('\n')
-ldhfile.close()
 
-xdhfile=open(fileprefix+".xdh", 'w+')
-for k in all_xdh:
-	k = " ".join(k)
-	xdhfile.write(k)
-	xdhfile.write('\n')
-xdhfile.close()
+def process_source_csv():
+	with open(source, 'rU') as sourcefile, open(dest, 'w') as destfile:
+		sourcereader=csv.reader(sourcefile, dialect=csv.excel)
+		header=next(sourcereader, None)
+		header=header+['ldh', 'ldx', 'lxh', 'xdh', 'xdx']
+		destwriter=csv.writer(destfile, dialect=csv.excel)
+		destwriter.writerow(header)
+		for sline in sourcereader:
+			current_sent=[]
+			dline=list(sline)
+			#annotations=cline[2:6]
+			parse=sline[7].strip()
+			#print parse, 'HI'
+			parselines=parse.split('\n')
+			#for wline in cs:
+			for wline in parselines:
+				wlist = wline.split()
+				#print wlist
+				word, headindex, label = wlist[1], int(wlist[6]), wlist[7]
+				if headindex == 0 and label == "root":
+					head = "VROOT"
+				elif headindex == 0 and label == "erased":
+					head = "WORDERASED"
+				else:
+					#headline = cs[(headindex-1)]
+					head = parselines[(headindex-1)].split()[1]
+				current_sent.append([label, word, head])
+			sentdepstrings=form_depstrings(current_sent)
+			dline=dline+sentdepstrings
+			destwriter.writerow(dline)
 
-ldxfile=open(fileprefix+".ldx", 'w+')
-for k in all_ldx:
-	k = " ".join(k)
-	ldxfile.write(k)
-	ldxfile.write('\n')
-ldxfile.close()
-
-lxhfile=open(fileprefix+".lxh", 'w+')
-for k in all_lxh:
-	k = " ".join(k)
-	lxhfile.write(k)
-	lxhfile.write('\n')
-lxhfile.close()
-
-lxxfile=open(fileprefix+".lxx", 'w+')
-for k in all_lxx:
-	k = " ".join(k)
-	lxxfile.write(k)
-	lxxfile.write('\n')
-lxxfile.close()
-
-xdxfile=open(fileprefix+".xdx", 'w+')
-for k in all_xdx:
-	k = " ".join(k)
-	xdxfile.write(k)
-	xdxfile.write('\n')
-xdxfile.close()
-
-xxhfile=open(fileprefix+".xxh", 'w+')
-for k in all_xxh:
-	k = " ".join(k)
-	xxhfile.write(k)
-	xxhfile.write('\n')
-xxhfile.close()
+process_source_csv()
