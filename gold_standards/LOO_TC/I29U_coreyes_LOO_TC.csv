@@ -1,0 +1,686 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I29U-gNSF-p142-r1,A woman is cuddling a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%a$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.048727054409744786,0.052032926477422858,0.0058240896708992018
+I29U-gNSF-p142-r2,A lady is hugging a small dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	small	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%lady', 'nsubj$@%lady$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%dog', 'amod$@%small$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%lady', 'x$@%lady$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.022905959389156405,0.021403272566705933,0.0070866511645087948
+I29U-gNSF-p145-r2,The lady holds her dog. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	3	nsubj	_	_
+3	hold	_	VBZ	VBZ	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	dog	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%hold', 'root$@%hold$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%lady', 'x$@%lady$@%hold', 'x$@%hold$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.040726959910949101,0.03701615588367535,0.0070303679383904027
+I29U-gNSF-p146-r1,The girl holds the dog.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	hold	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	dog	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%girl', 'x$@%girl$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.045851474449949081,0.035346538909871827,0.008462528826165272
+I29U-gNSF-p146-r2,The dog is being held by a woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hold	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.012464147659990377,0.021471311238581592,0.0018839031812563078
+I29U-gNSF-p147-r1,The woman is hugging the dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.026642389044018167,0.02252228498671871,0.0030241574167199081
+I29U-gNSF-p147-r2,The woman is happy to be hugging the dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	7	aux	_	_
+6	be	_	VB	VB	_	7	aux	_	_
+7	hug	_	VBG	VBG	_	4	xcomp	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	dog	_	NN	NN	_	7	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%hug', 'aux$@%be$@%hug', 'xcomp$@%hug$@%happy', 'det$@%the$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%happy']","['x$@%the$@%woman', 'x$@%woman$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%happy', 'x$@%the$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.03879823019418871,0.03625556554827869,0.0024449530116598117
+I29U-gNSF-p148-r1,She is holding her puppy.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hold	_	VBG	VBG	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	puppy	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'poss$@%she$@%puppy', 'dobj$@%puppy$@%hold', 'punct$@%.$@%hold']","['x$@%she$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%she$@%puppy', 'x$@%puppy$@%hold', 'x$@%.$@%hold']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.049161256155809019,0.040709821516973443,0.010518915306524157
+I29U-gNSF-p148-r2,She is hugging her dog.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hug	_	VBG	VBG	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	dog	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%she$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.048021639998842569,0.038394478264446752,0.007251466657335004
+I29U-gNSF-p149-r1,A woman is gleefully embracing a small fluffy lap dog. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	gleefully	_	RB	RB	_	5	advmod	_	_
+5	embrace	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	10	det	_	_
+7	small	_	JJ	JJ	_	10	amod	_	_
+8	fluffy	_	JJ	JJ	_	10	amod	_	_
+9	lap	_	NN	NN	_	10	nn	_	_
+10	dog	_	NN	NN	_	5	dobj	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%embrace', 'aux$@%be$@%embrace', 'advmod$@%gleefully$@%embrace', 'root$@%embrace$@%VROOT', 'det$@%a$@%dog', 'amod$@%small$@%dog', 'amod$@%fluffy$@%dog', 'nn$@%lap$@%dog', 'dobj$@%dog$@%embrace', 'punct$@%.$@%embrace']","['x$@%a$@%woman', 'x$@%woman$@%embrace', 'x$@%be$@%embrace', 'x$@%gleefully$@%embrace', 'x$@%embrace$@%VROOT', 'x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%fluffy$@%dog', 'x$@%lap$@%dog', 'x$@%dog$@%embrace', 'x$@%.$@%embrace']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%gleefully$@%x', 'x$@%embrace$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%fluffy$@%x', 'x$@%lap$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.055544738920252912,0.059334098500004373,0.014076274929461619
+I29U-gNSF-p149-r2,A small fluffy lap dog is enjoying the gleeful embrace of a woman who loves dogs. ,1,1,1,1,1,"1	a	_	DT	DT	_	5	det	_	_
+2	small	_	JJ	JJ	_	5	amod	_	_
+3	fluffy	_	JJ	JJ	_	5	amod	_	_
+4	lap	_	NN	NN	_	5	nn	_	_
+5	dog	_	NN	NN	_	7	nsubj	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	enjoy	_	VBG	VBG	_	0	root	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	gleeful	_	JJ	JJ	_	10	amod	_	_
+10	embrace	_	NN	NN	_	7	dobj	_	_
+11	of	_	IN	IN	_	0	erased	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	woman	_	NN	NN	_	15	nsubj	_	_
+14	who	_	WP	WP	_	0	erased	_	_
+15	love	_	VBZ	VBZ	_	13	rcmod	_	_
+16	dog	_	NNS	NNS	_	15	dobj	_	_
+17	.	_	.	.	_	7	punct	_	_","['det$@%a$@%dog', 'amod$@%small$@%dog', 'amod$@%fluffy$@%dog', 'nn$@%lap$@%dog', 'nsubj$@%dog$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'det$@%the$@%embrace', 'amod$@%gleeful$@%embrace', 'dobj$@%embrace$@%enjoy', 'erased$@%of$@%WORDERASED', 'det$@%a$@%woman', 'nsubj$@%woman$@%love', 'erased$@%who$@%WORDERASED', 'rcmod$@%love$@%woman', 'dobj$@%dog$@%love', 'punct$@%.$@%enjoy']","['x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%fluffy$@%dog', 'x$@%lap$@%dog', 'x$@%dog$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%the$@%embrace', 'x$@%gleeful$@%embrace', 'x$@%embrace$@%enjoy', 'x$@%of$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%love', 'x$@%who$@%WORDERASED', 'x$@%love$@%woman', 'x$@%dog$@%love', 'x$@%.$@%enjoy']","['x$@%a$@%x', 'x$@%small$@%x', 'x$@%fluffy$@%x', 'x$@%lap$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%the$@%x', 'x$@%gleeful$@%x', 'x$@%embrace$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%who$@%x', 'x$@%love$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.036526650677932815,0.032184675202613811,0.0060111772072455327
+I29U-gNSF-p150-r1,The girl is holding the dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%girl', 'x$@%girl$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.036441397621547078,0.031930197030490937,0.0053325192293915968
+I29U-gNSF-p150-r2,The girl is cuddling the dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%girl', 'x$@%girl$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.060810469872107475,0.060179837906822242,0.0068042176302813839
+I29U-gNSC-p155-r1,A lady is holding her pet dog,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	7	poss	_	_
+6	pet	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%lady', 'nsubj$@%lady$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'poss$@%she$@%dog', 'amod$@%pet$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%lady', 'x$@%lady$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%she$@%dog', 'x$@%pet$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%pet$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.030322055625553679,0.027434483552846278,0.002434431345051169
+I29U-gNSC-p156-r1,The lady is cuddling her puppy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	puppy	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'poss$@%she$@%puppy', 'dobj$@%puppy$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%lady', 'x$@%lady$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%she$@%puppy', 'x$@%puppy$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%she$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.064745535039906321,0.08026053623768048,0.010303881408138871
+I29U-gNSC-p156-r2,The lady is very happy because she is holding her pet dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	very	_	RB	RB	_	5	advmod	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	because	_	IN	IN	_	9	mark	_	_
+7	she	_	PRP	PRP	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	hold	_	VBG	VBG	_	5	advcl	_	_
+10	she	_	PRP$	PRP$	_	12	poss	_	_
+11	pet	_	JJ	JJ	_	12	amod	_	_
+12	dog	_	NN	NN	_	9	dobj	_	_
+13	.	_	.	.	_	5	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%happy', 'cop$@%be$@%happy', 'advmod$@%very$@%happy', 'root$@%happy$@%VROOT', 'mark$@%because$@%hold', 'nsubj$@%she$@%hold', 'aux$@%be$@%hold', 'advcl$@%hold$@%happy', 'poss$@%she$@%dog', 'amod$@%pet$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%happy']","['x$@%the$@%lady', 'x$@%lady$@%happy', 'x$@%be$@%happy', 'x$@%very$@%happy', 'x$@%happy$@%VROOT', 'x$@%because$@%hold', 'x$@%she$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%happy', 'x$@%she$@%dog', 'x$@%pet$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%because$@%x', 'x$@%she$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%pet$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.035632962764370002,0.036119911623902823,0.0054491673310274047
+I29U-gNSC-p157-r1,The woman is holding the dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.029584907513169001,0.027435097155890653,0.0033203478517204177
+I29U-gNSC-p157-r2,The happy woman is holding the small dog.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	happy	_	JJ	JJ	_	3	amod	_	_
+3	woman	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	hold	_	VBG	VBG	_	0	root	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	small	_	JJ	JJ	_	8	amod	_	_
+8	dog	_	NN	NN	_	5	dobj	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'amod$@%happy$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'amod$@%small$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%woman', 'x$@%happy$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%happy$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.031713497019896564,0.02442224955930361,0.0035018605900720701
+I29U-gNSC-p161-r2,A dog is being held by a woman in a blue dress.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hold	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	in	_	IN	IN	_	0	erased	_	_
+10	a	_	DT	DT	_	12	det	_	_
+11	blue	_	JJ	JJ	_	12	amod	_	_
+12	dress	_	NN	NN	_	8	prep_in	_	_
+13	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hold', 'erased$@%in$@%WORDERASED', 'det$@%a$@%dress', 'amod$@%blue$@%dress', 'prep_in$@%dress$@%woman', 'punct$@%.$@%hold']","['x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%in$@%WORDERASED', 'x$@%a$@%dress', 'x$@%blue$@%dress', 'x$@%dress$@%woman', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%blue$@%x', 'x$@%dress$@%x', 'x$@%.$@%x']",0.023836658297457292,0.020748032564079977,0.0030228742325406621
+I29U-gNSC-p166-r1,A woman is holding and hugging her puppy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	hug	_	VBG	VBG	_	4	conj_and	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	puppy	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%hug$@%hold', 'poss$@%she$@%puppy', 'dobj$@%puppy$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%hug$@%hold', 'x$@%she$@%puppy', 'x$@%puppy$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%and$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.016619834305053982,0.016363843671221012,0.0038505568430630133
+I29U-gNSC-p166-r2,A puppy is happy to be held by her owner.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	puppy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	7	aux	_	_
+6	be	_	VB	VB	_	7	auxpass	_	_
+7	hold	_	VBN	VBN	_	4	xcomp	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	she	_	PRP$	PRP$	_	10	poss	_	_
+10	owner	_	NN	NN	_	7	agent	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%puppy', 'nsubj$@%puppy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%hold', 'auxpass$@%be$@%hold', 'xcomp$@%hold$@%happy', 'erased$@%by$@%WORDERASED', 'poss$@%she$@%owner', 'agent$@%owner$@%hold', 'punct$@%.$@%happy']","['x$@%a$@%puppy', 'x$@%puppy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%happy', 'x$@%by$@%WORDERASED', 'x$@%she$@%owner', 'x$@%owner$@%hold', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%puppy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%she$@%x', 'x$@%owner$@%x', 'x$@%.$@%x']",0.060946357888138292,0.055863463261940693,0.0057762768266725883
+I29U-gNSC-p167-r1,A woman hugs her Pomeranian. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	3	nsubj	_	_
+3	hug	_	VBZ	VBZ	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	pomeranian	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%pomeranian', 'dobj$@%pomeranian$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%pomeranian', 'x$@%pomeranian$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%pomeranian$@%x', 'x$@%.$@%x']",0.042116450717057163,0.052447550564024947,0.013127326217129531
+I29U-gNSC-p167-r2,A dogs gets a big hug from his owner. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NNS	NNS	_	3	nsubj	_	_
+3	get	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	big	_	JJ	JJ	_	6	amod	_	_
+6	hug	_	NN	NN	_	3	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	owner	_	NN	NN	_	3	prep_from	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%get', 'root$@%get$@%VROOT', 'det$@%a$@%hug', 'amod$@%big$@%hug', 'dobj$@%hug$@%get', 'erased$@%from$@%WORDERASED', 'poss$@%he$@%owner', 'prep_from$@%owner$@%get', 'punct$@%.$@%get']","['x$@%a$@%dog', 'x$@%dog$@%get', 'x$@%get$@%VROOT', 'x$@%a$@%hug', 'x$@%big$@%hug', 'x$@%hug$@%get', 'x$@%from$@%WORDERASED', 'x$@%he$@%owner', 'x$@%owner$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%get$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%hug$@%x', 'x$@%from$@%x', 'x$@%he$@%x', 'x$@%owner$@%x', 'x$@%.$@%x']",0.028911120472335683,0.028225270770347866,0.003750625547924602
+I29U-gNSC-p178-r1,woman is cuddling with dog,1,1,0,1,1,"1	woman	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cuddle	_	VBG	VBG	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	dog	_	NN	NN	_	3	prep_with	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%with$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.054859605574228865,0.067507263065929357,0.0058938372352613788
+I29U-gNSC-p180-r1,A girl is hugging her dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%girl', 'x$@%girl$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.037666033602713145,0.034356759854552554,0.0044338464555283563
+I29U-gNSC-p180-r2,A young smiling girl is hugging a dog in her arms.,1,1,1,1,1,"1	a	_	DT	DT	_	4	det	_	_
+2	young	_	JJ	JJ	_	4	amod	_	_
+3	smile	_	VBG	VBG	_	4	amod	_	_
+4	girl	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	hug	_	VBG	VBG	_	0	root	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	dog	_	NN	NN	_	6	dobj	_	_
+9	in	_	IN	IN	_	0	erased	_	_
+10	she	_	PRP$	PRP$	_	11	poss	_	_
+11	arm	_	NNS	NNS	_	8	prep_in	_	_
+12	.	_	.	.	_	6	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'amod$@%smile$@%girl', 'nsubj$@%girl$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%hug', 'erased$@%in$@%WORDERASED', 'poss$@%she$@%arm', 'prep_in$@%arm$@%dog', 'punct$@%.$@%hug']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%smile$@%girl', 'x$@%girl$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%hug', 'x$@%in$@%WORDERASED', 'x$@%she$@%arm', 'x$@%arm$@%dog', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%smile$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%in$@%x', 'x$@%she$@%x', 'x$@%arm$@%x', 'x$@%.$@%x']",0.026615338589686566,0.029350947378585124,0.0046544135131402209
+I29U-gNSC-p182-r1,The lady is hugging her dog,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%lady', 'x$@%lady$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.022397901884900318,0.020488426001534665,0.0028700981262805847
+I29U-gNSC-p186-r1,The woman is holding the dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.029584907513169001,0.027435097155890653,0.0033203478517204177
+I29U-gNSC-p186-r2,The dog is being held by the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hold	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%woman', 'agent$@%woman$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.012269196803049054,0.021386312812819774,0.0023471803734110841
+I29U-gNSC-p188-r1,A woman is hugging her dog. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.025940724975619278,0.022410577828392286,0.0024116526686820405
+I29U-gNSC-p188-r2,A dog is cuddling with its owner. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	its	_	PRP$	PRP$	_	7	poss	_	_
+7	owner	_	NN	NN	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'erased$@%with$@%WORDERASED', 'poss$@%its$@%owner', 'prep_with$@%owner$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%a$@%dog', 'x$@%dog$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%its$@%owner', 'x$@%owner$@%cuddle', 'x$@%.$@%cuddle']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%with$@%x', 'x$@%its$@%x', 'x$@%owner$@%x', 'x$@%.$@%x']",0.037873873651597889,0.04292804807484063,0.0044491829492310231
+I29U-gNSC-p189-r1,The woman is hugging the dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.026642389044018167,0.02252228498671871,0.0030241574167199081
+I29U-gNSC-p191-r1,A woman is hugging a puppy. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	puppy	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%puppy', 'dobj$@%puppy$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%puppy', 'x$@%puppy$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.039511476356955955,0.044185364384637826,0.008840762906471622
+I29U-gNSC-p191-r2,A puppy is being hugged by a woman. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	puppy	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hug	_	VBD	VBD	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%puppy', 'nsubjpass$@%puppy$@%hug', 'aux$@%be$@%hug', 'auxpass$@%be$@%hug', 'root$@%hug$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%puppy', 'x$@%puppy$@%hug', 'x$@%be$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%puppy$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.042446449343212733,0.036791079558802342,0.006984825540000239
+I29U-gNSC-p193-r1,The girl is hugging her dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%girl', 'x$@%girl$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.038462661612068239,0.035324845125786486,0.0053366997373376357
+I29U-gNSC-p195-r1,A woman is holding a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.030182609205946287,0.031008131823929697,0.0052616613132018264
+I29U-gNSC-p195-r2,A dog is being held by a woman.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hold	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0145526390932047,0.023738874363496865,0.0036961415561359567
+I29U-gNSC-p200-r1,The woman is hugging her dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.025156028795269125,0.021690804498394778,0.0023880403867376776
+I29U-gNSC-p201-r1,The lady is happily holding her dog. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	happily	_	RB	RB	_	5	advmod	_	_
+5	hold	_	VBG	VBG	_	0	root	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	dog	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%hold', 'aux$@%be$@%hold', 'advmod$@%happily$@%hold', 'root$@%hold$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%lady', 'x$@%lady$@%hold', 'x$@%be$@%hold', 'x$@%happily$@%hold', 'x$@%hold$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%happily$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.041975356279459697,0.038078813336897666,0.0057247059989353755
+I29U-gNSC-p205-r1,A woman hugs her dog.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	3	nsubj	_	_
+3	hug	_	VBZ	VBZ	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	dog	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.02717608083176426,0.024960383861457824,0.0050996402171783473
+I29U-gNSC-p205-r2,A dog is being hugged by a woman.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hug	_	VBD	VBD	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'nsubjpass$@%dog$@%hug', 'aux$@%be$@%hug', 'auxpass$@%be$@%hug', 'root$@%hug$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%dog', 'x$@%dog$@%hug', 'x$@%be$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.026570078024366506,0.023014547357489978,0.0038627676753368867
+I29U-gNSC-p207-r1,A woman is cuddling a small dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	small	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%a$@%dog', 'amod$@%small$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%a$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.045793833606814327,0.046909208486144327,0.0076029222375108008
+I29U-gNSC-p207-r2,A woman is very happy to be holding her cute dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	8	xsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	very	_	RB	RB	_	5	advmod	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	to	_	TO	TO	_	8	aux	_	_
+7	be	_	VB	VB	_	8	aux	_	_
+8	hold	_	VBG	VBG	_	5	xcomp	_	_
+9	she	_	PRP$	PRP$	_	11	poss	_	_
+10	cute	_	JJ	JJ	_	11	amod	_	_
+11	dog	_	NN	NN	_	8	dobj	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%woman', 'xsubj$@%woman$@%hold', 'cop$@%be$@%happy', 'advmod$@%very$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%hold', 'aux$@%be$@%hold', 'xcomp$@%hold$@%happy', 'poss$@%she$@%dog', 'amod$@%cute$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%happy']","['x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%happy', 'x$@%very$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%happy', 'x$@%she$@%dog', 'x$@%cute$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%she$@%x', 'x$@%cute$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.033792735017069808,0.023928682275568658,0.0012476088665028806
+I29U-gNSC-p214-r1,The woman is hugging her pet,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	pet	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%pet', 'dobj$@%pet$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%pet', 'x$@%pet$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%pet$@%x', 'x$@%.$@%x']",0.027931797555885263,0.027095392312638356,0.0043185663995005674
+I29U-gNSC-p214-r2,"The pet loves to be hugged by her ""Mom""",1,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	pet	_	NN	NN	_	6	xsubj	_	_
+3	love	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	auxpass	_	_
+6	hug	_	VBN	VBN	_	3	xcomp	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	10	poss	_	_
+9	``	_	``	``	_	10	punct	_	_
+10	mom	_	NN	NN	_	6	agent	_	_
+11	''	_	''	''	_	10	punct	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%the$@%pet', 'xsubj$@%pet$@%hug', 'root$@%love$@%VROOT', 'aux$@%to$@%hug', 'auxpass$@%be$@%hug', 'xcomp$@%hug$@%love', 'erased$@%by$@%WORDERASED', 'poss$@%she$@%mom', 'punct$@%``$@%mom', 'agent$@%mom$@%hug', ""punct$@%''$@%mom"", 'punct$@%.$@%love']","['x$@%the$@%pet', 'x$@%pet$@%hug', 'x$@%love$@%VROOT', 'x$@%to$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%love', 'x$@%by$@%WORDERASED', 'x$@%she$@%mom', 'x$@%``$@%mom', 'x$@%mom$@%hug', ""x$@%''$@%mom"", 'x$@%.$@%love']","['x$@%the$@%x', 'x$@%pet$@%x', 'x$@%love$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%she$@%x', 'x$@%``$@%x', 'x$@%mom$@%x', ""x$@%''$@%x"", 'x$@%.$@%x']",0.031895249208668153,0.026579324315169739,0.0049830374257227028
+I29U-gNSC-p218-r2,The little dog loves being held and loved by the girl.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	dog	_	NN	NN	_	4	nsubj	_	_
+4	love	_	VBZ	VBZ	_	0	root	_	_
+5	be	_	VBG	VBG	_	6	auxpass	_	_
+6	hold	_	VBN	VBN	_	4	xcomp	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	love	_	VBN	VBN	_	6	conj_and	_	_
+9	by	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	girl	_	NN	NN	_	6	agent	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'amod$@%little$@%dog', 'nsubj$@%dog$@%love', 'root$@%love$@%VROOT', 'auxpass$@%be$@%hold', 'xcomp$@%hold$@%love', 'erased$@%and$@%WORDERASED', 'conj_and$@%love$@%hold', 'erased$@%by$@%WORDERASED', 'det$@%the$@%girl', 'agent$@%girl$@%hold', 'punct$@%.$@%love']","['x$@%the$@%dog', 'x$@%little$@%dog', 'x$@%dog$@%love', 'x$@%love$@%VROOT', 'x$@%be$@%hold', 'x$@%hold$@%love', 'x$@%and$@%WORDERASED', 'x$@%love$@%hold', 'x$@%by$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%hold', 'x$@%.$@%love']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%dog$@%x', 'x$@%love$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%and$@%x', 'x$@%love$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.030119232257947548,0.033427620577861972,0.0068218847142532679
+I29U-gNSC-p223-r1,The woman is hugging the small dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	small	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%dog', 'amod$@%small$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.017477120393641021,0.015338368640675726,0.0021483147999967755
+I29U-gNSC-p223-r2,A small dog is happy about being held.,1,0,1,0,1,"1	a	_	DT	DT	_	3	det	_	_
+2	small	_	JJ	JJ	_	3	amod	_	_
+3	dog	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	about	_	IN	IN	_	0	erased	_	_
+7	be	_	VBG	VBG	_	8	auxpass	_	_
+8	hold	_	VBN	VBN	_	5	prepc_about	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'amod$@%small$@%dog', 'nsubj$@%dog$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'erased$@%about$@%WORDERASED', 'auxpass$@%be$@%hold', 'prepc_about$@%hold$@%happy', 'punct$@%.$@%happy']","['x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%be$@%hold', 'x$@%hold$@%happy', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%about$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%.$@%x']",0.047380839014492082,0.039593532032387135,0.0045329933136437628
+I29U-gNSC-p227-r1,The woman is cuddling a puppy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	puppy	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%a$@%puppy', 'dobj$@%puppy$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%a$@%puppy', 'x$@%puppy$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%a$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.05060000289523936,0.056920058638090687,0.00592106009464477
+I29U-gNSC-p227-r2,The puppy is being cuddled by the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	puppy	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	cuddle	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%puppy', 'nsubjpass$@%puppy$@%cuddle', 'aux$@%be$@%cuddle', 'auxpass$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%woman', 'agent$@%woman$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%puppy', 'x$@%puppy$@%cuddle', 'x$@%be$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%puppy$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.047693995404769707,0.049453276521088885,0.0055496455092092223
+I29U-gNSC-p229-r2,The little dog is receiving a hug from her owner.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	dog	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	receive	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	hug	_	NN	NN	_	5	dobj	_	_
+8	from	_	IN	IN	_	0	erased	_	_
+9	she	_	PRP$	PRP$	_	10	poss	_	_
+10	owner	_	NN	NN	_	5	prep_from	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'amod$@%little$@%dog', 'nsubj$@%dog$@%receive', 'aux$@%be$@%receive', 'root$@%receive$@%VROOT', 'det$@%a$@%hug', 'dobj$@%hug$@%receive', 'erased$@%from$@%WORDERASED', 'poss$@%she$@%owner', 'prep_from$@%owner$@%receive', 'punct$@%.$@%receive']","['x$@%the$@%dog', 'x$@%little$@%dog', 'x$@%dog$@%receive', 'x$@%be$@%receive', 'x$@%receive$@%VROOT', 'x$@%a$@%hug', 'x$@%hug$@%receive', 'x$@%from$@%WORDERASED', 'x$@%she$@%owner', 'x$@%owner$@%receive', 'x$@%.$@%receive']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%receive$@%x', 'x$@%a$@%x', 'x$@%hug$@%x', 'x$@%from$@%x', 'x$@%she$@%x', 'x$@%owner$@%x', 'x$@%.$@%x']",0.084904327863230655,0.086018434023792167,0.006123503925785867
+I29U-gNSC-p232-r1,The women is cuddling the dog,1,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NNS	NNS	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.04703153451916342,0.048019417453050384,0.0038730821848911301
+I29U-gNSC-p238-r1,The woman is hugging her dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.025156028795269125,0.021690804498394778,0.0023880403867378996
+I29U-gNSC-p238-r2,The woman is squeezing her new puppy.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	squeeze	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	7	poss	_	_
+6	new	_	JJ	JJ	_	7	amod	_	_
+7	puppy	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%squeeze', 'aux$@%be$@%squeeze', 'root$@%squeeze$@%VROOT', 'poss$@%she$@%puppy', 'amod$@%new$@%puppy', 'dobj$@%puppy$@%squeeze', 'punct$@%.$@%squeeze']","['x$@%the$@%woman', 'x$@%woman$@%squeeze', 'x$@%be$@%squeeze', 'x$@%squeeze$@%VROOT', 'x$@%she$@%puppy', 'x$@%new$@%puppy', 'x$@%puppy$@%squeeze', 'x$@%.$@%squeeze']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%squeeze$@%x', 'x$@%she$@%x', 'x$@%new$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.099465156236505758,0.12659658206783653,0.01251917651062362
+I29U-gNSC-p241-r1,A person is hugging a small dog. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	person	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	small	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%dog', 'amod$@%small$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%person', 'x$@%person$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.011929055947376033,0.015424989760612684,0.0036812089960372996
+I29U-gNSC-p241-r2,A small dog is being hugged by a person.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	small	_	JJ	JJ	_	3	amod	_	_
+3	dog	_	NN	NN	_	6	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	6	aux	_	_
+5	be	_	VBG	VBG	_	6	auxpass	_	_
+6	hug	_	VBD	VBD	_	0	root	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	person	_	NN	NN	_	6	agent	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%a$@%dog', 'amod$@%small$@%dog', 'nsubjpass$@%dog$@%hug', 'aux$@%be$@%hug', 'auxpass$@%be$@%hug', 'root$@%hug$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%person', 'agent$@%person$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%dog', 'x$@%small$@%dog', 'x$@%dog$@%hug', 'x$@%be$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%person', 'x$@%person$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%small$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%person$@%x', 'x$@%.$@%x']",0.018782520772585576,0.014372504310135259,0.0028792187576420769
+I29U-gNSC-p242-r1,The woman is cuddling her dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.035638535604340604,0.047316453597717079,0.0032440986130007898
+I29U-gNSC-p242-r2,The dog is being cuddled by the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	cuddle	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubjpass$@%dog$@%cuddle', 'aux$@%be$@%cuddle', 'auxpass$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%woman', 'agent$@%woman$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%the$@%dog', 'x$@%dog$@%cuddle', 'x$@%be$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%cuddle', 'x$@%.$@%cuddle']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.039139757015356214,0.043029524003521114,0.0030256514473631091
+I29U-gNSC-p267-r1,Woman hugs dog.,1,0,0,1,1,"1	woman	_	NNP	NNP	_	2	nsubj	_	_
+2	hug	_	VBZ	VBZ	_	0	root	_	_
+3	dog	_	NN	NN	_	2	dobj	_	_
+4	.	_	.	.	_	2	punct	_	_","['nsubj$@%woman$@%hug', 'root$@%hug$@%VROOT', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%woman$@%hug', 'x$@%hug$@%VROOT', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%woman$@%x', 'x$@%hug$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.063524031434468387,0.047371885228991051,0.013487337220472129
+I29U-gNSC-p267-r2,Dog is being held by woman.,1,1,0,1,1,"1	dog	_	NNP	NNP	_	4	nsubjpass	_	_
+2	be	_	VBZ	VBZ	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	hold	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	woman	_	NN	NN	_	4	agent	_	_
+7	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'agent$@%woman$@%hold', 'punct$@%.$@%hold']","['x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%woman$@%hold', 'x$@%.$@%hold']","['x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.02029568892087108,0.033508553161720855,0.0047019776605382591
+I29U-gNSC-p268-r1,The woman is holding the dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.029584907513169001,0.027435097155890653,0.0033203478517204177
+I29U-gNSC-p275-r2,A dog is being hugged by a woman.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	hug	_	VBD	VBD	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'nsubjpass$@%dog$@%hug', 'aux$@%be$@%hug', 'auxpass$@%be$@%hug', 'root$@%hug$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%dog', 'x$@%dog$@%hug', 'x$@%be$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.026570078024366617,0.023014547357489978,0.0038627676753366647
+I29U-gNSC-p279-r2,The dog is being squeezed too tight by the obsessive lady. ,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	squeeze	_	VBN	VBN	_	0	root	_	_
+6	too	_	RB	RB	_	7	advmod	_	_
+7	tight	_	JJ	JJ	_	5	acomp	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	obsessive	_	JJ	JJ	_	11	amod	_	_
+11	lady	_	NN	NN	_	5	agent	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubjpass$@%dog$@%squeeze', 'aux$@%be$@%squeeze', 'auxpass$@%be$@%squeeze', 'root$@%squeeze$@%VROOT', 'advmod$@%too$@%tight', 'acomp$@%tight$@%squeeze', 'erased$@%by$@%WORDERASED', 'det$@%the$@%lady', 'amod$@%obsessive$@%lady', 'agent$@%lady$@%squeeze', 'punct$@%.$@%squeeze']","['x$@%the$@%dog', 'x$@%dog$@%squeeze', 'x$@%be$@%squeeze', 'x$@%be$@%squeeze', 'x$@%squeeze$@%VROOT', 'x$@%too$@%tight', 'x$@%tight$@%squeeze', 'x$@%by$@%WORDERASED', 'x$@%the$@%lady', 'x$@%obsessive$@%lady', 'x$@%lady$@%squeeze', 'x$@%.$@%squeeze']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%squeeze$@%x', 'x$@%too$@%x', 'x$@%tight$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%obsessive$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.080357757606154823,0.090525279802662895,0.0091870420220144799
+I29U-gNSC-p280-r1,A woman is hugging her dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.025940724975619278,0.022410577828392286,0.0024116526686820405
+I29U-gNSC-p283-r1,A woman holding a dog in her hands,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	0	root	_	_
+3	hold	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	dog	_	NN	NN	_	3	dobj	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	hand	_	NNS	NNS	_	5	prep_in	_	_
+9	.	_	.	.	_	2	punct	_	_","['det$@%a$@%woman', 'root$@%woman$@%VROOT', 'partmod$@%hold$@%woman', 'det$@%a$@%dog', 'dobj$@%dog$@%hold', 'erased$@%in$@%WORDERASED', 'poss$@%she$@%hand', 'prep_in$@%hand$@%dog', 'punct$@%.$@%woman']","['x$@%a$@%woman', 'x$@%woman$@%VROOT', 'x$@%hold$@%woman', 'x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%in$@%WORDERASED', 'x$@%she$@%hand', 'x$@%hand$@%dog', 'x$@%.$@%woman']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%in$@%x', 'x$@%she$@%x', 'x$@%hand$@%x', 'x$@%.$@%x']",0.035166258250853177,0.037284215010685462,0.0068361075651479641
+I29U-gNSC-p283-r2,Dog is being held by a woman,1,1,0,1,1,"1	dog	_	NNP	NNP	_	4	nsubjpass	_	_
+2	be	_	VBZ	VBZ	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	hold	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	woman	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%dog$@%hold', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%hold', 'punct$@%.$@%hold']","['x$@%dog$@%hold', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%.$@%hold']","['x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.017370295851832585,0.027122902793515702,0.0037149271244316662
+I29U-gNSC-p288-r2,The dog loves it when her owner picks her up and hugs her.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	3	nsubj	_	_
+3	love	_	VBZ	VBZ	_	0	root	_	_
+4	it	_	PRP	PRP	_	3	dobj	_	_
+5	when	_	WRB	WRB	_	8	advmod	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	owner	_	NN	NN	_	8	nsubj	_	_
+8	pick	_	VBZ	VBZ	_	3	advcl	_	_
+9	she	_	PRP	PRP	_	8	dobj	_	_
+10	up	_	RP	RP	_	8	prt	_	_
+11	and	_	CC	CC	_	0	erased	_	_
+12	hug	_	NNS	NNS	_	13	dep	_	_
+13	she	_	PRP	PRP	_	8	conj_and	_	_
+14	.	_	.	.	_	3	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%love', 'root$@%love$@%VROOT', 'dobj$@%it$@%love', 'advmod$@%when$@%pick', 'poss$@%she$@%owner', 'nsubj$@%owner$@%pick', 'advcl$@%pick$@%love', 'dobj$@%she$@%pick', 'prt$@%up$@%pick', 'erased$@%and$@%WORDERASED', 'dep$@%hug$@%she', 'conj_and$@%she$@%pick', 'punct$@%.$@%love']","['x$@%the$@%dog', 'x$@%dog$@%love', 'x$@%love$@%VROOT', 'x$@%it$@%love', 'x$@%when$@%pick', 'x$@%she$@%owner', 'x$@%owner$@%pick', 'x$@%pick$@%love', 'x$@%she$@%pick', 'x$@%up$@%pick', 'x$@%and$@%WORDERASED', 'x$@%hug$@%she', 'x$@%she$@%pick', 'x$@%.$@%love']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%love$@%x', 'x$@%it$@%x', 'x$@%when$@%x', 'x$@%she$@%x', 'x$@%owner$@%x', 'x$@%pick$@%x', 'x$@%she$@%x', 'x$@%up$@%x', 'x$@%and$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%.$@%x']",0.032167333530950137,0.031986916531616671,0.0042254878279402996
+I29U-gNSC-p292-r1,The woman is hugging the dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.026642389044018167,0.02252228498671871,0.0030241574167199081
+I29U-gNSF-p293-r1,The woman is holding a dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.028373187999313543,0.027482209456601847,0.0024236921372577935
+I29U-gNSF-p293-r2,The woman is giving her dog a hug.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	dog	_	NN	NN	_	4	dep	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	hug	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'poss$@%she$@%dog', 'dep$@%dog$@%give', 'det$@%a$@%hug', 'dobj$@%hug$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%she$@%dog', 'x$@%dog$@%give', 'x$@%a$@%hug', 'x$@%hug$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%she$@%x', 'x$@%dog$@%x', 'x$@%a$@%x', 'x$@%hug$@%x', 'x$@%.$@%x']",0.038172740827241647,0.041525658659268494,0.0022335607791742484
+I29U-gNSF-p299-r1,The woman is hugging a pomeranian.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pomeranian	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%pomeranian', 'dobj$@%pomeranian$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%pomeranian', 'x$@%pomeranian$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%pomeranian$@%x', 'x$@%.$@%x']",0.033656569281972248,0.040898891659009395,0.0081089215883664023
+I29U-gNSF-p301-r1,The girl is hugging the dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%girl', 'x$@%girl$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.041555575527868482,0.036131432023667531,0.0059694227843801739
+I29U-gNSF-p303-r1,She is hugging the sweet puppy.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hug	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	sweet	_	JJ	JJ	_	6	amod	_	_
+6	puppy	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%the$@%puppy', 'amod$@%sweet$@%puppy', 'dobj$@%puppy$@%hug', 'punct$@%.$@%hug']","['x$@%she$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%the$@%puppy', 'x$@%sweet$@%puppy', 'x$@%puppy$@%hug', 'x$@%.$@%hug']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%the$@%x', 'x$@%sweet$@%x', 'x$@%puppy$@%x', 'x$@%.$@%x']",0.056578358889923464,0.07018903085767314,0.012433001480059547
+I29U-gNSF-p303-r2,The happy puppy is being hugged by the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	happy	_	JJ	JJ	_	3	amod	_	_
+3	puppy	_	NN	NN	_	6	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	6	aux	_	_
+5	be	_	VBG	VBG	_	6	auxpass	_	_
+6	hug	_	VBD	VBD	_	0	root	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	6	agent	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%the$@%puppy', 'amod$@%happy$@%puppy', 'nsubjpass$@%puppy$@%hug', 'aux$@%be$@%hug', 'auxpass$@%be$@%hug', 'root$@%hug$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%woman', 'agent$@%woman$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%puppy', 'x$@%happy$@%puppy', 'x$@%puppy$@%hug', 'x$@%be$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%happy$@%x', 'x$@%puppy$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.047508981620910773,0.048450078689519338,0.0083995451310108216
+I29U-gNSF-p306-r1,A woman is snuggling her little doggy. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	snuggle	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	7	poss	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	doggy	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%snuggle', 'aux$@%be$@%snuggle', 'root$@%snuggle$@%VROOT', 'poss$@%she$@%doggy', 'amod$@%little$@%doggy', 'dobj$@%doggy$@%snuggle', 'punct$@%.$@%snuggle']","['x$@%a$@%woman', 'x$@%woman$@%snuggle', 'x$@%be$@%snuggle', 'x$@%snuggle$@%VROOT', 'x$@%she$@%doggy', 'x$@%little$@%doggy', 'x$@%doggy$@%snuggle', 'x$@%.$@%snuggle']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%snuggle$@%x', 'x$@%she$@%x', 'x$@%little$@%x', 'x$@%doggy$@%x', 'x$@%.$@%x']",0.062312199807554647,0.074150874098225183,0.0061478838727295759
+I29U-gNSF-p306-r2,A woman is hugging her pet dog. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	7	poss	_	_
+6	pet	_	JJ	JJ	_	7	amod	_	_
+7	dog	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'poss$@%she$@%dog', 'amod$@%pet$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%a$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%she$@%dog', 'x$@%pet$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%she$@%x', 'x$@%pet$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.018674455540678259,0.016339114513238329,0.0012249388681866424
+I29U-gNSF-p495-r1,The woman is hugging a dog.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hug	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%hug', 'punct$@%.$@%hug']","['x$@%the$@%woman', 'x$@%woman$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%hug', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.024950304823122105,0.022322491469975891,0.0021133821597267843
+I29U-gNSF-p496-r1,"The tiny, fluffy dog is being squeezed by the overjoyed lady.",1,1,1,1,1,"1	the	_	DT	DT	_	5	det	_	_
+2	tiny	_	JJ	JJ	_	5	amod	_	_
+3	,	_	,	,	_	5	punct	_	_
+4	fluffy	_	JJ	JJ	_	5	amod	_	_
+5	dog	_	NN	NN	_	8	nsubjpass	_	_
+6	be	_	VBZ	VBZ	_	8	aux	_	_
+7	be	_	VBG	VBG	_	8	auxpass	_	_
+8	squeeze	_	VBN	VBN	_	0	root	_	_
+9	by	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	12	det	_	_
+11	overjoyed	_	JJ	JJ	_	12	amod	_	_
+12	lady	_	NN	NN	_	8	agent	_	_
+13	.	_	.	.	_	8	punct	_	_","['det$@%the$@%dog', 'amod$@%tiny$@%dog', 'punct$@%,$@%dog', 'amod$@%fluffy$@%dog', 'nsubjpass$@%dog$@%squeeze', 'aux$@%be$@%squeeze', 'auxpass$@%be$@%squeeze', 'root$@%squeeze$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%lady', 'amod$@%overjoyed$@%lady', 'agent$@%lady$@%squeeze', 'punct$@%.$@%squeeze']","['x$@%the$@%dog', 'x$@%tiny$@%dog', 'x$@%,$@%dog', 'x$@%fluffy$@%dog', 'x$@%dog$@%squeeze', 'x$@%be$@%squeeze', 'x$@%be$@%squeeze', 'x$@%squeeze$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%lady', 'x$@%overjoyed$@%lady', 'x$@%lady$@%squeeze', 'x$@%.$@%squeeze']","['x$@%the$@%x', 'x$@%tiny$@%x', 'x$@%,$@%x', 'x$@%fluffy$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%squeeze$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%overjoyed$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.051208504137142064,0.057533274388605671,0.0080628042470163308
+I29U-gNSF-p496-r2,A girl with tiny eyebrows shows her love for a long haired Chihuahua. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	6	nsubj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	tiny	_	JJ	JJ	_	5	amod	_	_
+5	eyebrow	_	NNS	NNS	_	2	prep_with	_	_
+6	show	_	VBZ	VBZ	_	0	root	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	love	_	NN	NN	_	6	dobj	_	_
+9	for	_	IN	IN	_	0	erased	_	_
+10	a	_	DT	DT	_	13	det	_	_
+11	long	_	JJ	JJ	_	13	amod	_	_
+12	haired	_	JJ	JJ	_	13	amod	_	_
+13	chihuahua	_	NN	NN	_	6	prep_for	_	_
+14	.	_	.	.	_	6	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%show', 'erased$@%with$@%WORDERASED', 'amod$@%tiny$@%eyebrow', 'prep_with$@%eyebrow$@%girl', 'root$@%show$@%VROOT', 'poss$@%she$@%love', 'dobj$@%love$@%show', 'erased$@%for$@%WORDERASED', 'det$@%a$@%chihuahua', 'amod$@%long$@%chihuahua', 'amod$@%haired$@%chihuahua', 'prep_for$@%chihuahua$@%show', 'punct$@%.$@%show']","['x$@%a$@%girl', 'x$@%girl$@%show', 'x$@%with$@%WORDERASED', 'x$@%tiny$@%eyebrow', 'x$@%eyebrow$@%girl', 'x$@%show$@%VROOT', 'x$@%she$@%love', 'x$@%love$@%show', 'x$@%for$@%WORDERASED', 'x$@%a$@%chihuahua', 'x$@%long$@%chihuahua', 'x$@%haired$@%chihuahua', 'x$@%chihuahua$@%show', 'x$@%.$@%show']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%with$@%x', 'x$@%tiny$@%x', 'x$@%eyebrow$@%x', 'x$@%show$@%x', 'x$@%she$@%x', 'x$@%love$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%long$@%x', 'x$@%haired$@%x', 'x$@%chihuahua$@%x', 'x$@%.$@%x']",0.04732311150262547,0.047321500839939024,0.0073526548949207626
+I29U-gNSF-p497-r1,A woman is cuddling a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cuddle	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%cuddle', 'aux$@%be$@%cuddle', 'root$@%cuddle$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%cuddle', 'punct$@%.$@%cuddle']","['x$@%a$@%woman', 'x$@%woman$@%cuddle', 'x$@%be$@%cuddle', 'x$@%cuddle$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%cuddle', 'x$@%.$@%cuddle']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cuddle$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.048727054409744897,0.052032926477422858,0.0058240896708990908
+I29U-gNSF-p497-r2,A woman is holding a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	dog	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%dog', 'dobj$@%dog$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%woman', 'x$@%woman$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%dog', 'x$@%dog$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.030182609205946287,0.031008131823929808,0.0052616613132020484

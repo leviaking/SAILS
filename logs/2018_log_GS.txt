@@ -8,3 +8,22 @@ Now I must begin the scoring process. I need to do leave one out testing on each
 Currently working on the files OLDprep_conll_for_tfidf.sh and OLDprep_conll_for_tfidf.py; I will rename these without the "OLD" when they are fully updated.
 DONE.
 
+2018-07-24.
+Today I'm starting work on the leave-one-out (LOO) GS experiments. I need to drag out the tf-idf scripts from last time and prepare them for LOO.
+
+Oh, this time, I'm only going to use the tf-idf cosine ("TC") approach; this was the clear winner in the pilot study. See the table pasted below. So it'll be TC and the Brown Corpus for sure, and I think I should look at xdh, ldh, and probably xdx.
+For the term (depstring) forms,
+Approach	form		Ref Corpus		
+0.51577 TC xdh 0.51810 Brown 0.51534
+0.50780 FC ldh 0.51677 WSJ 0.50798
+0.50755 TA lxh 0.51350
+0.49464 FA xdx 0.49901
+			ldx 0.49352
+
+I need these scripts: lk_tfidf.sh, lk_tfidf.py
+These have been copied to the scripts folder as "OLDlk_tfidf*"; I'll remove the "OLD" when they are completed.
+I'm not quite ready to implement LOO. These scripts simply compare dependencies in the test file with dependencies in the reference corpus and record the resulting tf-idf score for each term. I need to modify them to work on the csv files that now contain all the depstrings.
+
+
+2018-08-14.
+I've almost finished OLDlk_tfidf.py. It's basically working, but I need to uncomment the remaining deptypes in a couple of places in the main program; relatedly, I need to fix it so that I'm not working with empty lists after I run through the first deptype (I think this has something to do with the csvreader and/or the way the loop is managed).

@@ -1,0 +1,1236 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I01U-gNSC-p322-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p322-r2,The boy is doing a happy dance. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	do	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	happy	_	JJ	JJ	_	7	amod	_	_
+7	dance	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%a$@%dance', 'amod$@%happy$@%dance', 'dobj$@%dance$@%do', 'punct$@%.$@%do']","['x$@%the$@%boy', 'x$@%boy$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%a$@%dance', 'x$@%happy$@%dance', 'x$@%dance$@%do', 'x$@%.$@%do']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%a$@%x', 'x$@%happy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.034810247821610907,0.027282488050569209,0.0049001727115893789
+I01U-gNSC-p323-r1,Dont know,0,0,0,0,0,"1	dont	_	NNP	NNP	_	2	nsubj	_	_
+2	know	_	VBP	VBP	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%dont$@%know', 'root$@%know$@%VROOT', 'punct$@%.$@%know']","['x$@%dont$@%know', 'x$@%know$@%VROOT', 'x$@%.$@%know']","['x$@%dont$@%x', 'x$@%know$@%x', 'x$@%.$@%x']",0.14053800017937312,0.12065003743206937,0.028714156500880383
+I01U-gNSC-p323-r2,Dont know,0,0,0,0,0,"1	dont	_	NNP	NNP	_	2	nsubj	_	_
+2	know	_	VBP	VBP	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%dont$@%know', 'root$@%know$@%VROOT', 'punct$@%.$@%know']","['x$@%dont$@%know', 'x$@%know$@%VROOT', 'x$@%.$@%know']","['x$@%dont$@%x', 'x$@%know$@%x', 'x$@%.$@%x']",0.14053800017937335,0.12065003743206937,0.028714156500880161
+I01U-gNSC-p324-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p324-r2,"Andy loves the music, it makes him dance.",1,0,0,1,0,"1	andy	_	NNP	NNP	_	2	nsubj	_	_
+2	love	_	VBZ	VBZ	_	7	ccomp	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	music	_	NN	NN	_	2	dobj	_	_
+5	,	_	,	,	_	7	punct	_	_
+6	it	_	PRP	PRP	_	7	nsubj	_	_
+7	make	_	VBZ	VBZ	_	0	root	_	_
+8	he	_	PRP	PRP	_	9	nsubj	_	_
+9	dance	_	VB	VB	_	7	ccomp	_	_
+10	.	_	.	.	_	7	punct	_	_","['nsubj$@%andy$@%love', 'ccomp$@%love$@%make', 'det$@%the$@%music', 'dobj$@%music$@%love', 'punct$@%,$@%make', 'nsubj$@%it$@%make', 'root$@%make$@%VROOT', 'nsubj$@%he$@%dance', 'ccomp$@%dance$@%make', 'punct$@%.$@%make']","['x$@%andy$@%love', 'x$@%love$@%make', 'x$@%the$@%music', 'x$@%music$@%love', 'x$@%,$@%make', 'x$@%it$@%make', 'x$@%make$@%VROOT', 'x$@%he$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%andy$@%x', 'x$@%love$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%,$@%x', 'x$@%it$@%x', 'x$@%make$@%x', 'x$@%he$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.027931103586228856,0.031411232185958871,0.0031747988793178195
+I01U-gNSC-p325-r1,The boy is dancing ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p325-r2,A boy is happy when dancing,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	when	_	WRB	WRB	_	6	advmod	_	_
+6	dancing	_	VBG	VBG	_	4	advcl	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'advmod$@%when$@%dancing', 'advcl$@%dancing$@%happy', 'punct$@%.$@%happy']","['x$@%a$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%when$@%dancing', 'x$@%dancing$@%happy', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%when$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.076089653217724873,0.078791611750536505,0.0077180811922077375
+I01U-gNSC-p334-r1,A boy is dancing. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.018435285972988935,0.020901990415958749,0.0054920855971055671
+I01U-gNSC-p334-r2,A young man is moving to music. ,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	move	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%man', 'amod$@%young$@%man', 'nsubj$@%man$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%move', 'punct$@%.$@%move']","['x$@%a$@%man', 'x$@%young$@%man', 'x$@%man$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%move', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.040976578157825072,0.043459677044413003,0.0044431198660226379
+I01U-gNSC-p343-r1,The young man and dancing to the music,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	dancing	_	NN	NN	_	3	conj_and	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	music	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'amod$@%young$@%man', 'root$@%man$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%dancing$@%man', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%man', 'punct$@%.$@%man']","['x$@%the$@%man', 'x$@%young$@%man', 'x$@%man$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%dancing$@%man', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%man', 'x$@%.$@%man']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%and$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.02904799649093126,0.037255324129321199,0.0064336116560562706
+I01U-gNSC-p343-r2,The young man having a good time dancing to the song,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	0	root	_	_
+4	have	_	VBG	VBG	_	3	partmod	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	good	_	JJ	JJ	_	7	amod	_	_
+7	time	_	NN	NN	_	4	dobj	_	_
+8	dance	_	VBG	VBG	_	4	xcomp	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	song	_	NN	NN	_	8	prep_to	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'amod$@%young$@%man', 'root$@%man$@%VROOT', 'partmod$@%have$@%man', 'det$@%a$@%time', 'amod$@%good$@%time', 'dobj$@%time$@%have', 'xcomp$@%dance$@%have', 'erased$@%to$@%WORDERASED', 'det$@%the$@%song', 'prep_to$@%song$@%dance', 'punct$@%.$@%man']","['x$@%the$@%man', 'x$@%young$@%man', 'x$@%man$@%VROOT', 'x$@%have$@%man', 'x$@%a$@%time', 'x$@%good$@%time', 'x$@%time$@%have', 'x$@%dance$@%have', 'x$@%to$@%WORDERASED', 'x$@%the$@%song', 'x$@%song$@%dance', 'x$@%.$@%man']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%good$@%x', 'x$@%time$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",0.029120982753657154,0.019608868678548719,0.0050009710237377547
+I01U-gNSC-p344-r1,boy is dancing,1,1,0,1,1,"1	boy	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	dance	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.026194606627730099,0.032004205885833081,0.007707175827333268
+I01U-gNSC-p344-r2,boy is happy,0,0,0,1,1,"1	boy	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	happy	_	JJ	JJ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'punct$@%.$@%happy']","['x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%.$@%happy']","['x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.14905156807001974,0.14337307857950932,0.017252608264662239
+I01U-gNSC-p349-r1,a boy is dancing to music,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p349-r2,there is music playing and a boy is dancing,1,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	music	_	NN	NN	_	4	nn	_	_
+4	playing	_	NN	NN	_	2	nsubj	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	dance	_	VBG	VBG	_	2	conj_and	_	_
+10	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'nn$@%music$@%playing', 'nsubj$@%playing$@%be', 'erased$@%and$@%WORDERASED', 'det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%be', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%music$@%playing', 'x$@%playing$@%be', 'x$@%and$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%be', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%music$@%x', 'x$@%playing$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.017522007470911261,0.0117307836531233,0.0025142012687031645
+I01U-gNSC-p352-r1,A boy is dancing. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.018435285972988935,0.020901990415958749,0.0054920855971055671
+I01U-gNSC-p352-r2,There is music playing. ,0,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	music	_	NN	NN	_	4	nn	_	_
+4	playing	_	NN	NN	_	2	nsubj	_	_
+5	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'nn$@%music$@%playing', 'nsubj$@%playing$@%be', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%music$@%playing', 'x$@%playing$@%be', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%music$@%x', 'x$@%playing$@%x', 'x$@%.$@%x']",0.046079120391799178,0.03393822599800056,0.0069110549674096244
+I01U-gNSC-p355-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p355-r2,This boy is having a great time dancing.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	8	det	_	_
+6	great	_	JJ	JJ	_	8	amod	_	_
+7	time	_	NN	NN	_	8	nn	_	_
+8	dancing	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%dancing', 'amod$@%great$@%dancing', 'nn$@%time$@%dancing', 'dobj$@%dancing$@%have', 'punct$@%.$@%have']","['x$@%this$@%boy', 'x$@%boy$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%dancing', 'x$@%great$@%dancing', 'x$@%time$@%dancing', 'x$@%dancing$@%have', 'x$@%.$@%have']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%great$@%x', 'x$@%time$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.032401208883744981,0.03109324515642653,0.0040805944179163056
+I01U-gNSC-p356-r1,A boy is dancing. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.018435285972988935,0.020901990415958749,0.0054920855971055671
+I01U-gNSC-p356-r2,A boy is dancing to music. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290176097,0.0093548613876032194,0.0015096496229199952
+I01U-gNSC-p358-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p358-r2,Dancing to music having fun.,1,0,1,0,1,"1	dance	_	VBG	VBG	_	0	root	_	_
+2	to	_	TO	TO	_	0	erased	_	_
+3	music	_	NN	NN	_	1	prep_to	_	_
+4	have	_	VBG	VBG	_	3	partmod	_	_
+5	fun	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	1	punct	_	_","['root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'partmod$@%have$@%music', 'dobj$@%fun$@%have', 'punct$@%.$@%dance']","['x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%have$@%music', 'x$@%fun$@%have', 'x$@%.$@%dance']","['x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%have$@%x', 'x$@%fun$@%x', 'x$@%.$@%x']",0.015381015842658718,0.017859522822387675,0.0050267225661494441
+I01U-gNSC-p359-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p359-r2,The boy is listening to music & dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	listen	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	&amp;	_	CC	CC	_	0	erased	_	_
+8	dancing	_	NN	NN	_	6	conj_and	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'erased$@%&amp;$@%WORDERASED', 'conj_and$@%dancing$@%music', 'punct$@%.$@%listen']","['x$@%the$@%boy', 'x$@%boy$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%&amp;$@%WORDERASED', 'x$@%dancing$@%music', 'x$@%.$@%listen']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%&amp;$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.030128830097113646,0.03976204049069032,0.0026808522765812137
+I01U-gNSC-p363-r1,The boy is dancing to music. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p363-r2,"The boy's favorite song came on the radio, and he could not help but to dance to it.",1,0,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	poss	_	_
+3	's	_	POS	POS	_	0	erased	_	_
+4	favorite	_	JJ	JJ	_	5	amod	_	_
+5	song	_	NN	NN	_	6	nsubj	_	_
+6	come	_	VBD	VBD	_	0	root	_	_
+7	on	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	radio	_	NN	NN	_	6	prep_on	_	_
+10	,	_	,	,	_	6	punct	_	_
+11	and	_	CC	CC	_	0	erased	_	_
+12	he	_	PRP	PRP	_	18	xsubj	_	_
+13	could	_	MD	MD	_	15	aux	_	_
+14	not	_	RB	RB	_	15	neg	_	_
+15	help	_	VB	VB	_	6	conj_and	_	_
+16	but	_	CC	CC	_	15	advmod	_	_
+17	to	_	TO	TO	_	18	aux	_	_
+18	dance	_	VB	VB	_	15	xcomp	_	_
+19	to	_	TO	TO	_	0	erased	_	_
+20	it	_	PRP	PRP	_	18	prep_to	_	_
+21	.	_	.	.	_	6	punct	_	_","['det$@%the$@%boy', 'poss$@%boy$@%song', ""erased$@%'s$@%WORDERASED"", 'amod$@%favorite$@%song', 'nsubj$@%song$@%come', 'root$@%come$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%radio', 'prep_on$@%radio$@%come', 'punct$@%,$@%come', 'erased$@%and$@%WORDERASED', 'xsubj$@%he$@%dance', 'aux$@%could$@%help', 'neg$@%not$@%help', 'conj_and$@%help$@%come', 'advmod$@%but$@%help', 'aux$@%to$@%dance', 'xcomp$@%dance$@%help', 'erased$@%to$@%WORDERASED', 'prep_to$@%it$@%dance', 'punct$@%.$@%come']","['x$@%the$@%boy', 'x$@%boy$@%song', ""x$@%'s$@%WORDERASED"", 'x$@%favorite$@%song', 'x$@%song$@%come', 'x$@%come$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%radio', 'x$@%radio$@%come', 'x$@%,$@%come', 'x$@%and$@%WORDERASED', 'x$@%he$@%dance', 'x$@%could$@%help', 'x$@%not$@%help', 'x$@%help$@%come', 'x$@%but$@%help', 'x$@%to$@%dance', 'x$@%dance$@%help', 'x$@%to$@%WORDERASED', 'x$@%it$@%dance', 'x$@%.$@%come']","['x$@%the$@%x', 'x$@%boy$@%x', ""x$@%'s$@%x"", 'x$@%favorite$@%x', 'x$@%song$@%x', 'x$@%come$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%radio$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%could$@%x', 'x$@%not$@%x', 'x$@%help$@%x', 'x$@%but$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.016871448073111583,0.018517356422785292,0.0048847320898315338
+I01U-gNSC-p364-r1,The boy is dancing to the music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0078345167457610776,0.0060959460712929348,0.0020854369873215539
+I01U-gNSC-p364-r2,The music makes the boy happy and excited.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	boy	_	NN	NN	_	3	dobj	_	_
+6	happy	_	JJ	JJ	_	5	amod	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	excited	_	JJ	JJ	_	6	conj_and	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%boy', 'dobj$@%boy$@%make', 'amod$@%happy$@%boy', 'erased$@%and$@%WORDERASED', 'conj_and$@%excited$@%happy', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%make', 'x$@%happy$@%boy', 'x$@%and$@%WORDERASED', 'x$@%excited$@%happy', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%happy$@%x', 'x$@%and$@%x', 'x$@%excited$@%x', 'x$@%.$@%x']",0.016332085447643307,0.022312924828076452,0.0045414964212316944
+I01U-gNSC-p365-r1,A guy is dancing to some music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	some	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0099978255462386256,0.010658778161054316,0.0022126541193796534
+I01U-gNSC-p365-r2,This guy is really feeling the music.,0,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	really	_	RB	RB	_	5	advmod	_	_
+5	feel	_	VBG	VBG	_	0	root	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%this$@%guy', 'nsubj$@%guy$@%feel', 'aux$@%be$@%feel', 'advmod$@%really$@%feel', 'root$@%feel$@%VROOT', 'det$@%the$@%music', 'dobj$@%music$@%feel', 'punct$@%.$@%feel']","['x$@%this$@%guy', 'x$@%guy$@%feel', 'x$@%be$@%feel', 'x$@%really$@%feel', 'x$@%feel$@%VROOT', 'x$@%the$@%music', 'x$@%music$@%feel', 'x$@%.$@%feel']","['x$@%this$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%really$@%x', 'x$@%feel$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.06929089321120474,0.08281700917212409,0.0089688780183355687
+I01U-gNSC-p367-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p367-r2,Music has taken over this boys body.,0,0,0,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	have	_	VBZ	VBZ	_	3	aux	_	_
+3	take	_	VBN	VBN	_	0	root	_	_
+4	over	_	IN	IN	_	0	erased	_	_
+5	this	_	DT	DT	_	7	det	_	_
+6	boy	_	NNS	NNS	_	7	nn	_	_
+7	body	_	NN	NN	_	3	prep_over	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%take', 'aux$@%have$@%take', 'root$@%take$@%VROOT', 'erased$@%over$@%WORDERASED', 'det$@%this$@%body', 'nn$@%boy$@%body', 'prep_over$@%body$@%take', 'punct$@%.$@%take']","['x$@%music$@%take', 'x$@%have$@%take', 'x$@%take$@%VROOT', 'x$@%over$@%WORDERASED', 'x$@%this$@%body', 'x$@%boy$@%body', 'x$@%body$@%take', 'x$@%.$@%take']","['x$@%music$@%x', 'x$@%have$@%x', 'x$@%take$@%x', 'x$@%over$@%x', 'x$@%this$@%x', 'x$@%boy$@%x', 'x$@%body$@%x', 'x$@%.$@%x']",0.025569923019660434,0.031227351090085009,0.0045418362205236207
+I01U-gNSC-p370-r1,A boy is dancing to music,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p370-r2,A man is moving to music,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	move	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%move', 'punct$@%.$@%move']","['x$@%a$@%man', 'x$@%man$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%move', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.044031403829036919,0.050683041642290871,0.0046017659870181138
+I01U-gNSC-p371-r1,HE IS DANCING.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	dancing	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%dancing', 'aux$@%be$@%dancing', 'root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%he$@%dancing', 'x$@%be$@%dancing', 'x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.086571913235294229,0.085161303372612074,0.0093403788363801699
+I01U-gNSC-p371-r2,THE BOY IS DANCING. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NNP	NNP	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dancing	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dancing', 'aux$@%be$@%dancing', 'root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%the$@%boy', 'x$@%boy$@%dancing', 'x$@%be$@%dancing', 'x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.050036800409880011,0.049598073872376691,0.0042294315782360759
+I01U-gNSC-p373-r1,dancing,0,1,1,0,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",0.12601679477581063,0.12104460277899343,0.049278348991351972
+I01U-gNSC-p373-r2,singing ,0,1,1,0,0,"1	singing	_	NN	NN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%singing$@%x', 'x$@%.$@%x']",0.21327677343066931,0.21485651482692214,0.073763650812685877
+I01U-gNSC-p374-r1,The teen is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teen	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teen', 'nsubj$@%teen$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%teen', 'x$@%teen$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%teen$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.040045012507297639,0.050781211080028532,0.014018924034707725
+I01U-gNSC-p374-r2,The teen is enjoying music.,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teen	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	enjoy	_	VBG	VBG	_	0	root	_	_
+5	music	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teen', 'nsubj$@%teen$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'dobj$@%music$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%the$@%teen', 'x$@%teen$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%music$@%enjoy', 'x$@%.$@%enjoy']","['x$@%the$@%x', 'x$@%teen$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.062164492833017615,0.068342651296442014,0.0078342468260188536
+I01U-gNSC-p376-r1,A boy is hip hop dancing to loud music.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	hip	_	NN	NN	_	5	nn	_	_
+5	hop	_	NN	NN	_	0	root	_	_
+6	dancing	_	VBG	VBG	_	5	partmod	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	loud	_	JJ	JJ	_	9	amod	_	_
+9	music	_	NN	NN	_	6	prep_to	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%hop', 'cop$@%be$@%hop', 'nn$@%hip$@%hop', 'root$@%hop$@%VROOT', 'partmod$@%dancing$@%hop', 'erased$@%to$@%WORDERASED', 'amod$@%loud$@%music', 'prep_to$@%music$@%dancing', 'punct$@%.$@%hop']","['x$@%a$@%boy', 'x$@%boy$@%hop', 'x$@%be$@%hop', 'x$@%hip$@%hop', 'x$@%hop$@%VROOT', 'x$@%dancing$@%hop', 'x$@%to$@%WORDERASED', 'x$@%loud$@%music', 'x$@%music$@%dancing', 'x$@%.$@%hop']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hip$@%x', 'x$@%hop$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%loud$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.045855431018760773,0.04493101165930502,0.0047518503222973019
+I01U-gNSC-p376-r2,"A boy is enjoying loud music, dancing and enjoying life.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	10	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	enjoy	_	VBG	VBG	_	0	root	_	_
+5	loud	_	JJ	JJ	_	6	amod	_	_
+6	music	_	NN	NN	_	4	dobj	_	_
+7	,	_	,	,	_	4	punct	_	_
+8	dancing	_	VBG	VBG	_	4	conj_and	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	enjoy	_	VBG	VBG	_	4	conj_and	_	_
+11	life	_	NN	NN	_	10	dobj	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'amod$@%loud$@%music', 'dobj$@%music$@%enjoy', 'punct$@%,$@%enjoy', 'conj_and$@%dancing$@%enjoy', 'erased$@%and$@%WORDERASED', 'conj_and$@%enjoy$@%enjoy', 'dobj$@%life$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%a$@%boy', 'x$@%boy$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%loud$@%music', 'x$@%music$@%enjoy', 'x$@%,$@%enjoy', 'x$@%dancing$@%enjoy', 'x$@%and$@%WORDERASED', 'x$@%enjoy$@%enjoy', 'x$@%life$@%enjoy', 'x$@%.$@%enjoy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%loud$@%x', 'x$@%music$@%x', 'x$@%,$@%x', 'x$@%dancing$@%x', 'x$@%and$@%x', 'x$@%enjoy$@%x', 'x$@%life$@%x', 'x$@%.$@%x']",0.054524261904455029,0.048694400486475109,0.0053345238136929263
+I01U-gNSC-p377-r1,dancing,0,1,1,0,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",0.12601679477581063,0.12104460277899343,0.049278348991351972
+I01U-gNSC-p377-r2,dancing well,0,0,1,0,0,"1	dance	_	CD	CD	_	0	root	_	_
+2	well	_	RB	RB	_	1	advmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%dance$@%VROOT', 'advmod$@%well$@%dance', 'punct$@%.$@%dance']","['x$@%dance$@%VROOT', 'x$@%well$@%dance', 'x$@%.$@%dance']","['x$@%dance$@%x', 'x$@%well$@%x', 'x$@%.$@%x']",0.053426774921945031,0.052610384975324886,0.02467193593429351
+I01U-gNSC-p379-r1,The young boy is grooving to the music.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	groove	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	music	_	NN	NN	_	5	prep_to	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%groove', 'aux$@%be$@%groove', 'root$@%groove$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%groove', 'punct$@%.$@%groove']","['x$@%the$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%groove', 'x$@%be$@%groove', 'x$@%groove$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%groove', 'x$@%.$@%groove']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%groove$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.064255045080564455,0.074926251983417402,0.0067026803294716331
+I01U-gNSC-p379-r2,The music is making the boy dance his heart out.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	7	nsubj	_	_
+7	dance	_	VB	VB	_	4	ccomp	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	heart	_	NN	NN	_	7	dobj	_	_
+10	out	_	RB	RB	_	7	advmod	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'ccomp$@%dance$@%make', 'poss$@%he$@%heart', 'dobj$@%heart$@%dance', 'advmod$@%out$@%dance', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%dance$@%make', 'x$@%he$@%heart', 'x$@%heart$@%dance', 'x$@%out$@%dance', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%he$@%x', 'x$@%heart$@%x', 'x$@%out$@%x', 'x$@%.$@%x']",0.019280700028543873,0.024199051981138808,0.0044702652701620327
+I01U-gNSC-p380-r1,The boy listening to music,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	listen	_	VBG	VBG	_	2	partmod	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	music	_	NN	NN	_	3	prep_to	_	_
+6	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%listen$@%boy', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%listen$@%boy', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.046273085359804678,0.044896822890858612,0.0062750162874170012
+I01U-gNSC-p380-r2,The music makes the boy dance,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	boy	_	NN	NN	_	6	nn	_	_
+6	dance	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%dance', 'nn$@%boy$@%dance', 'dobj$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%dance', 'x$@%boy$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.021058039235023029,0.026946976574213632,0.0029811099803791485
+I01U-gNSC-p383-r1,This boy loves his music!,0,0,1,0,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	love	_	VBZ	VBZ	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	music	_	NN	NN	_	3	dobj	_	_
+6	!	_	.	.	_	3	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%love', 'root$@%love$@%VROOT', 'poss$@%he$@%music', 'dobj$@%music$@%love', 'punct$@%!$@%love']","['x$@%this$@%boy', 'x$@%boy$@%love', 'x$@%love$@%VROOT', 'x$@%he$@%music', 'x$@%music$@%love', 'x$@%!$@%love']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%love$@%x', 'x$@%he$@%x', 'x$@%music$@%x', 'x$@%!$@%x']",0.071048891005003556,0.057259636110110645,0.0079346778266663476
+I01U-gNSC-p383-r2,This song makes me happy.,0,0,1,0,0,"1	this	_	DT	DT	_	2	det	_	_
+2	song	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	i	_	PRP	PRP	_	5	nsubj	_	_
+5	happy	_	JJ	JJ	_	3	xcomp	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%this$@%song', 'nsubj$@%song$@%make', 'root$@%make$@%VROOT', 'nsubj$@%i$@%happy', 'xcomp$@%happy$@%make', 'punct$@%.$@%make']","['x$@%this$@%song', 'x$@%song$@%make', 'x$@%make$@%VROOT', 'x$@%i$@%happy', 'x$@%happy$@%make', 'x$@%.$@%make']","['x$@%this$@%x', 'x$@%song$@%x', 'x$@%make$@%x', 'x$@%i$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.043337310186043254,0.046315680052560815,0.009689841230918983
+I01U-gNSC-p385-r1,THE BOY IS DANCING TO THE MUSIC.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NNP	NNP	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dancing	_	VBG	VBG	_	0	root	_	_
+5	to	_	VBG	VBG	_	4	xcomp	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dancing', 'aux$@%be$@%dancing', 'root$@%dancing$@%VROOT', 'xcomp$@%to$@%dancing', 'det$@%the$@%music', 'dobj$@%music$@%to', 'punct$@%.$@%dancing']","['x$@%the$@%boy', 'x$@%boy$@%dancing', 'x$@%be$@%dancing', 'x$@%dancing$@%VROOT', 'x$@%to$@%dancing', 'x$@%the$@%music', 'x$@%music$@%to', 'x$@%.$@%dancing']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.034441437109683615,0.033437270604993796,0.0018181464560529381
+I01U-gNSC-p385-r2,MUSIC GETS THE BOY DANCING.,1,0,1,1,1,"1	music	_	NNP	NNP	_	2	nsubj	_	_
+2	get	_	VBZ	VBZ	_	0	root	_	_
+3	the	_	DT	DT	_	5	det	_	_
+4	boy	_	NNP	NNP	_	5	nn	_	_
+5	dancing	_	NNP	NNP	_	2	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%music$@%get', 'root$@%get$@%VROOT', 'det$@%the$@%dancing', 'nn$@%boy$@%dancing', 'dobj$@%dancing$@%get', 'punct$@%.$@%get']","['x$@%music$@%get', 'x$@%get$@%VROOT', 'x$@%the$@%dancing', 'x$@%boy$@%dancing', 'x$@%dancing$@%get', 'x$@%.$@%get']","['x$@%music$@%x', 'x$@%get$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.049654547057090603,0.042801944755690546,0.0040785563251433121
+I01U-gNSC-p387-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p387-r2,The wonderful rhythms and sounds make the boy dance.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	wonderful	_	JJ	JJ	_	3	amod	_	_
+3	rhythm	_	NNS	NNS	_	6	nsubj	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	sound	_	NNS	NNS	_	6	nsubj	_	_
+6	make	_	VBP	VBP	_	0	root	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	boy	_	NN	NN	_	9	nn	_	_
+9	dance	_	NN	NN	_	6	dobj	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%the$@%rhythm', 'amod$@%wonderful$@%rhythm', 'nsubj$@%rhythm$@%make', 'erased$@%and$@%WORDERASED', 'nsubj$@%sound$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%dance', 'nn$@%boy$@%dance', 'dobj$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%rhythm', 'x$@%wonderful$@%rhythm', 'x$@%rhythm$@%make', 'x$@%and$@%WORDERASED', 'x$@%sound$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%dance', 'x$@%boy$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%wonderful$@%x', 'x$@%rhythm$@%x', 'x$@%and$@%x', 'x$@%sound$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.028880999028459309,0.030407251147105074,0.0074137248848510362
+I01U-gNSC-p390-r1,A kid is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%kid', 'nsubj$@%kid$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%kid', 'x$@%kid$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.015981803866864652,0.01974920792133561,0.0032859251790768873
+I01U-gNSC-p390-r2,A kid is very happy.,0,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	very	_	RB	RB	_	5	advmod	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%kid', 'nsubj$@%kid$@%happy', 'cop$@%be$@%happy', 'advmod$@%very$@%happy', 'root$@%happy$@%VROOT', 'punct$@%.$@%happy']","['x$@%a$@%kid', 'x$@%kid$@%happy', 'x$@%be$@%happy', 'x$@%very$@%happy', 'x$@%happy$@%VROOT', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.099205817754754011,0.10897001188185362,0.010327370169448291
+I01U-gNSC-p393-r1,A red-headed young man is dancing.,1,1,1,1,1,"1	a	_	DT	DT	_	4	det	_	_
+2	red-headed	_	JJ	JJ	_	4	amod	_	_
+3	young	_	JJ	JJ	_	4	amod	_	_
+4	man	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	dance	_	VBG	VBG	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['det$@%a$@%man', 'amod$@%red-headed$@%man', 'amod$@%young$@%man', 'nsubj$@%man$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%man', 'x$@%red-headed$@%man', 'x$@%young$@%man', 'x$@%man$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%red-headed$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.042954050334768068,0.038952615159345783,0.0130764581809929
+I01U-gNSC-p393-r2,A teenager is dancing with joy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teenager	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	joy	_	NN	NN	_	4	prep_with	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teenager', 'nsubj$@%teenager$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%joy$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%teenager', 'x$@%teenager$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%joy$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%teenager$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%with$@%x', 'x$@%joy$@%x', 'x$@%.$@%x']",0.033703415569060313,0.032249514793621037,0.0061059739911969446
+I01U-gNSC-p394-r1,The boy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p394-r2,The boy is grooving to the music,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	groove	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%groove', 'aux$@%be$@%groove', 'root$@%groove$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%groove', 'punct$@%.$@%groove']","['x$@%the$@%boy', 'x$@%boy$@%groove', 'x$@%be$@%groove', 'x$@%groove$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%groove', 'x$@%.$@%groove']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%groove$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.068354172917233003,0.076879523024829255,0.0065247249213712388
+I01U-gNSC-p396-r1,A guy is dancing to his favorite music,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	8	poss	_	_
+7	favorite	_	JJ	JJ	_	8	amod	_	_
+8	music	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%music', 'amod$@%favorite$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%he$@%music', 'x$@%favorite$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%favorite$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.010080401339601419,0.010666685191225711,0.0018389507523558501
+I01U-gNSC-p396-r2,A person enjoying listening to music,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	person	_	NN	NN	_	0	root	_	_
+3	enjoy	_	VBG	VBG	_	2	partmod	_	_
+4	listen	_	VBG	VBG	_	3	xcomp	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	2	punct	_	_","['det$@%a$@%person', 'root$@%person$@%VROOT', 'partmod$@%enjoy$@%person', 'xcomp$@%listen$@%enjoy', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%person']","['x$@%a$@%person', 'x$@%person$@%VROOT', 'x$@%enjoy$@%person', 'x$@%listen$@%enjoy', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%person']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%enjoy$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.060050256131323643,0.056520819426885471,0.0075799790108364018
+I01U-gNSC-p397-r1,THE YOUNG MAN IS DANCING TO MUSIC.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	NNP	NNP	_	3	nn	_	_
+3	man	_	NNP	NNP	_	7	xsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dancing	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	music	_	VB	VB	_	5	xcomp	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nn$@%young$@%man', 'xsubj$@%man$@%music', 'aux$@%be$@%dancing', 'root$@%dancing$@%VROOT', 'aux$@%to$@%music', 'xcomp$@%music$@%dancing', 'punct$@%.$@%dancing']","['x$@%the$@%man', 'x$@%young$@%man', 'x$@%man$@%music', 'x$@%be$@%dancing', 'x$@%dancing$@%VROOT', 'x$@%to$@%music', 'x$@%music$@%dancing', 'x$@%.$@%dancing']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.061587855442595929,0.050310503896903391,0.0043273407498478633
+I01U-gNSC-p397-r2,THE MUSIC MAKES THE BOY DANCE.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	boy	_	NNP	NNP	_	6	nn	_	_
+6	dance	_	NNP	NNP	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%dance', 'nn$@%boy$@%dance', 'dobj$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%dance', 'x$@%boy$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.021058039235023029,0.026946976574213632,0.0029811099803791485
+I01U-gNSC-p401-r1,A boy is dancing to the music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0057909804105547025,0.0054413502731375241,0.00061632545200629441
+I01U-gNSC-p401-r2,Music surrounds the dancing boy.,1,0,1,1,1,"1	music	_	NNP	NNP	_	2	nsubj	_	_
+2	surround	_	VBZ	VBZ	_	0	root	_	_
+3	the	_	DT	DT	_	5	det	_	_
+4	dancing	_	NN	NN	_	5	nn	_	_
+5	boy	_	NN	NN	_	2	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%music$@%surround', 'root$@%surround$@%VROOT', 'det$@%the$@%boy', 'nn$@%dancing$@%boy', 'dobj$@%boy$@%surround', 'punct$@%.$@%surround']","['x$@%music$@%surround', 'x$@%surround$@%VROOT', 'x$@%the$@%boy', 'x$@%dancing$@%boy', 'x$@%boy$@%surround', 'x$@%.$@%surround']","['x$@%music$@%x', 'x$@%surround$@%x', 'x$@%the$@%x', 'x$@%dancing$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.10026398724116281,0.10832710854873573,0.011741657389610083
+I01U-gNSC-p405-r1,A boy is dancing. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.018435285972988935,0.020901990415958749,0.0054920855971055671
+I01U-gNSC-p405-r2,Music is playing. ,0,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%.$@%x']",0.090519502421725906,0.082745796581230047,0.0095316873644578637
+I01U-gNSC-p407-r1,The guy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.023316242735464732,0.02319207282556035,0.0052185856794186858
+I01U-gNSC-p407-r2,The guy is happy,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%guy', 'nsubj$@%guy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'punct$@%.$@%happy']","['x$@%the$@%guy', 'x$@%guy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.11105348483241673,0.11690757231610704,0.012436608477055411
+I01U-gNSC-p408-r1,This guy is singing ,0,1,1,1,0,"1	this	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	singing	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%this$@%guy', 'nsubj$@%guy$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%this$@%guy', 'x$@%guy$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%this$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",0.16567005902210108,0.16833610300521062,0.01917912991508075
+I01U-gNSC-p408-r2,This guy dancing ,1,1,0,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	0	root	_	_
+3	dancing	_	VBG	VBG	_	2	partmod	_	_
+4	.	_	.	.	_	2	punct	_	_","['det$@%this$@%guy', 'root$@%guy$@%VROOT', 'partmod$@%dancing$@%guy', 'punct$@%.$@%guy']","['x$@%this$@%guy', 'x$@%guy$@%VROOT', 'x$@%dancing$@%guy', 'x$@%.$@%guy']","['x$@%this$@%x', 'x$@%guy$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.085071939137573938,0.092064166859322949,0.017974229202297076
+I01U-gNSC-p409-r1,A young boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0069041674015679622,0.0087026300311677796,0.0025022379029077113
+I01U-gNSC-p409-r2,A boy is dancing while listening to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	while	_	IN	IN	_	0	erased	_	_
+6	listen	_	VBG	VBG	_	4	prepc_while	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	music	_	NN	NN	_	6	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%while$@%WORDERASED', 'prepc_while$@%listen$@%dance', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%while$@%WORDERASED', 'x$@%listen$@%dance', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%while$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.019554340465194997,0.011332594931710793,0.0020657550225650079
+I01U-gNSC-p410-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p410-r2,It is fun to dance.,0,0,1,0,0,"1	it	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	fun	_	NN	NN	_	0	root	_	_
+4	to	_	TO	TO	_	5	aux	_	_
+5	dance	_	VB	VB	_	3	infmod	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%it$@%fun', 'cop$@%be$@%fun', 'root$@%fun$@%VROOT', 'aux$@%to$@%dance', 'infmod$@%dance$@%fun', 'punct$@%.$@%fun']","['x$@%it$@%fun', 'x$@%be$@%fun', 'x$@%fun$@%VROOT', 'x$@%to$@%dance', 'x$@%dance$@%fun', 'x$@%.$@%fun']","['x$@%it$@%x', 'x$@%be$@%x', 'x$@%fun$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.066348834499096454,0.051471277404464222,0.0038005714927662471
+I01U-gNSC-p411-r1,This is a man dancing to music.,1,0,1,1,1,"1	this	_	DT	DT	_	4	nsubj	_	_
+2	be	_	VBZ	VBZ	_	4	cop	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	man	_	NN	NN	_	0	root	_	_
+5	dancing	_	VBG	VBG	_	4	partmod	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['nsubj$@%this$@%man', 'cop$@%be$@%man', 'det$@%a$@%man', 'root$@%man$@%VROOT', 'partmod$@%dancing$@%man', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dancing', 'punct$@%.$@%man']","['x$@%this$@%man', 'x$@%be$@%man', 'x$@%a$@%man', 'x$@%man$@%VROOT', 'x$@%dancing$@%man', 'x$@%to$@%WORDERASED', 'x$@%music$@%dancing', 'x$@%.$@%man']","['x$@%this$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.032476579453967758,0.041460120692477287,0.0054101204724490426
+I01U-gNSC-p411-r2,The sound of music is making the man dance.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	sound	_	NN	NN	_	6	nsubj	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	music	_	NN	NN	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	make	_	VBG	VBG	_	0	root	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	man	_	NN	NN	_	9	nn	_	_
+9	dance	_	NN	NN	_	6	dobj	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%the$@%sound', 'nsubj$@%sound$@%make', 'erased$@%of$@%WORDERASED', 'prep_of$@%music$@%sound', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%dance', 'nn$@%man$@%dance', 'dobj$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%sound', 'x$@%sound$@%make', 'x$@%of$@%WORDERASED', 'x$@%music$@%sound', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%dance', 'x$@%man$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%sound$@%x', 'x$@%of$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.01717110714782244,0.018564689565650383,0.0030704249182526011
+I01U-gNSC-p413-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p413-r2,A boy enjoys music.,0,0,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	enjoy	_	VBZ	VBZ	_	0	root	_	_
+4	music	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%enjoy', 'root$@%enjoy$@%VROOT', 'dobj$@%music$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%a$@%boy', 'x$@%boy$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%music$@%enjoy', 'x$@%.$@%enjoy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%enjoy$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.074432326302117491,0.062386314222769523,0.0066571339579321043
+I01U-gNSC-p416-r1,Boy is dancing to music,1,1,0,1,1,"1	boy	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	dance	_	VBG	VBG	_	0	root	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	music	_	NN	NN	_	3	prep_to	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.011386084588920098,0.015189943871337208,0.0020935228216978352
+I01U-gNSC-p416-r2,Music is being played so boy can dance,1,1,0,1,1,"1	music	_	NNP	NNP	_	4	nsubjpass	_	_
+2	be	_	VBZ	VBZ	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	play	_	VBN	VBN	_	0	root	_	_
+5	so	_	IN	IN	_	8	mark	_	_
+6	boy	_	NN	NN	_	8	nsubj	_	_
+7	can	_	MD	MD	_	8	aux	_	_
+8	dance	_	VB	VB	_	4	advcl	_	_
+9	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%music$@%play', 'aux$@%be$@%play', 'auxpass$@%be$@%play', 'root$@%play$@%VROOT', 'mark$@%so$@%dance', 'nsubj$@%boy$@%dance', 'aux$@%can$@%dance', 'advcl$@%dance$@%play', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%so$@%dance', 'x$@%boy$@%dance', 'x$@%can$@%dance', 'x$@%dance$@%play', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%so$@%x', 'x$@%boy$@%x', 'x$@%can$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.064144745028147487,0.034080429614561147,0.0032198560642737739
+I01U-gNSC-p417-r1,The boy is dancing to music,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p417-r2,The music makes the boy happy and he dances,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	boy	_	NN	NN	_	6	nsubj	_	_
+6	happy	_	JJ	JJ	_	3	xcomp	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	he	_	PRP	PRP	_	9	nsubj	_	_
+9	dance	_	VBZ	VBZ	_	3	conj_and	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'xcomp$@%happy$@%make', 'erased$@%and$@%WORDERASED', 'nsubj$@%he$@%dance', 'conj_and$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%happy$@%make', 'x$@%and$@%WORDERASED', 'x$@%he$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%happy$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016718793887389949,0.021535790120545073,0.0045371902132044228
+I01U-gNSC-p418-r1,A boy is dancing.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.018435285972988935,0.020901990415958749,0.0054920855971055671
+I01U-gNSC-p418-r2,A blonde boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	blonde	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%blonde$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%blonde$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%blonde$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0086000552049623202,0.01029504686744831,0.0023834850717278089
+I01U-gNSC-p420-r1,A preteen boy is dancing to contemporary music.,1,1,1,1,0,"1	a	_	DT	DT	_	3	det	_	_
+2	preteen	_	NN	NN	_	3	nn	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	contemporary	_	JJ	JJ	_	8	amod	_	_
+8	music	_	NN	NN	_	5	prep_to	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'nn$@%preteen$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'amod$@%contemporary$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%preteen$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%contemporary$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%preteen$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%contemporary$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0077418649626223024,0.0093064454964231214,0.0073251604200529341
+I01U-gNSC-p420-r2,A boy in a blu shirt and gray pants is dancing.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	11	nsubj	_	_
+3	in	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	blu	_	NN	NN	_	6	nn	_	_
+6	shirt	_	NN	NN	_	2	prep_in	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	gray	_	JJ	JJ	_	9	amod	_	_
+9	pants	_	NNS	NNS	_	6	conj_and	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	dancing	_	VBG	VBG	_	0	root	_	_
+12	.	_	.	.	_	11	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dancing', 'erased$@%in$@%WORDERASED', 'det$@%a$@%shirt', 'nn$@%blu$@%shirt', 'prep_in$@%shirt$@%boy', 'erased$@%and$@%WORDERASED', 'amod$@%gray$@%pants', 'conj_and$@%pants$@%shirt', 'aux$@%be$@%dancing', 'root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%a$@%boy', 'x$@%boy$@%dancing', 'x$@%in$@%WORDERASED', 'x$@%a$@%shirt', 'x$@%blu$@%shirt', 'x$@%shirt$@%boy', 'x$@%and$@%WORDERASED', 'x$@%gray$@%pants', 'x$@%pants$@%shirt', 'x$@%be$@%dancing', 'x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%blu$@%x', 'x$@%shirt$@%x', 'x$@%and$@%x', 'x$@%gray$@%x', 'x$@%pants$@%x', 'x$@%be$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.033740763430284315,0.035887961981347916,0.0073829779357720282
+I01U-gNSC-p423-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p423-r2,Music is playing and a boy is dancing to it.,1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	8	nsubj	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	dance	_	VBG	VBG	_	3	conj_and	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	it	_	PRP	PRP	_	8	prep_to	_	_
+11	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%play', 'erased$@%to$@%WORDERASED', 'prep_to$@%it$@%dance', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%play', 'x$@%to$@%WORDERASED', 'x$@%it$@%dance', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.019262474479706526,0.020221333761995086,0.0019506109111812053
+I01U-gNSC-p424-r1,There is a boy dancing to music ,1,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	boy	_	NN	NN	_	2	nsubj	_	_
+5	dancing	_	VBG	VBG	_	4	partmod	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'det$@%a$@%boy', 'nsubj$@%boy$@%be', 'partmod$@%dancing$@%boy', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dancing', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%a$@%boy', 'x$@%boy$@%be', 'x$@%dancing$@%boy', 'x$@%to$@%WORDERASED', 'x$@%music$@%dancing', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%dancing$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.015422599432032724,0.015291698549114274,0.00073302641159889159
+I01U-gNSC-p424-r2,A boy is getting lost in some music ,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	lose	_	VBN	VBN	_	4	dep	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	some	_	DT	DT	_	8	det	_	_
+8	music	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'dep$@%lose$@%get', 'erased$@%in$@%WORDERASED', 'det$@%some$@%music', 'prep_in$@%music$@%lose', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%lose$@%get', 'x$@%in$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%lose', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%lose$@%x', 'x$@%in$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.031873024765563085,0.033534189828937855,0.0036567384229104771
+I01U-gNSC-p425-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p425-r2,Music is playing and a boy is dancing to it.,1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	8	nsubj	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	dance	_	VBG	VBG	_	3	conj_and	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	it	_	PRP	PRP	_	8	prep_to	_	_
+11	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%play', 'erased$@%to$@%WORDERASED', 'prep_to$@%it$@%dance', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%play', 'x$@%to$@%WORDERASED', 'x$@%it$@%dance', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.019262474479706526,0.020221333761995086,0.0019506109111812053
+I01U-gNSC-p427-r1,"A boy is dancing, while listening to music.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	,	_	,	,	_	4	punct	_	_
+6	while	_	IN	IN	_	7	mark	_	_
+7	listen	_	VBG	VBG	_	4	advcl	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	music	_	NN	NN	_	7	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%,$@%dance', 'mark$@%while$@%listen', 'advcl$@%listen$@%dance', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%,$@%dance', 'x$@%while$@%listen', 'x$@%listen$@%dance', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%,$@%x', 'x$@%while$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.01065099819475801,0.010312032044508701,0.0021104809327058272
+I01U-gNSC-p427-r2,"Music is playing, while a boy is dancing.",1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	,	_	,	,	_	3	punct	_	_
+5	while	_	IN	IN	_	9	mark	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	dance	_	VBG	VBG	_	3	advcl	_	_
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'punct$@%,$@%play', 'mark$@%while$@%dance', 'det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'advcl$@%dance$@%play', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%,$@%play', 'x$@%while$@%dance', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%play', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%,$@%x', 'x$@%while$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.041803424251284249,0.033290213683469072,0.0036466756004638334
+I01U-gNSC-p429-r1,A man is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%man', 'x$@%man$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.015320976980879419,0.019635635497524562,0.003300940273244235
+I01U-gNSC-p429-r2,A riling beat is moving a man to dance.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	rile	_	JJ	JJ	_	3	amod	_	_
+3	beat	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	move	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	man	_	NN	NN	_	5	dobj	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	dance	_	VB	VB	_	7	infmod	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%beat', 'amod$@%rile$@%beat', 'nsubj$@%beat$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'det$@%a$@%man', 'dobj$@%man$@%move', 'aux$@%to$@%dance', 'infmod$@%dance$@%man', 'punct$@%.$@%move']","['x$@%a$@%beat', 'x$@%rile$@%beat', 'x$@%beat$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%a$@%man', 'x$@%man$@%move', 'x$@%to$@%dance', 'x$@%dance$@%man', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%rile$@%x', 'x$@%beat$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.033468071751584505,0.030849434030308265,0.0044357804149958158
+I01U-gNSC-p431-r1,Boy dancing ,1,1,0,1,1,"1	boy	_	NN	NN	_	0	root	_	_
+2	dancing	_	VBG	VBG	_	1	partmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%boy$@%VROOT', 'partmod$@%dancing$@%boy', 'punct$@%.$@%boy']","['x$@%boy$@%VROOT', 'x$@%dancing$@%boy', 'x$@%.$@%boy']","['x$@%boy$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.086868370451637977,0.066935777226008408,0.020186046728534746
+I01U-gNSC-p431-r2,Happy boy,0,0,0,0,1,"1	happy	_	JJ	JJ	_	2	amod	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['amod$@%happy$@%boy', 'root$@%boy$@%VROOT', 'punct$@%.$@%boy']","['x$@%happy$@%boy', 'x$@%boy$@%VROOT', 'x$@%.$@%boy']","['x$@%happy$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.11975330097565196,0.1053749183982251,0.029818053581541104
+I01U-gNSC-p433-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p433-r2,The guy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.011226286738130753,0.011897362539244116,0.0018761778854432531
+I01U-gNSC-p434-r1,he is listening to music,0,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	listen	_	VBG	VBG	_	0	root	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	music	_	NN	NN	_	3	prep_to	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%listen']","['x$@%he$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%listen']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.064867531988467619,0.071704605993339277,0.0052843238508359924
+I01U-gNSC-p434-r2,the boy is dancing to the music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0078345167457610776,0.0060959460712929348,0.002085436987321776
+I01U-gNSC-p435-r1,dancing,0,1,1,0,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",0.12601679477581063,0.12104460277899343,0.049278348991351972
+I01U-gNSC-p435-r2,music playing,0,0,0,1,1,"1	music	_	NN	NN	_	0	root	_	_
+2	playing	_	VBG	VBG	_	1	partmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%music$@%VROOT', 'partmod$@%playing$@%music', 'punct$@%.$@%music']","['x$@%music$@%VROOT', 'x$@%playing$@%music', 'x$@%.$@%music']","['x$@%music$@%x', 'x$@%playing$@%x', 'x$@%.$@%x']",0.11227950591711688,0.10750416753878478,0.02699331936885363
+I01U-gNSC-p436-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p436-r2,A boy is listening and dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	listen	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	dance	_	VBG	VBG	_	4	conj_and	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	music	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%dance$@%listen', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%listen']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%dance$@%listen', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%listen']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%and$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.023752799843612005,0.027232071263973645,0.0017556066405571835
+I01U-gNSC-p438-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p438-r2,There is music playing and the boy is dancing to it.,1,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	music	_	NN	NN	_	4	nn	_	_
+4	playing	_	NN	NN	_	2	nsubj	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	dance	_	VBG	VBG	_	2	conj_and	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	it	_	PRP	PRP	_	9	prep_to	_	_
+12	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'nn$@%music$@%playing', 'nsubj$@%playing$@%be', 'erased$@%and$@%WORDERASED', 'det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%be', 'erased$@%to$@%WORDERASED', 'prep_to$@%it$@%dance', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%music$@%playing', 'x$@%playing$@%be', 'x$@%and$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%be', 'x$@%to$@%WORDERASED', 'x$@%it$@%dance', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%music$@%x', 'x$@%playing$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.013076883812059958,0.0099950693583694683,0.001631190838296992
+I01U-gNSC-p445-r1,A boy is dancing to some music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	some	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0059685513475281615,0.0070827110544685601,0.002145974875011003
+I01U-gNSC-p445-r2,The music is causing the boy to dance.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cause	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	dance	_	VB	VB	_	6	infmod	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%cause', 'aux$@%be$@%cause', 'root$@%cause$@%VROOT', 'det$@%the$@%boy', 'dobj$@%boy$@%cause', 'aux$@%to$@%dance', 'infmod$@%dance$@%boy', 'punct$@%.$@%cause']","['x$@%the$@%music', 'x$@%music$@%cause', 'x$@%be$@%cause', 'x$@%cause$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%cause', 'x$@%to$@%dance', 'x$@%dance$@%boy', 'x$@%.$@%cause']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%cause$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.025459132629203185,0.029781545944881582,0.0024919168090630217
+I01U-gNSC-p447-r1,Young man is dancing to music.,1,1,0,1,1,"1	young	_	NNP	NNP	_	2	nn	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['nn$@%young$@%man', 'nsubj$@%man$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%young$@%man', 'x$@%man$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%young$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.017600699082644278,0.016555600297541995,0.0035256775992958955
+I01U-gNSC-p447-r2,Music is playing and a man is dancing.,1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	man	_	NN	NN	_	8	nsubj	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	dance	_	VBG	VBG	_	3	conj_and	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%a$@%man', 'nsubj$@%man$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%play', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%play', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.034897357029382681,0.030239838243742101,0.006084799917408068
+I01U-gNSC-p448-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p448-r2,A teenager is rocking out.,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teenager	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	rock	_	VBG	VBG	_	0	root	_	_
+5	out	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teenager', 'nsubj$@%teenager$@%rock', 'aux$@%be$@%rock', 'root$@%rock$@%VROOT', 'prt$@%out$@%rock', 'punct$@%.$@%rock']","['x$@%a$@%teenager', 'x$@%teenager$@%rock', 'x$@%be$@%rock', 'x$@%rock$@%VROOT', 'x$@%out$@%rock', 'x$@%.$@%rock']","['x$@%a$@%x', 'x$@%teenager$@%x', 'x$@%be$@%x', 'x$@%rock$@%x', 'x$@%out$@%x', 'x$@%.$@%x']",0.064320974303882172,0.068520677290033971,0.008238966343176668
+I01U-gNSC-p450-r1,he is dancing,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	dance	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%he$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.029705282733961447,0.04093762101266385,0.0098725676327314771
+I01U-gNSC-p450-r2,having a great time,0,0,1,0,1,"1	have	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	4	det	_	_
+3	great	_	JJ	JJ	_	4	amod	_	_
+4	time	_	NN	NN	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%have$@%VROOT', 'det$@%a$@%time', 'amod$@%great$@%time', 'dobj$@%time$@%have', 'punct$@%.$@%have']","['x$@%have$@%VROOT', 'x$@%a$@%time', 'x$@%great$@%time', 'x$@%time$@%have', 'x$@%.$@%have']","['x$@%have$@%x', 'x$@%a$@%x', 'x$@%great$@%x', 'x$@%time$@%x', 'x$@%.$@%x']",0.058657215638341031,0.062933351132271387,0.012902028397385079
+I01U-gNSC-p451-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p451-r2,The music is making the boy want to dance.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	9	xsubj	_	_
+7	want	_	VBP	VBP	_	4	ccomp	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	dance	_	VB	VB	_	7	xcomp	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%boy', 'xsubj$@%boy$@%dance', 'ccomp$@%want$@%make', 'aux$@%to$@%dance', 'xcomp$@%dance$@%want', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%want$@%make', 'x$@%to$@%dance', 'x$@%dance$@%want', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.024247423147673253,0.019795029910230855,0.0022204191574317633
+I01U-gNSC-p452-r1,A little boy is dancing to some music he enjoys.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	some	_	DT	DT	_	8	det	_	_
+8	music	_	NN	NN	_	10	dobj	_	_
+9	he	_	PRP	PRP	_	10	nsubj	_	_
+10	enjoy	_	VBZ	VBZ	_	8	rcmod	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'dobj$@%music$@%enjoy', 'nsubj$@%he$@%enjoy', 'rcmod$@%enjoy$@%music', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%enjoy', 'x$@%he$@%enjoy', 'x$@%enjoy$@%music', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%he$@%x', 'x$@%enjoy$@%x', 'x$@%.$@%x']",0.012653193532096152,0.0090700161424468462,0.0022859520630608143
+I01U-gNSC-p452-r2,The little boy is dancing to enjoyable music and is having fun. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	11	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	enjoyable	_	JJ	JJ	_	8	amod	_	_
+8	music	_	NN	NN	_	5	prep_to	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	have	_	VBG	VBG	_	5	conj_and	_	_
+12	fun	_	NN	NN	_	11	dobj	_	_
+13	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%have', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'amod$@%enjoyable$@%music', 'prep_to$@%music$@%dance', 'erased$@%and$@%WORDERASED', 'aux$@%be$@%have', 'conj_and$@%have$@%dance', 'dobj$@%fun$@%have', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%have', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%enjoyable$@%music', 'x$@%music$@%dance', 'x$@%and$@%WORDERASED', 'x$@%be$@%have', 'x$@%have$@%dance', 'x$@%fun$@%have', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%enjoyable$@%x', 'x$@%music$@%x', 'x$@%and$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%fun$@%x', 'x$@%.$@%x']",0.012184359748257045,0.0087297586602284039,0.0035550197641686099
+I01U-gNSC-p453-r1,The guy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.011226286738130753,0.011897362539244116,0.0018761778854432531
+I01U-gNSC-p453-r2,He is doing a happy dance to the music.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	do	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	happy	_	JJ	JJ	_	6	amod	_	_
+6	dance	_	NN	NN	_	3	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	music	_	NN	NN	_	3	prep_to	_	_
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%a$@%dance', 'amod$@%happy$@%dance', 'dobj$@%dance$@%do', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%do', 'punct$@%.$@%do']","['x$@%he$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%a$@%dance', 'x$@%happy$@%dance', 'x$@%dance$@%do', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%do', 'x$@%.$@%do']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%a$@%x', 'x$@%happy$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.020457734617982615,0.017189925538358741,0.0026251699866125522
+I01U-gNSC-p455-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p455-r2,A boy is enjoying music.,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	enjoy	_	VBG	VBG	_	0	root	_	_
+5	music	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'dobj$@%music$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%a$@%boy', 'x$@%boy$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%music$@%enjoy', 'x$@%.$@%enjoy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.068006815633422257,0.063085524410083971,0.0044701229127763753
+I01U-gNSC-p456-r1,A boy is dancing to some music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	some	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0059685513475281615,0.0070827110544685601,0.002145974875011003
+I01U-gNSC-p456-r2,The music is causing the boy to dance.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cause	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	dance	_	VB	VB	_	6	infmod	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%cause', 'aux$@%be$@%cause', 'root$@%cause$@%VROOT', 'det$@%the$@%boy', 'dobj$@%boy$@%cause', 'aux$@%to$@%dance', 'infmod$@%dance$@%boy', 'punct$@%.$@%cause']","['x$@%the$@%music', 'x$@%music$@%cause', 'x$@%be$@%cause', 'x$@%cause$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%cause', 'x$@%to$@%dance', 'x$@%dance$@%boy', 'x$@%.$@%cause']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%cause$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.025459132629203185,0.029781545944881582,0.0024919168090630217
+I01U-gNSC-p457-r1,A boy is dancing to music. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p457-r2,Music is playing and a boy is dancing. ,1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	8	nsubj	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	dance	_	VBG	VBG	_	3	conj_and	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'conj_and$@%dance$@%play', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%play', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.029277346325476961,0.027356714765831014,0.0039089444441050558
+I01U-gNSC-p460-r1,A young man in dancing.,1,1,0,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	dancing	_	NN	NN	_	3	prep_in	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'amod$@%young$@%man', 'root$@%man$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%dancing$@%man', 'punct$@%.$@%man']","['x$@%a$@%man', 'x$@%young$@%man', 'x$@%man$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%dancing$@%man', 'x$@%.$@%man']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%in$@%x', 'x$@%dancing$@%x', 'x$@%.$@%x']",0.053702086410921002,0.060705103763839974,0.018995319808161826
+I01U-gNSC-p460-r2,The young man dances.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	4	nsubj	_	_
+4	dance	_	VBZ	VBZ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'amod$@%young$@%man', 'nsubj$@%man$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%man', 'x$@%young$@%man', 'x$@%man$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.03108839233885341,0.030559160729700663,0.007454072993391847
+I01U-gNSC-p461-r1,The boy is jamming to some music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	jam	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	some	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%jam', 'cop$@%be$@%jam', 'root$@%jam$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'prep_to$@%music$@%jam', 'punct$@%.$@%jam']","['x$@%the$@%boy', 'x$@%boy$@%jam', 'x$@%be$@%jam', 'x$@%jam$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%jam', 'x$@%.$@%jam']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%jam$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.035670859120227605,0.045243561155499767,0.0046491901613033848
+I01U-gNSC-p461-r2,The boy is dancing like no one is watching,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	like	_	IN	IN	_	9	mark	_	_
+6	no	_	DT	DT	_	7	det	_	_
+7	one	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	watch	_	VBG	VBG	_	4	advcl	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'mark$@%like$@%watch', 'det$@%no$@%one', 'nsubj$@%one$@%watch', 'aux$@%be$@%watch', 'advcl$@%watch$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%like$@%watch', 'x$@%no$@%one', 'x$@%one$@%watch', 'x$@%be$@%watch', 'x$@%watch$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%like$@%x', 'x$@%no$@%x', 'x$@%one$@%x', 'x$@%be$@%x', 'x$@%watch$@%x', 'x$@%.$@%x']",0.021531817773814965,0.021279473358942314,0.0036495256289931222
+I01U-gNSC-p462-r1,A boy is moving to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	move	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%move', 'punct$@%.$@%move']","['x$@%a$@%boy', 'x$@%boy$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%move', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.050880856181433898,0.057913874438221269,0.004670457840775577
+I01U-gNSC-p462-r2,Music is inspiring a boy to move.,1,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	inspiring	_	JJ	JJ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	boy	_	NN	NN	_	7	nsubj	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	move	_	VB	VB	_	3	dep	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%inspiring', 'cop$@%be$@%inspiring', 'root$@%inspiring$@%VROOT', 'det$@%a$@%boy', 'nsubj$@%boy$@%move', 'aux$@%to$@%move', 'dep$@%move$@%inspiring', 'punct$@%.$@%inspiring']","['x$@%music$@%inspiring', 'x$@%be$@%inspiring', 'x$@%inspiring$@%VROOT', 'x$@%a$@%boy', 'x$@%boy$@%move', 'x$@%to$@%move', 'x$@%move$@%inspiring', 'x$@%.$@%inspiring']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%inspiring$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%to$@%x', 'x$@%move$@%x', 'x$@%.$@%x']",0.10133986930019578,0.10974722356894184,0.0063049894819547925
+I01U-gNSC-p467-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p467-r2,"While listening to music, a boy is moving to the beat.",1,1,1,1,1,"1	while	_	IN	IN	_	2	mark	_	_
+2	listen	_	VBG	VBG	_	9	advcl	_	_
+3	to	_	TO	TO	_	0	erased	_	_
+4	music	_	NN	NN	_	2	prep_to	_	_
+5	,	_	,	,	_	9	punct	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	move	_	VBG	VBG	_	0	root	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	beat	_	NN	NN	_	9	prep_to	_	_
+13	.	_	.	.	_	9	punct	_	_","['mark$@%while$@%listen', 'advcl$@%listen$@%move', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%,$@%move', 'det$@%a$@%boy', 'nsubj$@%boy$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%beat', 'prep_to$@%beat$@%move', 'punct$@%.$@%move']","['x$@%while$@%listen', 'x$@%listen$@%move', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%,$@%move', 'x$@%a$@%boy', 'x$@%boy$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%beat', 'x$@%beat$@%move', 'x$@%.$@%move']","['x$@%while$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%,$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%beat$@%x', 'x$@%.$@%x']",0.036747217274285759,0.039664105521125093,0.0038986541609133951
+I01U-gNSC-p469-r1,The boy is dancing to music. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p469-r2,Music moves a young man's feet.,1,0,1,1,1,"1	music	_	NNP	NNP	_	2	nsubj	_	_
+2	move	_	VBZ	VBZ	_	0	root	_	_
+3	a	_	DT	DT	_	5	det	_	_
+4	young	_	JJ	JJ	_	5	amod	_	_
+5	man	_	NN	NN	_	7	poss	_	_
+6	's	_	POS	POS	_	0	erased	_	_
+7	foot	_	NNS	NNS	_	2	dobj	_	_
+8	.	_	.	.	_	2	punct	_	_","['nsubj$@%music$@%move', 'root$@%move$@%VROOT', 'det$@%a$@%man', 'amod$@%young$@%man', 'poss$@%man$@%foot', ""erased$@%'s$@%WORDERASED"", 'dobj$@%foot$@%move', 'punct$@%.$@%move']","['x$@%music$@%move', 'x$@%move$@%VROOT', 'x$@%a$@%man', 'x$@%young$@%man', 'x$@%man$@%foot', ""x$@%'s$@%WORDERASED"", 'x$@%foot$@%move', 'x$@%.$@%move']","['x$@%music$@%x', 'x$@%move$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%man$@%x', ""x$@%'s$@%x"", 'x$@%foot$@%x', 'x$@%.$@%x']",0.052017960084270842,0.049681799397731319,0.010016501730908622
+I01U-gNSC-p472-r1,This boy dances to music.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	dance	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	music	_	NN	NN	_	3	prep_to	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%this$@%boy', 'x$@%boy$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0086248366631694884,0.0087966061344803004,0.004290715324525185
+I01U-gNSC-p472-r2,The music inspires this boy to dance,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	inspire	_	VBZ	VBZ	_	0	root	_	_
+4	this	_	DT	DT	_	5	det	_	_
+5	boy	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	dance	_	VB	VB	_	5	infmod	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%inspire', 'root$@%inspire$@%VROOT', 'det$@%this$@%boy', 'dobj$@%boy$@%inspire', 'aux$@%to$@%dance', 'infmod$@%dance$@%boy', 'punct$@%.$@%inspire']","['x$@%the$@%music', 'x$@%music$@%inspire', 'x$@%inspire$@%VROOT', 'x$@%this$@%boy', 'x$@%boy$@%inspire', 'x$@%to$@%dance', 'x$@%dance$@%boy', 'x$@%.$@%inspire']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%inspire$@%x', 'x$@%this$@%x', 'x$@%boy$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.044236852087425116,0.049845720907110147,0.0057561282512555989
+I01U-gNSC-p477-r1,A boy is dancing to music. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p477-r2,"While music plays, the boy dances. ",1,0,1,1,1,"1	while	_	IN	IN	_	3	mark	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	play	_	VBZ	VBZ	_	7	advcl	_	_
+4	,	_	,	,	_	7	punct	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	7	nsubj	_	_
+7	dance	_	VBZ	VBZ	_	0	root	_	_
+8	.	_	.	.	_	7	punct	_	_","['mark$@%while$@%play', 'nsubj$@%music$@%play', 'advcl$@%play$@%dance', 'punct$@%,$@%dance', 'det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%while$@%play', 'x$@%music$@%play', 'x$@%play$@%dance', 'x$@%,$@%dance', 'x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%while$@%x', 'x$@%music$@%x', 'x$@%play$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.021508244144879174,0.016827825148695741,0.0034926663309549077
+I01U-gNSC-p479-r1,A guy is dancing.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.025687350988391922,0.025319956577837588,0.0060516366143424927
+I01U-gNSC-p479-r2,Music is playing,0,1,1,1,1,"1	music	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%music$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'punct$@%.$@%play']","['x$@%music$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%.$@%play']","['x$@%music$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%.$@%x']",0.090519502421725906,0.082745796581230047,0.0095316873644578637
+I01U-gNSC-p480-r1,Dancing with a boy ,0,0,0,0,0,"1	dance	_	VBG	VBG	_	0	root	_	_
+2	with	_	IN	IN	_	0	erased	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	boy	_	NN	NN	_	1	prep_with	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%dance$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%boy', 'prep_with$@%boy$@%dance', 'punct$@%.$@%dance']","['x$@%dance$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%.$@%dance']","['x$@%dance$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.023121570286572246,0.016301896265448645,0.0044249637628148708
+I01U-gNSC-p480-r2,Stoner,0,0,0,0,0,"1	stoner	_	FW	FW	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%stoner$@%VROOT', 'punct$@%.$@%stoner']","['x$@%stoner$@%VROOT', 'x$@%.$@%stoner']","['x$@%stoner$@%x', 'x$@%.$@%x']",0.13061238198507352,0.10936922578612374,0.034114105323270749
+I01U-gNSC-p481-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p481-r2,The boy is being attacked by music notes.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	attack	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	music	_	NN	NN	_	8	nn	_	_
+8	note	_	NNS	NNS	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubjpass$@%boy$@%attack', 'aux$@%be$@%attack', 'auxpass$@%be$@%attack', 'root$@%attack$@%VROOT', 'erased$@%by$@%WORDERASED', 'nn$@%music$@%note', 'agent$@%note$@%attack', 'punct$@%.$@%attack']","['x$@%the$@%boy', 'x$@%boy$@%attack', 'x$@%be$@%attack', 'x$@%be$@%attack', 'x$@%attack$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%music$@%note', 'x$@%note$@%attack', 'x$@%.$@%attack']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%attack$@%x', 'x$@%by$@%x', 'x$@%music$@%x', 'x$@%note$@%x', 'x$@%.$@%x']",0.065417668548568009,0.06989491798409575,0.0038744899291995871
+I01U-gNSC-p482-r1,The teen is dancing to music. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teen	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teen', 'nsubj$@%teen$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%teen', 'x$@%teen$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%teen$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.024215153648370125,0.025351410284082943,0.0048310854763701228
+I01U-gNSC-p482-r2,The boy is happy. ,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.10884574385002577,0.1122421280812077,0.011858959290433235
+I01U-gNSC-p483-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0070151619389414721,0.008050342058202653,0.0011060341697768372
+I01U-gNSC-p483-r2,Music fills the air and makes the boy happy.,0,0,1,1,1,"1	music	_	NNP	NNP	_	6	nsubj	_	_
+2	fill	_	VBZ	VBZ	_	0	root	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	air	_	NN	NN	_	2	dobj	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	make	_	VBZ	VBZ	_	2	conj_and	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	9	nsubj	_	_
+9	happy	_	JJ	JJ	_	6	xcomp	_	_
+10	.	_	.	.	_	2	punct	_	_","['nsubj$@%music$@%make', 'root$@%fill$@%VROOT', 'det$@%the$@%air', 'dobj$@%air$@%fill', 'erased$@%and$@%WORDERASED', 'conj_and$@%make$@%fill', 'det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'xcomp$@%happy$@%make', 'punct$@%.$@%fill']","['x$@%music$@%make', 'x$@%fill$@%VROOT', 'x$@%the$@%air', 'x$@%air$@%fill', 'x$@%and$@%WORDERASED', 'x$@%make$@%fill', 'x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%happy$@%make', 'x$@%.$@%fill']","['x$@%music$@%x', 'x$@%fill$@%x', 'x$@%the$@%x', 'x$@%air$@%x', 'x$@%and$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.030807522102631824,0.043704594614440095,0.0050475084269717696
+I01U-gNSC-p484-r1,An adolescent is dancing merrily to some music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	adolescent	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	merrily	_	RB	RB	_	4	advmod	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	some	_	DT	DT	_	8	det	_	_
+8	music	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%adolescent', 'nsubj$@%adolescent$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'advmod$@%merrily$@%dance', 'erased$@%to$@%WORDERASED', 'det$@%some$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%adolescent', 'x$@%adolescent$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%merrily$@%dance', 'x$@%to$@%WORDERASED', 'x$@%some$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%adolescent$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%merrily$@%x', 'x$@%to$@%x', 'x$@%some$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.024586307094901394,0.024943589228173968,0.0065003609041177635
+I01U-gNSC-p484-r2,The music is stirring up the man's exhilaration to exercise to the rhythm.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stir	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	man	_	NN	NN	_	9	poss	_	_
+8	's	_	POS	POS	_	0	erased	_	_
+9	exhilaration	_	NN	NN	_	4	dobj	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	exercise	_	VB	VB	_	9	infmod	_	_
+12	to	_	TO	TO	_	0	erased	_	_
+13	the	_	DT	DT	_	14	det	_	_
+14	rhythm	_	NN	NN	_	11	prep_to	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%stir', 'aux$@%be$@%stir', 'root$@%stir$@%VROOT', 'prt$@%up$@%stir', 'det$@%the$@%man', 'poss$@%man$@%exhilaration', ""erased$@%'s$@%WORDERASED"", 'dobj$@%exhilaration$@%stir', 'aux$@%to$@%exercise', 'infmod$@%exercise$@%exhilaration', 'erased$@%to$@%WORDERASED', 'det$@%the$@%rhythm', 'prep_to$@%rhythm$@%exercise', 'punct$@%.$@%stir']","['x$@%the$@%music', 'x$@%music$@%stir', 'x$@%be$@%stir', 'x$@%stir$@%VROOT', 'x$@%up$@%stir', 'x$@%the$@%man', 'x$@%man$@%exhilaration', ""x$@%'s$@%WORDERASED"", 'x$@%exhilaration$@%stir', 'x$@%to$@%exercise', 'x$@%exercise$@%exhilaration', 'x$@%to$@%WORDERASED', 'x$@%the$@%rhythm', 'x$@%rhythm$@%exercise', 'x$@%.$@%stir']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%stir$@%x', 'x$@%up$@%x', 'x$@%the$@%x', 'x$@%man$@%x', ""x$@%'s$@%x"", 'x$@%exhilaration$@%x', 'x$@%to$@%x', 'x$@%exercise$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%rhythm$@%x', 'x$@%.$@%x']",0.066550059625645752,0.069140517607042873,0.0093020942886972158
+I01U-gNSC-p485-r1,A boy is dancing to music.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%a$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0071841995290178318,0.0093548613876032194,0.0015096496229197731
+I01U-gNSC-p485-r2,The music makes the boy dance.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	boy	_	NN	NN	_	6	nn	_	_
+6	dance	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%dance', 'nn$@%boy$@%dance', 'dobj$@%dance$@%make', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%dance', 'x$@%boy$@%dance', 'x$@%dance$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.021058039235023029,0.026946976574213632,0.0029811099803791485
+I01U-gNSC-p486-r1,The young boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	music	_	NN	NN	_	5	prep_to	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0054623485167742958,0.0072713419784630196,0.0018365803157325278
+I01U-gNSC-p486-r2,The music makes the young boy smile.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	3	nsubj	_	_
+3	make	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	7	det	_	_
+5	young	_	JJ	JJ	_	7	amod	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	smile	_	NN	NN	_	3	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%smile', 'amod$@%young$@%smile', 'nn$@%boy$@%smile', 'dobj$@%smile$@%make', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%smile', 'x$@%young$@%smile', 'x$@%boy$@%smile', 'x$@%smile$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%smile$@%x', 'x$@%.$@%x']",0.050542572318488133,0.059076034376100872,0.0046756432978681817
+I01U-gNSC-p487-r1,a guy is dancing,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%guy', 'nsubj$@%guy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%guy', 'x$@%guy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.025687350988391922,0.025319956577837588,0.0060516366143424927
+I01U-gNSC-p487-r2,a guy is singing ,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	singing	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%guy', 'nsubj$@%guy$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%a$@%guy', 'x$@%guy$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",0.15385276386737656,0.1550749398502822,0.014861312128974458
+I01U-gNSC-p488-r1,The boy is listening to music.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	listen	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%listen', 'punct$@%.$@%listen']","['x$@%the$@%boy', 'x$@%boy$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%listen', 'x$@%.$@%listen']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.051314759404169186,0.055621967315074738,0.0044796192568354876
+I01U-gNSC-p488-r2,The boy is singing a song. ,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sing	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	song	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%sing', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%sing']","['x$@%the$@%boy', 'x$@%boy$@%sing', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",0.067876615700897425,0.070340682134635069,0.0050086323393705445
+I01U-gNSC-p491-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.016102750470261107,0.018784659059935538,0.0046559829340864223
+I01U-gNSC-p491-r2,The boy likes music.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	like	_	VBZ	VBZ	_	0	root	_	_
+4	music	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%like', 'root$@%like$@%VROOT', 'dobj$@%music$@%like', 'punct$@%.$@%like']","['x$@%the$@%boy', 'x$@%boy$@%like', 'x$@%like$@%VROOT', 'x$@%music$@%like', 'x$@%.$@%like']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%like$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.068583238052151607,0.065960969929510505,0.0064636772240593832
+I01U-gNSC-p493-r1,A young male is dancing,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	male	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	dance	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%male', 'amod$@%young$@%male', 'nsubj$@%male$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%a$@%male', 'x$@%young$@%male', 'x$@%male$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%male$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.027930281843642546,0.029309864491535387,0.0054808948596549723
+I01U-gNSC-p493-r2,A boy is moving to music,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	move	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	music	_	NN	NN	_	4	prep_to	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%move', 'aux$@%be$@%move', 'root$@%move$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%move', 'punct$@%.$@%move']","['x$@%a$@%boy', 'x$@%boy$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%move', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.050880856181433787,0.057913874438221269,0.004670457840775688
+I01U-gNSC-p494-r1,The boy is dancing to the music,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	music	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.0078345167457610776,0.0060959460712929348,0.0020854369873215539
+I01U-gNSC-p494-r2,The music is making the boy want to dance,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	music	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	boy	_	NN	NN	_	9	xsubj	_	_
+7	want	_	VBP	VBP	_	4	ccomp	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	dance	_	VB	VB	_	7	xcomp	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%music', 'nsubj$@%music$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%boy', 'xsubj$@%boy$@%dance', 'ccomp$@%want$@%make', 'aux$@%to$@%dance', 'xcomp$@%dance$@%want', 'punct$@%.$@%make']","['x$@%the$@%music', 'x$@%music$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%want$@%make', 'x$@%to$@%dance', 'x$@%dance$@%want', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%music$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",0.024247423147673253,0.019795029910230855,0.0022204191574317633

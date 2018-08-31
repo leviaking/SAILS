@@ -1,0 +1,929 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I13U-gNSC-p322-r1,The man is swimming. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p322-r2,The man is swimming laps for exercise. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	swim	_	VBG	VBG	_	5	amod	_	_
+5	lap	_	NNS	NNS	_	0	root	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	exercise	_	NN	NN	_	5	prep_for	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%lap', 'cop$@%be$@%lap', 'amod$@%swim$@%lap', 'root$@%lap$@%VROOT', 'erased$@%for$@%WORDERASED', 'prep_for$@%exercise$@%lap', 'punct$@%.$@%lap']","['x$@%the$@%man', 'x$@%man$@%lap', 'x$@%be$@%lap', 'x$@%swim$@%lap', 'x$@%lap$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%exercise$@%lap', 'x$@%.$@%lap']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%lap$@%x', 'x$@%for$@%x', 'x$@%exercise$@%x', 'x$@%.$@%x']",0.039254014063404674,0.037112271158381005,0.0027845885830100059
+I13U-gNSC-p325-r1,A person is swimming,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	person	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%person', 'x$@%person$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.021567563378497412,0.02352614891905136,0.0044901950032661953
+I13U-gNSC-p325-r2,The man is swimming in the water,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	water	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.012970498974081868,0.010024169095111835,0.0024839862659968848
+I13U-gNSC-p334-r1,A man swims. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.031087466672849118,0.030798049719845677,0.0102791177918794
+I13U-gNSC-p334-r2,A dog dreams that he is a man swimming. ,1,0,1,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	dog	_	NN	NN	_	3	nsubj	_	_
+3	dream	_	VBZ	VBZ	_	0	root	_	_
+4	that	_	IN	IN	_	9	complm	_	_
+5	he	_	PRP	PRP	_	9	nsubj	_	_
+6	be	_	VBZ	VBZ	_	9	cop	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	man	_	NN	NN	_	9	nn	_	_
+9	swimming	_	NN	NN	_	3	ccomp	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%dream', 'root$@%dream$@%VROOT', 'complm$@%that$@%swimming', 'nsubj$@%he$@%swimming', 'cop$@%be$@%swimming', 'det$@%a$@%swimming', 'nn$@%man$@%swimming', 'ccomp$@%swimming$@%dream', 'punct$@%.$@%dream']","['x$@%a$@%dog', 'x$@%dog$@%dream', 'x$@%dream$@%VROOT', 'x$@%that$@%swimming', 'x$@%he$@%swimming', 'x$@%be$@%swimming', 'x$@%a$@%swimming', 'x$@%man$@%swimming', 'x$@%swimming$@%dream', 'x$@%.$@%dream']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%dream$@%x', 'x$@%that$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.045240548275932158,0.042449557084112688,0.0034937635546182788
+I13U-gNSC-p343-r1,The man is swimming in the ocean,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ocean	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0072262645621061772,0.0069958751257229723,0.0021255006168273693
+I13U-gNSC-p343-r2,The man enjoying swimming in the ocean,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	0	root	_	_
+3	enjoy	_	VBG	VBG	_	2	partmod	_	_
+4	swimming	_	VBG	VBG	_	3	xcomp	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ocean	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	2	punct	_	_","['det$@%the$@%man', 'root$@%man$@%VROOT', 'partmod$@%enjoy$@%man', 'xcomp$@%swimming$@%enjoy', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swimming', 'punct$@%.$@%man']","['x$@%the$@%man', 'x$@%man$@%VROOT', 'x$@%enjoy$@%man', 'x$@%swimming$@%enjoy', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swimming', 'x$@%.$@%man']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%enjoy$@%x', 'x$@%swimming$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.028408699803519011,0.032613884937379045,0.006869945187328752
+I13U-gNSC-p344-r1,man is swimming ,1,1,0,1,1,"1	man	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.047541405789141011,0.03601028816978058,0.0062681900878068797
+I13U-gNSC-p344-r2,man is excersing,0,1,0,0,1,"1	man	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	excerse	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%man$@%excerse', 'aux$@%be$@%excerse', 'root$@%excerse$@%VROOT', 'punct$@%.$@%excerse']","['x$@%man$@%excerse', 'x$@%be$@%excerse', 'x$@%excerse$@%VROOT', 'x$@%.$@%excerse']","['x$@%man$@%x', 'x$@%be$@%x', 'x$@%excerse$@%x', 'x$@%.$@%x']",0.13928770289507064,0.16360048143409323,0.015385832261027743
+I13U-gNSC-p349-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p349-r2,A person is wearing goggles and a cap while swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	person	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wear	_	VBG	VBG	_	0	root	_	_
+5	goggles	_	NNS	NNS	_	4	dobj	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	a	_	DT	DT	_	10	det	_	_
+8	cap	_	NN	NN	_	10	nn	_	_
+9	while	_	NN	NN	_	10	nn	_	_
+10	swimming	_	NN	NN	_	5	conj_and	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%wear', 'aux$@%be$@%wear', 'root$@%wear$@%VROOT', 'dobj$@%goggles$@%wear', 'erased$@%and$@%WORDERASED', 'det$@%a$@%swimming', 'nn$@%cap$@%swimming', 'nn$@%while$@%swimming', 'conj_and$@%swimming$@%goggles', 'punct$@%.$@%wear']","['x$@%a$@%person', 'x$@%person$@%wear', 'x$@%be$@%wear', 'x$@%wear$@%VROOT', 'x$@%goggles$@%wear', 'x$@%and$@%WORDERASED', 'x$@%a$@%swimming', 'x$@%cap$@%swimming', 'x$@%while$@%swimming', 'x$@%swimming$@%goggles', 'x$@%.$@%wear']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%wear$@%x', 'x$@%goggles$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%cap$@%x', 'x$@%while$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.030970517655593111,0.027807298517962376,0.0055699308741982145
+I13U-gNSC-p352-r1,A man is swimming. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p352-r2,A man is swimming in a lake. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	lake	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%lake', 'prep_in$@%lake$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%lake', 'x$@%lake$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%lake$@%x', 'x$@%.$@%x']",0.014213069195913364,0.014541432253102782,0.0044758930232258187
+I13U-gNSC-p355-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p355-r2,A man is doing the front crawl.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	do	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	front	_	JJ	JJ	_	7	amod	_	_
+7	crawl	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%the$@%crawl', 'amod$@%front$@%crawl', 'dobj$@%crawl$@%do', 'punct$@%.$@%do']","['x$@%a$@%man', 'x$@%man$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%the$@%crawl', 'x$@%front$@%crawl', 'x$@%crawl$@%do', 'x$@%.$@%do']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%the$@%x', 'x$@%front$@%x', 'x$@%crawl$@%x', 'x$@%.$@%x']",0.057373641744043247,0.049292552337475981,0.0050010352370477573
+I13U-gNSC-p356-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p356-r2,A body of water is being swam in. ,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	body	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	water	_	NN	NN	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	swam	_	VBN	VBN	_	0	root	_	_
+8	in	_	IN	IN	_	7	prep	_	_
+9	.	_	.	.	_	7	punct	_	_","['det$@%a$@%body', 'nsubjpass$@%body$@%swam', 'erased$@%of$@%WORDERASED', 'prep_of$@%water$@%body', 'aux$@%be$@%swam', 'auxpass$@%be$@%swam', 'root$@%swam$@%VROOT', 'prep$@%in$@%swam', 'punct$@%.$@%swam']","['x$@%a$@%body', 'x$@%body$@%swam', 'x$@%of$@%WORDERASED', 'x$@%water$@%body', 'x$@%be$@%swam', 'x$@%be$@%swam', 'x$@%swam$@%VROOT', 'x$@%in$@%swam', 'x$@%.$@%swam']","['x$@%a$@%x', 'x$@%body$@%x', 'x$@%of$@%x', 'x$@%water$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%swam$@%x', 'x$@%in$@%x', 'x$@%.$@%x']",0.038613812615906018,0.029376668362647185,0.004562866980931557
+I13U-gNSC-p358-r1,A man swimming ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	0	root	_	_
+3	swimming	_	VBG	VBG	_	2	partmod	_	_
+4	.	_	.	.	_	2	punct	_	_","['det$@%a$@%man', 'root$@%man$@%VROOT', 'partmod$@%swimming$@%man', 'punct$@%.$@%man']","['x$@%a$@%man', 'x$@%man$@%VROOT', 'x$@%swimming$@%man', 'x$@%.$@%man']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.060403631405316793,0.05986589972649381,0.01772647219714607
+I13U-gNSC-p358-r2,A man swimminh in the ocean ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swimminh	_	VBP	VBP	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ocean	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swimminh', 'root$@%swimminh$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swimminh', 'punct$@%.$@%swimminh']","['x$@%a$@%man', 'x$@%man$@%swimminh', 'x$@%swimminh$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swimminh', 'x$@%.$@%swimminh']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%swimminh$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.035776978403245008,0.040967047393082767,0.0063155108558039519
+I13U-gNSC-p359-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p359-r2,A man is swimming in the water.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	water	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.011777031802313265,0.0097676719093754416,0.0014525936479026225
+I13U-gNSC-p363-r1,The man is swimming in the ocean.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ocean	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0072262645621061772,0.0069958751257229723,0.0021255006168273693
+I13U-gNSC-p363-r2,The man is swimming laps in the pool.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	swim	_	VBG	VBG	_	5	amod	_	_
+5	lap	_	NNS	NNS	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	pool	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%lap', 'cop$@%be$@%lap', 'amod$@%swim$@%lap', 'root$@%lap$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%lap', 'punct$@%.$@%lap']","['x$@%the$@%man', 'x$@%man$@%lap', 'x$@%be$@%lap', 'x$@%swim$@%lap', 'x$@%lap$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%lap', 'x$@%.$@%lap']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.045343574705624556,0.051123286770565657,0.0026026416950122311
+I13U-gNSC-p364-r1,A swimmer is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%swimmer', 'nsubj$@%swimmer$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%swimmer', 'x$@%swimmer$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.048142851478303994,0.05037953265796824,0.0093435426078751771
+I13U-gNSC-p364-r2,The swimmer is practicing a stroke.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	practice	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	stroke	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%swimmer', 'nsubj$@%swimmer$@%practice', 'aux$@%be$@%practice', 'root$@%practice$@%VROOT', 'det$@%a$@%stroke', 'dobj$@%stroke$@%practice', 'punct$@%.$@%practice']","['x$@%the$@%swimmer', 'x$@%swimmer$@%practice', 'x$@%be$@%practice', 'x$@%practice$@%VROOT', 'x$@%a$@%stroke', 'x$@%stroke$@%practice', 'x$@%.$@%practice']","['x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%practice$@%x', 'x$@%a$@%x', 'x$@%stroke$@%x', 'x$@%.$@%x']",0.065887389419995612,0.088642640305354847,0.0085601133297447118
+I13U-gNSC-p365-r1,This swimmer is practicing his laps in the pool.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	practice	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	lap	_	NNS	NNS	_	4	dobj	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	pool	_	NN	NN	_	4	prep_in	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%this$@%swimmer', 'nsubj$@%swimmer$@%practice', 'aux$@%be$@%practice', 'root$@%practice$@%VROOT', 'poss$@%he$@%lap', 'dobj$@%lap$@%practice', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%practice', 'punct$@%.$@%practice']","['x$@%this$@%swimmer', 'x$@%swimmer$@%practice', 'x$@%be$@%practice', 'x$@%practice$@%VROOT', 'x$@%he$@%lap', 'x$@%lap$@%practice', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%practice', 'x$@%.$@%practice']","['x$@%this$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%practice$@%x', 'x$@%he$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.049939117740832595,0.061351122375508771,0.0048691534672099523
+I13U-gNSC-p365-r2,This swimmer is doing some laps in the pool.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	do	_	VBG	VBG	_	0	root	_	_
+5	some	_	DT	DT	_	6	det	_	_
+6	lap	_	NNS	NNS	_	4	dobj	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	pool	_	NN	NN	_	6	prep_in	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%this$@%swimmer', 'nsubj$@%swimmer$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%some$@%lap', 'dobj$@%lap$@%do', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%lap', 'punct$@%.$@%do']","['x$@%this$@%swimmer', 'x$@%swimmer$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%some$@%lap', 'x$@%lap$@%do', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%lap', 'x$@%.$@%do']","['x$@%this$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%some$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.033309263406215983,0.035342222719463634,0.0047412490427017895
+I13U-gNSC-p367-r1,Man is swimming,1,1,0,1,1,"1	man	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.047541405789141011,0.03601028816978058,0.0062681900878068797
+I13U-gNSC-p367-r2,Body of water with a human in it.,0,0,0,0,1,"1	body	_	NN	NN	_	0	root	_	_
+2	of	_	IN	IN	_	0	erased	_	_
+3	water	_	NN	NN	_	1	prep_of	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	human	_	NN	NN	_	1	prep_with	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	it	_	PRP	PRP	_	6	prep_in	_	_
+9	.	_	.	.	_	1	punct	_	_","['root$@%body$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%water$@%body', 'erased$@%with$@%WORDERASED', 'det$@%a$@%human', 'prep_with$@%human$@%body', 'erased$@%in$@%WORDERASED', 'prep_in$@%it$@%human', 'punct$@%.$@%body']","['x$@%body$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%water$@%body', 'x$@%with$@%WORDERASED', 'x$@%a$@%human', 'x$@%human$@%body', 'x$@%in$@%WORDERASED', 'x$@%it$@%human', 'x$@%.$@%body']","['x$@%body$@%x', 'x$@%of$@%x', 'x$@%water$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%human$@%x', 'x$@%in$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.048836023090943148,0.064042094836952335,0.0056466615916815899
+I13U-gNSC-p370-r1,A man is swimming,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p370-r2,A man with googles and a swim cap is swimming,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	10	nsubj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	google	_	NNS	NNS	_	2	prep_with	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	swim	_	JJ	JJ	_	8	amod	_	_
+8	cap	_	NN	NN	_	4	conj_and	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	swim	_	VBG	VBG	_	0	root	_	_
+11	.	_	.	.	_	10	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'erased$@%with$@%WORDERASED', 'prep_with$@%google$@%man', 'erased$@%and$@%WORDERASED', 'det$@%a$@%cap', 'amod$@%swim$@%cap', 'conj_and$@%cap$@%google', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%with$@%WORDERASED', 'x$@%google$@%man', 'x$@%and$@%WORDERASED', 'x$@%a$@%cap', 'x$@%swim$@%cap', 'x$@%cap$@%google', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%with$@%x', 'x$@%google$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%swim$@%x', 'x$@%cap$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.014804968759569936,0.015494158944255987,0.0036190625462313442
+I13U-gNSC-p374-r1,The man is swimming. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p374-r2,Michael Phelps is a freak of nature.,0,0,1,0,0,"1	michael	_	NNP	NNP	_	2	nn	_	_
+2	phelps	_	NNP	NNP	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	freak	_	NN	NN	_	0	root	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	nature	_	NN	NN	_	5	prep_of	_	_
+8	.	_	.	.	_	5	punct	_	_","['nn$@%michael$@%phelps', 'nsubj$@%phelps$@%freak', 'cop$@%be$@%freak', 'det$@%a$@%freak', 'root$@%freak$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%nature$@%freak', 'punct$@%.$@%freak']","['x$@%michael$@%phelps', 'x$@%phelps$@%freak', 'x$@%be$@%freak', 'x$@%a$@%freak', 'x$@%freak$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%nature$@%freak', 'x$@%.$@%freak']","['x$@%michael$@%x', 'x$@%phelps$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%freak$@%x', 'x$@%of$@%x', 'x$@%nature$@%x', 'x$@%.$@%x']",0.080941664614846531,0.081640259930300663,0.0076208790291112383
+I13U-gNSC-p377-r1,swimming,0,0,1,0,0,"1	swimming	_	NN	NN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%swimming$@%VROOT', 'punct$@%.$@%swimming']","['x$@%swimming$@%VROOT', 'x$@%.$@%swimming']","['x$@%swimming$@%x', 'x$@%.$@%x']",0.12550299500676809,0.1225956537898254,0.055295844281681772
+I13U-gNSC-p377-r2,swimming in ocean,0,0,1,0,0,"1	swim	_	NN	NN	_	0	root	_	_
+2	in	_	IN	IN	_	0	erased	_	_
+3	ocean	_	NN	NN	_	1	prep_in	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%swim$@%x', 'x$@%in$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.034746997786087253,0.036156918726842457,0.0090917849436422671
+I13U-gNSC-p379-r1,A man is swimming in the water.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	water	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.011777031802313265,0.0097676719093752196,0.0014525936479026225
+I13U-gNSC-p379-r2,Swimming is a great physical activity.,0,0,1,0,0,"1	swimming	_	NN	NN	_	6	nsubj	_	_
+2	be	_	VBZ	VBZ	_	6	cop	_	_
+3	a	_	DT	DT	_	6	det	_	_
+4	great	_	JJ	JJ	_	6	amod	_	_
+5	physical	_	JJ	JJ	_	6	amod	_	_
+6	activity	_	NN	NN	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['nsubj$@%swimming$@%activity', 'cop$@%be$@%activity', 'det$@%a$@%activity', 'amod$@%great$@%activity', 'amod$@%physical$@%activity', 'root$@%activity$@%VROOT', 'punct$@%.$@%activity']","['x$@%swimming$@%activity', 'x$@%be$@%activity', 'x$@%a$@%activity', 'x$@%great$@%activity', 'x$@%physical$@%activity', 'x$@%activity$@%VROOT', 'x$@%.$@%activity']","['x$@%swimming$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%great$@%x', 'x$@%physical$@%x', 'x$@%activity$@%x', 'x$@%.$@%x']",0.15417823607583125,0.17478567500248132,0.013114614924561008
+I13U-gNSC-p380-r1,Man swims,1,0,0,1,1,"1	man	_	NNP	NNP	_	2	nsubj	_	_
+2	swim	_	VBZ	VBZ	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.061023928579881592,0.047249049653665942,0.015796550401537712
+I13U-gNSC-p380-r2,Man swims,1,0,0,1,1,"1	man	_	NNP	NNP	_	2	nsubj	_	_
+2	swim	_	VBZ	VBZ	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.061023928579881592,0.047249049653665942,0.015796550401537712
+I13U-gNSC-p383-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p383-r2,The swimmer races forward.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	3	nsubj	_	_
+3	race	_	VBZ	VBZ	_	0	root	_	_
+4	forward	_	RB	RB	_	3	advmod	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%swimmer', 'nsubj$@%swimmer$@%race', 'root$@%race$@%VROOT', 'advmod$@%forward$@%race', 'punct$@%.$@%race']","['x$@%the$@%swimmer', 'x$@%swimmer$@%race', 'x$@%race$@%VROOT', 'x$@%forward$@%race', 'x$@%.$@%race']","['x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%race$@%x', 'x$@%forward$@%x', 'x$@%.$@%x']",0.052016059872738385,0.065832463349991155,0.01643445456374204
+I13U-gNSC-p385-r1,HE IS SWIMMING FAST.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swimming	_	VBG	VBG	_	0	root	_	_
+4	fast	_	NNP	NNP	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%swimming', 'aux$@%be$@%swimming', 'root$@%swimming$@%VROOT', 'dobj$@%fast$@%swimming', 'punct$@%.$@%swimming']","['x$@%he$@%swimming', 'x$@%be$@%swimming', 'x$@%swimming$@%VROOT', 'x$@%fast$@%swimming', 'x$@%.$@%swimming']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%swimming$@%x', 'x$@%fast$@%x', 'x$@%.$@%x']",0.093571583204918984,0.091648961757303193,0.0052091926928410359
+I13U-gNSC-p385-r2,HE LOOKS LIKE A EXPERIENCED SWIMMER.,0,0,1,0,1,"1	he	_	PRP	PRP	_	2	nsubj	_	_
+2	look	_	VBZ	VBZ	_	0	root	_	_
+3	like	_	NNP	NNP	_	6	nn	_	_
+4	a	_	NNP	NNP	_	6	nn	_	_
+5	experienced	_	NNP	NNP	_	6	nn	_	_
+6	swimmer	_	NNP	NNP	_	2	dobj	_	_
+7	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%look', 'root$@%look$@%VROOT', 'nn$@%like$@%swimmer', 'nn$@%a$@%swimmer', 'nn$@%experienced$@%swimmer', 'dobj$@%swimmer$@%look', 'punct$@%.$@%look']","['x$@%he$@%look', 'x$@%look$@%VROOT', 'x$@%like$@%swimmer', 'x$@%a$@%swimmer', 'x$@%experienced$@%swimmer', 'x$@%swimmer$@%look', 'x$@%.$@%look']","['x$@%he$@%x', 'x$@%look$@%x', 'x$@%like$@%x', 'x$@%a$@%x', 'x$@%experienced$@%x', 'x$@%swimmer$@%x', 'x$@%.$@%x']",0.054577768700245666,0.056903122036323639,0.014449070016109955
+I13U-gNSC-p387-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p387-r2,The man is training for competition by swimming.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	train	_	VBG	VBG	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	competition	_	NN	NN	_	4	prep_for	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	swimming	_	NN	NN	_	4	prep_by	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%train', 'aux$@%be$@%train', 'root$@%train$@%VROOT', 'erased$@%for$@%WORDERASED', 'prep_for$@%competition$@%train', 'erased$@%by$@%WORDERASED', 'prep_by$@%swimming$@%train', 'punct$@%.$@%train']","['x$@%the$@%man', 'x$@%man$@%train', 'x$@%be$@%train', 'x$@%train$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%competition$@%train', 'x$@%by$@%WORDERASED', 'x$@%swimming$@%train', 'x$@%.$@%train']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%train$@%x', 'x$@%for$@%x', 'x$@%competition$@%x', 'x$@%by$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.041777926306010515,0.049652968058717217,0.0075466064487167417
+I13U-gNSC-p390-r1,Olympic competition.,0,0,1,0,0,"1	olympic	_	JJ	JJ	_	2	amod	_	_
+2	competition	_	NN	NN	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['amod$@%olympic$@%competition', 'root$@%competition$@%VROOT', 'punct$@%.$@%competition']","['x$@%olympic$@%competition', 'x$@%competition$@%VROOT', 'x$@%.$@%competition']","['x$@%olympic$@%x', 'x$@%competition$@%x', 'x$@%.$@%x']",0.18414439421590556,0.19387129162523775,0.060375379246113803
+I13U-gNSC-p390-r2,The breast stroke.,0,0,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	breast	_	NN	NN	_	3	nsubj	_	_
+3	stroke	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%breast', 'nsubj$@%breast$@%stroke', 'root$@%stroke$@%VROOT', 'punct$@%.$@%stroke']","['x$@%the$@%breast', 'x$@%breast$@%stroke', 'x$@%stroke$@%VROOT', 'x$@%.$@%stroke']","['x$@%the$@%x', 'x$@%breast$@%x', 'x$@%stroke$@%x', 'x$@%.$@%x']",0.10841481739762315,0.11894709547958893,0.023472172258046986
+I13U-gNSC-p393-r1,The swimmer is taking in a breathe of air.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	breathe	_	NN	NN	_	4	prep_in	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	air	_	NN	NN	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%swimmer', 'nsubj$@%swimmer$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%breathe', 'prep_in$@%breathe$@%take', 'erased$@%of$@%WORDERASED', 'prep_of$@%air$@%breathe', 'punct$@%.$@%take']","['x$@%the$@%swimmer', 'x$@%swimmer$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%breathe', 'x$@%breathe$@%take', 'x$@%of$@%WORDERASED', 'x$@%air$@%breathe', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%breathe$@%x', 'x$@%of$@%x', 'x$@%air$@%x', 'x$@%.$@%x']",0.062298893622411478,0.054195267689208793,0.0039035751345288805
+I13U-gNSC-p393-r2,The man is swimming in what appears to be the ocean.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	what	_	WP	WP	_	7	nsubj	_	_
+7	appear	_	VBZ	VBZ	_	4	prepc_in	_	_
+8	to	_	TO	TO	_	11	aux	_	_
+9	be	_	VB	VB	_	11	cop	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	ocean	_	NN	NN	_	7	xcomp	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'nsubj$@%what$@%appear', 'prepc_in$@%appear$@%swim', 'aux$@%to$@%ocean', 'cop$@%be$@%ocean', 'det$@%the$@%ocean', 'xcomp$@%ocean$@%appear', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%what$@%appear', 'x$@%appear$@%swim', 'x$@%to$@%ocean', 'x$@%be$@%ocean', 'x$@%the$@%ocean', 'x$@%ocean$@%appear', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%what$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.014673100134815487,0.014050707404027918,0.0027628797293363094
+I13U-gNSC-p394-r1,The man is swimming,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p394-r2,The man is swimming in the ocean,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ocean	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0072262645621061772,0.0069958751257229723,0.0021255006168273693
+I13U-gNSC-p396-r1,The man is swimming in the pool,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	pool	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.0077542745744243469,0.011389323609404034,0.0023000888176013534
+I13U-gNSC-p396-r2,The man is completing in the pool,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	complete	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	pool	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%complete', 'aux$@%be$@%complete', 'root$@%complete$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%complete', 'punct$@%.$@%complete']","['x$@%the$@%man', 'x$@%man$@%complete', 'x$@%be$@%complete', 'x$@%complete$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%complete', 'x$@%.$@%complete']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%complete$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.069567310297212304,0.083927263937228158,0.007755451729391849
+I13U-gNSC-p401-r1,My friend Scott is swimming.,1,1,1,1,0,"1	my	_	PRP$	PRP$	_	3	poss	_	_
+2	friend	_	NN	NN	_	3	nn	_	_
+3	scott	_	NNP	NNP	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	swim	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['poss$@%my$@%scott', 'nn$@%friend$@%scott', 'nsubj$@%scott$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%my$@%scott', 'x$@%friend$@%scott', 'x$@%scott$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%my$@%x', 'x$@%friend$@%x', 'x$@%scott$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.049961661144136027,0.040092768280907021,0.0061336686518033146
+I13U-gNSC-p401-r2,"Scott, a triathlete, is training for a race.",0,1,1,0,0,"1	scott	_	NNP	NNP	_	7	nsubj	_	_
+2	,	_	,	,	_	1	punct	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	triathlete	_	NN	NN	_	1	appos	_	_
+5	,	_	,	,	_	1	punct	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	train	_	VBG	VBG	_	0	root	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	race	_	NN	NN	_	7	prep_for	_	_
+11	.	_	.	.	_	7	punct	_	_","['nsubj$@%scott$@%train', 'punct$@%,$@%scott', 'det$@%a$@%triathlete', 'appos$@%triathlete$@%scott', 'punct$@%,$@%scott', 'aux$@%be$@%train', 'root$@%train$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%race', 'prep_for$@%race$@%train', 'punct$@%.$@%train']","['x$@%scott$@%train', 'x$@%,$@%scott', 'x$@%a$@%triathlete', 'x$@%triathlete$@%scott', 'x$@%,$@%scott', 'x$@%be$@%train', 'x$@%train$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%race', 'x$@%race$@%train', 'x$@%.$@%train']","['x$@%scott$@%x', 'x$@%,$@%x', 'x$@%a$@%x', 'x$@%triathlete$@%x', 'x$@%,$@%x', 'x$@%be$@%x', 'x$@%train$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%race$@%x', 'x$@%.$@%x']",0.070560706908715187,0.079139023349831472,0.0098889268297580601
+I13U-gNSC-p405-r1,He is swimming. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%he$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.044687003517641877,0.038018725106036655,0.007894316561355974
+I13U-gNSC-p405-r2,The man swims in the ocean. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ocean	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0095270336672608202,0.0090899181865917722,0.0029534136802746858
+I13U-gNSC-p407-r1,The man is swimming ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p407-r2,The man is coming up for a breath of air,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	come	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	breath	_	NN	NN	_	4	prep_for	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	air	_	NN	NN	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%come', 'aux$@%be$@%come', 'root$@%come$@%VROOT', 'prt$@%up$@%come', 'erased$@%for$@%WORDERASED', 'det$@%a$@%breath', 'prep_for$@%breath$@%come', 'erased$@%of$@%WORDERASED', 'prep_of$@%air$@%breath', 'punct$@%.$@%come']","['x$@%the$@%man', 'x$@%man$@%come', 'x$@%be$@%come', 'x$@%come$@%VROOT', 'x$@%up$@%come', 'x$@%for$@%WORDERASED', 'x$@%a$@%breath', 'x$@%breath$@%come', 'x$@%of$@%WORDERASED', 'x$@%air$@%breath', 'x$@%.$@%come']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%come$@%x', 'x$@%up$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%breath$@%x', 'x$@%of$@%x', 'x$@%air$@%x', 'x$@%.$@%x']",0.046597821576443543,0.040380667562629702,0.0048961596010264063
+I13U-gNSC-p409-r1,Someone is swimming in the ocean.,1,1,1,1,1,"1	someone	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ocean	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%someone$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%someone$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%someone$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.014115681062082719,0.015056872110064901,0.0068202237565111457
+I13U-gNSC-p409-r2,A man is swimming in the ocean.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ocean	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0071908034124630316,0.0081208919521714718,0.0018041582620114127
+I13U-gNSC-p410-r1,The man is swimming laps.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	lap	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'dobj$@%lap$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%lap$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%lap$@%x', 'x$@%.$@%x']",0.022660175646718961,0.017654556351647921,0.0019369666332862412
+I13U-gNSC-p410-r2,There is a swimming race going on.,0,1,1,1,0,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	a	_	DT	DT	_	5	det	_	_
+4	swimming	_	VBG	VBG	_	5	amod	_	_
+5	race	_	NN	NN	_	2	nsubj	_	_
+6	go	_	VBG	VBG	_	5	partmod	_	_
+7	on	_	RP	RP	_	6	prt	_	_
+8	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'det$@%a$@%race', 'amod$@%swimming$@%race', 'nsubj$@%race$@%be', 'partmod$@%go$@%race', 'prt$@%on$@%go', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%a$@%race', 'x$@%swimming$@%race', 'x$@%race$@%be', 'x$@%go$@%race', 'x$@%on$@%go', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%swimming$@%x', 'x$@%race$@%x', 'x$@%go$@%x', 'x$@%on$@%x', 'x$@%.$@%x']",0.033936098320067498,0.042441708203791784,0.0025437522999172124
+I13U-gNSC-p411-r1,A man is swimming in the water.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	water	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.011777031802313265,0.0097676719093752196,0.0014525936479026225
+I13U-gNSC-p411-r2,There is a man in the water swimming.,1,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
+2	be	_	VBZ	VBZ	_	0	root	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	man	_	NN	NN	_	2	nsubj	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	water	_	NN	NN	_	8	nn	_	_
+8	swimming	_	NN	NN	_	4	prep_in	_	_
+9	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'det$@%a$@%man', 'nsubj$@%man$@%be', 'erased$@%in$@%WORDERASED', 'det$@%the$@%swimming', 'nn$@%water$@%swimming', 'prep_in$@%swimming$@%man', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%a$@%man', 'x$@%man$@%be', 'x$@%in$@%WORDERASED', 'x$@%the$@%swimming', 'x$@%water$@%swimming', 'x$@%swimming$@%man', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.022926909413220176,0.014047492799473926,0.0029342114340537018
+I13U-gNSC-p413-r1,The man swims.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.026107276432994264,0.021728516629663686,0.0052461150158579217
+I13U-gNSC-p413-r2,The man does a lap in the pool.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	do	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	lap	_	NN	NN	_	3	dobj	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	pool	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%do', 'root$@%do$@%VROOT', 'det$@%a$@%lap', 'dobj$@%lap$@%do', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%lap', 'punct$@%.$@%do']","['x$@%the$@%man', 'x$@%man$@%do', 'x$@%do$@%VROOT', 'x$@%a$@%lap', 'x$@%lap$@%do', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%lap', 'x$@%.$@%do']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%do$@%x', 'x$@%a$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.050446079928412102,0.056940280049704195,0.0065069450765863346
+I13U-gNSC-p416-r1,Men swimming ,1,1,0,1,0,"1	man	_	NNS	NNS	_	0	root	_	_
+2	swimming	_	VBG	VBG	_	1	partmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%man$@%VROOT', 'partmod$@%swimming$@%man', 'punct$@%.$@%man']","['x$@%man$@%VROOT', 'x$@%swimming$@%man', 'x$@%.$@%man']","['x$@%man$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.076627439772962158,0.064428948168443689,0.032328314056758178
+I13U-gNSC-p416-r2,Swimming man,1,0,0,1,0,"1	swimming	_	JJ	JJ	_	2	amod	_	_
+2	man	_	NN	NN	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['amod$@%swimming$@%man', 'root$@%man$@%VROOT', 'punct$@%.$@%man']","['x$@%swimming$@%man', 'x$@%man$@%VROOT', 'x$@%.$@%man']","['x$@%swimming$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.08175038152403391,0.064428948168443911,0.032328314056757623
+I13U-gNSC-p417-r1,The man is swimming,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p417-r2,The man is swimming a race,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	race	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'det$@%a$@%race', 'dobj$@%race$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%a$@%race', 'x$@%race$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%a$@%x', 'x$@%race$@%x', 'x$@%.$@%x']",0.01209728892090367,0.010089696608376886,0.001812770989397583
+I13U-gNSC-p418-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p418-r2,A man is swimming in a race.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	race	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%race', 'prep_in$@%race$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%race', 'x$@%race$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%race$@%x', 'x$@%.$@%x']",0.011456809867489759,0.011403904774904716,0.0038889637278989309
+I13U-gNSC-p420-r1,A person is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	person	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%person', 'x$@%person$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.021567563378497412,0.02352614891905136,0.0044901950032661953
+I13U-gNSC-p420-r2,A man (or woman) wearing goggles and a swim cap is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	14	nsubj	_	_
+3	-lrb-	_	-LRB-	-LRB-	_	5	punct	_	_
+4	or	_	CC	CC	_	5	cc	_	_
+5	woman	_	CD	CD	_	2	dep	_	_
+6	-rrb-	_	-RRB-	-RRB-	_	5	punct	_	_
+7	wear	_	VBG	VBG	_	2	partmod	_	_
+8	goggles	_	NNS	NNS	_	7	dobj	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	a	_	DT	DT	_	12	det	_	_
+11	swim	_	JJ	JJ	_	12	amod	_	_
+12	cap	_	NN	NN	_	8	conj_and	_	_
+13	be	_	VBZ	VBZ	_	14	aux	_	_
+14	swim	_	VBG	VBG	_	0	root	_	_
+15	.	_	.	.	_	14	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'punct$@%-lrb-$@%woman', 'cc$@%or$@%woman', 'dep$@%woman$@%man', 'punct$@%-rrb-$@%woman', 'partmod$@%wear$@%man', 'dobj$@%goggles$@%wear', 'erased$@%and$@%WORDERASED', 'det$@%a$@%cap', 'amod$@%swim$@%cap', 'conj_and$@%cap$@%goggles', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%-lrb-$@%woman', 'x$@%or$@%woman', 'x$@%woman$@%man', 'x$@%-rrb-$@%woman', 'x$@%wear$@%man', 'x$@%goggles$@%wear', 'x$@%and$@%WORDERASED', 'x$@%a$@%cap', 'x$@%swim$@%cap', 'x$@%cap$@%goggles', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%-lrb-$@%x', 'x$@%or$@%x', 'x$@%woman$@%x', 'x$@%-rrb-$@%x', 'x$@%wear$@%x', 'x$@%goggles$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%swim$@%x', 'x$@%cap$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.025240808931723424,0.021664075240050762,0.0075921995369701012
+I13U-gNSC-p423-r1,"A swimmer is swimming, ", , , , , ,"1	a	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	4	auxpass	_	_
+4	swim	_	VBN	VBN	_	0	root	_	_
+5	,	_	,	,	_	4	punct	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%swimmer', 'nsubjpass$@%swimmer$@%swim', 'auxpass$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%,$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%swimmer', 'x$@%swimmer$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%,$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%,$@%x', 'x$@%.$@%x']",0.055278590829532126,0.046968304420879847,0.0068579589107444772
+I13U-gNSC-p423-r2,A man is swimming laps. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	lap	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'dobj$@%lap$@%swim', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%lap$@%swim', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%lap$@%x', 'x$@%.$@%x']",0.028796138694527906,0.023132236517236948,0.0053074180121486236
+I13U-gNSC-p424-r1,Man is swimming in the ocean ,1,1,0,1,1,"1	man	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ocean	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%ocean', 'prep_in$@%ocean$@%swim', 'punct$@%.$@%swim']","['x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%ocean', 'x$@%ocean$@%swim', 'x$@%.$@%swim']","['x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%ocean$@%x', 'x$@%.$@%x']",0.0098673829988896733,0.01024043433374433,0.0020365187020098263
+I13U-gNSC-p424-r2,He is doing laps in the pool,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	do	_	VBG	VBG	_	0	root	_	_
+4	lap	_	NNS	NNS	_	3	dobj	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	pool	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'dobj$@%lap$@%do', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%lap', 'punct$@%.$@%do']","['x$@%he$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%lap$@%do', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%lap', 'x$@%.$@%do']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.066903572477205464,0.076074970305256562,0.008463146506832997
+I13U-gNSC-p429-r1,"A man swims freestyle, judging from his cap and goggles, he means business! ",1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	14	ccomp	_	_
+4	freestyle	_	JJ	JJ	_	3	acomp	_	_
+5	,	_	,	,	_	3	punct	_	_
+6	judge	_	VBG	VBG	_	3	xcomp	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	cap	_	NN	NN	_	6	prep_from	_	_
+10	and	_	CC	CC	_	0	erased	_	_
+11	goggles	_	NNS	NNS	_	9	conj_and	_	_
+12	,	_	,	,	_	14	punct	_	_
+13	he	_	PRP	PRP	_	14	nsubj	_	_
+14	mean	_	VBZ	VBZ	_	0	root	_	_
+15	business	_	NN	NN	_	14	dobj	_	_
+16	!	_	.	.	_	14	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'ccomp$@%swim$@%mean', 'acomp$@%freestyle$@%swim', 'punct$@%,$@%swim', 'xcomp$@%judge$@%swim', 'erased$@%from$@%WORDERASED', 'poss$@%he$@%cap', 'prep_from$@%cap$@%judge', 'erased$@%and$@%WORDERASED', 'conj_and$@%goggles$@%cap', 'punct$@%,$@%mean', 'nsubj$@%he$@%mean', 'root$@%mean$@%VROOT', 'dobj$@%business$@%mean', 'punct$@%!$@%mean']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%swim$@%mean', 'x$@%freestyle$@%swim', 'x$@%,$@%swim', 'x$@%judge$@%swim', 'x$@%from$@%WORDERASED', 'x$@%he$@%cap', 'x$@%cap$@%judge', 'x$@%and$@%WORDERASED', 'x$@%goggles$@%cap', 'x$@%,$@%mean', 'x$@%he$@%mean', 'x$@%mean$@%VROOT', 'x$@%business$@%mean', 'x$@%!$@%mean']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%freestyle$@%x', 'x$@%,$@%x', 'x$@%judge$@%x', 'x$@%from$@%x', 'x$@%he$@%x', 'x$@%cap$@%x', 'x$@%and$@%x', 'x$@%goggles$@%x', 'x$@%,$@%x', 'x$@%he$@%x', 'x$@%mean$@%x', 'x$@%business$@%x', 'x$@%!$@%x']",0.019802723915793741,0.015189504410166976,0.0061509274461536423
+I13U-gNSC-p429-r2,An ocean is being repeatedly slapped and kicked by a wrinkly pale-pink bean.,0,1,1,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	ocean	_	NN	NN	_	8	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	6	aux	_	_
+4	be	_	VBG	VBG	_	6	auxpass	_	_
+5	repeatedly	_	RB	RB	_	6	advmod	_	_
+6	slap	_	VBD	VBD	_	0	root	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	kick	_	VBD	VBD	_	6	conj_and	_	_
+9	by	_	IN	IN	_	0	erased	_	_
+10	a	_	DT	DT	_	13	det	_	_
+11	wrinkly	_	JJ	JJ	_	13	amod	_	_
+12	pale-pink	_	JJ	JJ	_	13	amod	_	_
+13	bean	_	NN	NN	_	6	agent	_	_
+14	.	_	.	.	_	6	punct	_	_","['det$@%a$@%ocean', 'nsubjpass$@%ocean$@%kick', 'aux$@%be$@%slap', 'auxpass$@%be$@%slap', 'advmod$@%repeatedly$@%slap', 'root$@%slap$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%kick$@%slap', 'erased$@%by$@%WORDERASED', 'det$@%a$@%bean', 'amod$@%wrinkly$@%bean', 'amod$@%pale-pink$@%bean', 'agent$@%bean$@%slap', 'punct$@%.$@%slap']","['x$@%a$@%ocean', 'x$@%ocean$@%kick', 'x$@%be$@%slap', 'x$@%be$@%slap', 'x$@%repeatedly$@%slap', 'x$@%slap$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%kick$@%slap', 'x$@%by$@%WORDERASED', 'x$@%a$@%bean', 'x$@%wrinkly$@%bean', 'x$@%pale-pink$@%bean', 'x$@%bean$@%slap', 'x$@%.$@%slap']","['x$@%a$@%x', 'x$@%ocean$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%repeatedly$@%x', 'x$@%slap$@%x', 'x$@%and$@%x', 'x$@%kick$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%wrinkly$@%x', 'x$@%pale-pink$@%x', 'x$@%bean$@%x', 'x$@%.$@%x']",0.065705386739181471,0.059398317654409616,0.011976167806537874
+I13U-gNSC-p431-r1,Hey guys swimming,0,0,0,1,1,"1	hey	_	JJ	JJ	_	2	amod	_	_
+2	guy	_	NNS	NNS	_	0	root	_	_
+3	swim	_	VBG	VBG	_	2	partmod	_	_
+4	.	_	.	.	_	2	punct	_	_","['amod$@%hey$@%guy', 'root$@%guy$@%VROOT', 'partmod$@%swim$@%guy', 'punct$@%.$@%guy']","['x$@%hey$@%guy', 'x$@%guy$@%VROOT', 'x$@%swim$@%guy', 'x$@%.$@%guy']","['x$@%hey$@%x', 'x$@%guy$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.10134540183164165,0.11614949962327703,0.015385551335978076
+I13U-gNSC-p431-r2,Swimming in the water,0,0,1,0,1,"1	swimming	_	NN	NN	_	0	root	_	_
+2	in	_	IN	IN	_	0	erased	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	water	_	NN	NN	_	1	prep_in	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%swimming$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swimming', 'punct$@%.$@%swimming']","['x$@%swimming$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swimming', 'x$@%.$@%swimming']","['x$@%swimming$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.042735563226615758,0.038117582687278384,0.008475166409435575
+I13U-gNSC-p433-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p433-r2,The swimmer is swimming freestyle.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	freestyle	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%swimmer', 'nsubj$@%swimmer$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'dobj$@%freestyle$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%swimmer', 'x$@%swimmer$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%freestyle$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%freestyle$@%x', 'x$@%.$@%x']",0.047493992757998149,0.053418127597721465,0.017919239185170688
+I13U-gNSC-p435-r1,man swimming,1,1,0,1,1,"1	man	_	NN	NN	_	0	root	_	_
+2	swimming	_	VBG	VBG	_	1	partmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%man$@%VROOT', 'partmod$@%swimming$@%man', 'punct$@%.$@%man']","['x$@%man$@%VROOT', 'x$@%swimming$@%man', 'x$@%.$@%man']","['x$@%man$@%x', 'x$@%swimming$@%x', 'x$@%.$@%x']",0.076627439772962158,0.064428948168443689,0.032328314056758178
+I13U-gNSC-p435-r2,in water,0,0,0,0,0,"1	in	_	IN	IN	_	0	root	_	_
+2	water	_	NN	NN	_	1	pobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%in$@%VROOT', 'pobj$@%water$@%in', 'punct$@%.$@%in']","['x$@%in$@%VROOT', 'x$@%water$@%in', 'x$@%.$@%in']","['x$@%in$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.070373423804397484,0.053495728275694931,0.01124724718100556
+I13U-gNSC-p436-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p436-r2,A man is working out swimming laps in a pool.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	work	_	VBG	VBG	_	0	root	_	_
+5	out	_	RP	RP	_	4	prt	_	_
+6	swim	_	VBG	VBG	_	7	amod	_	_
+7	lap	_	NNS	NNS	_	4	dobj	_	_
+8	in	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	pool	_	NN	NN	_	4	prep_in	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%work', 'aux$@%be$@%work', 'root$@%work$@%VROOT', 'prt$@%out$@%work', 'amod$@%swim$@%lap', 'dobj$@%lap$@%work', 'erased$@%in$@%WORDERASED', 'det$@%a$@%pool', 'prep_in$@%pool$@%work', 'punct$@%.$@%work']","['x$@%a$@%man', 'x$@%man$@%work', 'x$@%be$@%work', 'x$@%work$@%VROOT', 'x$@%out$@%work', 'x$@%swim$@%lap', 'x$@%lap$@%work', 'x$@%in$@%WORDERASED', 'x$@%a$@%pool', 'x$@%pool$@%work', 'x$@%.$@%work']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%work$@%x', 'x$@%out$@%x', 'x$@%swim$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.051257642712698392,0.058405557811258335,0.0062726643720469877
+I13U-gNSC-p438-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p438-r2,The man is swimming in a race.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	race	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%race', 'prep_in$@%race$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%race', 'x$@%race$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%race$@%x', 'x$@%.$@%x']",0.0090127706489627757,0.0074358134411217636,0.0013558321044132571
+I13U-gNSC-p447-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p447-r2,A man is competing in a swimming event.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	compete	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	swimming	_	VBG	VBG	_	8	amod	_	_
+8	event	_	NN	NN	_	4	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%compete', 'aux$@%be$@%compete', 'root$@%compete$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%event', 'amod$@%swimming$@%event', 'prep_in$@%event$@%compete', 'punct$@%.$@%compete']","['x$@%a$@%man', 'x$@%man$@%compete', 'x$@%be$@%compete', 'x$@%compete$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%event', 'x$@%swimming$@%event', 'x$@%event$@%compete', 'x$@%.$@%compete']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%compete$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%swimming$@%x', 'x$@%event$@%x', 'x$@%.$@%x']",0.052180187473905848,0.060896725342462377,0.0040588235005480922
+I13U-gNSC-p448-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p448-r2,The man swims freestyle.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	0	root	_	_
+4	freestyle	_	JJ	JJ	_	3	acomp	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'acomp$@%freestyle$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%freestyle$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%freestyle$@%x', 'x$@%.$@%x']",0.017679070022329157,0.01841220873048699,0.0094064804669770075
+I13U-gNSC-p450-r1,young man on a swimming expedition,1,0,0,0,1,"1	young	_	JJ	JJ	_	2	amod	_	_
+2	man	_	NN	NN	_	0	root	_	_
+3	on	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	swimming	_	VBG	VBG	_	6	amod	_	_
+6	expedition	_	NN	NN	_	2	prep_on	_	_
+7	.	_	.	.	_	2	punct	_	_","['amod$@%young$@%man', 'root$@%man$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%a$@%expedition', 'amod$@%swimming$@%expedition', 'prep_on$@%expedition$@%man', 'punct$@%.$@%man']","['x$@%young$@%man', 'x$@%man$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%a$@%expedition', 'x$@%swimming$@%expedition', 'x$@%expedition$@%man', 'x$@%.$@%man']","['x$@%young$@%x', 'x$@%man$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%swimming$@%x', 'x$@%expedition$@%x', 'x$@%.$@%x']",0.04878942964865296,0.046460663374107813,0.013910270777490075
+I13U-gNSC-p450-r2,I am on my way to winning,0,0,1,0,0,"1	i	_	PRP	PRP	_	2	nsubj	_	_
+2	be	_	VBP	VBP	_	0	root	_	_
+3	on	_	IN	IN	_	0	erased	_	_
+4	my	_	PRP$	PRP$	_	5	poss	_	_
+5	way	_	NN	NN	_	2	prep_on	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	win	_	VBG	VBG	_	2	prep_to	_	_
+8	.	_	.	.	_	2	punct	_	_","['nsubj$@%i$@%be', 'root$@%be$@%VROOT', 'erased$@%on$@%WORDERASED', 'poss$@%my$@%way', 'prep_on$@%way$@%be', 'erased$@%to$@%WORDERASED', 'prep_to$@%win$@%be', 'punct$@%.$@%be']","['x$@%i$@%be', 'x$@%be$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%my$@%way', 'x$@%way$@%be', 'x$@%to$@%WORDERASED', 'x$@%win$@%be', 'x$@%.$@%be']","['x$@%i$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%my$@%x', 'x$@%way$@%x', 'x$@%to$@%x', 'x$@%win$@%x', 'x$@%.$@%x']",0.046007970933315434,0.051886955424367054,0.0070800502322152514
+I13U-gNSC-p451-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p451-r2,"The man is a professional swimmer hopped up on performance enhancing drugs, about to have a major coronary. ",0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	6	cop	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	professional	_	JJ	JJ	_	6	amod	_	_
+6	swimmer	_	NN	NN	_	0	root	_	_
+7	hop	_	VBN	VBN	_	6	partmod	_	_
+8	up	_	RP	RP	_	7	prt	_	_
+9	on	_	IN	IN	_	0	erased	_	_
+10	performance	_	NN	NN	_	7	prep_on	_	_
+11	enhance	_	VBG	VBG	_	7	ccomp	_	_
+12	drug	_	NNS	NNS	_	11	dobj	_	_
+13	,	_	,	,	_	11	punct	_	_
+14	about	_	IN	IN	_	11	dep	_	_
+15	to	_	TO	TO	_	16	aux	_	_
+16	have	_	VB	VB	_	14	xcomp	_	_
+17	a	_	DT	DT	_	19	det	_	_
+18	major	_	JJ	JJ	_	19	amod	_	_
+19	coronary	_	NN	NN	_	16	dobj	_	_
+20	.	_	.	.	_	6	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swimmer', 'cop$@%be$@%swimmer', 'det$@%a$@%swimmer', 'amod$@%professional$@%swimmer', 'root$@%swimmer$@%VROOT', 'partmod$@%hop$@%swimmer', 'prt$@%up$@%hop', 'erased$@%on$@%WORDERASED', 'prep_on$@%performance$@%hop', 'ccomp$@%enhance$@%hop', 'dobj$@%drug$@%enhance', 'punct$@%,$@%enhance', 'dep$@%about$@%enhance', 'aux$@%to$@%have', 'xcomp$@%have$@%about', 'det$@%a$@%coronary', 'amod$@%major$@%coronary', 'dobj$@%coronary$@%have', 'punct$@%.$@%swimmer']","['x$@%the$@%man', 'x$@%man$@%swimmer', 'x$@%be$@%swimmer', 'x$@%a$@%swimmer', 'x$@%professional$@%swimmer', 'x$@%swimmer$@%VROOT', 'x$@%hop$@%swimmer', 'x$@%up$@%hop', 'x$@%on$@%WORDERASED', 'x$@%performance$@%hop', 'x$@%enhance$@%hop', 'x$@%drug$@%enhance', 'x$@%,$@%enhance', 'x$@%about$@%enhance', 'x$@%to$@%have', 'x$@%have$@%about', 'x$@%a$@%coronary', 'x$@%major$@%coronary', 'x$@%coronary$@%have', 'x$@%.$@%swimmer']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%professional$@%x', 'x$@%swimmer$@%x', 'x$@%hop$@%x', 'x$@%up$@%x', 'x$@%on$@%x', 'x$@%performance$@%x', 'x$@%enhance$@%x', 'x$@%drug$@%x', 'x$@%,$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%major$@%x', 'x$@%coronary$@%x', 'x$@%.$@%x']",0.034094582577493648,0.03735915942380541,0.0091036265997953558
+I13U-gNSC-p452-r1,Michael Phelps is winning a gold medal.,0,1,1,1,0,"1	michael	_	NNP	NNP	_	2	nn	_	_
+2	phelps	_	NNP	NNP	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	win	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	gold	_	JJ	JJ	_	7	amod	_	_
+7	medal	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['nn$@%michael$@%phelps', 'nsubj$@%phelps$@%win', 'aux$@%be$@%win', 'root$@%win$@%VROOT', 'det$@%a$@%medal', 'amod$@%gold$@%medal', 'dobj$@%medal$@%win', 'punct$@%.$@%win']","['x$@%michael$@%phelps', 'x$@%phelps$@%win', 'x$@%be$@%win', 'x$@%win$@%VROOT', 'x$@%a$@%medal', 'x$@%gold$@%medal', 'x$@%medal$@%win', 'x$@%.$@%win']","['x$@%michael$@%x', 'x$@%phelps$@%x', 'x$@%be$@%x', 'x$@%win$@%x', 'x$@%a$@%x', 'x$@%gold$@%x', 'x$@%medal$@%x', 'x$@%.$@%x']",0.033679516840538493,0.031664063915373131,0.0081895611120330614
+I13U-gNSC-p452-r2,"The man is swimming, trying to beat his previous time. ",1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	8	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	,	_	,	,	_	4	punct	_	_
+6	try	_	VBG	VBG	_	4	dep	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	beat	_	VB	VB	_	6	xcomp	_	_
+9	he	_	PRP$	PRP$	_	11	poss	_	_
+10	previous	_	JJ	JJ	_	11	amod	_	_
+11	time	_	NN	NN	_	8	dobj	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'xsubj$@%man$@%beat', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%,$@%swim', 'dep$@%try$@%swim', 'aux$@%to$@%beat', 'xcomp$@%beat$@%try', 'poss$@%he$@%time', 'amod$@%previous$@%time', 'dobj$@%time$@%beat', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%beat', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%,$@%swim', 'x$@%try$@%swim', 'x$@%to$@%beat', 'x$@%beat$@%try', 'x$@%he$@%time', 'x$@%previous$@%time', 'x$@%time$@%beat', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%,$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%beat$@%x', 'x$@%he$@%x', 'x$@%previous$@%x', 'x$@%time$@%x', 'x$@%.$@%x']",0.018040694373359312,0.020127868757777057,0.0038628221983517674
+I13U-gNSC-p453-r1,He is swimming in the water.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	swim	_	VBG	VBG	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	water	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%he$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.019427720023233674,0.017842501162782298,0.0038414066184402351
+I13U-gNSC-p453-r2,He is doing laps to prepare for his swimming competition.,1,1,1,1,0,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	do	_	VBG	VBG	_	0	root	_	_
+4	lap	_	NNS	NNS	_	3	dobj	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	prepare	_	VB	VB	_	3	xcomp	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	10	poss	_	_
+9	swimming	_	NN	NN	_	10	nn	_	_
+10	competition	_	NN	NN	_	6	prep_for	_	_
+11	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'dobj$@%lap$@%do', 'aux$@%to$@%prepare', 'xcomp$@%prepare$@%do', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%competition', 'nn$@%swimming$@%competition', 'prep_for$@%competition$@%prepare', 'punct$@%.$@%do']","['x$@%he$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%lap$@%do', 'x$@%to$@%prepare', 'x$@%prepare$@%do', 'x$@%for$@%WORDERASED', 'x$@%he$@%competition', 'x$@%swimming$@%competition', 'x$@%competition$@%prepare', 'x$@%.$@%do']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%lap$@%x', 'x$@%to$@%x', 'x$@%prepare$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%swimming$@%x', 'x$@%competition$@%x', 'x$@%.$@%x']",0.048474340677487127,0.057744936414193093,0.0067241010384214706
+I13U-gNSC-p455-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p455-r2,A swimmer practices swimming.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	3	nsubj	_	_
+3	practice	_	VBZ	VBZ	_	0	root	_	_
+4	swim	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%a$@%swimmer', 'nsubj$@%swimmer$@%practice', 'root$@%practice$@%VROOT', 'dobj$@%swim$@%practice', 'punct$@%.$@%practice']","['x$@%a$@%swimmer', 'x$@%swimmer$@%practice', 'x$@%practice$@%VROOT', 'x$@%swim$@%practice', 'x$@%.$@%practice']","['x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%practice$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.061956527154877872,0.083682497220262553,0.014797684483334517
+I13U-gNSC-p456-r1,The man is swimming in the pool.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	pool	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.0077542745744243469,0.011389323609404034,0.0023000888176013534
+I13U-gNSC-p456-r2,The pool's surface ripples as the man swims through it.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	pool	_	NN	NN	_	4	poss	_	_
+3	's	_	POS	POS	_	0	erased	_	_
+4	surface	_	NN	NN	_	5	nsubj	_	_
+5	ripple	_	VBZ	VBZ	_	0	root	_	_
+6	as	_	IN	IN	_	9	mark	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	9	nsubj	_	_
+9	swim	_	VBZ	VBZ	_	5	advcl	_	_
+10	through	_	IN	IN	_	0	erased	_	_
+11	it	_	PRP	PRP	_	9	prep_through	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%pool', 'poss$@%pool$@%surface', ""erased$@%'s$@%WORDERASED"", 'nsubj$@%surface$@%ripple', 'root$@%ripple$@%VROOT', 'mark$@%as$@%swim', 'det$@%the$@%man', 'nsubj$@%man$@%swim', 'advcl$@%swim$@%ripple', 'erased$@%through$@%WORDERASED', 'prep_through$@%it$@%swim', 'punct$@%.$@%ripple']","['x$@%the$@%pool', 'x$@%pool$@%surface', ""x$@%'s$@%WORDERASED"", 'x$@%surface$@%ripple', 'x$@%ripple$@%VROOT', 'x$@%as$@%swim', 'x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%ripple', 'x$@%through$@%WORDERASED', 'x$@%it$@%swim', 'x$@%.$@%ripple']","['x$@%the$@%x', 'x$@%pool$@%x', ""x$@%'s$@%x"", 'x$@%surface$@%x', 'x$@%ripple$@%x', 'x$@%as$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%through$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.030376119072098917,0.026946893806097272,0.0067320828599012339
+I13U-gNSC-p457-r1,A man is swimming ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p457-r2,A athlete is doing laps in the pool. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	athlete	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	do	_	VBG	VBG	_	0	root	_	_
+5	lap	_	NNS	NNS	_	4	dobj	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	pool	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%athlete', 'nsubj$@%athlete$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'dobj$@%lap$@%do', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%lap', 'punct$@%.$@%do']","['x$@%a$@%athlete', 'x$@%athlete$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%lap$@%do', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%lap', 'x$@%.$@%do']","['x$@%a$@%x', 'x$@%athlete$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%lap$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.061153789977549278,0.067956384388192181,0.0082779116423217225
+I13U-gNSC-p460-r1,The man swims.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	swim	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.026107276432994264,0.021728516629663686,0.0052461150158579217
+I13U-gNSC-p460-r2,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973653051
+I13U-gNSC-p461-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p461-r2,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973653051
+I13U-gNSC-p462-r1,A swimmer is gliding through the water.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	glide	_	VBG	VBG	_	0	root	_	_
+5	through	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	water	_	NN	NN	_	4	prep_through	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%swimmer', 'nsubj$@%swimmer$@%glide', 'aux$@%be$@%glide', 'root$@%glide$@%VROOT', 'erased$@%through$@%WORDERASED', 'det$@%the$@%water', 'prep_through$@%water$@%glide', 'punct$@%.$@%glide']","['x$@%a$@%swimmer', 'x$@%swimmer$@%glide', 'x$@%be$@%glide', 'x$@%glide$@%VROOT', 'x$@%through$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%glide', 'x$@%.$@%glide']","['x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%be$@%x', 'x$@%glide$@%x', 'x$@%through$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.059864500219115824,0.047505702869774291,0.0074151614043985736
+I13U-gNSC-p462-r2,Water is being displaced by a swimmer.,0,1,1,0,1,"1	water	_	NNP	NNP	_	4	nsubjpass	_	_
+2	be	_	VBZ	VBZ	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	displace	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	swimmer	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%water$@%displace', 'aux$@%be$@%displace', 'auxpass$@%be$@%displace', 'root$@%displace$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%swimmer', 'agent$@%swimmer$@%displace', 'punct$@%.$@%displace']","['x$@%water$@%displace', 'x$@%be$@%displace', 'x$@%be$@%displace', 'x$@%displace$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%swimmer', 'x$@%swimmer$@%displace', 'x$@%.$@%displace']","['x$@%water$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%displace$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%.$@%x']",0.064856940876737434,0.05605626394292651,0.0060507329727798043
+I13U-gNSC-p467-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p467-r2,"Eager to win gold, the swimmer pushes himself through the water.",1,0,1,1,0,"1	eager	_	VBG	VBG	_	8	partmod	_	_
+2	to	_	TO	TO	_	3	aux	_	_
+3	win	_	VB	VB	_	1	xcomp	_	_
+4	gold	_	NN	NN	_	3	dobj	_	_
+5	,	_	,	,	_	8	punct	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	swimmer	_	NN	NN	_	8	nsubj	_	_
+8	push	_	VBZ	VBZ	_	0	root	_	_
+9	himself	_	PRP	PRP	_	8	dobj	_	_
+10	through	_	IN	IN	_	0	erased	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	water	_	NN	NN	_	8	prep_through	_	_
+13	.	_	.	.	_	8	punct	_	_","['partmod$@%eager$@%push', 'aux$@%to$@%win', 'xcomp$@%win$@%eager', 'dobj$@%gold$@%win', 'punct$@%,$@%push', 'det$@%the$@%swimmer', 'nsubj$@%swimmer$@%push', 'root$@%push$@%VROOT', 'dobj$@%himself$@%push', 'erased$@%through$@%WORDERASED', 'det$@%the$@%water', 'prep_through$@%water$@%push', 'punct$@%.$@%push']","['x$@%eager$@%push', 'x$@%to$@%win', 'x$@%win$@%eager', 'x$@%gold$@%win', 'x$@%,$@%push', 'x$@%the$@%swimmer', 'x$@%swimmer$@%push', 'x$@%push$@%VROOT', 'x$@%himself$@%push', 'x$@%through$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%push', 'x$@%.$@%push']","['x$@%eager$@%x', 'x$@%to$@%x', 'x$@%win$@%x', 'x$@%gold$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%push$@%x', 'x$@%himself$@%x', 'x$@%through$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.039068465835037758,0.038372272661701068,0.0082037736395801364
+I13U-gNSC-p469-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p469-r2,George suddenly remembers that he forgot to apply his shark repellent.,0,0,1,0,0,"1	george	_	NNP	NNP	_	3	nsubj	_	_
+2	suddenly	_	RB	RB	_	3	advmod	_	_
+3	remember	_	VBZ	VBZ	_	0	root	_	_
+4	that	_	IN	IN	_	6	complm	_	_
+5	he	_	PRP	PRP	_	8	xsubj	_	_
+6	forget	_	VBD	VBD	_	3	ccomp	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	apply	_	VB	VB	_	6	xcomp	_	_
+9	he	_	PRP$	PRP$	_	10	poss	_	_
+10	shark	_	NN	NN	_	11	nsubj	_	_
+11	repellent	_	JJ	JJ	_	8	xcomp	_	_
+12	.	_	.	.	_	3	punct	_	_","['nsubj$@%george$@%remember', 'advmod$@%suddenly$@%remember', 'root$@%remember$@%VROOT', 'complm$@%that$@%forget', 'xsubj$@%he$@%apply', 'ccomp$@%forget$@%remember', 'aux$@%to$@%apply', 'xcomp$@%apply$@%forget', 'poss$@%he$@%shark', 'nsubj$@%shark$@%repellent', 'xcomp$@%repellent$@%apply', 'punct$@%.$@%remember']","['x$@%george$@%remember', 'x$@%suddenly$@%remember', 'x$@%remember$@%VROOT', 'x$@%that$@%forget', 'x$@%he$@%apply', 'x$@%forget$@%remember', 'x$@%to$@%apply', 'x$@%apply$@%forget', 'x$@%he$@%shark', 'x$@%shark$@%repellent', 'x$@%repellent$@%apply', 'x$@%.$@%remember']","['x$@%george$@%x', 'x$@%suddenly$@%x', 'x$@%remember$@%x', 'x$@%that$@%x', 'x$@%he$@%x', 'x$@%forget$@%x', 'x$@%to$@%x', 'x$@%apply$@%x', 'x$@%he$@%x', 'x$@%shark$@%x', 'x$@%repellent$@%x', 'x$@%.$@%x']",0.085120382022513708,0.12160739805787879,0.019614505441931884
+I13U-gNSC-p479-r1,A man is swimming.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p479-r2,A man is practicing his freestyle.,1,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	practice	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	freestyle	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%practice', 'aux$@%be$@%practice', 'root$@%practice$@%VROOT', 'poss$@%he$@%freestyle', 'dobj$@%freestyle$@%practice', 'punct$@%.$@%practice']","['x$@%a$@%man', 'x$@%man$@%practice', 'x$@%be$@%practice', 'x$@%practice$@%VROOT', 'x$@%he$@%freestyle', 'x$@%freestyle$@%practice', 'x$@%.$@%practice']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%practice$@%x', 'x$@%he$@%x', 'x$@%freestyle$@%x', 'x$@%.$@%x']",0.067808555553787841,0.099573779115863847,0.0094583915568438037
+I13U-gNSC-p482-r1,The man is swimming. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p482-r2,That man is a good swimmer. ,0,0,1,1,1,"1	that	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	6	cop	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	good	_	JJ	JJ	_	6	amod	_	_
+6	swimmer	_	NN	NN	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['det$@%that$@%man', 'nsubj$@%man$@%swimmer', 'cop$@%be$@%swimmer', 'det$@%a$@%swimmer', 'amod$@%good$@%swimmer', 'root$@%swimmer$@%VROOT', 'punct$@%.$@%swimmer']","['x$@%that$@%man', 'x$@%man$@%swimmer', 'x$@%be$@%swimmer', 'x$@%a$@%swimmer', 'x$@%good$@%swimmer', 'x$@%swimmer$@%VROOT', 'x$@%.$@%swimmer']","['x$@%that$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%good$@%x', 'x$@%swimmer$@%x', 'x$@%.$@%x']",0.038497614639390498,0.0416725833778957,0.0030684242592385891
+I13U-gNSC-p483-r1,The swimmer practices in the pool.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	swimmer	_	NN	NN	_	3	nsubj	_	_
+3	practice	_	VBZ	VBZ	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	pool	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%swimmer', 'nsubj$@%swimmer$@%practice', 'root$@%practice$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%pool', 'prep_in$@%pool$@%practice', 'punct$@%.$@%practice']","['x$@%the$@%swimmer', 'x$@%swimmer$@%practice', 'x$@%practice$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%pool', 'x$@%pool$@%practice', 'x$@%.$@%practice']","['x$@%the$@%x', 'x$@%swimmer$@%x', 'x$@%practice$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%pool$@%x', 'x$@%.$@%x']",0.053250280248751114,0.054887394895421382,0.0075075442479054511
+I13U-gNSC-p483-r2,Michael Phelps wins another gold medal.,0,0,1,1,0,"1	michael	_	NNP	NNP	_	2	nn	_	_
+2	phelps	_	NNP	NNP	_	3	nsubj	_	_
+3	win	_	VBZ	VBZ	_	0	root	_	_
+4	another	_	DT	DT	_	6	det	_	_
+5	gold	_	JJ	JJ	_	6	amod	_	_
+6	medal	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nn$@%michael$@%phelps', 'nsubj$@%phelps$@%win', 'root$@%win$@%VROOT', 'det$@%another$@%medal', 'amod$@%gold$@%medal', 'dobj$@%medal$@%win', 'punct$@%.$@%win']","['x$@%michael$@%phelps', 'x$@%phelps$@%win', 'x$@%win$@%VROOT', 'x$@%another$@%medal', 'x$@%gold$@%medal', 'x$@%medal$@%win', 'x$@%.$@%win']","['x$@%michael$@%x', 'x$@%phelps$@%x', 'x$@%win$@%x', 'x$@%another$@%x', 'x$@%gold$@%x', 'x$@%medal$@%x', 'x$@%.$@%x']",0.036848039640055452,0.037154108606538672,0.011818230397571239
+I13U-gNSC-p485-r1,The man is swimming in water.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	water	_	NN	NN	_	4	prep_in	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%water$@%swim', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%water$@%swim', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%in$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.013788352392081316,0.013642784717023959,0.0016360580554539705
+I13U-gNSC-p485-r2,"In the water, the man swims.",1,0,1,1,1,"1	in	_	IN	IN	_	0	erased	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	water	_	NN	NN	_	7	prep_in	_	_
+4	,	_	,	,	_	7	punct	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	man	_	NN	NN	_	7	nsubj	_	_
+7	swim	_	VBZ	VBZ	_	0	root	_	_
+8	.	_	.	.	_	7	punct	_	_","['erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%swim', 'punct$@%,$@%swim', 'det$@%the$@%man', 'nsubj$@%man$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%swim', 'x$@%,$@%swim', 'x$@%the$@%man', 'x$@%man$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.014104641481738622,0.011636214697919534,0.0030901679103196855
+I13U-gNSC-p487-r1,a boy is swimming,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%boy', 'x$@%boy$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.038782321243466922,0.033896777169204029,0.0077184494752781108
+I13U-gNSC-p487-r2,a boy is in the water,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	be	_	VBZ	VBZ	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	water	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%be', 'root$@%be$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%water', 'prep_in$@%water$@%be', 'punct$@%.$@%be']","['x$@%a$@%boy', 'x$@%boy$@%be', 'x$@%be$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%water', 'x$@%water$@%be', 'x$@%.$@%be']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%water$@%x', 'x$@%.$@%x']",0.052759317472712008,0.052817674525807323,0.0046073870145559859
+I13U-gNSC-p491-r1,The man is swimming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%the$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.023223817026552296,0.018368888455698729,0.0024942452973651941
+I13U-gNSC-p491-r2,The man has on a swimmers cap.,0,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	have	_	VBZ	VBZ	_	4	aux	_	_
+4	on	_	IN	IN	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	swimmer	_	JJ	JJ	_	7	amod	_	_
+7	cap	_	NN	NN	_	4	pobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%on', 'aux$@%have$@%on', 'root$@%on$@%VROOT', 'det$@%a$@%cap', 'amod$@%swimmer$@%cap', 'pobj$@%cap$@%on', 'punct$@%.$@%on']","['x$@%the$@%man', 'x$@%man$@%on', 'x$@%have$@%on', 'x$@%on$@%VROOT', 'x$@%a$@%cap', 'x$@%swimmer$@%cap', 'x$@%cap$@%on', 'x$@%.$@%on']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%have$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%swimmer$@%x', 'x$@%cap$@%x', 'x$@%.$@%x']",0.036422382996139979,0.035829333304087885,0.002928951953676262
+I13U-gNSC-p493-r1,A man is swimming,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	swim	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%swim', 'aux$@%be$@%swim', 'root$@%swim$@%VROOT', 'punct$@%.$@%swim']","['x$@%a$@%man', 'x$@%man$@%swim', 'x$@%be$@%swim', 'x$@%swim$@%VROOT', 'x$@%.$@%swim']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%swim$@%x', 'x$@%.$@%x']",0.02839848174320847,0.023488541881159786,0.0047038310757191448
+I13U-gNSC-p493-r2,A man demonstrates the Australian Crawl,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	demonstrate	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	australian	_	JJ	JJ	_	6	amod	_	_
+6	crawl	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%demonstrate', 'root$@%demonstrate$@%VROOT', 'det$@%the$@%crawl', 'amod$@%australian$@%crawl', 'dobj$@%crawl$@%demonstrate', 'punct$@%.$@%demonstrate']","['x$@%a$@%man', 'x$@%man$@%demonstrate', 'x$@%demonstrate$@%VROOT', 'x$@%the$@%crawl', 'x$@%australian$@%crawl', 'x$@%crawl$@%demonstrate', 'x$@%.$@%demonstrate']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%demonstrate$@%x', 'x$@%the$@%x', 'x$@%australian$@%x', 'x$@%crawl$@%x', 'x$@%.$@%x']",0.068860478960555249,0.088832032275211081,0.018847024091605769

@@ -1,0 +1,430 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I10T-gNSF-p142-r2,The baby is having a tantrum.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tantrum	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%tantrum', 'dobj$@%tantrum$@%have', 'punct$@%.$@%have']","['x$@%the$@%baby', 'x$@%baby$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%tantrum', 'x$@%tantrum$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.042331443026542459,0.041516483616584998,0.0044371120739874481
+I10T-gNSF-p145-r2,The baby is upset. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	upset	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%upset', 'cop$@%be$@%upset', 'root$@%upset$@%VROOT', 'punct$@%.$@%upset']","['x$@%the$@%baby', 'x$@%baby$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%.$@%upset']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']",0.052672115349080562,0.055205840370200487,0.00572152604944276
+I10T-gNSF-p146-r2,The upset baby is shedding tears.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	upset	_	JJ	JJ	_	3	amod	_	_
+3	baby	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	shed	_	VBG	VBG	_	0	root	_	_
+6	tear	_	NNS	NNS	_	5	dobj	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%baby', 'amod$@%upset$@%baby', 'nsubj$@%baby$@%shed', 'aux$@%be$@%shed', 'root$@%shed$@%VROOT', 'dobj$@%tear$@%shed', 'punct$@%.$@%shed']","['x$@%the$@%baby', 'x$@%upset$@%baby', 'x$@%baby$@%shed', 'x$@%be$@%shed', 'x$@%shed$@%VROOT', 'x$@%tear$@%shed', 'x$@%.$@%shed']","['x$@%the$@%x', 'x$@%upset$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%shed$@%x', 'x$@%tear$@%x', 'x$@%.$@%x']",0.049145080294721311,0.048382875600494146,0.0053303172248796438
+I10T-gNSF-p147-r2,The baby is wailing and carrying on. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wail	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	carry	_	VBG	VBG	_	4	conj_and	_	_
+7	on	_	IN	IN	_	4	prep	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%carry', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%carry$@%wail', 'prep$@%on$@%wail', 'punct$@%.$@%wail']","['x$@%the$@%baby', 'x$@%baby$@%carry', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%carry$@%wail', 'x$@%on$@%wail', 'x$@%.$@%wail']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%and$@%x', 'x$@%carry$@%x', 'x$@%on$@%x', 'x$@%.$@%x']",0.034758980249523397,0.034676794330865457,0.0043439918479833972
+I10T-gNSF-p148-r2,He is crying.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cry	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%he$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.057027369442536169,0.060677201562026939,0.0082799173254448633
+I10T-gNSF-p149-r2,"The baby is crying with outstretched arms, perhaps hoping somebody will pick him/her up. ",1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	outstretch	_	JJ	JJ	_	7	amod	_	_
+7	arm	_	NNS	NNS	_	4	prep_with	_	_
+8	,	_	,	,	_	4	punct	_	_
+9	perhaps	_	RB	RB	_	4	advmod	_	_
+10	hope	_	VBG	VBG	_	4	dep	_	_
+11	somebody	_	NN	NN	_	10	dobj	_	_
+12	will	_	MD	MD	_	13	aux	_	_
+13	pick	_	VB	VB	_	11	rcmod	_	_
+14	him/her	_	NN	NN	_	13	dobj	_	_
+15	up	_	RP	RP	_	13	prt	_	_
+16	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%with$@%WORDERASED', 'amod$@%outstretch$@%arm', 'prep_with$@%arm$@%cry', 'punct$@%,$@%cry', 'advmod$@%perhaps$@%cry', 'dep$@%hope$@%cry', 'dobj$@%somebody$@%hope', 'aux$@%will$@%pick', 'rcmod$@%pick$@%somebody', 'dobj$@%him/her$@%pick', 'prt$@%up$@%pick', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%outstretch$@%arm', 'x$@%arm$@%cry', 'x$@%,$@%cry', 'x$@%perhaps$@%cry', 'x$@%hope$@%cry', 'x$@%somebody$@%hope', 'x$@%will$@%pick', 'x$@%pick$@%somebody', 'x$@%him/her$@%pick', 'x$@%up$@%pick', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%with$@%x', 'x$@%outstretch$@%x', 'x$@%arm$@%x', 'x$@%,$@%x', 'x$@%perhaps$@%x', 'x$@%hope$@%x', 'x$@%somebody$@%x', 'x$@%will$@%x', 'x$@%pick$@%x', 'x$@%him/her$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.03267630366581542,0.02793568349134945,0.0072845837341394271
+I10T-gNSF-p150-r2,The baby is feeling upset. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feel	_	VBG	VBG	_	0	root	_	_
+5	upset	_	JJ	JJ	_	4	acomp	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%feel', 'aux$@%be$@%feel', 'root$@%feel$@%VROOT', 'acomp$@%upset$@%feel', 'punct$@%.$@%feel']","['x$@%the$@%baby', 'x$@%baby$@%feel', 'x$@%be$@%feel', 'x$@%feel$@%VROOT', 'x$@%upset$@%feel', 'x$@%.$@%feel']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%feel$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']",0.077601948483911332,0.08926975355826261,0.0077967452627989431
+I10T-gNSC-p152-r2,"The baby appears to be crying, unhappy, and waiting to be picked up and held ",1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	8	xsubj	_	_
+3	appear	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	8	aux	_	_
+5	be	_	VB	VB	_	8	cop	_	_
+6	cry	_	JJ	JJ	_	8	amod	_	_
+7	,	_	,	,	_	8	punct	_	_
+8	unhappy	_	JJ	JJ	_	3	xcomp	_	_
+9	,	_	,	,	_	8	punct	_	_
+10	and	_	CC	CC	_	0	erased	_	_
+11	wait	_	VBG	VBG	_	8	conj_and	_	_
+12	to	_	TO	TO	_	14	aux	_	_
+13	be	_	VB	VB	_	14	auxpass	_	_
+14	pick	_	VBN	VBN	_	11	xcomp	_	_
+15	up	_	RP	RP	_	14	prt	_	_
+16	and	_	CC	CC	_	0	erased	_	_
+17	hold	_	VBN	VBN	_	14	conj_and	_	_
+18	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'xsubj$@%baby$@%unhappy', 'root$@%appear$@%VROOT', 'aux$@%to$@%unhappy', 'cop$@%be$@%unhappy', 'amod$@%cry$@%unhappy', 'punct$@%,$@%unhappy', 'xcomp$@%unhappy$@%appear', 'punct$@%,$@%unhappy', 'erased$@%and$@%WORDERASED', 'conj_and$@%wait$@%unhappy', 'aux$@%to$@%pick', 'auxpass$@%be$@%pick', 'xcomp$@%pick$@%wait', 'prt$@%up$@%pick', 'erased$@%and$@%WORDERASED', 'conj_and$@%hold$@%pick', 'punct$@%.$@%appear']","['x$@%the$@%baby', 'x$@%baby$@%unhappy', 'x$@%appear$@%VROOT', 'x$@%to$@%unhappy', 'x$@%be$@%unhappy', 'x$@%cry$@%unhappy', 'x$@%,$@%unhappy', 'x$@%unhappy$@%appear', 'x$@%,$@%unhappy', 'x$@%and$@%WORDERASED', 'x$@%wait$@%unhappy', 'x$@%to$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%wait', 'x$@%up$@%pick', 'x$@%and$@%WORDERASED', 'x$@%hold$@%pick', 'x$@%.$@%appear']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%,$@%x', 'x$@%unhappy$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%wait$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%and$@%x', 'x$@%hold$@%x', 'x$@%.$@%x']",0.065016211111460054,0.058648356373125377,0.0062792668621700631
+I10T-gNSC-p159-r2,The baby is crying for mamma.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	mamma	_	NN	NN	_	4	prep_for	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%for$@%WORDERASED', 'prep_for$@%mamma$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%mamma$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%for$@%x', 'x$@%mamma$@%x', 'x$@%.$@%x']",0.04059968858094043,0.040629711669847302,0.00744934616038051
+I10T-gNSC-p163-r2,Having a temper tantrum.,1,1,1,1,1,"1	have	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	4	det	_	_
+3	temper	_	NN	NN	_	4	nn	_	_
+4	tantrum	_	NN	NN	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%have$@%VROOT', 'det$@%a$@%tantrum', 'nn$@%temper$@%tantrum', 'dobj$@%tantrum$@%have', 'punct$@%.$@%have']","['x$@%have$@%VROOT', 'x$@%a$@%tantrum', 'x$@%temper$@%tantrum', 'x$@%tantrum$@%have', 'x$@%.$@%have']","['x$@%have$@%x', 'x$@%a$@%x', 'x$@%temper$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.062736110188178706,0.071158014480310339,0.015600660273576872
+I10T-gNSC-p168-r2,The baby is hungry and letting everyone know.,1,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	hungry	_	JJ	JJ	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	let	_	VBG	VBG	_	8	csubj	_	_
+7	everyone	_	NN	NN	_	6	dobj	_	_
+8	know	_	VBP	VBP	_	4	conj_and	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%hungry', 'cop$@%be$@%hungry', 'root$@%hungry$@%VROOT', 'erased$@%and$@%WORDERASED', 'csubj$@%let$@%know', 'dobj$@%everyone$@%let', 'conj_and$@%know$@%hungry', 'punct$@%.$@%hungry']","['x$@%the$@%baby', 'x$@%baby$@%hungry', 'x$@%be$@%hungry', 'x$@%hungry$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%let$@%know', 'x$@%everyone$@%let', 'x$@%know$@%hungry', 'x$@%.$@%hungry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%hungry$@%x', 'x$@%and$@%x', 'x$@%let$@%x', 'x$@%everyone$@%x', 'x$@%know$@%x', 'x$@%.$@%x']",0.03582752567026648,0.03663185658493906,0.0064156336163472272
+I10T-gNSC-p169-r2,the baby is wailing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wail	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%the$@%baby', 'x$@%baby$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.048145175704435883,0.051084367711463186,0.005072330770294009
+I10T-gNSC-p170-r2,The baby is sitting alone,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sit	_	VBG	VBG	_	0	root	_	_
+5	alone	_	RB	RB	_	4	advmod	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%sit', 'aux$@%be$@%sit', 'root$@%sit$@%VROOT', 'advmod$@%alone$@%sit', 'punct$@%.$@%sit']","['x$@%the$@%baby', 'x$@%baby$@%sit', 'x$@%be$@%sit', 'x$@%sit$@%VROOT', 'x$@%alone$@%sit', 'x$@%.$@%sit']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%sit$@%x', 'x$@%alone$@%x', 'x$@%.$@%x']",0.038309055710611051,0.040393460147292615,0.0025534163783514918
+I10T-gNSC-p172-r2,eating ,1,1,1,1,0,"1	eating	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%eating$@%VROOT', 'punct$@%.$@%eating']","['x$@%eating$@%VROOT', 'x$@%.$@%eating']","['x$@%eating$@%x', 'x$@%.$@%x']",0.10399423556360854,0.10089470985344584,0.033246534178426046
+I10T-gNSC-p174-r2,The baby is crying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.03980019036063065,0.043971320002471281,0.0053170218633601385
+I10T-gNSC-p175-r2,The baby wants to be picked up so it is crying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	xsubj	_	_
+3	want	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	auxpass	_	_
+6	pick	_	VBN	VBN	_	3	xcomp	_	_
+7	up	_	RP	RP	_	6	prt	_	_
+8	so	_	IN	IN	_	11	mark	_	_
+9	it	_	PRP	PRP	_	11	nsubj	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	cry	_	VBG	VBG	_	6	advcl	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'xsubj$@%baby$@%pick', 'root$@%want$@%VROOT', 'aux$@%to$@%pick', 'auxpass$@%be$@%pick', 'xcomp$@%pick$@%want', 'prt$@%up$@%pick', 'mark$@%so$@%cry', 'nsubj$@%it$@%cry', 'aux$@%be$@%cry', 'advcl$@%cry$@%pick', 'punct$@%.$@%want']","['x$@%the$@%baby', 'x$@%baby$@%pick', 'x$@%want$@%VROOT', 'x$@%to$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%want', 'x$@%up$@%pick', 'x$@%so$@%cry', 'x$@%it$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%pick', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%so$@%x', 'x$@%it$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.03509323057597169,0.030733857511001661,0.0034751306337489352
+I10T-gNSC-p176-r2,Wet dipar,1,0,0,0,0,"1	wet	_	NNP	NNP	_	2	nsubj	_	_
+2	dipar	_	VBP	VBP	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%wet$@%dipar', 'root$@%dipar$@%VROOT', 'punct$@%.$@%dipar']","['x$@%wet$@%dipar', 'x$@%dipar$@%VROOT', 'x$@%.$@%dipar']","['x$@%wet$@%x', 'x$@%dipar$@%x', 'x$@%.$@%x']",0.065483686199683921,0.085879349141912864,0.017253085923333189
+I10T-gNSC-p177-r2,The baby is having a tantrum.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tantrum	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%tantrum', 'dobj$@%tantrum$@%have', 'punct$@%.$@%have']","['x$@%the$@%baby', 'x$@%baby$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%tantrum', 'x$@%tantrum$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.042331443026542459,0.041516483616584998,0.0044371120739877812
+I10T-gNSC-p181-r2,pooping,1,1,1,1,0,"1	poop	_	VB	VB	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%poop$@%VROOT', 'punct$@%.$@%poop']","['x$@%poop$@%VROOT', 'x$@%.$@%poop']","['x$@%poop$@%x', 'x$@%.$@%x']",0.21401672759408519,0.20040496588449974,0.063524870438550929
+I10T-gNSC-p187-r2,The baby is throwing a fit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	fit	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%fit', 'dobj$@%fit$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%baby', 'x$@%baby$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%fit', 'x$@%fit$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%fit$@%x', 'x$@%.$@%x']",0.047022016076645357,0.044476824042523289,0.0031369201325139873
+I10T-gNSC-p190-r2,The infant is wailing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	infant	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wail	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%infant', 'nsubj$@%infant$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%the$@%infant', 'x$@%infant$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%the$@%x', 'x$@%infant$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.067533108238207129,0.069918915513220381,0.008926157169715343
+I10T-gNSC-p192-r2,The baby has tears.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	have	_	VBZ	VBZ	_	0	root	_	_
+4	tear	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%have', 'root$@%have$@%VROOT', 'dobj$@%tear$@%have', 'punct$@%.$@%have']","['x$@%the$@%baby', 'x$@%baby$@%have', 'x$@%have$@%VROOT', 'x$@%tear$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%have$@%x', 'x$@%tear$@%x', 'x$@%.$@%x']",0.047126792729075384,0.052614569607442596,0.0067914405564051261
+I10T-gNSC-p199-r2,The baby is crying of his mommy.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	of	_	IN	IN	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	mommy	_	NN	NN	_	4	prep_of	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%of$@%WORDERASED', 'poss$@%he$@%mommy', 'prep_of$@%mommy$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%he$@%mommy', 'x$@%mommy$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%of$@%x', 'x$@%he$@%x', 'x$@%mommy$@%x', 'x$@%.$@%x']",0.0424761541833929,0.046865691504502704,0.0068297617147948797
+I10T-gNSC-p202-r2,The baby is shouting his lungs out.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	shout	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	lung	_	NNS	NNS	_	4	dobj	_	_
+7	out	_	RP	RP	_	4	prt	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%shout', 'aux$@%be$@%shout', 'root$@%shout$@%VROOT', 'poss$@%he$@%lung', 'dobj$@%lung$@%shout', 'prt$@%out$@%shout', 'punct$@%.$@%shout']","['x$@%the$@%baby', 'x$@%baby$@%shout', 'x$@%be$@%shout', 'x$@%shout$@%VROOT', 'x$@%he$@%lung', 'x$@%lung$@%shout', 'x$@%out$@%shout', 'x$@%.$@%shout']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%shout$@%x', 'x$@%he$@%x', 'x$@%lung$@%x', 'x$@%out$@%x', 'x$@%.$@%x']",0.065260803149012947,0.068100439563150372,0.0056527878137475618
+I10T-gNSC-p209-r2,THROWING A TANTRUM,1,1,1,1,1,"1	throw	_	NNP	NNP	_	3	nn	_	_
+2	a	_	NNP	NNP	_	3	nn	_	_
+3	tantrum	_	NNP	NNP	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nn$@%throw$@%tantrum', 'nn$@%a$@%tantrum', 'root$@%tantrum$@%VROOT', 'punct$@%.$@%tantrum']","['x$@%throw$@%tantrum', 'x$@%a$@%tantrum', 'x$@%tantrum$@%VROOT', 'x$@%.$@%tantrum']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.14246851446897835,0.13235977767814433,0.021461303780567542
+I10T-gNSC-p211-r2,This inconsolable child needs a diaper change.,1,0,1,1,0,"1	this	_	DT	DT	_	3	det	_	_
+2	inconsolable	_	JJ	JJ	_	3	amod	_	_
+3	child	_	NN	NN	_	4	nsubj	_	_
+4	need	_	VBZ	VBZ	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	diaper	_	NN	NN	_	7	nn	_	_
+7	change	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%this$@%child', 'amod$@%inconsolable$@%child', 'nsubj$@%child$@%need', 'root$@%need$@%VROOT', 'det$@%a$@%change', 'nn$@%diaper$@%change', 'dobj$@%change$@%need', 'punct$@%.$@%need']","['x$@%this$@%child', 'x$@%inconsolable$@%child', 'x$@%child$@%need', 'x$@%need$@%VROOT', 'x$@%a$@%change', 'x$@%diaper$@%change', 'x$@%change$@%need', 'x$@%.$@%need']","['x$@%this$@%x', 'x$@%inconsolable$@%x', 'x$@%child$@%x', 'x$@%need$@%x', 'x$@%a$@%x', 'x$@%diaper$@%x', 'x$@%change$@%x', 'x$@%.$@%x']",0.087807097484008056,0.083969932748677145,0.018902139129547413
+I10T-gNSC-p212-r2,He's crying. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cry	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%he$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.057027369442536169,0.060677201562026939,0.0082799173254448633
+I10T-gNSC-p213-r2,The baby appears to be hungry.,1,0,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	xsubj	_	_
+3	appear	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	cop	_	_
+6	hungry	_	JJ	JJ	_	3	xcomp	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'xsubj$@%baby$@%hungry', 'root$@%appear$@%VROOT', 'aux$@%to$@%hungry', 'cop$@%be$@%hungry', 'xcomp$@%hungry$@%appear', 'punct$@%.$@%appear']","['x$@%the$@%baby', 'x$@%baby$@%hungry', 'x$@%appear$@%VROOT', 'x$@%to$@%hungry', 'x$@%be$@%hungry', 'x$@%hungry$@%appear', 'x$@%.$@%appear']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hungry$@%x', 'x$@%.$@%x']",0.035576448823465001,0.040357982287298699,0.00358375179783188
+I10T-gNSC-p215-r2,The annoying little bitch is crying.,1,0,1,1,0,"1	the	_	DT	DT	_	4	det	_	_
+2	annoying	_	JJ	JJ	_	3	amod	_	_
+3	little	_	JJ	JJ	_	4	amod	_	_
+4	bitch	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	cry	_	VBG	VBG	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['det$@%the$@%bitch', 'amod$@%annoying$@%little', 'amod$@%little$@%bitch', 'nsubj$@%bitch$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%bitch', 'x$@%annoying$@%little', 'x$@%little$@%bitch', 'x$@%bitch$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%annoying$@%x', 'x$@%little$@%x', 'x$@%bitch$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.034944145855631881,0.043873658576900398,0.0099027176523812654
+I10T-gNSC-p216-r2,the baby wants attention,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	want	_	VBZ	VBZ	_	0	root	_	_
+4	attention	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%want', 'root$@%want$@%VROOT', 'dobj$@%attention$@%want', 'punct$@%.$@%want']","['x$@%the$@%baby', 'x$@%baby$@%want', 'x$@%want$@%VROOT', 'x$@%attention$@%want', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%want$@%x', 'x$@%attention$@%x', 'x$@%.$@%x']",0.067059377808281972,0.070076325993540967,0.020076503777690768
+I10T-gNSC-p217-r2,The baby is bawling. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	bawl	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%bawl', 'aux$@%be$@%bawl', 'root$@%bawl$@%VROOT', 'punct$@%.$@%bawl']","['x$@%the$@%baby', 'x$@%baby$@%bawl', 'x$@%be$@%bawl', 'x$@%bawl$@%VROOT', 'x$@%.$@%bawl']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%bawl$@%x', 'x$@%.$@%x']",0.067817406551990977,0.072532239045655533,0.008224044620989357
+I10T-gNSC-p220-r2,The baby is hungry.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	hungry	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%hungry', 'cop$@%be$@%hungry', 'root$@%hungry$@%VROOT', 'punct$@%.$@%hungry']","['x$@%the$@%baby', 'x$@%baby$@%hungry', 'x$@%be$@%hungry', 'x$@%hungry$@%VROOT', 'x$@%.$@%hungry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%hungry$@%x', 'x$@%.$@%x']",0.055428421374284498,0.061521893221803015,0.0062261323891364961
+I10T-gNSC-p222-r2,screaming crying,1,1,1,1,1,"1	scream	_	VBG	VBG	_	0	root	_	_
+2	cry	_	VBG	VBG	_	1	xcomp	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%scream$@%VROOT', 'xcomp$@%cry$@%scream', 'punct$@%.$@%scream']","['x$@%scream$@%VROOT', 'x$@%cry$@%scream', 'x$@%.$@%scream']","['x$@%scream$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.11320092346229227,0.10234223897344852,0.028808775682150567
+I10T-gNSC-p224-r2,The baby is crying about something.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	something	_	NN	NN	_	4	prep_about	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%about$@%WORDERASED', 'prep_about$@%something$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%something$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%about$@%x', 'x$@%something$@%x', 'x$@%.$@%x']",0.021985555157961523,0.02651069629399716,0.0034255654628632115
+I10T-gNSC-p226-r2,This baby is unhappy,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	unhappy	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%this$@%baby', 'nsubj$@%baby$@%unhappy', 'cop$@%be$@%unhappy', 'root$@%unhappy$@%VROOT', 'punct$@%.$@%unhappy']","['x$@%this$@%baby', 'x$@%baby$@%unhappy', 'x$@%be$@%unhappy', 'x$@%unhappy$@%VROOT', 'x$@%.$@%unhappy']","['x$@%this$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%unhappy$@%x', 'x$@%.$@%x']",0.073877537007920213,0.08468511811666235,0.0093602394426974822
+I10T-gNSC-p230-r2,The baby is hungry.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	hungry	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%hungry', 'cop$@%be$@%hungry', 'root$@%hungry$@%VROOT', 'punct$@%.$@%hungry']","['x$@%the$@%baby', 'x$@%baby$@%hungry', 'x$@%be$@%hungry', 'x$@%hungry$@%VROOT', 'x$@%.$@%hungry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%hungry$@%x', 'x$@%.$@%x']",0.055428421374284498,0.061521893221803015,0.0062261323891364961
+I10T-gNSC-p231-r2,The baby is crying and reaching out. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	reach	_	VBG	VBG	_	4	conj_and	_	_
+7	out	_	RP	RP	_	6	prt	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%reach', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%reach$@%cry', 'prt$@%out$@%reach', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%reach', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%reach$@%cry', 'x$@%out$@%reach', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%and$@%x', 'x$@%reach$@%x', 'x$@%out$@%x', 'x$@%.$@%x']",0.028118605395375806,0.026493797704875477,0.0024192461569879642
+I10T-gNSC-p235-r2,The young one is upset.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	one	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	upset	_	JJ	JJ	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%one', 'amod$@%young$@%one', 'nsubj$@%one$@%upset', 'cop$@%be$@%upset', 'root$@%upset$@%VROOT', 'punct$@%.$@%upset']","['x$@%the$@%one', 'x$@%young$@%one', 'x$@%one$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%.$@%upset']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%one$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']",0.062274472362094047,0.071148328348399237,0.009759880728126169
+I10T-gNSC-p236-r2,He's crying,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cry	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%he$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.057027369442536169,0.060677201562026939,0.0082799173254448633
+I10T-gNSC-p244-r2,The baby is screaming. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	scream	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%scream', 'aux$@%be$@%scream', 'root$@%scream$@%VROOT', 'punct$@%.$@%scream']","['x$@%the$@%baby', 'x$@%baby$@%scream', 'x$@%be$@%scream', 'x$@%scream$@%VROOT', 'x$@%.$@%scream']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%scream$@%x', 'x$@%.$@%x']",0.042613501653437358,0.053167950948538656,0.0053662775533191986
+I10T-gNSC-p245-r2,It is bawling.,1,1,1,1,1,"1	it	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	bawl	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%it$@%bawl', 'aux$@%be$@%bawl', 'root$@%bawl$@%VROOT', 'punct$@%.$@%bawl']","['x$@%it$@%bawl', 'x$@%be$@%bawl', 'x$@%bawl$@%VROOT', 'x$@%.$@%bawl']","['x$@%it$@%x', 'x$@%be$@%x', 'x$@%bawl$@%x', 'x$@%.$@%x']",0.071058733377698746,0.071515739080772578,0.0084561800975172519
+I10T-gNSC-p247-r2,The baby is unhappy.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	unhappy	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%unhappy', 'cop$@%be$@%unhappy', 'root$@%unhappy$@%VROOT', 'punct$@%.$@%unhappy']","['x$@%the$@%baby', 'x$@%baby$@%unhappy', 'x$@%be$@%unhappy', 'x$@%unhappy$@%VROOT', 'x$@%.$@%unhappy']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%unhappy$@%x', 'x$@%.$@%x']",0.073300158773906277,0.083860439687890698,0.0080645131478215282
+I10T-gNSC-p249-r2,The baby is crying because she wants her bottle.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	because	_	IN	IN	_	7	mark	_	_
+6	she	_	PRP	PRP	_	7	nsubj	_	_
+7	want	_	VBZ	VBZ	_	4	advcl	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	bottle	_	NN	NN	_	7	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'mark$@%because$@%want', 'nsubj$@%she$@%want', 'advcl$@%want$@%cry', 'poss$@%she$@%bottle', 'dobj$@%bottle$@%want', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%because$@%want', 'x$@%she$@%want', 'x$@%want$@%cry', 'x$@%she$@%bottle', 'x$@%bottle$@%want', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%because$@%x', 'x$@%she$@%x', 'x$@%want$@%x', 'x$@%she$@%x', 'x$@%bottle$@%x', 'x$@%.$@%x']",0.015290459809825241,0.015918109004836034,0.0049019432096270021
+I10T-gNSC-p253-r2,laughing,1,1,1,1,0,"1	laugh	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%laugh$@%VROOT', 'punct$@%.$@%laugh']","['x$@%laugh$@%VROOT', 'x$@%.$@%laugh']","['x$@%laugh$@%x', 'x$@%.$@%x']",0.11580526220074283,0.12421903408688473,0.040941577985252331
+I10T-gNSC-p254-r2,He is crying loudly,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cry	_	VBG	VBG	_	0	root	_	_
+4	loudly	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'dobj$@%loudly$@%cry', 'punct$@%.$@%cry']","['x$@%he$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%loudly$@%cry', 'x$@%.$@%cry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%loudly$@%x', 'x$@%.$@%x']",0.061324758482167674,0.063933533305695733,0.010953655701397613
+I10T-gNSC-p255-r2,I don't like screaming babies.,1,0,1,0,0,"1	i	_	PRP	PRP	_	4	nsubj	_	_
+2	do	_	VBP	VBP	_	4	aux	_	_
+3	not	_	RB	RB	_	4	neg	_	_
+4	like	_	VB	VB	_	0	root	_	_
+5	scream	_	VBG	VBG	_	4	xcomp	_	_
+6	baby	_	NNS	NNS	_	5	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['nsubj$@%i$@%like', 'aux$@%do$@%like', 'neg$@%not$@%like', 'root$@%like$@%VROOT', 'xcomp$@%scream$@%like', 'dobj$@%baby$@%scream', 'punct$@%.$@%like']","['x$@%i$@%like', 'x$@%do$@%like', 'x$@%not$@%like', 'x$@%like$@%VROOT', 'x$@%scream$@%like', 'x$@%baby$@%scream', 'x$@%.$@%like']","['x$@%i$@%x', 'x$@%do$@%x', 'x$@%not$@%x', 'x$@%like$@%x', 'x$@%scream$@%x', 'x$@%baby$@%x', 'x$@%.$@%x']",0.059842971984060078,0.061607488263502486,0.0052583431742760922
+I10T-gNSC-p257-r2,Do you suppose the baby needs to have it's diaper changed?,1,0,1,0,0,"1	do	_	VBP	VBP	_	3	aux	_	_
+2	you	_	PRP	PRP	_	3	nsubj	_	_
+3	suppose	_	VB	VB	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	baby	_	NN	NN	_	12	xsubj	_	_
+6	need	_	VBZ	VBZ	_	3	ccomp	_	_
+7	to	_	TO	TO	_	12	aux	_	_
+8	have	_	VB	VB	_	12	aux	_	_
+9	it	_	PRP	PRP	_	11	poss	_	_
+10	be	_	POS	POS	_	0	erased	_	_
+11	diaper	_	NN	NN	_	12	dobj	_	_
+12	change	_	VBN	VBN	_	6	xcomp	_	_
+13	?	_	.	.	_	3	punct	_	_","['aux$@%do$@%suppose', 'nsubj$@%you$@%suppose', 'root$@%suppose$@%VROOT', 'det$@%the$@%baby', 'xsubj$@%baby$@%change', 'ccomp$@%need$@%suppose', 'aux$@%to$@%change', 'aux$@%have$@%change', 'poss$@%it$@%diaper', 'erased$@%be$@%WORDERASED', 'dobj$@%diaper$@%change', 'xcomp$@%change$@%need', 'punct$@%?$@%suppose']","['x$@%do$@%suppose', 'x$@%you$@%suppose', 'x$@%suppose$@%VROOT', 'x$@%the$@%baby', 'x$@%baby$@%change', 'x$@%need$@%suppose', 'x$@%to$@%change', 'x$@%have$@%change', 'x$@%it$@%diaper', 'x$@%be$@%WORDERASED', 'x$@%diaper$@%change', 'x$@%change$@%need', 'x$@%?$@%suppose']","['x$@%do$@%x', 'x$@%you$@%x', 'x$@%suppose$@%x', 'x$@%the$@%x', 'x$@%baby$@%x', 'x$@%need$@%x', 'x$@%to$@%x', 'x$@%have$@%x', 'x$@%it$@%x', 'x$@%be$@%x', 'x$@%diaper$@%x', 'x$@%change$@%x', 'x$@%?$@%x']",0.050148667473250641,0.050305909215748068,0.0054576283488541044
+I10T-gNSC-p258-r2,he baby is throwing a crying tantrum.,1,1,0,1,1,"1	he	_	PRP	PRP	_	4	nsubj	_	_
+2	baby	_	RB	RB	_	4	advmod	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	cry	_	JJ	JJ	_	7	amod	_	_
+7	tantrum	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['nsubj$@%he$@%throw', 'advmod$@%baby$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%tantrum', 'amod$@%cry$@%tantrum', 'dobj$@%tantrum$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%baby$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%tantrum', 'x$@%cry$@%tantrum', 'x$@%tantrum$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%cry$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.059972681487083457,0.065018149427633065,0.0036384812415120038
+I10T-gNSC-p261-r2,This baby is whining. ,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	whine	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%this$@%baby', 'nsubj$@%baby$@%whine', 'aux$@%be$@%whine', 'root$@%whine$@%VROOT', 'punct$@%.$@%whine']","['x$@%this$@%baby', 'x$@%baby$@%whine', 'x$@%be$@%whine', 'x$@%whine$@%VROOT', 'x$@%.$@%whine']","['x$@%this$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%whine$@%x', 'x$@%.$@%x']",0.050337020717426961,0.051681434417185979,0.0069097724883987466
+I10T-gNSC-p262-r2,This baby is screaming ,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	scream	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%this$@%baby', 'nsubj$@%baby$@%scream', 'aux$@%be$@%scream', 'root$@%scream$@%VROOT', 'punct$@%.$@%scream']","['x$@%this$@%baby', 'x$@%baby$@%scream', 'x$@%be$@%scream', 'x$@%scream$@%VROOT', 'x$@%.$@%scream']","['x$@%this$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%scream$@%x', 'x$@%.$@%x']",0.043166250694325892,0.053973739358464612,0.00666072404754392
+I10T-gNSC-p263-r2,The baby is crying because it wants to be held.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	because	_	IN	IN	_	7	mark	_	_
+6	it	_	PRP	PRP	_	10	xsubj	_	_
+7	want	_	VBZ	VBZ	_	4	advcl	_	_
+8	to	_	TO	TO	_	10	aux	_	_
+9	be	_	VB	VB	_	10	auxpass	_	_
+10	hold	_	VBN	VBN	_	7	xcomp	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'mark$@%because$@%want', 'xsubj$@%it$@%hold', 'advcl$@%want$@%cry', 'aux$@%to$@%hold', 'auxpass$@%be$@%hold', 'xcomp$@%hold$@%want', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%because$@%want', 'x$@%it$@%hold', 'x$@%want$@%cry', 'x$@%to$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%want', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%because$@%x', 'x$@%it$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%.$@%x']",0.015122222833908627,0.013566206272103032,0.0016555680505868642
+I10T-gNSC-p264-r2,The baby is upset,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	upset	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%upset', 'cop$@%be$@%upset', 'root$@%upset$@%VROOT', 'punct$@%.$@%upset']","['x$@%the$@%baby', 'x$@%baby$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%.$@%upset']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']",0.052672115349080562,0.055205840370200487,0.00572152604944276
+I10T-gNSC-p270-r2,She is sitting and crying.,1,1,1,1,1,"1	she	_	PRP	PRP	_	5	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	sit	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	cry	_	VBG	VBG	_	3	conj_and	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cry', 'aux$@%be$@%sit', 'root$@%sit$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%cry$@%sit', 'punct$@%.$@%sit']","['x$@%she$@%cry', 'x$@%be$@%sit', 'x$@%sit$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%cry$@%sit', 'x$@%.$@%sit']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%sit$@%x', 'x$@%and$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.038899019262558454,0.044898845322660752,0.0050641434746201419
+I10T-gNSC-p271-r2,The baby is wailing. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wail	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%the$@%baby', 'x$@%baby$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.048145175704435883,0.051084367711463186,0.005072330770294009
+I10T-gNSC-p272-r2,Kdid,1,0,0,0,0,"1	kdid	_	VBN	VBN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%kdid$@%VROOT', 'punct$@%.$@%kdid']","['x$@%kdid$@%VROOT', 'x$@%.$@%kdid']","['x$@%kdid$@%x', 'x$@%.$@%x']",0.16256051683860917,0.18709923286176366,0.057057655977734822
+I10T-gNSC-p274-r2,The baby needs something and is crying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	7	nsubj	_	_
+3	need	_	VBZ	VBZ	_	0	root	_	_
+4	something	_	NN	NN	_	3	dobj	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	cry	_	VBG	VBG	_	3	conj_and	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'root$@%need$@%VROOT', 'dobj$@%something$@%need', 'erased$@%and$@%WORDERASED', 'aux$@%be$@%cry', 'conj_and$@%cry$@%need', 'punct$@%.$@%need']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%need$@%VROOT', 'x$@%something$@%need', 'x$@%and$@%WORDERASED', 'x$@%be$@%cry', 'x$@%cry$@%need', 'x$@%.$@%need']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%need$@%x', 'x$@%something$@%x', 'x$@%and$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.046126340481549066,0.0351959504805468,0.0042354539838321825
+I10T-gNSC-p276-r2,He is upset.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	upset	_	JJ	JJ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%upset', 'cop$@%be$@%upset', 'root$@%upset$@%VROOT', 'punct$@%.$@%upset']","['x$@%he$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%.$@%upset']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']",0.087224227751510286,0.09344758966735478,0.01052855803105357
+I10T-gNSC-p277-r2,The baby wants to be picked up.,1,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	xsubj	_	_
+3	want	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	auxpass	_	_
+6	pick	_	VBN	VBN	_	3	xcomp	_	_
+7	up	_	RP	RP	_	6	prt	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'xsubj$@%baby$@%pick', 'root$@%want$@%VROOT', 'aux$@%to$@%pick', 'auxpass$@%be$@%pick', 'xcomp$@%pick$@%want', 'prt$@%up$@%pick', 'punct$@%.$@%want']","['x$@%the$@%baby', 'x$@%baby$@%pick', 'x$@%want$@%VROOT', 'x$@%to$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%want', 'x$@%up$@%pick', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.041405837654049926,0.035239016181994209,0.0035172812572186185
+I10T-gNSC-p282-r2,The baby wants its mother.,1,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	want	_	VBZ	VBZ	_	0	root	_	_
+4	its	_	PRP$	PRP$	_	5	poss	_	_
+5	mother	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%want', 'root$@%want$@%VROOT', 'poss$@%its$@%mother', 'dobj$@%mother$@%want', 'punct$@%.$@%want']","['x$@%the$@%baby', 'x$@%baby$@%want', 'x$@%want$@%VROOT', 'x$@%its$@%mother', 'x$@%mother$@%want', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%want$@%x', 'x$@%its$@%x', 'x$@%mother$@%x', 'x$@%.$@%x']",0.033953407556327364,0.033364597324372136,0.0053209624882660789
+I10T-gNSF-p293-r2,The baby is crying and screaming.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	scream	_	VBG	VBG	_	4	conj_and	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%scream', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%scream$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%scream', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%scream$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%and$@%x', 'x$@%scream$@%x', 'x$@%.$@%x']",0.035052563574532125,0.033474938237772811,0.004416631455717579
+I10T-gNSF-p299-r2,The baby is throwing a tantrum.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tantrum	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%tantrum', 'dobj$@%tantrum$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%baby', 'x$@%baby$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%tantrum', 'x$@%tantrum$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%tantrum$@%x', 'x$@%.$@%x']",0.048919547286766618,0.051904917559736807,0.0048022280941655282
+I10T-gNSF-p301-r2,The baby is being annoying.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	cop	_	_
+5	annoying	_	JJ	JJ	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%annoying', 'aux$@%be$@%annoying', 'cop$@%be$@%annoying', 'root$@%annoying$@%VROOT', 'punct$@%.$@%annoying']","['x$@%the$@%baby', 'x$@%baby$@%annoying', 'x$@%be$@%annoying', 'x$@%be$@%annoying', 'x$@%annoying$@%VROOT', 'x$@%.$@%annoying']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%annoying$@%x', 'x$@%.$@%x']",0.1143482231438484,0.13257390725856,0.0081885366568666962
+I10T-gNSF-p302-r2,He is wailing.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wail	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%he$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.069467837370525309,0.073664194066177746,0.0082678885411447967
+I10T-gNSF-p303-r2,He is wailing for his parents to come.,1,1,1,1,1,"1	he	_	PRP	PRP	_	8	xsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wail	_	VBG	VBG	_	0	root	_	_
+4	for	_	IN	IN	_	0	erased	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	parent	_	NNS	NNS	_	3	prep_for	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	come	_	VB	VB	_	3	xcomp	_	_
+9	.	_	.	.	_	3	punct	_	_","['xsubj$@%he$@%come', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%parent', 'prep_for$@%parent$@%wail', 'aux$@%to$@%come', 'xcomp$@%come$@%wail', 'punct$@%.$@%wail']","['x$@%he$@%come', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%he$@%parent', 'x$@%parent$@%wail', 'x$@%to$@%come', 'x$@%come$@%wail', 'x$@%.$@%wail']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%parent$@%x', 'x$@%to$@%x', 'x$@%come$@%x', 'x$@%.$@%x']",0.041112308685259502,0.030487517320677893,0.0051329166583378161
+I10T-gNSF-p306-r2,He is wailing. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wail	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%he$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.069467837370525309,0.073664194066177746,0.0082678885411447967
+I10T-gNSF-p495-r2,The baby is wailing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wail	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%the$@%baby', 'x$@%baby$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.048145175704435883,0.051084367711463186,0.005072330770294009
+I10T-gNSF-p496-r2,He is throwing the tantrum of a lifetime.,1,1,1,1,0,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	tantrum	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	lifetime	_	NN	NN	_	5	prep_of	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%tantrum', 'dobj$@%tantrum$@%throw', 'erased$@%of$@%WORDERASED', 'det$@%a$@%lifetime', 'prep_of$@%lifetime$@%tantrum', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%tantrum', 'x$@%tantrum$@%throw', 'x$@%of$@%WORDERASED', 'x$@%a$@%lifetime', 'x$@%lifetime$@%tantrum', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%tantrum$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%lifetime$@%x', 'x$@%.$@%x']",0.056966110785728108,0.06153611143195914,0.0077566792335838075
+I10T-gNSF-p497-r2,He's wailing.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wail	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wail', 'aux$@%be$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%he$@%wail', 'x$@%be$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']",0.069467837370525309,0.073664194066177746,0.0082678885411452407

@@ -1,0 +1,665 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I03T-gNSF-p142-r2,The man is giving a parcel to a lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	parcel	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	lady	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%parcel', 'dobj$@%parcel$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%lady', 'prep_to$@%lady$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%parcel', 'x$@%parcel$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%lady', 'x$@%lady$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%parcel$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.015477993460567219,0.01831716328113131,0.0017750736124049205
+I03T-gNSF-p145-r2,He is handing a lady a box.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	lady	_	NN	NN	_	3	iobj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	box	_	NN	NN	_	5	dep	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%lady', 'iobj$@%lady$@%hand', 'det$@%a$@%box', 'dep$@%box$@%lady', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%lady', 'x$@%lady$@%hand', 'x$@%a$@%box', 'x$@%box$@%lady', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%.$@%x']",0.059321513490933508,0.060110745201717442,0.0072481314950315623
+I03T-gNSF-p146-r2,The man is handing over a package to recipient.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	over	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	prep_over	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	recipient	_	NNP	NNP	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'erased$@%over$@%WORDERASED', 'det$@%a$@%package', 'prep_over$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'prep_to$@%recipient$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%over$@%WORDERASED', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%recipient$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%over$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%recipient$@%x', 'x$@%.$@%x']",0.017184779675637252,0.025042909700712657,0.0015456542773921722
+I03T-gNSF-p147-r2,The man is delivering a package to the woman. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.015070328499409036,0.014879587133405314,0.00072634558242756775
+I03T-gNSF-p148-r2,He's handing a box to the lady.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	box	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	lady	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%box', 'dobj$@%box$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%hand', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%box', 'x$@%box$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%hand', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.040991807630269661,0.050378198306357258,0.0053762899843049494
+I03T-gNSF-p149-r2,The man is making a package delivery to an office. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	package	_	NN	NN	_	7	nn	_	_
+7	delivery	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	office	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%delivery', 'nn$@%package$@%delivery', 'dobj$@%delivery$@%make', 'erased$@%to$@%WORDERASED', 'det$@%a$@%office', 'prep_to$@%office$@%make', 'punct$@%.$@%make']","['x$@%the$@%man', 'x$@%man$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%delivery', 'x$@%package$@%delivery', 'x$@%delivery$@%make', 'x$@%to$@%WORDERASED', 'x$@%a$@%office', 'x$@%office$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%delivery$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%office$@%x', 'x$@%.$@%x']",0.017706737979664045,0.019891556124654985,0.001894279097622853
+I03T-gNSF-p150-r2,The man is delivering a package.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.023496083105789212,0.031865819454559019,0.0025207789329166896
+I03T-gNSC-p152-r2,The man appears to be delivering a package,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	xsubj	_	_
+3	appear	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	aux	_	_
+6	deliver	_	VBG	VBG	_	3	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	package	_	NN	NN	_	6	dobj	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'xsubj$@%man$@%deliver', 'root$@%appear$@%VROOT', 'aux$@%to$@%deliver', 'aux$@%be$@%deliver', 'xcomp$@%deliver$@%appear', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%appear']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%appear$@%VROOT', 'x$@%to$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%appear', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%appear']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.024220537800122011,0.031975845252045443,0.0029671421028212297
+I03T-gNSC-p153-r2,To a women ,0,0,0,0,0,"1	to	_	TO	TO	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	woman	_	NNS	NNS	_	1	pobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%to$@%VROOT', 'det$@%a$@%woman', 'pobj$@%woman$@%to', 'punct$@%.$@%to']","['x$@%to$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%to', 'x$@%.$@%to']","['x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.11225784138998784,0.09182687637688336,0.016316124812705723
+I03T-gNSC-p159-r2,The man is delivering a package.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.023496083105789212,0.031865819454559019,0.0025207789329165786
+I03T-gNSC-p162-r2,Delivering a package ,1,1,1,1,1,"1	deliver	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	package	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.034672257490280689,0.046801540316430912,0.012872525825133097
+I03T-gNSC-p163-r2,Delivering a package to the woman,1,1,1,1,1,"1	deliver	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	package	_	NN	NN	_	1	dobj	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	1	prep_to	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%deliver', 'punct$@%.$@%deliver']","['x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%deliver', 'x$@%.$@%deliver']","['x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.019163696614681314,0.013393310095369593,0.001679532626190583
+I03T-gNSC-p168-r2,The man is flirting with the woman.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	flirt	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	woman	_	NN	NN	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%flirt', 'aux$@%be$@%flirt', 'root$@%flirt$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%woman', 'prep_with$@%woman$@%flirt', 'punct$@%.$@%flirt']","['x$@%the$@%man', 'x$@%man$@%flirt', 'x$@%be$@%flirt', 'x$@%flirt$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%flirt', 'x$@%.$@%flirt']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%flirt$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.054436607880078647,0.060317376019568769,0.0077014248374838168
+I03T-gNSC-p169-r2,the receptionist is receiving a package,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	receptionist	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	receive	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%receptionist', 'nsubj$@%receptionist$@%receive', 'aux$@%be$@%receive', 'root$@%receive$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%receive', 'punct$@%.$@%receive']","['x$@%the$@%receptionist', 'x$@%receptionist$@%receive', 'x$@%be$@%receive', 'x$@%receive$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%receive', 'x$@%.$@%receive']","['x$@%the$@%x', 'x$@%receptionist$@%x', 'x$@%be$@%x', 'x$@%receive$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.080391727633158383,0.10736106960715752,0.015006930618816194
+I03T-gNSC-p170-r2,The man is picking up a package.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pick	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%pick', 'aux$@%be$@%pick', 'root$@%pick$@%VROOT', 'prt$@%up$@%pick', 'det$@%a$@%package', 'dobj$@%package$@%pick', 'punct$@%.$@%pick']","['x$@%the$@%man', 'x$@%man$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%VROOT', 'x$@%up$@%pick', 'x$@%a$@%package', 'x$@%package$@%pick', 'x$@%.$@%pick']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.066662985078497328,0.065480305326211075,0.005403650877536581
+I03T-gNSC-p171-r2,A man delivered your package.,0,0,1,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	deliver	_	VBD	VBD	_	0	root	_	_
+4	you	_	PRP$	PRP$	_	5	poss	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%deliver', 'root$@%deliver$@%VROOT', 'poss$@%you$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%a$@%man', 'x$@%man$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%you$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%deliver$@%x', 'x$@%you$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.017157679514996915,0.024111132281930292,0.0053866441567446133
+I03T-gNSC-p172-r2,eat,0,0,0,0,0,"1	eat	_	VB	VB	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%eat$@%x', 'x$@%.$@%x']",0.096979103445562709,0.078780431793960992,0.023484496320297588
+I03T-gNSC-p173-r2,He's picking up a package. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	pick	_	VBG	VBG	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pick', 'aux$@%be$@%pick', 'root$@%pick$@%VROOT', 'prt$@%up$@%pick', 'det$@%a$@%package', 'dobj$@%package$@%pick', 'punct$@%.$@%pick']","['x$@%he$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%VROOT', 'x$@%up$@%pick', 'x$@%a$@%package', 'x$@%package$@%pick', 'x$@%.$@%pick']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.091998321454965115,0.086710536874084698,0.0083525127102375141
+I03T-gNSC-p174-r2,The man is giving and delivering a box to the lady. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	deliver	_	VBG	VBG	_	4	conj_and	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	box	_	NN	NN	_	4	dobj	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	lady	_	NN	NN	_	8	prep_to	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%deliver$@%give', 'det$@%a$@%box', 'dobj$@%box$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%box', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%deliver$@%give', 'x$@%a$@%box', 'x$@%box$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%box', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%and$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.019116298187943137,0.025721935574700039,0.002835422943986754
+I03T-gNSC-p175-r2,The woman is taking a package from the man.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_from	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%take', 'erased$@%from$@%WORDERASED', 'det$@%the$@%man', 'prep_from$@%man$@%take', 'punct$@%.$@%take']","['x$@%the$@%woman', 'x$@%woman$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%take', 'x$@%from$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.026436730258461716,0.031939015216436717,0.0028054672040880302
+I03T-gNSC-p176-r2,To da gril,0,0,0,0,0,"1	to	_	TO	TO	_	2	aux	_	_
+2	da	_	VB	VB	_	0	root	_	_
+3	gril	_	NN	NN	_	2	dobj	_	_
+4	.	_	.	.	_	2	punct	_	_","['aux$@%to$@%da', 'root$@%da$@%VROOT', 'dobj$@%gril$@%da', 'punct$@%.$@%da']","['x$@%to$@%da', 'x$@%da$@%VROOT', 'x$@%gril$@%da', 'x$@%.$@%da']","['x$@%to$@%x', 'x$@%da$@%x', 'x$@%gril$@%x', 'x$@%.$@%x']",0.081027296856521658,0.062757867318286253,0.015375720647298752
+I03T-gNSC-p177-r2,He is delivering a box.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	box	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%box', 'dobj$@%box$@%deliver', 'punct$@%.$@%deliver']","['x$@%he$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%box', 'x$@%box$@%deliver', 'x$@%.$@%deliver']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%.$@%x']",0.061526527764824035,0.071554721392594667,0.0085150942283371833
+I03T-gNSC-p181-r2,dropping off sexual gadgets.,0,1,1,1,0,"1	drop	_	VBG	VBG	_	0	root	_	_
+2	off	_	RP	RP	_	1	prt	_	_
+3	sexual	_	JJ	JJ	_	4	amod	_	_
+4	gadget	_	NNS	NNS	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%drop$@%VROOT', 'prt$@%off$@%drop', 'amod$@%sexual$@%gadget', 'dobj$@%gadget$@%drop', 'punct$@%.$@%drop']","['x$@%drop$@%VROOT', 'x$@%off$@%drop', 'x$@%sexual$@%gadget', 'x$@%gadget$@%drop', 'x$@%.$@%drop']","['x$@%drop$@%x', 'x$@%off$@%x', 'x$@%sexual$@%x', 'x$@%gadget$@%x', 'x$@%.$@%x']",0.086482365972991748,0.071926376984261298,0.014557793402275476
+I03T-gNSC-p187-r2,The man is handing a package to the young lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	lady	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'amod$@%young$@%lady', 'prep_to$@%lady$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.034394863503048989,0.038812022567201065,0.0032172005848533081
+I03T-gNSC-p190-r2,The delivery man is handing a package to the lady.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	delivery	_	NN	NN	_	3	nn	_	_
+3	man	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	hand	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	5	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	lady	_	NN	NN	_	5	prep_to	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nn$@%delivery$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%delivery$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%delivery$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.027435699943604286,0.029405381412713538,0.002007364239629772
+I03T-gNSC-p192-r2,The secretary is receiving a pakage.,0,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	secretary	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	receive	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pakage	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%secretary', 'nsubj$@%secretary$@%receive', 'aux$@%be$@%receive', 'root$@%receive$@%VROOT', 'det$@%a$@%pakage', 'dobj$@%pakage$@%receive', 'punct$@%.$@%receive']","['x$@%the$@%secretary', 'x$@%secretary$@%receive', 'x$@%be$@%receive', 'x$@%receive$@%VROOT', 'x$@%a$@%pakage', 'x$@%pakage$@%receive', 'x$@%.$@%receive']","['x$@%the$@%x', 'x$@%secretary$@%x', 'x$@%be$@%x', 'x$@%receive$@%x', 'x$@%a$@%x', 'x$@%pakage$@%x', 'x$@%.$@%x']",0.077508291406776508,0.1025976281435278,0.013594515680872665
+I03T-gNSC-p199-r2,The man is delivering a package to a woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.014006982762860165,0.014132584136389403,0.0012108111215541895
+I03T-gNSC-p202-r2,The man is admiring the woman.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	admire	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%admire', 'aux$@%be$@%admire', 'root$@%admire$@%VROOT', 'det$@%the$@%woman', 'dobj$@%woman$@%admire', 'punct$@%.$@%admire']","['x$@%the$@%man', 'x$@%man$@%admire', 'x$@%be$@%admire', 'x$@%admire$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%admire', 'x$@%.$@%admire']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%admire$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.037498187611971656,0.041698483957389065,0.0047790498902757772
+I03T-gNSC-p204-r2,This man is presenting a package to the woman.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	present	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%present', 'aux$@%be$@%present', 'root$@%present$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%present', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%present', 'punct$@%.$@%present']","['x$@%this$@%man', 'x$@%man$@%present', 'x$@%be$@%present', 'x$@%present$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%present', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%present', 'x$@%.$@%present']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%present$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.032833459314203006,0.039042085708252627,0.0027160435192823407
+I03T-gNSC-p209-r2,GIVING HER A PACKAGE,1,1,1,1,1,"1	give	_	NNP	NNP	_	4	nn	_	_
+2	her	_	NNP	NNP	_	4	nn	_	_
+3	a	_	NNP	NNP	_	4	nn	_	_
+4	package	_	NNP	NNP	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['nn$@%give$@%package', 'nn$@%her$@%package', 'nn$@%a$@%package', 'root$@%package$@%VROOT', 'punct$@%.$@%package']","['x$@%give$@%package', 'x$@%her$@%package', 'x$@%a$@%package', 'x$@%package$@%VROOT', 'x$@%.$@%package']","['x$@%give$@%x', 'x$@%her$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.094830645271238967,0.085244889464234475,0.0082086015627480524
+I03T-gNSC-p211-r2,This man is making a special delivery to the office.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	special	_	JJ	JJ	_	7	amod	_	_
+7	delivery	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	office	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%delivery', 'amod$@%special$@%delivery', 'dobj$@%delivery$@%make', 'erased$@%to$@%WORDERASED', 'det$@%the$@%office', 'prep_to$@%office$@%make', 'punct$@%.$@%make']","['x$@%this$@%man', 'x$@%man$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%delivery', 'x$@%special$@%delivery', 'x$@%delivery$@%make', 'x$@%to$@%WORDERASED', 'x$@%the$@%office', 'x$@%office$@%make', 'x$@%.$@%make']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%special$@%x', 'x$@%delivery$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%office$@%x', 'x$@%.$@%x']",0.019187720116887519,0.019251594558021723,0.0035354439301346074
+I03T-gNSC-p212-r2,He's giving her a box. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	give	_	VBG	VBG	_	0	root	_	_
+4	she	_	PRP	PRP	_	3	iobj	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	box	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'iobj$@%she$@%give', 'det$@%a$@%box', 'dobj$@%box$@%give', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%she$@%give', 'x$@%a$@%box', 'x$@%box$@%give', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%she$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%.$@%x']",0.081178768514089228,0.067832563200815543,0.0084354450832270222
+I03T-gNSC-p213-r2,The man is delivering a package to a company.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	company	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%a$@%company', 'prep_to$@%company$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%a$@%company', 'x$@%company$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%company$@%x', 'x$@%.$@%x']",0.012684868165920515,0.013114801704982804,0.0014073737171628187
+I03T-gNSC-p215-r2,He is dropping a package off at its location.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	drop	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	6	npadvmod	_	_
+6	off	_	RB	RB	_	3	advmod	_	_
+7	at	_	IN	IN	_	0	erased	_	_
+8	its	_	PRP$	PRP$	_	9	poss	_	_
+9	location	_	NN	NN	_	3	prep_at	_	_
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%drop', 'aux$@%be$@%drop', 'root$@%drop$@%VROOT', 'det$@%a$@%package', 'npadvmod$@%package$@%off', 'advmod$@%off$@%drop', 'erased$@%at$@%WORDERASED', 'poss$@%its$@%location', 'prep_at$@%location$@%drop', 'punct$@%.$@%drop']","['x$@%he$@%drop', 'x$@%be$@%drop', 'x$@%drop$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%off', 'x$@%off$@%drop', 'x$@%at$@%WORDERASED', 'x$@%its$@%location', 'x$@%location$@%drop', 'x$@%.$@%drop']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%drop$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%off$@%x', 'x$@%at$@%x', 'x$@%its$@%x', 'x$@%location$@%x', 'x$@%.$@%x']",0.046468289306253796,0.047474602617118222,0.0044518791162837523
+I03T-gNSC-p216-r2,handing over a package,1,1,1,1,1,"1	hand	_	VBG	VBG	_	0	root	_	_
+2	over	_	IN	IN	_	0	erased	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	package	_	NN	NN	_	1	prep_over	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%hand$@%VROOT', 'erased$@%over$@%WORDERASED', 'det$@%a$@%package', 'prep_over$@%package$@%hand', 'punct$@%.$@%hand']","['x$@%hand$@%VROOT', 'x$@%over$@%WORDERASED', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%.$@%hand']","['x$@%hand$@%x', 'x$@%over$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.031125767714519914,0.03850041201478871,0.007756903583575725
+I03T-gNSC-p217-r2,The delivery man is handing the woman a package.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	delivery	_	NN	NN	_	3	nn	_	_
+3	man	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	hand	_	VBG	VBG	_	0	root	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	woman	_	NN	NN	_	5	iobj	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	package	_	NN	NN	_	7	dep	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nn$@%delivery$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%hand', 'det$@%a$@%package', 'dep$@%package$@%woman', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%delivery$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%a$@%package', 'x$@%package$@%woman', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%delivery$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.039817878883274482,0.037592215280254249,0.0019414239762042262
+I03T-gNSC-p220-r2,The man is picking up a package to deliver.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pick	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	deliver	_	VB	VB	_	7	infmod	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%pick', 'aux$@%be$@%pick', 'root$@%pick$@%VROOT', 'prt$@%up$@%pick', 'det$@%a$@%package', 'dobj$@%package$@%pick', 'aux$@%to$@%deliver', 'infmod$@%deliver$@%package', 'punct$@%.$@%pick']","['x$@%the$@%man', 'x$@%man$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%VROOT', 'x$@%up$@%pick', 'x$@%a$@%package', 'x$@%package$@%pick', 'x$@%to$@%deliver', 'x$@%deliver$@%package', 'x$@%.$@%pick']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%deliver$@%x', 'x$@%.$@%x']",0.03985343567628763,0.039352016055412276,0.0021662152452619488
+I03T-gNSC-p222-r2,delivering a package,1,1,1,1,1,"1	deliver	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	package	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.034672257490280689,0.046801540316431134,0.012872525825132874
+I03T-gNSC-p224-r2,The man hands a delivery to the woman.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	hand	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	delivery	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%delivery', 'dobj$@%delivery$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%delivery', 'x$@%delivery$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%delivery$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.024592573082927061,0.03139534985231518,0.0038678020392163281
+I03T-gNSC-p226-r2,Providing the female with a delivery,1,1,1,1,1,"1	provide	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	female	_	NN	NN	_	1	dobj	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	delivery	_	NN	NN	_	1	prep_with	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%provide$@%VROOT', 'det$@%the$@%female', 'dobj$@%female$@%provide', 'erased$@%with$@%WORDERASED', 'det$@%a$@%delivery', 'prep_with$@%delivery$@%provide', 'punct$@%.$@%provide']","['x$@%provide$@%VROOT', 'x$@%the$@%female', 'x$@%female$@%provide', 'x$@%with$@%WORDERASED', 'x$@%a$@%delivery', 'x$@%delivery$@%provide', 'x$@%.$@%provide']","['x$@%provide$@%x', 'x$@%the$@%x', 'x$@%female$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%delivery$@%x', 'x$@%.$@%x']",0.057369985788949585,0.051576454315061748,0.010731645077295515
+I03T-gNSC-p230-r2,The man is a courier.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	courier	_	NN	NN	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%courier', 'cop$@%be$@%courier', 'det$@%a$@%courier', 'root$@%courier$@%VROOT', 'punct$@%.$@%courier']","['x$@%the$@%man', 'x$@%man$@%courier', 'x$@%be$@%courier', 'x$@%a$@%courier', 'x$@%courier$@%VROOT', 'x$@%.$@%courier']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%courier$@%x', 'x$@%.$@%x']",0.075557731918495574,0.081453972014356668,0.0042180636449119513
+I03T-gNSC-p231-r2,Taking a package from the girl. ,1,1,1,1,1,"1	take	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	package	_	NN	NN	_	1	dobj	_	_
+4	from	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	1	prep_from	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%take$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%take', 'erased$@%from$@%WORDERASED', 'det$@%the$@%girl', 'prep_from$@%girl$@%take', 'punct$@%.$@%take']","['x$@%take$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%take', 'x$@%from$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%take', 'x$@%.$@%take']","['x$@%take$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.029067291537754669,0.030594005601697449,0.0046096361757770321
+I03T-gNSC-p234-r2,The woman is handing a package to the man,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.030982084120385167,0.039939801256045016,0.0030469074600817381
+I03T-gNSC-p235-r2,The woman is taking a delivery.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	delivery	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%delivery', 'dobj$@%delivery$@%take', 'punct$@%.$@%take']","['x$@%the$@%woman', 'x$@%woman$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%delivery', 'x$@%delivery$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%delivery$@%x', 'x$@%.$@%x']",0.02497248197445423,0.025660428083096321,0.0027582925656114421
+I03T-gNSC-p236-r2,The delivery man hands the lady a box.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	delivery	_	NN	NN	_	3	nn	_	_
+3	man	_	NN	NN	_	4	nsubj	_	_
+4	hand	_	VBZ	VBZ	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	lady	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	box	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nn$@%delivery$@%man', 'nsubj$@%man$@%hand', 'root$@%hand$@%VROOT', 'det$@%the$@%lady', 'iobj$@%lady$@%hand', 'det$@%a$@%box', 'dep$@%box$@%lady', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%delivery$@%man', 'x$@%man$@%hand', 'x$@%hand$@%VROOT', 'x$@%the$@%lady', 'x$@%lady$@%hand', 'x$@%a$@%box', 'x$@%box$@%lady', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%delivery$@%x', 'x$@%man$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%.$@%x']",0.043983675985716952,0.042386664278653674,0.0045453085825295503
+I03T-gNSC-p237-r2,He gave the package to the lady at the desk. ,1,0,1,1,1,"1	he	_	PRP	PRP	_	2	nsubj	_	_
+2	give	_	VBD	VBD	_	0	root	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	package	_	NN	NN	_	2	dobj	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	lady	_	NN	NN	_	2	prep_to	_	_
+8	at	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	desk	_	NN	NN	_	2	prep_at	_	_
+11	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%package', 'dobj$@%package$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%give', 'erased$@%at$@%WORDERASED', 'det$@%the$@%desk', 'prep_at$@%desk$@%give', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%package', 'x$@%package$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%give', 'x$@%at$@%WORDERASED', 'x$@%the$@%desk', 'x$@%desk$@%give', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%at$@%x', 'x$@%the$@%x', 'x$@%desk$@%x', 'x$@%.$@%x']",0.028213421582987896,0.027726963198955956,0.0046319565471749646
+I03T-gNSC-p239-r2,The is delivering,0,0,0,0,0,"1	the	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%the$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'punct$@%.$@%deliver']","['x$@%the$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%.$@%x']",0.072063035053610447,0.10373336164308056,0.017593119017833891
+I03T-gNSC-p244-r2,The man is giving the woman a piece of mail. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	piece	_	NN	NN	_	4	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	mail	_	NN	NN	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'det$@%a$@%piece', 'dobj$@%piece$@%give', 'erased$@%of$@%WORDERASED', 'prep_of$@%mail$@%piece', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%a$@%piece', 'x$@%piece$@%give', 'x$@%of$@%WORDERASED', 'x$@%mail$@%piece', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%mail$@%x', 'x$@%.$@%x']",0.028294113863833736,0.027804166430346444,0.0025704465484753802
+I03T-gNSC-p245-r2,He is handing a box to the woman at the desk.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	box	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	3	prep_to	_	_
+9	at	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	desk	_	NN	NN	_	8	prep_at	_	_
+12	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%box', 'dobj$@%box$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%hand', 'erased$@%at$@%WORDERASED', 'det$@%the$@%desk', 'prep_at$@%desk$@%woman', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%box', 'x$@%box$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%at$@%WORDERASED', 'x$@%the$@%desk', 'x$@%desk$@%woman', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%at$@%x', 'x$@%the$@%x', 'x$@%desk$@%x', 'x$@%.$@%x']",0.026263923386886878,0.040178894697566858,0.0041505093603354526
+I03T-gNSC-p247-r2,The man is picking up a package.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pick	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%pick', 'aux$@%be$@%pick', 'root$@%pick$@%VROOT', 'prt$@%up$@%pick', 'det$@%a$@%package', 'dobj$@%package$@%pick', 'punct$@%.$@%pick']","['x$@%the$@%man', 'x$@%man$@%pick', 'x$@%be$@%pick', 'x$@%pick$@%VROOT', 'x$@%up$@%pick', 'x$@%a$@%package', 'x$@%package$@%pick', 'x$@%.$@%pick']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%up$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.066662985078497328,0.065480305326210853,0.005403650877536359
+I03T-gNSC-p249-r2,The man is handing a package to the secretary.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	secretary	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%secretary', 'prep_to$@%secretary$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%secretary', 'x$@%secretary$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%secretary$@%x', 'x$@%.$@%x']",0.02052627304043797,0.024743172835278826,0.0026514110229021171
+I03T-gNSC-p252-r2,"she is taking it lol-god, this is stupid",0,0,0,0,0,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	take	_	VBG	VBG	_	9	ccomp	_	_
+4	it	_	PRP	PRP	_	5	nsubj	_	_
+5	lol-god	_	JJ	JJ	_	3	xcomp	_	_
+6	,	_	,	,	_	9	punct	_	_
+7	this	_	DT	DT	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	cop	_	_
+9	stupid	_	JJ	JJ	_	0	root	_	_
+10	.	_	.	.	_	9	punct	_	_","['nsubj$@%she$@%take', 'aux$@%be$@%take', 'ccomp$@%take$@%stupid', 'nsubj$@%it$@%lol-god', 'xcomp$@%lol-god$@%take', 'punct$@%,$@%stupid', 'nsubj$@%this$@%stupid', 'cop$@%be$@%stupid', 'root$@%stupid$@%VROOT', 'punct$@%.$@%stupid']","['x$@%she$@%take', 'x$@%be$@%take', 'x$@%take$@%stupid', 'x$@%it$@%lol-god', 'x$@%lol-god$@%take', 'x$@%,$@%stupid', 'x$@%this$@%stupid', 'x$@%be$@%stupid', 'x$@%stupid$@%VROOT', 'x$@%.$@%stupid']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%it$@%x', 'x$@%lol-god$@%x', 'x$@%,$@%x', 'x$@%this$@%x', 'x$@%be$@%x', 'x$@%stupid$@%x', 'x$@%.$@%x']",0.078932488837184511,0.071176496896098951,0.009584011555717642
+I03T-gNSC-p253-r2,receiving a package from the secretary,1,1,1,1,1,"1	receive	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	package	_	NN	NN	_	1	dobj	_	_
+4	from	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	secretary	_	NN	NN	_	1	prep_from	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%receive$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%receive', 'erased$@%from$@%WORDERASED', 'det$@%the$@%secretary', 'prep_from$@%secretary$@%receive', 'punct$@%.$@%receive']","['x$@%receive$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%receive', 'x$@%from$@%WORDERASED', 'x$@%the$@%secretary', 'x$@%secretary$@%receive', 'x$@%.$@%receive']","['x$@%receive$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%secretary$@%x', 'x$@%.$@%x']",0.07632919620322165,0.07568222798287505,0.013531651621950247
+I03T-gNSC-p254-r2,He is delivering a package to the receptionist ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	receptionist	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%receptionist', 'prep_to$@%receptionist$@%deliver', 'punct$@%.$@%deliver']","['x$@%he$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%receptionist', 'x$@%receptionist$@%deliver', 'x$@%.$@%deliver']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%receptionist$@%x', 'x$@%.$@%x']",0.043270151811854118,0.050905261560412862,0.0063188400317646387
+I03T-gNSC-p255-r2,The man is working,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	work	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%work', 'aux$@%be$@%work', 'root$@%work$@%VROOT', 'punct$@%.$@%work']","['x$@%the$@%man', 'x$@%man$@%work', 'x$@%be$@%work', 'x$@%work$@%VROOT', 'x$@%.$@%work']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%work$@%x', 'x$@%.$@%x']",0.077501344130770589,0.072091820463016654,0.0063543356355345582
+I03T-gNSC-p257-r2,A young man will mail a package for you.,0,0,1,0,0,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	5	nsubj	_	_
+4	will	_	MD	MD	_	5	aux	_	_
+5	mail	_	VB	VB	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	5	dobj	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	you	_	PRP	PRP	_	7	prep_for	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%man', 'amod$@%young$@%man', 'nsubj$@%man$@%mail', 'aux$@%will$@%mail', 'root$@%mail$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%mail', 'erased$@%for$@%WORDERASED', 'prep_for$@%you$@%package', 'punct$@%.$@%mail']","['x$@%a$@%man', 'x$@%young$@%man', 'x$@%man$@%mail', 'x$@%will$@%mail', 'x$@%mail$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%mail', 'x$@%for$@%WORDERASED', 'x$@%you$@%package', 'x$@%.$@%mail']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%will$@%x', 'x$@%mail$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%for$@%x', 'x$@%you$@%x', 'x$@%.$@%x']",0.04808356379369505,0.050632174154207954,0.011113408446758122
+I03T-gNSC-p258-r2,The receptionist is accepting a delivery from the man.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	receptionist	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	accept	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	delivery	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_from	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%receptionist', 'nsubj$@%receptionist$@%accept', 'aux$@%be$@%accept', 'root$@%accept$@%VROOT', 'det$@%a$@%delivery', 'dobj$@%delivery$@%accept', 'erased$@%from$@%WORDERASED', 'det$@%the$@%man', 'prep_from$@%man$@%accept', 'punct$@%.$@%accept']","['x$@%the$@%receptionist', 'x$@%receptionist$@%accept', 'x$@%be$@%accept', 'x$@%accept$@%VROOT', 'x$@%a$@%delivery', 'x$@%delivery$@%accept', 'x$@%from$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%accept', 'x$@%.$@%accept']","['x$@%the$@%x', 'x$@%receptionist$@%x', 'x$@%be$@%x', 'x$@%accept$@%x', 'x$@%a$@%x', 'x$@%delivery$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.038332220530729377,0.048380944196760423,0.0066937843418498622
+I03T-gNSC-p261-r2,That guy is dropping off a package.,1,0,1,1,1,"1	that	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	drop	_	VBG	VBG	_	0	root	_	_
+5	off	_	RP	RP	_	4	prt	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%that$@%guy', 'nsubj$@%guy$@%drop', 'aux$@%be$@%drop', 'root$@%drop$@%VROOT', 'prt$@%off$@%drop', 'det$@%a$@%package', 'dobj$@%package$@%drop', 'punct$@%.$@%drop']","['x$@%that$@%guy', 'x$@%guy$@%drop', 'x$@%be$@%drop', 'x$@%drop$@%VROOT', 'x$@%off$@%drop', 'x$@%a$@%package', 'x$@%package$@%drop', 'x$@%.$@%drop']","['x$@%that$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%drop$@%x', 'x$@%off$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.057044943384266689,0.058457418286426255,0.0061198684662926439
+I03T-gNSC-p262-r2,He is delivering a package to what appears to be an office recptionist,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	what	_	WP	WP	_	8	nsubj	_	_
+8	appear	_	VBZ	VBZ	_	3	prepc_to	_	_
+9	to	_	TO	TO	_	13	aux	_	_
+10	be	_	VB	VB	_	13	cop	_	_
+11	a	_	DT	DT	_	13	det	_	_
+12	office	_	NN	NN	_	13	nn	_	_
+13	recptionist	_	NN	NN	_	8	xcomp	_	_
+14	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'nsubj$@%what$@%appear', 'prepc_to$@%appear$@%deliver', 'aux$@%to$@%recptionist', 'cop$@%be$@%recptionist', 'det$@%a$@%recptionist', 'nn$@%office$@%recptionist', 'xcomp$@%recptionist$@%appear', 'punct$@%.$@%deliver']","['x$@%he$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%what$@%appear', 'x$@%appear$@%deliver', 'x$@%to$@%recptionist', 'x$@%be$@%recptionist', 'x$@%a$@%recptionist', 'x$@%office$@%recptionist', 'x$@%recptionist$@%appear', 'x$@%.$@%deliver']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%what$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%office$@%x', 'x$@%recptionist$@%x', 'x$@%.$@%x']",0.032068117201394353,0.044969084858632602,0.0035285601364291042
+I03T-gNSC-p263-r2,The woman has handed a package to a man who is picking it up for delivery.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	have	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBN	VBN	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	12	nsubj	_	_
+10	who	_	WP	WP	_	0	erased	_	_
+11	be	_	VBZ	VBZ	_	12	aux	_	_
+12	pick	_	VBG	VBG	_	9	rcmod	_	_
+13	it	_	PRP	PRP	_	12	dobj	_	_
+14	up	_	RB	RB	_	12	advmod	_	_
+15	for	_	IN	IN	_	0	erased	_	_
+16	delivery	_	NN	NN	_	14	prep_for	_	_
+17	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%hand', 'aux$@%have$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'nsubj$@%man$@%pick', 'erased$@%who$@%WORDERASED', 'aux$@%be$@%pick', 'rcmod$@%pick$@%man', 'dobj$@%it$@%pick', 'advmod$@%up$@%pick', 'erased$@%for$@%WORDERASED', 'prep_for$@%delivery$@%up', 'punct$@%.$@%hand']","['x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%have$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%pick', 'x$@%who$@%WORDERASED', 'x$@%be$@%pick', 'x$@%pick$@%man', 'x$@%it$@%pick', 'x$@%up$@%pick', 'x$@%for$@%WORDERASED', 'x$@%delivery$@%up', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%have$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%who$@%x', 'x$@%be$@%x', 'x$@%pick$@%x', 'x$@%it$@%x', 'x$@%up$@%x', 'x$@%for$@%x', 'x$@%delivery$@%x', 'x$@%.$@%x']",0.018582311434103271,0.024114661630926237,0.0019196323035176599
+I03T-gNSC-p264-r2,The man is delivering package to the woman.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	package	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.021713255000133547,0.024699054360370232,0.0013003493818205536
+I03T-gNSC-p266-r2,A man is handing a small brown package to a woman seated at a desk. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	8	det	_	_
+6	small	_	JJ	JJ	_	8	amod	_	_
+7	brown	_	JJ	JJ	_	8	amod	_	_
+8	package	_	NN	NN	_	4	dobj	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	a	_	DT	DT	_	11	det	_	_
+11	woman	_	NN	NN	_	4	prep_to	_	_
+12	seat	_	VBN	VBN	_	11	partmod	_	_
+13	at	_	IN	IN	_	0	erased	_	_
+14	a	_	DT	DT	_	15	det	_	_
+15	desk	_	NN	NN	_	12	prep_at	_	_
+16	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'amod$@%small$@%package', 'amod$@%brown$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%hand', 'partmod$@%seat$@%woman', 'erased$@%at$@%WORDERASED', 'det$@%a$@%desk', 'prep_at$@%desk$@%seat', 'punct$@%.$@%hand']","['x$@%a$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%small$@%package', 'x$@%brown$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hand', 'x$@%seat$@%woman', 'x$@%at$@%WORDERASED', 'x$@%a$@%desk', 'x$@%desk$@%seat', 'x$@%.$@%hand']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%brown$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%seat$@%x', 'x$@%at$@%x', 'x$@%a$@%x', 'x$@%desk$@%x', 'x$@%.$@%x']",0.032743560710772557,0.033407423084647947,0.0064531289037595974
+I03T-gNSC-p270-r2,He is handing a package to a woman.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%hand', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%hand', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.033262577775647117,0.041597879573310514,0.0036914847944313767
+I03T-gNSC-p271-r2,The man is handing over the package. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	over	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	4	prep_over	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'erased$@%over$@%WORDERASED', 'det$@%the$@%package', 'prep_over$@%package$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%over$@%WORDERASED', 'x$@%the$@%package', 'x$@%package$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%over$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.020610746346093722,0.028378192944826575,0.0020486862174351472
+I03T-gNSC-p272-r2,Hfdn ,0,0,0,0,0,"1	hfdn	_	VBN	VBN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%hfdn$@%VROOT', 'punct$@%.$@%hfdn']","['x$@%hfdn$@%VROOT', 'x$@%.$@%hfdn']","['x$@%hfdn$@%x', 'x$@%.$@%x']",0.16091398896435949,0.15129564267136175,0.045549628567738587
+I03T-gNSC-p274-r2,The woman is receiving a package.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	receive	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%receive', 'aux$@%be$@%receive', 'root$@%receive$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%receive', 'punct$@%.$@%receive']","['x$@%the$@%woman', 'x$@%woman$@%receive', 'x$@%be$@%receive', 'x$@%receive$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%receive', 'x$@%.$@%receive']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%receive$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.048115822387714391,0.063325831729065696,0.0045309809861086014
+I03T-gNSC-p276-r2,He is delivering a box.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	box	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%box', 'dobj$@%box$@%deliver', 'punct$@%.$@%deliver']","['x$@%he$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%box', 'x$@%box$@%deliver', 'x$@%.$@%deliver']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%box$@%x', 'x$@%.$@%x']",0.061526527764824035,0.071554721392594667,0.0085150942283367392
+I03T-gNSC-p277-r2,The man is accepting a package,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	accept	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%accept', 'aux$@%be$@%accept', 'root$@%accept$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%accept', 'punct$@%.$@%accept']","['x$@%the$@%man', 'x$@%man$@%accept', 'x$@%be$@%accept', 'x$@%accept$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%accept', 'x$@%.$@%accept']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%accept$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.066444521378552834,0.075127073997604876,0.0064039062336783692
+I03T-gNSC-p282-r2,The woman is accepting the package delivery.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	accept	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	package	_	NN	NN	_	7	nn	_	_
+7	delivery	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%accept', 'aux$@%be$@%accept', 'root$@%accept$@%VROOT', 'det$@%the$@%delivery', 'nn$@%package$@%delivery', 'dobj$@%delivery$@%accept', 'punct$@%.$@%accept']","['x$@%the$@%woman', 'x$@%woman$@%accept', 'x$@%be$@%accept', 'x$@%accept$@%VROOT', 'x$@%the$@%delivery', 'x$@%package$@%delivery', 'x$@%delivery$@%accept', 'x$@%.$@%accept']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%accept$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%delivery$@%x', 'x$@%.$@%x']",0.030619175015358602,0.042374567215545444,0.0052116542692255408
+I03T-gNSF-p293-r2,He is handing a package to the woman.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%hand', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.029831510949935081,0.037388041236014358,0.0022537962900558428
+I03T-gNSF-p299-r2,The man is handing a packing to the lady.,1,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	packing	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	lady	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%packing', 'dobj$@%packing$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%packing', 'x$@%packing$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%packing$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.033126366407976948,0.04247044464810712,0.003125490085203908
+I03T-gNSF-p301-r2,The man is feeling a sort of romantic feeling for the woman in front of him.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feel	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	sort	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	romantic	_	JJ	JJ	_	9	amod	_	_
+9	feeling	_	NN	NN	_	6	prep_of	_	_
+10	for	_	IN	IN	_	0	erased	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	woman	_	NN	NN	_	4	prep_for	_	_
+13	in	_	IN	IN	_	0	erased	_	_
+14	front	_	NN	NN	_	0	erased	_	_
+15	of	_	IN	IN	_	0	erased	_	_
+16	he	_	PRP	PRP	_	12	prep_in_front_of	_	_
+17	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%feel', 'aux$@%be$@%feel', 'root$@%feel$@%VROOT', 'det$@%a$@%sort', 'dobj$@%sort$@%feel', 'erased$@%of$@%WORDERASED', 'amod$@%romantic$@%feeling', 'prep_of$@%feeling$@%sort', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%feel', 'erased$@%in$@%WORDERASED', 'erased$@%front$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'prep_in_front_of$@%he$@%woman', 'punct$@%.$@%feel']","['x$@%the$@%man', 'x$@%man$@%feel', 'x$@%be$@%feel', 'x$@%feel$@%VROOT', 'x$@%a$@%sort', 'x$@%sort$@%feel', 'x$@%of$@%WORDERASED', 'x$@%romantic$@%feeling', 'x$@%feeling$@%sort', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%feel', 'x$@%in$@%WORDERASED', 'x$@%front$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%he$@%woman', 'x$@%.$@%feel']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%feel$@%x', 'x$@%a$@%x', 'x$@%sort$@%x', 'x$@%of$@%x', 'x$@%romantic$@%x', 'x$@%feeling$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%in$@%x', 'x$@%front$@%x', 'x$@%of$@%x', 'x$@%he$@%x', 'x$@%.$@%x']",0.049239461469920975,0.050558325860885267,0.0079914212921361472
+I03T-gNSF-p302-r2,The mailman is delivering a package to the receptionist.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	mailman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	receptionist	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%mailman', 'nsubj$@%mailman$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%receptionist', 'prep_to$@%receptionist$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%mailman', 'x$@%mailman$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%receptionist', 'x$@%receptionist$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%mailman$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%receptionist$@%x', 'x$@%.$@%x']",0.033651423850365014,0.038371276953343081,0.0055944435212995636
+I03T-gNSF-p303-r2,He is dropping off a package.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	drop	_	VBG	VBG	_	0	root	_	_
+4	off	_	RP	RP	_	3	prt	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%drop', 'aux$@%be$@%drop', 'root$@%drop$@%VROOT', 'prt$@%off$@%drop', 'det$@%a$@%package', 'dobj$@%package$@%drop', 'punct$@%.$@%drop']","['x$@%he$@%drop', 'x$@%be$@%drop', 'x$@%drop$@%VROOT', 'x$@%off$@%drop', 'x$@%a$@%package', 'x$@%package$@%drop', 'x$@%.$@%drop']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%drop$@%x', 'x$@%off$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.062712139711160741,0.063022137511122733,0.0059212712586286242
+I03T-gNSF-p306-r2,He is delivering a package.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	deliver	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%deliver', 'punct$@%.$@%deliver']","['x$@%he$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%deliver', 'x$@%.$@%deliver']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.040273941743811492,0.057266533557622012,0.0062355061158387848
+I03T-gNSF-p495-r2,He is presenting a gift.,0,1,1,0,0,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	present	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	gift	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%present', 'aux$@%be$@%present', 'root$@%present$@%VROOT', 'det$@%a$@%gift', 'dobj$@%gift$@%present', 'punct$@%.$@%present']","['x$@%he$@%present', 'x$@%be$@%present', 'x$@%present$@%VROOT', 'x$@%a$@%gift', 'x$@%gift$@%present', 'x$@%.$@%present']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%present$@%x', 'x$@%a$@%x', 'x$@%gift$@%x', 'x$@%.$@%x']",0.06173152583821695,0.07966661526611396,0.0062216770316145809
+I03T-gNSF-p496-r2,"As the man hands the package to the woman, their eyes meet and a passionate romance ensues.",1,0,1,1,0,"1	as	_	IN	IN	_	4	mark	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	man	_	NN	NN	_	4	nsubj	_	_
+4	hand	_	VBZ	VBZ	_	13	advcl	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	,	_	,	,	_	13	punct	_	_
+11	they	_	PRP$	PRP$	_	12	poss	_	_
+12	eye	_	NNS	NNS	_	13	nsubj	_	_
+13	meet	_	VBP	VBP	_	0	root	_	_
+14	and	_	CC	CC	_	0	erased	_	_
+15	a	_	DT	DT	_	17	det	_	_
+16	passionate	_	JJ	JJ	_	17	amod	_	_
+17	romance	_	NN	NN	_	18	nsubj	_	_
+18	ensue	_	VBZ	VBZ	_	13	conj_and	_	_
+19	.	_	.	.	_	13	punct	_	_","['mark$@%as$@%hand', 'det$@%the$@%man', 'nsubj$@%man$@%hand', 'advcl$@%hand$@%meet', 'det$@%the$@%package', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%hand', 'punct$@%,$@%meet', 'poss$@%they$@%eye', 'nsubj$@%eye$@%meet', 'root$@%meet$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%a$@%romance', 'amod$@%passionate$@%romance', 'nsubj$@%romance$@%ensue', 'conj_and$@%ensue$@%meet', 'punct$@%.$@%meet']","['x$@%as$@%hand', 'x$@%the$@%man', 'x$@%man$@%hand', 'x$@%hand$@%meet', 'x$@%the$@%package', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%,$@%meet', 'x$@%they$@%eye', 'x$@%eye$@%meet', 'x$@%meet$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%a$@%romance', 'x$@%passionate$@%romance', 'x$@%romance$@%ensue', 'x$@%ensue$@%meet', 'x$@%.$@%meet']","['x$@%as$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%,$@%x', 'x$@%they$@%x', 'x$@%eye$@%x', 'x$@%meet$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%passionate$@%x', 'x$@%romance$@%x', 'x$@%ensue$@%x', 'x$@%.$@%x']",0.023216197302251551,0.024208158024641935,0.0047169814542930011
+I03T-gNSF-p497-r2,He's handing the woman a package.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	woman	_	NN	NN	_	3	iobj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	package	_	NN	NN	_	5	dep	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%hand', 'det$@%a$@%package', 'dep$@%package$@%woman', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%a$@%package', 'x$@%package$@%woman', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.041512215085092063,0.044281187375275088,0.0032032801237527053

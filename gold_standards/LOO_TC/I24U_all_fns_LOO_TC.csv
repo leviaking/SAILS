@@ -1,0 +1,216 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I24U-gNSF-p142-r1,A boy is sleeping.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.019011771666775368,0.02799997341882976,0.0036660354944666462
+I24U-gNSF-p142-r2,A little boy is sleeping in bed.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	sleep	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	bed	_	NN	NN	_	5	prep_in	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.017357845574785924,0.016598881855776293,0.0033313813215914978
+I24U-gNSF-p145-r1,A child sleeps in a bed. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	3	nsubj	_	_
+3	sleep	_	VBZ	VBZ	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bed	_	NN	NN	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%a$@%bed', 'prep_in$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%a$@%child', 'x$@%child$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%a$@%bed', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%sleep$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.042781648361108093,0.032782834946733508,0.0077148545417226044
+I24U-gNSF-p145-r2,The boy is sleeping. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'punct$@%.$@%sleep']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%.$@%sleep']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.024014765797480631,0.033117889760402863,0.0042705146030469487
+I24U-gNSF-p146-r1,A boy is sleeping on a bed.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bed	_	NN	NN	_	4	prep_on	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%a$@%bed', 'prep_on$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%a$@%bed', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.020950027718403152,0.01601027515552933,0.0023242296031744658
+I24U-gNSF-p146-r2,A boy is lying on a bed about to yawn.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	lie	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bed	_	NN	NN	_	4	prep_on	_	_
+8	about	_	IN	IN	_	4	prep	_	_
+9	to	_	TO	TO	_	8	pcomp	_	_
+10	yawn	_	NN	NN	_	8	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%lie', 'aux$@%be$@%lie', 'root$@%lie$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%a$@%bed', 'prep_on$@%bed$@%lie', 'prep$@%about$@%lie', 'pcomp$@%to$@%about', 'prep_to$@%yawn$@%about', 'punct$@%.$@%lie']","['x$@%a$@%boy', 'x$@%boy$@%lie', 'x$@%be$@%lie', 'x$@%lie$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%a$@%bed', 'x$@%bed$@%lie', 'x$@%about$@%lie', 'x$@%to$@%about', 'x$@%yawn$@%about', 'x$@%.$@%lie']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%lie$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%bed$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.011933337168229197,0.019106519689923496,0.0049949284486779932
+I24U-gNSF-p147-r1,The boy is yawning. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	yawn	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'punct$@%.$@%yawn']","['x$@%the$@%boy', 'x$@%boy$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%.$@%yawn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.070868681189687255,0.065359603275468081,0.004395023818684396
+I24U-gNSF-p147-r2,The boy is about to go to sleep. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	go	_	VB	VB	_	4	xcomp	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	sleep	_	VB	VB	_	6	xcomp	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%go', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%go', 'xcomp$@%go$@%about', 'aux$@%to$@%sleep', 'xcomp$@%sleep$@%go', 'punct$@%.$@%about']","['x$@%the$@%boy', 'x$@%boy$@%go', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%go', 'x$@%go$@%about', 'x$@%to$@%sleep', 'x$@%sleep$@%go', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.057858548083615013,0.0437392741718865,0.005619483685936677
+I24U-gNSF-p148-r1,The boy is falling asleep.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fall	_	VBG	VBG	_	0	root	_	_
+5	asleep	_	RB	RB	_	4	acomp	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%fall', 'aux$@%be$@%fall', 'root$@%fall$@%VROOT', 'acomp$@%asleep$@%fall', 'punct$@%.$@%fall']","['x$@%the$@%boy', 'x$@%boy$@%fall', 'x$@%be$@%fall', 'x$@%fall$@%VROOT', 'x$@%asleep$@%fall', 'x$@%.$@%fall']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%fall$@%x', 'x$@%asleep$@%x', 'x$@%.$@%x']",0.081811811877583795,0.080057046609459448,0.0066094136280074878
+I24U-gNSF-p148-r2,The boy is yawning.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	yawn	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'punct$@%.$@%yawn']","['x$@%the$@%boy', 'x$@%boy$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%.$@%yawn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.070868681189687255,0.065359603275468081,0.004395023818684396
+I24U-gNSF-p149-r1,A young boy is sleeping in his tiny bed. ,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	sleep	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	9	poss	_	_
+8	tiny	_	JJ	JJ	_	9	amod	_	_
+9	bed	_	NN	NN	_	5	prep_in	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'poss$@%he$@%bed', 'amod$@%tiny$@%bed', 'prep_in$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%he$@%bed', 'x$@%tiny$@%bed', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%in$@%x', 'x$@%he$@%x', 'x$@%tiny$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.011468349958499546,0.0085908119968202135,0.0022262897765078504
+I24U-gNSF-p149-r2,A young boy is snoozing in his bed with his mouth wide open. ,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	snooze	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	bed	_	NN	NN	_	5	prep_in	_	_
+9	with	_	IN	IN	_	0	erased	_	_
+10	he	_	PRP$	PRP$	_	11	poss	_	_
+11	mouth	_	NN	NN	_	5	prep_with	_	_
+12	wide	_	JJ	JJ	_	13	amod	_	_
+13	open	_	JJ	JJ	_	11	amod	_	_
+14	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%snooze', 'aux$@%be$@%snooze', 'root$@%snooze$@%VROOT', 'erased$@%in$@%WORDERASED', 'poss$@%he$@%bed', 'prep_in$@%bed$@%snooze', 'erased$@%with$@%WORDERASED', 'poss$@%he$@%mouth', 'prep_with$@%mouth$@%snooze', 'amod$@%wide$@%open', 'amod$@%open$@%mouth', 'punct$@%.$@%snooze']","['x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%snooze', 'x$@%be$@%snooze', 'x$@%snooze$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%he$@%bed', 'x$@%bed$@%snooze', 'x$@%with$@%WORDERASED', 'x$@%he$@%mouth', 'x$@%mouth$@%snooze', 'x$@%wide$@%open', 'x$@%open$@%mouth', 'x$@%.$@%snooze']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%snooze$@%x', 'x$@%in$@%x', 'x$@%he$@%x', 'x$@%bed$@%x', 'x$@%with$@%x', 'x$@%he$@%x', 'x$@%mouth$@%x', 'x$@%wide$@%x', 'x$@%open$@%x', 'x$@%.$@%x']",0.042333763961063586,0.045097229946449602,0.0048855201964137507
+I24U-gNSF-p150-r1,The boy is yawning. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	yawn	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'punct$@%.$@%yawn']","['x$@%the$@%boy', 'x$@%boy$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%.$@%yawn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.070868681189687255,0.065359603275468081,0.004395023818684396
+I24U-gNSF-p150-r2,The boy is going to sleep. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	sleep	_	VB	VB	_	4	xcomp	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%sleep', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'aux$@%to$@%sleep', 'xcomp$@%sleep$@%go', 'punct$@%.$@%go']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%to$@%sleep', 'x$@%sleep$@%go', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.025709777469733797,0.019015677910323103,0.0028906860743008744
+I24U-gNSF-p293-r1,He is yawning in bed.,0,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	yawn	_	VBG	VBG	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	bed	_	NN	NN	_	3	prep_in	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%yawn', 'punct$@%.$@%yawn']","['x$@%he$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%yawn', 'x$@%.$@%yawn']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.067978652216335811,0.070152973338424962,0.0048846134849905853
+I24U-gNSF-p299-r1,It is bedtime.,0,0,1,0,1,"1	it	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	bedtime	_	JJ	JJ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%it$@%bedtime', 'cop$@%be$@%bedtime', 'root$@%bedtime$@%VROOT', 'punct$@%.$@%bedtime']","['x$@%it$@%bedtime', 'x$@%be$@%bedtime', 'x$@%bedtime$@%VROOT', 'x$@%.$@%bedtime']","['x$@%it$@%x', 'x$@%be$@%x', 'x$@%bedtime$@%x', 'x$@%.$@%x']",0.093223027696735739,0.123484912437961,0.014913489692625403
+I24U-gNSF-p299-r2,The boy is going to sleep.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	sleep	_	VB	VB	_	4	xcomp	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%sleep', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'aux$@%to$@%sleep', 'xcomp$@%sleep$@%go', 'punct$@%.$@%go']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%to$@%sleep', 'x$@%sleep$@%go', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.025709777469733797,0.019015677910323103,0.0028906860743008744
+I24U-gNSF-p301-r1,The boy is yawning.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	yawn	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'punct$@%.$@%yawn']","['x$@%the$@%boy', 'x$@%boy$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%.$@%yawn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.070868681189687255,0.065359603275468081,0.004395023818684396
+I24U-gNSF-p301-r2,The boy is about to go to bed.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	go	_	VB	VB	_	4	xcomp	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	bed	_	NN	NN	_	6	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%go', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%go', 'xcomp$@%go$@%about', 'erased$@%to$@%WORDERASED', 'prep_to$@%bed$@%go', 'punct$@%.$@%about']","['x$@%the$@%boy', 'x$@%boy$@%go', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%go', 'x$@%go$@%about', 'x$@%to$@%WORDERASED', 'x$@%bed$@%go', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.056887250778214105,0.062616499990141739,0.0073186604167024827
+I24U-gNSF-p302-r1,The boy is sleeping in the bed.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	bed	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%bed', 'prep_in$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%bed', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.031221792018343852,0.022940341101425843,0.0025983415829760048
+I24U-gNSF-p302-r2,The boy is snoring.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	snore	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%snore', 'aux$@%be$@%snore', 'root$@%snore$@%VROOT', 'punct$@%.$@%snore']","['x$@%the$@%boy', 'x$@%boy$@%snore', 'x$@%be$@%snore', 'x$@%snore$@%VROOT', 'x$@%.$@%snore']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%snore$@%x', 'x$@%.$@%x']",0.044208018594858345,0.046725100462837954,0.0040856038578772624
+I24U-gNSF-p303-r1,The child is going to sleep.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	sleep	_	VB	VB	_	4	xcomp	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'xsubj$@%child$@%sleep', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'aux$@%to$@%sleep', 'xcomp$@%sleep$@%go', 'punct$@%.$@%go']","['x$@%the$@%child', 'x$@%child$@%sleep', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%to$@%sleep', 'x$@%sleep$@%go', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.031187481795101224,0.026478484403314906,0.0047734870854473366
+I24U-gNSF-p303-r2,He is yawning in bed.,0,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	yawn	_	VBG	VBG	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	bed	_	NN	NN	_	3	prep_in	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%yawn', 'punct$@%.$@%yawn']","['x$@%he$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%yawn', 'x$@%.$@%yawn']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.067978652216335811,0.070152973338424962,0.0048846134849905853
+I24U-gNSF-p306-r1,A little boy is sleeping in his bed.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	sleep	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	bed	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'poss$@%he$@%bed', 'prep_in$@%bed$@%sleep', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%he$@%bed', 'x$@%bed$@%sleep', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%in$@%x', 'x$@%he$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.018047988130132531,0.014878798359077128,0.0025877130197818898
+I24U-gNSF-p306-r2,The young child is asleep in bed.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	child	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	asleep	_	JJ	JJ	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	bed	_	NN	NN	_	5	prep_in	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%child', 'amod$@%young$@%child', 'nsubj$@%child$@%asleep', 'cop$@%be$@%asleep', 'root$@%asleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%asleep', 'punct$@%.$@%asleep']","['x$@%the$@%child', 'x$@%young$@%child', 'x$@%child$@%asleep', 'x$@%be$@%asleep', 'x$@%asleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%asleep', 'x$@%.$@%asleep']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%asleep$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.03724534328062068,0.035649656733831026,0.003781020156848669
+I24U-gNSF-p495-r1,The boy is sleeping.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'punct$@%.$@%sleep']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%.$@%sleep']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.024014765797480631,0.033117889760402863,0.0042705146030469487
+I24U-gNSF-p495-r2,The boy is lying in bed.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	lie	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	bed	_	NN	NN	_	4	prep_in	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%lie', 'aux$@%be$@%lie', 'root$@%lie$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%lie', 'punct$@%.$@%lie']","['x$@%the$@%boy', 'x$@%boy$@%lie', 'x$@%be$@%lie', 'x$@%lie$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%lie', 'x$@%.$@%lie']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%lie$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.028970800859937085,0.02752608098482312,0.0023211985916420375
+I24U-gNSF-p496-r1,the boy is yawning.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	yawn	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%yawn', 'aux$@%be$@%yawn', 'root$@%yawn$@%VROOT', 'punct$@%.$@%yawn']","['x$@%the$@%boy', 'x$@%boy$@%yawn', 'x$@%be$@%yawn', 'x$@%yawn$@%VROOT', 'x$@%.$@%yawn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%yawn$@%x', 'x$@%.$@%x']",0.070868681189687255,0.065359603275468081,0.004395023818684396
+I24U-gNSF-p496-r2,The boy is going to sleep.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	sleep	_	VB	VB	_	4	xcomp	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%sleep', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'aux$@%to$@%sleep', 'xcomp$@%sleep$@%go', 'punct$@%.$@%go']","['x$@%the$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%to$@%sleep', 'x$@%sleep$@%go', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.025709777469733797,0.019015677910323103,0.0028906860743008744
+I24U-gNSF-p497-r1,A boy is sleeping.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sleep	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%sleep', 'aux$@%be$@%sleep', 'root$@%sleep$@%VROOT', 'punct$@%.$@%sleep']","['x$@%a$@%boy', 'x$@%boy$@%sleep', 'x$@%be$@%sleep', 'x$@%sleep$@%VROOT', 'x$@%.$@%sleep']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.019011771666775368,0.02799997341882976,0.0036660354944666462
+I24U-gNSF-p497-r2,A boy is asleep in bed.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	asleep	_	JJ	JJ	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	bed	_	NN	NN	_	4	prep_in	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%asleep', 'cop$@%be$@%asleep', 'root$@%asleep$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%asleep', 'punct$@%.$@%asleep']","['x$@%a$@%boy', 'x$@%boy$@%asleep', 'x$@%be$@%asleep', 'x$@%asleep$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%bed$@%asleep', 'x$@%.$@%asleep']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%asleep$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.029539154314492833,0.026190734835290885,0.0027456545363354623

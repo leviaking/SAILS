@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ##2018-07-20 update. I'm modifying this script to work on the lemma-parse csv files. See them here: /Users/leviking/Documents/dissertation/SAILS/gold_standards/finalcsvs
-##This script will write directly to the csv, with each of the five formats of "dependency strings" written to a new column in the csv.
+##This script will write directly to the csv, with each of the given formats of "dependency strings" written to a new column in the csv.
 
 ##NOTICE: Name change: In the 2015-2016 SAILS work, this script was called prep_conll_for_tfidf.py and the shell script was called prep_conll_for_tfidf.sh
 
@@ -45,23 +45,24 @@ js="$@%" ##this is the string we use to join the elements in a depstring; it's a
 
 def form_depstrings(cs):
 	ldh_list=[]
-	ldx_list=[]
-	lxh_list=[]
+	#ldx_list=[]
+	#_list=[]
 	xdh_list=[]
 	xdx_list=[]
 	for trip in cs:
 		ldh = js.join([trip[0], trip[1], trip[2]])
 		ldh_list.append(ldh)
-		ldx = js.join([trip[0], trip[1], 'x'])
-		ldx_list.append(ldx)
-		lxh = js.join([trip[0], 'x', trip[2]])
-		lxh_list.append(lxh)				
+		#ldx = js.join([trip[0], trip[1], 'x'])
+		#_list.append(ldx)
+		#lxh = js.join([trip[0], 'x', trip[2]])
+		#lxh_list.append(lxh)				
 		xdh = js.join(['x', trip[1], trip[2]])
 		xdh_list.append(xdh)
 		xdx = js.join(['x', trip[1], 'x'])
 		xdx_list.append(xdx)
 	#print sds
-	sds=[ldh_list, ldx_list, lxh_list, xdh_list, xdx_list] ##sentence depstrings
+	#sds=[ldh_list, ldx_list, lxh_list, xdh_list, xdx_list] ##sentence depstrings
+	sds=[ldh_list, xdh_list, xdx_list] ##sentence depstrings
 	return sds
 
 
@@ -69,7 +70,8 @@ def process_source_csv():
 	with open(source, 'rU') as sourcefile, open(dest, 'w') as destfile:
 		sourcereader=csv.reader(sourcefile, dialect=csv.excel)
 		header=next(sourcereader, None)
-		header=header+['ldh', 'ldx', 'lxh', 'xdh', 'xdx']
+		#header=header+['ldh', 'ldx', 'lxh', 'xdh', 'xdx']
+		header=header+['ldh', 'xdh', 'xdx']
 		destwriter=csv.writer(destfile, dialect=csv.excel)
 		destwriter.writerow(header)
 		for sline in sourcereader:

@@ -1,0 +1,803 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I21T-gNSF-p143-r1,The boy is throwing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495142,0.01739386454053693,0.0018415785031583587
+I21T-gNSF-p143-r2,The boy is playing ball with a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	ball	_	NN	NN	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%ball$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.030748005541524681,0.032940497367767496,0.0028659650658440228
+I21T-gNSF-p151-r1,The boy is playing catch with the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321443,0.0021536476190705534
+I21T-gNSF-p151-r2,He is throwing her a ball.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	she	_	PRP	PRP	_	6	nsubj	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	3	xcomp	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'nsubj$@%she$@%ball', 'det$@%a$@%ball', 'xcomp$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%she$@%ball', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%she$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.018313331895133511,0.015958452789925137,0.0027702028222350572
+I21T-gNSF-p294-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSF-p294-r2,He is throwing the ball to the girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.019010888410902593,0.022596610543128226,0.0022218314439490516
+I21T-gNSF-p295-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.01814448306962313,0.017490928810889428,0.0014129795068470452
+I21T-gNSF-p296-r1,The boy is tossing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.034970839877254356,0.038684896090772303,0.0025057027920976083
+I21T-gNSF-p296-r2,He is playing catch with the girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	catch	_	VB	VB	_	3	dobj	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	3	prep_with	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.032677734380426426,0.032321146213631136,0.0038217228287674709
+I21T-gNSF-p297-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937639,0.0018099837214722303
+I21T-gNSF-p298-r2,The boy is playing with the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	ball	_	NN	NN	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%ball', 'prep_with$@%ball$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%ball', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.027891419369635573,0.028961796527770756,0.0015321531241179187
+I21T-gNSF-p305-r1,He is playing catch with a girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	catch	_	VB	VB	_	3	dobj	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	3	prep_with	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.037824327682835945,0.037930906585420421,0.004089913388241162
+I21T-gNSF-p305-r2,He is tossing the ball to the girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	toss	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%he$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.040687063289947312,0.045527986504511953,0.0027606313500920798
+I21T-gNSC-p307-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937639,0.0018099837214722303
+I21T-gNSC-p308-r1,The boy is playing ball with his friend.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	ball	_	NN	NN	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	friend	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'erased$@%with$@%WORDERASED', 'poss$@%he$@%friend', 'prep_with$@%friend$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%with$@%WORDERASED', 'x$@%he$@%friend', 'x$@%friend$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%ball$@%x', 'x$@%with$@%x', 'x$@%he$@%x', 'x$@%friend$@%x', 'x$@%.$@%x']",0.030317704392339162,0.031036926298926515,0.0026909285306229158
+I21T-gNSC-p309-r1,The boy is throwing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495031,0.017393864540537041,0.0018415785031583587
+I21T-gNSC-p309-r2,The boy is playing catch with a beach ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	beach	_	NN	NN	_	9	nn	_	_
+9	ball	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'prep_with$@%ball$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.035713698766331792,0.036801178781362354,0.0038323910546128603
+I21T-gNSC-p310-r1,The boy is hitting the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hit	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hit', 'aux$@%be$@%hit', 'root$@%hit$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%hit', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%hit', 'punct$@%.$@%hit']","['x$@%the$@%boy', 'x$@%boy$@%hit', 'x$@%be$@%hit', 'x$@%hit$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%hit', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%hit', 'x$@%.$@%hit']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hit$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.024029265253391663,0.02696275888717492,0.0019910166106751337
+I21T-gNSC-p310-r2,The boy is getting ready to hit the ball back to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	get	_	VBG	VBG	_	5	dep	_	_
+5	ready	_	JJ	JJ	_	0	root	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	hit	_	VB	VB	_	5	xcomp	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	ball	_	NN	NN	_	7	dobj	_	_
+10	back	_	RP	RP	_	7	prt	_	_
+11	to	_	TO	TO	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	girl	_	NN	NN	_	7	prep_to	_	_
+14	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ready', 'aux$@%be$@%ready', 'dep$@%get$@%ready', 'root$@%ready$@%VROOT', 'aux$@%to$@%hit', 'xcomp$@%hit$@%ready', 'det$@%the$@%ball', 'dobj$@%ball$@%hit', 'prt$@%back$@%hit', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%hit', 'punct$@%.$@%ready']","['x$@%the$@%boy', 'x$@%boy$@%ready', 'x$@%be$@%ready', 'x$@%get$@%ready', 'x$@%ready$@%VROOT', 'x$@%to$@%hit', 'x$@%hit$@%ready', 'x$@%the$@%ball', 'x$@%ball$@%hit', 'x$@%back$@%hit', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%hit', 'x$@%.$@%ready']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%ready$@%x', 'x$@%to$@%x', 'x$@%hit$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%back$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.023235782942371497,0.023433341768093641,0.0020778669739570654
+I21T-gNSC-p313-r1,Throwing the ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.030158541053613708,0.022964131854890435,0.0054532139741706454
+I21T-gNSC-p314-r1,Throwing the ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.030158541053613597,0.022964131854890102,0.0054532139741706454
+I21T-gNSC-p315-r1,throwing the ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.030158541053613708,0.022964131854890435,0.0054532139741706454
+I21T-gNSC-p317-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p317-r2,The boy is playing catch with the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321221,0.0021536476190705534
+I21T-gNSC-p319-r2,throwing a ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.029201124757762598,0.022152275892287965,0.0088123167147833303
+I21T-gNSC-p320-r1,playing ball,1,1,1,1,1,"1	play	_	VBG	VBG	_	0	root	_	_
+2	ball	_	NN	NN	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'punct$@%.$@%play']","['x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%play$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.088381039866234024,0.095799378517344103,0.031925150079920805
+I21T-gNSC-p320-r2,throwing the ball to the girl,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	1	prep_to	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.024683210505771824,0.020249477334732036,0.0040050451951108013
+I21T-gNSC-p321-r2,He's playing with a beach ball.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	beach	_	NN	NN	_	7	nn	_	_
+7	ball	_	NN	NN	_	3	prep_with	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'prep_with$@%ball$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.050931493795925431,0.047279116658680009,0.0045780853491299567
+I21T-gNSC-p327-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p328-r1,The boy is tossing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.034970839877254356,0.038684896090772303,0.0025057027920976083
+I21T-gNSC-p328-r2,He is throwing the ball. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.024799961015027794,0.027533013516535476,0.0026052919568184674
+I21T-gNSC-p329-r1,Throwing a ball to the girl,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	1	prep_to	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.021018550359962807,0.017739616371222677,0.0036279768883167307
+I21T-gNSC-p329-r2,Playing catch with the girl,1,1,1,1,1,"1	play	_	NNP	NNP	_	2	nsubj	_	_
+2	catch	_	VBP	VBP	_	0	root	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	girl	_	NN	NN	_	2	prep_with	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%play$@%catch', 'root$@%catch$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%catch', 'punct$@%.$@%catch']","['x$@%play$@%catch', 'x$@%catch$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%catch', 'x$@%.$@%catch']","['x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.062123925874633223,0.062983768145563612,0.008445279424627028
+I21T-gNSC-p330-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.018144483069623019,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p331-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p335-r2,The boy is passing the ball to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pass	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%boy', 'x$@%boy$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%pass', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.040449428048378699,0.043490480691936506,0.0018684958769895621
+I21T-gNSC-p339-r1,The boy is throwing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495142,0.01739386454053693,0.0018415785031583587
+I21T-gNSC-p339-r2,He is throwing the ball.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.024799961015027794,0.027533013516535476,0.0026052919568184674
+I21T-gNSC-p340-r1,Throwing a ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.029201124757762598,0.022152275892287965,0.0088123167147833303
+I21T-gNSC-p346-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.018144483069623019,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p347-r1,Playing catch with the girl.,1,1,1,1,1,"1	play	_	NNP	NNP	_	2	nsubj	_	_
+2	catch	_	VBP	VBP	_	0	root	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	girl	_	NN	NN	_	2	prep_with	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%play$@%catch', 'root$@%catch$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%catch', 'punct$@%.$@%catch']","['x$@%play$@%catch', 'x$@%catch$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%catch', 'x$@%.$@%catch']","['x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.062123925874633223,0.062983768145563612,0.008445279424627028
+I21T-gNSC-p351-r1,The boy is throwing the ball. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937639,0.0018099837214722303
+I21T-gNSC-p354-r1,Playing catch with a girl.,1,1,1,1,1,"1	play	_	NNP	NNP	_	2	nsubj	_	_
+2	catch	_	VBP	VBP	_	0	root	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	girl	_	NN	NN	_	2	prep_with	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%play$@%catch', 'root$@%catch$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%catch', 'punct$@%.$@%catch']","['x$@%play$@%catch', 'x$@%catch$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%catch', 'x$@%.$@%catch']","['x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.061687763135352958,0.064552264362413236,0.010710842818462685
+I21T-gNSC-p354-r2,Having fun with a ball.,1,1,1,1,1,"1	have	_	VBG	VBG	_	0	root	_	_
+2	fun	_	NN	NN	_	1	dobj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	1	prep_with	_	_
+6	.	_	.	.	_	1	punct	_	_","['root$@%have$@%VROOT', 'dobj$@%fun$@%have', 'erased$@%with$@%WORDERASED', 'det$@%a$@%ball', 'prep_with$@%ball$@%have', 'punct$@%.$@%have']","['x$@%have$@%VROOT', 'x$@%fun$@%have', 'x$@%with$@%WORDERASED', 'x$@%a$@%ball', 'x$@%ball$@%have', 'x$@%.$@%have']","['x$@%have$@%x', 'x$@%fun$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.043455535722167316,0.053266501006038691,0.0081319416395020383
+I21T-gNSC-p360-r1,The boy is throwing the ball to the girl,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495142,0.01739386454053693,0.0018415785031583587
+I21T-gNSC-p360-r2,The boy is playing ball with the girl,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	ball	_	NN	NN	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%ball$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.026190521161438163,0.027345753988583188,0.0016453161202355515
+I21T-gNSC-p361-r1,The boy is tossing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.053871700722395444,0.055016166963986368,0.0041620502837584894
+I21T-gNSC-p361-r2,The boy is throwing the ball to the girl. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495031,0.017393864540537041,0.0018415785031583587
+I21T-gNSC-p362-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p362-r2,The boy is playing catch with the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321221,0.0021536476190705534
+I21T-gNSC-p369-r1,The boy is throwing a ball. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.01814448306962313,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p372-r1,He is throwing the ball,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	throw	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%he$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.024799961015027794,0.027533013516535476,0.0026052919568184674
+I21T-gNSC-p381-r1,He is playing catch.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	catch	_	VB	VB	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.061896453267570317,0.060271256717599142,0.0072019845101968238
+I21T-gNSC-p381-r2,The boy is throwing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495031,0.017393864540537041,0.0018415785031583587
+I21T-gNSC-p382-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p384-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.018144483069623019,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p384-r2,The boy is tossing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.053871700722395444,0.055016166963986368,0.0041620502837584894
+I21T-gNSC-p388-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937639,0.0018099837214722303
+I21T-gNSC-p388-r2,The boy is playing catch with a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.025632880785904533,0.027244263504797472,0.0022483649095752511
+I21T-gNSC-p389-r1,The boy is playing catch with his sister.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	sister	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'poss$@%he$@%sister', 'prep_with$@%sister$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%he$@%sister', 'x$@%sister$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%he$@%x', 'x$@%sister$@%x', 'x$@%.$@%x']",0.026477883702485272,0.022142915633045268,0.0038130574130099681
+I21T-gNSC-p391-r1,The boy is tossing the beachball,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	beachball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%beachball', 'dobj$@%beachball$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%beachball', 'x$@%beachball$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%beachball$@%x', 'x$@%.$@%x']",0.04915625295616588,0.054325089580115282,0.0055325611631605875
+I21T-gNSC-p391-r2,The boy is tossing the beachball to a girl,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	beachball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%beachball', 'dobj$@%beachball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%beachball', 'x$@%beachball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%beachball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.030165908249779494,0.033555306003917096,0.0016535038052485351
+I21T-gNSC-p392-r1,Playing ball.,1,1,1,1,1,"1	play	_	VBG	VBG	_	0	root	_	_
+2	ball	_	NN	NN	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'punct$@%.$@%play']","['x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%play$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.088381039866234024,0.095799378517344103,0.031925150079920805
+I21T-gNSC-p392-r2,Playing catch.,1,1,1,1,1,"1	play	_	NNP	NNP	_	2	nsubj	_	_
+2	catch	_	VBP	VBP	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%play$@%catch', 'root$@%catch$@%VROOT', 'punct$@%.$@%catch']","['x$@%play$@%catch', 'x$@%catch$@%VROOT', 'x$@%.$@%catch']","['x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.1253658243014093,0.12066166465786476,0.025447684432477913
+I21T-gNSC-p395-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.01814448306962313,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p395-r2,The boy is playing catch.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.044342076445218703,0.043869036707918863,0.0044900756811020459
+I21T-gNSC-p400-r1,The boy is throwing the ball to a friend.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	friend	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%a$@%friend', 'prep_to$@%friend$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%a$@%friend', 'x$@%friend$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%friend$@%x', 'x$@%.$@%x']",0.017078246954339238,0.019229470204187193,0.0018556300476557652
+I21T-gNSC-p400-r2,The boy is playing ball with a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	ball	_	NN	NN	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%ball$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%ball$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%ball$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.030748005541524681,0.032940497367767496,0.0028659650658440228
+I21T-gNSC-p404-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p404-r2,The boy is playing catch. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.044342076445218703,0.043869036707918863,0.0044900756811020459
+I21T-gNSC-p406-r1,The boy is throwing a beach ball. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	beach	_	NN	NN	_	7	nn	_	_
+7	ball	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.015746407809052454,0.013847484598176529,0.0020836973855915542
+I21T-gNSC-p406-r2,He's playing catch. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	catch	_	VB	VB	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.061896453267570317,0.060271256717599253,0.0072019845101968238
+I21T-gNSC-p419-r1,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937861,0.0018099837214722303
+I21T-gNSC-p419-r2,The boy is playing catch with the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321221,0.0021536476190705534
+I21T-gNSC-p422-r1,the boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.01814448306962313,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p422-r2,he is playing catch with a girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	catch	_	VB	VB	_	3	dobj	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	3	prep_with	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.037824327682835945,0.037930906585420421,0.004089913388241162
+I21T-gNSC-p428-r1,The boy is throwing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.015118040204495142,0.01739386454053693,0.0018415785031583587
+I21T-gNSC-p428-r2,The boy is playing catch with the girl. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321221,0.0021536476190705534
+I21T-gNSC-p430-r1,The boy is tossing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.052274688955311288,0.054607587754439857,0.003626315082799425
+I21T-gNSC-p430-r2,The boy is throwing the ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.020740803092107241,0.021664663862937639,0.0018099837214722303
+I21T-gNSC-p437-r1,The boy is throwing a ball.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.01814448306962313,0.017490928810889428,0.0014129795068470452
+I21T-gNSC-p437-r2,He is passing a ball to the girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	pass	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.056157315699199128,0.05927019116163923,0.0030636744431147278
+I21T-gNSC-p439-r1,The boy is throwing a ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.012046800533175306,0.014164299557832272,0.00091838147655398661
+I21T-gNSC-p439-r2,The boy is tossing a beach ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	beach	_	NN	NN	_	7	nn	_	_
+7	ball	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	girl	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.026296962341840757,0.029264434181262455,0.0013616070669826286
+I21T-gNSC-p440-r1,THROWING A BALL,1,1,1,1,1,"1	throw	_	NNP	NNP	_	3	nn	_	_
+2	a	_	NNP	NNP	_	3	nn	_	_
+3	ball	_	NNP	NNP	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nn$@%throw$@%ball', 'nn$@%a$@%ball', 'root$@%ball$@%VROOT', 'punct$@%.$@%ball']","['x$@%throw$@%ball', 'x$@%a$@%ball', 'x$@%ball$@%VROOT', 'x$@%.$@%ball']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.094374439038502289,0.06962100384791714,0.0088123167147833303
+I21T-gNSC-p441-r2,Throwing a ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	ball	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.029201124757762376,0.022152275892287965,0.0088123167147833303
+I21T-gNSC-p444-r1,The boy is playing catch with the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.022067088338168284,0.022701807722321443,0.0021536476190705534
+I21T-gNSC-p454-r1,The boy is playing catch with a girl. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.025632880785904422,0.027244263504797361,0.0022483649095752511
+I21T-gNSC-p454-r2,He's catching and throwing a ball. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	5	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	catch	_	VBG	VBG	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	throw	_	VBG	VBG	_	3	conj_and	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	ball	_	NN	NN	_	3	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%throw', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%throw$@%catch', 'det$@%a$@%ball', 'dobj$@%ball$@%catch', 'punct$@%.$@%catch']","['x$@%he$@%throw', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%throw$@%catch', 'x$@%a$@%ball', 'x$@%ball$@%catch', 'x$@%.$@%catch']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%and$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.056833740445136338,0.05077946770622932,0.0042141632867509493
+I21T-gNSC-p458-r2,he is playing with a ball,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	play	_	VBG	VBG	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	3	prep_with	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%ball', 'prep_with$@%ball$@%play', 'punct$@%.$@%play']","['x$@%he$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%ball', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.048078419295798924,0.047438434883917413,0.0042108864207155428
+I21T-gNSC-p459-r2,Throwing a beach ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	4	det	_	_
+3	beach	_	NN	NN	_	4	nn	_	_
+4	ball	_	NN	NN	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.026121040454290201,0.021773957871867422,0.0061543586628196589
+I21T-gNSC-p463-r1,The boy is tossing the beach ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	beach	_	NN	NN	_	7	nn	_	_
+7	ball	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	girl	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.026328376260955522,0.029338059002355532,0.0018202197856044267
+I21T-gNSC-p466-r1,The boy is playing catch with a friend.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	friend	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%a$@%friend', 'prep_with$@%friend$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%a$@%friend', 'x$@%friend$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%friend$@%x', 'x$@%.$@%x']",0.0281036103404122,0.029772646422613569,0.0034014852825213771
+I21T-gNSC-p466-r2,The boy is tossing the ball to a friend.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	toss	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	friend	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%toss', 'aux$@%be$@%toss', 'root$@%toss$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%toss', 'erased$@%to$@%WORDERASED', 'det$@%a$@%friend', 'prep_to$@%friend$@%toss', 'punct$@%.$@%toss']","['x$@%the$@%boy', 'x$@%boy$@%toss', 'x$@%be$@%toss', 'x$@%toss$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%toss', 'x$@%to$@%WORDERASED', 'x$@%a$@%friend', 'x$@%friend$@%toss', 'x$@%.$@%toss']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%toss$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%friend$@%x', 'x$@%.$@%x']",0.039119280918194721,0.043211912582653778,0.0029737762053756445
+I21T-gNSC-p468-r1,The boy is throwing a ball to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.010341864575491022,0.012593553597166851,0.0018107898532467859
+I21T-gNSC-p468-r2,The boy is playing catch with the girl using a beach ball. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_with	_	_
+9	use	_	VBG	VBG	_	8	partmod	_	_
+10	a	_	DT	DT	_	12	det	_	_
+11	beach	_	NN	NN	_	12	nn	_	_
+12	ball	_	NN	NN	_	9	dobj	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%play', 'partmod$@%use$@%girl', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%use', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%play', 'x$@%use$@%girl', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%use', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%use$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.022301437898425536,0.02371267606161942,0.0020865547757342728
+I21T-gNSC-p470-r1,The boy is playing catch.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	play	_	VBG	VBG	_	0	root	_	_
+5	catch	_	VB	VB	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%play', 'aux$@%be$@%play', 'root$@%play$@%VROOT', 'dobj$@%catch$@%play', 'punct$@%.$@%play']","['x$@%the$@%boy', 'x$@%boy$@%play', 'x$@%be$@%play', 'x$@%play$@%VROOT', 'x$@%catch$@%play', 'x$@%.$@%play']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%play$@%x', 'x$@%catch$@%x', 'x$@%.$@%x']",0.04434207644521837,0.043869036707919085,0.0044900756811020459
+I21T-gNSC-p470-r2,The boy is throwing a ball to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.010341864575491133,0.012593553597166962,0.0018107898532467859
+I21T-gNSC-p473-r1,throwing a beach ball,1,1,1,1,1,"1	throw	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	4	det	_	_
+3	beach	_	NN	NN	_	4	nn	_	_
+4	ball	_	NN	NN	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%throw$@%VROOT', 'det$@%a$@%ball', 'nn$@%beach$@%ball', 'dobj$@%ball$@%throw', 'punct$@%.$@%throw']","['x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%beach$@%ball', 'x$@%ball$@%throw', 'x$@%.$@%throw']","['x$@%throw$@%x', 'x$@%a$@%x', 'x$@%beach$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.026121040454290201,0.021773957871867422,0.0061543586628196589
+I21T-gNSC-p473-r2,Playing with a ball.,1,1,1,1,1,"1	play	_	VBG	VBG	_	0	root	_	_
+2	with	_	IN	IN	_	0	erased	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	ball	_	NN	NN	_	1	prep_with	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%play$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%ball', 'prep_with$@%ball$@%play', 'punct$@%.$@%play']","['x$@%play$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%ball', 'x$@%ball$@%play', 'x$@%.$@%play']","['x$@%play$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%.$@%x']",0.049220438043213632,0.056427927500279695,0.011793363439778659
+I21T-gNSF-p498-r1,The boy is throwing a ball to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%a$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%a$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%a$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.010341864575491022,0.012593553597166851,0.0018107898532467859
+I21T-gNSF-p498-r2,He's passing the ball to the girl.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	pass	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	ball	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.051048153092354109,0.053711019399905191,0.0024113776045845414
+I21T-gNSF-p499-r1,The boy is passing the ball to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pass	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%boy', 'x$@%boy$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.036683555712856419,0.038855100754120242,0.0014327796703612616
+I21T-gNSF-p499-r2,The boy is throwing the ball to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	throw	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	ball	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%throw', 'aux$@%be$@%throw', 'root$@%throw$@%VROOT', 'det$@%the$@%ball', 'dobj$@%ball$@%throw', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%throw', 'punct$@%.$@%throw']","['x$@%the$@%boy', 'x$@%boy$@%throw', 'x$@%be$@%throw', 'x$@%throw$@%VROOT', 'x$@%the$@%ball', 'x$@%ball$@%throw', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%throw', 'x$@%.$@%throw']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%throw$@%x', 'x$@%the$@%x', 'x$@%ball$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.012046800533174973,0.01416429955783205,0.00091838147655398661

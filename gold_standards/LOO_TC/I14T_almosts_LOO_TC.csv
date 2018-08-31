@@ -1,0 +1,582 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I14T-gNSF-p142-r1,The man is selling a car to a woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0045155804092814611,0.0061248825068319634,0.0016112449500896853
+I14T-gNSF-p142-r2,The man is selling the lady a new car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	lady	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	new	_	JJ	JJ	_	9	amod	_	_
+9	car	_	NN	NN	_	6	dep	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%lady', 'iobj$@%lady$@%sell', 'det$@%a$@%car', 'amod$@%new$@%car', 'dep$@%car$@%lady', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%lady', 'x$@%lady$@%sell', 'x$@%a$@%car', 'x$@%new$@%car', 'x$@%car$@%lady', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%a$@%x', 'x$@%new$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010704527887933524,0.0093999490943174058,0.0012277142504968364
+I14T-gNSF-p146-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSF-p146-r2,The man is taking payment for a car that was purchased.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	payment	_	NN	NN	_	4	dobj	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	11	nsubjpass	_	_
+9	that	_	WDT	WDT	_	0	erased	_	_
+10	be	_	VBD	VBD	_	11	auxpass	_	_
+11	purchase	_	VBN	VBN	_	8	rcmod	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'dobj$@%payment$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%car', 'nsubjpass$@%car$@%purchase', 'erased$@%that$@%WORDERASED', 'auxpass$@%be$@%purchase', 'rcmod$@%purchase$@%car', 'punct$@%.$@%take']","['x$@%the$@%man', 'x$@%man$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%payment$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%car', 'x$@%car$@%purchase', 'x$@%that$@%WORDERASED', 'x$@%be$@%purchase', 'x$@%purchase$@%car', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%payment$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%purchase$@%x', 'x$@%.$@%x']",0.044574569721728352,0.045373249196718035,0.0039299437632037693
+I14T-gNSF-p147-r1,The man is selling a car. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSF-p147-r2,The man is selling the woman a car. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0069165389699153978,0.0078262345699617875,0.00062581890454482814
+I14T-gNSF-p148-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSF-p149-r1,The man appears to be accepting a strangely small amount of cash in exchange for selling or renting a car to the woman. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	xsubj	_	_
+3	appear	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	6	aux	_	_
+5	be	_	VB	VB	_	6	aux	_	_
+6	accept	_	VBG	VBG	_	3	xcomp	_	_
+7	a	_	DT	DT	_	10	det	_	_
+8	strangely	_	JJ	JJ	_	10	amod	_	_
+9	small	_	JJ	JJ	_	10	amod	_	_
+10	amount	_	NN	NN	_	6	dobj	_	_
+11	of	_	IN	IN	_	0	erased	_	_
+12	cash	_	NN	NN	_	10	prep_of	_	_
+13	in	_	IN	IN	_	0	erased	_	_
+14	exchange	_	NN	NN	_	12	prep_in	_	_
+15	for	_	IN	IN	_	0	erased	_	_
+16	sell	_	VBG	VBG	_	6	prepc_for	_	_
+17	or	_	CC	CC	_	0	erased	_	_
+18	rent	_	VBG	VBG	_	16	conj_or	_	_
+19	a	_	DT	DT	_	20	det	_	_
+20	car	_	NN	NN	_	16	dobj	_	_
+21	to	_	TO	TO	_	0	erased	_	_
+22	the	_	DT	DT	_	23	det	_	_
+23	woman	_	NN	NN	_	16	prep_to	_	_
+24	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'xsubj$@%man$@%accept', 'root$@%appear$@%VROOT', 'aux$@%to$@%accept', 'aux$@%be$@%accept', 'xcomp$@%accept$@%appear', 'det$@%a$@%amount', 'amod$@%strangely$@%amount', 'amod$@%small$@%amount', 'dobj$@%amount$@%accept', 'erased$@%of$@%WORDERASED', 'prep_of$@%cash$@%amount', 'erased$@%in$@%WORDERASED', 'prep_in$@%exchange$@%cash', 'erased$@%for$@%WORDERASED', 'prepc_for$@%sell$@%accept', 'erased$@%or$@%WORDERASED', 'conj_or$@%rent$@%sell', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%appear']","['x$@%the$@%man', 'x$@%man$@%accept', 'x$@%appear$@%VROOT', 'x$@%to$@%accept', 'x$@%be$@%accept', 'x$@%accept$@%appear', 'x$@%a$@%amount', 'x$@%strangely$@%amount', 'x$@%small$@%amount', 'x$@%amount$@%accept', 'x$@%of$@%WORDERASED', 'x$@%cash$@%amount', 'x$@%in$@%WORDERASED', 'x$@%exchange$@%cash', 'x$@%for$@%WORDERASED', 'x$@%sell$@%accept', 'x$@%or$@%WORDERASED', 'x$@%rent$@%sell', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%appear']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%accept$@%x', 'x$@%a$@%x', 'x$@%strangely$@%x', 'x$@%small$@%x', 'x$@%amount$@%x', 'x$@%of$@%x', 'x$@%cash$@%x', 'x$@%in$@%x', 'x$@%exchange$@%x', 'x$@%for$@%x', 'x$@%sell$@%x', 'x$@%or$@%x', 'x$@%rent$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.034533345558625084,0.033634226010439972,0.0031648600372218283
+I14T-gNSF-p149-r2,The man is happily exchanging a set of car keys for what appears to be a single bill of paper currency,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	happily	_	RB	RB	_	5	advmod	_	_
+5	exchange	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	set	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	car	_	NN	NN	_	10	nn	_	_
+10	key	_	NNS	NNS	_	7	prep_of	_	_
+11	for	_	IN	IN	_	0	erased	_	_
+12	what	_	WP	WP	_	13	nsubj	_	_
+13	appear	_	VBZ	VBZ	_	5	prepc_for	_	_
+14	to	_	TO	TO	_	18	aux	_	_
+15	be	_	VB	VB	_	18	cop	_	_
+16	a	_	DT	DT	_	18	det	_	_
+17	single	_	JJ	JJ	_	18	amod	_	_
+18	bill	_	NN	NN	_	13	xcomp	_	_
+19	of	_	IN	IN	_	0	erased	_	_
+20	paper	_	NN	NN	_	21	nn	_	_
+21	currency	_	NN	NN	_	18	prep_of	_	_
+22	.	_	.	.	_	5	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%exchange', 'aux$@%be$@%exchange', 'advmod$@%happily$@%exchange', 'root$@%exchange$@%VROOT', 'det$@%a$@%set', 'dobj$@%set$@%exchange', 'erased$@%of$@%WORDERASED', 'nn$@%car$@%key', 'prep_of$@%key$@%set', 'erased$@%for$@%WORDERASED', 'nsubj$@%what$@%appear', 'prepc_for$@%appear$@%exchange', 'aux$@%to$@%bill', 'cop$@%be$@%bill', 'det$@%a$@%bill', 'amod$@%single$@%bill', 'xcomp$@%bill$@%appear', 'erased$@%of$@%WORDERASED', 'nn$@%paper$@%currency', 'prep_of$@%currency$@%bill', 'punct$@%.$@%exchange']","['x$@%the$@%man', 'x$@%man$@%exchange', 'x$@%be$@%exchange', 'x$@%happily$@%exchange', 'x$@%exchange$@%VROOT', 'x$@%a$@%set', 'x$@%set$@%exchange', 'x$@%of$@%WORDERASED', 'x$@%car$@%key', 'x$@%key$@%set', 'x$@%for$@%WORDERASED', 'x$@%what$@%appear', 'x$@%appear$@%exchange', 'x$@%to$@%bill', 'x$@%be$@%bill', 'x$@%a$@%bill', 'x$@%single$@%bill', 'x$@%bill$@%appear', 'x$@%of$@%WORDERASED', 'x$@%paper$@%currency', 'x$@%currency$@%bill', 'x$@%.$@%exchange']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%happily$@%x', 'x$@%exchange$@%x', 'x$@%a$@%x', 'x$@%set$@%x', 'x$@%of$@%x', 'x$@%car$@%x', 'x$@%key$@%x', 'x$@%for$@%x', 'x$@%what$@%x', 'x$@%appear$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%single$@%x', 'x$@%bill$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%currency$@%x', 'x$@%.$@%x']",0.031009115552175448,0.025318984178932857,0.0038686687423462596
+I14T-gNSF-p150-r1,The man is selling a car. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSC-p159-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p168-r1,The man is selling a new car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	new	_	JJ	JJ	_	7	amod	_	_
+7	car	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'amod$@%new$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%new$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%new$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0065570854417763558,0.0065354155716216278,0.0013893353408033216
+I14T-gNSC-p169-r1,the man is selling a car,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p170-r1,The man is selling a car,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSC-p175-r1,The man is selling a car to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0044696421902764571,0.0049358976324186399,0.0008205343588263414
+I14T-gNSC-p176-r1,Selling a car,1,1,1,0,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	car	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.026144804761221718,0.026274878084800002,0.0099197591627163684
+I14T-gNSC-p177-r1,The man is selling a car to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0044696421902764571,0.0049358976324186399,0.0008205343588263414
+I14T-gNSC-p177-r2,He is selling a car.,1,1,1,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	sell	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	car	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%he$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.025951000685119574,0.027124824896522792,0.0040437801521956418
+I14T-gNSC-p187-r1,He's selling a car.,1,1,1,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	sell	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	car	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%he$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.025951000685119574,0.027124824896522792,0.0040437801521951977
+I14T-gNSC-p190-r1,The man is selling her a car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP	PRP	_	7	nsubj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	car	_	NN	NN	_	4	xcomp	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'nsubj$@%she$@%car', 'det$@%a$@%car', 'xcomp$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%she$@%car', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%she$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.011412886183288062,0.0079484184914296874,0.0014053496376901231
+I14T-gNSC-p190-r2,"He is selling the woman, a car.",1,1,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	sell	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	woman	_	NN	NN	_	3	dobj	_	_
+6	,	_	,	,	_	5	punct	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	5	appos	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'dobj$@%woman$@%sell', 'punct$@%,$@%woman', 'det$@%a$@%car', 'appos$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%he$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%,$@%woman', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%,$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.011841118320789934,0.0095515563643175927,0.0012290062227965359
+I14T-gNSC-p192-r1,The man is selling the lady a car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	lady	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%lady', 'iobj$@%lady$@%sell', 'det$@%a$@%car', 'dep$@%car$@%lady', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%lady', 'x$@%lady$@%sell', 'x$@%a$@%car', 'x$@%car$@%lady', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.014433328562090675,0.013750015674752425,0.0013669109041293259
+I14T-gNSC-p199-r1,The man just sold this woman a car,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	sell	_	VBD	VBD	_	0	root	_	_
+5	this	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'advmod$@%just$@%sell', 'root$@%sell$@%VROOT', 'det$@%this$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%just$@%sell', 'x$@%sell$@%VROOT', 'x$@%this$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%just$@%x', 'x$@%sell$@%x', 'x$@%this$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.014135179847197699,0.011171824513255268,0.0033266394966116053
+I14T-gNSC-p199-r2,This man just gladly sold this woman a car.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	nsubj	_	_
+3	just	_	RB	RB	_	5	advmod	_	_
+4	gladly	_	RB	RB	_	5	advmod	_	_
+5	sell	_	VBD	VBD	_	0	root	_	_
+6	this	_	DT	DT	_	7	det	_	_
+7	woman	_	NN	NN	_	5	iobj	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	car	_	NN	NN	_	5	dobj	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%sell', 'advmod$@%just$@%sell', 'advmod$@%gladly$@%sell', 'root$@%sell$@%VROOT', 'det$@%this$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%this$@%man', 'x$@%man$@%sell', 'x$@%just$@%sell', 'x$@%gladly$@%sell', 'x$@%sell$@%VROOT', 'x$@%this$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%just$@%x', 'x$@%gladly$@%x', 'x$@%sell$@%x', 'x$@%this$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.02573389284357841,0.019749271128447821,0.0070593475497947589
+I14T-gNSC-p202-r2,The man is renting the car to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	rent	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%rent', 'aux$@%be$@%rent', 'root$@%rent$@%VROOT', 'det$@%the$@%car', 'dobj$@%car$@%rent', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%rent', 'punct$@%.$@%rent']","['x$@%the$@%man', 'x$@%man$@%rent', 'x$@%be$@%rent', 'x$@%rent$@%VROOT', 'x$@%the$@%car', 'x$@%car$@%rent', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%rent', 'x$@%.$@%rent']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%rent$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.046681585909203682,0.051234700855800952,0.0045007840980056946
+I14T-gNSC-p209-r1,GIVING HER THE KEYS TO HER RENTAL CAR,1,1,1,1,1,"1	give	_	NNP	NNP	_	3	nn	_	_
+2	her	_	NNP	NNP	_	3	nn	_	_
+3	the	_	NNP	NNP	_	6	xsubj	_	_
+4	key	_	VBZ	VBZ	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	her	_	VB	VB	_	4	xcomp	_	_
+7	rental	_	NNP	NNP	_	8	nn	_	_
+8	car	_	NNP	NNP	_	6	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['nn$@%give$@%the', 'nn$@%her$@%the', 'xsubj$@%the$@%her', 'root$@%key$@%VROOT', 'aux$@%to$@%her', 'xcomp$@%her$@%key', 'nn$@%rental$@%car', 'dobj$@%car$@%her', 'punct$@%.$@%key']","['x$@%give$@%the', 'x$@%her$@%the', 'x$@%the$@%her', 'x$@%key$@%VROOT', 'x$@%to$@%her', 'x$@%her$@%key', 'x$@%rental$@%car', 'x$@%car$@%her', 'x$@%.$@%key']","['x$@%give$@%x', 'x$@%her$@%x', 'x$@%the$@%x', 'x$@%key$@%x', 'x$@%to$@%x', 'x$@%her$@%x', 'x$@%rental$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.051679163660554805,0.058078698948287655,0.0067474281987929263
+I14T-gNSC-p215-r2,He is handing over car keys to the lady who bought the car.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	over	_	RP	RP	_	3	prt	_	_
+5	car	_	NN	NN	_	6	nn	_	_
+6	key	_	NNS	NNS	_	3	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	lady	_	NN	NN	_	11	nsubj	_	_
+10	who	_	WP	WP	_	0	erased	_	_
+11	buy	_	VBD	VBD	_	9	rcmod	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	car	_	NN	NN	_	11	dobj	_	_
+14	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'prt$@%over$@%hand', 'nn$@%car$@%key', 'dobj$@%key$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'nsubj$@%lady$@%buy', 'erased$@%who$@%WORDERASED', 'rcmod$@%buy$@%lady', 'det$@%the$@%car', 'dobj$@%car$@%buy', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%over$@%hand', 'x$@%car$@%key', 'x$@%key$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%buy', 'x$@%who$@%WORDERASED', 'x$@%buy$@%lady', 'x$@%the$@%car', 'x$@%car$@%buy', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%over$@%x', 'x$@%car$@%x', 'x$@%key$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%who$@%x', 'x$@%buy$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.044804163146456522,0.049666169929141635,0.0043655477860558012
+I14T-gNSC-p216-r2,he has sold a car to a woman,1,0,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	have	_	VBZ	VBZ	_	3	aux	_	_
+3	sell	_	VBN	VBN	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	car	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%sell', 'aux$@%have$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%he$@%sell', 'x$@%have$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%he$@%x', 'x$@%have$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0087049741248782508,0.0095735405089465431,0.0023171408807055593
+I14T-gNSC-p220-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p220-r2,The man is renting a car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	rent	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%rent', 'aux$@%be$@%rent', 'root$@%rent$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%rent', 'punct$@%.$@%rent']","['x$@%the$@%man', 'x$@%man$@%rent', 'x$@%be$@%rent', 'x$@%rent$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%rent', 'x$@%.$@%rent']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%rent$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.048697873859041674,0.052259126844609205,0.0028310120776653402
+I14T-gNSC-p222-r1,Selling her a car,1,1,1,1,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	she	_	PRP	PRP	_	4	nsubj	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	car	_	NN	NN	_	1	xcomp	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'nsubj$@%she$@%car', 'det$@%a$@%car', 'xcomp$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%she$@%car', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%she$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.022271978241347079,0.019338805191106312,0.0065432955370697821
+I14T-gNSC-p222-r2,Selling a car to the woman,1,1,1,1,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	car	_	NN	NN	_	1	dobj	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	1	prep_to	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.012808406534613459,0.0095113491659890581,0.0022427465063524776
+I14T-gNSC-p224-r1,The man is selling a car to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0044696421902764571,0.0049358976324186399,0.0008205343588263414
+I14T-gNSC-p230-r2,The man has sold a car to the customer.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	have	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBN	VBN	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	customer	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%have$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%have$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%have$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",0.0098092901830255652,0.0087581512230548997,0.0022106234546510617
+I14T-gNSC-p231-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p235-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSC-p236-r1,The man is selling the woman a car. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0069165389699153978,0.0078262345699617875,0.00062581890454482814
+I14T-gNSC-p245-r2,The man is accepting the woman's money in exchange for her new car and its keys.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	accept	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	8	poss	_	_
+7	's	_	POS	POS	_	0	erased	_	_
+8	money	_	NN	NN	_	4	dobj	_	_
+9	in	_	IN	IN	_	0	erased	_	_
+10	exchange	_	NN	NN	_	8	prep_in	_	_
+11	for	_	IN	IN	_	0	erased	_	_
+12	she	_	PRP$	PRP$	_	14	poss	_	_
+13	new	_	JJ	JJ	_	14	amod	_	_
+14	car	_	NN	NN	_	4	prep_for	_	_
+15	and	_	CC	CC	_	0	erased	_	_
+16	its	_	PRP$	PRP$	_	17	poss	_	_
+17	key	_	NNS	NNS	_	14	conj_and	_	_
+18	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%accept', 'aux$@%be$@%accept', 'root$@%accept$@%VROOT', 'det$@%the$@%woman', 'poss$@%woman$@%money', ""erased$@%'s$@%WORDERASED"", 'dobj$@%money$@%accept', 'erased$@%in$@%WORDERASED', 'prep_in$@%exchange$@%money', 'erased$@%for$@%WORDERASED', 'poss$@%she$@%car', 'amod$@%new$@%car', 'prep_for$@%car$@%accept', 'erased$@%and$@%WORDERASED', 'poss$@%its$@%key', 'conj_and$@%key$@%car', 'punct$@%.$@%accept']","['x$@%the$@%man', 'x$@%man$@%accept', 'x$@%be$@%accept', 'x$@%accept$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%money', ""x$@%'s$@%WORDERASED"", 'x$@%money$@%accept', 'x$@%in$@%WORDERASED', 'x$@%exchange$@%money', 'x$@%for$@%WORDERASED', 'x$@%she$@%car', 'x$@%new$@%car', 'x$@%car$@%accept', 'x$@%and$@%WORDERASED', 'x$@%its$@%key', 'x$@%key$@%car', 'x$@%.$@%accept']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%accept$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', ""x$@%'s$@%x"", 'x$@%money$@%x', 'x$@%in$@%x', 'x$@%exchange$@%x', 'x$@%for$@%x', 'x$@%she$@%x', 'x$@%new$@%x', 'x$@%car$@%x', 'x$@%and$@%x', 'x$@%its$@%x', 'x$@%key$@%x', 'x$@%.$@%x']",0.044061923905016731,0.047107523491108694,0.0042376283580501939
+I14T-gNSC-p247-r1,The man is selling the woman a car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0069165389699153978,0.0078262345699617875,0.00062581890454482814
+I14T-gNSC-p249-r2,The man is giving the key to the woman who bought the car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	key	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	11	nsubj	_	_
+10	who	_	WP	WP	_	0	erased	_	_
+11	buy	_	VBD	VBD	_	9	rcmod	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	car	_	NN	NN	_	11	dobj	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%key', 'dobj$@%key$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'nsubj$@%woman$@%buy', 'erased$@%who$@%WORDERASED', 'rcmod$@%buy$@%woman', 'det$@%the$@%car', 'dobj$@%car$@%buy', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%key', 'x$@%key$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%buy', 'x$@%who$@%WORDERASED', 'x$@%buy$@%woman', 'x$@%the$@%car', 'x$@%car$@%buy', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%key$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%who$@%x', 'x$@%buy$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.039079760847699374,0.045837529359448959,0.00492934869467887
+I14T-gNSC-p253-r1,selling a car,1,1,1,0,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	car	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.026144804761221718,0.026274878084800002,0.0099197591627162574
+I14T-gNSC-p254-r1,Selling a car,1,1,1,0,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	3	det	_	_
+3	car	_	NN	NN	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.026144804761221718,0.026274878084800002,0.0099197591627163684
+I14T-gNSC-p254-r2,Selling cars ,1,1,1,0,1,"1	sell	_	VBG	VBG	_	0	root	_	_
+2	car	_	NNS	NNS	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%sell$@%VROOT', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%sell$@%VROOT', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%sell$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.055682858648608335,0.053434567474623496,0.017166638927584521
+I14T-gNSC-p255-r1,This man just sold this lady a car.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	sell	_	VBD	VBD	_	0	root	_	_
+5	this	_	DT	DT	_	6	det	_	_
+6	lady	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%sell', 'advmod$@%just$@%sell', 'root$@%sell$@%VROOT', 'det$@%this$@%lady', 'iobj$@%lady$@%sell', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%this$@%man', 'x$@%man$@%sell', 'x$@%just$@%sell', 'x$@%sell$@%VROOT', 'x$@%this$@%lady', 'x$@%lady$@%sell', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%just$@%x', 'x$@%sell$@%x', 'x$@%this$@%x', 'x$@%lady$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.024182967107684861,0.021375637656081636,0.0073276202700897075
+I14T-gNSC-p261-r1,The man is selling a car to this woman. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	this	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%this$@%woman', 'prep_to$@%woman$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%this$@%woman', 'x$@%woman$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%this$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0046065090851289403,0.0059287793447920789,0.0012838430360114783
+I14T-gNSC-p261-r2,This man is renting this woman a car.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	rent	_	VBG	VBG	_	0	root	_	_
+5	this	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%rent', 'aux$@%be$@%rent', 'root$@%rent$@%VROOT', 'det$@%this$@%woman', 'iobj$@%woman$@%rent', 'det$@%a$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%rent']","['x$@%this$@%man', 'x$@%man$@%rent', 'x$@%be$@%rent', 'x$@%rent$@%VROOT', 'x$@%this$@%woman', 'x$@%woman$@%rent', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%rent']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%rent$@%x', 'x$@%this$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.043069375357772444,0.04950967162750497,0.004184518600422682
+I14T-gNSC-p262-r1,This man is returning the car to a client after repairs have been done.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	return	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	client	_	NN	NN	_	4	prep_to	_	_
+10	after	_	IN	IN	_	14	mark	_	_
+11	repair	_	NNS	NNS	_	14	nsubjpass	_	_
+12	have	_	VBP	VBP	_	14	aux	_	_
+13	be	_	VBN	VBN	_	14	auxpass	_	_
+14	do	_	VBN	VBN	_	4	advcl	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%return', 'aux$@%be$@%return', 'root$@%return$@%VROOT', 'det$@%the$@%car', 'dobj$@%car$@%return', 'erased$@%to$@%WORDERASED', 'det$@%a$@%client', 'prep_to$@%client$@%return', 'mark$@%after$@%do', 'nsubjpass$@%repair$@%do', 'aux$@%have$@%do', 'auxpass$@%be$@%do', 'advcl$@%do$@%return', 'punct$@%.$@%return']","['x$@%this$@%man', 'x$@%man$@%return', 'x$@%be$@%return', 'x$@%return$@%VROOT', 'x$@%the$@%car', 'x$@%car$@%return', 'x$@%to$@%WORDERASED', 'x$@%a$@%client', 'x$@%client$@%return', 'x$@%after$@%do', 'x$@%repair$@%do', 'x$@%have$@%do', 'x$@%be$@%do', 'x$@%do$@%return', 'x$@%.$@%return']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%return$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%client$@%x', 'x$@%after$@%x', 'x$@%repair$@%x', 'x$@%have$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%.$@%x']",0.039358453372604019,0.057035123558734191,0.0040083609780455776
+I14T-gNSC-p262-r2,"This man has just sold said car, and is exchanging keys for the purchase price ",1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	11	nsubj	_	_
+3	have	_	VBZ	VBZ	_	5	aux	_	_
+4	just	_	RB	RB	_	5	advmod	_	_
+5	sell	_	VBN	VBN	_	2	rcmod	_	_
+6	say	_	VBD	VBD	_	0	root	_	_
+7	car	_	NN	NN	_	6	dobj	_	_
+8	,	_	,	,	_	6	punct	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	exchange	_	VBG	VBG	_	6	conj_and	_	_
+12	key	_	NNS	NNS	_	11	dobj	_	_
+13	for	_	IN	IN	_	0	erased	_	_
+14	the	_	DT	DT	_	16	det	_	_
+15	purchase	_	NN	NN	_	16	nn	_	_
+16	price	_	NN	NN	_	12	prep_for	_	_
+17	.	_	.	.	_	6	punct	_	_","['det$@%this$@%man', 'nsubj$@%man$@%exchange', 'aux$@%have$@%sell', 'advmod$@%just$@%sell', 'rcmod$@%sell$@%man', 'root$@%say$@%VROOT', 'dobj$@%car$@%say', 'punct$@%,$@%say', 'erased$@%and$@%WORDERASED', 'aux$@%be$@%exchange', 'conj_and$@%exchange$@%say', 'dobj$@%key$@%exchange', 'erased$@%for$@%WORDERASED', 'det$@%the$@%price', 'nn$@%purchase$@%price', 'prep_for$@%price$@%key', 'punct$@%.$@%say']","['x$@%this$@%man', 'x$@%man$@%exchange', 'x$@%have$@%sell', 'x$@%just$@%sell', 'x$@%sell$@%man', 'x$@%say$@%VROOT', 'x$@%car$@%say', 'x$@%,$@%say', 'x$@%and$@%WORDERASED', 'x$@%be$@%exchange', 'x$@%exchange$@%say', 'x$@%key$@%exchange', 'x$@%for$@%WORDERASED', 'x$@%the$@%price', 'x$@%purchase$@%price', 'x$@%price$@%key', 'x$@%.$@%say']","['x$@%this$@%x', 'x$@%man$@%x', 'x$@%have$@%x', 'x$@%just$@%x', 'x$@%sell$@%x', 'x$@%say$@%x', 'x$@%car$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%be$@%x', 'x$@%exchange$@%x', 'x$@%key$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%purchase$@%x', 'x$@%price$@%x', 'x$@%.$@%x']",0.023744948564631385,0.020918279827601305,0.0032221076790261982
+I14T-gNSC-p264-r1,Renting the car to the woman.,1,1,1,1,1,"1	rent	_	VBG	VBG	_	0	root	_	_
+2	the	_	DT	DT	_	3	det	_	_
+3	car	_	NN	NN	_	1	dobj	_	_
+4	to	_	TO	TO	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	1	prep_to	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%rent$@%VROOT', 'det$@%the$@%car', 'dobj$@%car$@%rent', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%rent', 'punct$@%.$@%rent']","['x$@%rent$@%VROOT', 'x$@%the$@%car', 'x$@%car$@%rent', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%rent', 'x$@%.$@%rent']","['x$@%rent$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.057891122736238754,0.053140690216842534,0.0064344235505250369
+I14T-gNSC-p264-r2,The woman is renting a car from the man.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	rent	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_from	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%rent', 'aux$@%be$@%rent', 'root$@%rent$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%rent', 'erased$@%from$@%WORDERASED', 'det$@%the$@%man', 'prep_from$@%man$@%rent', 'punct$@%.$@%rent']","['x$@%the$@%woman', 'x$@%woman$@%rent', 'x$@%be$@%rent', 'x$@%rent$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%rent', 'x$@%from$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%rent', 'x$@%.$@%rent']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%rent$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.04532221550858162,0.048823326355235674,0.0035415846873325663
+I14T-gNSC-p271-r1,The man is selling a car. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p276-r2,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSC-p282-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817548656
+I14T-gNSC-p282-r2,The man sold a car to the lady.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	sell	_	VBD	VBD	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	car	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	lady	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.0096957692731612921,0.0089517442672156777,0.001734777333723736
+I14T-gNSF-p293-r1,The man sold the woman a car.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	sell	_	VBD	VBD	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	woman	_	NN	NN	_	3	iobj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	car	_	NN	NN	_	3	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.008460729026036784,0.0072364437345034949,0.0013631191419446465
+I14T-gNSF-p299-r2,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSF-p301-r1,The man is selling the car to the lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	lady	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%car', 'dobj$@%car$@%sell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%car', 'x$@%car$@%sell', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.011183053102292173,0.010025735417878767,0.0021099900467829169
+I14T-gNSF-p302-r1,The man is selling the woman a car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0069165389699153978,0.0078262345699617875,0.00062581890454482814
+I14T-gNSF-p302-r2,He is giving the keys to the car the woman just bought.,1,1,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	give	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	key	_	NNS	NNS	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	3	prep_to	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	woman	_	NN	NN	_	11	npadvmod	_	_
+11	just	_	RB	RB	_	12	advmod	_	_
+12	buy	_	VBN	VBN	_	8	partmod	_	_
+13	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%key', 'dobj$@%key$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%car', 'prep_to$@%car$@%give', 'det$@%the$@%woman', 'npadvmod$@%woman$@%just', 'advmod$@%just$@%buy', 'partmod$@%buy$@%car', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%key', 'x$@%key$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%car', 'x$@%car$@%give', 'x$@%the$@%woman', 'x$@%woman$@%just', 'x$@%just$@%buy', 'x$@%buy$@%car', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%key$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%just$@%x', 'x$@%buy$@%x', 'x$@%.$@%x']",0.042587853559631683,0.047198967709750739,0.0055769487288362951
+I14T-gNSF-p303-r1,The man is selling the woman a red car.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	woman	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	red	_	JJ	JJ	_	9	amod	_	_
+9	car	_	NN	NN	_	6	dep	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%sell', 'det$@%a$@%car', 'amod$@%red$@%car', 'dep$@%car$@%woman', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%sell', 'x$@%a$@%car', 'x$@%red$@%car', 'x$@%car$@%woman', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%red$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.0061021654767519085,0.005500039932596068,0.00070060041160502351
+I14T-gNSF-p306-r1,The man just sold the car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	sell	_	VBD	VBD	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'advmod$@%just$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%just$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%just$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.013696527084004595,0.013089185486261257,0.0034555288316673316
+I14T-gNSF-p495-r1,The man is selling a car.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	car	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.010855644290659439,0.010722896197026377,0.0011309469817547546
+I14T-gNSF-p496-r1,The man is selling the lesbian a car.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	lesbian	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	6	dep	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%the$@%lesbian', 'iobj$@%lesbian$@%sell', 'det$@%a$@%car', 'dep$@%car$@%lesbian', 'punct$@%.$@%sell']","['x$@%the$@%man', 'x$@%man$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%the$@%lesbian', 'x$@%lesbian$@%sell', 'x$@%a$@%car', 'x$@%car$@%lesbian', 'x$@%.$@%sell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%the$@%x', 'x$@%lesbian$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.017968224973967661,0.017501681969586125,0.001977158734369211
+I14T-gNSF-p497-r1,He's selling a car.,1,1,1,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	sell	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	car	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%sell', 'aux$@%be$@%sell', 'root$@%sell$@%VROOT', 'det$@%a$@%car', 'dobj$@%car$@%sell', 'punct$@%.$@%sell']","['x$@%he$@%sell', 'x$@%be$@%sell', 'x$@%sell$@%VROOT', 'x$@%a$@%car', 'x$@%car$@%sell', 'x$@%.$@%sell']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%sell$@%x', 'x$@%a$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.025951000685119574,0.027124824896522792,0.0040437801521956418
