@@ -1,0 +1,938 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I09U-gNSF-p143-r1,The girl is riding a horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSF-p143-r2,The girl is going for a ride on her horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	ride	_	NN	NN	_	4	prep_for	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	she	_	PRP$	PRP$	_	10	poss	_	_
+10	horse	_	NN	NN	_	7	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%go', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%go', 'erased$@%on$@%WORDERASED', 'poss$@%she$@%horse', 'prep_on$@%horse$@%ride', 'punct$@%.$@%go']","['x$@%the$@%girl', 'x$@%girl$@%go', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%go', 'x$@%on$@%WORDERASED', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%on$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.89934744759704954,0.69800506393799711,0.0294851073597453
+I09U-gNSF-p151-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSF-p151-r2,The horse is being ridden by a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.52401297638995303,0.21734518139450898,0.012330439030280416
+I09U-gNSF-p294-r2,The girl is riding a pony.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pony	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%pony', 'dobj$@%pony$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%pony', 'x$@%pony$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%pony$@%x', 'x$@%.$@%x']",0.42415701938854944,0.41954899812159985,0.58008511031518706
+I09U-gNSF-p295-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSF-p295-r2,The girl is going for a ride on a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	ride	_	NN	NN	_	4	prep_for	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	horse	_	NN	NN	_	7	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%go', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%go', 'erased$@%on$@%WORDERASED', 'det$@%a$@%horse', 'prep_on$@%horse$@%ride', 'punct$@%.$@%go']","['x$@%the$@%girl', 'x$@%girl$@%go', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%go', 'x$@%on$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.86457083922301403,0.65272738413695941,0.017439059757669684
+I09U-gNSF-p296-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSF-p296-r2,The horse is carrying a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%girl', 'dobj$@%girl$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%horse', 'x$@%horse$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%girl', 'x$@%girl$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.91013645643634189,0.91538148261990038,0.28871795137307477
+I09U-gNSF-p297-r1,The girl rides a horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.13876856814020266,0.15501394460117912,0.01201835842762522
+I09U-gNSF-p297-r2,The horse is trotting the girl around on the grass.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	trot	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	dobj	_	_
+7	around	_	RB	RB	_	4	advmod	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	grass	_	NN	NN	_	4	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%trot', 'aux$@%be$@%trot', 'root$@%trot$@%VROOT', 'det$@%the$@%girl', 'dobj$@%girl$@%trot', 'advmod$@%around$@%trot', 'erased$@%on$@%WORDERASED', 'det$@%the$@%grass', 'prep_on$@%grass$@%trot', 'punct$@%.$@%trot']","['x$@%the$@%horse', 'x$@%horse$@%trot', 'x$@%be$@%trot', 'x$@%trot$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%trot', 'x$@%around$@%trot', 'x$@%on$@%WORDERASED', 'x$@%the$@%grass', 'x$@%grass$@%trot', 'x$@%.$@%trot']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%trot$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%around$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%grass$@%x', 'x$@%.$@%x']",0.93289311307011114,0.93268743377661478,0.61545330834781098
+I09U-gNSF-p298-r1,She is riding a horse,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	ride	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%she$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.32547730015385912,0.29601068929772012,0.13331764054410722
+I09U-gNSF-p304-r1,The equestrienne rode contentedly.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	equestrienne	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBD	VBD	_	0	root	_	_
+4	contentedly	_	RB	RB	_	3	advmod	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%equestrienne', 'nsubj$@%equestrienne$@%ride', 'root$@%ride$@%VROOT', 'advmod$@%contentedly$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%equestrienne', 'x$@%equestrienne$@%ride', 'x$@%ride$@%VROOT', 'x$@%contentedly$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%equestrienne$@%x', 'x$@%ride$@%x', 'x$@%contentedly$@%x', 'x$@%.$@%x']",0.79799725183479664,0.82083559208939849,0.84055212806192103
+I09U-gNSF-p304-r2,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSF-p305-r1,The girl is riding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686704
+I09U-gNSC-p325-r1,The girl is riding a horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSC-p325-r2,A girl is riding a brown horse,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	brown	_	JJ	JJ	_	7	amod	_	_
+7	horse	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'amod$@%brown$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.16946984344526694,0.15978944168136999,0.17017145434429048
+I09U-gNSC-p343-r1,The little girl have gone horseback riding on a good day,1,0,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	have	_	VBP	VBP	_	5	aux	_	_
+5	go	_	VBN	VBN	_	0	root	_	_
+6	horseback	_	NN	NN	_	5	dobj	_	_
+7	ride	_	VBG	VBG	_	6	partmod	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	11	det	_	_
+10	good	_	JJ	JJ	_	11	amod	_	_
+11	day	_	NN	NN	_	7	prep_on	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%go', 'aux$@%have$@%go', 'root$@%go$@%VROOT', 'dobj$@%horseback$@%go', 'partmod$@%ride$@%horseback', 'erased$@%on$@%WORDERASED', 'det$@%a$@%day', 'amod$@%good$@%day', 'prep_on$@%day$@%ride', 'punct$@%.$@%go']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%go', 'x$@%have$@%go', 'x$@%go$@%VROOT', 'x$@%horseback$@%go', 'x$@%ride$@%horseback', 'x$@%on$@%WORDERASED', 'x$@%a$@%day', 'x$@%good$@%day', 'x$@%day$@%ride', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%have$@%x', 'x$@%go$@%x', 'x$@%horseback$@%x', 'x$@%ride$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%good$@%x', 'x$@%day$@%x', 'x$@%.$@%x']",0.95531371480224736,0.96082809525686497,0.56982011277657407
+I09U-gNSC-p344-r1,girl is horseback riding,1,1,0,1,1,"1	girl	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	cop	_	_
+3	horseback	_	NN	NN	_	0	root	_	_
+4	ride	_	VBG	VBG	_	3	partmod	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%girl$@%horseback', 'cop$@%be$@%horseback', 'root$@%horseback$@%VROOT', 'partmod$@%ride$@%horseback', 'punct$@%.$@%horseback']","['x$@%girl$@%horseback', 'x$@%be$@%horseback', 'x$@%horseback$@%VROOT', 'x$@%ride$@%horseback', 'x$@%.$@%horseback']","['x$@%girl$@%x', 'x$@%be$@%x', 'x$@%horseback$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.98324701395359448,0.98512814879915478,0.57140716928571234
+I09U-gNSC-p344-r2,girl is riding horse ,1,1,0,1,1,"1	girl	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	ride	_	VBG	VBG	_	0	root	_	_
+4	horse	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.10965459003760436,0.075437040431556301,0.01208506630171835
+I09U-gNSC-p349-r1,A girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560362
+I09U-gNSC-p352-r1,A girl is riding a horse. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560362
+I09U-gNSC-p355-r1,A girl is riding her horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.15924863520140398,0.13928768582023965,0.024412454395543848
+I09U-gNSC-p355-r2,A girl is taking horseback riding lessons.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	horseback	_	NN	NN	_	7	nn	_	_
+6	ride	_	NN	NN	_	7	nn	_	_
+7	lesson	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'nn$@%horseback$@%lesson', 'nn$@%ride$@%lesson', 'dobj$@%lesson$@%take', 'punct$@%.$@%take']","['x$@%a$@%girl', 'x$@%girl$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%horseback$@%lesson', 'x$@%ride$@%lesson', 'x$@%lesson$@%take', 'x$@%.$@%take']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%horseback$@%x', 'x$@%ride$@%x', 'x$@%lesson$@%x', 'x$@%.$@%x']",0.95338366832755639,0.95375939253139752,0.62086131563782843
+I09U-gNSC-p356-r1,A girl is riding a horse. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560362
+I09U-gNSC-p356-r2,A horse is being ridden by a girl. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.48785148301225767,0.19433958612117619,0.012340290077289207
+I09U-gNSC-p358-r1,A girl riding a horse ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	0	root	_	_
+3	ride	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['det$@%a$@%girl', 'root$@%girl$@%VROOT', 'partmod$@%ride$@%girl', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%girl']","['x$@%a$@%girl', 'x$@%girl$@%VROOT', 'x$@%ride$@%girl', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%girl']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.61933293689743563,0.61297039630423289,0.01202832719966529
+I09U-gNSC-p359-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSC-p359-r2,A girl is taking her horse through the pasture.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	through	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	pasture	_	NN	NN	_	4	prep_through	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%take', 'erased$@%through$@%WORDERASED', 'det$@%the$@%pasture', 'prep_through$@%pasture$@%take', 'punct$@%.$@%take']","['x$@%a$@%girl', 'x$@%girl$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%take', 'x$@%through$@%WORDERASED', 'x$@%the$@%pasture', 'x$@%pasture$@%take', 'x$@%.$@%take']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%through$@%x', 'x$@%the$@%x', 'x$@%pasture$@%x', 'x$@%.$@%x']",0.91375589939249857,0.90811519762894732,0.5658132114195854
+I09U-gNSC-p363-r2,The girl is enjoying a stroll with her horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	enjoy	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	stroll	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	horse	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'det$@%a$@%stroll', 'dobj$@%stroll$@%enjoy', 'erased$@%with$@%WORDERASED', 'poss$@%she$@%horse', 'prep_with$@%horse$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%the$@%girl', 'x$@%girl$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%a$@%stroll', 'x$@%stroll$@%enjoy', 'x$@%with$@%WORDERASED', 'x$@%she$@%horse', 'x$@%horse$@%enjoy', 'x$@%.$@%enjoy']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%a$@%x', 'x$@%stroll$@%x', 'x$@%with$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.94031215021036851,0.94422533541527398,0.56374780535430358
+I09U-gNSC-p364-r1,The girl is riding a horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSC-p365-r1,A little jocky is riding a horse.,1,1,0,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	jocky	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ride	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%jocky', 'amod$@%little$@%jocky', 'nsubj$@%jocky$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%jocky', 'x$@%little$@%jocky', 'x$@%jocky$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%jocky$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.47702865620980761,0.47488357321927943,0.56521376932490419
+I09U-gNSC-p365-r2,A little jocky girl is riding this horse.,1,1,0,1,1,"1	a	_	DT	DT	_	4	det	_	_
+2	little	_	JJ	JJ	_	4	amod	_	_
+3	jocky	_	NN	NN	_	4	nn	_	_
+4	girl	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	ride	_	VBG	VBG	_	0	root	_	_
+7	this	_	DT	DT	_	8	det	_	_
+8	horse	_	NN	NN	_	6	dobj	_	_
+9	.	_	.	.	_	6	punct	_	_","['det$@%a$@%girl', 'amod$@%little$@%girl', 'nn$@%jocky$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%this$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%little$@%girl', 'x$@%jocky$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%this$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%jocky$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%this$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.33731793511354446,0.32322740376993786,0.4678946632426555
+I09U-gNSC-p367-r1,A girl riding a horse.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	0	root	_	_
+3	ride	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['det$@%a$@%girl', 'root$@%girl$@%VROOT', 'partmod$@%ride$@%girl', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%girl']","['x$@%a$@%girl', 'x$@%girl$@%VROOT', 'x$@%ride$@%girl', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%girl']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.61933293689743563,0.61297039630423289,0.01202832719966529
+I09U-gNSC-p367-r2,A horse being ridden by a girl. ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	0	root	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	ride	_	VBN	VBN	_	2	partmod	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	2	punct	_	_","['det$@%a$@%horse', 'root$@%horse$@%VROOT', 'auxpass$@%be$@%ride', 'partmod$@%ride$@%horse', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%horse']","['x$@%a$@%horse', 'x$@%horse$@%VROOT', 'x$@%be$@%ride', 'x$@%ride$@%horse', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%horse']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.81526103890983104,0.52601407246319476,0.012359709883321912
+I09U-gNSC-p370-r1,A girl is riding a horse,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560362
+I09U-gNSC-p370-r2,A girl in a pink coat and black helmet is riding a horse,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	11	nsubj	_	_
+3	in	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	pink	_	JJ	JJ	_	6	amod	_	_
+6	coat	_	NN	NN	_	2	prep_in	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	black	_	JJ	JJ	_	9	amod	_	_
+9	helmet	_	NN	NN	_	6	conj_and	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	ride	_	VBG	VBG	_	0	root	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	horse	_	NN	NN	_	11	dobj	_	_
+14	.	_	.	.	_	11	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'erased$@%in$@%WORDERASED', 'det$@%a$@%coat', 'amod$@%pink$@%coat', 'prep_in$@%coat$@%girl', 'erased$@%and$@%WORDERASED', 'amod$@%black$@%helmet', 'conj_and$@%helmet$@%coat', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%in$@%WORDERASED', 'x$@%a$@%coat', 'x$@%pink$@%coat', 'x$@%coat$@%girl', 'x$@%and$@%WORDERASED', 'x$@%black$@%helmet', 'x$@%helmet$@%coat', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%pink$@%x', 'x$@%coat$@%x', 'x$@%and$@%x', 'x$@%black$@%x', 'x$@%helmet$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.40170013326552112,0.39646536564532764,0.54212963540141623
+I09U-gNSC-p374-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSC-p374-r2,The horse is concerned about the girl riding it.,1,0,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	4	auxpass	_	_
+4	concern	_	VBN	VBN	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	prep_about	_	_
+8	ride	_	VBG	VBG	_	7	partmod	_	_
+9	it	_	PRP	PRP	_	8	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%concern', 'auxpass$@%be$@%concern', 'root$@%concern$@%VROOT', 'erased$@%about$@%WORDERASED', 'det$@%the$@%girl', 'prep_about$@%girl$@%concern', 'partmod$@%ride$@%girl', 'dobj$@%it$@%ride', 'punct$@%.$@%concern']","['x$@%the$@%horse', 'x$@%horse$@%concern', 'x$@%be$@%concern', 'x$@%concern$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%concern', 'x$@%ride$@%girl', 'x$@%it$@%ride', 'x$@%.$@%concern']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%concern$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.91665433616260694,0.91983933664833795,0.074298202023755144
+I09U-gNSC-p379-r2,The girl and her horse are out for a ride.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	6	nsubj	_	_
+3	and	_	CC	CC	_	0	erased	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	horse	_	NN	NN	_	6	nsubj	_	_
+6	be	_	VBP	VBP	_	0	root	_	_
+7	out	_	RP	RP	_	6	prt	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	ride	_	NN	NN	_	6	prep_for	_	_
+11	.	_	.	.	_	6	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%be', 'erased$@%and$@%WORDERASED', 'poss$@%she$@%horse', 'nsubj$@%horse$@%be', 'root$@%be$@%VROOT', 'prt$@%out$@%be', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%be', 'punct$@%.$@%be']","['x$@%the$@%girl', 'x$@%girl$@%be', 'x$@%and$@%WORDERASED', 'x$@%she$@%horse', 'x$@%horse$@%be', 'x$@%be$@%VROOT', 'x$@%out$@%be', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%and$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%out$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.91857262647519622,0.91643032671967906,0.026894966391841635
+I09U-gNSC-p380-r1,girl rode the horse,1,0,0,1,1,"1	girl	_	NN	NN	_	2	nsubj	_	_
+2	ride	_	VBD	VBD	_	0	root	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	horse	_	NN	NN	_	2	dobj	_	_
+5	.	_	.	.	_	2	punct	_	_","['nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.21253877873789584,0.21952928495523827,0.012082962033027056
+I09U-gNSC-p380-r2,Horse ride by a girl,1,0,0,1,1,"1	horse	_	NNP	NNP	_	2	nsubj	_	_
+2	ride	_	VBP	VBP	_	0	root	_	_
+3	by	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	girl	_	NN	NN	_	2	prep_by	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%horse$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'prep_by$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%horse$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%horse$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.72868603732625892,0.18515869552449193,0.012426984230842542
+I09U-gNSC-p383-r1,A girl rides a horse.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.13916726078755981,0.15620806567165979,0.012028327199665068
+I09U-gNSC-p385-r1,SHE IS RIDING THE HORSE.,1,1,1,1,1,"1	she	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	ride	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%she$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.37429096257361727,0.3438717706913289,0.13332237794277291
+I09U-gNSC-p385-r2,SHE IS HAPPY RIDING HER HORSE.,1,1,1,1,1,"1	she	_	NNP	NNP	_	6	nsubj	_	_
+2	be	_	VBZ	VBZ	_	6	cop	_	_
+3	happy	_	NNP	NNP	_	6	nn	_	_
+4	ride	_	NNP	NNP	_	6	nn	_	_
+5	her	_	NNP	NNP	_	6	nn	_	_
+6	horse	_	NNP	NNP	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['nsubj$@%she$@%horse', 'cop$@%be$@%horse', 'nn$@%happy$@%horse', 'nn$@%ride$@%horse', 'nn$@%her$@%horse', 'root$@%horse$@%VROOT', 'punct$@%.$@%horse']","['x$@%she$@%horse', 'x$@%be$@%horse', 'x$@%happy$@%horse', 'x$@%ride$@%horse', 'x$@%her$@%horse', 'x$@%horse$@%VROOT', 'x$@%.$@%horse']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%ride$@%x', 'x$@%her$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.99192195524803239,0.95095605813703976,0.59569686456620974
+I09U-gNSC-p387-r1,The girl is riding her horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.16002491262335383,0.13900342210711369,0.024416677720455637
+I09U-gNSC-p387-r2,She is taking her horse out for a ride to get ready for the competition.,1,1,1,1,0,"1	she	_	PRP	PRP	_	12	xsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	take	_	VBG	VBG	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	out	_	RP	RP	_	3	prt	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	ride	_	NN	NN	_	3	prep_for	_	_
+10	to	_	TO	TO	_	12	aux	_	_
+11	get	_	VB	VB	_	12	dep	_	_
+12	ready	_	JJ	JJ	_	3	xcomp	_	_
+13	for	_	IN	IN	_	0	erased	_	_
+14	the	_	DT	DT	_	15	det	_	_
+15	competition	_	NN	NN	_	12	prep_for	_	_
+16	.	_	.	.	_	3	punct	_	_","['xsubj$@%she$@%ready', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%take', 'prt$@%out$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%take', 'aux$@%to$@%ready', 'dep$@%get$@%ready', 'xcomp$@%ready$@%take', 'erased$@%for$@%WORDERASED', 'det$@%the$@%competition', 'prep_for$@%competition$@%ready', 'punct$@%.$@%take']","['x$@%she$@%ready', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%take', 'x$@%out$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%take', 'x$@%to$@%ready', 'x$@%get$@%ready', 'x$@%ready$@%take', 'x$@%for$@%WORDERASED', 'x$@%the$@%competition', 'x$@%competition$@%ready', 'x$@%.$@%take']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%out$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%to$@%x', 'x$@%get$@%x', 'x$@%ready$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%competition$@%x', 'x$@%.$@%x']",0.95203078597122837,0.94655572785466568,0.46726552201206539
+I09U-gNSC-p393-r1,A young girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ride	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.12090928238057586,0.10938171622486459,0.064419899243847389
+I09U-gNSC-p393-r2,A horse is being ridden by a happy young girl.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	10	det	_	_
+8	happy	_	JJ	JJ	_	9	amod	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	girl	_	NN	NN	_	5	agent	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%a$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'amod$@%happy$@%young', 'amod$@%young$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%happy$@%young', 'x$@%young$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%happy$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.54333307962943156,0.2412982864097406,0.1925699997778697
+I09U-gNSC-p394-r1,The girl is riding the horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686704
+I09U-gNSC-p394-r2,The horse is being ridden by the girl,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.52688631222036741,0.21849938414519754,0.012357428353418465
+I09U-gNSC-p396-r1,A girl is riding a horse,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408035327,0.011986813708560362
+I09U-gNSC-p401-r1,A small girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	small	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ride	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%small$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%small$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%small$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.18419856996442452,0.17296221056943262,0.050856335435090383
+I09U-gNSC-p401-r2,"While riding her horse in a meadow, the girl does not notice the miscievious look in the eye of her horse.",1,1,0,1,0,"1	while	_	IN	IN	_	2	mark	_	_
+2	ride	_	VBG	VBG	_	13	advcl	_	_
+3	she	_	PRP$	PRP$	_	4	poss	_	_
+4	horse	_	NN	NN	_	2	dobj	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	meadow	_	NN	NN	_	2	prep_in	_	_
+8	,	_	,	,	_	13	punct	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	girl	_	NN	NN	_	13	nsubj	_	_
+11	do	_	VBZ	VBZ	_	13	aux	_	_
+12	not	_	RB	RB	_	13	neg	_	_
+13	notice	_	VB	VB	_	0	root	_	_
+14	the	_	DT	DT	_	16	det	_	_
+15	miscievious	_	JJ	JJ	_	16	amod	_	_
+16	look	_	NN	NN	_	13	dobj	_	_
+17	in	_	IN	IN	_	0	erased	_	_
+18	the	_	DT	DT	_	19	det	_	_
+19	eye	_	NN	NN	_	13	prep_in	_	_
+20	of	_	IN	IN	_	0	erased	_	_
+21	she	_	PRP$	PRP$	_	22	poss	_	_
+22	horse	_	NN	NN	_	19	prep_of	_	_
+23	.	_	.	.	_	13	punct	_	_","['mark$@%while$@%ride', 'advcl$@%ride$@%notice', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'erased$@%in$@%WORDERASED', 'det$@%a$@%meadow', 'prep_in$@%meadow$@%ride', 'punct$@%,$@%notice', 'det$@%the$@%girl', 'nsubj$@%girl$@%notice', 'aux$@%do$@%notice', 'neg$@%not$@%notice', 'root$@%notice$@%VROOT', 'det$@%the$@%look', 'amod$@%miscievious$@%look', 'dobj$@%look$@%notice', 'erased$@%in$@%WORDERASED', 'det$@%the$@%eye', 'prep_in$@%eye$@%notice', 'erased$@%of$@%WORDERASED', 'poss$@%she$@%horse', 'prep_of$@%horse$@%eye', 'punct$@%.$@%notice']","['x$@%while$@%ride', 'x$@%ride$@%notice', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%in$@%WORDERASED', 'x$@%a$@%meadow', 'x$@%meadow$@%ride', 'x$@%,$@%notice', 'x$@%the$@%girl', 'x$@%girl$@%notice', 'x$@%do$@%notice', 'x$@%not$@%notice', 'x$@%notice$@%VROOT', 'x$@%the$@%look', 'x$@%miscievious$@%look', 'x$@%look$@%notice', 'x$@%in$@%WORDERASED', 'x$@%the$@%eye', 'x$@%eye$@%notice', 'x$@%of$@%WORDERASED', 'x$@%she$@%horse', 'x$@%horse$@%eye', 'x$@%.$@%notice']","['x$@%while$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%meadow$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%do$@%x', 'x$@%not$@%x', 'x$@%notice$@%x', 'x$@%the$@%x', 'x$@%miscievious$@%x', 'x$@%look$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%eye$@%x', 'x$@%of$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.84577719875013602,0.84450658663999256,0.35701724409407087
+I09U-gNSC-p405-r1,A girl is riding a horse. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408035327,0.011986813708560362
+I09U-gNSC-p407-r1,The girl is riding the horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686704
+I09U-gNSC-p409-r1,A girl rides a horse.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.13916726078755981,0.15620806567165968,0.012028327199665068
+I09U-gNSC-p409-r2,A horse is being ridden by a youngster.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	youngster	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%youngster', 'agent$@%youngster$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%youngster', 'x$@%youngster$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%youngster$@%x', 'x$@%.$@%x']",0.57703007240008231,0.3687457969479131,0.39595323050159559
+I09U-gNSC-p411-r1,A woman rider is trotting on her brown horse.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	woman	_	NN	NN	_	3	nn	_	_
+3	rider	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	trot	_	VBG	VBG	_	0	root	_	_
+6	on	_	IN	IN	_	0	erased	_	_
+7	she	_	PRP$	PRP$	_	9	poss	_	_
+8	brown	_	JJ	JJ	_	9	amod	_	_
+9	horse	_	NN	NN	_	5	prep_on	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%rider', 'nn$@%woman$@%rider', 'nsubj$@%rider$@%trot', 'aux$@%be$@%trot', 'root$@%trot$@%VROOT', 'erased$@%on$@%WORDERASED', 'poss$@%she$@%horse', 'amod$@%brown$@%horse', 'prep_on$@%horse$@%trot', 'punct$@%.$@%trot']","['x$@%a$@%rider', 'x$@%woman$@%rider', 'x$@%rider$@%trot', 'x$@%be$@%trot', 'x$@%trot$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%she$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%trot', 'x$@%.$@%trot']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%rider$@%x', 'x$@%be$@%x', 'x$@%trot$@%x', 'x$@%on$@%x', 'x$@%she$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.94239612348336244,0.94318729133489021,0.74820221308889612
+I09U-gNSC-p411-r2,This brown horse is being ridden by a woman.,1,1,1,1,1,"1	this	_	DT	DT	_	3	det	_	_
+2	brown	_	JJ	JJ	_	3	amod	_	_
+3	horse	_	NN	NN	_	6	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	6	aux	_	_
+5	be	_	VBG	VBG	_	6	auxpass	_	_
+6	ride	_	VBN	VBN	_	0	root	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	6	agent	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%this$@%horse', 'amod$@%brown$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%woman', 'agent$@%woman$@%ride', 'punct$@%.$@%ride']","['x$@%this$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%ride', 'x$@%.$@%ride']","['x$@%this$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.65894186017320333,0.42646563039837926,0.32103729861790198
+I09U-gNSC-p413-r1,The girl rides her horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.24571271917016002,0.25304770126048781,0.024501672874489233
+I09U-gNSC-p416-r1,Girl riding her horse ,1,1,1,1,1,"1	girl	_	NNP	NNP	_	0	root	_	_
+2	ride	_	VBG	VBG	_	1	partmod	_	_
+3	she	_	PRP$	PRP$	_	4	poss	_	_
+4	horse	_	NN	NN	_	2	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%girl$@%VROOT', 'partmod$@%ride$@%girl', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%girl']","['x$@%girl$@%VROOT', 'x$@%ride$@%girl', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%girl']","['x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.70611275275794083,0.69077025297485917,0.02462324786499781
+I09U-gNSC-p416-r2,Horse being ridden by a girl ,1,1,1,1,1,"1	horse	_	NNP	NNP	_	0	root	_	_
+2	be	_	VBG	VBG	_	3	auxpass	_	_
+3	ride	_	VBN	VBN	_	1	partmod	_	_
+4	by	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	3	agent	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%horse$@%VROOT', 'auxpass$@%be$@%ride', 'partmod$@%ride$@%horse', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%horse']","['x$@%horse$@%VROOT', 'x$@%be$@%ride', 'x$@%ride$@%horse', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%horse']","['x$@%horse$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.87801117098077985,0.57373423743079188,0.01238410412208879
+I09U-gNSC-p417-r1,The girl is riding a horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.01197687993565355
+I09U-gNSC-p418-r1,A girl is riding horseback.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	horseback	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'dobj$@%horseback$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%horseback$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%horseback$@%x', 'x$@%.$@%x']",0.3675806585375756,0.32935032315344626,0.56843381451853792
+I09U-gNSC-p418-r2,A horse is giving a girl a ride on horseback.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	ride	_	NN	NN	_	4	dobj	_	_
+9	on	_	IN	IN	_	0	erased	_	_
+10	horseback	_	NN	NN	_	8	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%horse', 'nsubj$@%horse$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%girl', 'iobj$@%girl$@%give', 'det$@%a$@%ride', 'dobj$@%ride$@%give', 'erased$@%on$@%WORDERASED', 'prep_on$@%horseback$@%ride', 'punct$@%.$@%give']","['x$@%a$@%horse', 'x$@%horse$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%a$@%ride', 'x$@%ride$@%give', 'x$@%on$@%WORDERASED', 'x$@%horseback$@%ride', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%on$@%x', 'x$@%horseback$@%x', 'x$@%.$@%x']",0.88344503778198535,0.88538744229217969,0.34271177879623893
+I09U-gNSC-p420-r1,A girl with a weirdly large head is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	9	nsubj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	7	det	_	_
+5	weirdly	_	JJ	JJ	_	7	amod	_	_
+6	large	_	JJ	JJ	_	7	amod	_	_
+7	head	_	NN	NN	_	2	prep_with	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	ride	_	VBG	VBG	_	0	root	_	_
+10	a	_	DT	DT	_	11	det	_	_
+11	horse	_	NN	NN	_	9	dobj	_	_
+12	.	_	.	.	_	9	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'erased$@%with$@%WORDERASED', 'det$@%a$@%head', 'amod$@%weirdly$@%head', 'amod$@%large$@%head', 'prep_with$@%head$@%girl', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%with$@%WORDERASED', 'x$@%a$@%head', 'x$@%weirdly$@%head', 'x$@%large$@%head', 'x$@%head$@%girl', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%weirdly$@%x', 'x$@%large$@%x', 'x$@%head$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.3382391559520691,0.33159762515194269,0.49347461645859247
+I09U-gNSC-p420-r2,A girl wearing equestrian attire is riding a brown horse which is looking askance.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	7	nsubj	_	_
+3	wear	_	VBG	VBG	_	2	partmod	_	_
+4	equestrian	_	NN	NN	_	5	nn	_	_
+5	attire	_	NN	NN	_	3	dobj	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	ride	_	VBG	VBG	_	0	root	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	brown	_	JJ	JJ	_	10	amod	_	_
+10	horse	_	NN	NN	_	13	nsubj	_	_
+11	which	_	WDT	WDT	_	0	erased	_	_
+12	be	_	VBZ	VBZ	_	13	aux	_	_
+13	look	_	VBG	VBG	_	10	rcmod	_	_
+14	askance	_	NN	NN	_	13	dobj	_	_
+15	.	_	.	.	_	7	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'partmod$@%wear$@%girl', 'nn$@%equestrian$@%attire', 'dobj$@%attire$@%wear', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'amod$@%brown$@%horse', 'nsubj$@%horse$@%look', 'erased$@%which$@%WORDERASED', 'aux$@%be$@%look', 'rcmod$@%look$@%horse', 'dobj$@%askance$@%look', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%wear$@%girl', 'x$@%equestrian$@%attire', 'x$@%attire$@%wear', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%look', 'x$@%which$@%WORDERASED', 'x$@%be$@%look', 'x$@%look$@%horse', 'x$@%askance$@%look', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%wear$@%x', 'x$@%equestrian$@%x', 'x$@%attire$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%which$@%x', 'x$@%be$@%x', 'x$@%look$@%x', 'x$@%askance$@%x', 'x$@%.$@%x']",0.57782701417592897,0.58069630634101821,0.60575110723110781
+I09U-gNSC-p423-r1,A girl is riding a horse. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408035327,0.011986813708560362
+I09U-gNSC-p423-r2,A girl sits upon a galloping horse. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	sit	_	VBZ	VBZ	_	0	root	_	_
+4	upon	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	gallop	_	JJ	JJ	_	7	amod	_	_
+7	horse	_	NN	NN	_	3	prep_upon	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%sit', 'root$@%sit$@%VROOT', 'erased$@%upon$@%WORDERASED', 'det$@%a$@%horse', 'amod$@%gallop$@%horse', 'prep_upon$@%horse$@%sit', 'punct$@%.$@%sit']","['x$@%a$@%girl', 'x$@%girl$@%sit', 'x$@%sit$@%VROOT', 'x$@%upon$@%WORDERASED', 'x$@%a$@%horse', 'x$@%gallop$@%horse', 'x$@%horse$@%sit', 'x$@%.$@%sit']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%sit$@%x', 'x$@%upon$@%x', 'x$@%a$@%x', 'x$@%gallop$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.89014604488204807,0.90320096138844552,0.59127603082963875
+I09U-gNSC-p424-r1,Confident girl is riding a horse,1,1,0,1,1,"1	confident	_	JJ	JJ	_	2	amod	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['amod$@%confident$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%confident$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%confident$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.19980518925122925,0.1836926070693029,0.28789809392305432
+I09U-gNSC-p429-r1,A girl determinedly rides a horse in full jockey getup,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	determinedly	_	RB	RB	_	4	advmod	_	_
+4	ride	_	VBZ	VBZ	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	full	_	JJ	JJ	_	10	amod	_	_
+9	jockey	_	NN	NN	_	10	nn	_	_
+10	getup	_	NN	NN	_	6	prep_in	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'advmod$@%determinedly$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'erased$@%in$@%WORDERASED', 'amod$@%full$@%getup', 'nn$@%jockey$@%getup', 'prep_in$@%getup$@%horse', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%determinedly$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%in$@%WORDERASED', 'x$@%full$@%getup', 'x$@%jockey$@%getup', 'x$@%getup$@%horse', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%determinedly$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%in$@%x', 'x$@%full$@%x', 'x$@%jockey$@%x', 'x$@%getup$@%x', 'x$@%.$@%x']",0.46052034873687686,0.47149753361865732,0.64029154140980471
+I09U-gNSC-p431-r1,Hey girl riding a pony,1,1,0,1,1,"1	hey	_	JJ	JJ	_	2	amod	_	_
+2	girl	_	NN	NN	_	0	root	_	_
+3	ride	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pony	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['amod$@%hey$@%girl', 'root$@%girl$@%VROOT', 'partmod$@%ride$@%girl', 'det$@%a$@%pony', 'dobj$@%pony$@%ride', 'punct$@%.$@%girl']","['x$@%hey$@%girl', 'x$@%girl$@%VROOT', 'x$@%ride$@%girl', 'x$@%a$@%pony', 'x$@%pony$@%ride', 'x$@%.$@%girl']","['x$@%hey$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%pony$@%x', 'x$@%.$@%x']",0.92758836787708143,0.93270760351491888,0.65365387117242024
+I09U-gNSC-p431-r2,Hey girl riding Horse,1,1,0,1,1,"1	hey	_	JJ	JJ	_	2	amod	_	_
+2	girl	_	NN	NN	_	0	root	_	_
+3	ride	_	VBG	VBG	_	2	partmod	_	_
+4	horse	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	2	punct	_	_","['amod$@%hey$@%girl', 'root$@%girl$@%VROOT', 'partmod$@%ride$@%girl', 'dobj$@%horse$@%ride', 'punct$@%.$@%girl']","['x$@%hey$@%girl', 'x$@%girl$@%VROOT', 'x$@%ride$@%girl', 'x$@%horse$@%ride', 'x$@%.$@%girl']","['x$@%hey$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.74989169131897826,0.73559659142268941,0.3150146297995976
+I09U-gNSC-p433-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p433-r2,The little girl is riding a brown pony. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ride	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	brown	_	JJ	JJ	_	8	amod	_	_
+8	pony	_	NN	NN	_	5	dobj	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%pony', 'amod$@%brown$@%pony', 'dobj$@%pony$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%pony', 'x$@%brown$@%pony', 'x$@%pony$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%brown$@%x', 'x$@%pony$@%x', 'x$@%.$@%x']",0.50149898005829474,0.4995514157668266,0.60692956728986092
+I09U-gNSC-p436-r1,A girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408035327,0.011986813708560251
+I09U-gNSC-p436-r2,A horse is giving a girl a ride.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	ride	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%horse', 'nsubj$@%horse$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%girl', 'iobj$@%girl$@%give', 'det$@%a$@%ride', 'dobj$@%ride$@%give', 'punct$@%.$@%give']","['x$@%a$@%horse', 'x$@%horse$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%a$@%ride', 'x$@%ride$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.87277432634233965,0.88198940306517803,0.018844497871329802
+I09U-gNSC-p438-r1,The girl is riding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686482
+I09U-gNSC-p438-r2,The horse is being ridden by the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.52688631222036741,0.21849938414519754,0.012357428353418465
+I09U-gNSC-p447-r1,A young girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ride	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.12090928238057586,0.10938171622486459,0.064419899243847389
+I09U-gNSC-p447-r2,A brown horse is being ridden by a young girl.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	brown	_	JJ	JJ	_	3	amod	_	_
+3	horse	_	NN	NN	_	6	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	6	aux	_	_
+5	be	_	VBG	VBG	_	6	auxpass	_	_
+6	ride	_	VBN	VBN	_	0	root	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	girl	_	NN	NN	_	6	agent	_	_
+11	.	_	.	.	_	6	punct	_	_","['det$@%a$@%horse', 'amod$@%brown$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'amod$@%young$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.53064569452946697,0.23296573893583095,0.19728192003101819
+I09U-gNSC-p448-r1,The young equestrian girl rides her horse.,1,0,1,1,1,"1	the	_	DT	DT	_	4	det	_	_
+2	young	_	JJ	JJ	_	4	amod	_	_
+3	equestrian	_	NN	NN	_	4	nn	_	_
+4	girl	_	NN	NN	_	5	nsubj	_	_
+5	ride	_	VBZ	VBZ	_	0	root	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%young$@%girl', 'nn$@%equestrian$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%young$@%girl', 'x$@%equestrian$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%equestrian$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.37267133985494183,0.38023660604853282,0.44698619570542075
+I09U-gNSC-p448-r2,The brown horse gallops with the equestrian.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	brown	_	JJ	JJ	_	3	amod	_	_
+3	horse	_	NN	NN	_	4	nsubj	_	_
+4	gallop	_	VBZ	VBZ	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	equestrian	_	NN	NN	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'amod$@%brown$@%horse', 'nsubj$@%horse$@%gallop', 'root$@%gallop$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%equestrian', 'prep_with$@%equestrian$@%gallop', 'punct$@%.$@%gallop']","['x$@%the$@%horse', 'x$@%brown$@%horse', 'x$@%horse$@%gallop', 'x$@%gallop$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%equestrian', 'x$@%equestrian$@%gallop', 'x$@%.$@%gallop']","['x$@%the$@%x', 'x$@%brown$@%x', 'x$@%horse$@%x', 'x$@%gallop$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%equestrian$@%x', 'x$@%.$@%x']",0.95760699813407513,0.96168559008764976,0.7679455384575139
+I09U-gNSC-p450-r1,young lady riding her horse,1,1,0,1,1,"1	young	_	JJ	JJ	_	2	amod	_	_
+2	lady	_	NN	NN	_	0	root	_	_
+3	ride	_	VBG	VBG	_	2	partmod	_	_
+4	she	_	PRP$	PRP$	_	5	poss	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['amod$@%young$@%lady', 'root$@%lady$@%VROOT', 'partmod$@%ride$@%lady', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%lady']","['x$@%young$@%lady', 'x$@%lady$@%VROOT', 'x$@%ride$@%lady', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%lady']","['x$@%young$@%x', 'x$@%lady$@%x', 'x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.77433403033523329,0.76569228152071367,0.33651953472103235
+I09U-gNSC-p451-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p452-r2,The little girl is trotting along on her horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	trot	_	VBG	VBG	_	0	root	_	_
+6	along	_	RP	RP	_	5	prt	_	_
+7	on	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	horse	_	NN	NN	_	5	prep_on	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%trot', 'aux$@%be$@%trot', 'root$@%trot$@%VROOT', 'prt$@%along$@%trot', 'erased$@%on$@%WORDERASED', 'poss$@%she$@%horse', 'prep_on$@%horse$@%trot', 'punct$@%.$@%trot']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%trot', 'x$@%be$@%trot', 'x$@%trot$@%VROOT', 'x$@%along$@%trot', 'x$@%on$@%WORDERASED', 'x$@%she$@%horse', 'x$@%horse$@%trot', 'x$@%.$@%trot']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%trot$@%x', 'x$@%along$@%x', 'x$@%on$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.92394580703091367,0.9226880486743696,0.56745625904010266
+I09U-gNSC-p453-r1,The girl is going for a horseback ride.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	go	_	VBG	VBG	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	horseback	_	NN	NN	_	8	nn	_	_
+8	ride	_	NN	NN	_	4	prep_for	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%go', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'nn$@%horseback$@%ride', 'prep_for$@%ride$@%go', 'punct$@%.$@%go']","['x$@%the$@%girl', 'x$@%girl$@%go', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%horseback$@%ride', 'x$@%ride$@%go', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%horseback$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.935892805216058,0.93673951394333632,0.56445582007593431
+I09U-gNSC-p453-r2,The horse is taking the girl for a ride.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	ride	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%the$@%girl', 'dobj$@%girl$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%girl', 'punct$@%.$@%take']","['x$@%the$@%horse', 'x$@%horse$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%girl', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.89689501720714548,0.86682119482544318,0.015831033646535708
+I09U-gNSC-p455-r1,A girl rides a horse.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.13916726078755981,0.1562080656716599,0.01202832719966529
+I09U-gNSC-p455-r2,An equestrian rides a horse.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	equestrian	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%equestrian', 'nsubj$@%equestrian$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%equestrian', 'x$@%equestrian$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%equestrian$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.51875435572844109,0.53916258297797293,0.54286007050235074
+I09U-gNSC-p456-r1,The girl is riding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686482
+I09U-gNSC-p456-r2,The horse is trotting with a girl on its back.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	trot	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	prep_with	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	its	_	PRP$	PRP$	_	10	poss	_	_
+10	back	_	NN	NN	_	7	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%trot', 'aux$@%be$@%trot', 'root$@%trot$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%trot', 'erased$@%on$@%WORDERASED', 'poss$@%its$@%back', 'prep_on$@%back$@%girl', 'punct$@%.$@%trot']","['x$@%the$@%horse', 'x$@%horse$@%trot', 'x$@%be$@%trot', 'x$@%trot$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%trot', 'x$@%on$@%WORDERASED', 'x$@%its$@%back', 'x$@%back$@%girl', 'x$@%.$@%trot']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%trot$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%on$@%x', 'x$@%its$@%x', 'x$@%back$@%x', 'x$@%.$@%x']",0.92525500051365883,0.92605439488633268,0.56071409936505301
+I09U-gNSC-p457-r1,The girl is taking a horse ride.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	horse	_	NN	NN	_	7	nn	_	_
+7	ride	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%ride', 'nn$@%horse$@%ride', 'dobj$@%ride$@%take', 'punct$@%.$@%take']","['x$@%the$@%girl', 'x$@%girl$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%ride', 'x$@%horse$@%ride', 'x$@%ride$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.93716073927055932,0.69144645095536872,0.015806031948462418
+I09U-gNSC-p457-r2,The horse is being ridden by a girl ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.52401297638995303,0.21734518139450887,0.012330439030280416
+I09U-gNSC-p460-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p461-r1,The girls is riding the horse.,1,1,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NNS	NNS	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.11639033280507727,0.096053266709254626,0.012004038573686482
+I09U-gNSC-p461-r2,The horse is taking the girl for a ride.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	ride	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%the$@%girl', 'dobj$@%girl$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%girl', 'punct$@%.$@%take']","['x$@%the$@%horse', 'x$@%horse$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%girl', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.89689501720714548,0.86682119482544318,0.015831033646535708
+I09U-gNSC-p462-r1,A girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560251
+I09U-gNSC-p462-r2,A horse is being ridden by a girl.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.48785148301225767,0.19433958612117619,0.012340290077289207
+I09U-gNSC-p467-r2,Riding her horse is a joy to the young girl.,1,1,1,1,1,"1	ride	_	VBG	VBG	_	6	csubj	_	_
+2	she	_	PRP$	PRP$	_	3	poss	_	_
+3	horse	_	NN	NN	_	1	dobj	_	_
+4	be	_	VBZ	VBZ	_	6	cop	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	joy	_	NN	NN	_	0	root	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	girl	_	NN	NN	_	6	prep_to	_	_
+11	.	_	.	.	_	6	punct	_	_","['csubj$@%ride$@%joy', 'poss$@%she$@%horse', 'dobj$@%horse$@%ride', 'cop$@%be$@%joy', 'det$@%a$@%joy', 'root$@%joy$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'amod$@%young$@%girl', 'prep_to$@%girl$@%joy', 'punct$@%.$@%joy']","['x$@%ride$@%joy', 'x$@%she$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%joy', 'x$@%a$@%joy', 'x$@%joy$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%joy', 'x$@%.$@%joy']","['x$@%ride$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%joy$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.78043697628734399,0.77737489180246855,0.2443832462997475
+I09U-gNSC-p469-r1,The girl takes a horse for a ride.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	take	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	ride	_	NN	NN	_	5	prep_for	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%horse', 'punct$@%.$@%take']","['x$@%the$@%girl', 'x$@%girl$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%horse', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.86624084138176016,0.85457994830975315,0.015844021906559314
+I09U-gNSC-p469-r2,The horse takes a girl for a ride.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	3	nsubj	_	_
+3	take	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	girl	_	NN	NN	_	3	dobj	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	ride	_	NN	NN	_	5	prep_for	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%girl', 'dobj$@%girl$@%take', 'erased$@%for$@%WORDERASED', 'det$@%a$@%ride', 'prep_for$@%ride$@%girl', 'punct$@%.$@%take']","['x$@%the$@%horse', 'x$@%horse$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%girl', 'x$@%girl$@%take', 'x$@%for$@%WORDERASED', 'x$@%a$@%ride', 'x$@%ride$@%girl', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.8940670103469236,0.86416281036407461,0.015844021906559314
+I09U-gNSC-p472-r1,The girl rides a pony.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pony	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%pony', 'dobj$@%pony$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%pony', 'x$@%pony$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%pony$@%x', 'x$@%.$@%x']",0.52773860904699732,0.5469186734138225,0.58213556887216356
+I09U-gNSC-p477-r1,The girl is riding a horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p477-r2,The horse is being ridden by a girl. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	5	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	ride	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'aux$@%be$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.52401297638995303,0.21734518139450887,0.012330439030280416
+I09U-gNSC-p479-r1,A girl is riding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062602742772469244,0.046471816408034994,0.011986813708560251
+I09U-gNSC-p482-r1,The child is riding a horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%child', 'x$@%child$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.34570293240268113,0.34004384398946763,0.17981304670571896
+I09U-gNSC-p482-r2,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p483-r1,The girl rides the horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.19840581944592806,0.20955240796933106,0.012045610404168627
+I09U-gNSC-p485-r1,The girl rides the horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	ride	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.19840581944592806,0.20955240796933106,0.012045610404168627
+I09U-gNSC-p485-r2,The horse is ridden by the girl.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	4	auxpass	_	_
+4	ride	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubjpass$@%horse$@%ride', 'auxpass$@%be$@%ride', 'root$@%ride$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%girl', 'agent$@%girl$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%horse', 'x$@%horse$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.63105949408973294,0.095795835781062877,0.012376882058752869
+I09U-gNSC-p486-r1,The young lady is horseback riding.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	lady	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	horseback	_	NN	NN	_	0	root	_	_
+6	ride	_	VBG	VBG	_	5	partmod	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%lady', 'amod$@%young$@%lady', 'nsubj$@%lady$@%horseback', 'cop$@%be$@%horseback', 'root$@%horseback$@%VROOT', 'partmod$@%ride$@%horseback', 'punct$@%.$@%horseback']","['x$@%the$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%horseback', 'x$@%be$@%horseback', 'x$@%horseback$@%VROOT', 'x$@%ride$@%horseback', 'x$@%.$@%horseback']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%horseback$@%x', 'x$@%ride$@%x', 'x$@%.$@%x']",0.97701959776717817,0.97959949787959366,0.7155277195450358
+I09U-gNSC-p491-r1,The girl is riding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ride	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ride', 'aux$@%be$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%the$@%girl', 'x$@%girl$@%ride', 'x$@%be$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.062361497769066077,0.045186722227654963,0.011976879935653439
+I09U-gNSC-p493-r1,A young girl rides a horse,1,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	4	nsubj	_	_
+4	ride	_	VBZ	VBZ	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%ride', 'root$@%ride$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%ride', 'punct$@%.$@%ride']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%ride', 'x$@%ride$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%ride', 'x$@%.$@%ride']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%ride$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.2026814586960124,0.22002212940871391,0.06459151796520346
+I09U-gNSC-p493-r2,A horse carries a young girl,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	young	_	JJ	JJ	_	6	amod	_	_
+6	girl	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%horse', 'nsubj$@%horse$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%girl', 'amod$@%young$@%girl', 'dobj$@%girl$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%horse', 'x$@%horse$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.86087548308632811,0.87230332891198625,0.33386887475795846

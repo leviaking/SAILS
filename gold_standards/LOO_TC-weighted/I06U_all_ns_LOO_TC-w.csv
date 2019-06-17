@@ -1,0 +1,1379 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh tfidf cosine,xdh tfidf cosine,xdx tfidf cosine
+I06U-gNSF-p143-r1,The boy is carrying groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSF-p143-r2,The boy is carrying a bag of groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.24873493686012016,0.23037373818242002,0.069684288324887711
+I06U-gNSF-p151-r1,The boy is carrying a bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.24873493686012016,0.23037373818242002,0.069684288324887711
+I06U-gNSF-p151-r2,Groceries are being carried by the boy in a bag.,1,1,1,1,1,"1	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+2	be	_	VBP	VBP	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	agent	_	_
+8	in	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	bag	_	NN	NN	_	7	prep_in	_	_
+11	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%grocery$@%carry', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'erased$@%in$@%WORDERASED', 'det$@%a$@%bag', 'prep_in$@%bag$@%boy', 'punct$@%.$@%carry']","['x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%in$@%WORDERASED', 'x$@%a$@%bag', 'x$@%bag$@%boy', 'x$@%.$@%carry']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.61277814627086635,0.29508910600529248,0.069671347621553026
+I06U-gNSF-p294-r1,The boy is carrying a heavy bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	heavy	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%heavy$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%heavy$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%heavy$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.32805464862202482,0.31546183059899213,0.12366350591235664
+I06U-gNSF-p294-r2,The boy is helping by carrying groceries into the house.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	help	_	VBG	VBG	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	carry	_	VBG	VBG	_	4	prepc_by	_	_
+7	grocery	_	NNS	NNS	_	6	dobj	_	_
+8	into	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	house	_	NN	NN	_	6	prep_into	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'erased$@%by$@%WORDERASED', 'prepc_by$@%carry$@%help', 'dobj$@%grocery$@%carry', 'erased$@%into$@%WORDERASED', 'det$@%the$@%house', 'prep_into$@%house$@%carry', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%carry$@%help', 'x$@%grocery$@%carry', 'x$@%into$@%WORDERASED', 'x$@%the$@%house', 'x$@%house$@%carry', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%by$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%into$@%x', 'x$@%the$@%x', 'x$@%house$@%x', 'x$@%.$@%x']",0.71690097716894818,0.68770220985242514,0.099950696354860091
+I06U-gNSF-p295-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSF-p295-r2,The boy is carrying a bag of food from the super market.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	food	_	NN	NN	_	6	prep_of	_	_
+9	from	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	12	det	_	_
+11	super	_	JJ	JJ	_	12	amod	_	_
+12	market	_	NN	NN	_	4	prep_from	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'erased$@%from$@%WORDERASED', 'det$@%the$@%market', 'amod$@%super$@%market', 'prep_from$@%market$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%from$@%WORDERASED', 'x$@%the$@%market', 'x$@%super$@%market', 'x$@%market$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%super$@%x', 'x$@%market$@%x', 'x$@%.$@%x']",0.48685997079948606,0.49745749492835756,0.80968362727723497
+I06U-gNSF-p296-r1,The boy is carrying a large bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	large	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%large$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%large$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.3167060932589929,0.3049427342910328,0.089283482853728113
+I06U-gNSF-p296-r2,The bag of groceries is too big for this kid to carry.,0,0,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	12	xsubj	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	cop	_	_
+6	too	_	RB	RB	_	7	advmod	_	_
+7	big	_	JJ	JJ	_	0	root	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	this	_	DT	DT	_	10	det	_	_
+10	kid	_	NN	NN	_	7	prep_for	_	_
+11	to	_	TO	TO	_	12	aux	_	_
+12	carry	_	VB	VB	_	7	xcomp	_	_
+13	.	_	.	.	_	7	punct	_	_","['det$@%the$@%bag', 'xsubj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'cop$@%be$@%big', 'advmod$@%too$@%big', 'root$@%big$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%this$@%kid', 'prep_for$@%kid$@%big', 'aux$@%to$@%carry', 'xcomp$@%carry$@%big', 'punct$@%.$@%big']","['x$@%the$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%big', 'x$@%too$@%big', 'x$@%big$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%this$@%kid', 'x$@%kid$@%big', 'x$@%to$@%carry', 'x$@%carry$@%big', 'x$@%.$@%big']","['x$@%the$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%too$@%x', 'x$@%big$@%x', 'x$@%for$@%x', 'x$@%this$@%x', 'x$@%kid$@%x', 'x$@%to$@%x', 'x$@%carry$@%x', 'x$@%.$@%x']",0.89088668263004744,0.80444923175155902,0.22854279635068653
+I06U-gNSF-p297-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSF-p297-r2,The happy child holds the bag.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	happy	_	JJ	JJ	_	3	amod	_	_
+3	child	_	NN	NN	_	4	nsubj	_	_
+4	hold	_	VBZ	VBZ	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'amod$@%happy$@%child', 'nsubj$@%child$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%child', 'x$@%happy$@%child', 'x$@%child$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%happy$@%x', 'x$@%child$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.96267649046257997,0.96242317482356832,0.79222763916686145
+I06U-gNSF-p298-r1,He has groceries,0,0,1,1,1,"1	he	_	PRP	PRP	_	2	nsubj	_	_
+2	have	_	VBZ	VBZ	_	0	root	_	_
+3	grocery	_	NNS	NNS	_	2	dobj	_	_
+4	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%have', 'root$@%have$@%VROOT', 'dobj$@%grocery$@%have', 'punct$@%.$@%have']","['x$@%he$@%have', 'x$@%have$@%VROOT', 'x$@%grocery$@%have', 'x$@%.$@%have']","['x$@%he$@%x', 'x$@%have$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.99984431757340508,0.99985802737471963,0.09522864545120302
+I06U-gNSF-p298-r2,He is helping,0,1,1,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	help	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'punct$@%.$@%help']","['x$@%he$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%.$@%help']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%.$@%x']",0.93185653681254288,0.93908873806782678,0.96396972734727093
+I06U-gNSF-p304-r1,The boy is carrying a bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.24873493686012016,0.23037373818242002,0.069684288324887711
+I06U-gNSF-p304-r2,He is helping bring a grocery bag.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	help	_	VBG	VBG	_	0	root	_	_
+4	bring	_	VB	VB	_	3	ccomp	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	grocery	_	NN	NN	_	7	nn	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'ccomp$@%bring$@%help', 'det$@%a$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%bring', 'punct$@%.$@%help']","['x$@%he$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%bring$@%help', 'x$@%a$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%bring', 'x$@%.$@%help']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.84425703509232453,0.74385425146439776,0.14692826960185634
+I06U-gNSF-p305-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSF-p305-r2,The boy is excited about his bag of groceries.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	excite	_	JJ	JJ	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	bag	_	NN	NN	_	4	prep_about	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%excite', 'cop$@%be$@%excite', 'root$@%excite$@%VROOT', 'erased$@%about$@%WORDERASED', 'poss$@%he$@%bag', 'prep_about$@%bag$@%excite', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%excite']","['x$@%the$@%boy', 'x$@%boy$@%excite', 'x$@%be$@%excite', 'x$@%excite$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%he$@%bag', 'x$@%bag$@%excite', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%excite']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%excite$@%x', 'x$@%about$@%x', 'x$@%he$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.84211379041448342,0.82869981776283907,0.23032137801380936
+I06U-gNSC-p322-r1,The kid is hauling in groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	haul	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	grocery	_	NNS	NNS	_	4	prep_in	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%kid', 'nsubj$@%kid$@%haul', 'aux$@%be$@%haul', 'root$@%haul$@%VROOT', 'erased$@%in$@%WORDERASED', 'prep_in$@%grocery$@%haul', 'punct$@%.$@%haul']","['x$@%the$@%kid', 'x$@%kid$@%haul', 'x$@%be$@%haul', 'x$@%haul$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%grocery$@%haul', 'x$@%.$@%haul']","['x$@%the$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%haul$@%x', 'x$@%in$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.99999927793205234,0.99999934327042461,0.38036519576235261
+I06U-gNSC-p322-r2,The child is carrying a sack of groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	sack	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%sack', 'dobj$@%sack$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%sack', 'punct$@%.$@%carry']","['x$@%the$@%child', 'x$@%child$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%sack', 'x$@%sack$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%sack', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%sack$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.78842106866381223,0.81972262499668713,0.36796873594203983
+I06U-gNSC-p323-r1,Buy grocery,0,0,0,0,0,"1	buy	_	VB	VB	_	0	root	_	_
+2	grocery	_	NN	NN	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%buy$@%VROOT', 'dobj$@%grocery$@%buy', 'punct$@%.$@%buy']","['x$@%buy$@%VROOT', 'x$@%grocery$@%buy', 'x$@%.$@%buy']","['x$@%buy$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.97477111822364193,0.97705694288011646,0.16961677453109614
+I06U-gNSC-p323-r2,Buy grocery,0,0,0,0,0,"1	buy	_	VB	VB	_	0	root	_	_
+2	grocery	_	NN	NN	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%buy$@%VROOT', 'dobj$@%grocery$@%buy', 'punct$@%.$@%buy']","['x$@%buy$@%VROOT', 'x$@%grocery$@%buy', 'x$@%.$@%buy']","['x$@%buy$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.97477111822364193,0.97705694288011646,0.16961677453109614
+I06U-gNSC-p325-r1,The boy is carrying groceries,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p325-r2,The child is helping bring in groceries ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	help	_	VBG	VBG	_	0	root	_	_
+5	bring	_	VB	VB	_	4	ccomp	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	grocery	_	NNS	NNS	_	5	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'ccomp$@%bring$@%help', 'erased$@%in$@%WORDERASED', 'prep_in$@%grocery$@%bring', 'punct$@%.$@%help']","['x$@%the$@%child', 'x$@%child$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%bring$@%help', 'x$@%in$@%WORDERASED', 'x$@%grocery$@%bring', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%bring$@%x', 'x$@%in$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.95315687773146207,0.94434364163164408,0.16256481170950021
+I06U-gNSC-p334-r1,A boy carries a bag of groceries. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	grocery	_	NNS	NNS	_	5	prep_of	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.32796142458345001,0.29396292044290351,0.069815231726684135
+I06U-gNSC-p334-r2,A boy laughs at the sight of a gigantic blue carrot. ,0,0,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	laugh	_	VBZ	VBZ	_	0	root	_	_
+4	at	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	sight	_	NN	NN	_	3	prep_at	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	11	det	_	_
+9	gigantic	_	JJ	JJ	_	11	amod	_	_
+10	blue	_	JJ	JJ	_	11	amod	_	_
+11	carrot	_	NN	NN	_	6	prep_of	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%laugh', 'root$@%laugh$@%VROOT', 'erased$@%at$@%WORDERASED', 'det$@%the$@%sight', 'prep_at$@%sight$@%laugh', 'erased$@%of$@%WORDERASED', 'det$@%a$@%carrot', 'amod$@%gigantic$@%carrot', 'amod$@%blue$@%carrot', 'prep_of$@%carrot$@%sight', 'punct$@%.$@%laugh']","['x$@%a$@%boy', 'x$@%boy$@%laugh', 'x$@%laugh$@%VROOT', 'x$@%at$@%WORDERASED', 'x$@%the$@%sight', 'x$@%sight$@%laugh', 'x$@%of$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%gigantic$@%carrot', 'x$@%blue$@%carrot', 'x$@%carrot$@%sight', 'x$@%.$@%laugh']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%laugh$@%x', 'x$@%at$@%x', 'x$@%the$@%x', 'x$@%sight$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%gigantic$@%x', 'x$@%blue$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",0.97818286421027745,0.98015782398241558,0.95360110127305675
+I06U-gNSC-p343-r1,Little boy Towing the grocery to the car,1,1,0,1,1,"1	little	_	JJ	JJ	_	2	amod	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	towing	_	VBD	VBD	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	grocery	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	car	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['amod$@%little$@%boy', 'nsubj$@%boy$@%towing', 'root$@%towing$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%towing', 'erased$@%to$@%WORDERASED', 'det$@%the$@%car', 'prep_to$@%car$@%towing', 'punct$@%.$@%towing']","['x$@%little$@%boy', 'x$@%boy$@%towing', 'x$@%towing$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%towing', 'x$@%to$@%WORDERASED', 'x$@%the$@%car', 'x$@%car$@%towing', 'x$@%.$@%towing']","['x$@%little$@%x', 'x$@%boy$@%x', 'x$@%towing$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.93705610062200217,0.94139354948442311,0.45598779710831561
+I06U-gNSC-p343-r2,The number I have a big bag of fruits,0,0,0,0,0,"1	the	_	DT	DT	_	3	det	_	_
+2	number	_	NN	NN	_	3	nn	_	_
+3	i	_	NN	NN	_	4	nsubj	_	_
+4	have	_	VBP	VBP	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	big	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	fruit	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%i', 'nn$@%number$@%i', 'nsubj$@%i$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%have']","['x$@%the$@%i', 'x$@%number$@%i', 'x$@%i$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%number$@%x', 'x$@%i$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.90961785950792917,0.91356260081715868,0.8484435868296607
+I06U-gNSC-p344-r1,boy is helping carry groceries,1,1,0,1,1,"1	boy	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	help	_	VBG	VBG	_	0	root	_	_
+4	carry	_	VB	VB	_	3	ccomp	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'ccomp$@%carry$@%help', 'dobj$@%grocery$@%carry', 'punct$@%.$@%help']","['x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%carry$@%help', 'x$@%grocery$@%carry', 'x$@%.$@%help']","['x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.70796407862766442,0.68759360774061618,0.063479286439617422
+I06U-gNSC-p344-r2,boy is working at grocery store,0,1,0,1,0,"1	boy	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	work	_	VBG	VBG	_	0	root	_	_
+4	at	_	IN	IN	_	0	erased	_	_
+5	grocery	_	NN	NN	_	6	nn	_	_
+6	store	_	NN	NN	_	3	prep_at	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%boy$@%work', 'aux$@%be$@%work', 'root$@%work$@%VROOT', 'erased$@%at$@%WORDERASED', 'nn$@%grocery$@%store', 'prep_at$@%store$@%work', 'punct$@%.$@%work']","['x$@%boy$@%work', 'x$@%be$@%work', 'x$@%work$@%VROOT', 'x$@%at$@%WORDERASED', 'x$@%grocery$@%store', 'x$@%store$@%work', 'x$@%.$@%work']","['x$@%boy$@%x', 'x$@%be$@%x', 'x$@%work$@%x', 'x$@%at$@%x', 'x$@%grocery$@%x', 'x$@%store$@%x', 'x$@%.$@%x']",0.99999870703167004,0.99999876656452191,0.16267368596846532
+I06U-gNSC-p349-r1,A young boy is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	carry	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bag	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.30575844720809786,0.29156318986373164,0.094378644651610277
+I06U-gNSC-p349-r2,a child is carrying a bag of fruit and vegetables.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	fruit	_	NN	NN	_	6	prep_of	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	vegetable	_	NNS	NNS	_	8	conj_and	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'erased$@%and$@%WORDERASED', 'conj_and$@%vegetable$@%fruit', 'punct$@%.$@%carry']","['x$@%a$@%child', 'x$@%child$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%and$@%WORDERASED', 'x$@%vegetable$@%fruit', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%vegetable$@%x', 'x$@%.$@%x']",0.61817436070560117,0.64596780738652448,0.80038556440659603
+I06U-gNSC-p352-r1,A boy is carring groceries. ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carr	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carr', 'aux$@%be$@%carr', 'root$@%carr$@%VROOT', 'dobj$@%grocery$@%carr', 'punct$@%.$@%carr']","['x$@%a$@%boy', 'x$@%boy$@%carr', 'x$@%be$@%carr', 'x$@%carr$@%VROOT', 'x$@%grocery$@%carr', 'x$@%.$@%carr']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carr$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.97487889415472995,0.97715507533606016,0.43584484073143093
+I06U-gNSC-p352-r2,Groceries are being carried in. ,0,1,1,1,1,"1	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+2	be	_	VBP	VBP	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	in	_	IN	IN	_	4	prep	_	_
+6	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%grocery$@%carry', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'prep$@%in$@%carry', 'punct$@%.$@%carry']","['x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%in$@%carry', 'x$@%.$@%carry']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%in$@%x', 'x$@%.$@%x']",0.69461320773669333,0.48092865920399253,0.080308255536910567
+I06U-gNSC-p355-r1,A boy is carrying groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.20812069442168724,0.19592087965661387,0.046177472549517762
+I06U-gNSC-p355-r2,A boy has a bag full of groceries.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	have	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	full	_	JJ	JJ	_	5	dep	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	5	prep_of	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%have', 'dep$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%have']","['x$@%a$@%boy', 'x$@%boy$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%have', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.74961949788493176,0.73986608696586575,0.1190347904089144
+I06U-gNSC-p356-r1,A boy is bringing in the groceries. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	bring	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	grocery	_	NNS	NNS	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%grocery', 'prep_in$@%grocery$@%bring', 'punct$@%.$@%bring']","['x$@%a$@%boy', 'x$@%boy$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%bring', 'x$@%.$@%bring']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.88403298534453323,0.87476593859091745,0.07854346928974687
+I06U-gNSC-p356-r2,A boy is happy with his groceries. ,0,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	grocery	_	NNS	NNS	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'erased$@%with$@%WORDERASED', 'poss$@%he$@%grocery', 'prep_with$@%grocery$@%happy', 'punct$@%.$@%happy']","['x$@%a$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%he$@%grocery', 'x$@%grocery$@%happy', 'x$@%.$@%happy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%with$@%x', 'x$@%he$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.94576237593579504,0.94785702398692362,0.16036665653378879
+I06U-gNSC-p358-r1,Carrying groceries ,0,0,1,0,1,"1	carry	_	VBG	VBG	_	0	root	_	_
+2	grocery	_	NNS	NNS	_	1	dobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.4682155905144969,0.46833989444821023,0.081616423683182671
+I06U-gNSC-p358-r2,Walking with groceries ,0,0,1,0,1,"1	walk	_	VBG	VBG	_	0	root	_	_
+2	with	_	IN	IN	_	0	erased	_	_
+3	grocery	_	NNS	NNS	_	1	prep_with	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%grocery$@%walk', 'punct$@%.$@%walk']","['x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%grocery$@%walk', 'x$@%.$@%walk']","['x$@%walk$@%x', 'x$@%with$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.99794698839037554,0.99813276500730319,0.14565014374808727
+I06U-gNSC-p359-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p359-r2,The boy is holding a bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.74149441472951416,0.72041254832452328,0.10008009847324351
+I06U-gNSC-p363-r1,The boy is excited to carry the groceries in the house. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	excite	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	carry	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	grocery	_	NNS	NNS	_	6	dobj	_	_
+9	in	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	house	_	NN	NN	_	6	prep_in	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%excite', 'cop$@%be$@%excite', 'root$@%excite$@%VROOT', 'aux$@%to$@%carry', 'xcomp$@%carry$@%excite', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'erased$@%in$@%WORDERASED', 'det$@%the$@%house', 'prep_in$@%house$@%carry', 'punct$@%.$@%excite']","['x$@%the$@%boy', 'x$@%boy$@%excite', 'x$@%be$@%excite', 'x$@%excite$@%VROOT', 'x$@%to$@%carry', 'x$@%carry$@%excite', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%in$@%WORDERASED', 'x$@%the$@%house', 'x$@%house$@%carry', 'x$@%.$@%excite']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%excite$@%x', 'x$@%to$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%house$@%x', 'x$@%.$@%x']",0.73481122195568893,0.73295341073088793,0.25659592324031
+I06U-gNSC-p363-r2,The boy is helping with household chores. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	help	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	household	_	NN	NN	_	7	nn	_	_
+7	chore	_	NNS	NNS	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'erased$@%with$@%WORDERASED', 'nn$@%household$@%chore', 'prep_with$@%chore$@%help', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%household$@%chore', 'x$@%chore$@%help', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%household$@%x', 'x$@%chore$@%x', 'x$@%.$@%x']",0.88914971963773237,0.89810590488241093,0.91616635981659722
+I06U-gNSC-p364-r1,The boy is carrying a very large bag of groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	8	det	_	_
+6	very	_	RB	RB	_	7	advmod	_	_
+7	large	_	JJ	JJ	_	8	amod	_	_
+8	bag	_	NN	NN	_	4	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	grocery	_	NNS	NNS	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'advmod$@%very$@%large', 'amod$@%large$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%very$@%large', 'x$@%large$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%very$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.34916677071701496,0.33961429518694741,0.094384658571484814
+I06U-gNSC-p364-r2,The little boy is happy to help carry the large bag of groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	help	_	VB	VB	_	5	xcomp	_	_
+8	carry	_	VB	VB	_	7	xcomp	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	large	_	JJ	JJ	_	11	amod	_	_
+11	bag	_	NN	NN	_	8	dobj	_	_
+12	of	_	IN	IN	_	0	erased	_	_
+13	grocery	_	NNS	NNS	_	11	prep_of	_	_
+14	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%help', 'xcomp$@%help$@%happy', 'xcomp$@%carry$@%help', 'det$@%the$@%bag', 'amod$@%large$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%help', 'x$@%help$@%happy', 'x$@%carry$@%help', 'x$@%the$@%bag', 'x$@%large$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.75807486111575595,0.73116189950062904,0.15849691818835898
+I06U-gNSC-p365-r1,This boy is carrying the groceries.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%this$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.2936967732821173,0.29573936840231918,0.046217396792953558
+I06U-gNSC-p365-r2,This little boy is carrying a big bag of groceries.,1,1,1,1,1,"1	this	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	carry	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	big	_	JJ	JJ	_	8	amod	_	_
+8	bag	_	NN	NN	_	5	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	grocery	_	NNS	NNS	_	8	prep_of	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%this$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%this$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%this$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.40308795997654456,0.38774033432189126,0.10229872010574015
+I06U-gNSC-p367-r1,A boy caring groceries.,0,1,0,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	care	_	VBG	VBG	_	2	partmod	_	_
+4	grocery	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	2	punct	_	_","['det$@%a$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%care$@%boy', 'dobj$@%grocery$@%care', 'punct$@%.$@%boy']","['x$@%a$@%boy', 'x$@%boy$@%VROOT', 'x$@%care$@%boy', 'x$@%grocery$@%care', 'x$@%.$@%boy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%care$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.92585007371788697,0.93258070848705543,0.12752589663660574
+I06U-gNSC-p367-r2,Groceries being carried home. ,0,1,0,0,1,"1	grocery	_	NNS	NNS	_	0	root	_	_
+2	be	_	VBG	VBG	_	3	auxpass	_	_
+3	carry	_	VBN	VBN	_	1	partmod	_	_
+4	home	_	RB	RB	_	3	advmod	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%grocery$@%VROOT', 'auxpass$@%be$@%carry', 'partmod$@%carry$@%grocery', 'advmod$@%home$@%carry', 'punct$@%.$@%grocery']","['x$@%grocery$@%VROOT', 'x$@%be$@%carry', 'x$@%carry$@%grocery', 'x$@%home$@%carry', 'x$@%.$@%grocery']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.91233765302000103,0.86351344884368575,0.10060925067146376
+I06U-gNSC-p370-r1,A boy is carrying a bag of groceries,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.25807991385240348,0.2391231542078448,0.069693221201340028
+I06U-gNSC-p370-r2,A boy is carrying a bag of food from the store,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	food	_	NN	NN	_	6	prep_of	_	_
+9	from	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	store	_	NN	NN	_	4	prep_from	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'erased$@%from$@%WORDERASED', 'det$@%the$@%store', 'prep_from$@%store$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%from$@%WORDERASED', 'x$@%the$@%store', 'x$@%store$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%store$@%x', 'x$@%.$@%x']",0.45761389566824107,0.4668019891066969,0.70562827717899357
+I06U-gNSC-p374-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p374-r2,Groceries are in the brown bag.,0,0,1,1,1,"1	grocery	_	NNS	NNS	_	2	nsubj	_	_
+2	be	_	VBP	VBP	_	0	root	_	_
+3	in	_	IN	IN	_	0	erased	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	brown	_	JJ	JJ	_	6	amod	_	_
+6	bag	_	NN	NN	_	2	prep_in	_	_
+7	.	_	.	.	_	2	punct	_	_","['nsubj$@%grocery$@%be', 'root$@%be$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%bag', 'amod$@%brown$@%bag', 'prep_in$@%bag$@%be', 'punct$@%.$@%be']","['x$@%grocery$@%be', 'x$@%be$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%bag', 'x$@%brown$@%bag', 'x$@%bag$@%be', 'x$@%.$@%be']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%brown$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.9643684810372275,0.96759613859776628,0.20958019266767514
+I06U-gNSC-p377-r1,groceries,0,0,0,0,0,"1	grocery	_	NNS	NNS	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%grocery$@%VROOT', 'punct$@%.$@%grocery']","['x$@%grocery$@%VROOT', 'x$@%.$@%grocery']","['x$@%grocery$@%x', 'x$@%.$@%x']",0.93204259856802929,0.93823732584324071,0.097069621350129531
+I06U-gNSC-p377-r2,grocery list,0,0,0,0,0,"1	grocery	_	NN	NN	_	2	nsubj	_	_
+2	list	_	VBP	VBP	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%grocery$@%list', 'root$@%list$@%VROOT', 'punct$@%.$@%list']","['x$@%grocery$@%list', 'x$@%list$@%VROOT', 'x$@%.$@%list']","['x$@%grocery$@%x', 'x$@%list$@%x', 'x$@%.$@%x']",1.0,1.0,0.16654419157730183
+I06U-gNSC-p379-r1,"""This bag's not too heavy"" says the young boy",0,0,0,0,0,"1	``	_	``	``	_	9	punct	_	_
+2	this	_	DT	DT	_	3	det	_	_
+3	bag	_	NN	NN	_	7	nsubj	_	_
+4	's	_	VBZ	VBZ	_	7	cop	_	_
+5	not	_	RB	RB	_	7	neg	_	_
+6	too	_	RB	RB	_	7	advmod	_	_
+7	heavy	_	JJ	JJ	_	9	ccomp	_	_
+8	''	_	''	''	_	9	punct	_	_
+9	say	_	VBZ	VBZ	_	0	root	_	_
+10	the	_	DT	DT	_	12	det	_	_
+11	young	_	JJ	JJ	_	12	amod	_	_
+12	boy	_	NN	NN	_	9	nsubj	_	_
+13	.	_	.	.	_	9	punct	_	_","['punct$@%``$@%say', 'det$@%this$@%bag', 'nsubj$@%bag$@%heavy', ""cop$@%'s$@%heavy"", 'neg$@%not$@%heavy', 'advmod$@%too$@%heavy', 'ccomp$@%heavy$@%say', ""punct$@%''$@%say"", 'root$@%say$@%VROOT', 'det$@%the$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%say', 'punct$@%.$@%say']","['x$@%``$@%say', 'x$@%this$@%bag', 'x$@%bag$@%heavy', ""x$@%'s$@%heavy"", 'x$@%not$@%heavy', 'x$@%too$@%heavy', 'x$@%heavy$@%say', ""x$@%''$@%say"", 'x$@%say$@%VROOT', 'x$@%the$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%say', 'x$@%.$@%say']","['x$@%``$@%x', 'x$@%this$@%x', 'x$@%bag$@%x', ""x$@%'s$@%x"", 'x$@%not$@%x', 'x$@%too$@%x', 'x$@%heavy$@%x', ""x$@%''$@%x"", 'x$@%say$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.96762970616985566,0.97079757277352507,0.72117989458453091
+I06U-gNSC-p379-r2,The bag of groceries is almost bigger than the young boy.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubj	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	cop	_	_
+6	almost	_	RB	RB	_	7	advmod	_	_
+7	bigger	_	JJR	JJR	_	0	root	_	_
+8	than	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	young	_	JJ	JJ	_	11	amod	_	_
+11	boy	_	NN	NN	_	7	prep_than	_	_
+12	.	_	.	.	_	7	punct	_	_","['det$@%the$@%bag', 'nsubj$@%bag$@%bigger', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'cop$@%be$@%bigger', 'advmod$@%almost$@%bigger', 'root$@%bigger$@%VROOT', 'erased$@%than$@%WORDERASED', 'det$@%the$@%boy', 'amod$@%young$@%boy', 'prep_than$@%boy$@%bigger', 'punct$@%.$@%bigger']","['x$@%the$@%bag', 'x$@%bag$@%bigger', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%bigger', 'x$@%almost$@%bigger', 'x$@%bigger$@%VROOT', 'x$@%than$@%WORDERASED', 'x$@%the$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%bigger', 'x$@%.$@%bigger']","['x$@%the$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%almost$@%x', 'x$@%bigger$@%x', 'x$@%than$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.85552211649141741,0.84578632873747883,0.24446682388508612
+I06U-gNSC-p380-r1,A boy carrying the fruit basket.,0,1,0,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	carry	_	VBG	VBG	_	2	partmod	_	_
+4	the	_	DT	DT	_	6	det	_	_
+5	fruit	_	NN	NN	_	6	nn	_	_
+6	basket	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	2	punct	_	_","['det$@%a$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%carry$@%boy', 'det$@%the$@%basket', 'nn$@%fruit$@%basket', 'dobj$@%basket$@%carry', 'punct$@%.$@%boy']","['x$@%a$@%boy', 'x$@%boy$@%VROOT', 'x$@%carry$@%boy', 'x$@%the$@%basket', 'x$@%fruit$@%basket', 'x$@%basket$@%carry', 'x$@%.$@%boy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%fruit$@%x', 'x$@%basket$@%x', 'x$@%.$@%x']",0.92944339011119703,0.93255571955376604,0.86338762016671233
+I06U-gNSC-p380-r2,Fruit basket has been carried by a boy,0,0,0,1,0,"1	fruit	_	NNP	NNP	_	2	nn	_	_
+2	basket	_	NN	NN	_	5	nsubjpass	_	_
+3	have	_	VBZ	VBZ	_	5	aux	_	_
+4	be	_	VBN	VBN	_	5	auxpass	_	_
+5	carry	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['nn$@%fruit$@%basket', 'nsubjpass$@%basket$@%carry', 'aux$@%have$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%fruit$@%basket', 'x$@%basket$@%carry', 'x$@%have$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%fruit$@%x', 'x$@%basket$@%x', 'x$@%have$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.80114705115836538,0.56716436155534034,0.86144265736129155
+I06U-gNSC-p383-r1,This boy enjoys helping with the groceries.,0,0,1,0,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	enjoy	_	VBZ	VBZ	_	0	root	_	_
+4	help	_	VBG	VBG	_	3	xcomp	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	grocery	_	NNS	NNS	_	4	prep_with	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%enjoy', 'root$@%enjoy$@%VROOT', 'xcomp$@%help$@%enjoy', 'erased$@%with$@%WORDERASED', 'det$@%the$@%grocery', 'prep_with$@%grocery$@%help', 'punct$@%.$@%enjoy']","['x$@%this$@%boy', 'x$@%boy$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%help$@%enjoy', 'x$@%with$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%help', 'x$@%.$@%enjoy']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%enjoy$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.91372373486911562,0.91842226061084864,0.15455211750476205
+I06U-gNSC-p383-r2,Carrying groceries for mom is a big help.,0,0,1,0,0,"1	carry	_	JJ	JJ	_	2	amod	_	_
+2	grocery	_	NNS	NNS	_	8	nsubj	_	_
+3	for	_	IN	IN	_	0	erased	_	_
+4	mom	_	NN	NN	_	2	prep_for	_	_
+5	be	_	VBZ	VBZ	_	8	cop	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	big	_	JJ	JJ	_	8	amod	_	_
+8	help	_	NN	NN	_	0	root	_	_
+9	.	_	.	.	_	8	punct	_	_","['amod$@%carry$@%grocery', 'nsubj$@%grocery$@%help', 'erased$@%for$@%WORDERASED', 'prep_for$@%mom$@%grocery', 'cop$@%be$@%help', 'det$@%a$@%help', 'amod$@%big$@%help', 'root$@%help$@%VROOT', 'punct$@%.$@%help']","['x$@%carry$@%grocery', 'x$@%grocery$@%help', 'x$@%for$@%WORDERASED', 'x$@%mom$@%grocery', 'x$@%be$@%help', 'x$@%a$@%help', 'x$@%big$@%help', 'x$@%help$@%VROOT', 'x$@%.$@%help']","['x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%for$@%x', 'x$@%mom$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%help$@%x', 'x$@%.$@%x']",0.98741158537100904,0.94922066678073713,0.4043523452622042
+I06U-gNSC-p385-r1,THE BOY IS CARRYING THE GROCERIES.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NNP	NNP	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carrying	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carrying', 'aux$@%be$@%carrying', 'root$@%carrying$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carrying', 'punct$@%.$@%carrying']","['x$@%the$@%boy', 'x$@%boy$@%carrying', 'x$@%be$@%carrying', 'x$@%carrying$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carrying', 'x$@%.$@%carrying']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carrying$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.91066167024721045,0.91920650044617069,0.43576829564992725
+I06U-gNSC-p385-r2,IT A BIG BAG FOR A LITTLE BOY.,0,0,1,0,1,"1	it	_	NNP	NNP	_	4	nn	_	_
+2	a	_	NNP	NNP	_	4	nn	_	_
+3	big	_	NNP	NNP	_	4	nn	_	_
+4	bag	_	NNP	NNP	_	0	root	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	little	_	NNP	NNP	_	8	nn	_	_
+8	boy	_	NNP	NNP	_	4	prep_for	_	_
+9	.	_	.	.	_	4	punct	_	_","['nn$@%it$@%bag', 'nn$@%a$@%bag', 'nn$@%big$@%bag', 'root$@%bag$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%boy', 'nn$@%little$@%boy', 'prep_for$@%boy$@%bag', 'punct$@%.$@%bag']","['x$@%it$@%bag', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%bag', 'x$@%.$@%bag']","['x$@%it$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.97760658777325737,0.89789075619435765,0.68879716474636143
+I06U-gNSC-p387-r1,He is helping carry the groceries.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	help	_	VBG	VBG	_	0	root	_	_
+4	carry	_	VB	VB	_	3	ccomp	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'ccomp$@%carry$@%help', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%help']","['x$@%he$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%carry$@%help', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%help']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.65978730666728413,0.64576487164113705,0.098858501173861968
+I06U-gNSC-p387-r2,The groceries are his favorite thing to help with.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	grocery	_	NNS	NNS	_	6	nsubj	_	_
+3	be	_	VBP	VBP	_	6	cop	_	_
+4	he	_	PRP$	PRP$	_	6	poss	_	_
+5	favorite	_	JJ	JJ	_	6	amod	_	_
+6	thing	_	NN	NN	_	0	root	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	help	_	VB	VB	_	6	infmod	_	_
+9	with	_	IN	IN	_	8	prep	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%the$@%grocery', 'nsubj$@%grocery$@%thing', 'cop$@%be$@%thing', 'poss$@%he$@%thing', 'amod$@%favorite$@%thing', 'root$@%thing$@%VROOT', 'aux$@%to$@%help', 'infmod$@%help$@%thing', 'prep$@%with$@%help', 'punct$@%.$@%thing']","['x$@%the$@%grocery', 'x$@%grocery$@%thing', 'x$@%be$@%thing', 'x$@%he$@%thing', 'x$@%favorite$@%thing', 'x$@%thing$@%VROOT', 'x$@%to$@%help', 'x$@%help$@%thing', 'x$@%with$@%help', 'x$@%.$@%thing']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%he$@%x', 'x$@%favorite$@%x', 'x$@%thing$@%x', 'x$@%to$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%.$@%x']",0.93815158572069535,0.94248791526296272,0.26054569805722561
+I06U-gNSC-p390-r1,Bringing home the groceries.,0,0,1,0,1,"1	bring	_	VBG	VBG	_	0	root	_	_
+2	home	_	RB	RB	_	1	advmod	_	_
+3	the	_	DT	DT	_	4	det	_	_
+4	grocery	_	NNS	NNS	_	1	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%bring$@%VROOT', 'advmod$@%home$@%bring', 'det$@%the$@%grocery', 'dobj$@%grocery$@%bring', 'punct$@%.$@%bring']","['x$@%bring$@%VROOT', 'x$@%home$@%bring', 'x$@%the$@%grocery', 'x$@%grocery$@%bring', 'x$@%.$@%bring']","['x$@%bring$@%x', 'x$@%home$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.90488896771209681,0.89660454720231153,0.13492971404301646
+I06U-gNSC-p390-r2,Helping Mom with the chores.,0,0,1,0,1,"1	help	_	VBG	VBG	_	0	root	_	_
+2	mom	_	NN	NN	_	1	dobj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	chore	_	NNS	NNS	_	1	prep_with	_	_
+6	.	_	.	.	_	1	punct	_	_","['root$@%help$@%VROOT', 'dobj$@%mom$@%help', 'erased$@%with$@%WORDERASED', 'det$@%the$@%chore', 'prep_with$@%chore$@%help', 'punct$@%.$@%help']","['x$@%help$@%VROOT', 'x$@%mom$@%help', 'x$@%with$@%WORDERASED', 'x$@%the$@%chore', 'x$@%chore$@%help', 'x$@%.$@%help']","['x$@%help$@%x', 'x$@%mom$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%chore$@%x', 'x$@%.$@%x']",0.97265877951400936,0.9751348859581479,0.97545657034199229
+I06U-gNSC-p393-r1,A boy is carrying a giant bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	giant	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%giant$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%giant$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%giant$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.33590940380301482,0.3226479160372584,0.18657719596723221
+I06U-gNSC-p393-r2,The boy's grocery bag is chockfull of fruits.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	poss	_	_
+3	's	_	POS	POS	_	0	erased	_	_
+4	grocery	_	NN	NN	_	5	nn	_	_
+5	bag	_	NN	NN	_	7	nsubj	_	_
+6	be	_	VBZ	VBZ	_	7	cop	_	_
+7	chockfull	_	NN	NN	_	0	root	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	fruit	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	7	punct	_	_","['det$@%the$@%boy', 'poss$@%boy$@%bag', ""erased$@%'s$@%WORDERASED"", 'nn$@%grocery$@%bag', 'nsubj$@%bag$@%chockfull', 'cop$@%be$@%chockfull', 'root$@%chockfull$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%chockfull', 'punct$@%.$@%chockfull']","['x$@%the$@%boy', 'x$@%boy$@%bag', ""x$@%'s$@%WORDERASED"", 'x$@%grocery$@%bag', 'x$@%bag$@%chockfull', 'x$@%be$@%chockfull', 'x$@%chockfull$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%chockfull', 'x$@%.$@%chockfull']","['x$@%the$@%x', 'x$@%boy$@%x', ""x$@%'s$@%x"", 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%be$@%x', 'x$@%chockfull$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.9502493423619518,0.86744789191650973,0.41067664427831829
+I06U-gNSC-p394-r1,The boy is carrying the groceries,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.21212964777960874,0.21405205908016123,0.046074032930922271
+I06U-gNSC-p394-r2,The boy is carrying the groceries for his parents,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	parent	_	NNS	NNS	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%parent', 'prep_for$@%parent$@%grocery', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%for$@%WORDERASED', 'x$@%he$@%parent', 'x$@%parent$@%grocery', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%parent$@%x', 'x$@%.$@%x']",0.33327789613642878,0.33983069355175211,0.14893727595913686
+I06U-gNSC-p396-r1,The boy is carrying a grocery bag,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	grocery	_	NN	NN	_	7	nn	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.34231982747802003,0.23106586297941345,0.069805665515429438
+I06U-gNSC-p396-r2,The grocery bag is been carried by the boy,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	grocery	_	NN	NN	_	3	nn	_	_
+3	bag	_	NN	NN	_	6	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	6	auxpass	_	_
+5	be	_	VBN	VBN	_	6	auxpass	_	_
+6	carry	_	VBN	VBN	_	0	root	_	_
+7	by	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	boy	_	NN	NN	_	6	agent	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%the$@%bag', 'nn$@%grocery$@%bag', 'nsubjpass$@%bag$@%carry', 'auxpass$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%carry', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.76748293460882966,0.30806356571101323,0.069754969767862662
+I06U-gNSC-p401-r1,The boy knows th bag is about to drop.,0,0,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	know	_	VBZ	VBZ	_	0	root	_	_
+4	th	_	NN	NN	_	5	nn	_	_
+5	bag	_	NN	NN	_	9	xsubj	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	about	_	IN	IN	_	3	ccomp	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	drop	_	VB	VB	_	7	xcomp	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%know', 'root$@%know$@%VROOT', 'nn$@%th$@%bag', 'xsubj$@%bag$@%drop', 'aux$@%be$@%about', 'ccomp$@%about$@%know', 'aux$@%to$@%drop', 'xcomp$@%drop$@%about', 'punct$@%.$@%know']","['x$@%the$@%boy', 'x$@%boy$@%know', 'x$@%know$@%VROOT', 'x$@%th$@%bag', 'x$@%bag$@%drop', 'x$@%be$@%about', 'x$@%about$@%know', 'x$@%to$@%drop', 'x$@%drop$@%about', 'x$@%.$@%know']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%know$@%x', 'x$@%th$@%x', 'x$@%bag$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%drop$@%x', 'x$@%.$@%x']",0.96973133808491607,0.97126078620637213,0.83100523604118715
+I06U-gNSC-p401-r2,"Holding tightly to the bag of groceries, the boy yells for help.",1,0,1,1,0,"1	hold	_	VBG	VBG	_	11	partmod	_	_
+2	tightly	_	RB	RB	_	1	advmod	_	_
+3	to	_	TO	TO	_	0	erased	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	2	prep_to	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	grocery	_	NNS	NNS	_	5	prep_of	_	_
+8	,	_	,	,	_	11	punct	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	boy	_	NN	NN	_	11	nsubj	_	_
+11	yell	_	VBZ	VBZ	_	0	root	_	_
+12	for	_	IN	IN	_	0	erased	_	_
+13	help	_	NN	NN	_	11	prep_for	_	_
+14	.	_	.	.	_	11	punct	_	_","['partmod$@%hold$@%yell', 'advmod$@%tightly$@%hold', 'erased$@%to$@%WORDERASED', 'det$@%the$@%bag', 'prep_to$@%bag$@%tightly', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%,$@%yell', 'det$@%the$@%boy', 'nsubj$@%boy$@%yell', 'root$@%yell$@%VROOT', 'erased$@%for$@%WORDERASED', 'prep_for$@%help$@%yell', 'punct$@%.$@%yell']","['x$@%hold$@%yell', 'x$@%tightly$@%hold', 'x$@%to$@%WORDERASED', 'x$@%the$@%bag', 'x$@%bag$@%tightly', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%,$@%yell', 'x$@%the$@%boy', 'x$@%boy$@%yell', 'x$@%yell$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%help$@%yell', 'x$@%.$@%yell']","['x$@%hold$@%x', 'x$@%tightly$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%yell$@%x', 'x$@%for$@%x', 'x$@%help$@%x', 'x$@%.$@%x']",0.86710835952387522,0.8572991063148947,0.33496501147362867
+I06U-gNSC-p405-r1,A boy is carrying groceries. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.20812069442168712,0.19592087965661364,0.046177472549517762
+I06U-gNSC-p405-r2,Groceries are being carried by a boy. ,1,1,1,1,1,"1	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+2	be	_	VBP	VBP	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%grocery$@%carry', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.63719443989299052,0.279321268615212,0.046241144041279103
+I06U-gNSC-p407-r1,The child is carrying a grocery bag,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	grocery	_	NN	NN	_	7	nn	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%child', 'x$@%child$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.56986828326523831,0.48144966440022674,0.12590805074417188
+I06U-gNSC-p407-r2,The grocery bag is full of fruit,0,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	grocery	_	NN	NN	_	3	nn	_	_
+3	bag	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	full	_	JJ	JJ	_	0	root	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	fruit	_	NN	NN	_	5	prep_of	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bag', 'nn$@%grocery$@%bag', 'nsubj$@%bag$@%full', 'cop$@%be$@%full', 'root$@%full$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%full']","['x$@%the$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%full', 'x$@%be$@%full', 'x$@%full$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%full']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.9419571760312232,0.84262620698843971,0.25470605745220631
+I06U-gNSC-p408-r1,This guy came from grocery ,0,0,0,0,1,"1	this	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	3	nsubj	_	_
+3	come	_	VBD	VBD	_	0	root	_	_
+4	from	_	IN	IN	_	0	erased	_	_
+5	grocery	_	NN	NN	_	3	prep_from	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%this$@%guy', 'nsubj$@%guy$@%come', 'root$@%come$@%VROOT', 'erased$@%from$@%WORDERASED', 'prep_from$@%grocery$@%come', 'punct$@%.$@%come']","['x$@%this$@%guy', 'x$@%guy$@%come', 'x$@%come$@%VROOT', 'x$@%from$@%WORDERASED', 'x$@%grocery$@%come', 'x$@%.$@%come']","['x$@%this$@%x', 'x$@%guy$@%x', 'x$@%come$@%x', 'x$@%from$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.9934605049976043,0.99405236144781173,0.24506487033868751
+I06U-gNSC-p408-r2,This guy caring the groceries ,0,1,0,0,0,"1	this	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	0	root	_	_
+3	care	_	VBG	VBG	_	2	partmod	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	grocery	_	NNS	NNS	_	3	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['det$@%this$@%guy', 'root$@%guy$@%VROOT', 'partmod$@%care$@%guy', 'det$@%the$@%grocery', 'dobj$@%grocery$@%care', 'punct$@%.$@%guy']","['x$@%this$@%guy', 'x$@%guy$@%VROOT', 'x$@%care$@%guy', 'x$@%the$@%grocery', 'x$@%grocery$@%care', 'x$@%.$@%guy']","['x$@%this$@%x', 'x$@%guy$@%x', 'x$@%care$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.91612200686153789,0.92374132953068444,0.28456431138287319
+I06U-gNSC-p409-r1,A child is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%child', 'x$@%child$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.48034626538239078,0.48376837441662968,0.12570503423593138
+I06U-gNSC-p409-r2,A bag of groceries is being carried by a child.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	carry	_	VBN	VBN	_	0	root	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	child	_	NN	NN	_	7	agent	_	_
+11	.	_	.	.	_	7	punct	_	_","['det$@%a$@%bag', 'nsubjpass$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%child', 'agent$@%child$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%child', 'x$@%child$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%child$@%x', 'x$@%.$@%x']",0.57841893510199305,0.45211698673315492,0.12554854179779251
+I06U-gNSC-p410-r1,The boy is very happy to help carry the groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	7	xsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	very	_	RB	RB	_	5	advmod	_	_
+5	happy	_	JJ	JJ	_	0	root	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	help	_	VB	VB	_	5	xcomp	_	_
+8	carry	_	VB	VB	_	7	xcomp	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	grocery	_	NNS	NNS	_	8	dobj	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%help', 'cop$@%be$@%happy', 'advmod$@%very$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%help', 'xcomp$@%help$@%happy', 'xcomp$@%carry$@%help', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%be$@%happy', 'x$@%very$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%help', 'x$@%help$@%happy', 'x$@%carry$@%help', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.73911959878910283,0.70397472286015073,0.15645335176529673
+I06U-gNSC-p410-r2,The boy is excited because he just bought the ingredients for a smoothie.,0,0,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	excite	_	JJ	JJ	_	0	root	_	_
+5	because	_	IN	IN	_	8	mark	_	_
+6	he	_	PRP	PRP	_	8	nsubj	_	_
+7	just	_	RB	RB	_	8	advmod	_	_
+8	buy	_	VBD	VBD	_	4	advcl	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	ingredient	_	NNS	NNS	_	8	dobj	_	_
+11	for	_	IN	IN	_	0	erased	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	smoothie	_	NN	NN	_	8	prep_for	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%excite', 'cop$@%be$@%excite', 'root$@%excite$@%VROOT', 'mark$@%because$@%buy', 'nsubj$@%he$@%buy', 'advmod$@%just$@%buy', 'advcl$@%buy$@%excite', 'det$@%the$@%ingredient', 'dobj$@%ingredient$@%buy', 'erased$@%for$@%WORDERASED', 'det$@%a$@%smoothie', 'prep_for$@%smoothie$@%buy', 'punct$@%.$@%excite']","['x$@%the$@%boy', 'x$@%boy$@%excite', 'x$@%be$@%excite', 'x$@%excite$@%VROOT', 'x$@%because$@%buy', 'x$@%he$@%buy', 'x$@%just$@%buy', 'x$@%buy$@%excite', 'x$@%the$@%ingredient', 'x$@%ingredient$@%buy', 'x$@%for$@%WORDERASED', 'x$@%a$@%smoothie', 'x$@%smoothie$@%buy', 'x$@%.$@%excite']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%excite$@%x', 'x$@%because$@%x', 'x$@%he$@%x', 'x$@%just$@%x', 'x$@%buy$@%x', 'x$@%the$@%x', 'x$@%ingredient$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%smoothie$@%x', 'x$@%.$@%x']",0.9498794035241247,0.95485966365575758,0.9467585765956098
+I06U-gNSC-p411-r1,A smiling boy is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	smile	_	VBG	VBG	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	carry	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bag	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%smile$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%smile$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%smile$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.33330761081716176,0.32023695397066321,0.12097363383604598
+I06U-gNSC-p411-r2,A bag of groceries is being held by a smiling boy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	hold	_	VBN	VBN	_	0	root	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	11	det	_	_
+10	smile	_	VBG	VBG	_	11	amod	_	_
+11	boy	_	NN	NN	_	7	agent	_	_
+12	.	_	.	.	_	7	punct	_	_","['det$@%a$@%bag', 'nsubjpass$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'aux$@%be$@%hold', 'auxpass$@%be$@%hold', 'root$@%hold$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%boy', 'amod$@%smile$@%boy', 'agent$@%boy$@%hold', 'punct$@%.$@%hold']","['x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%boy', 'x$@%smile$@%boy', 'x$@%boy$@%hold', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%smile$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.78747630399341806,0.79106170187713953,0.15080214050032359
+I06U-gNSC-p413-r1,The boy carries groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	grocery	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.26657215394481559,0.24470652858069053,0.046337939490748714
+I06U-gNSC-p413-r2,A boy carries a bag.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.36412044512422559,0.34941406031088684,0.62033417630691468
+I06U-gNSC-p416-r1,Boy carrying groceries,1,1,0,1,1,"1	boy	_	NN	NN	_	0	root	_	_
+2	carry	_	VBG	VBG	_	1	partmod	_	_
+3	grocery	_	NNS	NNS	_	2	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%boy$@%VROOT', 'partmod$@%carry$@%boy', 'dobj$@%grocery$@%carry', 'punct$@%.$@%boy']","['x$@%boy$@%VROOT', 'x$@%carry$@%boy', 'x$@%grocery$@%carry', 'x$@%.$@%boy']","['x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.71950304731789805,0.70136912548510111,0.046582392520565841
+I06U-gNSC-p416-r2,Groceries being carried by boy ,1,1,0,1,1,"1	grocery	_	NNS	NNS	_	0	root	_	_
+2	be	_	VBG	VBG	_	3	auxpass	_	_
+3	carry	_	VBN	VBN	_	1	partmod	_	_
+4	by	_	IN	IN	_	0	erased	_	_
+5	boy	_	NN	NN	_	3	agent	_	_
+6	.	_	.	.	_	1	punct	_	_","['root$@%grocery$@%VROOT', 'auxpass$@%be$@%carry', 'partmod$@%carry$@%grocery', 'erased$@%by$@%WORDERASED', 'agent$@%boy$@%carry', 'punct$@%.$@%grocery']","['x$@%grocery$@%VROOT', 'x$@%be$@%carry', 'x$@%carry$@%grocery', 'x$@%by$@%WORDERASED', 'x$@%boy$@%carry', 'x$@%.$@%grocery']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.86703904876967508,0.63469349439883871,0.046440217549366447
+I06U-gNSC-p417-r1,The boy helps with shopping,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	help	_	VBZ	VBZ	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	shopping	_	NN	NN	_	3	prep_with	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'root$@%help$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%shopping$@%help', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%help$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%shopping$@%help', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%shopping$@%x', 'x$@%.$@%x']",0.8993838677737227,0.90547427176729167,0.88693502968112081
+I06U-gNSC-p417-r2,A young man helps his mother with the groceries.,0,0,1,0,0,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	man	_	NN	NN	_	4	nsubj	_	_
+4	help	_	VBZ	VBZ	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	mother	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	grocery	_	NNS	NNS	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'amod$@%young$@%man', 'nsubj$@%man$@%help', 'root$@%help$@%VROOT', 'poss$@%he$@%mother', 'dobj$@%mother$@%help', 'erased$@%with$@%WORDERASED', 'det$@%the$@%grocery', 'prep_with$@%grocery$@%help', 'punct$@%.$@%help']","['x$@%a$@%man', 'x$@%young$@%man', 'x$@%man$@%help', 'x$@%help$@%VROOT', 'x$@%he$@%mother', 'x$@%mother$@%help', 'x$@%with$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%help', 'x$@%.$@%help']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%man$@%x', 'x$@%help$@%x', 'x$@%he$@%x', 'x$@%mother$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.89725960798621529,0.90108254574307201,0.22393829359322914
+I06U-gNSC-p418-r1,A boy is carrying groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.20812069442168724,0.19592087965661364,0.046177472549517762
+I06U-gNSC-p418-r2,Groceries are being brought in by a boy.,1,1,1,1,1,"1	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+2	be	_	VBP	VBP	_	4	aux	_	_
+3	be	_	VBG	VBG	_	4	auxpass	_	_
+4	bring	_	VBN	VBN	_	0	root	_	_
+5	in	_	IN	IN	_	4	prep	_	_
+6	by	_	IN	IN	_	5	pcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	5	prep_by	_	_
+9	.	_	.	.	_	4	punct	_	_","['nsubjpass$@%grocery$@%bring', 'aux$@%be$@%bring', 'auxpass$@%be$@%bring', 'root$@%bring$@%VROOT', 'prep$@%in$@%bring', 'pcomp$@%by$@%in', 'det$@%a$@%boy', 'prep_by$@%boy$@%in', 'punct$@%.$@%bring']","['x$@%grocery$@%bring', 'x$@%be$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%in$@%bring', 'x$@%by$@%in', 'x$@%a$@%boy', 'x$@%boy$@%in', 'x$@%.$@%bring']","['x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%in$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.96638033238072385,0.96166889073751582,0.078701549730805564
+I06U-gNSC-p420-r1,A blond boy is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	blond	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	carry	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bag	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%blond$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%blond$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%blond$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.33590940380301482,0.3226479160372584,0.25234759169610288
+I06U-gNSC-p420-r2,A pudgy boy in a dark red shirt is carrying a bag of food.,1,1,1,1,0,"1	a	_	DT	DT	_	3	det	_	_
+2	pudgy	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	10	nsubj	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	8	det	_	_
+6	dark	_	JJ	JJ	_	8	amod	_	_
+7	red	_	JJ	JJ	_	8	amod	_	_
+8	shirt	_	NN	NN	_	3	prep_in	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	carry	_	VBG	VBG	_	0	root	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	bag	_	NN	NN	_	10	dobj	_	_
+13	of	_	IN	IN	_	0	erased	_	_
+14	food	_	NN	NN	_	12	prep_of	_	_
+15	.	_	.	.	_	10	punct	_	_","['det$@%a$@%boy', 'amod$@%pudgy$@%boy', 'nsubj$@%boy$@%carry', 'erased$@%in$@%WORDERASED', 'det$@%a$@%shirt', 'amod$@%dark$@%shirt', 'amod$@%red$@%shirt', 'prep_in$@%shirt$@%boy', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%pudgy$@%boy', 'x$@%boy$@%carry', 'x$@%in$@%WORDERASED', 'x$@%a$@%shirt', 'x$@%dark$@%shirt', 'x$@%red$@%shirt', 'x$@%shirt$@%boy', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%pudgy$@%x', 'x$@%boy$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%dark$@%x', 'x$@%red$@%x', 'x$@%shirt$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.564450999892538,0.57482728471241673,0.82928626247000004
+I06U-gNSC-p423-r1,A boy is carrying a bag of groceries. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.25807991385240348,0.2391231542078448,0.069693221201340028
+I06U-gNSC-p423-r2,A bag of food is being moved.,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	food	_	NN	NN	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	move	_	VBN	VBN	_	0	root	_	_
+8	.	_	.	.	_	7	punct	_	_","['det$@%a$@%bag', 'nsubjpass$@%bag$@%move', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'aux$@%be$@%move', 'auxpass$@%be$@%move', 'root$@%move$@%VROOT', 'punct$@%.$@%move']","['x$@%a$@%bag', 'x$@%bag$@%move', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%be$@%move', 'x$@%be$@%move', 'x$@%move$@%VROOT', 'x$@%.$@%move']","['x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%move$@%x', 'x$@%.$@%x']",0.89511540933458289,0.92509231235595812,0.79636366258373759
+I06U-gNSC-p424-r1,A boy way too excited about helping with the groceries ,0,0,0,0,0,"1	a	_	DT	DT	_	3	det	_	_
+2	boy	_	NN	NN	_	3	nn	_	_
+3	way	_	NN	NN	_	0	root	_	_
+4	too	_	RB	RB	_	5	advmod	_	_
+5	excited	_	JJ	JJ	_	3	amod	_	_
+6	about	_	IN	IN	_	0	erased	_	_
+7	help	_	VBG	VBG	_	5	prepc_about	_	_
+8	with	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	grocery	_	NNS	NNS	_	7	prep_with	_	_
+11	.	_	.	.	_	3	punct	_	_","['det$@%a$@%way', 'nn$@%boy$@%way', 'root$@%way$@%VROOT', 'advmod$@%too$@%excited', 'amod$@%excited$@%way', 'erased$@%about$@%WORDERASED', 'prepc_about$@%help$@%excited', 'erased$@%with$@%WORDERASED', 'det$@%the$@%grocery', 'prep_with$@%grocery$@%help', 'punct$@%.$@%way']","['x$@%a$@%way', 'x$@%boy$@%way', 'x$@%way$@%VROOT', 'x$@%too$@%excited', 'x$@%excited$@%way', 'x$@%about$@%WORDERASED', 'x$@%help$@%excited', 'x$@%with$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%help', 'x$@%.$@%way']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%way$@%x', 'x$@%too$@%x', 'x$@%excited$@%x', 'x$@%about$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.92667014184617114,0.93058221887953052,0.33731487547381933
+I06U-gNSC-p424-r2,Boy handing a bag of groceries to someone. ,0,1,0,1,0,"1	boy	_	NNP	NNP	_	2	nsubj	_	_
+2	hand	_	VBD	VBD	_	0	root	_	_
+3	a	_	DT	DT	_	4	det	_	_
+4	bag	_	NN	NN	_	2	dobj	_	_
+5	of	_	IN	IN	_	0	erased	_	_
+6	grocery	_	NNS	NNS	_	4	prep_of	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	someone	_	NN	NN	_	2	prep_to	_	_
+9	.	_	.	.	_	2	punct	_	_","['nsubj$@%boy$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hand', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'erased$@%to$@%WORDERASED', 'prep_to$@%someone$@%hand', 'punct$@%.$@%hand']","['x$@%boy$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hand', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%to$@%WORDERASED', 'x$@%someone$@%hand', 'x$@%.$@%hand']","['x$@%boy$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%to$@%x', 'x$@%someone$@%x', 'x$@%.$@%x']",0.81813453167418559,0.80538320833517885,0.16184217049618599
+I06U-gNSC-p429-r1,A young boy excitedly carries a bunch of groceries,1,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	excitedly	_	RB	RB	_	5	advmod	_	_
+5	carry	_	VBZ	VBZ	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bunch	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%young$@%boy', 'nsubj$@%boy$@%carry', 'advmod$@%excitedly$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bunch', 'dobj$@%bunch$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bunch', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%carry', 'x$@%excitedly$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bunch', 'x$@%bunch$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bunch', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%excitedly$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bunch$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.70219904864933524,0.69623508950681856,0.4227780891740639
+I06U-gNSC-p429-r2,An assortment of groceries is being delivered to a new home,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	assortment	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	deliver	_	VBN	VBN	_	0	root	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	a	_	DT	DT	_	11	det	_	_
+10	new	_	JJ	JJ	_	11	amod	_	_
+11	home	_	NN	NN	_	7	prep_to	_	_
+12	.	_	.	.	_	7	punct	_	_","['det$@%a$@%assortment', 'nsubjpass$@%assortment$@%deliver', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%assortment', 'aux$@%be$@%deliver', 'auxpass$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%home', 'amod$@%new$@%home', 'prep_to$@%home$@%deliver', 'punct$@%.$@%deliver']","['x$@%a$@%assortment', 'x$@%assortment$@%deliver', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%assortment', 'x$@%be$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%home', 'x$@%new$@%home', 'x$@%home$@%deliver', 'x$@%.$@%deliver']","['x$@%a$@%x', 'x$@%assortment$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%new$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.99999727647811598,0.99999812447786807,0.47892715904444061
+I06U-gNSC-p431-r1,A boy with groceries,0,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_with	_	_
+5	.	_	.	.	_	2	punct	_	_","['det$@%a$@%boy', 'root$@%boy$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%grocery$@%boy', 'punct$@%.$@%boy']","['x$@%a$@%boy', 'x$@%boy$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%grocery$@%boy', 'x$@%.$@%boy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.91695810945446876,0.92449260595366123,0.060305517680642629
+I06U-gNSC-p431-r2,A guy carrying groceries,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	0	root	_	_
+3	carry	_	VBG	VBG	_	2	partmod	_	_
+4	grocery	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	2	punct	_	_","['det$@%a$@%guy', 'root$@%guy$@%VROOT', 'partmod$@%carry$@%guy', 'dobj$@%grocery$@%carry', 'punct$@%.$@%guy']","['x$@%a$@%guy', 'x$@%guy$@%VROOT', 'x$@%carry$@%guy', 'x$@%grocery$@%carry', 'x$@%.$@%guy']","['x$@%a$@%x', 'x$@%guy$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.7781508649642308,0.76884285776359773,0.22050633501797356
+I06U-gNSC-p433-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p433-r2,A child is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%child', 'x$@%child$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.48034626538239078,0.48376837441662968,0.12570503423593138
+I06U-gNSC-p435-r1,boy,0,0,0,0,0,"1	boy	_	UH	UH	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%boy$@%VROOT', 'punct$@%.$@%boy']","['x$@%boy$@%VROOT', 'x$@%.$@%boy']","['x$@%boy$@%x', 'x$@%.$@%x']",0.95175002953112264,0.95612904028782797,0.7529636470500215
+I06U-gNSC-p435-r2,with groceries,0,0,0,0,0,"1	with	_	IN	IN	_	0	root	_	_
+2	grocery	_	NNS	NNS	_	1	pobj	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%with$@%VROOT', 'pobj$@%grocery$@%with', 'punct$@%.$@%with']","['x$@%with$@%VROOT', 'x$@%grocery$@%with', 'x$@%.$@%with']","['x$@%with$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",1.0,1.0,0.09565117488649999
+I06U-gNSC-p436-r1,A boy is carrying home groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	home	_	NN	NN	_	6	nn	_	_
+6	grocery	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'nn$@%home$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%home$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%home$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.3241438283145166,0.3214398498044122,0.064802929437469015
+I06U-gNSC-p436-r2,A boy just went shopping. ,0,0,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	go	_	VBD	VBD	_	0	root	_	_
+5	shopping	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%go', 'advmod$@%just$@%go', 'root$@%go$@%VROOT', 'dobj$@%shopping$@%go', 'punct$@%.$@%go']","['x$@%a$@%boy', 'x$@%boy$@%go', 'x$@%just$@%go', 'x$@%go$@%VROOT', 'x$@%shopping$@%go', 'x$@%.$@%go']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%go$@%x', 'x$@%shopping$@%x', 'x$@%.$@%x']",0.95997332924777556,0.96303994474628007,0.89485028762166374
+I06U-gNSC-p438-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p438-r2,The bag of groceries is being carried by the boy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	carry	_	VBN	VBN	_	0	root	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	boy	_	NN	NN	_	7	agent	_	_
+11	.	_	.	.	_	7	punct	_	_","['det$@%the$@%bag', 'nsubjpass$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.55756868951233929,0.30729192172002906,0.069675730495042942
+I06U-gNSC-p447-r1,A boy is carrying groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.20812069442168724,0.19592087965661364,0.046177472549517762
+I06U-gNSC-p447-r2,A bag of groceries is being carried by a young boy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	carry	_	VBN	VBN	_	0	root	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	11	det	_	_
+10	young	_	JJ	JJ	_	11	amod	_	_
+11	boy	_	NN	NN	_	7	agent	_	_
+12	.	_	.	.	_	7	punct	_	_","['det$@%a$@%bag', 'nsubjpass$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%boy', 'amod$@%young$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%boy', 'x$@%young$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.53314793514776582,0.29613425875122212,0.094323268633863977
+I06U-gNSC-p448-r1,The boy is excited to help with the groceries.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	excite	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	help	_	VB	VB	_	4	xcomp	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	grocery	_	NNS	NNS	_	6	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%excite', 'cop$@%be$@%excite', 'root$@%excite$@%VROOT', 'aux$@%to$@%help', 'xcomp$@%help$@%excite', 'erased$@%with$@%WORDERASED', 'det$@%the$@%grocery', 'prep_with$@%grocery$@%help', 'punct$@%.$@%excite']","['x$@%the$@%boy', 'x$@%boy$@%excite', 'x$@%be$@%excite', 'x$@%excite$@%VROOT', 'x$@%to$@%help', 'x$@%help$@%excite', 'x$@%with$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%help', 'x$@%.$@%excite']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%excite$@%x', 'x$@%to$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.86304466407535885,0.87309118343537173,0.26750038196666714
+I06U-gNSC-p448-r2,The boy is carrying a bag of groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.24873493686012016,0.23037373818241991,0.069684288324887711
+I06U-gNSC-p450-r1,received my groceries,0,0,0,0,0,"1	receive	_	VBN	VBN	_	0	root	_	_
+2	my	_	PRP$	PRP$	_	3	poss	_	_
+3	grocery	_	NNS	NNS	_	1	dobj	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%receive$@%VROOT', 'poss$@%my$@%grocery', 'dobj$@%grocery$@%receive', 'punct$@%.$@%receive']","['x$@%receive$@%VROOT', 'x$@%my$@%grocery', 'x$@%grocery$@%receive', 'x$@%.$@%receive']","['x$@%receive$@%x', 'x$@%my$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.99928827669980924,0.99935269308880847,0.15783542608860446
+I06U-gNSC-p450-r2,loving it!,0,0,0,0,0,"1	love	_	VBG	VBG	_	0	root	_	_
+2	it	_	PRP	PRP	_	1	dobj	_	_
+3	!	_	.	.	_	1	punct	_	_","['root$@%love$@%VROOT', 'dobj$@%it$@%love', 'punct$@%!$@%love']","['x$@%love$@%VROOT', 'x$@%it$@%love', 'x$@%!$@%love']","['x$@%love$@%x', 'x$@%it$@%x', 'x$@%!$@%x']",1.0,1.0,0.99999908980769658
+I06U-gNSC-p451-r1,The boy is shopping.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	shopping	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%shopping', 'aux$@%be$@%shopping', 'root$@%shopping$@%VROOT', 'punct$@%.$@%shopping']","['x$@%the$@%boy', 'x$@%boy$@%shopping', 'x$@%be$@%shopping', 'x$@%shopping$@%VROOT', 'x$@%.$@%shopping']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%shopping$@%x', 'x$@%.$@%x']",0.96557965400821477,0.96922003375050969,0.89444632691495363
+I06U-gNSC-p451-r2,The boy is carrying groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p452-r1,The son went grocery shopping and is helping carrying groceries in.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	son	_	NN	NN	_	8	nsubj	_	_
+3	go	_	VBD	VBD	_	0	root	_	_
+4	grocery	_	NN	NN	_	5	nn	_	_
+5	shopping	_	NN	NN	_	3	dobj	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	help	_	VBG	VBG	_	3	conj_and	_	_
+9	carry	_	VBG	VBG	_	8	xcomp	_	_
+10	grocery	_	NNS	NNS	_	9	dobj	_	_
+11	in	_	IN	IN	_	9	prep	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%the$@%son', 'nsubj$@%son$@%help', 'root$@%go$@%VROOT', 'nn$@%grocery$@%shopping', 'dobj$@%shopping$@%go', 'erased$@%and$@%WORDERASED', 'aux$@%be$@%help', 'conj_and$@%help$@%go', 'xcomp$@%carry$@%help', 'dobj$@%grocery$@%carry', 'prep$@%in$@%carry', 'punct$@%.$@%go']","['x$@%the$@%son', 'x$@%son$@%help', 'x$@%go$@%VROOT', 'x$@%grocery$@%shopping', 'x$@%shopping$@%go', 'x$@%and$@%WORDERASED', 'x$@%be$@%help', 'x$@%help$@%go', 'x$@%carry$@%help', 'x$@%grocery$@%carry', 'x$@%in$@%carry', 'x$@%.$@%go']","['x$@%the$@%x', 'x$@%son$@%x', 'x$@%go$@%x', 'x$@%grocery$@%x', 'x$@%shopping$@%x', 'x$@%and$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%in$@%x', 'x$@%.$@%x']",0.82125207151088997,0.80239073445621323,0.10646657720585118
+I06U-gNSC-p452-r2,The little boy is helping his mom. ,0,1,1,0,0,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	help	_	VBG	VBG	_	0	root	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	mom	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'poss$@%he$@%mom', 'dobj$@%mom$@%help', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%he$@%mom', 'x$@%mom$@%help', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%he$@%x', 'x$@%mom$@%x', 'x$@%.$@%x']",0.89344377800710195,0.90056941986352368,0.9074473108720994
+I06U-gNSC-p453-r1,He is probably wondering what is in the grocery bag.,0,1,1,0,0,"1	he	_	PRP	PRP	_	4	nsubj	_	_
+2	be	_	VBZ	VBZ	_	4	aux	_	_
+3	probably	_	RB	RB	_	4	advmod	_	_
+4	wonder	_	VBG	VBG	_	0	root	_	_
+5	what	_	WP	WP	_	6	nsubj	_	_
+6	be	_	VBZ	VBZ	_	4	ccomp	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	grocery	_	NN	NN	_	10	nn	_	_
+10	bag	_	NN	NN	_	6	prep_in	_	_
+11	.	_	.	.	_	4	punct	_	_","['nsubj$@%he$@%wonder', 'aux$@%be$@%wonder', 'advmod$@%probably$@%wonder', 'root$@%wonder$@%VROOT', 'nsubj$@%what$@%be', 'ccomp$@%be$@%wonder', 'erased$@%in$@%WORDERASED', 'det$@%the$@%bag', 'nn$@%grocery$@%bag', 'prep_in$@%bag$@%be', 'punct$@%.$@%wonder']","['x$@%he$@%wonder', 'x$@%be$@%wonder', 'x$@%probably$@%wonder', 'x$@%wonder$@%VROOT', 'x$@%what$@%be', 'x$@%be$@%wonder', 'x$@%in$@%WORDERASED', 'x$@%the$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%be', 'x$@%.$@%wonder']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%probably$@%x', 'x$@%wonder$@%x', 'x$@%what$@%x', 'x$@%be$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.94501284286571618,0.8946201073867921,0.20127206567620726
+I06U-gNSC-p453-r2,He is helping his mom carry the groceries in from the car.,1,1,1,1,0,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	help	_	VBG	VBG	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	mom	_	NN	NN	_	6	nsubj	_	_
+6	carry	_	VB	VB	_	3	ccomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	grocery	_	NNS	NNS	_	6	dobj	_	_
+9	in	_	IN	IN	_	6	prep	_	_
+10	from	_	IN	IN	_	9	pcomp	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	car	_	NN	NN	_	9	prep_from	_	_
+13	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'poss$@%he$@%mom', 'nsubj$@%mom$@%carry', 'ccomp$@%carry$@%help', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'prep$@%in$@%carry', 'pcomp$@%from$@%in', 'det$@%the$@%car', 'prep_from$@%car$@%in', 'punct$@%.$@%help']","['x$@%he$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%he$@%mom', 'x$@%mom$@%carry', 'x$@%carry$@%help', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%in$@%carry', 'x$@%from$@%in', 'x$@%the$@%car', 'x$@%car$@%in', 'x$@%.$@%help']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%he$@%x', 'x$@%mom$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%in$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.75902719288084231,0.75337211006746441,0.41501953403255687
+I06U-gNSC-p455-r1,The boy carries groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	grocery	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.2665721539448157,0.24470652858069053,0.046337939490748714
+I06U-gNSC-p455-r2,The child walks with a bag of groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	3	nsubj	_	_
+3	walk	_	VBZ	VBZ	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	3	prep_with	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%bag', 'prep_with$@%bag$@%walk', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%walk']","['x$@%the$@%child', 'x$@%child$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%bag', 'x$@%bag$@%walk', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%walk']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.78763002216195876,0.77356722693258784,0.1742655384296623
+I06U-gNSC-p456-r1,A boy is carrying a grocery bag full of fruit.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	grocery	_	NN	NN	_	7	nn	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	full	_	JJ	JJ	_	7	dep	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	fruit	_	NN	NN	_	7	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%carry', 'dep$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%carry', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.45213913807579043,0.36853991582962431,0.19399801436633524
+I06U-gNSC-p456-r2,The brown paper bag full of fruit is being carried by the boy.,1,1,1,1,1,"1	the	_	DT	DT	_	4	det	_	_
+2	brown	_	JJ	JJ	_	4	amod	_	_
+3	paper	_	NN	NN	_	4	nn	_	_
+4	bag	_	NN	NN	_	10	nsubjpass	_	_
+5	full	_	JJ	JJ	_	4	dep	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	fruit	_	NN	NN	_	4	prep_of	_	_
+8	be	_	VBZ	VBZ	_	10	aux	_	_
+9	be	_	VBG	VBG	_	10	auxpass	_	_
+10	carry	_	VBN	VBN	_	0	root	_	_
+11	by	_	IN	IN	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	boy	_	NN	NN	_	10	agent	_	_
+14	.	_	.	.	_	10	punct	_	_","['det$@%the$@%bag', 'amod$@%brown$@%bag', 'nn$@%paper$@%bag', 'nsubjpass$@%bag$@%carry', 'dep$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%bag', 'x$@%brown$@%bag', 'x$@%paper$@%bag', 'x$@%bag$@%carry', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%brown$@%x', 'x$@%paper$@%x', 'x$@%bag$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.72299831571512485,0.50030147963388427,0.74088371811376019
+I06U-gNSC-p457-r1,The boy is carrying groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001006,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p457-r2,The boy has a very large bag of food. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	have	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	7	det	_	_
+5	very	_	RB	RB	_	6	advmod	_	_
+6	large	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	3	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	food	_	NN	NN	_	7	prep_of	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%bag', 'advmod$@%very$@%large', 'amod$@%large$@%bag', 'dobj$@%bag$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%have']","['x$@%the$@%boy', 'x$@%boy$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%bag', 'x$@%very$@%large', 'x$@%large$@%bag', 'x$@%bag$@%have', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%very$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.84968411827865475,0.86206144776600846,0.72895699363245514
+I06U-gNSC-p460-r1,The boy is carrying a large bag of groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	large	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%large$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%large$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.3167060932589929,0.3049427342910328,0.089283482853728113
+I06U-gNSC-p460-r2,The groceries are carried by the boy.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+3	be	_	VBP	VBP	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%grocery', 'nsubjpass$@%grocery$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.67883885881714168,0.21332148736689616,0.046248788210400127
+I06U-gNSC-p461-r1,The boy is carrying a bag of groceries,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.24873493686012016,0.23037373818241991,0.069684288324887711
+I06U-gNSC-p461-r2,The groceries are being carried by the boy ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	grocery	_	NNS	NNS	_	5	nsubjpass	_	_
+3	be	_	VBP	VBP	_	5	aux	_	_
+4	be	_	VBG	VBG	_	5	auxpass	_	_
+5	carry	_	VBN	VBN	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	5	agent	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%grocery', 'nsubjpass$@%grocery$@%carry', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.59059271228726218,0.264255310235468,0.046185232860584957
+I06U-gNSC-p462-r1,A boy is carrying a bag of groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.25807991385240348,0.2391231542078448,0.069693221201340028
+I06U-gNSC-p462-r2,A bag of groceries is being carried by a boy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	7	nsubjpass	_	_
+3	of	_	IN	IN	_	0	erased	_	_
+4	grocery	_	NNS	NNS	_	2	prep_of	_	_
+5	be	_	VBZ	VBZ	_	7	aux	_	_
+6	be	_	VBG	VBG	_	7	auxpass	_	_
+7	carry	_	VBN	VBN	_	0	root	_	_
+8	by	_	IN	IN	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	boy	_	NN	NN	_	7	agent	_	_
+11	.	_	.	.	_	7	punct	_	_","['det$@%a$@%bag', 'nsubjpass$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'aux$@%be$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%be$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.50904507858583714,0.26795083378188744,0.069677548262436773
+I06U-gNSC-p467-r1,A boy is helping his parent bring groceries in from the car.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	help	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	parent	_	NN	NN	_	7	nsubj	_	_
+7	bring	_	VB	VB	_	4	ccomp	_	_
+8	grocery	_	NNS	NNS	_	7	dobj	_	_
+9	in	_	IN	IN	_	7	prep	_	_
+10	from	_	IN	IN	_	9	pcomp	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	car	_	NN	NN	_	9	prep_from	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'poss$@%he$@%parent', 'nsubj$@%parent$@%bring', 'ccomp$@%bring$@%help', 'dobj$@%grocery$@%bring', 'prep$@%in$@%bring', 'pcomp$@%from$@%in', 'det$@%the$@%car', 'prep_from$@%car$@%in', 'punct$@%.$@%help']","['x$@%a$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%he$@%parent', 'x$@%parent$@%bring', 'x$@%bring$@%help', 'x$@%grocery$@%bring', 'x$@%in$@%bring', 'x$@%from$@%in', 'x$@%the$@%car', 'x$@%car$@%in', 'x$@%.$@%help']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%he$@%x', 'x$@%parent$@%x', 'x$@%bring$@%x', 'x$@%grocery$@%x', 'x$@%in$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%car$@%x', 'x$@%.$@%x']",0.91540377606763002,0.91352077813324661,0.24328383972885637
+I06U-gNSC-p467-r2,Helping someone with their groceries makes a boy happy.,0,0,1,0,1,"1	help	_	VBG	VBG	_	6	csubj	_	_
+2	someone	_	NN	NN	_	1	dobj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	they	_	PRP$	PRP$	_	5	poss	_	_
+5	grocery	_	NNS	NNS	_	1	prep_with	_	_
+6	make	_	VBZ	VBZ	_	0	root	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	9	nsubj	_	_
+9	happy	_	JJ	JJ	_	6	xcomp	_	_
+10	.	_	.	.	_	6	punct	_	_","['csubj$@%help$@%make', 'dobj$@%someone$@%help', 'erased$@%with$@%WORDERASED', 'poss$@%they$@%grocery', 'prep_with$@%grocery$@%help', 'root$@%make$@%VROOT', 'det$@%a$@%boy', 'nsubj$@%boy$@%happy', 'xcomp$@%happy$@%make', 'punct$@%.$@%make']","['x$@%help$@%make', 'x$@%someone$@%help', 'x$@%with$@%WORDERASED', 'x$@%they$@%grocery', 'x$@%grocery$@%help', 'x$@%make$@%VROOT', 'x$@%a$@%boy', 'x$@%boy$@%happy', 'x$@%happy$@%make', 'x$@%.$@%make']","['x$@%help$@%x', 'x$@%someone$@%x', 'x$@%with$@%x', 'x$@%they$@%x', 'x$@%grocery$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.94809368469034494,0.94942109314785172,0.23694899788979351
+I06U-gNSC-p469-r1,A boy carries a bag of groceries.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	grocery	_	NNS	NNS	_	5	prep_of	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.32796142458345001,0.29396292044290362,0.069815231726684135
+I06U-gNSC-p469-r2,The boy helps with carrying the groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	help	_	VBZ	VBZ	_	0	root	_	_
+4	with	_	IN	IN	_	0	erased	_	_
+5	carry	_	VBG	VBG	_	3	prepc_with	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	grocery	_	NNS	NNS	_	5	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'root$@%help$@%VROOT', 'erased$@%with$@%WORDERASED', 'prepc_with$@%carry$@%help', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%help$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%carry$@%help', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.64754840934367375,0.62259014313121641,0.063261850489546023
+I06U-gNSC-p472-r1,The small boy is carrying a large basket of groceries.,0,1,1,1,0,"1	the	_	DT	DT	_	3	det	_	_
+2	small	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	carry	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	large	_	JJ	JJ	_	8	amod	_	_
+8	basket	_	NN	NN	_	5	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	grocery	_	NNS	NNS	_	8	prep_of	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%small$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%basket', 'amod$@%large$@%basket', 'dobj$@%basket$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%basket', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%small$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%basket', 'x$@%large$@%basket', 'x$@%basket$@%carry', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%basket', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%small$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%basket$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.63153191932202934,0.64402340471823316,0.2878433164004266
+I06U-gNSC-p472-r2,"Accomplishment; helping someone move groceries, is worth the risk that he might drop the heavy load.",0,0,0,0,0,"1	accomplishment	_	NNP	NNP	_	9	nsubj	_	_
+2	;	_	:	:	_	1	punct	_	_
+3	help	_	VBG	VBG	_	6	amod	_	_
+4	someone	_	NN	NN	_	6	nn	_	_
+5	move	_	NN	NN	_	6	nn	_	_
+6	grocery	_	NNS	NNS	_	1	dep	_	_
+7	,	_	,	,	_	1	punct	_	_
+8	be	_	VBZ	VBZ	_	9	cop	_	_
+9	worth	_	JJ	JJ	_	0	root	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	risk	_	NN	NN	_	15	dep	_	_
+12	that	_	IN	IN	_	15	dep	_	_
+13	he	_	PRP	PRP	_	15	nsubj	_	_
+14	might	_	MD	MD	_	15	aux	_	_
+15	drop	_	VB	VB	_	9	ccomp	_	_
+16	the	_	DT	DT	_	18	det	_	_
+17	heavy	_	JJ	JJ	_	18	amod	_	_
+18	load	_	NN	NN	_	15	dobj	_	_
+19	.	_	.	.	_	9	punct	_	_","['nsubj$@%accomplishment$@%worth', 'punct$@%;$@%accomplishment', 'amod$@%help$@%grocery', 'nn$@%someone$@%grocery', 'nn$@%move$@%grocery', 'dep$@%grocery$@%accomplishment', 'punct$@%,$@%accomplishment', 'cop$@%be$@%worth', 'root$@%worth$@%VROOT', 'det$@%the$@%risk', 'dep$@%risk$@%drop', 'dep$@%that$@%drop', 'nsubj$@%he$@%drop', 'aux$@%might$@%drop', 'ccomp$@%drop$@%worth', 'det$@%the$@%load', 'amod$@%heavy$@%load', 'dobj$@%load$@%drop', 'punct$@%.$@%worth']","['x$@%accomplishment$@%worth', 'x$@%;$@%accomplishment', 'x$@%help$@%grocery', 'x$@%someone$@%grocery', 'x$@%move$@%grocery', 'x$@%grocery$@%accomplishment', 'x$@%,$@%accomplishment', 'x$@%be$@%worth', 'x$@%worth$@%VROOT', 'x$@%the$@%risk', 'x$@%risk$@%drop', 'x$@%that$@%drop', 'x$@%he$@%drop', 'x$@%might$@%drop', 'x$@%drop$@%worth', 'x$@%the$@%load', 'x$@%heavy$@%load', 'x$@%load$@%drop', 'x$@%.$@%worth']","['x$@%accomplishment$@%x', 'x$@%;$@%x', 'x$@%help$@%x', 'x$@%someone$@%x', 'x$@%move$@%x', 'x$@%grocery$@%x', 'x$@%,$@%x', 'x$@%be$@%x', 'x$@%worth$@%x', 'x$@%the$@%x', 'x$@%risk$@%x', 'x$@%that$@%x', 'x$@%he$@%x', 'x$@%might$@%x', 'x$@%drop$@%x', 'x$@%the$@%x', 'x$@%heavy$@%x', 'x$@%load$@%x', 'x$@%.$@%x']",1.0,0.99891527374349542,0.61289772449025004
+I06U-gNSC-p477-r1,The boy carries in the groceries. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	in	_	IN	IN	_	0	erased	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	grocery	_	NNS	NNS	_	3	prep_in	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%grocery', 'prep_in$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.51912157952875626,0.27039478893149582,0.046079190985925278
+I06U-gNSC-p477-r2,The groceries are carried by the boy. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	grocery	_	NNS	NNS	_	4	nsubjpass	_	_
+3	be	_	VBP	VBP	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%grocery', 'nsubjpass$@%grocery$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.67883885881714168,0.21332148736689616,0.046248788210400127
+I06U-gNSC-p479-r1,A boy is carrying groceries.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.20812069442168724,0.19592087965661364,0.046177472549517762
+I06U-gNSC-p479-r2,A boy is smiling.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	smile	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%smile', 'aux$@%be$@%smile', 'root$@%smile$@%VROOT', 'punct$@%.$@%smile']","['x$@%a$@%boy', 'x$@%boy$@%smile', 'x$@%be$@%smile', 'x$@%smile$@%VROOT', 'x$@%.$@%smile']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%smile$@%x', 'x$@%.$@%x']",0.9636334288101216,0.96613790876259065,0.85055424024145121
+I06U-gNSC-p482-r1,The boy is carrying groceries. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001017,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p482-r2,The boy is happy to help.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	help	_	VB	VB	_	4	xcomp	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'aux$@%to$@%help', 'xcomp$@%help$@%happy', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%to$@%help', 'x$@%help$@%happy', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%to$@%x', 'x$@%help$@%x', 'x$@%.$@%x']",0.92426060535373378,0.93171264017939892,0.85050301897570701
+I06U-gNSC-p483-r1,A boy carries groceries.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	grocery	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.28022409047785035,0.25729186350103417,0.046338500344693334
+I06U-gNSC-p483-r2,The boy is very excited about dinner.,0,0,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	very	_	RB	RB	_	5	advmod	_	_
+5	excite	_	JJ	JJ	_	0	root	_	_
+6	about	_	IN	IN	_	0	erased	_	_
+7	dinner	_	NN	NN	_	5	prep_about	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%excite', 'cop$@%be$@%excite', 'advmod$@%very$@%excite', 'root$@%excite$@%VROOT', 'erased$@%about$@%WORDERASED', 'prep_about$@%dinner$@%excite', 'punct$@%.$@%excite']","['x$@%the$@%boy', 'x$@%boy$@%excite', 'x$@%be$@%excite', 'x$@%very$@%excite', 'x$@%excite$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%dinner$@%excite', 'x$@%.$@%excite']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%very$@%x', 'x$@%excite$@%x', 'x$@%about$@%x', 'x$@%dinner$@%x', 'x$@%.$@%x']",0.93583595094863103,0.94233949238800818,0.90974560805438642
+I06U-gNSC-p484-r1,"A lad is transporting an unwieldy bag of groceries as best as he can manage, looking quite positive nevertheless.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	lad	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	transport	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	unwieldy	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	grocery	_	NNS	NNS	_	7	prep_of	_	_
+10	as	_	IN	IN	_	4	advmod	_	_
+11	best	_	JJS	JJS	_	10	dep	_	_
+12	as	_	IN	IN	_	15	mark	_	_
+13	he	_	PRP	PRP	_	15	nsubj	_	_
+14	can	_	MD	MD	_	15	aux	_	_
+15	manage	_	VB	VB	_	10	ccomp	_	_
+16	,	_	,	,	_	15	punct	_	_
+17	look	_	VBG	VBG	_	15	xcomp	_	_
+18	quite	_	RB	RB	_	19	advmod	_	_
+19	positive	_	JJ	JJ	_	17	acomp	_	_
+20	nevertheless	_	RB	RB	_	17	advmod	_	_
+21	.	_	.	.	_	4	punct	_	_","['det$@%a$@%lad', 'nsubj$@%lad$@%transport', 'aux$@%be$@%transport', 'root$@%transport$@%VROOT', 'det$@%a$@%bag', 'amod$@%unwieldy$@%bag', 'dobj$@%bag$@%transport', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'advmod$@%as$@%transport', 'dep$@%best$@%as', 'mark$@%as$@%manage', 'nsubj$@%he$@%manage', 'aux$@%can$@%manage', 'ccomp$@%manage$@%as', 'punct$@%,$@%manage', 'xcomp$@%look$@%manage', 'advmod$@%quite$@%positive', 'acomp$@%positive$@%look', 'advmod$@%nevertheless$@%look', 'punct$@%.$@%transport']","['x$@%a$@%lad', 'x$@%lad$@%transport', 'x$@%be$@%transport', 'x$@%transport$@%VROOT', 'x$@%a$@%bag', 'x$@%unwieldy$@%bag', 'x$@%bag$@%transport', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%as$@%transport', 'x$@%best$@%as', 'x$@%as$@%manage', 'x$@%he$@%manage', 'x$@%can$@%manage', 'x$@%manage$@%as', 'x$@%,$@%manage', 'x$@%look$@%manage', 'x$@%quite$@%positive', 'x$@%positive$@%look', 'x$@%nevertheless$@%look', 'x$@%.$@%transport']","['x$@%a$@%x', 'x$@%lad$@%x', 'x$@%be$@%x', 'x$@%transport$@%x', 'x$@%a$@%x', 'x$@%unwieldy$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%as$@%x', 'x$@%best$@%x', 'x$@%as$@%x', 'x$@%he$@%x', 'x$@%can$@%x', 'x$@%manage$@%x', 'x$@%,$@%x', 'x$@%look$@%x', 'x$@%quite$@%x', 'x$@%positive$@%x', 'x$@%nevertheless$@%x', 'x$@%.$@%x']",0.90107602633462414,0.89376381176300201,0.56867820333779229
+I06U-gNSC-p484-r2,The boy has received the bag of groceries from someone to bear it home-wards.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	have	_	VBZ	VBZ	_	4	aux	_	_
+4	receive	_	VBN	VBN	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	grocery	_	NNS	NNS	_	6	prep_of	_	_
+9	from	_	IN	IN	_	0	erased	_	_
+10	someone	_	NN	NN	_	8	prep_from	_	_
+11	to	_	TO	TO	_	12	aux	_	_
+12	bear	_	VB	VB	_	4	xcomp	_	_
+13	it	_	PRP	PRP	_	14	nsubj	_	_
+14	home-ward	_	JJ	JJ	_	12	xcomp	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%receive', 'aux$@%have$@%receive', 'root$@%receive$@%VROOT', 'det$@%the$@%bag', 'dobj$@%bag$@%receive', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'erased$@%from$@%WORDERASED', 'prep_from$@%someone$@%grocery', 'aux$@%to$@%bear', 'xcomp$@%bear$@%receive', 'nsubj$@%it$@%home-ward', 'xcomp$@%home-ward$@%bear', 'punct$@%.$@%receive']","['x$@%the$@%boy', 'x$@%boy$@%receive', 'x$@%have$@%receive', 'x$@%receive$@%VROOT', 'x$@%the$@%bag', 'x$@%bag$@%receive', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%from$@%WORDERASED', 'x$@%someone$@%grocery', 'x$@%to$@%bear', 'x$@%bear$@%receive', 'x$@%it$@%home-ward', 'x$@%home-ward$@%bear', 'x$@%.$@%receive']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%have$@%x', 'x$@%receive$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%from$@%x', 'x$@%someone$@%x', 'x$@%to$@%x', 'x$@%bear$@%x', 'x$@%it$@%x', 'x$@%home-ward$@%x', 'x$@%.$@%x']",0.86903065965255044,0.8584126025716885,0.41661544276395601
+I06U-gNSC-p485-r1,The boy carries the bag.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	carry	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%bag', 'dobj$@%bag$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%bag', 'x$@%bag$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.43096031814778712,0.41330254336999428,0.62033148464423382
+I06U-gNSC-p485-r2,The bag is carried by the boy.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bag	_	NN	NN	_	4	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	4	auxpass	_	_
+4	carry	_	VBN	VBN	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	agent	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bag', 'nsubjpass$@%bag$@%carry', 'auxpass$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%boy', 'agent$@%boy$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%bag', 'x$@%bag$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%bag$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.72355737095541661,0.34770445908741954,0.61889804686459549
+I06U-gNSC-p486-r1,The boy likes to carry groceries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	xsubj	_	_
+3	like	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	5	aux	_	_
+5	carry	_	VB	VB	_	3	xcomp	_	_
+6	grocery	_	NNS	NNS	_	5	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%carry', 'root$@%like$@%VROOT', 'aux$@%to$@%carry', 'xcomp$@%carry$@%like', 'dobj$@%grocery$@%carry', 'punct$@%.$@%like']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%like$@%VROOT', 'x$@%to$@%carry', 'x$@%carry$@%like', 'x$@%grocery$@%carry', 'x$@%.$@%like']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%like$@%x', 'x$@%to$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.7445618526264921,0.48649570759696192,0.052776016490832411
+I06U-gNSC-p486-r2,The boy is happy about the groceries inside the bag.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	grocery	_	NNS	NNS	_	4	prep_about	_	_
+8	inside	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	bag	_	NN	NN	_	7	prep_inside	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'erased$@%about$@%WORDERASED', 'det$@%the$@%grocery', 'prep_about$@%grocery$@%happy', 'erased$@%inside$@%WORDERASED', 'det$@%the$@%bag', 'prep_inside$@%bag$@%grocery', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%happy', 'x$@%inside$@%WORDERASED', 'x$@%the$@%bag', 'x$@%bag$@%grocery', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%inside$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.85854154166404117,0.85974929752651863,0.20369757187503656
+I06U-gNSC-p487-r1,a boy is holding,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'punct$@%.$@%hold']","['x$@%a$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%.$@%x']",0.94134683505970873,0.93895358315199251,0.78678448317825544
+I06U-gNSC-p487-r2,grocery bag,0,0,0,0,0,"1	grocery	_	NN	NN	_	0	root	_	_
+2	bag	_	NN	NN	_	1	dep	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%grocery$@%VROOT', 'dep$@%bag$@%grocery', 'punct$@%.$@%grocery']","['x$@%grocery$@%VROOT', 'x$@%bag$@%grocery', 'x$@%.$@%grocery']","['x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.931368276407881,0.9343342485577586,0.12782507908112695
+I06U-gNSC-p491-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001017,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p491-r2,The boy has a bag of fruit.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	have	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	bag	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	fruit	_	NN	NN	_	5	prep_of	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%have']","['x$@%the$@%boy', 'x$@%boy$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.83459057987599305,0.84805156344921384,0.72877767487044365
+I06U-gNSC-p493-r1,A boy is carrying a grocery bag,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	grocery	_	NN	NN	_	7	nn	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%carry', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%carry', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",0.35134361541997983,0.2398408211630414,0.069814615127596791
+I06U-gNSC-p493-r2,An excited you boy is helping with the groceries,0,1,0,0,1,"1	a	_	DT	DT	_	4	det	_	_
+2	excited	_	JJ	JJ	_	4	amod	_	_
+3	you	_	PRP	PRP	_	2	dep	_	_
+4	boy	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	help	_	VBG	VBG	_	0	root	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	grocery	_	NNS	NNS	_	6	prep_with	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%a$@%boy', 'amod$@%excited$@%boy', 'dep$@%you$@%excited', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%grocery', 'prep_with$@%grocery$@%help', 'punct$@%.$@%help']","['x$@%a$@%boy', 'x$@%excited$@%boy', 'x$@%you$@%excited', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%grocery', 'x$@%grocery$@%help', 'x$@%.$@%help']","['x$@%a$@%x', 'x$@%excited$@%x', 'x$@%you$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.84385552065631619,0.8537341014348947,0.33341862713530723
+I06U-gNSC-p494-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	grocery	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.19551291300001017,0.18371133827376773,0.046176913593391045
+I06U-gNSC-p494-r2,The grocery sack is full and looks heavy,0,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	grocery	_	NN	NN	_	3	nn	_	_
+3	sack	_	NN	NN	_	7	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	full	_	JJ	JJ	_	0	root	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	look	_	VBZ	VBZ	_	5	conj_and	_	_
+8	heavy	_	JJ	JJ	_	7	acomp	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%sack', 'nn$@%grocery$@%sack', 'nsubj$@%sack$@%look', 'cop$@%be$@%full', 'root$@%full$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%look$@%full', 'acomp$@%heavy$@%look', 'punct$@%.$@%full']","['x$@%the$@%sack', 'x$@%grocery$@%sack', 'x$@%sack$@%look', 'x$@%be$@%full', 'x$@%full$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%look$@%full', 'x$@%heavy$@%look', 'x$@%.$@%full']","['x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%sack$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%and$@%x', 'x$@%look$@%x', 'x$@%heavy$@%x', 'x$@%.$@%x']",0.99612007925426815,0.99367926336853307,0.4295948169851237

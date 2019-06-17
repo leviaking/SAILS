@@ -27,3 +27,27 @@ I'm not quite ready to implement LOO. These scripts simply compare dependencies 
 
 2018-08-14.
 I've almost finished OLDlk_tfidf.py. It's basically working, but I need to uncomment the remaining deptypes in a couple of places in the main program; relatedly, I need to fix it so that I'm not working with empty lists after I run through the first deptype (I think this has something to do with the csvreader and/or the way the loop is managed).
+
+2019-04-15.
+I'm trying to get my mojo back. First I need to nail down exactly where the data processing left off. I believe this is what remains, in broad strokes:
+* Leave One Out (LOO): Get average scores? See below.
+* To the existing GS files, add columns where we include a weight factor for the weight of each dependency (for each dependency, weight is 1/n, for n = total number of deps in response)
+* Repeat full process for non-GS response files
+* Modify pipeline to operate on csv
+
+It's been a while but it looks like LOO for the GS files has been executed -- each response has a vector similarity score (cosine).
+I think the question is-- what to do with those... I believe they should be averaged per file (test item), and probably per other settings *across* all test items; those settings would be depstring format: ldh, xdh, xdx; speakers: all_cns (all crowdsourced NS), all_fns (all familiar NS), all_ns; annotations: perfects, almosts, core_yes; response ordering: firsts, seconds.
+
+I need to examine the script score_GS_LOO_TC.py; this appears to be the beginnings of a script to perform the above paragraph, I think. If not, figure out what it is and what to do with it...
+
+
+2019-04-17.
+TODO: I believe I need to return to this script; investigate and implement as necessary:
+/Users/leviking/Documents/dissertation/SAILS/scripts/lk_tfidf_LOO_TC_weighted_GS.py
+
+For now:
+OK, I'm getting myself back on track re Spearman's correlation and how we want to use it.
+We want to rank responses by annotation: scores range 0-1, where each "1" annotation carries a 0.2 score.
+We want to rank responses by TC (tf-idf cosine).
+Then when we get Spearman scores, that score applies to a given Gold Standard. So Spearman is used to evaluate the GSs, not the responses. It gives us a measure of how well using TC on a GS can align with using our manual annotations (which one would not generally have "in the wild").
+

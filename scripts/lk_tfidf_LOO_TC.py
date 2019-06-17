@@ -38,6 +38,8 @@ def get_refdoc_names(somedir):
 	return docnames
 
 def get_word_list(somedoc, d):
+## Note that "words" here is really depstrings: 'nsubj$@%man$@%find', 'x$@%man$@%find', etc.
+## The corpus docs are already stored as such
 	wds = []
 	with open(mycorpusdir+d+'/'+somedoc) as currdoc:
 		for cline in currdoc:
@@ -48,10 +50,11 @@ def get_word_list(somedoc, d):
 	return wds
 
 def build_ref_wordlists():
+## Again, "words" here are depstrings
 	dtwordlists={}
 	dts=['ldh', 'xdh', 'xdx']
 	for dt in dts:
-		myrefdocs = get_refdoc_names(mycorpusdir+dt) ##this is the refernce corpus
+		myrefdocs = get_refdoc_names(mycorpusdir+dt) ##this is the reference corpus
 		docwordlists=[]
 		for refdoc in myrefdocs:
 			reftokens = get_word_list(refdoc, dt)
@@ -59,7 +62,7 @@ def build_ref_wordlists():
 		dtwordlists[dt]=docwordlists
 	return dtwordlists ##{'ldh': [[terms from doc 1], [terms from doc 2], etc.], 'xdh': [[terms], [terms]], etc.}
 
-def get_source_content(tdf):
+def get_source_content(tdf): ## tdf ~= test doc file; returns csv lines as lists
 	everything=[]
 	tdoc=open(sourcedir+tdf, 'rU')
 	tdocreader=csv.reader(tdoc, dialect=csv.excel)
@@ -69,37 +72,52 @@ def get_source_content(tdf):
 	tdoc.close()
 	return skipheader, everything
 
+##changed this slightly from the unweighted version of the script;
+## this does the LOO split -- 1 response from GS pool becomes test response, the rest are used as GS
+## Note, returned test item is one list of dependencies; returned GS is list of lists of dependencies
 def get_current_split(allinput, c):
 	cgsrows=[]
 	ctestrow=allinput[c]
-	front=allinput[:c]
-	back=allinput[int(c)+1:]
-	if front:
-		cgsrows.append(front)
-	else: pass
-	if back:
-		cgsrows.append(back)
-	else: pass
+	for r in allinput[:c]:
+		cgsrows.append(r)
+	for r in allinput[int(c)+1:]:
+		cgsrows.append(r)
+	# # print "\n\n\nctestrow:\n\n:"
+	# # print ctestrow
+	# # print "\n\n\ncgsrows:\n\n:"
+	# # print cgsrows
 	return ctestrow, cgsrows
 
-# def add_to_table(currdoc, tbl):
-# 	tbl.addDocument(currdoc, get_word_list(currdoc))
-# 	return tbl
+## uglyrow here is a csv row; it's a list, but some columns contain python lists STORED AS QUOTED STRINGS! e.g, the "trow" argument of get_test_tokens is an uglyrow. 
+def string_list_to_real_list(uglyrow, dtype):
+	pylist = uglyrow[depcols[dtype]]
+	pylist = pylist[1:-1] ## remove the list brackets; still a string
+	pylist = pylist.replace("$@%,$@%", "$@%COMMA$@%") ##temporarily replace real text commas so we can split on the list commas
+	pylist = pylist.split(",")
+	pylist = [t for t in pylist if t]
+	pylist = [t.replace("$@%COMMA$@%", "$@%,$@%") for t in pylist]
+	pylist = [t.strip() for t in pylist]
+	pylist = [t[1:-1] for t in pylist]
+	return pylist
 
+## This simply pulls a list of all depdency tokens from the test response (in the relevant deptype (ldh, xdh, xdx))
 def get_test_tokens(trow, dt):
-	tts = trow[depcols[dt]]
+	## trow type is list; looks like:
+	"""['I01T-gNSF-p142-r1', 'The boy is dancing.', '1', '1', '1', '1', '1', '1\tthe\t_\tDT\tDT\t_\t2\tdet\t_\t_\n2\tboy\t_\tNN\tNN\t_\t4\tnsubj\t_\t_\n3\tbe\t_\tVBZ\tVBZ\t_\t4\taux\t_\t_\n4\tdance\t_\tVBG\tVBG\t_\t0\troot\t_\t_\n5\t.\t_\t.\t.\t_\t4\tpunct\t_\t_', "['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']", "['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']", "['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"]"""
+	## So note how the fields of the CSV that contain the test tokens are stored as a string that looks like a python list -- ugh. The ugly processing here is to turn it into an actual list object...
+	tts = string_list_to_real_list(trow, dt)
+	# # print type(tts)
+	## tts is now a list object of ldh|xdh|xdx like this: ['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']
 	return tts
 
 def get_gs_tokens(gsrows, dty):
 	gsts=[]
-	for gr in gsrows:
-		#print 'gr: ', gr
-		for r in gr:
-			rtokens=r[depcols[dty]]
-			gsts+=rtokens
+	for gsrow in gsrows:
+		rtokens = string_list_to_real_list(gsrow,dty)
+		gsts+=rtokens ## flat list of all terms in gs responses
 	return gsts
 
-def get_term_tfidf_list(dtwl, tokenlist, d): ##returns a list, a la: [(<tfidf_score>, <term>), (0.00229568411387, 'nsubj$@%boy$@%play')]; ##this returned list represents terms that appear in the tokenlist and their tfidf scores based on the reference corpus ("doclist"). The tokenlist might be the GS, or it might be the test response; this will work on either.
+def get_term_tfidf_list(dtwl, tokenlist, d): ##dtwl=[[terms from doc 1], [terms from doc 2], etc.]; tokenlist=list of dependency tokens (from GS or from test response); d=deptype ('ldh', etc.) ##returns a list, a la: [(<tfidf_score>, <term>), (0.00229568411387, 'nsubj$@%boy$@%play')];
 	total_number_corpus_docs = len(dtwl)
 	tfidf_scores_and_terms_pairlist = []
 	typelist=[]
@@ -157,27 +175,19 @@ def write_output(rs, nm):
 	thisfile.close()
 
 def main():
-	dtwdict=build_ref_wordlists() ##{'ldh': [[terms from doc 1], [terms from doc 2], etc.], 'xdh': [[terms], [terms]], etc.}
-	header, allinput=get_source_content(testdocfn)
-	header=header+['ldh tfidf cosine', 'xdh tfidf cosine', 'xdx tfidf cosine']
+	dtwdict=build_ref_wordlists() ##This contains everything from the reference corpus. {'ldh': [[terms from doc 1], [terms from doc 2], etc.], 'xdh': [[terms], [terms]], etc.}
+	header, allinput=get_source_content(testdocfn) ## This is one CSV; header is row, allinput is list of rows
+	header=header+['ldh tfidf cosine', 'xdh tfidf cosine', 'xdx tfidf cosine'] ## We're adding these columns for scoring
 	ldh_scores=[]
 	xdh_scores=[]
 	xdx_scores=[]
 	ci=0 ##current index
 	while ci < len(allinput):
+		currtestrow, currgsrows=get_current_split(allinput, ci)
+		## currtestrow is list of strings; currgsrows is list of lists of strings
 		for deptype in ['ldh', 'xdh', 'xdx']:
-			# print deptype
-			# print '\n\n\n'
-			currtestrow, currgsrows=get_current_split(allinput, ci)
-			# print 'curr test row resp: '
-			# print currtestrow[1]
-			# print 'curr gs rows resps: '
-			# for cg in currgsrows:
-			# 	for c in cg:
-			# 		print c[1]
-			# 	print '\n'
-			dtw=dtwdict[deptype] ##[[terms from doc 1], [terms from doc 2], etc.]
-			mytesttokens = get_test_tokens(currtestrow, deptype)
+			dtw=dtwdict[deptype] ##[[terms from doc 1], [terms from doc 2], etc.] ##NOTE: len(dtw) is 483 in all cases (483 documents)
+			mytesttokens = get_test_tokens(currtestrow, deptype) ## mytesttokens is list of terms (depstrings) in test response
 			mygstokens = get_gs_tokens(currgsrows, deptype)
 			gs_tfidf_pairs = get_term_tfidf_list(dtw, mygstokens, deptype)
 			test_tfidf_pairs = get_term_tfidf_list(dtw, mytesttokens, deptype)
@@ -209,8 +219,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-##I want this to flow like this:
-#for item: ##this is handled in the bash shell, not in the python
-	#for row:
-		#for deptype:
 		

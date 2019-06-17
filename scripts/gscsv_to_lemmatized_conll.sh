@@ -131,6 +131,7 @@ for mycsv in ${allcsvs[@]}
 	##The two responses above get combined in the lemmatized output. This is a problem because I cannot then align the lemmatized output with the (correct) parsed output. I think I am now forced to somehow load the lemmatizer anew for each line so that it has no choice but to handle each line as a single sentence.	The following lines do this.
 	readarray respies < $mytext
 	tempcounter=1
+  ## as mentioned above, we load the lemmatizer anew for each response here; this is the only way to force the lemmatizer to interpret each line as its own utterance (and not combine lines containing sentence fragments)
 	for respy in "${respies[@]}"
 		do padded=$(printf %03d $tempcounter)
 		echo $respy > $textdir/lemmatizer_temp.txt
@@ -142,7 +143,7 @@ for mycsv in ${allcsvs[@]}
 		tempcounter=$((tempcounter + 1))
 		#do echo $respy
 		done
-	####back to normal below...
+	####back to normal below... i.e., we load the parser model only once for the whole list of responses
 	cd $parserdir
 	java -mx800m -cp "stanford-parser.jar:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -outputFormat "penn" -outputFormatOptions "CCPropagatedDependencies" $parserdir/grammar/englishPCFG.ser.gz $mytext > $penndir/$label.penn
 	java -mx800m -cp "$parserdir/stanford-parser.jar:" edu.stanford.nlp.trees.EnglishGrammaticalStructure -treeFile $penndir/$label.penn -conllx -CCprocessed > $lkconlldir/$label.LKconll
