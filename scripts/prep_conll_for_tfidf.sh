@@ -21,32 +21,32 @@
 
 scriptdir=$(pwd)
 cd ../
-goldrootdir=$(pwd)/gold_standards/
-depstringsdir=$goldrootdir/depstrings/
+myrootdir=$(pwd)/responses/
+depstringsdir=$myrootdir/depstrings/
 
 if [ ! -d "$depstringsdir" ]; then
 	# Control will enter here if $DIRECTORY doesn't exist.
 	mkdir $depstringsdir
 fi
 
-cd $goldrootdir
+cd $myrootdir
 
 rawcsvdir=$(pwd)/rawcsvs
 textdir=$(pwd)/txt
 lemmaxmldir=$(pwd)/lemmaxml
 penndir=$(pwd)/penn
 lkconlldir=$(pwd)/LKconll
-gslemcondir=$(pwd)/finalcsvs
+lemcondir=$(pwd)/finalcsvs
 #
 cd ../..
 parserdir=$(pwd)/SAILS_annex/stanford-parser-2012-01-06
 lemmatizerdir=$(pwd)/SAILS_annex/stanford-corenlp-full-2014-06-16
-cd $gslemcondir
-gslemcons=$(ls *.csv)
+cd $lemcondir
+lemcons=$(ls *.csv)
 cd $scriptdir
 
-for gslemcon in ${gslemcons[@]} ; do python prep_conll_for_tfidf.py $testdir/$gslemcon ; done
-#for gslemcon in ${gslemcons[@]} ; do echo $testdir/$gslemcon ; done
+for lemcon in ${lemcons[@]} ; do python prep_conll_for_tfidf.py $testdir/$lemcon ; done
+#for lemcon in ${lemcons[@]} ; do echo $testdir/$lemcon ; done
 
 #cd  $testdir
 #allexts=(dummy)

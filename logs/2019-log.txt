@@ -145,3 +145,77 @@ merge lemmatized sentence with dependency parse ( --> lemma_conll)
 OK, I now have script text_to_lemmatized_conll.sh
 While testing, I temporarily moved the responses folder to "responses-REAL-protected06-16"; I was testing the "responses" folder with only toy files. Now I have copied the responses back; I will start running the script again before I go to bed.
 
+2019/06/22. Saturday.
+I successfully ran the script on all the NNS responses. The directories are now back in order; the backup has been removed.
+
+Today I need to:
+For each item:
+	from lemma_conll file, add parse into the rawcsvs file --> result is "finalcsvs/*.csv"
+	DONE; used script add_parses_to_response_csv.py
+	from finalcsvs file, create *_depstrings.csv file, with these columns:
+		ResponseID	Response	Core	Answer	Gramm	Interp	Verif	parse	ldh	xdh	xdx
+	DONE; used script prep_conll_for_tfidf.sh ; each item now has a *_depstrings.csv file in responses/depstrings/
+
+
+Extend the depstrings.csv file with the TC scores from each gold standard+depstring format.
+	This should look similar to the GS LOO files.
+
+Future notes:
+Generating the above essentially means I'll have all the tf-idf scoring complete.
+Some of it will be held out as test data, but there's really no harm in generating all the scores up front (I don't have to examine it thoroughly). Beyond this, I believe the remaining work will entail writing a couple of python scripts to pull scores from these csvs and group them according to depstring format; intransitive / trans / ditrans; targeted / untargeted; 
+
+**TODO: For simplicity, let's combine the GS LOO_TC weighted and unweighted files -- we don't need two for each item.
+
+
+
+2019/10/26. Saturday.
+Back on the horse, ready to slay this beast once and for all.
+Here are the questions I need to answer from the data:
+("UNSUPERVISED" ~ annotation is not necessary for forming these GSs)
+1. [2 values] Targeted vs Untargeted; I DO NOT want to "cross-pollinate" these -- i.e., let's compare them directly, but I don't want to spend time examinaing how well Untargeted GS covers Targeted responses, etc.
+2. [3] dependency forms: ldh vs xdh vs xdx
+3. [2] Weighted dependencies vs Unweighted dependencies
+4. [3] Intransitive vs Transitive vs Ditransitive
+*5. [2] First responses only vs Firsts + Seconds (sampling/cross-validation to normalize for size?)
+*6. [2] Familar vs Crowdsourced (sampling/cross-validation to normalize for size)
+("SUPERVISED" ~ annotation is necessary for forming these GSs)
+*7. [3] Perfect (5/5) annotations vs Almosts (or ALL) vs CoreYes (sampling/cross-validation to normalize for size)
+
+Running the above in exhaustive combination would result in:
+2*3*2*3*2*3*2=432 experiments
+It would also result in data sparsity, so we want to avoid that.
+Instead, let's focus on only one variable at a time to find the optimal value for that variable.
+Given that this isn't a huge data set, I think I should use half the items as a dev set.
+I'll use the dev set to investigate the questions above.
+
+Let me expand on the above:
+1. Targeted vs Untargeted: How does this variable affect scoring? (i.e., Targeted items are scored more accurately)
+2. dependency forms: Which form is scored more accurately?
+3. Weighted dependencies vs unweighted: Does weighting deps improve scoring accuracy?
+4. Intransitive vs Transitive vs Ditransitive: Are sentence types easier/harder to score accurately?
+5. First responses vs Firsts + Seconds: Is it better to have, e.g., 100 respondents give one response or 50 respondents give 2 responses?
+6. Familiar vs Crowdsourced: Are familar responses better than crowdsourced responses? To what extent?
+7. Perfect vs CoreYes vs All: How well does each perform at scoring?
+
+## BEGIN: IGNORE ##
+I'm convinced now that we don't need to mess around with Spearman or Pearson or any complicated ranking/scoring methods like that.
+I think we can simply find the threshholds, apply them as a cut-off, and get precision, recall and f-scores. We definitely want to do this for CoreEvent, but we might also do this for Perfect and Almost responses.
+
+I need to email Markus:
+Hi Markus,
+
+I hope Fall is treating you well! I know this is out of the blue but I *am* trying to make progress on my dissertation.
+When we met in July, I had most of the GSs and responses scored for dependency tfidf and stashed such that the experiments would just be a matter of querying those scores in particular combinations. I got pretty stumped on how to evaluate the results -- we talked about Spearman, etc. I'm now convinced that's too complicated. I have leave-one-out (LOO) scores where each response in the GS is scored against the remainder of the GS (as a reminder, those are tf-idf cosine ("TC") scores; the response is converted to a vector of tf-idf scores for each dependency, the same is done for the GS as a whole, then we get the cosine of the two vectors). Instead of comparing TC score rankings with annotation based rankings to determine some kind of score, I think that for simplicity's sake, I want to establish a threshold from the LOO scores, then use that to determine a precision/recall/f-score, where I'd see how many "Core Event = yes" responses fall above or below the threshold. I think it would also be wise to get such a score for "perfect" responses (where all 5 feature annotations are "yes").
+
+I'm spending some time looking at LOO scores to establish thresholds today. I don't think we simply want to take the GS response with the worst TC score....
+## END: IGNORE
+
+2019/10/28. Monday.
+I've been thinking a lot about the above and how the scoring would happen. I don't think we can simply use precision/recall/f-scores.
+I'd been struggling with the idea of applying Spearman because I haven't had a plan for what the ideal ranking would be. The automatic ranking would be the TC score ranking, but the "oracle" ranking or GS ranking (not to be confused with the GS response sets) has been vague for a long time... I assumed it would use the annotations somehow, but I wasn't sure how. Now I've got it -- the GS ranking will be based on a weighted ranking of the feature annotations, with those weights derived empirically... The problem I had before was that it's just plain difficult to label a response as "good" or "bad" -- after all, that's how we ended up with the 5 features in the first place. But, it's much less difficult to read two responses and choose which is better (or decide they are equal)! If we make enough of these decisions, we can see the rate at which each annotation occurs with the best of the two responses. In practice, I think the judgements would have to be "A is better" "B is better" "Unsure/no difference". I think we have about 14,000 responses. If we have 10% of those paired up (so, 1,400 responses in 700 pairings) and we make decisions on all those, I think we'll have a good enough sample for deriving weights.
+So my immediate goal is to assemble such a sample of response pairings. We don't need to worry about separating dev set and test set here. We do want to ensure that for each pairing, the annotation vectors are NOT identical. If the annotation vectors ARE identical, we learn nothing from the decision. So, I need to write a python script that can read through each master anno file, pull out the lines that have responses (many are blank), and put together a list of pairings with non-identical annotations comprising 10% of the total number of responses.
+Hmm. I think we'd also prefer to maximize the variety of annotation vector pairings, if possible. I assume certain vectors are more common than others, and so certain pairings are probably also more common. But if we can still reach the desired sample size without running out of interesting vector pairings, we should do that.
+So, in practice, I think that for each csv, we'll want to put each response line into a dictionary where the keys are the unique vectors that occur among those responses. From there, let's use a randomizer to choose pairings based on annotation vectors. We can keep a master list of the annotations we've already made and skip over them if they come up again. If we run out of options we then back off to select them (no skip). When we get to 10%, we write them to a single output file and we move on to the next input file. Let's give each a pairing number, like I01T-01a vs I01T-01b, etc.
+Later we'll retool the feature annotation tool to read from the pairings file and create an identical output file with new columns for the pairing decisions. For now, this will be "Better, "Worse", "Same". (These will be used for deriving weights later, but I'm not sure if I'll need to consider some kind of normalization to account for the baseline frequency of each feature.... I think it will probably come out in the wash.)
+So right now, I'm going to find a previous script to copy over and repurpose for the pairing sampler script.
+

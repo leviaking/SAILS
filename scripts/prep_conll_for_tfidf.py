@@ -30,8 +30,8 @@ handle = sourcename.split('.')[0]
 #print handle
 rootdir=os.path.dirname(scriptdir)
 #print rootdir
-sourcedir=rootdir+'/gold_standards/finalcsvs'
-destdir=rootdir+'/gold_standards/depstrings'
+sourcedir=rootdir+'/responses/finalcsvs'
+destdir=rootdir+'/responses/depstrings'
 source=sourcedir+sourcename
 dest=destdir+handle+'_depstrings.csv'
 #print source
