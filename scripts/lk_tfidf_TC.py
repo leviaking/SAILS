@@ -29,7 +29,7 @@
 ##The output is a csv, where the first 11 columns are identical to the input csv, and the next three columns are the TC score for ldh, xdh and xdx depstrings. This file is the same filename as the input, with "depstrings.csv" replaced with "LOO_TC.csv"; the output file is stored in a sister folder to the input file folder, called "LOO_TC".
 ##
 ##USAGE:
-##python lk_tfidf_LOO_TC_weighted.py inputfile ###inputfile is e.g., "../gold_standards/depstrings/I01T_all_fns_depstrings.csv"
+##python lk_tfidf_TC.py inputfile ###inputfile is e.g., "../gold_standards/depstrings/I01T_all_fns_depstrings.csv"
 ##
 ##This script is intended to be run via the lk_tfidf_TC.sh shell, which will iterate through all files in the "depstrings" folder.
 ##### ABOVE: Not verified since updated (2019/06/22)
@@ -38,17 +38,26 @@ import sys, math, csv
 from os import walk
 from scipy.spatial.distance import cosine
 
-testdocfn = sys.argv[1]
+testdocfn = sys.argv[1]  ## e.g., I01T_NNS_depstrings.csv
 if '/' in testdocfn:
 	testdocfn=testdocfn.split('/')[-1]
-else:
-	pass
-gsdir=('/Users/leviking/Documents/dissertation/SAILS/gold_standards/')
-sourcedir=('/Users/leviking/Documents/dissertation/SAILS/gold_standards/depstrings/')
+
+itemnum = testdocfn.split("_")[0]
+# # gsdocfn = sys.argv[2]
+gsdocfn = testdocfn.split("_")[0]+"_all_ns_depstrings.csv"  ## e.g., I01T_all_ns_depstrings.csv 
+if '/' in gsdocfn:
+	gsdocfn=gsdocfn.split('/')[-1]
+gstag = gsdocfn.replace(itemnum, "")
+gstag = gstag.replace("_depstrings.csv", "")
+
+gsdir=('/Users/leviking/Documents/dissertation/SAILS/gold_standards/depstrings/')
+sourcedir=('/Users/leviking/Documents/dissertation/SAILS/responses/depstrings/')
 #mycorpusdir = sys.argv[2]
 mycorpusdir=('/Users/leviking/Documents/dissertation/SAILS_annex/brown/')
 outputdir=('/Users/leviking/Documents/dissertation/SAILS/responses/TC/')
 depcols={'ldh':8, 'xdh':9, 'xdx':10} ##the columns where each deptype is stored
+
+
 
 def get_refdoc_names(somedir): 
 	docnames = []
@@ -84,7 +93,7 @@ def build_ref_wordlists():
 
 def get_source_content(tdf): ## tdf ~= test doc file; returns csv lines as lists
 	everything=[]
-	tdoc=open(sourcedir+tdf, 'rU')
+	tdoc=open(tdf, 'rU')
 	tdocreader=csv.reader(tdoc, dialect=csv.excel)
 	skipheader=next(tdocreader, None)
 	for row in tdocreader:
@@ -235,8 +244,10 @@ def prep_all_gs_material():
 
 def main():
 	dtwdict=build_ref_wordlists() ##This contains everything from the reference corpus. {'ldh': [[terms from doc 1], [terms from doc 2], etc.], 'xdh': [[terms], [terms]], etc.}
-	header, all_test_rows=get_source_content(testdocfn) ## This is one CSV; header is row, all_test_rows is list of rows
-	header=header+['ldh TC weighted', 'xdh TC weighted', 'xdx TC weighted', 'ldh TC unweighted', 'xdh TC unweighted', 'xdx TC unweighted'] ## We're adding these columns for scoring
+	header, all_test_rows=get_source_content(sourcedir+testdocfn) ## This is one CSV; header is row, all_test_rows is list of rows
+	header=header+['ldh TC weighted', 'xdh TC weighted', 'xdx TC weighted', 'ldh TC unweighted', 'xdh TC unweighted', 'xdx TC unweighted'] #
+	dummy, currgsrows = get_source_content(gsdir+gsdocfn)
+	# We're adding these columns for scoring
 	ldh_w_scores=[]
 	xdh_w_scores=[]
 	xdx_w_scores=[]
@@ -252,29 +263,30 @@ def main():
 	for deptype in ['ldh', 'xdh', 'xdx']:
 		#### Below: universal / shared for weighted & unweighted ####
 		dtw=dtwdict[deptype] ##[[terms from doc 1], [terms from doc 2], etc.] ##NOTE: len(dtw) is 483 in all cases (483 documents)
-		mytesttokens = get_test_tokens(test_row, deptype) ## mytesttokens is list of terms (depstrings) in test response
 		mygstokens = get_gs_tokens(currgsrows, deptype) ## mygstokens is list of lists of depstrings
 		#### Above: universal / shared for weighted & unweighted ####
 		gs_w_tfidf_pairs = get_weighted_term_tfidf_list(dtw, mygstokens, deptype)
-		test_w_tfidf_pairs = get_weighted_term_tfidf_list(dtw, [mytesttokens], deptype) #### REVISIT this! ##hacky solution -- list containing only one sublist
-		terms_w_union_vector = get_union_vector(gs_w_tfidf_pairs, test_w_tfidf_pairs)
-		test_w_TC_score = get_TC_score(gs_w_tfidf_pairs, test_w_tfidf_pairs, terms_w_union_vector) ##the "TC" Tf-idf Cosine score, as described in King & Dickinson 2016. We get the union set of terms for the test response and the GS, sort it, then create a vector of the GS scores for each term in the sorted union list, and a vector for the test scores for each term in the sorted union list; we calculate the cosine distance between these two vectors and use this as the TC score for the response.
 		gs_uw_tfidf_pairs = get_unweighted_term_tfidf_list(dtw, mygstokens, deptype)
-		test_uw_tfidf_pairs = get_unweighted_term_tfidf_list(dtw, [mytesttokens], deptype) #### REVISIT this! ##hacky solution -- list containing only one sublist
-		terms_uw_union_vector = get_union_vector(gs_uw_tfidf_pairs, test_uw_tfidf_pairs)
-		test_uw_TC_score = get_TC_score(gs_uw_tfidf_pairs, test_uw_tfidf_pairs, terms_uw_union_vector)
-		if deptype=='ldh':
-			ldh_w_scores.append(test_w_TC_score)
-			ldh_uw_scores.append(test_uw_TC_score)
-		elif deptype=='xdh':
-			xdh_w_scores.append(test_w_TC_score)
-			xdh_uw_scores.append(test_uw_TC_score)
-		elif deptype=='xdx':
-			xdx_w_scores.append(test_w_TC_score)
-			xdx_uw_scores.append(test_uw_TC_score)
-		else:
-			pass
-		# # ci+=1
+		for test_row in all_test_rows:
+			mytesttokens = get_test_tokens(test_row, deptype) ## mytesttokens is list of terms (depstrings) in test response
+			test_w_tfidf_pairs = get_weighted_term_tfidf_list(dtw, [mytesttokens], deptype) #### REVISIT this! ##hacky solution -- list containing only one sublist
+			terms_w_union_vector = get_union_vector(gs_w_tfidf_pairs, test_w_tfidf_pairs)
+			test_w_TC_score = get_TC_score(gs_w_tfidf_pairs, test_w_tfidf_pairs, terms_w_union_vector) ##the "TC" Tf-idf Cosine score, as described in King & Dickinson 2016. We get the union set of terms for the test response and the GS, sort it, then create a vector of the GS scores for each term in the sorted union list, and a vector for the test scores for each term in the sorted union list; we calculate the cosine distance between these two vectors and use this as the TC score for the response.
+			test_uw_tfidf_pairs = get_unweighted_term_tfidf_list(dtw, [mytesttokens], deptype) #### REVISIT this! ##hacky solution -- list containing only one sublist
+			terms_uw_union_vector = get_union_vector(gs_uw_tfidf_pairs, test_uw_tfidf_pairs)
+			test_uw_TC_score = get_TC_score(gs_uw_tfidf_pairs, test_uw_tfidf_pairs, terms_uw_union_vector)
+			if deptype=='ldh':
+				ldh_w_scores.append(test_w_TC_score)
+				ldh_uw_scores.append(test_uw_TC_score)
+			elif deptype=='xdh':
+				xdh_w_scores.append(test_w_TC_score)
+				xdh_uw_scores.append(test_uw_TC_score)
+			elif deptype=='xdx':
+				xdx_w_scores.append(test_w_TC_score)
+				xdx_uw_scores.append(test_uw_TC_score)
+			else:
+				pass
+			# # ci+=1
 	ni=0
 	outputrows=[]
 	while ni<len(all_test_rows):
@@ -290,10 +302,8 @@ def main():
 		ni+=1
 	outputrows.insert(0, header)
 	outname=testdocfn[:-14] ##"I01T_all_cns_depstrings.csv" --> "I01T_all_cns_"
-	outname=outname+'LOO_TC-w.csv' ##--> "I01T_all_cns_LOO_TC-w.csv" ##for Leave-One-Out Tf-idf Cosine; "w" for weighted.
+	outname = outname+"vs"+gstag+"_TC_w.csv"
 	write_output(outputrows, outname)
 
 if __name__ == "__main__":
     main()
-
-		
