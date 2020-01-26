@@ -235,3 +235,30 @@ Today I'd like to see if I can run one experiment. I'm choosing weighted vs unwe
 Today we're implementing Spearman for the comparison of TC rankings using weighted and unweighted dependencies. We'll be comparing them against the gold standard ranking derived from the weighted annotations.
 
 
+2019/12/2. Monday.
+Chatted with Markus:
+* repeat weighted dependency experiment with smaller GS -- it may be that noise washes out at higher volumes but not with a smaller GS.
+* write up recent work before moving on
+
+
+2019/12/07. Sunday.
+OK, I've run the weighting dependency experiment again, this time using the "all_fns" GSs -- these are only ~30-40 responses each, vs ~140-150 responses in the "all_ns" GSs.
+
+One thing I'm unsure of... Spearman ranges from -1 to 1; most of my values are negative, but a handful are positive; when averaging these, should I take the simple sum or the sum of the absolute values? This makes a slight difference in which shows a stronger correlation -- weighted or unweighted dependencies.
+
+For all_ns GSs:
+Avg of sums:					w < uw (i.e., unweighted has a stronger correlation)
+Avg of abs val sums:	w > uw
+
+For all_fns GSs:
+Avg of sums:					w < uw
+Avg of abs val sums:	w < uw
+
+In all cases, the differences are very small, probably too small to worry about this variable going forward. In all cases, the p values are ranging from .0475 - .0541. 
+
+
+2020/01/25. Saturday.
+I'm preparing the data and interface for Annotator 2. I'm going to tweak the interface a little so it can write to a copy of the file already annotated by Annotator 1. A1 did 20 pairs per item; A2 will do a subset of those 20 -- 5 per item. The pairs are numbered like so:
+I01T-001-a / I01T-001-b. So right now I'm preparing a new input file containing only every 4th pair -- I01T-004-a/b, I01T-008-a/b, etc., which will give me 5 pairs per item.
+
+

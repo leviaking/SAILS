@@ -9,7 +9,7 @@ from shutil import copyfile
 
 ##GLOBAL STUFF
 # # inputfilename=sys.argv[1]
-inputfilename = '/Users/leviking/Documents/dissertation/SAILS/weighting/ab_test_pairs-for-A2.csv'
+inputfilename = '/Users/leviking/Documents/dissertation/SAILS/weighting_features/ab_test_pairs_for_A2.csv'
 # # INFA,INFB=inputfilename.split('-')
 # # INFNum=INFA[1:3]
 INFNum = '31'
@@ -44,18 +44,18 @@ RespStringList = get_responses_from_rows(response_rows)
 RespDenominator = len(RespStringList)/2  ## /2 to get number of pairs
 
 # # header = [INFItem, INFItem+'_'+INFFeat2]
-with open(inputfilename.split('.csv')[0]+'-TEMP.csv', 'w') as cfile:
+with open(inputfilename.split('.csv')[0]+'-TEMP-A2.csv', 'w') as cfile:
 	cwriter = csv.writer(cfile, dialect=csv.excel)
 	cwriter.writerow(header)
 
 def write_type_csv(resp, win, lose, tie):
 	row=[resp,win, lose, tie]
-	with open(inputfilename.split('.csv')[0]+'-TEMP.csv', 'a') as cfile:
+	with open(inputfilename.split('.csv')[0]+'-TEMP-A2.csv', 'a') as cfile:
 		cwriter = csv.writer(cfile, dialect=csv.excel)
 		cwriter.writerow(row)
 		
 def EndOfFile():
-	InputName = inputfilename.split('.csv')[0]+'-TEMP.csv'
+	InputName = inputfilename.split('.csv')[0]+'-TEMP-A2.csv'
 	FinishedName = 'anno'+InputName[4:]
 	try:
 		for fn in FeatNames:
@@ -64,21 +64,21 @@ def EndOfFile():
 			else: pass	
 	except:
 		copyfile(InputName, FinishedName)
-	os.remove(InputName)
+	# # os.remove(InputName)
 		
 def back_button_edit():
 	oldrows=[]
-	with open(inputfilename.split('.csv')[0]+'-TEMP.csv') as oldfile:
+	with open(inputfilename.split('.csv')[0]+'-TEMP-A2.csv') as oldfile:
 		oldreader = csv.reader(oldfile, dialect=csv.excel)
 		for orow in oldreader:
 			oldrows.append(orow)
 	oldrows=oldrows[:-1]
-	with open('TEMP_GO_BACK_anno_'+inputfilename, 'w') as newfile:
+	with open('TEMP-A2_GO_BACK_anno_'+inputfilename, 'w') as newfile:
 		newwriter = csv.writer(newfile, dialect=csv.excel)
 		for nrow in oldrows:
 			newwriter.writerow(nrow)
-	os.remove(inputfilename.split('.csv')[0]+'-TEMP.csv')
-	os.rename('TEMP_GO_BACK_anno_'+inputfilename, inputfilename.split('.csv')[0]+'-TEMP.csv')
+	os.remove(inputfilename.split('.csv')[0]+'-TEMP-A2.csv')
+	os.rename('TEMP-A2_GO_BACK_anno_'+inputfilename, inputfilename.split('.csv')[0]+'-TEMP-A2.csv')
 
 FeatDict = {
     'TU_Gramm': 'Which is the best response for this task?',
@@ -181,8 +181,8 @@ class App(Frame):
 
 		# # ## IMAGE DISPLAY
 		# if INFFeat not in CombinedFeats and INFFeat not in NoImgTargFeats and INFFeat not in NoImgUntargFeats:
-		# 	self.TempImage = ImageTk.PhotoImage(Image.open(self.imagepath))
-		# 	self.LeftImage = Label(self, image=self.TempImage)
+		# 	self.TEMP-A2Image = ImageTk.PhotoImage(Image.open(self.imagepath))
+		# 	self.LeftImage = Label(self, image=self.TEMP-A2Image)
 		# 	self.LeftImage.grid(row=1, column=0, sticky=EW)
 		# else: pass
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+## 2019/12/07. This is the same as weighting_dependencies_experiment.py, but this version uses the all_fns GSs for the analysis. (This is a one-time experiment and I don't want to spend the time factoring out the GS name as a variable.) The rationale here is this: using the full "all_ns" GS, we find a statistically insignificant difference for weighted (normalized) dependencies vs unweighted, but we'd like to see if perhaps the effect is more pronounced when a smaller GS is used. The all_ns GSs contain ~140-150 responses each, but the all_fns GSs contain ~30-40 each.
+
+
 import sys, math, csv
 from os import walk
 from scipy.stats import rankdata
@@ -14,7 +17,7 @@ def get_infile_names(somedir):
 	for (dirpath, dirnames, filenames) in walk(somedir):
 		docnames.extend(filenames)
 		break
-	docnames = [dn for dn in docnames if "NNS_vs_all_ns_TC_w" in dn]
+	docnames = [dn for dn in docnames if "NNS_vs_all_fns_TC_w" in dn]
 	docnames.sort()
 	return docnames
 

@@ -44,7 +44,7 @@ if '/' in testdocfn:
 
 itemnum = testdocfn.split("_")[0]
 # # gsdocfn = sys.argv[2]
-gsdocfn = testdocfn.split("_")[0]+"_all_ns_depstrings.csv"  ## e.g., I01T_all_ns_depstrings.csv 
+gsdocfn = testdocfn.split("_")[0]+"_all_fns_depstrings.csv"  ## e.g., I01T_all_ns_depstrings.csv 
 if '/' in gsdocfn:
 	gsdocfn=gsdocfn.split('/')[-1]
 gstag = gsdocfn.replace(itemnum, "")
