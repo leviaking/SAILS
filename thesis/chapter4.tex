@@ -138,7 +138,7 @@ The test set parallels the development set and consists of one intransitive, one
 \begin{center}
 \begin{tabular}{|l|l|l|l|l||l|l||l|}
 \hline
-Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Agree & Kappa \\
+Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observed & Kappa \\
 \hline
 \hline
 Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
@@ -164,7 +164,7 @@ Interpretability & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
 Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \hline
 \end{tabular}
-\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual raw agreement (\textit{Agree}) and Cohen's kappa (\textit{Kappa}).}
+\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observed}) and Cohen's kappa (\textit{Kappa}).}
 \end{center}
 \end{table*}
 
@@ -338,19 +338,38 @@ Clearly, weights must be assigned to each feature. One way to derive weights wou
 
 The full corpus consists of 13,533 responses across 60 items (30 images presented with two prompts each; see Chapter~\ref{sec:responses}). For the A/B test to determine feature weights, a sample of 1200 response pairs was used -- 20 response pairs per item. Among the response annotations  ([\feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, \feat{verifiability}]), some vectors are more common than others; \textit{perfect} annotations ([1, 1, 1, 1, 1]) and those with grammar problems only ([1, 1, 0, 1, 1]), for example, are frequent, while responses annotated positively only for \feat{interpretability} and \feat{verifiability} ([0, 0, 0, 1, 1]) are far less frequent. Thus, to maximize the informativeness of the A/B tests, for each item, no annotation vector was represented multiple times in the sample until every unique vector in the item responses was included once. Moreover, no A/B pair contained responses with identical vectors; we learn nothing by comparing two \textit{perfect} responses, for example.
 
-Annotator 1 (A1) performed the A/B test for all 1,200 of the sampled response pairs. Annotator 2 (A2) performed the A/B test for a subset of 300 response pairs, for the purpose of measuring inter-annotator agreement. These are the same annotators from the feature annotation task, discussed in Section~\ref{sec:agreement}. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included. 
+Annotator 1 (A1) performed the A/B test for all 1,200 of the sampled response pairs. Annotator 2 (A2) performed the A/B test for a subset of 300 response pairs, for the purpose of measuring inter-annotator agreement. These are the same annotators from the feature annotation task, discussed in Section~\ref{sec:agreement}. 
 
-NOTES below
+Annotators were given the following instructions for the A/B test:
 
-(Buttons, choosing response...)
+\begin{quote}
+You will be presented with picture description task items and pairs of sample responses. Your task is to decide which of the two responses in each pair is the best response for the accompanying image and question. For our purposes, a good response is relevant and reasonable given the prompt. While you should consider form, please prioritize communicativeness and content. Naturally, you may consider what you know about the previously annotated features, but do not overthink them. These features are not of equal importance. A quick decision based on your own experience and intuition about communication is the goal here. If you feel that the responses are equally appropriate to the task, or if you cannot decide which is better, you may choose the ``same/unsure'' option, but please do so sparingly.
+\end{quote}
 
-Instructions, rationale, how does knowledge of feature annotation influence this A/B task -- explain and justify.
+The task was conducted in an interface similar to that used for the feature annotation. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included, but given their familiarity with the feature annotation, the annotators could probably determine the value for each feature.  
 
-Agreement
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+ Chance & Observed & Kappa \\
+\hline
+0.621 & 0.883 & 0.692 \\
+\hline
+\end{tabular}
+\caption{\label{tab:ABAgreement} Chance agreement, observed agreement and Cohen's Kappa for response quality AB test.}
+\end{center}
+\end{table}
 
-Deriving the weights -- explain the math, discuss the results.
+Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:ABAgreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of 1,200 A/B decisions to derive the feature weights.
 
-NOTES above
+NOTES BELOW
+
+present feature weights in table
+
+brief discussion of feature weights and how they align with intuitions
+
+NOTES ABOVE
 
 
 \section{Annotation Conclusions}\lk{Possibly shorten here and move to Conclusions chapter}
