@@ -62,6 +62,21 @@ This is a relatively straightforward feature to annotate. For example, from Tabl
 
 \end{enumerate}
 
+\paragraph{Annotation process}
+The annotation was performed one feature at a time, so that annotators did not have to remember the criteria for multiple features while working through the responses. To facilitate this workflow, I created a simple interface that displays the PDT image and question, along with the current feature name and prompt for the annotator, shown in Figure~\ref{fig:annotation-interface}. The annotations are written out to a spreadsheet.
+
+
+\begin{figure}[htb!]
+%\begin{table}[t!] This line is giving me trouble when I go to typeset
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=0.85\columnwidth]{figures/annotation_interface.jpg} \\
+\end{tabular}
+\caption{\label{fig:annotation-interface} Interface used for feature annotations. Note that ``Not sure'' is not a final annotation value; it merely puts the response aside for a later decision.}
+\end{center}
+\end{figure}
+
+
 \paragraph{Example annotations}
 
 In Table~\ref{tab:dev-transitive}, we see example responses with all five features annotated, illustrating each feature's distinctiveness from the others.  For example, for \textit{He is eating food} one can generate a mental picture, e.g., of someone chewing (\feat{interpretability}=1), but the pizza is important to the item image (\feat{core event}=0).  As another example, \textit{He may get fat eating pizza} seems to be addressing a question about the consequences of the eating action rather than the actual prompt question (\feat{answerhood}=0). Moreover, the response talks about hypotheticals not in the picture (\feat{verifiability}=0).
@@ -276,7 +291,7 @@ Interp  & 0.764 & 0.881 & 0.638 & 0.789 & 0.910 & 0.936 &  0.752 & 0.697 \\
 Verif  & 0.807 & 0.882 & 0.687 & 0.791 & 0.970 & 0.962 & 0.904 & 0.819 \\
 \hline
 \end{tabular}
-\caption{\label{tab:NSvNNSagreement} Comparing feature annotation agreement scores for NSs and NNSs: average \textit{yes} annotations (\textit{Average Yes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance Agree}), actual observed agreement (\textit{Observed Agree}) and Cohen's kappa (\textit{Kappa}).}
+\caption{\label{tab:NSvNNSagreement} Comparing feature annotation agreement scores for NSs and NNSs: average \textit{yes} annotations (\textit{Average Yes}), total expected chance agreement (for \textit{yes}es and \textit{no}s) (\textit{Chance Agree}), actual observed agreement (\textit{Observed Agree}) and Cohen's kappa (\textit{Kappa}).}
 \end{center}
 \end{table}
 
@@ -288,7 +303,7 @@ The lower kappa score for NS \feat{answerhood} is also attributable to task effe
 
 The five annotation features were chosen for their relevance to the construct of response ``goodness'' for the picture description task (PDT). However, we cannot assume that these binary features bear equal weight in determining the quality of a response. Certainly \feat{core event} is more important than \feat{grammaticality}, for example. Thus the annotations alone cannot be used to assign scores to responses, a crucial necessity in order to rank responses and evaluate my approach to content analysis.
 
-Clearly, weights must be assigned to each feature. One way to derive weights would be to manually rank responses from best to worst, then use the distribution of annotations across this ranking to determine some coefficient that represents the importance (weight) of each feature in the rankings. \lk{probably hash this out more} For each task item, the corpus contains roughly 150 NS responses and 70 NNS responses, so producing a manual ranking of the full set of responses is highly impractical. Manually ranking even a subset of 10 or 20 responses is frustrating and unreliable. Ranking a single pair of responses is a much more practical task, so, I decided to have annotators perform an A/B test with pairs of responses. With enough of these A/B decisions,  it becomes possible to derive annotation weights.
+Clearly, weights must be assigned to each feature. One way to derive weights would be to manually rank responses from best to worst, then use the distribution of annotations across this ranking to determine some coefficient that represents the importance (weight) of each feature in the rankings. For each task item, the corpus contains roughly 150 NS responses and 70 NNS responses, so producing a manual ranking of the full set of responses is highly impractical. Manually ranking even a subset of 10 or 20 responses is frustrating and unreliable. Ranking a single pair of responses is a much more practical task, so, I decided to have annotators perform an A/B test with pairs of responses. With enough of these A/B decisions,  it becomes possible to derive annotation weights.
 
 The full corpus consists of 13,533 responses across 60 items (30 images presented with two prompts each; see Chapter~\ref{sec:responses}). For the A/B test to determine feature weights, a sample of 1200 response pairs was used -- 20 response pairs per item. Among the response annotations  ([\feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, \feat{verifiability}]), some vectors are more common than others; \textit{perfect} annotations ([1, 1, 1, 1, 1]) and those with grammar problems only ([1, 1, 0, 1, 1]), for example, are frequent, while responses annotated positively only for \feat{interpretability} and \feat{verifiability} ([0, 0, 0, 1, 1]) are far less frequent. Thus, to maximize the informativeness of the A/B tests, for each item, no annotation vector was represented multiple times in the sample until every unique vector in the item responses was included once. Moreover, no A/B pair contained responses with identical vectors; we learn nothing by comparing two \textit{perfect} responses, for example.
 
@@ -310,11 +325,9 @@ You will be presented with picture description task items and pairs of sample re
 \end{center}
 \end{figure}
 
-The annotation task interface (Figure~\ref{fig:ab-interface}) was similar to that used for the feature annotation. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included, but given their familiarity with the feature annotation, the annotators could probably determine the value for each feature.  
+The A/B task interface (Figure~\ref{fig:ab-interface}) was similar to that used for annotating the features. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included, but given their familiarity with the feature annotation, the annotators could probably determine the value for each feature.  
 
 Example response pairs and A/B decisions are shown in Table~\ref{tab:ab-example-pairs}. For the first pair, both annotators preferred \textit{The boy is carrying groceries} over \textit{The boy carries the bag}. While the annotation features were not directly used during the A/B task, we can infer here that the present progressive \textit{is carrying} is preferable to the simple present \textit{carries}, and indeed it more directly answers the question \textit{What is happening?} and thus better satisfies the \feat{answerhood} feature. The use of the more descriptive \textit{groceries} over \textit{bag} also likely contributes to the preference, and arguably this better satisfies the \feat{core event} feature.
-
-The disagreements shown in the table are representative of the majority of the 35/300 disagreements in the sample in that one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality). Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} (Example 2) seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in Example 3 involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., Response A is a sentence fragment). Moreover, \textit{is excited about} in Response A would likely not satisfy the \feat{core event} feature, while in Response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} based on the image.
 
 \begin{table}[htb!]
 \begin{center}
@@ -342,7 +355,9 @@ B: The boy is excited about his bag of groceries. & & & \\
 \end{center}
 \end{table}
 
-Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:ABAgreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of 1,200 A/B decisions to derive the feature weights.
+The disagreements shown in the table are representative of the majority of the 35/300 disagreements in the sample in that one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality). Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} (Example 2) seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in Example 3 involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., Response A is a sentence fragment and contains a bare noun). Moreover, \textit{is excited about} in Response A would likely not satisfy the \feat{core event} feature, while in Response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} because the image contains no car.
+
+Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:ABAgreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of Annotator 1's 1,200 A/B decisions to derive the feature weights.
 
 \begin{table}[htb!]
 \begin{center}
@@ -357,23 +372,38 @@ Agreement was calculated for the 300 response pairs judged by both annotators, p
 \end{center}
 \end{table}
 
+To calculate the weights, the total number of times a feature occurred with the dispreferred response in an A/B pair was subtracted from the total number of times that feature occurred with the preferred response to yield the net count for that feature. A/B pairs ruled textit{same} (no preference) were omitted. The net counts of all five features were summed. The net count for each feature is then divided by this total net sum to yield the weight---this represents the degree to which each feature contributes to a response's quality. The sum of the weights is 1.0. The counts and weights are shown in Table~\ref{tab:feature-weights}.
 
-NOTES BELOW
+\begin{table*}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+	& Core	& Answer & Grammar & Interpret & Verif & Total \\
+\hline
+\hline
+Tot. Pref. & 944 & 807 & 910 & 1021 & 1026 & 4708 \\
+\hline
+Tot. Dispref. & 367 & 660 & 822 & 667 & 611 & 3127 \\
+\hline
+Net Pref. & 577 & 147 & 88 & 354 & 415 & 1581 \\ 
+\hline
+Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
+\hline
+\end{tabular}
+\caption{\label{tab:feature-weights} Annotation counts and weights for each feature, based on a sample of 1,200 response pairs (of which 87 pairs were marked ``same'' and thus omitted). \textit{Tot. Pref.} \& \textit{Tot. Dispref.} are the number of times the feature occurred with the preferred or dispreferred response. Each weight is the feature's net preferred count divided by the total net preferred count (for all five features) of 1581.}
+\end{center}
+\end{table*}
 
-present feature weights in table
-
-brief discussion of feature weights and how they align with intuitions
-
-NOTES ABOVE
+The weights yielded from the A/B task are well aligned with my intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected. As this work is rooted in an ethos of steering ICALL toward content and communication over form, the 
+\lk{brief discussion of feature weights and how they align with intuitions}
 
 
-\section{Annotation Conclusions}\lk{Possibly shorten here and move to Conclusions chapter}
+\section{Annotation Conclusion}\lk{Possibly shorten here and move to Conclusion chapter}
 %\lk{Not sure what to call this section}
 %\md{It's solid - "Conclusion" strikes me as a little better than "Conclusions", though.}
 
 %\subsection{Annotator feedback}
 The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. I have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but I believe the annotations and raw responses could find uses in question answering, dialog systems, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. It could also be improved by adding participants from a wider variety of L1s. Guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}
-%\footnote{A non-anonymous github link will be included here in the final version.}
 
 %\smallskip
 A number of lessons have been learned in this process, and as I intend this work to be extendable, a few suggestions are in order. The inclusion of any symbols or numerals in items should be avoided as they resulted in response complications; some participants gave clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focused on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of crowdsourced NS data with the data of known NS participants and the NNS student data makes it clear that motivations and task environment can affect the quality of responses.
