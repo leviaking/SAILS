@@ -155,13 +155,13 @@ Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
 \hline
 Core Event & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
 \hline
-Verifiability & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
-\hline
 Answerhood & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+\hline
+Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \hline
 Interpretability & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
 \hline
-Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
+Verifiability & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
 \hline
 \end{tabular}
 \caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observed}) and Cohen's kappa (\textit{Kappa}).}
@@ -254,81 +254,35 @@ with twice as many responses to provide for each item for NSs, fatigue and bored
 %%intransitive is I30 (woman is running)
 %%transitive is I29 (woman is hugging dog)
 %%ditransitive is I28 (man is giving directions)
-%\begin{table*}[htb!]
-%\begin{center}
-%\begin{tabular}{|l||l|l||l|l||l|l||l|l||l|l|}
-%\hline
-% & \multicolumn{2}{|c||}{Total} & \multicolumn{2}{|c||}{AvgYes} & \multicolumn{2}{|c||}{Chance} & \multicolumn{2}{|c||}{Agree} & \multicolumn{2}{|c|}{Kappa} \\
-%\hline
-% Set & NS & NNS & NS & NNS & NS & NNS & NS & NNS & NS & NNS \\
-%\hline
-%\hline
-%Intrans & 1450 & 705 & 0.814 & 0.952 & 0.697 & 0.909 & 0.974 & 0.987 & 0.914 & 0.859 \\
-%\hline
-%Trans & 1450 & 705 & 0.768 & 0.796 & 0.643 & 0.675 & 0.949 & 0.949 & 0.857 & 0.843 \\ %%LK: Yes, 0.949 is correct in both cases here
-%\hline
-%Ditrans & 1450 & 705 & 0.794 & 0.808 & 0.672 & 0.689 & 0.922 & 0.928 & 0.762 & 0.767 \\ 
-%\hline
-%\hline
-%Target & 2340 & 1050 & 0.812 & 0.849 & 0.695 & 0.743 & 0.948 & 0.950 & 0.829 & 0.807 \\
-%\hline
-%Untarg & 2010 & 1065 & 0.768 & 0.855 & 0.643 & 0.753 & 0.949 & 0.959 & 0.856 & 0.833 \\
-%\hline
-%\hline
-%Core & 870 & 423 & 0.686 & 0.805 & 0.569 & 0.686 & 0.922 & 0.927 & 0.819 & 0.767 \\
-%\hline
-%Verif & 870 & 423 & 0.807 & 0.882 & 0.688 & 0.791 & 0.970 & 0.962 & 0.904 & 0.819 \\
-%\hline
-%Answer & 870 & 423 & 0.800 & 0.899 & 0.680 & 0.819 & 0.977 & 0.993 & 0.928 & 0.961 \\
-%\hline
-%Interp & 870 & 423 & 0.764 & 0.881 & 0.638 & 0.789 & 0.910 & 0.936 & 0.752 & 0.697 \\
-%\hline
-%Gramm & 870 & 423 & 0.902 & 0.793 & 0.823 & 0.671 & 0.962 & 0.955 & 0.786 & 0.863 \\
-%\hline
-%\end{tabular}
-%\caption{\label{tab:NSvNNSagreement} Comparing agreement for NS and NNS responses, with agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual raw agreement (\textit{Agree}) and Cohen's kappa (\textit{Kappa}).}
-%\end{center}
-%\end{table*}
+
+%%Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observed & Kappa \\
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\begin{tabular}{|l||l|l||l|l||l|l||l|l|}
 \hline
- & \multicolumn{2}{|c||}{AvgYes} & \multicolumn{2}{|c|}{Kappa} \\
+ & \multicolumn{2}{|c||}{Average Yes} & \multicolumn{2}{|c||}{Chance Agree} & \multicolumn{2}{|c||}{Observed Agree} & \multicolumn{2}{|c|}{Kappa} \\
 \hline
- Set & NS & NNS & NS & NNS \\
+ Set & NS & NNS & NS & NNS & NS & NNS & NS & NNS \\
 \hline
 \hline
-%Intrans  & 0.814 & 0.952 & 0.914 & 0.859 \\
-%\hline
-%Trans  & 0.768 & 0.796 & 0.857 & 0.843 \\ %%LK: Yes, 0.949 is correct in both cases here
-%\hline
-%Ditrans  & 0.794 & 0.808 & 0.762 & 0.767 \\ 
-%\hline
-%\hline
-%Target  & 0.812 & 0.849 & 0.829 & 0.807 \\
-%\hline
-%Untarg  & 0.768 & 0.855 & 0.856 & 0.833 \\
-%\hline
-%\hline
-Core  & 0.686 & 0.805 & 0.819 & 0.767 \\
+Core  & 0.686 & 0.805 & 0.569 & 0.686 & 0.922 & 0.927 & 0.819 & 0.767 \\
 \hline
-Verif  & 0.807 & 0.882 & 0.904 & 0.819 \\
+Answer  & 0.800 & 0.899 & 0.680 & 0.819 & 0.977 & 0.993 & 0.928 & 0.961 \\
 \hline
-Answer  & 0.800 & 0.899 & 0.928 & 0.961 \\
+Gramm  & 0.902 & 0.793 & 0.823 & 0.671 & 0.962 & 0.955 & 0.786 & 0.863 \\
 \hline
-Interp  & 0.764 & 0.881 & 0.752 & 0.697 \\
+Interp  & 0.764 & 0.881 & 0.638 & 0.789 & 0.910 & 0.936 &  0.752 & 0.697 \\
 \hline
-Gramm  & 0.902 & 0.793 & 0.786 & 0.863 \\
+Verif  & 0.807 & 0.882 & 0.687 & 0.791 & 0.970 & 0.962 & 0.904 & 0.819 \\
 \hline
 \end{tabular}
-\caption{\label{tab:NSvNNSagreement} NS and NNS test set responses: average \textit{yes} annotations (\textit{AvgYes}) and Cohen's kappa (\textit{Kappa}).}
+\caption{\label{tab:NSvNNSagreement} Comparing feature annotation agreement scores for NSs and NNSs: average \textit{yes} annotations (\textit{Average Yes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance Agree}), actual observed agreement (\textit{Observed Agree}) and Cohen's kappa (\textit{Kappa}).}
 \end{center}
 \end{table}
 
+Turning to the question of annotation quality, raw agreement scores are high among both groups, ranging from 91\% to 99.3\%. Notably, for \feat{core event},  \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS ones; i.e., annotators agree more on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form correctness.
 
-Turning to the question of annotation quality, raw agreement scores are high among both groups, ranging from 91\% to 99.3\% (not shown)\lk{add raw agreement?}. Notably, for \feat{core event},  \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS ones; i.e., annotators agree more on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form correctness.
-
-The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, annotators note that many grammar problems with NNS responses are obvious (e.g., \textit{The \textbf{man who in yellow} is showing the way to a girl}, see Table~\ref{tab:test-sample-items}), but the few grammar problems in NS data are mostly typos and more easily overlooked due to fatigue (e.g., \textit{The man is giving \textbf{ditections}}).
+The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, annotators note that many grammar problems with NNS responses are obvious (e.g., \textit{The \textbf{man who in yellow} is showing the way to a girl}, see Table~\ref{tab:test-sample-items}), but the few grammar problems in NS data are mostly typos and more easily overlooked (e.g., \textit{The man is giving \textbf{ditections}}).
 
 \section{Establishing Feature Weights}
 
@@ -346,22 +300,63 @@ Annotators were given the following instructions for the A/B test:
 You will be presented with picture description task items and pairs of sample responses. Your task is to decide which of the two responses in each pair is the best response for the accompanying image and question. For our purposes, a good response is relevant and reasonable given the prompt. While you should consider form, please prioritize communicativeness and content. Naturally, you may consider what you know about the previously annotated features, but do not overthink them. These features are not of equal importance. A quick decision based on your own experience and intuition about communication is the goal here. If you feel that the responses are equally appropriate to the task, or if you cannot decide which is better, you may choose the ``same/unsure'' option, but please do so sparingly.
 \end{quote}
 
-The task was conducted in an interface similar to that used for the feature annotation. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included, but given their familiarity with the feature annotation, the annotators could probably determine the value for each feature.  
+\begin{figure}[htb!]
+%\begin{table}[t!] This line is giving me trouble when I go to typeset
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=0.85\columnwidth]{figures/ab_interface.jpg} \\
+\end{tabular}
+\caption{\label{fig:ab-interface} Annotation interface used for the A/B response quality task.}
+\end{center}
+\end{figure}
+
+The annotation task interface (Figure~\ref{fig:ab-interface}) was similar to that used for the feature annotation. For each A/B decision, a pair of responses along with the item image and question were presented to the annotator. The annotations for the responses were not included, but given their familiarity with the feature annotation, the annotators could probably determine the value for each feature.  
+
+Example response pairs and A/B decisions are shown in Table~\ref{tab:ab-example-pairs}. For the first pair, both annotators preferred \textit{The boy is carrying groceries} over \textit{The boy carries the bag}. While the annotation features were not directly used during the A/B task, we can infer here that the present progressive \textit{is carrying} is preferable to the simple present \textit{carries}, and indeed it more directly answers the question \textit{What is happening?} and thus better satisfies the \feat{answerhood} feature. The use of the more descriptive \textit{groceries} over \textit{bag} also likely contributes to the preference, and arguably this better satisfies the \feat{core event} feature.
+
+The disagreements shown in the table are representative of the majority of the 35/300 disagreements in the sample in that one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality). Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} (Example 2) seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in Example 3 involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., Response A is a sentence fragment). Moreover, \textit{is excited about} in Response A would likely not satisfy the \feat{core event} feature, while in Response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} based on the image.
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+ Response & A1 & A2 & Agree \\
+\hline
+\hline
+A: The boy carries the bag. & \multirow{2}{*}{B} & \multirow{2}{*}{B} & \multirow{2}{*}{yes} \\
+\cline{1-1}
+B: The boy is carrying groceries. & & & \\
+\hline
+\hline
+A: The boy is holding a box of fruits. & \multirow{2}{*}{B} & \multirow{2}{*}{Same} & \multirow{2}{*}{no} \\
+\cline{1-1}
+B: A boy carries a bag. & & & \\
+\hline
+\hline
+A: Little boy Towing the grocery to the car & \multirow{2}{*}{A} & \multirow{2}{*}{B} & \multirow{2}{*}{no} \\
+\cline{1-1}
+B: The boy is excited about his bag of groceries. & & & \\
+\hline
+\end{tabular}
+\caption{\label{tab:ab-example-pairs} A/B response quality task sample responses pairs, annotator decisions (\textit{A1} \& \textit{A2}) and agreement for the item shown in Figure~\ref{fig:ab-interface}.}
+\end{center}
+\end{table}
+
+Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:ABAgreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of 1,200 A/B decisions to derive the feature weights.
 
 \begin{table}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
- Chance & Observed & Kappa \\
+ Chance Agree & Observed Agree & Kappa \\
 \hline
-0.621 & 0.883 & 0.692 \\
+0.621 & 0.883 (265/300) & 0.692 \\
 \hline
 \end{tabular}
-\caption{\label{tab:ABAgreement} Chance agreement, observed agreement and Cohen's Kappa for response quality AB test.}
+\caption{\label{tab:ABAgreement} Response quality A/B task agreement scores for two annotators on a sample of 300 responses pairs; chance agreement, observed agreement and Cohen's Kappa.}
 \end{center}
 \end{table}
 
-Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:ABAgreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of 1,200 A/B decisions to derive the feature weights.
 
 NOTES BELOW
 
