@@ -1,2 +1,49 @@
-\chapter{Results}
-This chapter is all about the results of the experiments, with some statistical discussion, etc.
+\chapter{Experiments}
+This chapter is all about the experiments and results, with some statistical discussion, etc.
+
+\section{Normalizing for response length}
+\label{section:experiment-normalizing-length}
+
+Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among high quality responses, the length of the response can vary considerably; some valid responses contain only one or two words, while the longest top out at around 20 words. However, because the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, a longer response has the potential to have a greater influence on the XGS.
+
+To account for this and examine whether or not it poses a problem, I conducted an experiment in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response.
+
+\subsection{Results}
+\label{subsection:normalizing-length-results}
+(\textbf{Spoiler:} this was abandoned because the difference is negligible. I have results from a large XGS and a small XGS...)
+
+\section{Dependency formats}
+\label{section:experiment-dependency-formats}
+Here we compare ldh, xdh, xdx.
+\subsection{Results}
+\label{subsection:dependency-formats-results}
+
+\section{Targeted vs Untargeted}
+\label{section:experiment-targeted}
+Here we compare the performance of my ranking system when applied to targeted vs untargeted data.
+\subsection{Results}
+\label{subsection:targeted-results}
+
+\section{Intransitive vs Transitive vs Ditransitive}
+\label{section:experiment-transitive}
+Here we compare the performance of my ranking system when applied to items that are (predominantly): intransitive, transitive, ditransitive.
+\subsection{Results}
+\label{subsection:transitive-results}
+
+\section{Familiar vs Crowdsourced response XGS}
+\label{section:experiment-crowdsource}
+Here we compare how well the system works when using different sources of NSs. (Crowdsourced informants drastically outnumbered Familiar, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Results}
+\label{subsection:crowdsource-results}
+
+\section{First responses XGS vs First and second responses XGS}
+\label{section:experiment-first-responses}
+Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses. (The latter is nearly double the former, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Results}
+\label{subsection:first-responses-results}
+
+\section{XGS filtered by annotation}
+\label{section:experiment-filtered}
+Here we examine how performance changes when we filter the XGS to include only ``perfect'' annotation responses or ``core event = yes'' responses. (Response counts will vary depending on exactly how I do this, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Results}
+\label{subsection:filtered-results}

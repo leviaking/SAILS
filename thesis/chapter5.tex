@@ -1,2 +1,18 @@
 \chapter{Method}
-This chapter is all about the method I use for processing the data.
+Describe process:
+
+dependency parsing gigacorpus to ldh, xdh, xdx formats;
+
+(gigacorpus info -- did I use full corpus or sample? check)
+
+same for PDT responses;
+
+dependency-based tf-idf for responses vs. gigacorpus;
+
+get sorted superset of XGS \& response terms and their tf-idf scores;
+
+get cosine of these vectors (``TC'' for tf-idf cosine; discuss how this compares to recent encoder based approaches (BERT), as this essentially is a primitive, more transparent encoder);
+
+rank responses by TC;
+
+get spearman of XGS \& TC based ranking vs ranking via the weighted feature annotations.
