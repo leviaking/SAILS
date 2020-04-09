@@ -1,12 +1,48 @@
 \chapter{Experiments}
-This chapter is all about the experiments and results, with some statistical discussion, etc.
+This chapter will discuss experiments in tuning the TC encoder pipeline.
 
 \section{Normalizing for response length}
 \label{section:experiment-normalizing-length}
 
-Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among high quality responses, the length of the response can vary considerably; some valid responses contain only one or two words, while the longest top out at around 20 words. However, because the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, a longer response has the potential to have a greater influence on the XGS.
+Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among high quality responses, the length of the response can vary considerably; some valid responses contain only one or two words, while the longest top out at around 20 words. However, because the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, longer responses can carry a greater weight in the GS. This has the potential to introduce noise. Table~\ref{tab:normalize-responses-ex} illustrates this. These responses are both included in a GS consisting of NS responses with ``perfect'' feature annotations. The first response contributes four dependencies to the GS, each of which is necessary to fulfill the feature annotations and contributes meaningfully to the GS. The second response, however, contributes 11 dependencies. The majority of these, like (adjectival modifier, \textit{gray} (dependent), \textit{pants} (head)) add non-critical detail.
 
-To account for this and examine whether or not it poses a problem, I conducted an experiment in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response.
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+ Response & Dependencies \\
+\hline
+A boy is dancing & 4 \\
+\hline
+A boy in a blue shirt and gray pants is dancing & 11 \\
+\hline
+\end{tabular}
+\caption{\label{tab:normalize-responses-ex} Example responses and dependency counts. Both responses have ``perfect'' annotations and are included in the various XGSs.}
+\end{center}
+\end{table}
+
+To account for this and examine whether or not it poses a problem, I conducted an experiment in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response. The responses were then ranked by these scores, and Spearman's rank correlation coefficient (``Spearman'') was used to compare the ranking against the ``true'' GS (TGS), which is the result of ranking the responses using the weighted annotations. This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized was compared.
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+ Data & Normalized & Non-normalized \\
+\hline
+ldh & -0.474 & -0.477 \\
+\hline
+xdh & -0.476 & -0.478 \\
+\hline
+xdx & -0.441 & -0.438 \\
+\hline
+Avg & -0.463 & -0.465 \\
+\hline
+\end{tabular}
+\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient for normalized and non-normalized dependency weights. The p-values for all cases range between 0.037 and 0.067.}
+\end{center}
+\end{table}
+
+The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}. On average, Spearman shows a slightly weaker correlation between the normalized rankings and the TGS rankings, so normalization is not pursued further.
 
 \subsection{Results}
 \label{subsection:normalizing-length-results}

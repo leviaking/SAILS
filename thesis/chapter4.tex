@@ -354,6 +354,7 @@ B: The boy is excited about his bag of groceries. & & & \\
 \caption{\label{tab:ab-example-pairs} A/B response quality task sample responses pairs, annotator decisions (\textit{A1} \& \textit{A2}) and agreement for the item shown in Figure~\ref{fig:ab-interface}.}
 \end{center}
 \end{table}
+\lk{add annotation vectors to table}
 
 The disagreements shown in the table are representative of the majority of the 35/300 disagreements in the sample in that one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality). Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} (Example 2) seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in Example 3 involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., Response A is a sentence fragment and contains a bare noun). Moreover, \textit{is excited about} in Response A would likely not satisfy the \feat{core event} feature, while in Response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} because the image contains no car.
 
@@ -372,7 +373,7 @@ Agreement was calculated for the 300 response pairs judged by both annotators, p
 \end{center}
 \end{table}
 
-To calculate the weights, the total number of times a feature occurred with the dispreferred response in an A/B pair was subtracted from the total number of times that feature occurred with the preferred response to yield the net count for that feature. A/B pairs ruled textit{same} (no preference) were omitted. The net counts of all five features were summed. The net count for each feature is then divided by this total net sum to yield the weight---this represents the degree to which each feature contributes to a response's quality. The sum of the weights is 1.0. The counts and weights are shown in Table~\ref{tab:feature-weights}.
+To calculate the weights, the total number of times a feature occurred with the dispreferred response in an A/B pair was subtracted from the total number of times that feature occurred with the preferred response to yield the net count for that feature. A/B pairs ruled \textit{same} (no preference) were omitted. The net counts of all five features were summed. The net count for each feature is then divided by this total net sum to yield the weight---this represents the degree to which each feature contributes to a response's quality. The sum of the weights is 1.0. The counts and weights are shown in Table~\ref{tab:feature-weights}.
 
 \begin{table*}[htb!]
 \begin{center}
@@ -394,7 +395,7 @@ Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \end{center}
 \end{table*}
 
-The weights yielded from the A/B task are well aligned with my intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected. As this work is rooted in an ethos of steering ICALL toward content and communication over form, the 
+The weights yielded from the A/B task are well aligned with my intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected. As this work is rooted in an ethos of steering ICALL toward content and communication over form, the \lk{HUH?} \lk{refer back to the AB task instructions}
 
 \section{Annotation Conclusion}
 %\lk{Not sure what to call this section}
