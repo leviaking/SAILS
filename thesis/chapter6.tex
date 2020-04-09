@@ -21,28 +21,31 @@ A boy in a blue shirt and gray pants is dancing & 11 \\
 \end{center}
 \end{table}
 
-To account for this and examine whether or not it poses a problem, I conducted an experiment in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response. The responses were then ranked by these scores, and Spearman's rank correlation coefficient (``Spearman'') was used to compare the ranking against the ``true'' GS (TGS), which is the result of ranking the responses using the weighted annotations. This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized was compared.
+To account for this and examine whether or not it poses a problem, I conducted experiments in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response. The responses were then ranked by these scores, and Spearman's rank correlation coefficient (``Spearman'') was used to compare the ranking against the ``true'' GS (TGS), which is the result of ranking the responses using the weighted annotations. This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. \lk{Get avg \# responses for All NS vs Familiar NS} This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l||l|l||l|l|}
 \hline
- Data & Normalized & Non-normalized \\
+ & \multicolumn{2}{|c||}{\textit{All NS GS}} & \multicolumn{2}{|c|}{\textit{Familiar NS GS}} \\
 \hline
-ldh & -0.474 & -0.477 \\
+ Dep & Norm & Non-norm & Norm & Non-norm \\
 \hline
-xdh & -0.476 & -0.478 \\
 \hline
-xdx & -0.441 & -0.438 \\
+ldh & -0.474 & \textbf{-0.477} & -0.462 & \textbf{-0.471} \\
 \hline
-Avg & -0.463 & -0.465 \\
+xdh & -0.476 & \textbf{-0.478} & -0.470 & \textbf{-0.474} \\
+\hline
+xdx & \textbf{-0.441} & -0.438 & -0.428 & \textbf{-0.431} \\
+\hline
+Avg & -0.463 & \textbf{-0.465} & -0.454 & \textbf{-0.458} \\
 \hline
 \end{tabular}
-\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient for normalized and non-normalized dependency weights. The p-values for all cases range between 0.037 and 0.067.}
+\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient using gold standards (GSs) that are normalized for length (number of dependencies) and GSs that are non-normalized. This was conducted for various dependency representations: \textit{label, dependent, head (ldh)}; \textit{dependent, head} (xdh); \textit{dependent} only (xdx). The p-values are not indicated but range between 0.034 and 0.068 for all cases, indicating that the correlations are very unlikely to be coincidental.}
 \end{center}
 \end{table}
 
-The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}. On average, Spearman shows a slightly weaker correlation between the normalized rankings and the TGS rankings, so normalization is not pursued further.
+The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}. The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized GS. Because the non-normalized GSs outperform their normalized counterparts, and because normalization adds complexity to the process, this step was not used in the remaining optimization experiments.
 
 \subsection{Results}
 \label{subsection:normalizing-length-results}
