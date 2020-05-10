@@ -5,7 +5,7 @@ This chapter will discuss experiments in tuning the TC encoder pipeline.
 \section{Normalizing for response length}
 \label{section:experiment-normalizing-length}
 
-Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among native speaker (NS) data, response lengths can vary; some valid responses contain only one or two words, while the longest top out at around 15 words. These longer, well-formed responses are relatively uncommon, but understanding their impact on an XGS is an important step in optimizing the rating process. So far, the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, meaning longer responses can carry a greater weight in the GS. This has the potential to introduce noise. Table~\ref{tab:normalize-responses-deps} illustrates this. These responses are both included in a toy XGS consisting of NS responses with ``perfect'' feature annotations. The first response contributes four dependencies to the GS, each of which is necessary to fulfill the feature annotations and contributes meaningfully to the GS. The second response, however, contributes 10 dependencies, some of which, like \textit{amod(purple, dress)}, add non-critical detail.
+Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among native speaker (NS) data, response lengths can vary; some valid responses contain only one or two words, while the longest top out at around 15 words. These longer, well-formed responses are relatively uncommon, but understanding their impact on an XGS is an important step in optimizing the rating process. So far, the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, meaning longer responses can carry a greater weight in the GS. This has the potential to introduce noise. Table~\ref{tab:normalize-responses-deps} illustrates this. These responses are both included in a toy XGS consisting of NS responses with ``perfect'' feature annotations. The first response contributes four dependencies to the GS, each of which is necessary to fulfill the feature annotations and contributes meaningfully to the GS. The second response, however, contributes 10 dependencies, some of which, like \textit{amod(purple, dress)}, add non-critical detail, and these details could receive too much weight.
 
 %%\begin{table}[htb!]
 %%\begin{center}
@@ -66,8 +66,9 @@ root(sing, VROOT) & root(sing, VROOT) & 0.175 & 0.143 \\
 \caption{\label{tab:normalize-responses-deps} A ``toy'' XGS consisting of lemmatized syntactic dependencies from only two responses, each with perfect annotation scores. (See Chapter~\ref{chap:method} for more on the parsing and lemmatization.)}
 \end{center}
 \end{table}
+\lk{is worderased actually processed through tf-idf?} 
 
-To illustrate with the examples in Table~\ref{tab:normalize-responses-deps}, consider \textit{det(the, girl)}. In the non-normalized setting, this dependency appears as two out of a total 14 dependencies, or 0.143 of the total XGS. In the normalized setting, the dependency appears as one out of four (0.25) dependencies in Response A, and one out of 10 (0.1) dependencies in Response B, equating to 0.175 of the total XGS (0.325 divided by two responses).
+To illustrate with the examples in Table~\ref{tab:normalize-responses-deps}, consider \textit{det(the, girl)}. In the non-normalized setting, this dependency appears as two out of a total 14 dependencies, or 0.143 of the total XGS. In the normalized setting, the dependency appears as one out of four (0.25) dependencies in Response A, and one out of 10 (0.1) dependencies in Response B, equating to 0.175 of the total XGS (0.35 divided by two responses).
 
 \lk{combine these Ps}
 
@@ -96,6 +97,8 @@ Avg & -0.463 & \textbf{-0.465} & -0.454 & \textbf{-0.458} \\
 \end{table}
 
 The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}. The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized GS. The simplest explanation for this is the fact that longer responses with extraneous information are relatively uncommon, so we can expect this normalization to have a low impact. \lk{But what else can I say here}
+
+NTS: For different test responses, find some examples where the non-normalized model is rated/ranked higher than in the normalized model.
 
 Because the non-normalized GSs outperform their normalized counterparts, and because normalization adds complexity to the process, this step was not used in the remaining optimization experiments.
 

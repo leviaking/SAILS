@@ -19,22 +19,22 @@
 \usepackage{gb4e} % MD: some versions of latex need this package to be loaded last
 \noautomath %%LK: I found that adding this immediately after gb4e fixes the problem!
 %%%%%%LK: Below: I added from BEA2013
-%%%%\usepackage{rotating}
-%%%%\usepackage{tikz}
-%%%%\usetikzlibrary{shapes,arrows}
-%%%%\usepackage{graphicx}
-%%%%\usepackage{tikz-dependency}
-%%%%\usepackage{natbib}
-%%%%\usepackage{url}
-%\usepackage{gb4e} % MD: some versions of latex need this package to be loaded last
-%%%%\usepackage{amsmath}
-%%%%\DeclareMathOperator*{\argmax}{arg\,max}
-%%%%\DeclareMathOperator*{\argmin}{arg\,min}
-%%%%\usepackage{tikz-qtree}
-%%%%\usepackage{multirow}
-%%%%\usepackage{rotating}
-%%%%\usepackage{booktabs}
-%%%
+\usepackage{rotating}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{graphicx}
+\usepackage{tikz-dependency}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{gb4e} % MD: some versions of latex need this package to be loaded last
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{tikz-qtree}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{booktabs}
+
 %%%%%%LK: Above: I added from BEA2013
 
 
@@ -77,6 +77,7 @@
 %%%    {}
 %%%    {\clearfield{urlyear}\clearfield{urlmonth}\clearfield{urlday}}}
 \newcommand{\feat}[1]{\texttt{#1}}
+\newcommand{\param}[1]{\texttt{#1}}
 \newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
 \newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
 % for removing all marginpars ==> good for final submission! %%nice trick!
