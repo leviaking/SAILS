@@ -28,8 +28,8 @@ get spearman of XGS \& TC based ranking vs ranking via the weighted feature anno
 The method used to analyze PDT responses throughout this dissertation represents an evolution from my own earlier attempts. In this chapter, I summarize my previous work and explain the current method.
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
-\section{2013: Semantic triple matching and first approaches}
-This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for in depth discussion. Like the current research, my previous work focused on analyzing non-native speaker (NNS) responses to a picture description task (PDT) by comparison with native speaker (NS) responses. I did not know a priori if such a task would be within range for a single researcher using off the shelf tools, so my initial work sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
+\section{First approaches: Rule based semantic triple matching}
+This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussion. Like the current research, my previous work focused on analyzing non-native speaker (NNS) responses to a picture description task (PDT) by comparison with native speaker (NS) responses. I did not know a priori if such a task would be within range for a single researcher using off the shelf tools, so my initial work sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
 
 %Research in SLA often
 %relies on the ability of task design to induce particular linguistic
@@ -74,7 +74,7 @@ The painter is painting a woman's paint. (Spanish)\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Example item and responses}
+\caption{Example item and NNS responses}
 \label{fig:example-picture}
 \end{figure}
 
@@ -82,19 +82,19 @@ The PDT consists of 10 items (8 line drawings and 2 photographs) intended to eli
 were asked to view the image and describe the action in either past or present tense. Responses were typed by the participants themselves in a computer lab with spell checking disabled.
 I collected responses from 53
 informants (14 NSs, 39 NNSs), for a total of 530 sentences. 
-\section{Method}
+\subsection{Method}
 \label{sec:method}
 
-My process in this initial work was to parse a sentence into a dependency representation
-%(section~\ref{sec:syntactic-form})
+My process in this initial work was to parse a NNS sentence into a dependency representation
+(section~\ref{sec:syntactic-form})
 and then extract a simple semantic
 form from this parse
-%(section~\ref{sec:semantic-form})
+(section~\ref{sec:semantic-form})
 to compare to
 gold standard semantic forms similarly derived from the NS responses.
 
-%\subsection{Obtaining a syntactic form}
-%\label{sec:syntactic-form}
+\subsection{Obtaining a syntactic representation}
+\label{sec:syntactic-form}
 Because dependency parsing focuses on identifying dependency
 relations, rather than constituents or phrase structure, it clearly
 labels the subject, verb and object of a sentence, which can then map
@@ -139,8 +139,10 @@ shown in Figure~\ref{fig:prep-dependency}.
     \depedge{4}{3}{nsubj}
     \depedge[arc angle=90]{1}{4}{root}
     \depedge{4}{7}{prep\_with}
-    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
-    \depedge[edge style={dotted}]{3}{2}{det}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+    \depedge[arc angle=35]{7}{6}{det}
+    \depedge{3}{2}{det}
   \end{dependency}
 \end{center}
 \caption{Dependency parse showing collapsed preposition dependencies.}
@@ -154,12 +156,10 @@ are not without semantic meaning---e.g., \textit{the boy played in a
 As for propagating relations across conjunctions, this also simplifies the representation somewhat and makes it easier to connect verbs and their arguments, as needed for the semantic
 form used in comparisons. For a conjunction like \textit{cats and dogs}, for example, the default settings would produce \texttt{cc(cats, and)} and \texttt{conj(cats, dogs)}, but the chosen settings would collapse this into \texttt{conj\_and(cats, dogs)}, omitting the dependency that merely labels a conjunction relation between the first conjunct and the conjunction.
 
-Given the rule based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, we can
-essentially ignore determiner (\texttt{det}) relations between a noun
-and its determiner, allowing for variability in how a learner produces
+Given the rule based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces
 noun phrases. 
 
-\subsection{Obtaining a semantic form}
+\subsection{Obtaining a semantic representation}
 \label{sec:semantic-form}
 
 \subsubsection{Sentence types}
@@ -203,32 +203,33 @@ Type & Description & Example & NS & NNS \\
 \label{tab:sentence-type}
 \end{table*}
 
-We categorized the sentences in the corpus into 12 types, shown in
-Table~\ref{tab:sentence-type}. We established these types because each
+I categorized the sentences in the corpus into 12 types, shown in
+Table~\ref{tab:sentence-type}. I established these types because each
 type corresponds to a basic sentence structure and thus has consistent
 syntactic features, leading to predictable patterns in the dependency
-parses.  We discuss the distribution of sentence types in
-section~\ref{sec:sentence-distribution}.
+parses.
+%We discuss the distribution of sentence types in
+%section~\ref{sec:sentence-distribution}.
 
 \subsubsection{Rules for sentence types}
 
 
-A sentence type indicates that the logical (i.e., semantic) subject,
+A sentence type indicates that the subject,
 verb, and object can be found in a particular place in the parse,
 e.g., under a particular dependency label.
 For example, for simple transitive sentences of type A,
 the words labeled {\tt nsubj}, {\tt root}, and {\tt dobj} exactly
-pinpoint the information we require.
+pinpoint the necessary information.
 Thus, the patterns for extracting semantic information---in the form
 of \textit{verb(subj,obj)} triples---reference particular Stanford
 typed dependency labels, part-of-speech (POS) tags, and interactions
 with word indices.
 
 More complicated sentences or those containing common learner errors
-(e.g., omission of the copula \textit{be}) require slightly more
-complicated extraction rules, but, since we examine only transitive
-verbs at this juncture, these still boil down to identifying the
-sentence type and extracting the appropriate triple.  We do this by
+(e.g., omission of the copula \textit{be}) required slightly more
+complicated extraction rules, but, since this work examined only transitive
+verbs, these still boiled down to identifying the
+sentence type and extracting the appropriate triple.  This was accomplished by
 arranging a small set of binary features into a decision tree to
 determine the sentence type, as shown in
 Figure~\ref{fig:decision-tree}.
@@ -303,20 +304,19 @@ Figure~\ref{fig:decision-tree}.
 \label{fig:decision-tree}
 \end{figure*}
 
-To illustrate this process, consider (\ref{ex:F2-type}).  We pass this
-sentence through the parser to obtain the dependency parse shown in
-Figure~\ref{fig:F2-dependency}. The parsed sentence then moves to the
+To illustrate, consider the process for the example in Figure~\ref{fig:F2-dependency}.  The
+sentence is passed through the parser to obtain the dependency parse shown.
+The parsed sentence then moves to the
 decision tree shown in Figure~\ref{fig:decision-tree}.
 At the top of the tree, the sentence is checked for an {\tt expl}
 (expletive) label; having none, it moves rightward to the {\tt
-  nsubjpass} (noun subject, passive) node. Because we find an {\tt
-  nsubjpass} label, the sentence moves leftward to the {\tt agent}
-node. This label is also found, thereby reaching a terminal node and
-being labeled as a type F2 sentence.
-
-\begin{exe}
-  \ex\label{ex:F2-type}A bird is shot by a man.
-\end{exe}
+  nsubjpass} (noun subject, passive) node. Because a {\tt
+  nsubjpass} label is found, the sentence moves leftward to the {\tt agent}
+node. This label is also found, and because the sentence has reached a terminal node, it is labeled as a type F2 sentence.
+%
+%\begin{exe}
+%  \ex\label{ex:F2-type}A bird is shot by a man.
+%\end{exe}
 
 \begin{figure}[htb!]
 \begin{center}
@@ -332,41 +332,42 @@ being labeled as a type F2 sentence.
     \depedge[arc angle=40,edge style={dotted}]{8}{7}{det}
   \end{dependency}
 \end{center}
-\caption{The dependency parse of (\ref{ex:F2-type})}
+\caption{The dependency parse of an example NNS response.}
 \label{fig:F2-dependency}
 \end{figure}
 
-With the sentence now typed as F2, we apply specific F2 extraction
-rules. The logical subject is taken from under the {\tt agent} label,
+With the sentence now typed as F2, specific F2 extraction
+rules are applied. The logical subject is taken from under the {\tt agent} label,
 the verb from {\tt root}, and the logical object from {\tt nsubjpass},
 to obtain \textit{shot(man,bird)}, which can be lemmatized to
-\textit{shoot(man,bird)}.  Very little effort goes into this process:
-the parser is pre-built; the decision tree is small; and the
-extraction rules are minimal.
+\textit{shoot(man,bird)}. 
+%Very little effort goes into this process:
+%the parser is pre-built; the decision tree is small; and the
+%extraction rules are minimal.
 
-We are able to use little effort in part due to the constraints in the
+This much is possible with relatively little effort in part due to the constraints in the
 pictures.  For figure~\ref{fig:example-picture}, for example,
 \textit{the artist}, \textit{the man in the beret}, and \textit{the
   man} are all acceptable subjects, whereas if there were multiple men
 in the picture, \textit{the man} would not be specific enough.
-In future work, we expect to relax such constraints on image contents
-by including rules to handle relative clauses, adjectives and other
-modifiers in order to distinguish between references to similar
-elements, e.g., 
-\textit{a man shooting a bird} vs. \textit{a man reading the
-  newspaper}.
+%In future work, we expect to relax such constraints on image contents
+%by including rules to handle relative clauses, adjectives and other
+%modifiers in order to distinguish between references to similar
+%elements, e.g., 
+%\textit{a man shooting a bird} vs. \textit{a man reading the
+%  newspaper}.
 
-\section{Evaluation}
+\subsection{Evaluation}
 \label{sec:evaluation}
 
-To evaluate this work, we need to address two major questions.  First,
-how accurately do we extract semantic information from potentially
+Evaluating this work required addressing two major questions.  First,
+how accurately does this approach extract semantic information from potentially
 innovative sentences (section~\ref{sec:eval:extraction})?  Due to the
 simple structures of the sentences
-(section~\ref{sec:sentence-distribution}), we find high accuracy with
-our simple system.  Secondly, how many semantic forms does one need in
+(section~\ref{sec:sentence-distribution}), this simple system performs moderately well.
+Secondly, how many semantic forms does one need in
 order to capture the variability in meaning in learner sentences
-(section~\ref{sec:eval:coverage})?  We operationalize this second
+(section~\ref{sec:eval:coverage})? I operationalized this second
 question by asking how well the set of native speaker semantic forms
 models a gold standard, with the intuition that a language is largely defined
 by native speaker usage, so their answers can serve as targets.  As we
@@ -379,8 +380,8 @@ will see, this is a na\"ive view.
 \setlength{\tabcolsep}{.3em}
 \begin{tabular}{|l|l|l|cc|r|}
   \hline
-  & & Error & \multicolumn{2}{c|}{Example} &  \\
-  & & type & Sentence & Triple & Count (\%)\\
+  & & Err. type & \multicolumn{2}{c|}{Example} &  \\
+  & & (Tot. resp.) & Sentence & Triple & Count (\%)\\
   \hline
   \hline
   \multirow{8}{*}{\begin{sideways}Triple error\end{sideways}} &
@@ -389,30 +390,37 @@ will see, this is a na\"ive view.
   \cline{3-6}
   & & Parser & Two boys boat. & NONE(boys,NONE) & 5 (1.3\%) \\
   \cline{3-6}
-  & & Extraction & A man is gathering lots of leafs. & gathering(man,lots) & 9 (2.3\%) \\
+  & & \multirow{2}{*}{Extract} & A man is gathering & \multirow{2}{*}{gathering(man,lots)} & \multirow{2}{*}{9 (2.3\%)} \\
+  & & & lots of leafs. & & \\
   \cline{3-6}
-  & & \textbf{Total} (390) & & & \textbf{30 (7.7\%)} \\
+  & & (390) & & & \textbf{30 (7.7\%)} \\
  \cline{2-6}
  & \multirow{4}{*}{\begin{sideways}NS\end{sideways}} & Speaker & (\textit{None}) & & 0 (0\%) \\
  \cline{3-6}
- & & Parser & An old man raking leaves on a path. & leaves(man,path) & 2 (1.4\%) \\
+ & & \multirow{2}{*}{Parser} & An old man raking & \multirow{2}{*}{leaves(man,path)} & \multirow{2}{*}{2 (1.4\%)} \\
+  & & & leaves on a path. & & \\
  \cline{3-6}
- & & Extraction & A man has shot a bird that is falling from the sky. & shot(bird,sky) & 8 (5.7\%) \\
+ & & \multirow{2}{*}{Extract} & A man has shot a bird & \multirow{2}{*}{shot(bird,sky)} & \multirow{2}{*}{8 (5.7\%)} \\
+ & & & that is falling from the sky. & & \\
  \cline{3-6}
- & & \textbf{Total} (140) & & & \textbf{10 (7.1\%)} \\
+ & & (140) & & & \textbf{10 (7.1\%)} \\
  \hline
  \hline
- \multirow{6}{*}{\begin{sideways}Content error\end{sideways}} & \multirow{3}{*}{\begin{sideways}NNS\end{sideways}} & Spelling & The artiest is drawing a portret. & drawing(artiest,portret) & 35 (9.0\%) \\
- \cline{3-6}
-  & & Meaning & The woman is making her laundry. & making(woman,laundry) & 23 (5.9\%) \\
- \cline{3-6}
-  & & \textbf{Total} (390) & & & \textbf{58 (14.9\%)} \\
+ \multirow{6}{*}{\begin{sideways}Content error\end{sideways}} & \multirow{3}{*}{\begin{sideways}NNS\end{sideways}} & \multirow{2}{*}{Spelling} & The artiest is drawing & \multirow{2}{*}{drawing(artiest,portret)} & \multirow{2}{*}{35 (9.0\%)} \\
+   & & & a portret. & & \\
+\cline{3-6}
+  & & \multirow{2}{*}{Meaning} & The woman is making & \multirow{2}{*}{making(woman,laundry)} & \multirow{2}{*}{23 (5.9\%)} \\
+& & & her laundry. & & \\
+\cline{3-6}
+  & & (390) & & & \textbf{58 (14.9\%)} \\
  \cline{2-6}
  & \multirow{3}{*}{\begin{sideways}NS\end{sideways}} & Spelling & (\textit{None}) & & 0 (0\%) \\
  \cline{3-6}
- & & Meaning & A picture is being taken of a girl on a bike. & taken(NONE,picture) & 3 (2.1\%) \\
+ & & \multirow{2}{*}{Meaning} & A picture is being taken & \multirow{2}{*}{taken(NONE,picture)} & \multirow{2}{*}{3 (2.1\%)} \\
+  & & & of a girl on a bike. & & \\
+
  \cline{3-6}
- & & \textbf{Total} (140) & & & \textbf{3 (2.1\%)} \\
+ & & (140) & & & \textbf{3 (2.1\%)} \\
  \hline
 \end{tabular}
 \end{center}
@@ -421,32 +429,34 @@ will see, this is a na\"ive view.
 \label{tab:error-types}
 \end{table*}
 
-Before a more thorough analysis, we look at the distribution of
-sentence types, shown in Table~\ref{tab:sentence-type}, broken down
+The distribution of
+sentence types is shown in Table~\ref{tab:sentence-type}, broken down
 between native speakers (NSs) and non-native speakers (NNSs).  A few
-sentence types clearly dominate here: if one looks only at simple
-declaratives, with or without a main verb (types A and C), one
-accounts for 90.7\% of the NS forms and 84.6\% of the NNS ones,
-slightly less.  Adding prepositional forms (types B and D) brings the
-total to 94.3\% and 90.8\%, respectively.  Although there will always
-be variability and novel forms (cf. type Z), this shows that, for
-situations with basic transitive actions, developing a system (by
-hand) for a few sentence types is manageable.  More broadly, we see
-that clear and simple images nicely constrain the task to the point
-where shallow processing is feasible.
+sentence types clearly dominate here: simple
+declaratives with or without a main verb (types A and C) account for
+90.7\% of the NS forms and 84.6\% of the NNS ones.
+Adding prepositional forms (types B and D) brings the
+total to 94.3\% and 90.8\%, respectively. This suggests in a constrained dataset, a custom set of rules can provide a high degree of coverage. 
+%Although there will always
+%be variability and novel forms (cf. type Z), this shows that, for
+%situations with basic transitive actions, developing a system (by
+%hand) for a few sentence types is manageable.  More broadly, we see
+%that clear and simple images nicely constrain the task to the point
+%where shallow processing is feasible.
 
 \subsection{Semantic extraction}
 \label{sec:eval:extraction}
 
-For the purpose of evaluating our extraction system, we define two
+For the purpose of evaluating this extraction system, I defined two
 major classes of errors. The first are \textit{triple errors},
-responses for which our system fails to extract one or more of the
+responses for which the system fails to extract one or more of the
 desired subject, verb, or object, based on the sentence at hand and
 without regard to the target content. Second are \textit{content
-  errors}, responses for which our system extracts the desired
+  errors}, responses for which the system extracts the desired
 subject, verb and object, but the resulting triple does not accurately
-describe the image (i.e., is an error of the participant's). We are of
-course concerned with reducing the triple errors.  Examples are in
+describe the image (i.e., is an error of the participant's). This work 
+was concerned with reducing the triple errors, as such content errors 
+are expected in NNS data.  Examples are in
 Table~\ref{tab:error-types}.
 
 Triple errors are subcategorized as \textit{speaker}, \textit{parser},
@@ -741,7 +751,7 @@ shoot(he, bird) & He shot the bird down! \\
 
 
 %%%% BEGIN material from BEA 2016 %%%%
-\section{2016: TC Encoder}
+\section{2016: TC Encoder (Same data, new aproach)}
 In this paper, we build from our previous work \citep{king:dickinson:13, king:dickinson:14} and move towards finding a ``sweet spot'' of
 semantic analysis \citep[cf.][]{bailey:meurers:08} for such
 image-based learner productions.
