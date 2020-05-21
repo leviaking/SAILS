@@ -29,6 +29,11 @@ The method used to analyze PDT responses throughout this dissertation represents
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
 \section{First approaches: Rule based semantic triple matching}
+\lk{see tex comments}
+%% I feel like this needs some kind of tldr up front...
+In short, my previous approach tried to assess each NNS response by extracting a \textit{verb(subject,object)} triple and trying to match it with a triple from the NS responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success in correctly assessing a large portion \lk{really a majority?} of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning.
+
+\lk{above P was added later; sync it up with following P}
 This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussion. Like the current research, my previous work focused on analyzing non-native speaker (NNS) responses to a picture description task (PDT) by comparison with native speaker (NS) responses. I did not know a priori if such a task would be within range for a single researcher using off the shelf tools, so my initial work sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
 
 %Research in SLA often
@@ -437,12 +442,6 @@ declaratives with or without a main verb (types A and C) account for
 90.7\% of the NS forms and 84.6\% of the NNS ones.
 Adding prepositional forms (types B and D) brings the
 total to 94.3\% and 90.8\%, respectively. This suggests in a constrained dataset, a custom set of rules can provide a high degree of coverage. 
-%Although there will always
-%be variability and novel forms (cf. type Z), this shows that, for
-%situations with basic transitive actions, developing a system (by
-%hand) for a few sentence types is manageable.  More broadly, we see
-%that clear and simple images nicely constrain the task to the point
-%where shallow processing is feasible.
 
 \subsection{Semantic extraction}
 \label{sec:eval:extraction}
@@ -778,8 +777,7 @@ A second issue regarding semantic analysis, beyond correctness, stems
 from using an incomplete gold standard, namely: assessing the degree
 of semantic variability, both for native speakers (NSs) and non-native
 speakers (NNSs).
-% Analyzing variability helps with a number of aspects of reasoning via
-% an incomplete gold standard.  
+ 
 In addition to providing insight into
 theoretical research on variability 
 in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consistency}), analyzing variability can help determine
@@ -1006,7 +1004,6 @@ tf-idf weights before averaging.
 
 \paragraph{Frequency Cosine (FC).} The frequency of each term is
 calculated within the GS and (separately) within the NNS response. 
-%\marginpar{\scriptsize{LK: above: "cosine distance (C)", so I changed "Comparison" (FC) to "Cosine". Good? I need to scan for other instances.}}
 The term scores are then treated as vectors, and the response score is
 the cosine distance between them, with lower scores being closer to
 the GS.
@@ -1027,7 +1024,6 @@ Table~\ref{tab:dist-ranked-parameters}).
 section~\ref{sec:representation}, the terms can take one of five
 representations: \param{ldh}, \param{xdh}, \param{lxh}, \param{ldx},
 or \param{xdx}.
-%\param{lemma}, \param{ldh}, \param{xdh}, \param{lxh}, \param{ldx}.
 
 \paragraph{Scoring approach.} As discussed in
 section~\ref{sec:scoring}, the NNS responses can be
@@ -1049,10 +1045,7 @@ than automatically parsed data.
 
 \paragraph{NNS source.} Each response has an original version
 (\param{NNSO}) and the output of a language model spelling corrector
-%\texttt{+} module
 (\param{NNSLM}) (see section~\ref{sec:data}).
-% \citep{king:dickinson:14}. => cited in earlier section
-%%%for now, let's hide this for anonymity's sake?
 
 \subsection{Results}
 
@@ -1062,9 +1055,7 @@ than automatically parsed data.
 We ran 60 response experiments, each with different system settings
 (section~\ref{sec:parameters}). Within each experiment, we rank the 39
 scored NNS responses from least to most similar to the GS.
-%\md{Do we want to add something parenthetical like ``least coming first to model error detection''? (I can't think how to say it concisely.)} 
-\md{Could/Should the footnote go into section 3?}
-\lk{It could, but I kinda like it here}
+
 For assessing these settings themselves, we rely on past annotation,
 which counted unacceptable responses as errors (see
 section~\ref{sec:data}).\footnote{The source of the error is also
