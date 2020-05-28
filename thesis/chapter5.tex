@@ -31,6 +31,7 @@ In short, my previous attempt assessed each non-native speaker (NNS) response by
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
 \section{First approaches: Rule based semantic triple matching}
+\label{sec:first-approaches}
 %% I feel like this needs some kind of tldr up front...
 This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussion. Like the current research, my previous work focused on analyzing NNS responses to a PDT by comparison with NS responses. I did not know a priori if such a task would be within reach for a single researcher using off the shelf tools, so my initial work sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
 
@@ -52,10 +53,13 @@ This section summarizes relevant work first presented in \citet{king:dickinson:1
 %image. Relatedly, particularly simple images should restrict elicited
 %responses to a tight range of expected contents.
 %
-
-I knew this would require some constraint of the responses, and without a readily available and appropriate dataset for the task, I crafted my own small PDT and collected a small corpus of NS and NNS responses. I also expected to rely on some kind of rule based approach for extracting \textit{verb(subject,object)} triples from syntactic dependency parses. Thus, for this initial experiment, I chose or developed each of the visual stimuli because
-it presents an event that I believe to be transitive in nature and
-likely to elicit responses with an unambiguous subject, verb and
+I knew this would require some constraint of the responses, and without a suitable dataset available, I decided to develop my own. This research is motivated by a desire to see intelligent computer-assisted language learning (ICALL) applications move toward natural communication in game-like visual contexts, so I determined that a picture description task (PDT) would produce a fitting dataset. Research in second language acquisition (SLA) often relies on the
+ability of task design to induce particular linguistic behavior
+\citep{skehan1998assessing}, and the PDT should induce context-focused
+communicative behavior. PDT data allows one to investigate
+pure interlanguage without the influence of verbal prompts and shows
+learner language being used to convey meaning and not just manipulate forms.
+I knew that I would be relying on some kind of rule based approach for extracting \textit{verb(subject,object)} triples from syntactic dependency parses. Thus, for this initial experiment, I chose or developed each of the visual stimuli because it presents an event that I believe to be transitive in nature and likely to elicit responses with an unambiguous subject, verb and
 object, thereby imposing some restrictions on form and content.
 
 \begin{figure}[htb!]
@@ -83,8 +87,7 @@ The painter is painting a woman's paint. (Spanish)\\
 
 The PDT consists of 10 items (8 line drawings and 2 photographs) intended to elicit a single sentence each; an example is given in Figure~\ref{fig:example-picture}. Participants
 were asked to view the image and describe the action in either past or present tense. Responses were typed by the participants themselves in a computer lab with spell checking disabled.
-I collected responses from 53
-informants (14 NSs, 39 NNSs), for a total of 530 sentences. 
+I collected responses from 53 participants for a total of 530 sentences. There were 14 NSs (non-linguist university and graduate students) and 39 NNSs (university students enrolled in English as a Second Language courses).
 \subsection{Method}
 \label{sec:method}
 
@@ -690,7 +693,7 @@ would require more sophisticated lexical knowledge to avoid adding unwanted
 triples in the gold standard set.  Consider, for example,
 \textit{do(woman,shirt)}---an incorrect triple derived from the
 correct NS triples, \textit{wash(woman,shirt)} and
-\textit{do(woman,laundry)}. Instead, my subsequent work has attempted to improve coverage by prompting NSs to give multiple alternative descriptions of each PDT item.
+\textit{do(woman,laundry)}. Instead, my subsequent work has attempted to improve coverage by prompting NSs to give an initial PDT response, followed by a second alternative.
 
 A second issue that emerged was that, even when only examining cases
 where the meaning is literally correct, NNSs produced a wider range of
@@ -703,8 +706,8 @@ to use words they know to compensate for gaps in their vocabularies
 \citep{AgustinLlach2010}. This also parallels the observation in SLA research that while second
 language learners may attain native-like grammar, their ability to use
 pragmatically native-like language is often much lower
-\citep{BardoviDornyei1998}. \lk{Can I work a David Stringer citation in here somewhere?}
-These findings highlighted the need for a more flexible approach that considers whether a sentence is native-like or non-native-like as well as whether it is semantically appropriate.
+\citep{BardoviDornyei1998}. \lk{Work a D Stringer citation in here?}
+These findings highlighted the need for a more flexible approach that considers how native-like a sentence is as well as how appropriate its meaning is.
 
 \begin{table}[htb!]
 \begin{center}
@@ -729,18 +732,18 @@ shoot(he, bird) & He shot the bird down! \\
 \label{tab:item10GS}
 \end{table}
 
+I followed up this work with an expanded approach that relied on language models and spell checking tools to attempt to identify and fix misspellings that lead to downstream problems \citep{king:dickinson:14}. I omit this discussion because it is not applicable to the current work; I now take a simpler approach --- respondents use spell checking during the task. This is because in most contexts where my system would be used, like a language tutoring application or game, spelling instruction is not really the goal, and a built in spell checker would likely be available. Moreover, omitting this step removes a layer of analysis (a potential source of errors), and allows the current study to focus more directly on meaning.
 
 %%%% END material from Qual Paper (BEA 2013) %%%%
 
 
 %%%% BEGIN material from BEA 2016 %%%%
-\section{2016: TC Encoder (Same data, new aproach)}
-I followed up this work with an expanded approach that relied on language models and spell checking tools to attempt to identify and fix misspellings that lead to downstream problems \citep{king:dickinson:14}. In my current work, I take a simpler approach --- respondents use spell checking during the task. This is justified because in most context where my system would be used, like a language tutoring application or game, spelling instruction is not really the goal. Moreover, omitting this step removes a layer of analysis (and potential source of errors), and allows the current study to focus more directly on meaning.
+\section{Recent work: More general, distance-based approaches}
 
 %%%% 2020/05/21. Resume here. %%%% 
 
-In subsequent work \citep{king:dickinson:16}, I built from the previous work \citep{king:dickinson:13, king:dickinson:14} and moved towards finding a ``sweet spot'' of
-semantic analysis \citep[cf.][]{bailey:meurers:08} for such
+In subsequent work \citep{king:dickinson:16}, I moved towards finding a ``sweet spot'' of
+semantic analysis \citep[cf.][]{bailey:meurers:08} for
 image-based learner productions.
 In particular, using available NLP tools,
 I moved away from specific correct semantic representations and an
@@ -752,7 +755,7 @@ native speaker responses, as opposed to deriving them by hand, in
 addition to allowing for a range of sentence types.
 
 I should note, in this context, that I am discussing semantic
-analysis given a gold standard of native sentences.  Image description
+analysis given a GS of native sentences.  Image processing
 tasks can often rely on breaking images into semantic primitives
 \citep[see, e.g.,][and references therein]{ortiz:wolff:lapata:15}, but
 for learner data, I want to ensure that I can account not just for
@@ -762,61 +765,95 @@ content).  In other words, the goal is  to reason about meaning based on
 specific linguistic forms.
 
 A second issue regarding semantic analysis, beyond correctness, stems
-from using an incomplete gold standard, namely: assessing the degree
-of semantic variability, both for native speakers (NSs) and non-native
-speakers (NNSs).
- 
-In addition to providing insight into
-theoretical research on variability 
-in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consistency}), analyzing variability can help determine
-the best parameters for an NLP system for different kinds of
-responses.  That is, different types of image content might require
-different mechanisms for processing.  Additionally, knowing how
-different pictures elicit different kinds of content can provide
-feedback on appropriate types of new data to collect.
-We approach this issue by clustering responses in various ways
-(section~\ref{sec:clustering}) and seeing how the clusters connect to
-system parameters.
+from using an incomplete GS. The productive nature of language means that a sentence can be expressed in countless ways, and thus a GS can never really be ``complete''. Examining the degree
+of this variability both for NSs and NNSs is necessary to determine whether a crowd-sourced GS can account for a sizable portion of test responses. Analyzing variability can also help determine the most effective parameters for an NLP system for image based responses. Additionally, it can offer insights into theoretical research on variability 
+in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consistency}).
 
-For both the experiments involving the accuracy of different system
-parameters (section~\ref{sec:ranking}) and the clustering of different
-responses (section~\ref{sec:clustering}), we present results within
-those sections that show the promise of moving to abstract representations, but in
-different ways for different kinds of data.
+%That is, different types of image content might require
+%different mechanisms for processing.  Additionally, knowing how
+%different pictures elicit different kinds of content can provide
+%feedback on appropriate types of new data to collect.
+%We approach this issue by clustering responses in various ways
+%(section~\ref{sec:clustering}) and seeing how the clusters connect to
+%system parameters.
+%
+%For both the experiments involving the accuracy of different system
+%parameters (section~\ref{sec:ranking}) and the clustering of different
+%responses (section~\ref{sec:clustering}), we present results within
+%those sections that show the promise of moving to abstract representations, but in
+%different ways for different kinds of data.
+%
+%We build directly from \citet{king:dickinson:13,king:dickinson:14},
+%where the method to obtain a semantic form from a NNS production is:
+%1) obtain a syntactic dependency representation from the off-the-shelf
+%Stanford Parser \citep{demarneffe:ea:06, klein:manning:03}, and 2)
+%obtain a semantic form from the parse, via a small set of hand-written
+%rules.  It is this method we attempt to generalize
+%(section~\ref{sec:ranking}).
 
-We build directly from \citet{king:dickinson:13,king:dickinson:14},
-where the method to obtain a semantic form from a NNS production is:
-1) obtain a syntactic dependency representation from the off-the-shelf
-Stanford Parser \citep{demarneffe:ea:06, klein:manning:03}, and 2)
-obtain a semantic form from the parse, via a small set of hand-written
-rules.  It is this method we attempt to generalize
-(section~\ref{sec:ranking}).
+%\section{Data Collection}
+%\label{sec:data}
+%
+%Because our approach requires both NS and NNS responses and
+%necessitates constraining both the form and content of responses, we
+%previously assembled a small corpus of NS and NNS responses to a PDT
+%\citep{king:dickinson:13}.  Research in SLA often relies on the
+%ability of task design to induce particular linguistic behavior
+%\citep{skehan1998assessing}, and the PDT should induce context-focused
+%communicative behavior.  Moreover, the use of the PDT as a reliable
+%language research tool is well-established in areas of study ranging
+%from SLA to Alzheimer's disease \citep{ellis2000task,
+%forbes2005detecting}.
 
-\section{Data Collection}
-\label{sec:data}
+%
+%The PDT consists of 10 items (8 line drawings and 2 photographs\footnote{We have not observed substantial differences between responses for the drawings and the photographs.}) intended to elicit a single sentence
+%each; an example is given in Figure~\ref{fig:example-picture}. Participants
+%were asked to view the image and describe the action in past or present tense.
+%The data consist of responses from 53 informants (14 NSs, 39 NNSs),
+%for a total of 530 sentences, with the NNSs being intermediate and
+%upper-level adult English learners in an intensive English as a Second
+%Language program.  The distribution of first languages (L1s) is: 14
+%English, 16 Arabic, 7 Chinese, 2 Japanese, 4 Korean, 1 Kurdish, 1
+%Polish, 2 Portuguese, and 6 Spanish.
+%
+%Responses were typed by the participants themselves, with spell checking disabled in some cases.  Even among the NNSs that used spell checking, a number of spelling errors resulted in real words. To address this, we use a spelling correction tool to obtain candidate spellings for each word, prune the candidates using word lists from the NS responses, recombine candidate spellings into candidate sentences, and evaluate these with a trigram language model (LM) to select the most likely intended response \citep{king:dickinson:14}.
+%
+%Once the responses had been collected, the NNS responses were
+%annotated for correctness, with respect to the content of the picture.
+%The lead author marked spelling and meaning errors which prevent a
+%complete mapping to correct information
+%\citep[see][]{king:dickinson:13}.  On the one hand, minor misspellings
+%are counted as incorrect (e.g., \textit{The artiest is drawing a
+%\textbf{portret}}), while, on the other hand, the annotation does
+%not require distinguishing between between spelling and meaning
+%errors.  In the future, we plan on fine-tuning the annotation
+%criteria.
 
-Because our approach requires both NS and NNS responses and
-necessitates constraining both the form and content of responses, we
-previously assembled a small corpus of NS and NNS responses to a PDT
-\citep{king:dickinson:13}.  Research in SLA often relies on the
-ability of task design to induce particular linguistic behavior
-\citep{skehan1998assessing}, and the PDT should induce context-focused
-communicative behavior.  Moreover, the use of the PDT as a reliable
-language research tool is well-established in areas of study ranging
-from SLA to Alzheimer's disease \citep{ellis2000task,
-forbes2005detecting}.
+\subsection{Generalizing the Methods}
+\label{sec:ranking}
 
-We rely on visual stimuli here for a number of reasons. First, an overarching goal of our work is the development of an ILT that feels like more like a computer game than a grammar drill, and visual stimuli are essential to many games.
-Secondly, by using images, the information the response should contain is limited
-to the information contained in the image. Relatedly, particularly
-simple images should restrict elicited responses to a tight range of
-expected contents. 
-The current visual stimuli present events that are mainly
-transitive in nature and likely to elicit responses with an
-unambiguous subject, verb and object, thereby restricting form in
-addition to content. Finally, this format allows one to investigate
-pure interlanguage without the influence of verbal prompts and shows
-learner language being used to convey meaning and not just manipulate forms.
+The previous work assumed that the assessment of NNS responses
+involves determining whether the GS contains the same
+semantic triple that the NNS produced, i.e., whether a \textit{triple}
+is \textit{covered} or \textit{non-covered}.  In such a situation the
+GS need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples.  But
+the GS is comprised of the small set of NS responses and is thus
+incomplete---meaning that exact matching is going to miss many cases,
+and indeed in \citet{king:dickinson:13}, coverage was only at 50.8\%.  Additionally, relying on matching
+of triples limits the utility of the method to specific semantic
+requirements, namely transitive sentences.  By changing to ``bags of
+dependencies'' and tallying the counts of dependencies in the NS responses comprising the GS, I
+moved into a gradable, or ranking, approach to NNS responses.
+
+My goal is to emphasize the degree to which a response conveys the same
+meaning as the GS, necessitating an approach which can automatically
+determine the importance of a piece of information in the GS.  In Section~\ref{sec:representation}, I detail how I represented the information
+ and in Section~\ref{sec:scoring}, I discuss comparing NNS
+information to GS information, which allowed me
+to rank responses from least to most similar to the GS.\footnote{Although rankings often go from highest to lowest, I prioritize identifying problematic cases, so I rank accordingly.}
+%I also discuss the handling of various other system parameters (section~\ref{sec:parameters}).
+
+This work used the same 10 item PDT dataset described in section~\ref{sec:first-approaches}. Another example is shown in Figure~\ref{fig:example-picture2}.
 
 \begin{figure}
 \begin{center}
@@ -837,71 +874,21 @@ The man shouted the bird. (Spanish)\\
 \end{tabular}
 \end{center}
 \caption{Example item and responses}
-\label{fig:example-picture}
+\label{fig:example-picture2}
 \end{figure}
-
-The PDT consists of 10 items (8 line drawings and 2 photographs\footnote{We have not observed substantial differences between responses for the drawings and the photographs.}) intended to elicit a single sentence
-each; an example is given in Figure~\ref{fig:example-picture}. Participants
-were asked to view the image and describe the action in past or present tense.
-The data consist of responses from 53 informants (14 NSs, 39 NNSs),
-for a total of 530 sentences, with the NNSs being intermediate and
-upper-level adult English learners in an intensive English as a Second
-Language program.  The distribution of first languages (L1s) is: 14
-English, 16 Arabic, 7 Chinese, 2 Japanese, 4 Korean, 1 Kurdish, 1
-Polish, 2 Portuguese, and 6 Spanish.
-
-Responses were typed by the participants themselves, with spell checking disabled in some cases.  Even among the NNSs that used spell checking, a number of spelling errors resulted in real words. To address this, we use a spelling correction tool to obtain candidate spellings for each word, prune the candidates using word lists from the NS responses, recombine candidate spellings into candidate sentences, and evaluate these with a trigram language model (LM) to select the most likely intended response \citep{king:dickinson:14}.
-
-Once the responses had been collected, the NNS responses were
-annotated for correctness, with respect to the content of the picture.
-The lead author marked spelling and meaning errors which prevent a
-complete mapping to correct information
-\citep[see][]{king:dickinson:13}.  On the one hand, minor misspellings
-are counted as incorrect (e.g., \textit{The artiest is drawing a
-\textbf{portret}}), while, on the other hand, the annotation does
-not require distinguishing between between spelling and meaning
-errors.  In the future, we plan on fine-tuning the annotation
-criteria.
-
-\section{Generalizing the Methods}
-\label{sec:ranking}
-
-The previous work assumed that the assessment of NNS responses
-involves determining whether the gold standard (GS) contains the same
-semantic triple that the NNS produced, i.e., whether a \textit{triple}
-is \textit{covered} or \textit{non-covered}.  In such a situation the
-GS need only be comprised of \textit{types} of semantic triples.  But
-the GS is comprised of the small set of NS responses\md{I just noticed that I don't
-think we ever said that GS=NS responses}\lk{nice catch---that explains the reviewer's confusion} and is thus
-incomplete---meaning that exact matching is going to miss many cases,
-and indeed in \citet{king:dickinson:13}, we note
-that GS coverage is only at 50.8\%.  Additionally, relying on matching
-of triples limits the utility of the method to specific semantic
-requirements, namely transitive sentences.  By moving to bags of
-dependencies and tallying the counts of (NS) responses in the GS, we
-can move into a gradable, or ranking, approach to NNS responses.
-
-We want to emphasize the degree to which a response conveys the same
-meaning as the GS, necessitating an approach which can automatically
-determine the importance of a piece of information in the GS.  We
-break this down into how we represent the information
-(section~\ref{sec:representation}) and then how we compare NNS
-information to GS information (section~\ref{sec:scoring}), allowing us
-to rank responses from least to most similar to the GS.\footnote{Although rankings often go from highest to lowest, we prioritize identifying problematic cases, so we rank accordingly.}  We also
-discuss the handling of various other system parameters (section~\ref{sec:parameters}).
 
 \subsection{Representation}
 \label{sec:representation}
 
-To overcome the limitations of an incomplete GS, we represent each
+To overcome the limitations of an incomplete GS, I represented each
 response as a list of \textit{terms} taken from the dependency parse
 \citep{demarneffe:ea:06}, the terms referring to
 %being either 
 individual dependencies (i.e., relations between words).
 %or individual words. 
 This eliminates the complications of extracting semantic triples from
-dependency parses, which could only handle a very restricted set of
-grammatical forms and resulted in errors in 7--8\% of cases
+dependency parses, which only handled a very restricted set of
+sentence patterns and resulted in errors in 7--8\% of cases
 \citep{king:dickinson:13}. Operating directly on individual
 %words or
 dependencies from the overall tree also means the system can allow for
@@ -909,39 +896,33 @@ dependencies from the overall tree also means the system can allow for
 overlapping pieces of information rather than a single, highly
 specific triple.
 
-Specifically, representations take one of five forms.  We first
-tokenize and lemmatize the response to a list of lemmas that
+Specifically, representations took one of five forms.  I first
+tokenized and lemmatized a response to a list of dependencies that
 represents the response.
 The five term representations are then variations on dependencies. The
 full form concatenates the label, head and dependent, as in
-\texttt{subj\#boy\#kick}. We call this \textbf{ldh} (label, dependent,
+\texttt{subj\#boy\#kick}. I call this \textbf{ldh} (label, dependent,
 head). The remaining four forms abstract over either the label, head
-and/or dependent, as in \texttt{X\#boy\#kick}. We refer to these forms
-as \textbf{xdh}, \textbf{lxh}, \textbf{ldx}, and \textbf{xdx}. 
+and/or dependent, as in \texttt{X\#boy\#kick}. I refer to these forms
+as \textbf{xdh}, \textbf{lxh}, \textbf{ldx}, and \textbf{xdx}. I tested the system performance using each of these term representations separately.
 
-The \param{xdx} model is on a par with treating the sentence as a bag
-of lemmas, except that some function words not receiving parses (e.g.,
-prepositions) are not included \citep[see][]{king:dickinson:13}.
-
-In our current experiments, we test each of these term representations
-separately, but we expect to ultimately make use of some weighted
-combination. Future representations may also incorporate WordNet
-relations or semantic role labeler output.
+The \param{xdx} model is on a par with treating the sentence as a ``bag
+of words'' (or more accurately, a bag of lemmas), except that some function words not receiving parses (e.g., prepositions) are not included (see section~\ref{sec:syntactic-form}).
 
 \subsection{Scoring Responses}
 \label{sec:scoring}
 
-Taking the term representations from the previous section, the next
-task is to combine them in a way which ranks responses from least to
-most appropriate.  Responses are scored with one of four approaches,
+Taking the term representations from the previous section, my next
+step was to combine them in a way which ranks responses from least to
+most appropriate.  I scored the responses with one of four approaches, each
 using one of two methods to \textbf{weight} response terms combined
 with one of two methods to \textbf{compare} the weighted NNS terms
 with the GS.
 
-For weighting, we use either a simple frequency measure (\textbf{F})
-or one based on \textbf{tf-idf} (\textbf{T})
-\citep[][ch. 6]{manning-et-al:08}.  We explore tf-idf as a measure of
-a term's importance with the hope that it is able to reduce the impact
+For weighting, I used either a simple frequency measure
+or one based on term frequency-inverse document frequency (\textbf{tf-idf})
+\citep[][ch. 6]{manning-et-al:08}.  I used tf-idf as a measure of
+a term's importance with the hope that it could reduce the impact
 of semantically unimportant terms---e.g., determiners like
 \textit{the}, frequent in the GS, but unimportant for evaluating the
 semantic contents of NNS responses---and to upweight terms which may
@@ -949,14 +930,14 @@ be salient but infrequent, e.g., only used in a handful of GS
 sentences. For example, for an item depicting a man shooting a bird
 (see Table~\ref{tab:i10responses-avgprec} and Figure~\ref{fig:example-picture}), of 14 GS responses, 12
 described the subject as \textit{man}, one as \textit{he} and one as
-\textit{hunter}. Since \textit{hunter} is infrequent in English, even
+\textit{hunter}. Since \textit{hunter} is relatively infrequent in English, even
 one instance in the GS should get upweighted via tf-idf, and indeed it
-does. 
-This is valuable, as numerous NNS responses use \textit{hunter}.
+that was the effect. 
+This is valuable, as numerous NNS responses used \textit{hunter}.
 
 Calculating tf-idf relies on both \emph{term frequency} ($tf$) and
 \emph{inverse document frequency} ($idf$).  Term frequency is simply
-the raw count of an item, and for tf-idf of terms in the GS, we take
+the raw count of a term, and for tf-idf of terms in the GS, I take
 this as the frequency within the GS.  Inverse document frequency is
 derived from some reference corpus, and it is based on the notion that
 appearing in more documents makes a term less informative with respect
@@ -972,10 +953,10 @@ and this should readjust frequencies based on semantic importance.
 %, where $df_t = |\{d\in D, t \in d\}|$
 \end{exe}
 
-After counting/weighting, the frequencies are then either
-\textbf{averaged} to yield a response score (\textbf{A}), or NNS term
+After this counting or weighting, the scores are then either
+\textbf{averaged} to yield a response score, or NNS term
 weights and GS term weights are treated as vectors and the response
-score is the \textbf{cosine distance} (\textbf{C}) between them.  This
+score is the \textbf{cosine distance} between them.  This
 yields:
 
 %%former approach names: b = FA; m = IC (TC); c = FC; a = IA (TA)
@@ -1003,8 +984,8 @@ and NNS responses are assigned tf-idf weights before comparison.
 \subsection{System Parameters}
 \label{sec:parameters}
 
-In addition to the four approaches, we have term representations and
-two sets of parameters, listed below, to vary, resulting in a total of
+In addition to the four approaches, the five term representations and
+two sets of parameters, listed below, were varied, resulting in a total of
 60 settings for processing responses (see also
 Table~\ref{tab:dist-ranked-parameters}). 
 
@@ -1028,31 +1009,28 @@ originally distributed (\param{W}: 1640, \param{B}: 499). The WSJ is
 larger, but Brown has the benefit of containing more balance in its
 genres (vs. newstext only). Considering the narrative nature of PDT
 responses, a reference corpus of narrative texts would be ideal, but
-we choose manually parsed reference corpora as they are more reliable
+I chose manually parsed reference corpora as they are more reliable
 than automatically parsed data.
 
 \paragraph{NNS source.} Each response has an original version
 (\param{NNSO}) and the output of a language model spelling corrector
-(\param{NNSLM}) (see section~\ref{sec:data}).
+(\param{NNSLM}). (The current dissertation relies on a corpus for which participants used spell checking at the time of the task, so this offline spelling correction is no longer applicable. In short, it used a spelling tool to find candidate spellings for each word in a NNS sentence, pruned the lists of candidate words by comparing against words in NS responses, formed new candidate sentences by combining candidate words, and finally chose the most likely sentence by rating each candidate with a trigram word model. I omit the exact details here for brevity, but more can be found in \cite{king:dickinson:14}).
 
 \subsection{Results}
 
 \subsubsection{Evaluation metrics}
 \label{sec:metrics}
 
-We ran 60 response experiments, each with different system settings
-(section~\ref{sec:parameters}). Within each experiment, we rank the 39
+I ran 60 response experiments, each with different system settings
+(section~\ref{sec:parameters}). Within each experiment, I ranked the 39
 scored NNS responses from least to most similar to the GS.
 
-For assessing these settings themselves, we rely on past annotation,
+For assessing these settings themselves, I relied on the past annotation,
 which counted unacceptable responses as errors (see
-section~\ref{sec:data}).\footnote{The source of the error is also
-labeled---stemming from NNS unintelligibility or a system error
-(from spelling correction, parsing, or some downstream
-component)---but we do not currently use this annotation.}  As the
+section~\ref{sec:eval:extraction}).  As the
 lowest rank indicates the greatest distance from the GS, a good system
 setting should ideally position the unacceptable responses among those
-with the lowest rankings. Thus, we assign each error-containing
+with the lowest rankings. Thus, I assigned each error-containing
 response a score equal to its rank, or, if necessary, the average rank
 of responses sharing the same score.
 
@@ -1096,7 +1074,7 @@ responses with errors are tied, covering rank 1 and 2, so each adds a score of 1
 \multicolumn{3}{|c|}{Average Precision} & \multicolumn{2}{c|}{0.75084} \\
 \hline
 \end{tabular}
-\caption{Rankings for Item 10 from the best system setting (TC\_B\_NNSLM\_ldh) based on average precision scores. \textit{R}: rank; \textit{S}: sentence score; \textit{E}: error; \textit{V}: rank value. }
+\caption{Rankings for Item 10 from the best system setting (tf-idf cosine scoring, Brown Corpus for tf-idf reference, the language model spelling corrected NNS sentence, and the full label, dependent and head representation; TC\_B\_NNSLM\_ldh) based on average precision scores. \textit{R}: rank; \textit{S}: sentence score; \textit{E}: error; \textit{V}: rank value. Note that not all responses are shown. }
 \label{tab:i10responses-avgprec}
 \end{center}
 \end{table}
@@ -1113,7 +1091,7 @@ item difficulty.
 However, it is possible that the \param{NNSO} experiment, even with
 its higher error count and Raw score, does a better job ranking the
 responses in a way that separates good and erroneous ones. To account
-for this, we also use \textbf{(mean) average precision ((M)AP)}
+for this, I also used \textbf{(mean) average precision ((M)AP)}
 \citep[][ch. 8]{manning-et-al:08}, which emphasizes discriminatory
 power.
 
@@ -1136,9 +1114,10 @@ Precision(R_k)$
 
 As mentioned, the Raw metric emphasizes error reduction, as it
 reflects not just performance on identifying errors, but also the
-effect of the overall number of errors.  In this way, it may be useful
-for predicting future system performance, an issue we explore in the
-evaluation of clustering items (section~\ref{sec:clusteringresults}).
+effect of the overall number of errors.
+%In this way, it may be useful
+%for predicting future system performance, an issue we explore in the
+%evaluation of clustering items (section~\ref{sec:clusteringresults}).
 MAP, on the other hand, emphasizes finding the optimal separation
 between errors and non-errors and is thus more of the focus in the
 evaluation of the best system parameters next.
@@ -1146,13 +1125,13 @@ evaluation of the best system parameters next.
 \subsubsection{Best system parameters} 
 
 To start the search for the best system parameters, it may help to
-continue our single example, in
+continue with the example in
 Table~\ref{tab:i10responses-avgprec}. The best setting, as determined by the
-Normalized metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{B}),
+MAP metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{B}),
 the spelling corrected response (\param{NNSLM}), and the full form of
 the dependencies (\param{ldh}). It ranks highest because errors are
 well separated from non-errors; the highest ranked of 17 total errors
-is at rank 19.  Digging a bit deeper, we can see in this example how
+is at rank 19.  Digging a bit deeper, one can see in this example how
 the verb \textit{shoot} is common in all the highest-ranked cases shown
 (\#37--39), but absent from all the lowest, showing both the effect of
 the GS (as all NSs used \textit{shoot} to describe the action) and the
@@ -1197,7 +1176,7 @@ responses.\footnote{Note that among the remaining parameter classes,
 variation does not effect the number of errors.}
 
 Another feature among the best settings is the inclusion of heads in the dependency representations. In fact, the top 17 ranked settings all include heads (\param{lxh}, \param{xdh}, \param{ldh}); \param{xdx} first enters the rankings at 18, and \param{xdx} and \param{ldx} are common among the worst performers. This is likely due to the salience of the verbs in these transitive sentences; they constitute the heads of the subjects and objects, in relatively short sentences with few dependencies.
-Furthermore, the tf-idf weighted models dominate the rankings, especially \param{TC}. It is also clear that for our data tf-idf works best with the Brown Corpus (\param{B}).
+Furthermore, the tf-idf weighted models dominate the rankings, especially \param{TC}. It is also clear that for my data tf-idf works best with the Brown Corpus (\param{B}).
 
 \begin{table}[htb!]
 \begin{center}
@@ -1233,10 +1212,10 @@ Rank & MAP & Settings \\
 \end{center}
 \end{table}
 
-We also summarize the rankings for the individual parameter classes,
+I also summarize the rankings for the individual parameter classes,
 presented in Table~\ref{tab:dist-ranked-parameters}, confirming the
 trends in Table~\ref{tab:all-dist-ranked-settings}. For a given
-parameter, e.g., \param{ldh}, we averaged the experiment scores from
+parameter, e.g., \param{ldh}, I averaged the experiment scores from
 all settings including \param{ldh} across all 10 items. Notably, \param{TC} outperforms the other models, with \param{FC} and \param{TA} close behind (and nearly tied). Performance falls for the simplest model, \param{FA}, which was in fact intended as a baseline. With \param{TC}$>$\param{FC} and \param{TA}$>$\param{FA}, tf-idf weighting seems preferable to basic frequencies.
 
 Again, the importance of including heads in dependencies is apparent here; the three dependency representations containing heads constitute the top three, with a sizable drop in performance for the remaining two forms (\param{xdx} and \param{ldx}). Moreover, given the content and narrative style of the PDT responses, it is unsurprising that the Brown Corpus serves as a better reference corpus than the WSJ Corpus for tf-idf. Finally, the \param{NNSLM} source significantly outperforms the \param{NNSO} source.
@@ -1244,26 +1223,26 @@ Again, the importance of including heads in dependencies is apparent here; the t
 Despite the strength of these overall trends, variability
 does exist among the best settings for different items, a point obscured
 in the averages.  In Tables~\ref{tab:i01-dist-ranked-settings} and
-\ref{tab:i05-dist-ranked-settings}, we present the best and worst
+\ref{tab:i05-dist-ranked-settings}, I present the best and worst
 ranked settings for two of the least similar items, 1 and 5.
 Their dissimilarity can be seen at a glance, simply from the range of
 the AP scores (0.05--0.31 for item 1 vs. 0.52--0.81 for item 5), which
 in itself reflects a differing number of erroneous responses (2 [\param{NNSO}]
 or 6 [\param{NNSLM}] for item 1 vs. 23 or 24 for item 5).
 
-For item 1, a drawing of a boy kicking a ball, we see considerable
-variability in the best approach just within the top five settings:
-all four approaches are in the top five.  Contrary to the overall
-trends, we also see the \param{ldx} form---without any head
+For item 1, a drawing of a boy kicking a ball, there is considerable
+variability in the best scoring approach just within the top five settings:
+all four approaches (TA, TC, FA, FC) are in the top five.  Contrary to the overall
+trends, I also found the \param{ldx} form---without any head
 information---in the two best settings.  Note also that, even though
-tf-idf weighting (\param{TA}/\param{TC}) is among the best settings, it is
-consistently the worst setting, too.
+tf-idf weighting (\param{TA}/\param{TC}) is usually among the best settings, it is
+occurs among the worst settings, too.
 
 For item 5 in Table~\ref{tab:i05-dist-ranked-settings}, a drawing of a
 man raking leaves, the most noticeable difference is that
 of \param{xdx} being among three of the top five settings.
-We believe that part of the reason for
-the superior performance of \param{xdx} (cf. lemmas), is that for this
+I believe that part of the reason for
+the higher performance of \param{xdx} (cf. lemmas), is that for this
 item, all the NSs use the verb \textit{rake}, while none of the NNSs use this word.  For item 1 (the boy kicking a ball), there is lexical variation
 for both NSs and NNSs.
 
@@ -1336,196 +1315,205 @@ Rank & AP & Settings \\
 \end{center}
 \end{table}
 
-These types of differences---for these items and others---
-lead us to explore the clustering of item patterns, in order to
+These types of differences---for these items and others---lead me to explore the clustering of item patterns, in order to
 leverage these differences and automatically choose the optimal
 settings for new items; we turn to this next.
 
-\section{Clustering}
-\label{sec:clustering}
-
-Given the variability of NS and NNS responses, and the possible
-correlation with different system parameters, we have begun exploring
-connections by clustering the different items.  The clustering uses,
-for one set, \emph{response features}, i.e., features observable from
-the responses, and, separately, \emph{performance features}, i.e., the
-performance of different system settings on the responses.
-
-Although the work is very exploratory, our goal is to get a handle on
-learner variability for different items and explore correlations
-between response and performance clusters.
-
-\subsection{Response Clustering}
-
-We cluster the 10 PDT items using simple features taken from the
-responses themselves. Specifically, we use various combinations of
-type counts, token counts, and type-to-token ratios for each term form
-(\param{ldh}, \param{xdh}, \param{lxh}, \param{ldx}, \param{xdx}),
-taken from each response source (GS, \param{NNSO}, \param{NNSLM}).
-
-\subsection{Performance Clustering}
-
-From the system output, we cluster items using per-item Raw 
-scores for various settings. That is, for each of the 10 items, we
-calculate an average error score for each approach
-(\param{FA}, \param{TA}, \param{FC}, \param{TC}), each term form
-(\param{ldh}, \param{xdh}, \param{lxh}, \param{ldx}, \param{xdx}),
-each reference corpus (\param{B}, \param{W}), and each
-response source (\param{NNSO}, \param{NNSLM}). 
-As mentioned in section~\ref{sec:metrics}, Raw scores should account for the number of
-errors produced by NNSs for each item, which should 
-correlate with future system performance.
-
-\subsection{Results}
-\label{sec:clusteringresults}
-
-Although there is noise in some experiments, some patterns do seem to
-emerge in many of the clusterings; we present some of the most common
-patterns here.
-
-Figure~\ref{fig:response-clusters} shows a clustering based on
-response features that shares some characteristics with
-Figure~\ref{fig:parameter-clusters}, a clustering based on performance
-features. (Note that clustering heights are not to scale.)  In both
-examples, items 5 and 9 form a cluster attaching to the root. These
-are described in the GS as \textit{A man is raking leaves} and
-\textit{Two boys are rowing a boat}. These were also the two most
-difficult items for NNSs. While other items involved common verbs like
-\textit{kick}, \textit{paint} and \textit{cut}, the actions depicted
-in these items were more specific and required words outside the
-vocabulary of many participants. For example, while all 14 NSs used
-either \textit{row} or \textit{paddle}, only five of 39 NNSs used
-these verbs; the rest used verbs like \textit{boat}, \textit{sail},
-\textit{sit}, \textit{play} or \textit{ride}.
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}[sloped]
-\node (5) at (-7.5,0) {5};
-\node (9) at (-6.9,0) {9};
-\node (1) at (-6.2,0) {1};
-\node (4) at (-5.5,0) {4};
-\node (6) at (-4.7,0) {6};
-\node (2) at (-4.0,0) {2};
-\node (8) at (-3.2,0) {8};
-\node (10) at (-2.6,0) {10};
-\node (3) at (-1.8,0) {3};
-\node (7) at (-1.1,0) {7};
-\node (59) at (-7.2,0.7) {};
-\node (14) at (-5.9,0.7) {};
-\node (28) at (-3.5,0.7) {};
-\node (37) at (-1.5,0.7) {};
-\node (1037) at (-2.3,1) {};
-\node (281037) at (-2.9,1.3) {};
-\node (6281037) at (-3.6,1.7) {};
-\node (146281037) at (-4.9,2.1) {};
-\node (59146281037) at (-6.4,2.5) {};
-\draw  (5)  |- (59.center);
-\draw  (9)  |- (59.center);
-\draw  (1)  |- (14.center);
-\draw  (4)  |- (14.center);
-\draw  (2)  |- (28.center);
-\draw  (8)  |- (28.center);
-\draw  (3)  |- (37.center);
-\draw  (7)  |- (37.center);
-\draw (10) |- (1037.center);
-\draw (37) |- (1037.center);
-\draw (1037) |- (281037.center);
-\draw (28) |- (281037.center);
-\draw (6) |- (6281037.center);
-\draw (281037) |- (6281037.center);
-\draw (14) |- (146281037.center);
-\draw (6281037) |- (146281037.center);
-\draw (59) |- (59146281037.center);
-\draw (146281037) |- (59146281037.center);
-\end{tikzpicture}
-\end{center}
-\caption{PDT items clustered by type and token counts of all NS, NNSO and NNSLM responses.} 
-%%duh?%%(Heights not to scale.)}
-\label{fig:response-clusters}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}[sloped]
-\node (5) at (-7.5,0) {5};
-\node (9) at (-6.9,0) {9};
-\node (3) at (-6.2,0) {8};
-\node (8) at (-5.5,0) {3};
-\node (2) at (-4.7,0) {2};
-\node (10) at (-4.0,0) {10};
-\node (1) at (-3.2,0) {1};
-\node (4) at (-2.6,0) {4};
-\node (6) at (-1.8,0) {6};
-\node (7) at (-1.1,0) {7};
-\node (59) at (-7.2,.8) {};
-\node (210) at (-4.3,.7) {};
-\node (14) at (-2.9,.7) {};
-\node (67) at (-1.5,.7) {};
-\node (8210) at (-4.9,1.0) {};
-\node (38210) at (-5.7,1.3) {};
-\node (1467) at (-2.2,1.4) {};
-\node (382101467) at (-4,2) {};
-\node (all) at (-5,2.5) {};
-\draw  (5) |- (59.center);
-\draw  (9) |- (59.center);
-\draw  (2) |- (210.center);
-\draw  (10) |- (210.center);
-\draw  (1) |- (14.center);
-\draw  (4) |- (14.center);
-\draw  (6) |- (67.center);
-\draw  (7) |- (67.center);
-\draw  (8) |- (8210.center);
-\draw  (210) |- (8210.center);
-\draw  (8210) |- (38210.center);
-\draw  (3) |- (38210.center);
-\draw  (14) |- (1467.center);
-\draw  (67) |- (1467.center);
-\draw  (38210) |- (382101467.center);
-\draw  (1467)  |- (382101467.center);
-\draw  (59)  |- (all.center);
-\draw  (382101467)  |- (all.center);
-\end{tikzpicture}
-\end{center}
-\caption{PDT items clustered by parameter performance.} 
-%%duh?%%(Heights not to scale.)}
-\label{fig:parameter-clusters}
-\end{figure}
-
-Items 1 and 4 also appear as a cluster in both cases. In GS examples,
-these are described as \textit{The boy is kicking a ball} and
-\textit{A man is reading a newspaper}. The images portray actions that
-language learners often learn in beginner courses, and in fact, these
-were the easiest items for NNSs. The simple actions and objects mean
-that both token counts and type counts are relatively low. \md{Just to make sure: are these still the right parameters that perform highly?}\lk{I changed it slightly; these are best, but the trend isn't very strong via MAP. the trends are different via Raw, (and stronger, hence the cluster!) but I don't think we want to go into that, given that we present the MAP for item 1 in Table 4} With regard
-to feature performance, for both items the same parameters perform
-highly (\param{TC}/\param{TA}, \param{ldx}/\param{ldh}/\param{xdh}), suggesting that a future item
-which clusters with these two would benefit from the same processing.
-
-\section{Summary and Outlook}
-
-We have investigated ways to reason about learner meaning in cases
-where the set of correct meanings is incomplete, namely in the
-case of picture description tasks (PDTs).  Specifically, we have
-explored different models of representing and scoring NNS responses to
-a picture---different linguistic representations, term weighting
-schemes, reference corpora, and use of spelling correction---in order
-to automatically determine the relevant parts of an image from a set
-of NS responses.  In more exploratory work, we have also examined the
-variability in both NS and NNS responses, and how different system
-parameters correlate with the variability.  
-
-Already, the results are providing insight for future system
-development, data collection, and investigations into learner
-language.  A big next step of the work is to collect more data, and
-examining the variability in the NS/NNS data has provided feedback on
-the types of new data to gather, to better ensure a wide range of
-behavior from NNSs.  Getting a range of items, with different sentence
-types and variability in responses, will help us properly find our
-envisioned sweet spot of semantic analysis.  In that vein, we plan on
-exploring more parameters (e.g., semantic role information) and
-holding out data to better gauge the impact of clustering a new item
-with the existing items and selecting the processing parameters on
-that basis.
+%\section{Clustering}
+%\label{sec:clustering}
+%
+%Given the variability of NS and NNS responses, and the possible
+%correlation with different system parameters, we have begun exploring
+%connections by clustering the different items.  The clustering uses,
+%for one set, \emph{response features}, i.e., features observable from
+%the responses, and, separately, \emph{performance features}, i.e., the
+%performance of different system settings on the responses.
+%
+%Although the work is very exploratory, our goal is to get a handle on
+%learner variability for different items and explore correlations
+%between response and performance clusters.
+%
+%\subsection{Response Clustering}
+%
+%We cluster the 10 PDT items using simple features taken from the
+%responses themselves. Specifically, we use various combinations of
+%type counts, token counts, and type-to-token ratios for each term form
+%(\param{ldh}, \param{xdh}, \param{lxh}, \param{ldx}, \param{xdx}),
+%taken from each response source (GS, \param{NNSO}, \param{NNSLM}).
+%
+%\subsection{Performance Clustering}
+%
+%From the system output, we cluster items using per-item Raw 
+%scores for various settings. That is, for each of the 10 items, we
+%calculate an average error score for each approach
+%(\param{FA}, \param{TA}, \param{FC}, \param{TC}), each term form
+%(\param{ldh}, \param{xdh}, \param{lxh}, \param{ldx}, \param{xdx}),
+%each reference corpus (\param{B}, \param{W}), and each
+%response source (\param{NNSO}, \param{NNSLM}). 
+%As mentioned in section~\ref{sec:metrics}, Raw scores should account for the number of
+%errors produced by NNSs for each item, which should 
+%correlate with future system performance.
+%
+%\subsection{Results}
+%\label{sec:clusteringresults}
+%
+%Although there is noise in some experiments, some patterns do seem to
+%emerge in many of the clusterings; we present some of the most common
+%patterns here.
+%
+%Figure~\ref{fig:response-clusters} shows a clustering based on
+%response features that shares some characteristics with
+%Figure~\ref{fig:parameter-clusters}, a clustering based on performance
+%features. (Note that clustering heights are not to scale.)  In both
+%examples, items 5 and 9 form a cluster attaching to the root. These
+%are described in the GS as \textit{A man is raking leaves} and
+%\textit{Two boys are rowing a boat}. These were also the two most
+%difficult items for NNSs. While other items involved common verbs like
+%\textit{kick}, \textit{paint} and \textit{cut}, the actions depicted
+%in these items were more specific and required words outside the
+%vocabulary of many participants. For example, while all 14 NSs used
+%either \textit{row} or \textit{paddle}, only five of 39 NNSs used
+%these verbs; the rest used verbs like \textit{boat}, \textit{sail},
+%\textit{sit}, \textit{play} or \textit{ride}.
+%
+%\begin{figure}
+%\begin{center}
+%\begin{tikzpicture}[sloped]
+%\node (5) at (-7.5,0) {5};
+%\node (9) at (-6.9,0) {9};
+%\node (1) at (-6.2,0) {1};
+%\node (4) at (-5.5,0) {4};
+%\node (6) at (-4.7,0) {6};
+%\node (2) at (-4.0,0) {2};
+%\node (8) at (-3.2,0) {8};
+%\node (10) at (-2.6,0) {10};
+%\node (3) at (-1.8,0) {3};
+%\node (7) at (-1.1,0) {7};
+%\node (59) at (-7.2,0.7) {};
+%\node (14) at (-5.9,0.7) {};
+%\node (28) at (-3.5,0.7) {};
+%\node (37) at (-1.5,0.7) {};
+%\node (1037) at (-2.3,1) {};
+%\node (281037) at (-2.9,1.3) {};
+%\node (6281037) at (-3.6,1.7) {};
+%\node (146281037) at (-4.9,2.1) {};
+%\node (59146281037) at (-6.4,2.5) {};
+%\draw  (5)  |- (59.center);
+%\draw  (9)  |- (59.center);
+%\draw  (1)  |- (14.center);
+%\draw  (4)  |- (14.center);
+%\draw  (2)  |- (28.center);
+%\draw  (8)  |- (28.center);
+%\draw  (3)  |- (37.center);
+%\draw  (7)  |- (37.center);
+%\draw (10) |- (1037.center);
+%\draw (37) |- (1037.center);
+%\draw (1037) |- (281037.center);
+%\draw (28) |- (281037.center);
+%\draw (6) |- (6281037.center);
+%\draw (281037) |- (6281037.center);
+%\draw (14) |- (146281037.center);
+%\draw (6281037) |- (146281037.center);
+%\draw (59) |- (59146281037.center);
+%\draw (146281037) |- (59146281037.center);
+%\end{tikzpicture}
+%\end{center}
+%\caption{PDT items clustered by type and token counts of all NS, NNSO and NNSLM responses.} 
+%%%duh?%%(Heights not to scale.)}
+%\label{fig:response-clusters}
+%\end{figure}
+%
+%\begin{figure}
+%\begin{center}
+%\begin{tikzpicture}[sloped]
+%\node (5) at (-7.5,0) {5};
+%\node (9) at (-6.9,0) {9};
+%\node (3) at (-6.2,0) {8};
+%\node (8) at (-5.5,0) {3};
+%\node (2) at (-4.7,0) {2};
+%\node (10) at (-4.0,0) {10};
+%\node (1) at (-3.2,0) {1};
+%\node (4) at (-2.6,0) {4};
+%\node (6) at (-1.8,0) {6};
+%\node (7) at (-1.1,0) {7};
+%\node (59) at (-7.2,.8) {};
+%\node (210) at (-4.3,.7) {};
+%\node (14) at (-2.9,.7) {};
+%\node (67) at (-1.5,.7) {};
+%\node (8210) at (-4.9,1.0) {};
+%\node (38210) at (-5.7,1.3) {};
+%\node (1467) at (-2.2,1.4) {};
+%\node (382101467) at (-4,2) {};
+%\node (all) at (-5,2.5) {};
+%\draw  (5) |- (59.center);
+%\draw  (9) |- (59.center);
+%\draw  (2) |- (210.center);
+%\draw  (10) |- (210.center);
+%\draw  (1) |- (14.center);
+%\draw  (4) |- (14.center);
+%\draw  (6) |- (67.center);
+%\draw  (7) |- (67.center);
+%\draw  (8) |- (8210.center);
+%\draw  (210) |- (8210.center);
+%\draw  (8210) |- (38210.center);
+%\draw  (3) |- (38210.center);
+%\draw  (14) |- (1467.center);
+%\draw  (67) |- (1467.center);
+%\draw  (38210) |- (382101467.center);
+%\draw  (1467)  |- (382101467.center);
+%\draw  (59)  |- (all.center);
+%\draw  (382101467)  |- (all.center);
+%\end{tikzpicture}
+%\end{center}
+%\caption{PDT items clustered by parameter performance.} 
+%%%duh?%%(Heights not to scale.)}
+%\label{fig:parameter-clusters}
+%\end{figure}
+%
+%Items 1 and 4 also appear as a cluster in both cases. In GS examples,
+%these are described as \textit{The boy is kicking a ball} and
+%\textit{A man is reading a newspaper}. The images portray actions that
+%language learners often learn in beginner courses, and in fact, these
+%were the easiest items for NNSs. The simple actions and objects mean
+%that both token counts and type counts are relatively low. \md{Just to make sure: are these still the right parameters that perform highly?}\lk{I changed it slightly; these are best, but the trend isn't very strong via MAP. the trends are different via Raw, (and stronger, hence the cluster!) but I don't think we want to go into that, given that we present the MAP for item 1 in Table 4} With regard
+%to feature performance, for both items the same parameters perform
+%highly (\param{TC}/\param{TA}, \param{ldx}/\param{ldh}/\param{xdh}), suggesting that a future item
+%which clusters with these two would benefit from the same processing.
+%
+%\section{Summary and Outlook}
+%
+%We have investigated ways to reason about learner meaning in cases
+%where the set of correct meanings is incomplete, namely in the
+%case of picture description tasks (PDTs).  Specifically, we have
+%explored different models of representing and scoring NNS responses to
+%a picture---different linguistic representations, term weighting
+%schemes, reference corpora, and use of spelling correction---in order
+%to automatically determine the relevant parts of an image from a set
+%of NS responses.  In more exploratory work, we have also examined the
+%variability in both NS and NNS responses, and how different system
+%parameters correlate with the variability.  
+%
+%Already, the results are providing insight for future system
+%development, data collection, and investigations into learner
+%language. 
+%A big next step of the work is to collect more data, and
+%examining the variability in the NS/NNS data has provided feedback on
+%the types of new data to gather, to better ensure a wide range of
+%behavior from NNSs.  Getting a range of items, with different sentence
+%types and variability in responses, will help us properly find our
+%envisioned sweet spot of semantic analysis.  In that vein, we plan on
+%exploring more parameters (e.g., semantic role information) and
+%holding out data to better gauge the impact of clustering a new item
+%with the existing items and selecting the processing parameters on
+%that basis.
 
 %%%% END material from BEA 2016 %%%%
+
+\section{Current method}
+TODO:
+This section should briefly summarize the takeaways from the chapter and explain which of the settings described here are used in the current experiments.
+Note that the current data is not annotated for errors, which means the current experiments rely on Spearman rank correlation scores, not MAP scores. This means I can't assume that the best settings found in 2016 will apply, but I should argue that the 2016 results do show some ability to discriminate as desired. and after all --- errors don't appear in the GS, and thus for our purposes they aren't native-like, and TC especially does seem to perform well here. Generally, the top settings seem fairly unsurprising and intuitive.
+This leads directly into the next chapter (Experiments), which contains a section for each experiment, which is basically varying a given parameter (ldh, xdh, xdx), and the results for each experiment.
+
+Question:
+Do I need some kind of baseline to compare to? Perhaps Frequency Average (FA)?
