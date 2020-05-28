@@ -27,7 +27,7 @@
 \section{Introduction}
 The method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own earlier attempts. In this chapter, I summarize this work and explain the current method.
 
-In short, my previous attempt assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
+In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
 \section{First approaches: Rule based semantic triple matching}
@@ -59,7 +59,7 @@ ability of task design to induce particular linguistic behavior
 communicative behavior. PDT data allows one to investigate
 pure interlanguage without the influence of verbal prompts and shows
 learner language being used to convey meaning and not just manipulate forms.
-I knew that I would be relying on some kind of rule based approach for extracting \textit{verb(subject,object)} triples from syntactic dependency parses. Thus, for this initial experiment, I chose or developed each of the visual stimuli because it presents an event that I believe to be transitive in nature and likely to elicit responses with an unambiguous subject, verb and
+I knew that I would be relying on some kind of rule based approach for extracting \textit{verb(subject,object)} triples from syntactic dependency parses. Thus, for this experiment, I chose or developed each of the visual stimuli because it presents an event that I believe to be transitive in nature and likely to elicit responses with an unambiguous subject, verb and
 object, thereby imposing some restrictions on form and content.
 
 \begin{figure}[htb!]
@@ -67,7 +67,7 @@ object, thereby imposing some restrictions on form and content.
 \begin{center}
 \begin{tabular}{|c|}
 \hline
-\includegraphics[width=0.8\columnwidth]{figures/exampleprompt.jpg}\\
+\includegraphics[width=0.7\columnwidth]{figures/exampleprompt.jpg}\\
 \hline
 \textbf{Response (L1)} \\
 \hline
@@ -859,7 +859,7 @@ This work used the same 10 item PDT dataset described in section~\ref{sec:first-
 \begin{center}
 \begin{tabular}{|c|}
 \hline
-\includegraphics[width=0.95\columnwidth]{figures/exampleprompt2.jpg}\\
+\includegraphics[width=0.7\columnwidth]{figures/exampleprompt2.jpg}\\
 \hline
 \textbf{Response (L1)} \\
 \hline
@@ -980,6 +980,9 @@ the GS.
 \paragraph{Tf-idf Cosine (TC).} This involves the exact same
 distance comparison as with model FC, but now the terms of both the GS
 and NNS responses are assigned tf-idf weights before comparison.
+
+The two cosine approaches are effectively primitive versions of sentence encoders like the currently popular BERT \citep{BertDevlin2018} and Universal Sentence Encoder \citep{UniversalSentenceEncoder}. Sentence encoders are a form of language model that learns mathematical representations of words by observing them in context, accounting for things like average distance from a given word type to another given word type. Sentence encodings are thus vectors representing these word values for a full sentence. These approaches result in very high dimensional spaces---imagine a sentence representation that consists of a vector for each word in the sentence, where each vector is a list of average distances from that word type to \textit{every other word type in the language}. Thus sentence encoders typically rely on methods of dimensionality reduction to compress these representations into vectors of manageable length.
+I say my cosine approaches constitute ``primitive'' encoders because they omit this step. In the case of my PDT constrained corpus, the number of word types (and in turn dependency types) observed for a given item remains small enough that the raw vectors representing dependencies' tf-idf scores can still be processed easily with a laptop computer. Not only does this simplify the process, it means that the process remains transparent. There are no opaque machine learning processes that derive compressed representations, and each sentence vector could be examined value by value, where each number represents a real dependency. This is important because it leaves the door open for meaningful feedback on each response. For example, one could identify the most salient dependencies in the GS of a given item and somehow present those to a user who gives a low scoring response in order to suggest a more appropriate response. That is to say, a full encoder could determine how similar a response is to a GS, but it could not tell us \textit{why} it made its determination.
 
 \subsection{System Parameters}
 \label{sec:parameters}
@@ -1510,10 +1513,15 @@ settings for new items; we turn to this next.
 %%%% END material from BEA 2016 %%%%
 
 \section{Current method}
-TODO:
-This section should briefly summarize the takeaways from the chapter and explain which of the settings described here are used in the current experiments.
-Note that the current data is not annotated for errors, which means the current experiments rely on Spearman rank correlation scores, not MAP scores. This means I can't assume that the best settings found in 2016 will apply, but I should argue that the 2016 results do show some ability to discriminate as desired. and after all --- errors don't appear in the GS, and thus for our purposes they aren't native-like, and TC especially does seem to perform well here. Generally, the top settings seem fairly unsurprising and intuitive.
-This leads directly into the next chapter (Experiments), which contains a section for each experiment, which is basically varying a given parameter (ldh, xdh, xdx), and the results for each experiment.
 
-Question:
-Do I need some kind of baseline to compare to? Perhaps Frequency Average (FA)?
+The current method relies on a much larger corpus with more detailed annotation. As discussed in Chapter 4, the annotations do not encode for errors, as before, but instead give a binary score for five different features. This means the evaluation cannot take the form of MAP, but must instead compare response rankings, i.e., how well does the system rank responses in comparison to an ideal ranking based on manual annotations? Spearman rank correlation is used to provide these scores.
+
+Because the annotations and evaluation are much different in the current work, it does not exactly follow that findings from the previous work will hold true. However, I believe that the previous work has highlighted some of the system parameters that are most likely to perform well, and I choose to experiment among the top contenders. For example, all of the current experiments rely on the tf-idf cosine (TC) approach, as this consistently outperformed the others. The frequency average (FA) approach is used \lk{Is it?} as a baseline where appropriate, as this presents a very simplistic distributional approach as opposed to the more linguistically sophisticated TC. The large increase in the size of the datasets also means that running an exhaustive search for the best parameters among all combinations is not reasonable; as discussed, the previous work used 60 different system settings in total. For that reason, I have chosen to focus on experiments that optimize for each parameter individually, then combine the best parameter settings for use on held out data to ensure they perform optimally. These experiments and their results are discussed in Chapter 6.
+
+%TODO:
+%This section should briefly summarize the takeaways from the chapter and explain which of the settings described here are used in the current experiments.
+%Note that the current data is not annotated for errors, which means the current experiments rely on Spearman rank correlation scores, not MAP scores. This means I can't assume that the best settings found in 2016 will apply, but I should argue that the 2016 results do show some ability to discriminate as desired. and after all --- errors don't appear in the GS, and thus for our purposes they aren't native-like, and TC especially does seem to perform well here. Generally, the top settings seem fairly unsurprising and intuitive.
+%This leads directly into the next chapter (Experiments), which contains a section for each experiment, which is basically varying a given parameter (ldh, xdh, xdx), and the results for each experiment.
+%
+%Question:
+%Do I need some kind of baseline to compare to? Perhaps Frequency Average (FA)?
