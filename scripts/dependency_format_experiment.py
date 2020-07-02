@@ -137,7 +137,7 @@ def write_output(rs, nm):
 
 def main():
 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/responses/TC/')
-	outputdir=('/Users/leviking/Documents/dissertation/SAILS/weighting_dependencies/')
+	outputdir=('/Users/leviking/Documents/dissertation/SAILS/experiments/dependency_format/')
 	input_files = get_infile_names(sourcedir)
 	spearman_rows = [["Source", "ldh_w_spear", "ldh_w_p", "xdh_w_spear", "xdh_w_p", "xdx_w_spear", "xdx_w_p", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]]
 	for inf in input_files:
