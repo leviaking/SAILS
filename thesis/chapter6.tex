@@ -104,10 +104,11 @@ Because the non-normalized GSs outperform their normalized counterparts, and bec
 
 \section{Dependency formats}
 \label{section:experiment-dependency-formats}
-One parameter I vary in my pipeline is the format with which I represent each dependency. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements; the results are shown in Table~\ref{tab:dist-ranked-parameters}. In the current dissertation, I compare the system performance using three formats: \textit{label-dependent-head} (ldh), \textit{dependent-head} only (xdh), and \textit{dependent} only (xdx). In other words, in my ``bag of terms'' approach, the bags contain either labeled dependencies (ldh), unlabeled dependencies (xdh) or words (xdx). The labeled and unlabeled dependencies were the top performers in my previous work, and the xdx format is included as a kind of baseline showing a bag of words approach.
+One parameter I vary in my pipeline is the format with which I represent each dependency. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching; the results are shown in Table~\ref{tab:dist-ranked-parameters}. In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (ldh), \textit{dependent-head} only (xdh), and \textit{dependent} only (xdx). In other words, in my ``bag of terms'' approach, the bags contain either labeled dependencies (ldh), unlabeled dependencies (xdh) or words (xdx). The labeled and unlabeled dependencies were the top performers in my previous work, and the xdx format is included as a kind of baseline showing a bag of words approach.
 
 \subsection{Results}
 \label{subsection:dependency-formats-results}
+In all cases, the \texttt{ldh} format results in a higher Spearman correlation than \texttt{xdh}. As expected, \texttt{xdx} performs significantly worse than either \texttt{ldh} or \texttt{xdh}.
 
 \section{Targeted vs Untargeted}
 \label{section:experiment-targeted}

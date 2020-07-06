@@ -2,6 +2,11 @@
 
 ##June 2020; this is branched from weighting_dependencies_experiment.py;
 ## Currently a work in progress... this is for comparing LDH, XDH and XDX
+## Input files columns O, P, Q (zero indexed = x[14,15,16] :
+## ldh TC unweighted	xdh TC unweighted	xdx TC unweighted
+## Note these are the right-most columns in input files
+
+##TODO: Remove all the "w" weighted values here
 
 import sys, math, csv
 from os import walk
@@ -17,7 +22,8 @@ def get_infile_names(somedir):
 	for (dirpath, dirnames, filenames) in walk(somedir):
 		docnames.extend(filenames)
 		break
-	docnames = [dn for dn in docnames if "NNS_vs_all_ns_TC_w" in dn]
+	# # docnames = [dn for dn in docnames if "NNS_vs_all_ns_TC_w" in dn]
+	docnames = [dn for dn in docnames if "NNS_vs_all_fns_TC_w" in dn]
 	docnames.sort()
 	return docnames
 
@@ -59,32 +65,26 @@ def get_all_rankings(rrows):
 	## takes full csv rows, which now include the AnnoScore; relevant columns are row[17] thru row[23]
 	## from [ldh TC weighted, xdh TC weighted, xdx TC weighted, ldh TC unweighted, xdh TC unweighted, xdx TC unweighted, AnnoScore]
 	## generate [ldh w rank, xdh w rank, xdx w rank, ldh uw rank, xdh uw rank, xdx uw rank, AnnoRank]
-	ldh_w_scores = []
-	xdh_w_scores = []
-	xdx_w_scores = []
+	# # ldh_w_scores = []
+	# # xdh_w_scores = []
+	# # xdx_w_scores = []
 	ldh_uw_scores = []
 	xdh_uw_scores = []
 	xdx_uw_scores = []
 	anno_scores = []
 	for rr in rrows:
-		ldh_w_scores.append(rr[11])
-		xdh_w_scores.append(rr[12])
-		xdx_w_scores.append(rr[13])
-		ldh_uw_scores.append(rr[14])
-		xdh_uw_scores.append(rr[15])
-		xdx_uw_scores.append(rr[16])
-		anno_scores.append(rr[17])
-	ldh_w_ranks = list(rankdata(ldh_w_scores).astype(float))
-	xdh_w_ranks = list(rankdata(xdh_w_scores).astype(float))
-	xdx_w_ranks = list(rankdata(xdx_w_scores).astype(float))
+		ldh_uw_scores.append(rr[11])
+		xdh_uw_scores.append(rr[12])
+		xdx_uw_scores.append(rr[13])
+		anno_scores.append(rr[14])
 	ldh_uw_ranks = list(rankdata(ldh_uw_scores).astype(float))
 	xdh_uw_ranks = list(rankdata(xdh_uw_scores).astype(float))
 	xdx_uw_ranks = list(rankdata(xdx_uw_scores).astype(float))
 	anno_ranks = list(rankdata(anno_scores).astype(float))
-	spearman_row = calculate_spearman([ldh_w_ranks, xdh_w_ranks, xdx_w_ranks, ldh_uw_ranks, xdh_uw_ranks, xdx_uw_ranks, anno_ranks])
+	spearman_row = calculate_spearman([ldh_uw_ranks, xdh_uw_ranks, xdx_uw_ranks, anno_ranks])
 	extended_rows = []
 	for rr in rrows:
-		xr = rr+[ldh_w_ranks.pop(0), xdh_w_ranks.pop(0), xdx_w_ranks.pop(0), ldh_uw_ranks.pop(0), xdh_uw_ranks.pop(0), xdx_uw_ranks.pop(0), anno_ranks.pop(0)]
+		xr = rr+[ldh_uw_ranks.pop(0), xdh_uw_ranks.pop(0), xdx_uw_ranks.pop(0), anno_ranks.pop(0)]
 		extended_rows.append(xr)
 	return extended_rows, spearman_row
 
@@ -92,27 +92,21 @@ def get_all_rankings(rrows):
 def calculate_spearman(allranks):
 	## spearman values will go in a csv with this header:
 	## (Source), ldh_w_spearman, ldh_w_p, xdh_w_spearman, xdh_w_p, xdx_w_spearman, xdx_w_p, ldh_uw_spearman, ldh_uw_p, xdh_uw_spearman, xdh_uw_p, xdx_uw_spearman, xdx_uw_p
-	ldh_w_ranks = allranks[0]
-	xdh_w_ranks = allranks[1]
-	xdx_w_ranks = allranks[2]
-	ldh_uw_ranks = allranks[3]
-	xdh_uw_ranks = allranks[4]
-	xdx_uw_ranks = allranks[5]
-	anno_ranks = allranks[6]
-	ldh_w_spr, ldh_w_p = spearmanr(ldh_w_ranks, anno_ranks)
-	xdh_w_spr, xdh_w_p = spearmanr(xdh_w_ranks, anno_ranks)
-	xdx_w_spr, xdx_w_p = spearmanr(xdx_w_ranks, anno_ranks)
+	ldh_uw_ranks = allranks[0]
+	xdh_uw_ranks = allranks[1]
+	xdx_uw_ranks = allranks[2]
+	anno_ranks = allranks[3]
 	ldh_uw_spr, ldh_uw_p = spearmanr(ldh_uw_ranks, anno_ranks)
 	xdh_uw_spr, xdh_uw_p = spearmanr(xdh_uw_ranks, anno_ranks)
 	xdx_uw_spr, xdx_uw_p = spearmanr(xdx_uw_ranks, anno_ranks)
-	sp_row = [ldh_w_spr, ldh_w_p, xdh_w_spr, xdh_w_p, xdx_w_spr, xdx_w_p, ldh_uw_spr, ldh_uw_p, xdh_uw_spr, xdh_uw_p, xdx_uw_spr, xdx_uw_p]
+	sp_row = [ldh_uw_spr, ldh_uw_p, xdh_uw_spr, xdh_uw_p, xdx_uw_spr, xdx_uw_p]
 	return sp_row
 
 
 def process_one_item(somefile):
 	## do all the above, return item rows and spearman scores
 	oldheader, sourcerows = get_source_rows(somefile)
-	newheader = oldheader+['ldh w rank', 'xdh w rank', 'xdx w rank', 'ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoScore', 'AnnoRank']
+	newheader = oldheader+['ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoScore', 'AnnoRank']
 	sourcerows = apply_annotation_weights(sourcerows)
 	rows_with_ranks, spearman_row = get_all_rankings(sourcerows)
 	rows_with_ranks.insert(0, newheader)
@@ -139,14 +133,14 @@ def main():
 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/responses/TC/')
 	outputdir=('/Users/leviking/Documents/dissertation/SAILS/experiments/dependency_format/')
 	input_files = get_infile_names(sourcedir)
-	spearman_rows = [["Source", "ldh_w_spear", "ldh_w_p", "xdh_w_spear", "xdh_w_p", "xdx_w_spear", "xdx_w_p", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]]
+	spearman_rows = [["Source", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]]
 	for inf in input_files:
 		out_label = inf.replace("_TC_w.csv", "")
 		output_rows, spearman_row = process_one_item(sourcedir+inf)
 		spearman_row.insert(0, out_label)
 		spearman_rows.append(spearman_row)
 		write_output(output_rows, outputdir+out_label+".csv")
-	write_output(spearman_rows, outputdir+"Weighting_dependencies_experiment_spearman.csv")
+	write_output(spearman_rows, outputdir+"dependency_format_experiment_spearman.csv")
 
 
 if __name__ == "__main__":

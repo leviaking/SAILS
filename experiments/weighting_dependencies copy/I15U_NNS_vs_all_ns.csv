@@ -1,0 +1,551 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh TC weighted,xdh TC weighted,xdx TC weighted,ldh TC unweighted,xdh TC unweighted,xdx TC unweighted,ldh w rank,xdh w rank,xdx w rank,ldh uw rank,xdh uw rank,xdx uw rank,AnnoScore,AnnoRank
+I15U-gNNS-p004-r1,A man is about to plant a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	plant	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	tree	_	NN	NN	_	6	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'xsubj$@%man$@%plant', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%plant', 'xcomp$@%plant$@%about', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%about']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%plant', 'x$@%plant$@%about', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%about']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.69046169493138843,0.51306372382225462,0.045539275862922057,0.68117377105656962,0.48511756220416324,0.056986464692996064,1.0,51.0,50.0,24.0,51.0,50.0,24.0,46.5
+I15U-gNNS-p005-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p006-r1,A man is planting trees.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.14778301688951256,0.10415621460739144,0.039637627337058001,0.15484453655038577,0.11642670751479012,0.051177489949785437,1.0,20.0,20.0,13.0,20.0,20.0,17.0,46.5
+I15U-gNNS-p007-r1,The boy is planting trees right now,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NNS	NNS	_	4	dobj	_	_
+6	right	_	RB	RB	_	7	advmod	_	_
+7	now	_	RB	RB	_	4	advmod	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'advmod$@%right$@%now', 'advmod$@%now$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%right$@%now', 'x$@%now$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%right$@%x', 'x$@%now$@%x', 'x$@%.$@%x']",0.41633756727032589,0.41691027310610629,0.17057035520270392,0.42448845782777411,0.43721747016148671,0.18031976028837593,1.0,48.0,48.0,45.0,48.0,48.0,45.0,46.5
+I15U-gNNS-p009-r1,A man is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.06568185223980838,0.037957821646386947,0.039640830622649004,0.073530531442109415,0.045885889457070173,0.051177162864580295,1.0,14.5,14.5,15.5,14.5,14.5,14.5,46.5
+I15U-gNNS-p012-r1,the man is planting tree.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.14664822808081768,0.1031111610362766,0.039645284302988193,0.15346462742523004,0.11510164335524975,0.051181615359651933,0.944,18.0,18.0,19.0,18.0,18.0,19.0,19.5
+I15U-gNNS-p013-r1,The man putting a tree into the hole he dig.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	0	root	_	_
+3	put	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	into	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	hole	_	NN	NN	_	10	dobj	_	_
+9	he	_	PRP	PRP	_	10	nsubj	_	_
+10	dig	_	VB	VB	_	8	rcmod	_	_
+11	.	_	.	.	_	2	punct	_	_","['det$@%the$@%man', 'root$@%man$@%VROOT', 'partmod$@%put$@%man', 'det$@%a$@%tree', 'dobj$@%tree$@%put', 'erased$@%into$@%WORDERASED', 'det$@%the$@%hole', 'dobj$@%hole$@%dig', 'nsubj$@%he$@%dig', 'rcmod$@%dig$@%hole', 'punct$@%.$@%man']","['x$@%the$@%man', 'x$@%man$@%VROOT', 'x$@%put$@%man', 'x$@%a$@%tree', 'x$@%tree$@%put', 'x$@%into$@%WORDERASED', 'x$@%the$@%hole', 'x$@%hole$@%dig', 'x$@%he$@%dig', 'x$@%dig$@%hole', 'x$@%.$@%man']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%put$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%into$@%x', 'x$@%the$@%x', 'x$@%hole$@%x', 'x$@%he$@%x', 'x$@%dig$@%x', 'x$@%.$@%x']",0.84984587515809407,0.8655917502674777,0.55114928734284474,0.84011715244529284,0.84994511218110613,0.4937610528673384,0.944,55.0,55.0,63.0,54.0,55.0,60.0,19.5
+I15U-gNNS-p014-r1,A man is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.06568185223980838,0.037957821646386947,0.039640830622649004,0.073530531442109415,0.045885889457070173,0.051177162864580295,1.0,14.5,14.5,15.5,14.5,14.5,14.5,46.5
+I15U-gNNS-p017-r1,This boy is build trees. ,0,0,0,0,0,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	build	_	VB	VB	_	0	root	_	_
+5	tree	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%build', 'aux$@%be$@%build', 'root$@%build$@%VROOT', 'dobj$@%tree$@%build', 'punct$@%.$@%build']","['x$@%this$@%boy', 'x$@%boy$@%build', 'x$@%be$@%build', 'x$@%build$@%VROOT', 'x$@%tree$@%build', 'x$@%.$@%build']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%build$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",1.0,1.0,0.49240133542185582,1.0,1.0,0.49407224864630273,0.0,70.0,70.0,61.0,70.0,70.0,62.0,2.5
+I15U-gNNS-p021-r1,a boy is planting a tree,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23519743870031784,0.24157746358840937,0.13176993316277918,0.24545054975059621,0.26067462943817443,0.14208627229931026,1.0,32.0,36.0,32.0,34.0,37.0,36.0,46.5
+I15U-gNNS-p022-r1,The boy is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23238204453601918,0.23840436431717216,0.13177048453440532,0.2425282856285661,0.25743130338665388,0.14208550588701008,1.0,27.5,29.5,36.5,27.5,30.5,31.5,46.5
+I15U-gNNS-p023-r1,The man is planting trees.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.14664822808081768,0.1031111610362766,0.039645284302988193,0.15346462742523004,0.11510164335524975,0.051181615359651933,1.0,18.0,18.0,19.0,18.0,18.0,19.0,46.5
+I15U-gNNS-p026-r1,The man is planting a tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p027-r1,the man's planting a tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	's	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', ""aux$@%'s$@%plant"", 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', ""x$@%'s$@%plant"", 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', ""x$@%'s$@%x"", 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.26884646850598048,0.26374553527830691,0.040806330785169265,0.28085621249423665,0.24582331720105322,0.052332994685740375,1.0,39.0,39.0,23.0,39.0,28.0,23.0,46.5
+I15U-gNNS-p028-r1,A man with red hat is planting a tree,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	7	nsubj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	red	_	JJ	JJ	_	5	amod	_	_
+5	hat	_	NN	NN	_	2	prep_with	_	_
+6	be	_	VBZ	VBZ	_	7	aux	_	_
+7	plant	_	VBG	VBG	_	0	root	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	tree	_	NN	NN	_	7	dobj	_	_
+10	.	_	.	.	_	7	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'erased$@%with$@%WORDERASED', 'amod$@%red$@%hat', 'prep_with$@%hat$@%man', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%with$@%WORDERASED', 'x$@%red$@%hat', 'x$@%hat$@%man', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%with$@%x', 'x$@%red$@%x', 'x$@%hat$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.22915981615167513,0.21547465336504257,0.3840115620991581,0.23440613849443948,0.21949988260160747,0.38591829962169932,0.944,25.0,25.0,52.0,25.0,25.0,52.0,19.5
+I15U-gNNS-p030-r1,The boy is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23238204453601918,0.23840436431717216,0.13177048453440532,0.2425282856285661,0.25743130338665388,0.14208550588701008,1.0,27.5,29.5,36.5,27.5,30.5,31.5,46.5
+I15U-gNNS-p032-r1,A man is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.06568185223980838,0.037957821646386947,0.039640830622649004,0.073530531442109415,0.045885889457070173,0.051177162864580295,1.0,14.5,14.5,15.5,14.5,14.5,14.5,46.5
+I15U-gNNS-p034-r1,A boy is planting a little tree,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'amod$@%little$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%little$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%little$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.31070513157888757,0.32158782779110118,0.14708755821463959,0.31994596992061408,0.3386703235572105,0.15722283211688726,1.0,43.0,44.0,42.0,43.0,44.0,42.0,46.5
+I15U-gNNS-p036-r1,The boy is planting a small tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	small	_	JJ	JJ	_	7	amod	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'amod$@%small$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%small$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.29819941289769236,0.30985031348724534,0.16705070805215549,0.30534142510764828,0.32456026535433224,0.17582263373159079,1.0,42.0,42.0,44.0,42.0,42.0,44.0,46.5
+I15U-gNNS-p037-r1,The man is planting.,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%.$@%x']",0.25520178106129765,0.24020130672655549,0.34961889041141181,0.26282726799176881,0.26042822386318831,0.36295421845343412,0.411,37.5,32.5,50.5,37.5,33.5,50.5,11.0
+I15U-gNNS-p038-r1,A man wants to live a tree.,0,0,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	5	xsubj	_	_
+3	want	_	VBZ	VBZ	_	0	root	_	_
+4	to	_	TO	TO	_	5	aux	_	_
+5	live	_	VB	VB	_	3	xcomp	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	tree	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'xsubj$@%man$@%live', 'root$@%want$@%VROOT', 'aux$@%to$@%live', 'xcomp$@%live$@%want', 'det$@%a$@%tree', 'dobj$@%tree$@%live', 'punct$@%.$@%want']","['x$@%a$@%man', 'x$@%man$@%live', 'x$@%want$@%VROOT', 'x$@%to$@%live', 'x$@%live$@%want', 'x$@%a$@%tree', 'x$@%tree$@%live', 'x$@%.$@%want']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%live$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.86356740616869598,0.86771081769724712,0.38901384534080907,0.86430619714618084,0.86273198131432638,0.39135621185368652,0.0,56.0,56.0,54.0,56.0,56.0,54.0,2.5
+I15U-gNNS-p039-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p040-r1,A man is trying to plant a small tree in the field.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	plant	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	small	_	JJ	JJ	_	9	amod	_	_
+9	tree	_	NN	NN	_	6	dobj	_	_
+10	in	_	IN	IN	_	0	erased	_	_
+11	the	_	DT	DT	_	12	det	_	_
+12	field	_	NN	NN	_	6	prep_in	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'xsubj$@%man$@%plant', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%plant', 'xcomp$@%plant$@%try', 'det$@%a$@%tree', 'amod$@%small$@%tree', 'dobj$@%tree$@%plant', 'erased$@%in$@%WORDERASED', 'det$@%the$@%field', 'prep_in$@%field$@%plant', 'punct$@%.$@%try']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%plant', 'x$@%plant$@%try', 'x$@%a$@%tree', 'x$@%small$@%tree', 'x$@%tree$@%plant', 'x$@%in$@%WORDERASED', 'x$@%the$@%field', 'x$@%field$@%plant', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%tree$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%field$@%x', 'x$@%.$@%x']",0.72178798251777998,0.56591705473120835,0.19202769216896709,0.71232552641160962,0.53998639450877806,0.20014119876969616,1.0,52.0,51.0,46.0,52.0,51.0,46.0,46.5
+I15U-gNNS-p041-r1,The man is planting a little tree on the ground,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	ground	_	NN	NN	_	4	prep_on	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'amod$@%little$@%tree', 'dobj$@%tree$@%plant', 'erased$@%on$@%WORDERASED', 'det$@%the$@%ground', 'prep_on$@%ground$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%little$@%tree', 'x$@%tree$@%plant', 'x$@%on$@%WORDERASED', 'x$@%the$@%ground', 'x$@%ground$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%little$@%x', 'x$@%tree$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%ground$@%x', 'x$@%.$@%x']",0.2383038256507628,0.22504730359792613,0.16616914204527444,0.24285651072117764,0.22855780231970091,0.16848056472677775,1.0,35.0,26.0,43.0,30.0,26.0,43.0,46.5
+I15U-gNNS-p042-r1,He is planting the tree.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.29250256163559185,0.27335776225723385,0.04740267780467744,0.30308836989097754,0.29695488976347317,0.059248433118884503,1.0,40.5,40.5,27.5,40.5,40.5,27.5,46.5
+I15U-gNNS-p043-r1,He is planning a tree.,1,1,0,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plan	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plan', 'aux$@%be$@%plan', 'root$@%plan$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plan', 'punct$@%.$@%plan']","['x$@%he$@%plan', 'x$@%be$@%plan', 'x$@%plan$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plan', 'x$@%.$@%plan']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plan$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.84578386566579122,0.85084893796470495,0.38885397930593191,0.84087431775216448,0.84091958751830997,0.38932774984196261,0.72,54.0,54.0,53.0,55.0,54.0,53.0,16.0
+I15U-gNNS-p044-r1,A boy who is wear a blue shirt is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	10	nsubj	_	_
+3	who	_	WP	WP	_	0	erased	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	wear	_	NN	NN	_	2	rcmod	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	blue	_	JJ	JJ	_	8	amod	_	_
+8	shirt	_	NN	NN	_	5	dobj	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	plant	_	VBG	VBG	_	0	root	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	tree	_	NN	NN	_	10	dobj	_	_
+13	.	_	.	.	_	10	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'erased$@%who$@%WORDERASED', 'aux$@%be$@%wear', 'rcmod$@%wear$@%boy', 'det$@%a$@%shirt', 'amod$@%blue$@%shirt', 'dobj$@%shirt$@%wear', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%who$@%WORDERASED', 'x$@%be$@%wear', 'x$@%wear$@%boy', 'x$@%a$@%shirt', 'x$@%blue$@%shirt', 'x$@%shirt$@%wear', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%who$@%x', 'x$@%be$@%x', 'x$@%wear$@%x', 'x$@%a$@%x', 'x$@%blue$@%x', 'x$@%shirt$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.43160253877113919,0.44390075789801542,0.46863412244246239,0.43922259992884771,0.45790340015281639,0.47260031994421059,1.0,49.0,49.0,57.0,49.0,49.0,58.0,46.5
+I15U-gNNS-p051-r1,a boy is planting a tree,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23519743870031784,0.24157746358840937,0.13176993316277918,0.24545054975059621,0.26067462943817443,0.14208627229931026,1.0,32.0,36.0,32.0,34.0,37.0,36.0,46.5
+I15U-gNNS-p057-r1,A farmer is planting tree. ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	farmer	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%farmer', 'nsubj$@%farmer$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%farmer', 'x$@%farmer$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%farmer$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.3521499046242188,0.34751135197574712,0.32118762468693474,0.36247932716364561,0.3716085296199535,0.32965365375768219,0.944,47.0,47.0,47.0,47.0,47.0,48.0,19.5
+I15U-gNNS-p058-r1,He is planting a tree. ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.18648147240102608,0.17662560455258869,0.047394952060045736,0.20062979533317238,0.19891954628204789,0.059244270652521025,1.0,23.5,23.5,25.5,23.5,23.5,25.5,46.5
+I15U-gNNS-p065-r1,A boy is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23519743870031784,0.24157746358840937,0.13176993316277918,0.24545054975059621,0.26067462943817443,0.14208627229931026,1.0,32.0,36.0,32.0,34.0,37.0,36.0,46.5
+I15U-gNNS-p066-r1,The boy is a volunteering. ,0,0,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	volunteer	_	NN	NN	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%volunteer', 'cop$@%be$@%volunteer', 'det$@%a$@%volunteer', 'root$@%volunteer$@%VROOT', 'punct$@%.$@%volunteer']","['x$@%the$@%boy', 'x$@%boy$@%volunteer', 'x$@%be$@%volunteer', 'x$@%a$@%volunteer', 'x$@%volunteer$@%VROOT', 'x$@%.$@%volunteer']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%volunteer$@%x', 'x$@%.$@%x']",0.999707359177612,0.99974735787693292,0.99884779180353889,0.9995698185667039,0.99961250922924516,0.9983471555664668,0.0,69.0,69.0,70.0,69.0,69.0,70.0,2.5
+I15U-gNNS-p069-r1,A man is plantting a tree ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plantt	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plantt', 'aux$@%be$@%plantt', 'root$@%plantt$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plantt', 'punct$@%.$@%plantt']","['x$@%a$@%man', 'x$@%man$@%plantt', 'x$@%be$@%plantt', 'x$@%plantt$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plantt', 'x$@%.$@%plantt']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plantt$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.8895797358274411,0.90312973405772179,0.73877797730309669,0.89017766842266133,0.89948392420311973,0.7397909629322611,0.944,59.0,59.0,66.0,59.0,60.0,66.0,19.5
+I15U-gNNS-p070-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p072-r1,"After he died a hole, he is trying to put a plant in ti the hole",0,1,0,0,0,"1	after	_	IN	IN	_	3	mark	_	_
+2	he	_	PRP	PRP	_	3	nsubj	_	_
+3	die	_	VBD	VBD	_	9	advcl	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	hole	_	NN	NN	_	3	dobj	_	_
+6	,	_	,	,	_	9	punct	_	_
+7	he	_	PRP	PRP	_	11	xsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	try	_	VBG	VBG	_	0	root	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	put	_	VB	VB	_	9	xcomp	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	plant	_	NN	NN	_	11	dobj	_	_
+14	in	_	IN	IN	_	0	erased	_	_
+15	ti	_	JJ	JJ	_	17	amod	_	_
+16	the	_	DT	DT	_	17	det	_	_
+17	hole	_	NN	NN	_	13	prep_in	_	_
+18	.	_	.	.	_	9	punct	_	_","['mark$@%after$@%die', 'nsubj$@%he$@%die', 'advcl$@%die$@%try', 'det$@%a$@%hole', 'dobj$@%hole$@%die', 'punct$@%,$@%try', 'xsubj$@%he$@%put', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%put', 'xcomp$@%put$@%try', 'det$@%a$@%plant', 'dobj$@%plant$@%put', 'erased$@%in$@%WORDERASED', 'amod$@%ti$@%hole', 'det$@%the$@%hole', 'prep_in$@%hole$@%plant', 'punct$@%.$@%try']","['x$@%after$@%die', 'x$@%he$@%die', 'x$@%die$@%try', 'x$@%a$@%hole', 'x$@%hole$@%die', 'x$@%,$@%try', 'x$@%he$@%put', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%put', 'x$@%put$@%try', 'x$@%a$@%plant', 'x$@%plant$@%put', 'x$@%in$@%WORDERASED', 'x$@%ti$@%hole', 'x$@%the$@%hole', 'x$@%hole$@%plant', 'x$@%.$@%try']","['x$@%after$@%x', 'x$@%he$@%x', 'x$@%die$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%,$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%put$@%x', 'x$@%a$@%x', 'x$@%plant$@%x', 'x$@%in$@%x', 'x$@%ti$@%x', 'x$@%the$@%x', 'x$@%hole$@%x', 'x$@%.$@%x']",0.98619511056881193,0.98616310246787231,0.82410430855750016,0.98007631199295298,0.97901419562900271,0.76343233467444749,0.093,66.0,65.0,67.0,65.0,62.0,67.0,5.5
+I15U-gNNS-p074-r1,A man help the tree grow up.,0,0,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	help	_	VBP	VBP	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	6	nsubj	_	_
+6	grow	_	VB	VB	_	3	ccomp	_	_
+7	up	_	RP	RP	_	6	prt	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%help', 'root$@%help$@%VROOT', 'det$@%the$@%tree', 'nsubj$@%tree$@%grow', 'ccomp$@%grow$@%help', 'prt$@%up$@%grow', 'punct$@%.$@%help']","['x$@%a$@%man', 'x$@%man$@%help', 'x$@%help$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%grow', 'x$@%grow$@%help', 'x$@%up$@%grow', 'x$@%.$@%help']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%help$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%grow$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.98050723065847212,0.98293241308629831,0.43954214544222492,0.9772795872284995,0.97924782230701046,0.44127156019388969,0.0,62.0,62.0,56.0,62.0,63.0,56.0,2.5
+I15U-gNNS-p075-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p077-r1,The man is planting a tree. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p078-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p079-r1,The man is planting a tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p081-r1,the boy is planting the tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.33462502156466523,0.33041218510403048,0.13179807209736139,0.34132253468198748,0.35062300909484001,0.14209385286965337,1.0,45.5,45.5,40.5,45.5,45.5,40.5,46.5
+I15U-gNNS-p082-r1,The boy is making the tree.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	make	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%make', 'punct$@%.$@%make']","['x$@%the$@%boy', 'x$@%boy$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.98270714470053866,0.98475640991756297,0.40245604620586783,0.9793562652953578,0.9810112988294426,0.40442201700231106,0.149,63.0,63.0,55.0,63.0,64.0,55.0,7.0
+I15U-gNNS-p083-r1,The boy is planting a tree. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23238204453601918,0.23840436431717216,0.13177048453440532,0.2425282856285661,0.25743130338665388,0.14208550588701008,1.0,27.5,29.5,36.5,27.5,30.5,31.5,46.5
+I15U-gNNS-p086-r1,The man is planting the tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.16672912450878685,0.12812727022385573,0.039671457041120961,0.1708396437073868,0.1368842293556698,0.051185413606441799,1.0,21.5,21.5,21.5,21.5,21.5,21.5,46.5
+I15U-gNNS-p087-r1,a man is digging a hole for a small tree,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	digging	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	hole	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	small	_	JJ	JJ	_	10	amod	_	_
+10	tree	_	NN	NN	_	6	prep_for	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%digging', 'aux$@%be$@%digging', 'root$@%digging$@%VROOT', 'det$@%a$@%hole', 'dobj$@%hole$@%digging', 'erased$@%for$@%WORDERASED', 'det$@%a$@%tree', 'amod$@%small$@%tree', 'prep_for$@%tree$@%hole', 'punct$@%.$@%digging']","['x$@%a$@%man', 'x$@%man$@%digging', 'x$@%be$@%digging', 'x$@%digging$@%VROOT', 'x$@%a$@%hole', 'x$@%hole$@%digging', 'x$@%for$@%WORDERASED', 'x$@%a$@%tree', 'x$@%small$@%tree', 'x$@%tree$@%hole', 'x$@%.$@%digging']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%digging$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%small$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.88023577466287495,0.89491709016882726,0.66442141704442237,0.87317408013022701,0.88389749880843738,0.64326429432412269,1.0,58.0,58.0,65.0,58.0,58.0,65.0,46.5
+I15U-gNNS-p099-r1,A boy is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23519743870031784,0.24157746358840937,0.13176993316277918,0.24545054975059621,0.26067462943817443,0.14208627229931026,1.0,32.0,36.0,32.0,34.0,37.0,36.0,46.5
+I15U-gNNS-p101-r1,The boy is growing the plant.,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	grow	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	plant	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grow', 'aux$@%be$@%grow', 'root$@%grow$@%VROOT', 'det$@%the$@%plant', 'dobj$@%plant$@%grow', 'punct$@%.$@%grow']","['x$@%the$@%boy', 'x$@%boy$@%grow', 'x$@%be$@%grow', 'x$@%grow$@%VROOT', 'x$@%the$@%plant', 'x$@%plant$@%grow', 'x$@%.$@%grow']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grow$@%x', 'x$@%the$@%x', 'x$@%plant$@%x', 'x$@%.$@%x']",0.99201783675108246,0.99289110915458034,0.53200300245571386,0.99336580317042933,0.99383885419052709,0.54159485061982138,0.411,67.0,67.0,62.0,67.0,67.0,63.0,11.0
+I15U-gNNS-p104-r1,A boy is building a tree.,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	build	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%build', 'aux$@%be$@%build', 'root$@%build$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%build', 'punct$@%.$@%build']","['x$@%a$@%boy', 'x$@%boy$@%build', 'x$@%be$@%build', 'x$@%build$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%build', 'x$@%.$@%build']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%build$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.86530380822160846,0.87766880578162831,0.49220805858563843,0.86653894792908759,0.87353356120347614,0.49390838799221748,0.093,57.0,57.0,60.0,57.0,57.0,61.0,5.5
+I15U-gNNS-p105-r1,The man is planting trees.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.14664822808081768,0.1031111610362766,0.039645284302988193,0.15346462742523004,0.11510164335524975,0.051181615359651933,1.0,18.0,18.0,19.0,18.0,18.0,19.0,46.5
+I15U-gNNS-p106-r1,The man has dig a hole and is trying to planting the tree.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	9	nsubj	_	_
+3	have	_	VBZ	VBZ	_	4	aux	_	_
+4	dig	_	VBN	VBN	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	hole	_	NN	NN	_	4	dobj	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	try	_	VBG	VBG	_	4	conj_and	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	plant	_	VBG	VBG	_	9	prepc_to	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	tree	_	NN	NN	_	11	dobj	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%try', 'aux$@%have$@%dig', 'root$@%dig$@%VROOT', 'det$@%a$@%hole', 'dobj$@%hole$@%dig', 'erased$@%and$@%WORDERASED', 'aux$@%be$@%try', 'conj_and$@%try$@%dig', 'erased$@%to$@%WORDERASED', 'prepc_to$@%plant$@%try', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%dig']","['x$@%the$@%man', 'x$@%man$@%try', 'x$@%have$@%dig', 'x$@%dig$@%VROOT', 'x$@%a$@%hole', 'x$@%hole$@%dig', 'x$@%and$@%WORDERASED', 'x$@%be$@%try', 'x$@%try$@%dig', 'x$@%to$@%WORDERASED', 'x$@%plant$@%try', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%dig']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%have$@%x', 'x$@%dig$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%and$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.78065762284112017,0.7661895158047789,0.34239871337377126,0.74421051618854972,0.72547115976751986,0.29476759004871478,0.944,53.0,53.0,49.0,53.0,53.0,47.0,19.5
+I15U-gNNS-p107-r1,The man is digging a hole on the ground and planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	11	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	digging	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	hole	_	NN	NN	_	4	dobj	_	_
+7	on	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	ground	_	NN	NN	_	6	prep_on	_	_
+10	and	_	CC	CC	_	0	erased	_	_
+11	plant	_	VBG	VBG	_	4	conj_and	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	tree	_	NN	NN	_	11	dobj	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%digging', 'root$@%digging$@%VROOT', 'det$@%a$@%hole', 'dobj$@%hole$@%digging', 'erased$@%on$@%WORDERASED', 'det$@%the$@%ground', 'prep_on$@%ground$@%hole', 'erased$@%and$@%WORDERASED', 'conj_and$@%plant$@%digging', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%digging']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%digging', 'x$@%digging$@%VROOT', 'x$@%a$@%hole', 'x$@%hole$@%digging', 'x$@%on$@%WORDERASED', 'x$@%the$@%ground', 'x$@%ground$@%hole', 'x$@%and$@%WORDERASED', 'x$@%plant$@%digging', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%digging']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%digging$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%ground$@%x', 'x$@%and$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.65597857420033656,0.62572423492585805,0.47090095211099425,0.64768279929880945,0.60299406525549859,0.45256704675276915,1.0,50.0,52.0,58.0,50.0,52.0,57.0,46.5
+I15U-gNNS-p108-r1,The boy is holding a little tree and try to put it in a hole that already dig.,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	11	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hold	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	and	_	CC	CC	_	0	erased	_	_
+9	try	_	VBP	VBP	_	4	conj_and	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	put	_	VB	VB	_	9	xcomp	_	_
+12	it	_	PRP	PRP	_	11	dobj	_	_
+13	in	_	IN	IN	_	0	erased	_	_
+14	a	_	DT	DT	_	15	det	_	_
+15	hole	_	NN	NN	_	18	nsubj	_	_
+16	that	_	WDT	WDT	_	0	erased	_	_
+17	already	_	RB	RB	_	18	advmod	_	_
+18	dig	_	VB	VB	_	15	rcmod	_	_
+19	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%put', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%tree', 'amod$@%little$@%tree', 'dobj$@%tree$@%hold', 'erased$@%and$@%WORDERASED', 'conj_and$@%try$@%hold', 'aux$@%to$@%put', 'xcomp$@%put$@%try', 'dobj$@%it$@%put', 'erased$@%in$@%WORDERASED', 'det$@%a$@%hole', 'nsubj$@%hole$@%dig', 'erased$@%that$@%WORDERASED', 'advmod$@%already$@%dig', 'rcmod$@%dig$@%hole', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%put', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%tree', 'x$@%little$@%tree', 'x$@%tree$@%hold', 'x$@%and$@%WORDERASED', 'x$@%try$@%hold', 'x$@%to$@%put', 'x$@%put$@%try', 'x$@%it$@%put', 'x$@%in$@%WORDERASED', 'x$@%a$@%hole', 'x$@%hole$@%dig', 'x$@%that$@%WORDERASED', 'x$@%already$@%dig', 'x$@%dig$@%hole', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%little$@%x', 'x$@%tree$@%x', 'x$@%and$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%put$@%x', 'x$@%it$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%that$@%x', 'x$@%already$@%x', 'x$@%dig$@%x', 'x$@%.$@%x']",0.90827206183063991,0.90824873735632161,0.59915370773055265,0.90295936266259236,0.89460840246836204,0.5463216589796771,0.579,60.0,60.0,64.0,60.0,59.0,64.0,14.0
+I15U-gNNS-p109-r1,The man is digging a hole. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	digging	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	hole	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%digging', 'aux$@%be$@%digging', 'root$@%digging$@%VROOT', 'det$@%a$@%hole', 'dobj$@%hole$@%digging', 'punct$@%.$@%digging']","['x$@%the$@%man', 'x$@%man$@%digging', 'x$@%be$@%digging', 'x$@%digging$@%VROOT', 'x$@%a$@%hole', 'x$@%hole$@%digging', 'x$@%.$@%digging']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%digging$@%x', 'x$@%a$@%x', 'x$@%hole$@%x', 'x$@%.$@%x']",0.97702549011030615,0.97987774578838427,0.93713605385682419,0.97008513525759399,0.97265384441303082,0.91304465456562311,0.635,61.0,61.0,69.0,61.0,61.0,68.0,15.0
+I15U-gNNS-p111-r1,A boy is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23519743870031784,0.24157746358840937,0.13176993316277918,0.24545054975059621,0.26067462943817443,0.14208627229931026,1.0,32.0,36.0,32.0,34.0,37.0,36.0,46.5
+I15U-gNNS-p112-r1,The boy is planting the tree. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.33462502156466523,0.33041218510403048,0.13179807209736139,0.34132253468198748,0.35062300909484001,0.14209385286965337,1.0,45.5,45.5,40.5,45.5,45.5,40.5,46.5
+I15U-gNNS-p114-r1,A man is planting a tree.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%a$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.06568185223980838,0.037957821646386947,0.039640830622649004,0.073530531442109415,0.045885889457070173,0.051177162864580295,1.0,14.5,14.5,15.5,14.5,14.5,14.5,46.5
+I15U-gNNS-p116-r1,The man is planting the tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.16672912450878685,0.12812727022385573,0.039671457041120961,0.1708396437073868,0.1368842293556698,0.051185413606441799,1.0,21.5,21.5,21.5,21.5,21.5,21.5,46.5
+I15U-gNNS-p118-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p119-r1,the tree get plant.,0,0,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	tree	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBP	VBP	_	0	root	_	_
+4	plant	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%tree', 'nsubj$@%tree$@%get', 'root$@%get$@%VROOT', 'dobj$@%plant$@%get', 'punct$@%.$@%get']","['x$@%the$@%tree', 'x$@%tree$@%get', 'x$@%get$@%VROOT', 'x$@%plant$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%tree$@%x', 'x$@%get$@%x', 'x$@%plant$@%x', 'x$@%.$@%x']",0.98291339108250397,0.98483313055566057,0.063027148136618916,0.9797127743982853,0.9812110904855178,0.074709198642329611,0.262,64.0,64.0,29.0,64.0,65.0,29.0,8.0
+I15U-gNNS-p122-r1,A young adult is doing gardening in a high temperature day. ,0,1,1,0,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	adult	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	do	_	VBG	VBG	_	0	root	_	_
+6	gardening	_	NN	NN	_	5	dobj	_	_
+7	in	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	11	det	_	_
+9	high	_	JJ	JJ	_	11	amod	_	_
+10	temperature	_	NN	NN	_	11	nn	_	_
+11	day	_	NN	NN	_	6	prep_in	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%adult', 'amod$@%young$@%adult', 'nsubj$@%adult$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'dobj$@%gardening$@%do', 'erased$@%in$@%WORDERASED', 'det$@%a$@%day', 'amod$@%high$@%day', 'nn$@%temperature$@%day', 'prep_in$@%day$@%gardening', 'punct$@%.$@%do']","['x$@%a$@%adult', 'x$@%young$@%adult', 'x$@%adult$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%gardening$@%do', 'x$@%in$@%WORDERASED', 'x$@%a$@%day', 'x$@%high$@%day', 'x$@%temperature$@%day', 'x$@%day$@%gardening', 'x$@%.$@%do']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%adult$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%gardening$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%high$@%x', 'x$@%temperature$@%x', 'x$@%day$@%x', 'x$@%.$@%x']",0.99902045527418271,0.99945657282556211,0.90872149139281455,0.99892583489012443,0.9993795529695203,0.95849716755317882,0.411,68.0,68.0,68.0,68.0,68.0,69.0,11.0
+I15U-gNNS-p123-r1,The boy is planting a tree,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.23238204453601918,0.23840436431717216,0.13177048453440532,0.2425282856285661,0.25743130338665388,0.14208550588701008,1.0,27.5,29.5,36.5,27.5,30.5,31.5,46.5
+I15U-gNNS-p124-r1,he is planting the tree,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.29250256163559185,0.27335776225723385,0.04740267780467744,0.30308836989097754,0.29695488976347317,0.059248433118884503,1.0,40.5,40.5,27.5,40.5,40.5,27.5,46.5
+I15U-gNNS-p125-r1,The boy is planting tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	tree	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%boy', 'x$@%boy$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.32178446502417934,0.31453290604569228,0.13178107702108799,0.33125579689334805,0.33840558757287376,0.14209175572062693,1.0,44.0,43.0,39.0,44.0,43.0,39.0,46.5
+I15U-gNNS-p127-r1,The man is planting a tree. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p128-r1,The man is planting a tree. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p133-r1,The man is planting a baby tree into the ground. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	baby	_	NN	NN	_	7	nn	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	into	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	ground	_	NN	NN	_	4	prep_into	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'nn$@%baby$@%tree', 'dobj$@%tree$@%plant', 'erased$@%into$@%WORDERASED', 'det$@%the$@%ground', 'prep_into$@%ground$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%baby$@%tree', 'x$@%tree$@%plant', 'x$@%into$@%WORDERASED', 'x$@%the$@%ground', 'x$@%ground$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%baby$@%x', 'x$@%tree$@%x', 'x$@%into$@%x', 'x$@%the$@%x', 'x$@%ground$@%x', 'x$@%.$@%x']",0.23846058756104138,0.22521553086955293,0.33950415489548746,0.24301233565995406,0.22872526752981759,0.34134187823260165,1.0,36.0,27.0,48.0,31.0,27.0,49.0,46.5
+I15U-gNNS-p135-r1,The man is planting.,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%.$@%x']",0.25520178106129765,0.24020130672655549,0.34961889041141181,0.26282726799176881,0.26042822386318831,0.36295421845343412,0.411,37.5,32.5,50.5,37.5,33.5,50.5,11.0
+I15U-gNNS-p136-r1,The man is planting a tree.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.064594792677494017,0.036963463092560489,0.039634267089377562,0.072209562287828044,0.044625117042983331,0.051175318231644673,1.0,6.5,6.5,6.5,6.5,6.5,6.5,46.5
+I15U-gNNS-p140-r1,The boy is growing the tree. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	grow	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	tree	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grow', 'aux$@%be$@%grow', 'root$@%grow$@%VROOT', 'det$@%the$@%tree', 'dobj$@%tree$@%grow', 'punct$@%.$@%grow']","['x$@%the$@%boy', 'x$@%boy$@%grow', 'x$@%be$@%grow', 'x$@%grow$@%VROOT', 'x$@%the$@%tree', 'x$@%tree$@%grow', 'x$@%.$@%grow']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grow$@%x', 'x$@%the$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.98469501100795276,0.98634795048154256,0.47188134802641457,0.98172932538103552,0.98299385595717903,0.47362493415545859,0.411,65.0,66.0,59.0,66.0,66.0,59.0,11.0
+I15U-gNNS-p141-r1,He is planting a tree,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.18648147240102608,0.17662560455258869,0.047394952060045736,0.20062979533317238,0.19891954628204789,0.059244270652521025,1.0,23.5,23.5,25.5,23.5,23.5,25.5,46.5

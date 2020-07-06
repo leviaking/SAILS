@@ -1,0 +1,514 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh TC weighted,xdh TC weighted,xdx TC weighted,ldh TC unweighted,xdh TC unweighted,xdx TC unweighted,ldh uw rank,xdh uw rank,xdx uw rank,AnnoScore,AnnoRank
+I02T-gNNS-p001-r1,The kid is eating the pizza.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%kid', 'nsubj$@%kid$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%kid', 'x$@%kid$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.37436382212613595,0.38885649069215678,0.15478273459381897,0.39509800111721993,0.4135921673464551,0.16008849730527597,0.907,41.0,41.0,54.0,43.0
+I02T-gNNS-p002-r1,The boy is eating.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.28605211118892782,0.27688243785060895,0.63746090863176308,0.28951441251396448,0.26914512417105252,0.63745903050216679,0.635,32.5,29.5,67.5,29.5
+I02T-gNNS-p003-r1,he is eating the pizza,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.28131303149630826,0.29544258360841391,0.040753820542042574,0.31308714140411487,0.33270250526847445,0.048617549145067107,1.0,30.0,32.0,28.0,32.0
+I02T-gNNS-p008-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p010-r1,The boy is eating pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p011-r1,A boy is trying to eat a pizza,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	eat	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	pizza	_	NN	NN	_	6	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'xsubj$@%boy$@%eat', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%try', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%try']","['x$@%a$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%try', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.69228904928481549,0.56493366674537171,0.048818570061987421,0.67803475634752719,0.55329706384305777,0.049395871627752053,0.907,64.0,63.0,36.0,64.0
+I02T-gNNS-p015-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p016-r1,He is eating a pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.29434536699349778,0.30870193344321351,0.04075490916338198,0.32562209213582094,0.3453439537249321,0.048618531653366714,1.0,35.5,35.5,33.5,37.5
+I02T-gNNS-p018-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p019-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p020-r1,This boy is preparing to eat the delicious pizza.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	prepare	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	eat	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	delicious	_	JJ	JJ	_	9	amod	_	_
+9	pizza	_	NN	NN	_	6	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'xsubj$@%boy$@%eat', 'aux$@%be$@%prepare', 'root$@%prepare$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%prepare', 'det$@%the$@%pizza', 'amod$@%delicious$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%prepare']","['x$@%this$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%prepare', 'x$@%prepare$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%prepare', 'x$@%the$@%pizza', 'x$@%delicious$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%prepare']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%prepare$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%delicious$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.73463635826434248,0.62186737511371926,0.29024366340402186,0.7219634697759405,0.61133910770233379,0.29068229165453963,1.0,66.0,66.0,63.0,67.0
+I02T-gNNS-p024-r1,a short boy is going to eat a pepperoni pizza.,1,0,1,1,0,"1	a	_	DT	DT	_	3	det	_	_
+2	short	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	7	xsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	go	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	eat	_	VB	VB	_	5	xcomp	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	pepperoni	_	JJ	JJ	_	10	amod	_	_
+10	pizza	_	NN	NN	_	7	dobj	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%short$@%boy', 'xsubj$@%boy$@%eat', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%go', 'det$@%a$@%pizza', 'amod$@%pepperoni$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%go']","['x$@%a$@%boy', 'x$@%short$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%go', 'x$@%a$@%pizza', 'x$@%pepperoni$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%go']","['x$@%a$@%x', 'x$@%short$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pepperoni$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.72734106337416837,0.62133126687107576,0.35534117498841478,0.71122818654883524,0.60768829295654636,0.35498515129696595,0.645,65.0,65.0,65.0,66.0
+I02T-gNNS-p025-r1,He is eating.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.42053766094217937,0.4355433219934195,0.67535316497792408,0.4512485176183354,0.47031805736261878,0.6911594183489107,1.0,45.0,46.0,70.0,46.0
+I02T-gNNS-p029-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p031-r1,the child is about to eat a slice of pizza. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	eat	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	slice	_	NN	NN	_	6	dobj	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	pizza	_	NN	NN	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'xsubj$@%child$@%eat', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%about', 'det$@%a$@%slice', 'dobj$@%slice$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%slice', 'punct$@%.$@%about']","['x$@%the$@%child', 'x$@%child$@%eat', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%about', 'x$@%a$@%slice', 'x$@%slice$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%slice', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%slice$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.80719499301950359,0.80734250008869102,0.18682484011820555,0.69529162335366246,0.69875715280995987,0.16045436426715487,0.907,68.0,68.0,59.0,65.0
+I02T-gNNS-p033-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p035-r1,The boy is eating the pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.17842877424098136,0.17482300497229275,0.03183117138425573,0.19039122946775433,0.18131971297114802,0.032421129754623856,1.0,15.0,15.0,20.0,15.0
+I02T-gNNS-p045-r1,The boy is eating the pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.17842877424098136,0.17482300497229275,0.03183117138425573,0.19039122946775433,0.18131971297114802,0.032421129754623856,1.0,15.0,15.0,20.0,15.0
+I02T-gNNS-p046-r1,He is eating the pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.28131303149630826,0.29544258360841391,0.040753820542042574,0.31308714140411487,0.33270250526847445,0.048617549145067107,1.0,30.0,32.0,28.0,32.0
+I02T-gNNS-p047-r1,The kid is eating pizza,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%kid', 'nsubj$@%kid$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%kid', 'x$@%kid$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.32792680281300735,0.34271021885337161,0.15477564638554142,0.35866934669245432,0.37770629709077674,0.16008781075074652,0.907,39.0,39.0,53.0,41.0
+I02T-gNNS-p048-r1,He is eating pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	pizza	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.20787290128402969,0.22005848218709922,0.040754367982800188,0.25272719291005674,0.2712051768507896,0.048618250739737912,1.0,23.5,23.5,30.5,23.5
+I02T-gNNS-p049-r1,A boy is eating pizza ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.1450191795264929,0.13880245841665295,0.031821061308072496,0.17539290161873888,0.16235002866846682,0.032420637111567618,0.907,11.5,11.5,17.5,11.5
+I02T-gNNS-p050-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p052-r1,A fat kid is eating a delicious pizza.,1,0,1,1,0,"1	a	_	DT	DT	_	3	det	_	_
+2	fat	_	JJ	JJ	_	3	amod	_	_
+3	kid	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	eat	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	delicious	_	JJ	JJ	_	8	amod	_	_
+8	pizza	_	NN	NN	_	5	dobj	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%kid', 'amod$@%fat$@%kid', 'nsubj$@%kid$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'amod$@%delicious$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%kid', 'x$@%fat$@%kid', 'x$@%kid$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%delicious$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%fat$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%delicious$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.49102073935653467,0.50426798430353925,0.37446964644307668,0.50936286586868396,0.5257933591381303,0.37822291696709942,0.645,59.0,61.0,66.0,60.0
+I02T-gNNS-p053-r1,The boy is eating a piece of pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p054-r1,A little boy is eating a piece of pizza.,1,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	eat	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	piece	_	NN	NN	_	5	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	pizza	_	NN	NN	_	7	prep_of	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.53113246320959973,0.52955497942947904,0.089427617921385982,0.52413038003771995,0.5150262153167906,0.087773761065943923,0.907,61.0,62.0,50.0,61.0
+I02T-gNNS-p055-r1,The boy is eating.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.28605211118892782,0.27688243785060895,0.63746090863176308,0.28951441251396448,0.26914512417105252,0.63745903050216679,0.635,32.5,29.5,67.5,29.5
+I02T-gNNS-p056-r1,The boy is about to eat a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	eat	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	pizza	_	NN	NN	_	6	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%eat', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%about', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%about']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%about', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.60873947526809835,0.49123012521441867,0.033490274872188586,0.54892357204665143,0.43578787292518884,0.033860370985850485,1.0,63.0,59.0,23.0,62.0
+I02T-gNNS-p059-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p060-r1,He is eating.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.42053766094217937,0.4355433219934195,0.67535316497792408,0.4512485176183354,0.47031805736261878,0.6911594183489107,1.0,45.0,46.0,70.0,46.0
+I02T-gNNS-p061-r1,He is eating a pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.29434536699349778,0.30870193344321351,0.04075490916338198,0.32562209213582094,0.3453439537249321,0.048618531653366714,1.0,35.5,35.5,33.5,37.5
+I02T-gNNS-p062-r1,The boy is eating Pizza ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NNP	NNP	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p063-r1,A little boy is eating a pizza.,1,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	eat	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	pizza	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.27129825760478454,0.26887994821316175,0.03894045712688643,0.28943006377097658,0.28157113201598205,0.039510653213540414,0.907,26.5,26.5,25.5,27.5
+I02T-gNNS-p064-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p067-r1,He is eating the pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.28131303149630826,0.29544258360841391,0.040753820542042574,0.31308714140411487,0.33270250526847445,0.048617549145067107,1.0,30.0,32.0,28.0,32.0
+I02T-gNNS-p068-r1,He is eating pizza,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	pizza	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.20787290128402969,0.22005848218709922,0.040754367982800188,0.25272719291005674,0.2712051768507896,0.048618250739737912,1.0,23.5,23.5,30.5,23.5
+I02T-gNNS-p071-r1,The boy is eating a pizza slice.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	pizza	_	NN	NN	_	7	nn	_	_
+7	slice	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%slice', 'nn$@%pizza$@%slice', 'dobj$@%slice$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%slice', 'x$@%pizza$@%slice', 'x$@%slice$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%slice$@%x', 'x$@%.$@%x']",0.44688064850809062,0.38979769679663445,0.15490520314761513,0.40773606859523903,0.30944039636041953,0.12325010609588394,1.0,47.0,44.0,55.0,44.0
+I02T-gNNS-p073-r1,The boy is eating a piece of pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p076-r1,He is eating a piece of pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	piece	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	pizza	_	NN	NN	_	5	prep_of	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.58095842645067863,0.59844424582355216,0.095552158913459029,0.58423980470303438,0.60425379044297234,0.10065492221721595,1.0,62.0,64.0,51.0,63.0
+I02T-gNNS-p080-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p084-r1,the boy is eating pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p085-r1,He is eating a pizza,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.29434536699349778,0.30870193344321351,0.04075490916338198,0.32562209213582094,0.3453439537249321,0.048618531653366714,1.0,35.5,35.5,33.5,37.5
+I02T-gNNS-p088-r1,The boy is eating a slice of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	slice	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%slice', 'dobj$@%slice$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%slice', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%slice', 'x$@%slice$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%slice', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%slice$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.39412054651114559,0.38979712493373997,0.15490543539226154,0.32089054452460231,0.30943915511740416,0.12325018503921081,1.0,42.5,42.5,56.5,34.5
+I02T-gNNS-p089-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p090-r1,The boy is eating a piece of the pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	pizza	_	NN	NN	_	6	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'det$@%the$@%pizza', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%the$@%pizza', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.49851702004118148,0.49751038448814811,0.083446834588772223,0.47849321056935712,0.47079213211565951,0.081796339484941472,1.0,60.0,60.0,49.0,59.0
+I02T-gNNS-p091-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p092-r1,The boy is eating the piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47834779554414453,0.47665157319938622,0.083446479167430088,0.46602499404894671,0.45684801442377809,0.081796210472952602,1.0,58.0,58.0,48.0,58.0
+I02T-gNNS-p093-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p094-r1,The boy is eating the pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.17842877424098136,0.17482300497229275,0.03183117138425573,0.19039122946775433,0.18131971297114802,0.032421129754623856,1.0,15.0,15.0,20.0,15.0
+I02T-gNNS-p095-r1,He is eating a pizza.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.29434536699349778,0.30870193344321351,0.04075490916338198,0.32562209213582094,0.3453439537249321,0.048618531653366714,1.0,35.5,35.5,33.5,37.5
+I02T-gNNS-p096-r1,The child is eating pizza,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%child', 'nsubj$@%child$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%child', 'x$@%child$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.31708006597854466,0.33099620451107548,0.068004149953799553,0.35233961672139236,0.37150030222774022,0.075484575558526168,0.907,38.0,38.0,37.0,40.0
+I02T-gNNS-p097-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p098-r1,The boy is eating pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p100-r1,The boy is eating a pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.19284311678996768,0.18971804012972071,0.031820503771348374,0.20486680248196676,0.1964746507236691,0.03241993934714138,1.0,19.5,19.5,13.5,19.5
+I02T-gNNS-p102-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p103-r1,A boy is eating pizza.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.1450191795264929,0.13880245841665295,0.031821061308072496,0.17539290161873888,0.16235002866846682,0.032420637111567618,0.907,11.5,11.5,17.5,11.5
+I02T-gNNS-p110-r1,He is eating.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	eat	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%he$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.42053766094217937,0.4355433219934195,0.67535316497792408,0.4512485176183354,0.47031805736261878,0.6911594183489107,1.0,45.0,46.0,70.0,46.0
+I02T-gNNS-p113-r1,This boy is eating a pizza,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	pizza	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%this$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.25914164929405903,0.2566108155216078,0.031936774053762496,0.27740812796098113,0.26947784006046471,0.032535426062098693,0.907,25.0,25.0,22.0,25.0
+I02T-gNNS-p115-r1,Eating pizza,1,1,1,1,1,"1	eating	_	NNP	NNP	_	2	nsubj	_	_
+2	pizza	_	VBZ	VBZ	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['nsubj$@%eating$@%pizza', 'root$@%pizza$@%VROOT', 'punct$@%.$@%pizza']","['x$@%eating$@%pizza', 'x$@%pizza$@%VROOT', 'x$@%.$@%pizza']","['x$@%eating$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.76807876774260464,0.75917754259743409,0.25338880430456767,0.88088857130146714,0.87294724345265684,0.294101405506484,1.0,67.0,67.0,60.0,70.0
+I02T-gNNS-p117-r1,A baby is eating pizza,0,0,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%baby', 'x$@%baby$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.33995674499624107,0.35731904021659555,0.16464191518091065,0.3743378860764196,0.39779893116668485,0.17149105154212463,0.28,40.0,40.0,58.0,42.0
+I02T-gNNS-p120-r1,The little kid is enjoying the pizza.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	kid	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	enjoy	_	VBG	VBG	_	0	root	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	pizza	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%kid', 'amod$@%little$@%kid', 'nsubj$@%kid$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'det$@%the$@%pizza', 'dobj$@%pizza$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%the$@%kid', 'x$@%little$@%kid', 'x$@%kid$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%the$@%pizza', 'x$@%pizza$@%enjoy', 'x$@%.$@%enjoy']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%the$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.91171277300568354,0.91317123703450997,0.25711624461774707,0.90447957701781301,0.90707473110410863,0.25706258662290205,0.907,71.0,71.0,61.0,71.0
+I02T-gNNS-p121-r1,The boy is eating a slice of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	slice	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%slice', 'dobj$@%slice$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%slice', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%slice', 'x$@%slice$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%slice', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%slice$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.39412054651114559,0.38979712493373997,0.15490543539226154,0.32089054452460231,0.30943915511740416,0.12325018503921081,1.0,42.5,42.5,56.5,34.5
+I02T-gNNS-p126-r1,The boy enjoys his pizza.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	enjoy	_	VBZ	VBZ	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	pizza	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%enjoy', 'root$@%enjoy$@%VROOT', 'poss$@%he$@%pizza', 'dobj$@%pizza$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%the$@%boy', 'x$@%boy$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%he$@%pizza', 'x$@%pizza$@%enjoy', 'x$@%.$@%enjoy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%enjoy$@%x', 'x$@%he$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.87209233289077059,0.87041056915355797,0.13401403564804448,0.86560833324367548,0.86396062102816562,0.12855950631102486,0.907,70.0,70.0,52.0,69.0
+I02T-gNNS-p129-r1,The boy is eating a delicious pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	delicious	_	JJ	JJ	_	7	amod	_	_
+7	pizza	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'amod$@%delicious$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%delicious$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%delicious$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.27467559837122757,0.27322110864771931,0.26475949428024692,0.28548027935869347,0.27928142123021238,0.26521470874988751,1.0,28.0,28.0,62.0,26.0
+I02T-gNNS-p130-r1,A little boy is eating a pizza,1,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	eat	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	pizza	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%pizza', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%pizza', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.27129825760478454,0.26887994821316175,0.03894045712688643,0.28943006377097658,0.28157113201598205,0.039510653213540414,0.907,26.5,26.5,25.5,27.5
+I02T-gNNS-p131-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p132-r1,the boy is eating pizza,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	pizza	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.10065982630809212,0.094428750255018734,0.031820012068406789,0.12255801503627339,0.11004163037348691,0.032419690146224922,1.0,5.5,5.5,5.5,5.5
+I02T-gNNS-p134-r1,The boy is taking a bite from a slice of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bite	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	slice	_	NN	NN	_	4	prep_from	_	_
+10	of	_	IN	IN	_	0	erased	_	_
+11	pizza	_	NN	NN	_	9	prep_of	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%bite', 'dobj$@%bite$@%take', 'erased$@%from$@%WORDERASED', 'det$@%a$@%slice', 'prep_from$@%slice$@%take', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%slice', 'punct$@%.$@%take']","['x$@%the$@%boy', 'x$@%boy$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%bite', 'x$@%bite$@%take', 'x$@%from$@%WORDERASED', 'x$@%a$@%slice', 'x$@%slice$@%take', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%slice', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%bite$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%slice$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.85780502326167296,0.85063693272972862,0.30326776264487065,0.77387999895072312,0.76441429003731065,0.25464457647524741,1.0,69.0,69.0,64.0,68.0
+I02T-gNNS-p137-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p138-r1,The boy is eating a piece of pizza.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	pizza	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%eat', 'erased$@%of$@%WORDERASED', 'prep_of$@%pizza$@%piece', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%eat', 'x$@%of$@%WORDERASED', 'x$@%pizza$@%piece', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.47079738928147885,0.46899326617482573,0.083437934871521069,0.45633131948417793,0.44702159528194596,0.081795299904482199,1.0,52.5,52.5,42.5,52.5
+I02T-gNNS-p139-r1,The little boy is eating pizza.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	eat	_	VBG	VBG	_	0	root	_	_
+6	pizza	_	NN	NN	_	5	dobj	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%pizza$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%pizza$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%pizza$@%x', 'x$@%.$@%x']",0.16224690823209198,0.15790975118268613,0.03892544997791636,0.1822899644764352,0.17210672577223129,0.039507391375927847,0.907,13.0,13.0,24.0,13.0

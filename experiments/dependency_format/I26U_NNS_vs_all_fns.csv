@@ -1,0 +1,725 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh TC weighted,xdh TC weighted,xdx TC weighted,ldh TC unweighted,xdh TC unweighted,xdx TC unweighted,ldh uw rank,xdh uw rank,xdx uw rank,AnnoScore,AnnoRank
+I26U-gNNS-p001-r1,The men is reading a book for the girl.,1,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NNS	NNS	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'det$@%the$@%girl', 'prep_for$@%girl$@%book', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%book', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.42559737509227857,0.46143874342085855,0.32823288217969004,0.43363897169435728,0.47346347570324077,0.32461442153872055,0.458,20.5,24.5,25.5,20.5
+I26U-gNNS-p002-r1,The man is reading a book with a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%with$@%WORDERASED', 'det$@%a$@%girl', 'prep_with$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%with$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.44372603333782479,0.32449441941694623,0.3282850076766286,0.44850188740008645,0.3272223880280104,0.32467185739907822,1.0,25.0,13.0,28.0,23.0
+I26U-gNNS-p003-r1,the father is telling the story ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%the$@%story', 'dobj$@%story$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%the$@%story', 'x$@%story$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.97797529090682633,0.97726677302280429,0.64614848169187966,0.97755119663992418,0.97641000148336565,0.63822261277086234,0.411,67.0,68.0,65.0,67.0
+I26U-gNNS-p008-r1,The father is reading her daughter a book.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	daughter	_	NN	NN	_	8	nsubj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	book	_	NN	NN	_	4	xcomp	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'poss$@%she$@%daughter', 'nsubj$@%daughter$@%book', 'det$@%a$@%book', 'xcomp$@%book$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%she$@%daughter', 'x$@%daughter$@%book', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%she$@%x', 'x$@%daughter$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%.$@%x']",0.58189576542857147,0.56562791045016758,0.31717650451978097,0.59104332740202037,0.57533218128907548,0.34795572207190018,0.093,30.0,33.0,19.0,31.0
+I26U-gNNS-p010-r1,the father is reading the story to his daughter,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%the$@%story', 'dobj$@%story$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%the$@%story', 'x$@%story$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.28989117399577047,0.3178382443120944,0.23363802881122464,0.30991910935464051,0.33908693484502095,0.25879365963346146,1.0,6.0,10.0,5.0,6.0
+I26U-gNNS-p011-r1,A father is reading a book for his daughter,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_for$@%daughter$@%book', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%book', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.43258536476684861,0.46676504514671302,0.31456664039782423,0.44601349765273057,0.4827088742506418,0.34553238669199959,1.0,22.0,27.0,18.0,22.0
+I26U-gNNS-p015-r1,Father is reading his daughter a story.,1,1,1,1,1,"1	father	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	read	_	VBG	VBG	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	daughter	_	NN	NN	_	7	nsubj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	story	_	NN	NN	_	3	xcomp	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'poss$@%he$@%daughter', 'nsubj$@%daughter$@%story', 'det$@%a$@%story', 'xcomp$@%story$@%read', 'punct$@%.$@%read']","['x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%he$@%daughter', 'x$@%daughter$@%story', 'x$@%a$@%story', 'x$@%story$@%read', 'x$@%.$@%read']","['x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.4408712538835089,0.37777452206260653,0.23365425494939229,0.45581839311940597,0.38711537520711881,0.25880244431296162,1.0,23.0,21.0,7.0,24.0
+I26U-gNNS-p016-r1,The girl is reading a book with her father.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%with$@%WORDERASED', 'poss$@%she$@%father', 'prep_with$@%father$@%read', 'punct$@%.$@%read']","['x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%with$@%WORDERASED', 'x$@%she$@%father', 'x$@%father$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%with$@%x', 'x$@%she$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",0.58771878781825104,0.37412435627812146,0.32449736020188213,0.59034972218203419,0.37515739279801019,0.32558659788507316,1.0,31.0,20.0,21.0,30.0
+I26U-gNNS-p018-r1,The man is reading a story book for his daughter in the sofa. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	story	_	NN	NN	_	7	nn	_	_
+7	book	_	NN	NN	_	4	dobj	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	he	_	PRP$	PRP$	_	10	poss	_	_
+10	daughter	_	NN	NN	_	4	prep_for	_	_
+11	in	_	IN	IN	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	sofa	_	NN	NN	_	10	prep_in	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'nn$@%story$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_for$@%daughter$@%read', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sofa', 'prep_in$@%sofa$@%daughter', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%story$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%in$@%WORDERASED', 'x$@%the$@%sofa', 'x$@%sofa$@%daughter', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sofa$@%x', 'x$@%.$@%x']",0.52992461133806601,0.46014246919968604,0.48770455642349098,0.54166881836713354,0.48173054008488791,0.50066388343174639,1.0,28.0,23.0,40.0,28.0
+I26U-gNNS-p019-r1,The day is reading with the girl.,0,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	day	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	prep_with	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%day', 'nsubj$@%day$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%girl', 'prep_with$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%day', 'x$@%day$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%day$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.6052955257669278,0.47788072531010439,0.2979505716058567,0.61513013591703458,0.48858333397672959,0.29905682200460082,0.355,33.0,30.0,11.0,34.0
+I26U-gNNS-p020-r1,The man is talking to the girl.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	talk	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%talk', 'punct$@%.$@%talk']","['x$@%the$@%man', 'x$@%man$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%talk', 'x$@%.$@%talk']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.96080973073165432,0.95988855343138801,0.714349445416262,0.96054793543776318,0.95896869062809575,0.70451525122330527,0.635,63.0,65.0,69.0,64.0
+I26U-gNNS-p024-r1,little girl's father is telling the story to make the girl sleep.,0,1,1,1,0,"1	little	_	JJ	JJ	_	2	amod	_	_
+2	girl	_	NN	NN	_	4	poss	_	_
+3	's	_	POS	POS	_	0	erased	_	_
+4	father	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	tell	_	VBG	VBG	_	0	root	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	story	_	NN	NN	_	6	dobj	_	_
+9	to	_	TO	TO	_	10	aux	_	_
+10	make	_	VB	VB	_	8	infmod	_	_
+11	the	_	DT	DT	_	13	det	_	_
+12	girl	_	NN	NN	_	13	nn	_	_
+13	sleep	_	NN	NN	_	10	dobj	_	_
+14	.	_	.	.	_	6	punct	_	_","['amod$@%little$@%girl', 'poss$@%girl$@%father', ""erased$@%'s$@%WORDERASED"", 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%the$@%story', 'dobj$@%story$@%tell', 'aux$@%to$@%make', 'infmod$@%make$@%story', 'det$@%the$@%sleep', 'nn$@%girl$@%sleep', 'dobj$@%sleep$@%make', 'punct$@%.$@%tell']","['x$@%little$@%girl', 'x$@%girl$@%father', ""x$@%'s$@%WORDERASED"", 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%the$@%story', 'x$@%story$@%tell', 'x$@%to$@%make', 'x$@%make$@%story', 'x$@%the$@%sleep', 'x$@%girl$@%sleep', 'x$@%sleep$@%make', 'x$@%.$@%tell']","['x$@%little$@%x', 'x$@%girl$@%x', ""x$@%'s$@%x"", 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.98754709377733652,0.9870625520101558,0.55723829382934609,0.98472288577392664,0.98387810278393795,0.5512929857594262,0.373,69.0,70.0,58.0,68.0
+I26U-gNNS-p025-r1,A father is reading a book to his daughter.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.31182000723530101,0.34472952467594675,0.31451520117292731,0.33616722559108714,0.3699185128992829,0.34548310276550964,1.0,8.5,15.5,13.5,9.5
+I26U-gNNS-p029-r1,Dad is talking a story to the daughter.,0,1,0,1,1,"1	dad	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	talk	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	story	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	daughter	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%dad$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%talk', 'erased$@%to$@%WORDERASED', 'det$@%the$@%daughter', 'prep_to$@%daughter$@%talk', 'punct$@%.$@%talk']","['x$@%dad$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%talk', 'x$@%to$@%WORDERASED', 'x$@%the$@%daughter', 'x$@%daughter$@%talk', 'x$@%.$@%talk']","['x$@%dad$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.95401610956947969,0.9534934325124983,0.51390485468837954,0.95122385220809891,0.94987445192985898,0.52857958983493614,0.579,60.0,61.0,51.0,61.0
+I26U-gNNS-p031-r1,The man is reading a book for a girl who is around by one of his arms. ,1,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	11	nsubj	_	_
+10	who	_	WP	WP	_	0	erased	_	_
+11	be	_	VBZ	VBZ	_	9	rcmod	_	_
+12	around	_	RB	RB	_	11	advmod	_	_
+13	by	_	IN	IN	_	0	erased	_	_
+14	one	_	CD	CD	_	11	prep_by	_	_
+15	of	_	IN	IN	_	0	erased	_	_
+16	he	_	PRP$	PRP$	_	17	poss	_	_
+17	arm	_	NNS	NNS	_	14	prep_of	_	_
+18	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'det$@%a$@%girl', 'nsubj$@%girl$@%be', 'erased$@%who$@%WORDERASED', 'rcmod$@%be$@%girl', 'advmod$@%around$@%be', 'erased$@%by$@%WORDERASED', 'prep_by$@%one$@%be', 'erased$@%of$@%WORDERASED', 'poss$@%he$@%arm', 'prep_of$@%arm$@%one', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%be', 'x$@%who$@%WORDERASED', 'x$@%be$@%girl', 'x$@%around$@%be', 'x$@%by$@%WORDERASED', 'x$@%one$@%be', 'x$@%of$@%WORDERASED', 'x$@%he$@%arm', 'x$@%arm$@%one', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%who$@%x', 'x$@%be$@%x', 'x$@%around$@%x', 'x$@%by$@%x', 'x$@%one$@%x', 'x$@%of$@%x', 'x$@%he$@%x', 'x$@%arm$@%x', 'x$@%.$@%x']",0.59851781018025951,0.58504339797700655,0.44655823699410779,0.60196155361600345,0.59218558342179151,0.44363923310475795,0.458,32.0,34.0,32.0,32.0
+I26U-gNNS-p033-r1,A father is telling story to his daughter. ,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.86991057727056209,0.86527433696656741,0.47616627272651524,0.87962309245659576,0.8733239285031722,0.49624491669545323,0.579,42.5,42.5,36.5,42.5
+I26U-gNNS-p035-r1,The father is telling a story to his daughter.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.85214955575745255,0.84745075584103147,0.47615611701416216,0.85746035339863291,0.85053516146667785,0.49623931131963617,0.635,37.5,38.5,34.5,37.5
+I26U-gNNS-p045-r1,The girl is sitting beside his father and listening the story.,0,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	9	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sit	_	VBG	VBG	_	0	root	_	_
+5	beside	_	IN	IN	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	father	_	NN	NN	_	4	prep_beside	_	_
+8	and	_	CC	CC	_	0	erased	_	_
+9	listen	_	VBG	VBG	_	4	conj_and	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	story	_	NN	NN	_	9	dobj	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%listen', 'aux$@%be$@%sit', 'root$@%sit$@%VROOT', 'erased$@%beside$@%WORDERASED', 'poss$@%he$@%father', 'prep_beside$@%father$@%sit', 'erased$@%and$@%WORDERASED', 'conj_and$@%listen$@%sit', 'det$@%the$@%story', 'dobj$@%story$@%listen', 'punct$@%.$@%sit']","['x$@%the$@%girl', 'x$@%girl$@%listen', 'x$@%be$@%sit', 'x$@%sit$@%VROOT', 'x$@%beside$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%sit', 'x$@%and$@%WORDERASED', 'x$@%listen$@%sit', 'x$@%the$@%story', 'x$@%story$@%listen', 'x$@%.$@%sit']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%sit$@%x', 'x$@%beside$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%and$@%x', 'x$@%listen$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.93117605212182086,0.90720029424416671,0.62272358638766345,0.92104932682548135,0.89044154609029513,0.60536541179798475,0.355,55.0,54.0,63.0,55.0
+I26U-gNNS-p046-r1,The man is reading a book to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.33810008449987261,0.30528026447731182,0.32814619730940131,0.33944053316246436,0.31103904255142512,0.32452782717545414,1.0,13.5,6.5,23.5,11.5
+I26U-gNNS-p047-r1,The man is telling stories to his daughter,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.89543035336256682,0.88941932955674008,0.51206630246847995,0.9035073782858013,0.89632279283444238,0.53063532326845153,0.635,46.0,45.0,47.0,47.0
+I26U-gNNS-p048-r1,The man is reading to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.31168944042759539,0.27238617239944873,0.27200866579127803,0.32069165774916841,0.28708465149978968,0.27329550141091752,1.0,7.0,3.0,10.0,7.0
+I26U-gNNS-p049-r1,Father is reading a story book to is daughter ,1,1,0,1,1,"1	father	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	read	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	story	_	NN	NN	_	6	nn	_	_
+6	book	_	NN	NN	_	3	dobj	_	_
+7	to	_	TO	TO	_	9	aux	_	_
+8	be	_	VBZ	VBZ	_	9	cop	_	_
+9	daughter	_	NN	NN	_	3	xcomp	_	_
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'nn$@%story$@%book', 'dobj$@%book$@%read', 'aux$@%to$@%daughter', 'cop$@%be$@%daughter', 'xcomp$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%story$@%book', 'x$@%book$@%read', 'x$@%to$@%daughter', 'x$@%be$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.6058246334952051,0.52408797591017942,0.24473691315525514,0.60988859576074483,0.54013218835986732,0.26485403079159431,0.944,34.0,31.0,9.0,33.0
+I26U-gNNS-p050-r1,A father is telling a story to his daughter.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.82743057721415458,0.82189101636841622,0.47614457486140715,0.83395814626570164,0.82586638604605234,0.49624042916885092,0.635,36.0,36.0,33.0,36.0
+I26U-gNNS-p052-r1,A father is telling stories to his sweet daughter,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	9	poss	_	_
+8	sweet	_	JJ	JJ	_	9	amod	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'amod$@%sweet$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%sweet$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%sweet$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.88388982178641518,0.88097779451639857,0.57972612956229763,0.89255864239835658,0.88808913556573588,0.5958353050021612,0.635,44.0,44.0,61.0,45.0
+I26U-gNNS-p053-r1,The father is reading stories to his daughter,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'dobj$@%story$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%story$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.27977941049137001,0.30770187624496859,0.2336477890796006,0.30139948355507362,0.33066267185602105,0.25879568595132663,1.0,5.0,8.0,6.0,5.0
+I26U-gNNS-p054-r1,The father is reading a story to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%read', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%read', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.34324224822943383,0.31162410237931781,0.22821905408645748,0.33497486326200698,0.30683372136891907,0.22291020746529222,1.0,15.0,9.0,2.0,8.0
+I26U-gNNS-p055-r1,The man is reading a book to a girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.35673307403710086,0.32446173407447965,0.3281398119589396,0.35484675786515496,0.32718924626463131,0.32452643286920635,1.0,17.0,12.0,22.0,15.0
+I26U-gNNS-p056-r1,The man is reading a book to the little girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	little	_	JJ	JJ	_	10	amod	_	_
+10	girl	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'amod$@%little$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.36714471936704862,0.33875755063704038,0.34100637387377808,0.36591274294955611,0.34136834963925855,0.33694118515983185,1.0,18.0,14.0,30.0,18.0
+I26U-gNNS-p059-r1,The man is reading a book to his daughter.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.26525929218364341,0.29806379039350839,0.33472107913481053,0.29214880749680294,0.32613184460902067,0.36525854802978197,1.0,4.0,5.0,29.0,4.0
+I26U-gNNS-p060-r1,A man is telling stories to his daughter.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.90198171745641198,0.89628080639263097,0.5120644642012433,0.90981848972125767,0.90304221204444912,0.53063411910781322,0.635,49.0,49.0,46.0,53.0
+I26U-gNNS-p061-r1,The father is reading a story to his daughter.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.25744814639252889,0.28510328369421623,0.23363714540570879,0.27578919167328209,0.30390430441884597,0.25878982115258597,1.0,3.0,4.0,4.0,3.0
+I26U-gNNS-p062-r1,The father is telling sorry to his daugther.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	sorry	_	JJ	JJ	_	4	acomp	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daugther	_	NN	NN	_	5	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'acomp$@%sorry$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daugther', 'prep_to$@%daugther$@%sorry', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%sorry$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daugther', 'x$@%daugther$@%sorry', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%sorry$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daugther$@%x', 'x$@%.$@%x']",0.98824450607590575,0.9885619775484803,0.94751091147042998,0.98912185360167937,0.98924498192330457,0.94945717438797983,0.093,70.0,71.0,71.0,70.0
+I26U-gNNS-p063-r1,A father is reading a book to his young daughter on the sofa.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	10	poss	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	daughter	_	NN	NN	_	4	prep_to	_	_
+11	on	_	IN	IN	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	sofa	_	NN	NN	_	10	prep_on	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'amod$@%young$@%daughter', 'prep_to$@%daughter$@%read', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sofa', 'prep_on$@%sofa$@%daughter', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%young$@%daughter', 'x$@%daughter$@%read', 'x$@%on$@%WORDERASED', 'x$@%the$@%sofa', 'x$@%sofa$@%daughter', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%young$@%x', 'x$@%daughter$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sofa$@%x', 'x$@%.$@%x']",0.44099138858676101,0.47210672968130885,0.53586749938831835,0.46076863417358005,0.49239926210871632,0.55346891165105849,1.0,24.0,29.0,52.0,25.0
+I26U-gNNS-p064-r1,The man is reading a book for the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'det$@%the$@%girl', 'prep_for$@%girl$@%book', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%book', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.42559737509227857,0.46143874342085855,0.32823288217969004,0.43363897169435728,0.47346347570324077,0.32461442153872055,1.0,20.5,24.5,25.5,20.5
+I26U-gNNS-p067-r1,The man is reading to his daughter.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	daughter	_	NN	NN	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.23756583174641976,0.2719128556226047,0.31433397897202597,0.2742602065023545,0.31058817081174306,0.35290929882516187,1.0,1.0,2.0,12.0,2.0
+I26U-gNNS-p068-r1,A father is reading a story to his daughter,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.24125111747590844,0.26960791897306702,0.23363185594433067,0.26056802390711697,0.28899916560538563,0.25879163781276959,1.0,2.0,1.0,3.0,1.0
+I26U-gNNS-p071-r1,Dad is telling a story to his daughter.,0,1,1,1,1,"1	dad	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	tell	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	story	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%dad$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%dad$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%dad$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.86166729722484015,0.85672025913368777,0.50482906895633894,0.8661343733259852,0.8591126301321369,0.51980190330536336,0.635,41.0,41.0,41.0,41.0
+I26U-gNNS-p073-r1,The father is telling stories to his daughter,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.89605893859158048,0.89255583076086875,0.47616792367557126,0.90455940169635529,0.89975759112674114,0.4962459981529419,0.635,47.0,47.0,38.0,48.0
+I26U-gNNS-p076-r1,A father is telling stories to his daughter.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.86991057727056209,0.86527433696656741,0.47616627272651524,0.87962309245659576,0.8733239285031722,0.49624491669545323,0.635,42.5,42.5,36.5,42.5
+I26U-gNNS-p080-r1,The father is telling a story to his little girl.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	10	poss	_	_
+9	little	_	JJ	JJ	_	10	amod	_	_
+10	girl	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%girl', 'amod$@%little$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.93421662373679104,0.93144502885016311,0.51280623746375764,0.93018337160255482,0.925988657268072,0.49869218764607315,0.635,57.0,57.0,50.0,57.0
+I26U-gNNS-p084-r1,the man is describing a book for his daughter. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	describe	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%describe', 'aux$@%be$@%describe', 'root$@%describe$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%describe', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_for$@%daughter$@%book', 'punct$@%.$@%describe']","['x$@%the$@%man', 'x$@%man$@%describe', 'x$@%be$@%describe', 'x$@%describe$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%describe', 'x$@%for$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%book', 'x$@%.$@%describe']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%describe$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.89749895886888653,0.89321370477641593,0.64011611005545177,0.90233736392995312,0.89661776990825059,0.66388971297959665,0.635,48.0,48.0,64.0,46.0
+I26U-gNNS-p085-r1,The man is reading the book to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%the$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%the$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%the$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.35172714453418685,0.31848945438527354,0.32824602427060445,0.35515092767555878,0.32678834869597295,0.32453902516818089,1.0,16.0,11.0,27.0,16.0
+I26U-gNNS-p088-r1,A father is telling a story from a book to a girl. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	book	_	NN	NN	_	4	prep_from	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	girl	_	NN	NN	_	9	prep_to	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%from$@%WORDERASED', 'det$@%a$@%book', 'prep_from$@%book$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%book', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%from$@%WORDERASED', 'x$@%a$@%book', 'x$@%book$@%tell', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%book', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.89365200064805439,0.89128580006553648,0.50632464240721009,0.88833759261745127,0.88407376876833865,0.48988219677317513,1.0,45.0,46.0,45.0,44.0
+I26U-gNNS-p089-r1,A father is reading a book for her daughter.,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%for$@%WORDERASED', 'poss$@%she$@%daughter', 'prep_for$@%daughter$@%book', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%for$@%WORDERASED', 'x$@%she$@%daughter', 'x$@%daughter$@%book', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%for$@%x', 'x$@%she$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.51737648919170631,0.54593448174582848,0.31721048239160732,0.52404086800066518,0.55636903758640011,0.34799678809346613,0.093,27.0,32.0,20.0,27.0
+I26U-gNNS-p090-r1,The father is telling stories to his kid.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	kid	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%kid', 'prep_to$@%kid$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%kid', 'x$@%kid$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%kid$@%x', 'x$@%.$@%x']",0.98752484778003036,0.98702420682352054,0.75750850109312906,0.98845590554795681,0.98779903687337522,0.75214344057715898,0.635,68.0,69.0,70.0,69.0
+I26U-gNNS-p091-r1,A dad is reading a book with his daughter. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	dad	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dad', 'nsubj$@%dad$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%with$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_with$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%a$@%dad', 'x$@%dad$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%with$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%dad$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%with$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.54343073392345542,0.46194293050299218,0.39755860714810254,0.55789674649443111,0.48894705127593985,0.41965649991232323,1.0,29.0,26.0,31.0,29.0
+I26U-gNNS-p092-r1,The man is reading a book to the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%read', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.33810008449987261,0.30528026447731182,0.32814619730940131,0.33944053316246436,0.31103904255142512,0.32452782717545414,1.0,13.5,6.5,23.5,11.5
+I26U-gNNS-p093-r1,The man is reading stories for the girl.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	5	prep_for	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'dobj$@%story$@%read', 'erased$@%for$@%WORDERASED', 'det$@%the$@%girl', 'prep_for$@%girl$@%story', 'punct$@%.$@%read']","['x$@%the$@%man', 'x$@%man$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%story$@%read', 'x$@%for$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%story', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%story$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.3700110619198268,0.40057528776171036,0.22728971620585137,0.37591032004782954,0.41049536415822108,0.21701619082003387,1.0,19.0,22.0,1.0,19.0
+I26U-gNNS-p094-r1,Father is telling his daughter the stories.,0,1,1,1,1,"1	father	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	tell	_	VBG	VBG	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	daughter	_	NN	NN	_	3	dep	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	story	_	NNS	NNS	_	3	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'poss$@%he$@%daughter', 'dep$@%daughter$@%tell', 'det$@%the$@%story', 'dobj$@%story$@%tell', 'punct$@%.$@%tell']","['x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%the$@%story', 'x$@%story$@%tell', 'x$@%.$@%tell']","['x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.90208176914186822,0.89816811252037576,0.47617744128715689,0.90846703505084236,0.90331233705799363,0.49625524225758399,0.635,50.0,50.0,39.0,52.0
+I26U-gNNS-p095-r1,The father is telling a story for the girl. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%for$@%WORDERASED', 'det$@%the$@%girl', 'prep_for$@%girl$@%story', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%for$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%story', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.9089849451730565,0.90578521647576804,0.50607908460934925,0.90665434668100719,0.90174644229537804,0.49209926209771471,0.635,51.0,53.0,44.0,51.0
+I26U-gNNS-p096-r1,The father is talking a story to the girl.,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	talk	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%talk', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%talk', 'punct$@%.$@%talk']","['x$@%the$@%father', 'x$@%father$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%talk', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%talk', 'x$@%.$@%talk']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.91771766877215344,0.91722900478587444,0.53724668232226636,0.9156110483047506,0.91368118636685791,0.52415199497497345,0.579,54.0,55.0,53.0,54.0
+I26U-gNNS-p097-r1,The man is telling the girl a story.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	girl	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	story	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%the$@%girl', 'iobj$@%girl$@%tell', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%tell', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.90909619422121679,0.89956093145651073,0.53965808217901712,0.90557040013641243,0.89397955569846643,0.51844798468402398,0.635,53.0,52.0,55.0,50.0
+I26U-gNNS-p098-r1,The father is reading a story for her daughter.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%read', 'erased$@%for$@%WORDERASED', 'poss$@%she$@%daughter', 'prep_for$@%daughter$@%story', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%read', 'x$@%for$@%WORDERASED', 'x$@%she$@%daughter', 'x$@%daughter$@%story', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%for$@%x', 'x$@%she$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.46109250984487116,0.47074624509782337,0.23728809931601857,0.46199267090807727,0.47485046418349253,0.26236314525663329,0.093,26.0,28.0,8.0,26.0
+I26U-gNNS-p100-r1,The man is telling a story to the girl.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.90907415258314539,0.89953680628261623,0.53964556733961411,0.9055482343892105,0.89395491224315315,0.51843619876825064,0.635,52.0,51.0,54.0,49.0
+I26U-gNNS-p102-r1,The man is telling stories to the girl.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.96128889875478585,0.95674160441756029,0.53966176920786535,0.96103030435580516,0.95574957365251856,0.51844505955180076,0.635,64.0,62.0,56.0,65.0
+I26U-gNNS-p103-r1,A father is reading a book to his daughter. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%a$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.31182000723530101,0.34472952467594675,0.31451520117292731,0.33616722559108714,0.3699185128992829,0.34548310276550964,1.0,8.5,15.5,13.5,9.5
+I26U-gNNS-p110-r1,The father is reading book to his daughter.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	book	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	daughter	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.32972099977933833,0.3622842269964287,0.31453340758712367,0.35560955910363501,0.38986411847766178,0.34548766311953893,0.944,12.0,19.0,17.0,17.0
+I26U-gNNS-p113-r1,A father is telling story to his girl.,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	story	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	girl	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.96136584426349569,0.95906437179107518,0.50560218660399003,0.96355476266210982,0.96076136623742803,0.49169306693498382,0.579,65.0,64.0,42.0,66.0
+I26U-gNNS-p115-r1,A father is telling a story to his daughter on a sofa.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	on	_	IN	IN	_	0	erased	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	sofa	_	NN	NN	_	9	prep_on	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'erased$@%on$@%WORDERASED', 'det$@%a$@%sofa', 'prep_on$@%sofa$@%daughter', 'punct$@%.$@%tell']","['x$@%a$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%on$@%WORDERASED', 'x$@%a$@%sofa', 'x$@%sofa$@%daughter', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%sofa$@%x', 'x$@%.$@%x']",0.85796533971823452,0.85558608049832541,0.64804954624186628,0.8633379082633168,0.85880938066494161,0.66157172782215923,0.635,40.0,40.0,66.0,40.0
+I26U-gNNS-p117-r1,The father is telling a story to his daughter.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.85214955575745255,0.84745075584103147,0.47615611701416216,0.85746035339863291,0.85053516146667785,0.49623931131963617,0.635,37.5,38.5,34.5,37.5
+I26U-gNNS-p120-r1,The father is telling the story to the girl.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%the$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%the$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.95426278498960793,0.95134035577142151,0.50606620212465314,0.95364064458408981,0.94985073024642908,0.49204672001540184,0.635,61.0,60.0,43.0,62.0
+I26U-gNNS-p121-r1,A man is telling the story from a book to a girl.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	book	_	NN	NN	_	4	prep_from	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	girl	_	NN	NN	_	9	prep_to	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%the$@%story', 'dobj$@%story$@%tell', 'erased$@%from$@%WORDERASED', 'det$@%a$@%book', 'prep_from$@%book$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%book', 'punct$@%.$@%tell']","['x$@%a$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%the$@%story', 'x$@%story$@%tell', 'x$@%from$@%WORDERASED', 'x$@%a$@%book', 'x$@%book$@%tell', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%book', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%the$@%x', 'x$@%story$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.96524627259084295,0.96419823849221942,0.54438010449122753,0.95875236636580496,0.9568620345249671,0.52183215278686568,1.0,66.0,66.0,57.0,63.0
+I26U-gNNS-p126-r1,A young girl is lying in his father's arm and his father is telling a story to her.,0,1,0,0,0,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	lie	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	father	_	NN	NN	_	10	poss	_	_
+9	's	_	POS	POS	_	0	erased	_	_
+10	arm	_	NN	NN	_	5	prep_in	_	_
+11	and	_	CC	CC	_	0	erased	_	_
+12	he	_	PRP$	PRP$	_	13	poss	_	_
+13	father	_	NN	NN	_	15	nsubj	_	_
+14	be	_	VBZ	VBZ	_	15	aux	_	_
+15	tell	_	VBG	VBG	_	5	conj_and	_	_
+16	a	_	DT	DT	_	17	det	_	_
+17	story	_	NN	NN	_	15	dobj	_	_
+18	to	_	TO	TO	_	0	erased	_	_
+19	she	_	PRP	PRP	_	15	prep_to	_	_
+20	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%lie', 'aux$@%be$@%lie', 'root$@%lie$@%VROOT', 'erased$@%in$@%WORDERASED', 'poss$@%he$@%father', 'poss$@%father$@%arm', ""erased$@%'s$@%WORDERASED"", 'prep_in$@%arm$@%lie', 'erased$@%and$@%WORDERASED', 'poss$@%he$@%father', 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'conj_and$@%tell$@%lie', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'prep_to$@%she$@%tell', 'punct$@%.$@%lie']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%lie', 'x$@%be$@%lie', 'x$@%lie$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%arm', ""x$@%'s$@%WORDERASED"", 'x$@%arm$@%lie', 'x$@%and$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%lie', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%she$@%tell', 'x$@%.$@%lie']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%lie$@%x', 'x$@%in$@%x', 'x$@%he$@%x', 'x$@%father$@%x', ""x$@%'s$@%x"", 'x$@%arm$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%.$@%x']",0.95946841473963596,0.95776835862198006,0.65648347789569228,0.94612457727267085,0.94243353129880147,0.60890034551784422,0.093,62.0,63.0,67.0,60.0
+I26U-gNNS-p129-r1,The girl is listening to the old man for a story.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	listen	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	old	_	JJ	JJ	_	8	amod	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	for	_	IN	IN	_	0	erased	_	_
+10	a	_	DT	DT	_	11	det	_	_
+11	story	_	NN	NN	_	8	prep_for	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'amod$@%old$@%man', 'prep_to$@%man$@%listen', 'erased$@%for$@%WORDERASED', 'det$@%a$@%story', 'prep_for$@%story$@%man', 'punct$@%.$@%listen']","['x$@%the$@%girl', 'x$@%girl$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%old$@%man', 'x$@%man$@%listen', 'x$@%for$@%WORDERASED', 'x$@%a$@%story', 'x$@%story$@%man', 'x$@%.$@%listen']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%old$@%x', 'x$@%man$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.80298347159004113,0.80831633528975799,0.56579944865972065,0.77531175674771635,0.77818653943072136,0.53617760333153641,0.635,35.0,35.0,59.0,35.0
+I26U-gNNS-p130-r1,The man is telling his daughter stories,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	7	poss	_	_
+6	daughter	_	NN	NN	_	7	nn	_	_
+7	story	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'poss$@%he$@%story', 'nn$@%daughter$@%story', 'dobj$@%story$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%he$@%story', 'x$@%daughter$@%story', 'x$@%story$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%story$@%x', 'x$@%.$@%x']",0.99248097291145199,0.97443946259209535,0.5120767930818142,0.99252289933378279,0.97437659876253013,0.53064551262518944,0.635,71.0,67.0,48.0,71.0
+I26U-gNNS-p131-r1,the man is telling a book to the girl.,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%tell', 'erased$@%to$@%WORDERASED', 'det$@%the$@%girl', 'prep_to$@%girl$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%tell', 'x$@%to$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.94541657120817224,0.94124377675422122,0.66705101959312096,0.94313865823025023,0.93780111413442757,0.65282120248612729,0.579,59.0,59.0,68.0,59.0
+I26U-gNNS-p132-r1,the father is reading a book to his daughter ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.32902310610478691,0.36142209669716185,0.31452239576766738,0.35243610953921523,0.38609876464813209,0.34548152551083644,1.0,10.5,17.5,15.5,13.5
+I26U-gNNS-p134-r1,The father is reading a book to his daughter.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	father	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	read	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	book	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%father', 'nsubj$@%father$@%read', 'aux$@%be$@%read', 'root$@%read$@%VROOT', 'det$@%a$@%book', 'dobj$@%book$@%read', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_to$@%daughter$@%read', 'punct$@%.$@%read']","['x$@%the$@%father', 'x$@%father$@%read', 'x$@%be$@%read', 'x$@%read$@%VROOT', 'x$@%a$@%book', 'x$@%book$@%read', 'x$@%to$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%read', 'x$@%.$@%read']","['x$@%the$@%x', 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%book$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.32902310610478691,0.36142209669716185,0.31452239576766738,0.35243610953921523,0.38609876464813209,0.34548152551083644,1.0,10.5,17.5,15.5,13.5
+I26U-gNNS-p137-r1,A man is telling a story for his daughter.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	tell	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	daughter	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%tell', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%daughter', 'prep_for$@%daughter$@%story', 'punct$@%.$@%tell']","['x$@%a$@%man', 'x$@%man$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%tell', 'x$@%for$@%WORDERASED', 'x$@%he$@%daughter', 'x$@%daughter$@%story', 'x$@%.$@%tell']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%daughter$@%x', 'x$@%.$@%x']",0.85534962007414839,0.83093462735502255,0.51209299563513166,0.8598017165580234,0.83326523038342037,0.53067936258880355,0.635,39.0,37.0,49.0,39.0
+I26U-gNNS-p138-r1,A man is talking a story to a girl.,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	talk	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	story	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'det$@%a$@%story', 'dobj$@%story$@%talk', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%talk', 'punct$@%.$@%talk']","['x$@%a$@%man', 'x$@%man$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%a$@%story', 'x$@%story$@%talk', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%talk', 'x$@%.$@%talk']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%a$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.94027158537988986,0.93807001395079437,0.57849608777039241,0.93393278806088187,0.93044682553472624,0.55906063843405895,0.579,58.0,58.0,60.0,58.0
+I26U-gNNS-p139-r1,The girl's father is telling a interesting story to her.,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	poss	_	_
+3	's	_	POS	POS	_	0	erased	_	_
+4	father	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	tell	_	VBG	VBG	_	0	root	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	interesting	_	JJ	JJ	_	9	amod	_	_
+9	story	_	NN	NN	_	6	dobj	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	she	_	PRP	PRP	_	6	prep_to	_	_
+12	.	_	.	.	_	6	punct	_	_","['det$@%the$@%girl', 'poss$@%girl$@%father', ""erased$@%'s$@%WORDERASED"", 'nsubj$@%father$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'det$@%a$@%story', 'amod$@%interesting$@%story', 'dobj$@%story$@%tell', 'erased$@%to$@%WORDERASED', 'prep_to$@%she$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%girl', 'x$@%girl$@%father', ""x$@%'s$@%WORDERASED"", 'x$@%father$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%a$@%story', 'x$@%interesting$@%story', 'x$@%story$@%tell', 'x$@%to$@%WORDERASED', 'x$@%she$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%girl$@%x', ""x$@%'s$@%x"", 'x$@%father$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%a$@%x', 'x$@%interesting$@%x', 'x$@%story$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%.$@%x']",0.93251915797959684,0.92391008630183891,0.5898849815295526,0.92962528238911513,0.91936820558697274,0.57892196106092264,0.579,56.0,56.0,62.0,56.0
