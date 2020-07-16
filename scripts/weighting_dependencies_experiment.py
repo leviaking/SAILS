@@ -53,8 +53,9 @@ def apply_annotation_weights(somerows):
 
 
 def get_all_rankings(rrows):
-	## takes full csv rows, which now include the AnnoScore; relevant columns are row[17] thru row[23]
-	## from [ldh TC weighted, xdh TC weighted, xdx TC weighted, ldh TC unweighted, xdh TC unweighted, xdx TC unweighted, AnnoScore]
+	## takes full csv rows, which now include the AnnoScore; relevant columns are row[17] (R, the AnnoScore) thru row[24] (Y, the AnnoRank)
+	## inputs are row[11] (L) to row[17] (R), which correspond to:
+		## [ldh TC weighted, xdh TC weighted, xdx TC weighted, ldh TC unweighted, xdh TC unweighted, xdx TC unweighted, AnnoScore]
 	## generate [ldh w rank, xdh w rank, xdx w rank, ldh uw rank, xdh uw rank, xdx uw rank, AnnoRank]
 	ldh_w_scores = []
 	xdh_w_scores = []
@@ -78,6 +79,7 @@ def get_all_rankings(rrows):
 	xdh_uw_ranks = list(rankdata(xdh_uw_scores).astype(float))
 	xdx_uw_ranks = list(rankdata(xdx_uw_scores).astype(float))
 	anno_ranks = list(rankdata(anno_scores).astype(float))
+	anno_ranks = [float(len(anno_scores)) - r for r in anno_ranks]  ## This inverts the ranking -- I prefer to get spearman scores between 0 and 1 (not between 0 and -1)
 	spearman_row = calculate_spearman([ldh_w_ranks, xdh_w_ranks, xdx_w_ranks, ldh_uw_ranks, xdh_uw_ranks, xdx_uw_ranks, anno_ranks])
 	extended_rows = []
 	for rr in rrows:
@@ -109,7 +111,7 @@ def calculate_spearman(allranks):
 def process_one_item(somefile):
 	## do all the above, return item rows and spearman scores
 	oldheader, sourcerows = get_source_rows(somefile)
-	newheader = oldheader+['ldh w rank', 'xdh w rank', 'xdx w rank', 'ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoScore', 'AnnoRank']
+	newheader = oldheader+['AnnoScore', 'ldh w rank', 'xdh w rank', 'xdx w rank', 'ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoRank']
 	sourcerows = apply_annotation_weights(sourcerows)
 	rows_with_ranks, spearman_row = get_all_rankings(sourcerows)
 	rows_with_ranks.insert(0, newheader)
@@ -143,7 +145,7 @@ def main():
 		spearman_row.insert(0, out_label)
 		spearman_rows.append(spearman_row)
 		write_output(output_rows, outputdir+out_label+".csv")
-	write_output(spearman_rows, outputdir+"Weighting_dependencies_experiment_spearman.csv")
+	write_output(spearman_rows, outputdir+"weighting_dependencies_experiment-all_ns-spearman.csv")
 
 
 if __name__ == "__main__":
