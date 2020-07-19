@@ -263,5 +263,31 @@ I'm preparing the data and interface for Annotator 2. I'm going to tweak the int
 I01T-001-a / I01T-001-b. So right now I'm preparing a new input file containing only every 4th pair -- I01T-004-a/b, I01T-008-a/b, etc., which will give me 5 pairs per item.
 
 
+2020/07/17. Friday
+Implementing n-fold cross-validation.
+Also updating code such that dependencies and their tf-idf scores are written to file;
+For each item, I need a CSV; header will list each GS dependency;
+Next row is for GS tf-idf scores for those dependencies;
+Each subsequent row is for one test response and shows tf-idf scores for the dependencies in the header;
+At this point, we also need a function to expand the header when new dependencies are seen in the test response;
+I don't think we should do this on the fly... i think it will be better to first write a file for each RESPONSE;
+This CSV will contain the union of GS and test responses as the header;
+Next line is GS tf-idf values for the deps;
+Next line is test response tf-idf values for the deps;
+End of file;
+After we've run each test response for the item, then we have a script that combines each of the three-line CSVs into a single CSV as described above;
+(We may want to then delete the three-line CSVs.)
 
+2020/07/18. Saturday.
+OK, there are stats about the GS counts in this file:
+/Users/leviking/Documents/dissertation/SAILS/gs_response_counts_MD.xlsx
+For cross-validation, we need to know how many responses are in each "all_ns" GS so that we can sample appropriately.
+The all_ns GS ranges from 134 responses to 190 responses.
+The familiar sets range from 17 to 34.
+I think I should sample at 15, because this size will also work later when sampling the FNS and CNS sets in that experiment.
+I think I should also sample at 50.
+So now I'm going to generate the new sampled GSs for cross-validation. This needs to operate on these files:
+/Users/leviking/Documents/dissertation/SAILS/gold_standards/depstrings/I01T_all_ns_depstrings.csv (for all 60 items).
+The new files will be stored here:
+/Users/leviking/Documents/dissertation/SAILS/gold_standards/cross-validation/depstrings/<sample_size>
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-## (2020/07/02) This version was used in an experiment to compare TC scores when normalized for response length vs non-normalized (weighted vs. unweighted); unweighted was determined to be better, so I'm sticking with unweighted going forward and this script probably won't be needed again.
+## (2020/07/02) This version was used in an experiment to compare TC scores when normalized for response length vs non-normalized (weighted vs. unweighted);
 
 ##2019-06-22. This is a modified version of lk_tfidf_LOO_TC_weighted.py.
 
@@ -218,7 +218,7 @@ def get_TC_score(gspairs, testpairs, termsvec): ##returns the TC score (tf-idf c
 		else:
 			testvec.append(0.0)
 	mycosine = cosine(testvec, gsvec)
-	return mycosine
+	return mycosine, gsvec, testvec
 
 def write_output(rs, nm):
 	thisfile=open(outputdir+nm, 'w')
@@ -244,6 +244,9 @@ def write_output(rs, nm):
 def prep_all_gs_material():
 	pass
 
+
+## 2020/07/17. Implementing cross-validation now. I'd also like to rework this so that the tf-idf scores for both the test response and the GS are stored somehow. This probably just means writing out the vectors to CSVs. Having this may be helpful in analyzing or explaining patterns later on.
+
 def main():
 	dtwdict=build_ref_wordlists() ##This contains everything from the reference corpus. {'ldh': [[terms from doc 1], [terms from doc 2], etc.], 'xdh': [[terms], [terms]], etc.}
 	header, all_test_rows=get_source_content(sourcedir+testdocfn) ## This is one CSV; header is row, all_test_rows is list of rows
@@ -257,7 +260,6 @@ def main():
 	xdh_uw_scores=[]
 	xdx_uw_scores=[]
 	
-	### 2019/06/26. Clean up in and around here; I believe we want to first gather all the GSs and their materials; then we want to iterate through the test rows...
 	
 	for test_row in all_test_rows:
 		pass
@@ -276,7 +278,8 @@ def main():
 			test_w_TC_score = get_TC_score(gs_w_tfidf_pairs, test_w_tfidf_pairs, terms_w_union_vector) ##the "TC" Tf-idf Cosine score, as described in King & Dickinson 2016. We get the union set of terms for the test response and the GS, sort it, then create a vector of the GS scores for each term in the sorted union list, and a vector for the test scores for each term in the sorted union list; we calculate the cosine distance between these two vectors and use this as the TC score for the response.
 			test_uw_tfidf_pairs = get_unweighted_term_tfidf_list(dtw, [mytesttokens], deptype) #### REVISIT this! ##hacky solution -- list containing only one sublist
 			terms_uw_union_vector = get_union_vector(gs_uw_tfidf_pairs, test_uw_tfidf_pairs)
-			test_uw_TC_score = get_TC_score(gs_uw_tfidf_pairs, test_uw_tfidf_pairs, terms_uw_union_vector)
+			test_uw_TC_score, gsvector, testvector = get_TC_score(gs_uw_tfidf_pairs, test_uw_tfidf_pairs, terms_uw_union_vector)  ## 2020/07/17; here is where I need to write terms and tf-idf scores to file.
+			vecfilename = ''
 			if deptype=='ldh':
 				ldh_w_scores.append(test_w_TC_score)
 				ldh_uw_scores.append(test_uw_TC_score)
@@ -309,3 +312,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# # TPM
+# # L3 119
+# # L4 146
+# # Ling
+# # L3 118
+# # L4 143
+

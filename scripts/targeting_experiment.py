@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 
-## 2019/12/07. This is the same as weighting_dependencies_experiment.py, but this version uses the all_fns GSs for the analysis. (This is a one-time experiment and I don't want to spend the time factoring out the GS name as a variable.) The rationale here is this: using the full "all_ns" GS, we find a statistically insignificant difference for weighted (normalized) dependencies vs unweighted, but we'd like to see if perhaps the effect is more pronounced when a smaller GS is used. The all_ns GSs contain ~140-150 responses each, but the all_fns GSs contain ~30-40 each.
+## July 2020; branched from dependency_format_experiment.py. Compares performance
+## for Targeted vs Untargeted items.
 
 
 import sys, math, csv
 from os import walk
 from scipy.stats import rankdata
 from scipy.stats import spearmanr
-
-# # itemnum = testdocfn.split("_")[0]
 
 
 
@@ -17,7 +16,8 @@ def get_infile_names(somedir):
 	for (dirpath, dirnames, filenames) in walk(somedir):
 		docnames.extend(filenames)
 		break
-	docnames = [dn for dn in docnames if "NNS_vs_all_fns_TC_w" in dn]
+	# # docnames = [dn for dn in docnames if "NNS_vs_all_ns_TC_w" in dn]
+	docnames = [dn for dn in docnames if "T_NNS_vs_all_fns" in dn]
 	docnames.sort()
 	return docnames
 
@@ -36,10 +36,6 @@ def get_source_rows(tdf): ## tdf ~= test doc file; returns csv lines as lists
 	return skipheader, everything
 
 
-
-## columns to add (8):
-## ldh w rank, xdh w rank, xdx w rank, ldh uw rank, xdh uw rank, xdx uw rank, AnnoScore, AnnoRank, 
-
 def apply_annotation_weights(somerows):
 	extended_rows = []
 	##annotations are on row[2] thru row[6] (CAGIV)
@@ -52,39 +48,35 @@ def apply_annotation_weights(somerows):
 		a_score = a_score + (float(sr[6]) * 0.262)
 		sr.append(str(a_score))
 		extended_rows.append(sr)
+	## So this is returning the original row + AnnoScore
 	return extended_rows
 
 
 def get_all_rankings(rrows):
-	## takes full csv rows, which now include the AnnoScore; relevant columns are row[17] thru row[23]
+	## takes full csv rows, which now include the AnnoScore; relevant columns are row[17] (R) thru row[21] (V)
 	## from [ldh TC weighted, xdh TC weighted, xdx TC weighted, ldh TC unweighted, xdh TC unweighted, xdx TC unweighted, AnnoScore]
 	## generate [ldh w rank, xdh w rank, xdx w rank, ldh uw rank, xdh uw rank, xdx uw rank, AnnoRank]
-	ldh_w_scores = []
-	xdh_w_scores = []
-	xdx_w_scores = []
+	# # ldh_w_scores = []
+	# # xdh_w_scores = []
+	# # xdx_w_scores = []
 	ldh_uw_scores = []
 	xdh_uw_scores = []
 	xdx_uw_scores = []
 	anno_scores = []
 	for rr in rrows:
-		ldh_w_scores.append(rr[11])
-		xdh_w_scores.append(rr[12])
-		xdx_w_scores.append(rr[13])
-		ldh_uw_scores.append(rr[14])
-		xdh_uw_scores.append(rr[15])
-		xdx_uw_scores.append(rr[16])
-		anno_scores.append(rr[17])
-	ldh_w_ranks = list(rankdata(ldh_w_scores).astype(float))
-	xdh_w_ranks = list(rankdata(xdh_w_scores).astype(float))
-	xdx_w_ranks = list(rankdata(xdx_w_scores).astype(float))
-	ldh_uw_ranks = list(rankdata(ldh_uw_scores).astype(float))
+		ldh_uw_scores.append(rr[14])  ## O
+		xdh_uw_scores.append(rr[15])  ## P
+		xdx_uw_scores.append(rr[16])  ## Q
+		anno_scores.append(rr[17])  ## R
+	ldh_uw_ranks = list(rankdata(ldh_uw_scores).astype(float))  ## e.g. if m=[8, 0.5, 11, 9] then list(rankdata(m)) = [2, 1, 4, 3]
 	xdh_uw_ranks = list(rankdata(xdh_uw_scores).astype(float))
 	xdx_uw_ranks = list(rankdata(xdx_uw_scores).astype(float))
 	anno_ranks = list(rankdata(anno_scores).astype(float))
-	spearman_row = calculate_spearman([ldh_w_ranks, xdh_w_ranks, xdx_w_ranks, ldh_uw_ranks, xdh_uw_ranks, xdx_uw_ranks, anno_ranks])
+	anno_ranks = [float(len(anno_scores)) - r for r in anno_ranks]  ## This inverts the ranking -- I prefer to get spearman scores between 0 and 1 (not between 0 and -1)
+	spearman_row = calculate_spearman([ldh_uw_ranks, xdh_uw_ranks, xdx_uw_ranks, anno_ranks])
 	extended_rows = []
 	for rr in rrows:
-		xr = rr+[ldh_w_ranks.pop(0), xdh_w_ranks.pop(0), xdx_w_ranks.pop(0), ldh_uw_ranks.pop(0), xdh_uw_ranks.pop(0), xdx_uw_ranks.pop(0), anno_ranks.pop(0)]
+		xr = rr+[ldh_uw_ranks.pop(0), xdh_uw_ranks.pop(0), xdx_uw_ranks.pop(0), anno_ranks.pop(0)]
 		extended_rows.append(xr)
 	return extended_rows, spearman_row
 
@@ -92,27 +84,21 @@ def get_all_rankings(rrows):
 def calculate_spearman(allranks):
 	## spearman values will go in a csv with this header:
 	## (Source), ldh_w_spearman, ldh_w_p, xdh_w_spearman, xdh_w_p, xdx_w_spearman, xdx_w_p, ldh_uw_spearman, ldh_uw_p, xdh_uw_spearman, xdh_uw_p, xdx_uw_spearman, xdx_uw_p
-	ldh_w_ranks = allranks[0]
-	xdh_w_ranks = allranks[1]
-	xdx_w_ranks = allranks[2]
-	ldh_uw_ranks = allranks[3]
-	xdh_uw_ranks = allranks[4]
-	xdx_uw_ranks = allranks[5]
-	anno_ranks = allranks[6]
-	ldh_w_spr, ldh_w_p = spearmanr(ldh_w_ranks, anno_ranks)
-	xdh_w_spr, xdh_w_p = spearmanr(xdh_w_ranks, anno_ranks)
-	xdx_w_spr, xdx_w_p = spearmanr(xdx_w_ranks, anno_ranks)
+	ldh_uw_ranks = allranks[0]
+	xdh_uw_ranks = allranks[1]
+	xdx_uw_ranks = allranks[2]
+	anno_ranks = allranks[3]
 	ldh_uw_spr, ldh_uw_p = spearmanr(ldh_uw_ranks, anno_ranks)
 	xdh_uw_spr, xdh_uw_p = spearmanr(xdh_uw_ranks, anno_ranks)
 	xdx_uw_spr, xdx_uw_p = spearmanr(xdx_uw_ranks, anno_ranks)
-	sp_row = [ldh_w_spr, ldh_w_p, xdh_w_spr, xdh_w_p, xdx_w_spr, xdx_w_p, ldh_uw_spr, ldh_uw_p, xdh_uw_spr, xdh_uw_p, xdx_uw_spr, xdx_uw_p]
+	sp_row = [ldh_uw_spr, ldh_uw_p, xdh_uw_spr, xdh_uw_p, xdx_uw_spr, xdx_uw_p]
 	return sp_row
 
 
 def process_one_item(somefile):
 	## do all the above, return item rows and spearman scores
 	oldheader, sourcerows = get_source_rows(somefile)
-	newheader = oldheader+['ldh w rank', 'xdh w rank', 'xdx w rank', 'ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoScore', 'AnnoRank']
+	newheader = oldheader+['AnnoScore', 'ldh uw rank', 'xdh uw rank', 'xdx uw rank', 'AnnoRank']
 	sourcerows = apply_annotation_weights(sourcerows)
 	rows_with_ranks, spearman_row = get_all_rankings(sourcerows)
 	rows_with_ranks.insert(0, newheader)
@@ -134,19 +120,18 @@ def write_output(rs, nm):
 	thisfile.close()
 
 
-
 def main():
 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/responses/TC/')
-	outputdir=('/Users/leviking/Documents/dissertation/SAILS/weighting_dependencies/')
+	outputdir=('/Users/leviking/Documents/dissertation/SAILS/experiments/targeting/')
 	input_files = get_infile_names(sourcedir)
-	spearman_rows = [["Source", "ldh_w_spear", "ldh_w_p", "xdh_w_spear", "xdh_w_p", "xdx_w_spear", "xdx_w_p", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]]
+	spearman_rows = [["Source", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]]
 	for inf in input_files:
 		out_label = inf.replace("_TC_w.csv", "")
 		output_rows, spearman_row = process_one_item(sourcedir+inf)
 		spearman_row.insert(0, out_label)
 		spearman_rows.append(spearman_row)
 		write_output(output_rows, outputdir+out_label+".csv")
-	write_output(spearman_rows, outputdir+"Weighting_dependencies_experiment_spearman.csv")
+	write_output(spearman_rows, outputdir+"targeting_experiment-T-all_fns-spearman.csv")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-##LK 2018/06/21: This script is used to assemble the various gold standard sets that will be used in the experiments. For example, one GS will consist of all NS responses; another will be all 5/5 annotated responses; another will contain only 1st responses from NSs; etc. The resulting files will have a header file, then each row will have: ResponseID, Response, Core, Answerhood, Grammaticality, Interpretability, Verifiability (feature annotations).
+##LK 2018... This script generates a csv that shows how many responses there are various GS files, listed for all 60 items.
 
 import sys, re, csv, datetime, os
 from shutil import copyfile
@@ -8,7 +8,7 @@ from shutil import copyfile
 # all_file_ids=[] ## e.g., 'I01T', 'I29U'
 # superdict={} ##{'I01T': [[x], [x]...] ...} #each '[x]' is a list of seven values (row[12:19])
 
-gs_names=['all_nns', 'all_fns', 'all_cns', 'firsts', 'seconds', 'perfects', 'almosts', 'coreyes']
+gs_names=['all_ns', 'all_fns', 'all_cns', 'firsts', 'seconds', 'perfects', 'almosts', 'coreyes']
 header=list(gs_names)
 header.insert(0, 'item-gs')
 outfile=open('../stats/gs_response_counts.csv', 'w')

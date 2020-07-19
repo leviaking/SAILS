@@ -1,0 +1,575 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,ldh TC weighted,xdh TC weighted,xdx TC weighted,ldh TC unweighted,xdh TC unweighted,xdx TC unweighted,AnnoScore,ldh uw rank,xdh uw rank,xdx uw rank,AnnoRank
+I04U-gNNS-p004-r1,A boy is waking up in the morning.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	morning	_	NN	NN	_	4	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.25853338859477337,0.23239160278024684,0.19515237274070407,0.27334655435274546,0.24743604582828393,0.24624033137712487,1.0,12.0,12.0,21.0,13.5
+I04U-gNNS-p005-r1,The boy is getting up in bed.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	bed	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%in$@%WORDERASED', 'prep_in$@%bed$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%in$@%WORDERASED', 'x$@%bed$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.96230543634188248,0.95422445024805547,0.77438599674376518,0.95630115221317769,0.94381756309474685,0.76704945641280819,1.0,54.0,50.0,57.0,13.5
+I04U-gNNS-p006-r1,A boy just woke up.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.29094283429187662,0.27460967716065032,0.13388077102614671,0.32171559412861206,0.30247464214114717,0.1904107619996932,0.907,16.5,16.5,11.5,41.0
+I04U-gNNS-p007-r1,"On the wonderful morning, the little boy is getting up because of the clock. ",1,1,1,1,1,"1	on	_	IN	IN	_	0	erased	_	_
+2	the	_	DT	DT	_	4	det	_	_
+3	wonderful	_	JJ	JJ	_	4	amod	_	_
+4	morning	_	NN	NN	_	10	prep_on	_	_
+5	,	_	,	,	_	10	punct	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	little	_	JJ	JJ	_	8	amod	_	_
+8	boy	_	NN	NN	_	10	nsubj	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	get	_	VBG	VBG	_	0	root	_	_
+11	up	_	RP	RP	_	10	prt	_	_
+12	because	_	RB	RB	_	0	erased	_	_
+13	of	_	IN	IN	_	0	erased	_	_
+14	the	_	DT	DT	_	15	det	_	_
+15	clock	_	NN	NN	_	10	prep_because_of	_	_
+16	.	_	.	.	_	10	punct	_	_","['erased$@%on$@%WORDERASED', 'det$@%the$@%morning', 'amod$@%wonderful$@%morning', 'prep_on$@%morning$@%get', 'punct$@%,$@%get', 'det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%because$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'det$@%the$@%clock', 'prep_because_of$@%clock$@%get', 'punct$@%.$@%get']","['x$@%on$@%WORDERASED', 'x$@%the$@%morning', 'x$@%wonderful$@%morning', 'x$@%morning$@%get', 'x$@%,$@%get', 'x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%because$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%the$@%clock', 'x$@%clock$@%get', 'x$@%.$@%get']","['x$@%on$@%x', 'x$@%the$@%x', 'x$@%wonderful$@%x', 'x$@%morning$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%because$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%clock$@%x', 'x$@%.$@%x']",0.95786681678766572,0.95675064238524932,0.78708104991623851,0.94413307175225092,0.94204384105174699,0.74090491340537334,1.0,45.0,49.0,43.0,13.5
+I04U-gNNS-p009-r1,A kid woke up from sleeping.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBD	VBD	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	from	_	IN	IN	_	0	erased	_	_
+6	sleep	_	VBG	VBG	_	3	prep_from	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%kid', 'nsubj$@%kid$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%from$@%WORDERASED', 'prep_from$@%sleep$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%kid', 'x$@%kid$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%from$@%WORDERASED', 'x$@%sleep$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%kid$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%from$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.4774807154265549,0.48284964889978033,0.44479771070002805,0.50025588873432725,0.50680606784209392,0.47564137205374246,0.907,30.0,32.0,36.0,41.0
+I04U-gNNS-p012-r1,the boy is stretching in the morning ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	morning	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%stretch', 'punct$@%.$@%stretch']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%stretch', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.89004526552828411,0.88837517869931593,0.76445778833751699,0.88438605814845317,0.88156362524563703,0.76204262856693894,0.635,38.5,39.5,53.5,64.5
+I04U-gNNS-p013-r1,The clock rings and makes the boy wakes up.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	clock	_	NN	NN	_	5	nsubj	_	_
+3	ring	_	VBZ	VBZ	_	0	root	_	_
+4	and	_	CC	CC	_	0	erased	_	_
+5	make	_	VBZ	VBZ	_	3	conj_and	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	boy	_	NN	NN	_	8	nn	_	_
+8	wake	_	NNS	NNS	_	5	dobj	_	_
+9	up	_	RP	RP	_	5	prt	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%clock', 'nsubj$@%clock$@%make', 'root$@%ring$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%make$@%ring', 'det$@%the$@%wake', 'nn$@%boy$@%wake', 'dobj$@%wake$@%make', 'prt$@%up$@%make', 'punct$@%.$@%ring']","['x$@%the$@%clock', 'x$@%clock$@%make', 'x$@%ring$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%make$@%ring', 'x$@%the$@%wake', 'x$@%boy$@%wake', 'x$@%wake$@%make', 'x$@%up$@%make', 'x$@%.$@%ring']","['x$@%the$@%x', 'x$@%clock$@%x', 'x$@%ring$@%x', 'x$@%and$@%x', 'x$@%make$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.97825621021347675,0.87726938561239065,0.36097291756721772,0.96564310079953675,0.86493542022345715,0.3456475735490282,0.851,58.0,37.0,31.0,55.5
+I04U-gNNS-p014-r1,A man is getting up.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%a$@%man', 'x$@%man$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.98580646327829935,0.98551763255430869,0.92262576469481661,0.98559494535004899,0.98561345549435553,0.92494388526025095,1.0,68.0,68.0,67.0,13.5
+I04U-gNNS-p017-r1,The boy just wakes up and feels comfortable. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	7	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBZ	VBZ	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	feel	_	VBZ	VBZ	_	4	conj_and	_	_
+8	comfortable	_	JJ	JJ	_	7	acomp	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%feel', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%and$@%WORDERASED', 'conj_and$@%feel$@%wake', 'acomp$@%comfortable$@%feel', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%feel', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%and$@%WORDERASED', 'x$@%feel$@%wake', 'x$@%comfortable$@%feel', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%and$@%x', 'x$@%feel$@%x', 'x$@%comfortable$@%x', 'x$@%.$@%x']",0.5048991769596165,0.51040288620521146,0.37311269674427539,0.52610836465812527,0.53263416859965584,0.41398152941125632,0.907,32.0,33.0,35.0,41.0
+I04U-gNNS-p021-r1,a boy just get up,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	get	_	VBP	VBP	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'advmod$@%just$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%just$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.97083140772591259,0.96941161351207339,0.76556572038698734,0.96485616748494341,0.96214032984055697,0.76364024635493732,0.851,57.0,59.0,56.0,55.5
+I04U-gNNS-p022-r1,The boy is getting up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.95257094235077211,0.94833773652463205,0.75098239403181921,0.94501632395684232,0.93925777163794177,0.74777465530685827,1.0,47.5,46.5,45.5,13.5
+I04U-gNNS-p023-r1,The boy get up.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBP	VBP	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.94975733448508048,0.94557878425648545,0.75098448252350958,0.94244888028360396,0.93652025887165768,0.74777668170535716,0.851,44.0,44.0,48.0,55.5
+I04U-gNNS-p026-r1," waking up in his own bed, the man is happy with the beautiful weather. ",1,0,1,1,1,"1	wake	_	VBG	VBG	_	11	partmod	_	_
+2	up	_	RP	RP	_	1	prt	_	_
+3	in	_	IN	IN	_	0	erased	_	_
+4	he	_	PRP$	PRP$	_	6	poss	_	_
+5	own	_	JJ	JJ	_	6	amod	_	_
+6	bed	_	NN	NN	_	1	prep_in	_	_
+7	,	_	,	,	_	11	punct	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	11	nsubj	_	_
+10	be	_	VBZ	VBZ	_	11	cop	_	_
+11	happy	_	JJ	JJ	_	0	root	_	_
+12	with	_	IN	IN	_	0	erased	_	_
+13	the	_	DT	DT	_	15	det	_	_
+14	beautiful	_	JJ	JJ	_	15	amod	_	_
+15	weather	_	NN	NN	_	11	prep_with	_	_
+16	.	_	.	.	_	11	punct	_	_","['partmod$@%wake$@%happy', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'poss$@%he$@%bed', 'amod$@%own$@%bed', 'prep_in$@%bed$@%wake', 'punct$@%,$@%happy', 'det$@%the$@%man', 'nsubj$@%man$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%the$@%weather', 'amod$@%beautiful$@%weather', 'prep_with$@%weather$@%happy', 'punct$@%.$@%happy']","['x$@%wake$@%happy', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%he$@%bed', 'x$@%own$@%bed', 'x$@%bed$@%wake', 'x$@%,$@%happy', 'x$@%the$@%man', 'x$@%man$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%the$@%weather', 'x$@%beautiful$@%weather', 'x$@%weather$@%happy', 'x$@%.$@%happy']","['x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%he$@%x', 'x$@%own$@%x', 'x$@%bed$@%x', 'x$@%,$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%beautiful$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",0.88360597229608007,0.88087176229005348,0.49041364887130301,0.88290022385679712,0.88116851284224063,0.51982333604627751,0.907,37.0,38.0,37.0,41.0
+I04U-gNNS-p027-r1,the boy just woke up and he's stretching ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	he	_	PRP	PRP	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	stretch	_	VBG	VBG	_	4	conj_and	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%and$@%WORDERASED', 'nsubj$@%he$@%stretch', 'aux$@%be$@%stretch', 'conj_and$@%stretch$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%and$@%WORDERASED', 'x$@%he$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%.$@%x']",0.43372984920084245,0.4141101208188539,0.22880442929086287,0.45062475402189983,0.42843940230786937,0.27326933661941832,1.0,27.0,26.0,23.0,13.5
+I04U-gNNS-p028-r1,A boy is getting up,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.9690221222946811,0.96647311716047846,0.7509857681370109,0.96206011811011327,0.958058471822959,0.74777745272620177,1.0,55.5,56.5,49.5,13.5
+I04U-gNNS-p030-r1,The boy is waking up by the clock ring.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	clock	_	NN	NN	_	9	nn	_	_
+9	ring	_	NN	NN	_	4	prep_by	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%by$@%WORDERASED', 'det$@%the$@%ring', 'nn$@%clock$@%ring', 'prep_by$@%ring$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%by$@%WORDERASED', 'x$@%the$@%ring', 'x$@%clock$@%ring', 'x$@%ring$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%clock$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.34413035494568822,0.33060191070934819,0.36064368918786394,0.35775206027823359,0.33818523477013862,0.34530649419769954,0.944,18.0,18.0,30.0,30.0
+I04U-gNNS-p032-r1,A man is waking up with the ring of alarm.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	ring	_	NN	NN	_	4	prep_with	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	alarm	_	NN	NN	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%with$@%WORDERASED', 'det$@%the$@%ring', 'prep_with$@%ring$@%wake', 'erased$@%of$@%WORDERASED', 'prep_of$@%alarm$@%ring', 'punct$@%.$@%wake']","['x$@%a$@%man', 'x$@%man$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%with$@%WORDERASED', 'x$@%the$@%ring', 'x$@%ring$@%wake', 'x$@%of$@%WORDERASED', 'x$@%alarm$@%ring', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%ring$@%x', 'x$@%of$@%x', 'x$@%alarm$@%x', 'x$@%.$@%x']",0.40601625385052575,0.40859876836928199,0.31551389700925314,0.41378438249266403,0.41230503742076441,0.28390918668316012,0.944,22.0,25.0,24.0,30.0
+I04U-gNNS-p034-r1,A boy is getting up at morning,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	at	_	IN	IN	_	0	erased	_	_
+7	morning	_	NN	NN	_	4	prep_at	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%at$@%WORDERASED', 'prep_at$@%morning$@%get', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%at$@%WORDERASED', 'x$@%morning$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%at$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.97530511022808686,0.97270973483647727,0.78775944527696029,0.96975434509994407,0.96585955081921526,0.78671315638674699,0.944,61.0,60.0,58.0,30.0
+I04U-gNNS-p036-r1,The clock is ringing and the boy wakes up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	clock	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	ring	_	JJ	JJ	_	0	root	_	_
+5	and	_	CC	CC	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	8	nsubj	_	_
+8	wake	_	VBZ	VBZ	_	4	conj_and	_	_
+9	up	_	RP	RP	_	8	prt	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%clock', 'nsubj$@%clock$@%ring', 'cop$@%be$@%ring', 'root$@%ring$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'conj_and$@%wake$@%ring', 'prt$@%up$@%wake', 'punct$@%.$@%ring']","['x$@%the$@%clock', 'x$@%clock$@%ring', 'x$@%be$@%ring', 'x$@%ring$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%ring', 'x$@%up$@%wake', 'x$@%.$@%ring']","['x$@%the$@%x', 'x$@%clock$@%x', 'x$@%be$@%x', 'x$@%ring$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.73551083702977527,0.7125010381134057,0.36050423684163668,0.71783372621743569,0.68962025697222873,0.34517079279345964,1.0,34.0,34.0,29.0,13.5
+I04U-gNNS-p037-r1,The boy is getting up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.95257094235077211,0.94833773652463205,0.75098239403181921,0.94501632395684232,0.93925777163794177,0.74777465530685827,1.0,47.5,46.5,45.5,13.5
+I04U-gNNS-p038-r1,A boy is getting up when he listened clock.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	when	_	WRB	WRB	_	8	advmod	_	_
+7	he	_	PRP	PRP	_	8	nsubj	_	_
+8	listen	_	VBD	VBD	_	4	advcl	_	_
+9	clock	_	NN	NN	_	8	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'advmod$@%when$@%listen', 'nsubj$@%he$@%listen', 'advcl$@%listen$@%get', 'dobj$@%clock$@%listen', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%when$@%listen', 'x$@%he$@%listen', 'x$@%listen$@%get', 'x$@%clock$@%listen', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%when$@%x', 'x$@%he$@%x', 'x$@%listen$@%x', 'x$@%clock$@%x', 'x$@%.$@%x']",0.98177573001131035,0.98190506315378556,0.77747091136010371,0.97767998642522969,0.97736355905110706,0.72505405182270266,0.944,63.0,64.0,42.0,30.0
+I04U-gNNS-p039-r1,The boy is waking up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.13636046218305042,0.12455475606152266,0.11700968252441113,0.15608228895575837,0.1446679196255537,0.17434666549004052,1.0,2.5,2.5,3.5,13.5
+I04U-gNNS-p040-r1,The boy is stretching himself on the bed.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	himself	_	PRP	PRP	_	4	dobj	_	_
+6	on	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	bed	_	NN	NN	_	4	prep_on	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'dobj$@%himself$@%stretch', 'erased$@%on$@%WORDERASED', 'det$@%the$@%bed', 'prep_on$@%bed$@%stretch', 'punct$@%.$@%stretch']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%himself$@%stretch', 'x$@%on$@%WORDERASED', 'x$@%the$@%bed', 'x$@%bed$@%stretch', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%himself$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%bed$@%x', 'x$@%.$@%x']",0.90437164870079656,0.90273413263928082,0.75723607746635424,0.90054343788361357,0.89867863748275334,0.74991982577724237,0.635,41.0,42.0,51.0,64.5
+I04U-gNNS-p041-r1,The boy is waking up so cheerfully because of the alarm,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RB	RB	_	6	advmod	_	_
+6	so	_	RB	RB	_	4	advmod	_	_
+7	cheerfully	_	RB	RB	_	4	advmod	_	_
+8	because	_	IN	IN	_	0	erased	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	alarm	_	NN	NN	_	4	prep_because_of	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'advmod$@%up$@%so', 'advmod$@%so$@%wake', 'advmod$@%cheerfully$@%wake', 'erased$@%because$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'det$@%the$@%alarm', 'prep_because_of$@%alarm$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%so', 'x$@%so$@%wake', 'x$@%cheerfully$@%wake', 'x$@%because$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%the$@%alarm', 'x$@%alarm$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%so$@%x', 'x$@%cheerfully$@%x', 'x$@%because$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%.$@%x']",0.51297575059266376,0.49791514548597171,0.42651880271111497,0.52025211891754075,0.50160666790824981,0.40691868847644508,1.0,31.0,31.0,34.0,13.5
+I04U-gNNS-p042-r1,The boy is waking up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.13636046218305042,0.12455475606152266,0.11700968252441113,0.15608228895575837,0.1446679196255537,0.17434666549004052,1.0,2.5,2.5,3.5,13.5
+I04U-gNNS-p043-r1,The man wakes up in the morning.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	morning	_	NN	NN	_	3	prep_in	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%man', 'x$@%man$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.40534782597711372,0.38507207823450573,0.23085629889893156,0.42016264497727551,0.39723261861626924,0.28790080708358246,0.907,23.0,23.0,25.0,41.0
+I04U-gNNS-p044-r1,A boy who sit on a bed and begin to get up,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	who	_	WP	WP	_	9	nsubj	_	_
+4	sit	_	VB	VB	_	2	ccomp	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	bed	_	NN	NN	_	4	prep_on	_	_
+8	and	_	CC	CC	_	0	erased	_	_
+9	begin	_	VB	VB	_	4	conj_and	_	_
+10	to	_	TO	TO	_	11	aux	_	_
+11	get	_	VB	VB	_	9	xcomp	_	_
+12	up	_	RP	RP	_	11	prt	_	_
+13	.	_	.	.	_	2	punct	_	_","['det$@%a$@%boy', 'root$@%boy$@%VROOT', 'nsubj$@%who$@%begin', 'ccomp$@%sit$@%boy', 'erased$@%on$@%WORDERASED', 'det$@%a$@%bed', 'prep_on$@%bed$@%sit', 'erased$@%and$@%WORDERASED', 'conj_and$@%begin$@%sit', 'aux$@%to$@%get', 'xcomp$@%get$@%begin', 'prt$@%up$@%get', 'punct$@%.$@%boy']","['x$@%a$@%boy', 'x$@%boy$@%VROOT', 'x$@%who$@%begin', 'x$@%sit$@%boy', 'x$@%on$@%WORDERASED', 'x$@%a$@%bed', 'x$@%bed$@%sit', 'x$@%and$@%WORDERASED', 'x$@%begin$@%sit', 'x$@%to$@%get', 'x$@%get$@%begin', 'x$@%up$@%get', 'x$@%.$@%boy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%who$@%x', 'x$@%sit$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%bed$@%x', 'x$@%and$@%x', 'x$@%begin$@%x', 'x$@%to$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.98179116189827942,0.97337929314523153,0.8037151418916717,0.98222503638486369,0.97049521494557955,0.79585623240005177,0.851,64.0,62.0,59.0,55.5
+I04U-gNNS-p051-r1,a man gets up after the alarm going,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	after	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	alarm	_	NN	NN	_	3	prep_after	_	_
+8	go	_	VBG	VBG	_	7	partmod	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%after$@%WORDERASED', 'det$@%the$@%alarm', 'prep_after$@%alarm$@%get', 'partmod$@%go$@%alarm', 'punct$@%.$@%get']","['x$@%a$@%man', 'x$@%man$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%after$@%WORDERASED', 'x$@%the$@%alarm', 'x$@%alarm$@%get', 'x$@%go$@%alarm', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%after$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%go$@%x', 'x$@%.$@%x']",0.97320107607869677,0.97346172622321303,0.68812866871331835,0.96809753943327237,0.96832822616875025,0.60181477097306413,0.851,60.0,61.0,40.0,55.5
+I04U-gNNS-p057-r1,A boy just woke up. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.29094283429187662,0.27460967716065032,0.13388077102614671,0.32171559412861206,0.30247464214114717,0.1904107619996932,0.907,16.5,16.5,11.5,41.0
+I04U-gNNS-p058-r1,The boy is taking a nap. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	nap	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%nap', 'dobj$@%nap$@%take', 'punct$@%.$@%take']","['x$@%the$@%boy', 'x$@%boy$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%nap', 'x$@%nap$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%nap$@%x', 'x$@%.$@%x']",0.95964634110724134,0.9591373049899129,0.86348584701007747,0.95316904879823228,0.95250583905033337,0.84570857274673839,0.635,53.0,55.0,62.0,64.5
+I04U-gNNS-p065-r1,A boy woke up when the clock rang.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBD	VBD	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	when	_	WRB	WRB	_	8	advmod	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	clock	_	NN	NN	_	8	nsubj	_	_
+8	ring	_	VBD	VBD	_	3	advcl	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'advmod$@%when$@%ring', 'det$@%the$@%clock', 'nsubj$@%clock$@%ring', 'advcl$@%ring$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%when$@%ring', 'x$@%the$@%clock', 'x$@%clock$@%ring', 'x$@%ring$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%when$@%x', 'x$@%the$@%x', 'x$@%clock$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.45351244576777594,0.43746407632375928,0.3612011249236281,0.46188444135057793,0.44109522728449702,0.34585706046060982,0.907,28.0,28.0,32.0,41.0
+I04U-gNNS-p066-r1,The man get up at 1 pm.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBP	VBP	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	at	_	IN	IN	_	0	erased	_	_
+6	1	_	CD	CD	_	7	num	_	_
+7	pm	_	NN	NN	_	3	prep_at	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%at$@%WORDERASED', 'num$@%1$@%pm', 'prep_at$@%pm$@%get', 'punct$@%.$@%get']","['x$@%the$@%man', 'x$@%man$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%at$@%WORDERASED', 'x$@%1$@%pm', 'x$@%pm$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%at$@%x', 'x$@%1$@%x', 'x$@%pm$@%x', 'x$@%.$@%x']",0.99073686517234327,0.99102550767043907,0.97728019927062182,0.99072160174117152,0.99102014843605857,0.97517321611602947,0.851,70.0,70.0,70.0,55.5
+I04U-gNNS-p069-r1,He is waking up ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wake	_	VBG	VBG	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%he$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.18735343346075195,0.18764476774250316,0.1338623912294683,0.20620039704961268,0.20950322567998347,0.20101051038595263,1.0,5.5,5.5,13.5,13.5
+I04U-gNNS-p070-r1,The boy just woke up.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.27655841426505257,0.26046698782604316,0.13387914815030899,0.30707948671916963,0.28810685436735084,0.19040941649799648,0.907,14.0,14.0,9.0,41.0
+I04U-gNNS-p072-r1,The boy is waking up,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.13636046218305042,0.12455475606152266,0.11700968252441113,0.15608228895575837,0.1446679196255537,0.17434666549004052,1.0,2.5,2.5,3.5,13.5
+I04U-gNNS-p074-r1,A boy just wake up in the morning.,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBP	VBP	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	morning	_	NN	NN	_	4	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.37925816465082551,0.34925034390617704,0.20647012710358115,0.40337058547708737,0.37102799088446936,0.25709943091984955,0.851,21.0,21.0,22.0,55.5
+I04U-gNNS-p075-r1,The boy is getting up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.95257094235077211,0.94833773652463205,0.75098239403181921,0.94501632395684232,0.93925777163794177,0.74777465530685827,1.0,47.5,46.5,45.5,13.5
+I04U-gNNS-p077-r1,The boy is awake by the sound of his alarm. ,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	awake	_	RB	RB	_	0	root	_	_
+5	by	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sound	_	NN	NN	_	4	prep_by	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	he	_	PRP$	PRP$	_	10	poss	_	_
+10	alarm	_	NN	NN	_	7	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%awake', 'cop$@%be$@%awake', 'root$@%awake$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%the$@%sound', 'prep_by$@%sound$@%awake', 'erased$@%of$@%WORDERASED', 'poss$@%he$@%alarm', 'prep_of$@%alarm$@%sound', 'punct$@%.$@%awake']","['x$@%the$@%boy', 'x$@%boy$@%awake', 'x$@%be$@%awake', 'x$@%awake$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%the$@%sound', 'x$@%sound$@%awake', 'x$@%of$@%WORDERASED', 'x$@%he$@%alarm', 'x$@%alarm$@%sound', 'x$@%.$@%awake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%awake$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%sound$@%x', 'x$@%of$@%x', 'x$@%he$@%x', 'x$@%alarm$@%x', 'x$@%.$@%x']",0.95098783924520858,0.95208013159710259,0.70380902011710833,0.9468127364330291,0.94794815820863221,0.64002530486099807,0.851,50.0,53.0,41.0,55.5
+I04U-gNNS-p078-r1,The man is getting up in the afternoon.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	afternoon	_	NN	NN	_	4	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%in$@%WORDERASED', 'det$@%the$@%afternoon', 'prep_in$@%afternoon$@%get', 'punct$@%.$@%get']","['x$@%the$@%man', 'x$@%man$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%in$@%WORDERASED', 'x$@%the$@%afternoon', 'x$@%afternoon$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%afternoon$@%x', 'x$@%.$@%x']",0.987884408890215,0.98717373710258405,0.94915150548052984,0.98631786623250506,0.98567448826923709,0.94193102931335693,1.0,69.0,69.0,69.0,13.5
+I04U-gNNS-p079-r1,The boy is getting up,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.95257094235077211,0.94833773652463205,0.75098239403181921,0.94501632395684232,0.93925777163794177,0.74777465530685827,1.0,47.5,46.5,45.5,13.5
+I04U-gNNS-p081-r1,the boy wakes up,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.20799695628580661,0.18903040600580523,0.11701042614407464,0.24020931931861778,0.21803607365020794,0.17434742673624692,0.907,10.5,7.5,6.5,41.0
+I04U-gNNS-p082-r1,The boy is waking up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.13636046218305042,0.12455475606152266,0.11700968252441113,0.15608228895575837,0.1446679196255537,0.17434666549004052,1.0,2.5,2.5,3.5,13.5
+I04U-gNNS-p083-r1,The boy just gets up. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	get	_	VBZ	VBZ	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'advmod$@%just$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%just$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.95508384674850488,0.95273905575306383,0.76556263905246436,0.94855020356734088,0.94487237256117251,0.76363769166730644,0.907,51.0,52.0,55.0,41.0
+I04U-gNNS-p086-r1,The man is stretching his arms and legs.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	arm	_	NNS	NNS	_	4	dobj	_	_
+7	and	_	CC	CC	_	0	erased	_	_
+8	leg	_	NNS	NNS	_	6	conj_and	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'poss$@%he$@%arm', 'dobj$@%arm$@%stretch', 'erased$@%and$@%WORDERASED', 'conj_and$@%leg$@%arm', 'punct$@%.$@%stretch']","['x$@%the$@%man', 'x$@%man$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%he$@%arm', 'x$@%arm$@%stretch', 'x$@%and$@%WORDERASED', 'x$@%leg$@%arm', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%he$@%x', 'x$@%arm$@%x', 'x$@%and$@%x', 'x$@%leg$@%x', 'x$@%.$@%x']",0.93846252838288491,0.94270299622571874,0.89698994378548969,0.93908092630267603,0.94388134142763325,0.89246148469042064,0.635,43.0,51.0,64.0,64.5
+I04U-gNNS-p087-r1,he is waking up ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	wake	_	VBG	VBG	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%he$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.18735343346075195,0.18764476774250316,0.1338623912294683,0.20620039704961268,0.20950322567998347,0.20101051038595263,1.0,5.5,5.5,13.5,13.5
+I04U-gNNS-p099-r1,A boy is getting up.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.9690221222946811,0.96647311716047846,0.7509857681370109,0.96206011811011327,0.958058471822959,0.74777745272620177,1.0,55.5,56.5,49.5,13.5
+I04U-gNNS-p101-r1,The boy wakes up.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.20799695628580661,0.18903040600580523,0.11701042614407464,0.24020931931861778,0.21803607365020794,0.17434742673624692,0.907,10.5,7.5,6.5,41.0
+I04U-gNNS-p104-r1,A boy just waked up by the alarm. ,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	alarm	_	NN	NN	_	4	prep_by	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%by$@%WORDERASED', 'det$@%the$@%alarm', 'prep_by$@%alarm$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%by$@%WORDERASED', 'x$@%the$@%alarm', 'x$@%alarm$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%.$@%x']",0.40217227009596324,0.37176852378946423,0.18525332505442382,0.42276895381988644,0.38723363988730619,0.15805033611277564,0.851,24.0,22.0,1.0,55.5
+I04U-gNNS-p105-r1,The man is waking up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%man', 'x$@%man$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.21052322708027393,0.21506489278529783,0.13967957572557665,0.22043251832073485,0.22527512728212451,0.20531133241333532,1.0,8.0,10.0,16.0,13.5
+I04U-gNNS-p106-r1,The boy is waking up and stretching his arms.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	7	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	stretch	_	VBG	VBG	_	4	conj_and	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	arm	_	NNS	NNS	_	7	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%and$@%WORDERASED', 'conj_and$@%stretch$@%wake', 'poss$@%he$@%arm', 'dobj$@%arm$@%stretch', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%and$@%WORDERASED', 'x$@%stretch$@%wake', 'x$@%he$@%arm', 'x$@%arm$@%stretch', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%and$@%x', 'x$@%stretch$@%x', 'x$@%he$@%x', 'x$@%arm$@%x', 'x$@%.$@%x']",0.38960529913429198,0.40212867467650293,0.27862320701805132,0.39531845738002502,0.40993042969050641,0.3202977854657536,1.0,20.0,24.0,27.0,13.5
+I04U-gNNS-p107-r1,The boy is stretching his body with the clock ringing.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	body	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	clock	_	NN	NN	_	10	nn	_	_
+10	ringing	_	NN	NN	_	4	prep_with	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'poss$@%he$@%body', 'dobj$@%body$@%stretch', 'erased$@%with$@%WORDERASED', 'det$@%the$@%ringing', 'nn$@%clock$@%ringing', 'prep_with$@%ringing$@%stretch', 'punct$@%.$@%stretch']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%he$@%body', 'x$@%body$@%stretch', 'x$@%with$@%WORDERASED', 'x$@%the$@%ringing', 'x$@%clock$@%ringing', 'x$@%ringing$@%stretch', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%he$@%x', 'x$@%body$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%clock$@%x', 'x$@%ringing$@%x', 'x$@%.$@%x']",0.91871990313308216,0.92287446101068049,0.79402548128277517,0.91546704992446482,0.92007905418664626,0.75406804610575273,0.635,42.0,43.0,52.0,64.5
+I04U-gNNS-p108-r1,The boy is getting up because the alarm clock is ringing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	because	_	IN	IN	_	11	mark	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	alarm	_	NN	NN	_	9	nn	_	_
+9	clock	_	NN	NN	_	11	nsubj	_	_
+10	be	_	VBZ	VBZ	_	11	cop	_	_
+11	ring	_	JJ	JJ	_	4	advcl	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'mark$@%because$@%ring', 'det$@%the$@%clock', 'nn$@%alarm$@%clock', 'nsubj$@%clock$@%ring', 'cop$@%be$@%ring', 'advcl$@%ring$@%get', 'punct$@%.$@%get']","['x$@%the$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%because$@%ring', 'x$@%the$@%clock', 'x$@%alarm$@%clock', 'x$@%clock$@%ring', 'x$@%be$@%ring', 'x$@%ring$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%because$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%clock$@%x', 'x$@%be$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.90339861082674566,0.89828164488480422,0.63949405216426114,0.86007607694199695,0.85278928119330522,0.53936943211757549,1.0,36.0,36.0,38.0,13.5
+I04U-gNNS-p109-r1,The guy wakes up. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	guy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%guy', 'nsubj$@%guy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%guy', 'x$@%guy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%guy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.39997693222907804,0.40612850549191204,0.34043505986943468,0.42626707357366755,0.43378072426846914,0.39769254654016095,0.907,25.0,27.0,33.0,41.0
+I04U-gNNS-p111-r1,A boy wakes up in a sunny day while his alarm clock is ringing.,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	8	det	_	_
+7	sunny	_	JJ	JJ	_	8	amod	_	_
+8	day	_	NN	NN	_	3	prep_in	_	_
+9	while	_	IN	IN	_	14	mark	_	_
+10	he	_	PRP$	PRP$	_	12	poss	_	_
+11	alarm	_	NN	NN	_	12	nn	_	_
+12	clock	_	NN	NN	_	14	nsubj	_	_
+13	be	_	VBZ	VBZ	_	14	cop	_	_
+14	ring	_	JJ	JJ	_	3	advcl	_	_
+15	.	_	.	.	_	3	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'det$@%a$@%day', 'amod$@%sunny$@%day', 'prep_in$@%day$@%wake', 'mark$@%while$@%ring', 'poss$@%he$@%clock', 'nn$@%alarm$@%clock', 'nsubj$@%clock$@%ring', 'cop$@%be$@%ring', 'advcl$@%ring$@%wake', 'punct$@%.$@%wake']","['x$@%a$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%a$@%day', 'x$@%sunny$@%day', 'x$@%day$@%wake', 'x$@%while$@%ring', 'x$@%he$@%clock', 'x$@%alarm$@%clock', 'x$@%clock$@%ring', 'x$@%be$@%ring', 'x$@%ring$@%wake', 'x$@%.$@%wake']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%sunny$@%x', 'x$@%day$@%x', 'x$@%while$@%x', 'x$@%he$@%x', 'x$@%alarm$@%x', 'x$@%clock$@%x', 'x$@%be$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.54325253885329783,0.51943544340964043,0.39709288895932182,0.52836105993091553,0.4969666575374998,0.33548580636742553,0.851,33.0,30.0,28.0,55.5
+I04U-gNNS-p112-r1,The man is waking up. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%man', 'x$@%man$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.21052322708027393,0.21506489278529783,0.13967957572557665,0.22043251832073485,0.22527512728212451,0.20531133241333532,1.0,8.0,10.0,16.0,13.5
+I04U-gNNS-p114-r1,The boy just waked up.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.27655841426505257,0.26046698782604316,0.13387914815030899,0.30707948671916963,0.28810685436735084,0.19040941649799648,0.851,14.0,14.0,9.0,55.5
+I04U-gNNS-p116-r1,The boy is happy,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	happy	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%happy', 'cop$@%be$@%happy', 'root$@%happy$@%VROOT', 'punct$@%.$@%happy']","['x$@%the$@%boy', 'x$@%boy$@%happy', 'x$@%be$@%happy', 'x$@%happy$@%VROOT', 'x$@%.$@%happy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.95734146761628547,0.95850557960321603,0.85030864353600777,0.95112684551883298,0.95239131066138638,0.84529284654965253,0.542,52.0,54.0,61.0,68.0
+I04U-gNNS-p118-r1,The man gets up.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%the$@%man', 'x$@%man$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.98433360297327566,0.98406903494587872,0.92262387033916016,0.98431045919128091,0.98406236043925088,0.92494303483983564,0.907,67.0,67.0,66.0,41.0
+I04U-gNNS-p119-r1,The boy is wearing up.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wear	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wear', 'aux$@%be$@%wear', 'root$@%wear$@%VROOT', 'prt$@%up$@%wear', 'punct$@%.$@%wear']","['x$@%the$@%boy', 'x$@%boy$@%wear', 'x$@%be$@%wear', 'x$@%wear$@%VROOT', 'x$@%up$@%wear', 'x$@%.$@%wear']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%wear$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.97710682128238247,0.97761602109332302,0.8388756276811018,0.97477067059900846,0.9753061139713517,0.83650212941784918,0.093,62.0,63.0,60.0,69.0
+I04U-gNNS-p122-r1,A boy is getting up with a big smile on his face while the alarm clock is ringing. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	get	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	with	_	IN	IN	_	0	erased	_	_
+7	a	_	DT	DT	_	9	det	_	_
+8	big	_	JJ	JJ	_	9	amod	_	_
+9	smile	_	NN	NN	_	4	prep_with	_	_
+10	on	_	IN	IN	_	0	erased	_	_
+11	he	_	PRP$	PRP$	_	12	poss	_	_
+12	face	_	NN	NN	_	9	prep_on	_	_
+13	while	_	IN	IN	_	18	mark	_	_
+14	the	_	DT	DT	_	16	det	_	_
+15	alarm	_	NN	NN	_	16	nn	_	_
+16	clock	_	NN	NN	_	18	nsubj	_	_
+17	be	_	VBZ	VBZ	_	18	cop	_	_
+18	ring	_	JJ	JJ	_	4	advcl	_	_
+19	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'erased$@%with$@%WORDERASED', 'det$@%a$@%smile', 'amod$@%big$@%smile', 'prep_with$@%smile$@%get', 'erased$@%on$@%WORDERASED', 'poss$@%he$@%face', 'prep_on$@%face$@%smile', 'mark$@%while$@%ring', 'det$@%the$@%clock', 'nn$@%alarm$@%clock', 'nsubj$@%clock$@%ring', 'cop$@%be$@%ring', 'advcl$@%ring$@%get', 'punct$@%.$@%get']","['x$@%a$@%boy', 'x$@%boy$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%with$@%WORDERASED', 'x$@%a$@%smile', 'x$@%big$@%smile', 'x$@%smile$@%get', 'x$@%on$@%WORDERASED', 'x$@%he$@%face', 'x$@%face$@%smile', 'x$@%while$@%ring', 'x$@%the$@%clock', 'x$@%alarm$@%clock', 'x$@%clock$@%ring', 'x$@%be$@%ring', 'x$@%ring$@%get', 'x$@%.$@%get']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%smile$@%x', 'x$@%on$@%x', 'x$@%he$@%x', 'x$@%face$@%x', 'x$@%while$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%clock$@%x', 'x$@%be$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.92469887736336753,0.92116243502442707,0.66335572734996173,0.88829169687414911,0.88332658153674759,0.57145318174362836,1.0,40.0,41.0,39.0,13.5
+I04U-gNNS-p123-r1,The boy getting up from the bed at 2pm,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	get	_	VBG	VBG	_	2	partmod	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	from	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	bed	_	NN	NN	_	3	prep_from	_	_
+8	at	_	IN	IN	_	0	erased	_	_
+9	2pm	_	CD	CD	_	7	prep_at	_	_
+10	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%get$@%boy', 'prt$@%up$@%get', 'erased$@%from$@%WORDERASED', 'det$@%the$@%bed', 'prep_from$@%bed$@%get', 'erased$@%at$@%WORDERASED', 'prep_at$@%2pm$@%bed', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%get$@%boy', 'x$@%up$@%get', 'x$@%from$@%WORDERASED', 'x$@%the$@%bed', 'x$@%bed$@%get', 'x$@%at$@%WORDERASED', 'x$@%2pm$@%bed', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%bed$@%x', 'x$@%at$@%x', 'x$@%2pm$@%x', 'x$@%.$@%x']",0.96458457283750376,0.9613406264108445,0.90157574887726621,0.96581007936749119,0.96031536503632686,0.89836965794423596,0.944,59.0,58.0,65.0,30.0
+I04U-gNNS-p124-r1,he is getting up,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	get	_	VBG	VBG	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'prt$@%up$@%get', 'punct$@%.$@%get']","['x$@%he$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%up$@%get', 'x$@%.$@%get']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.98354480305849257,0.98329823210605061,0.92321529830998172,0.98362082005189266,0.9837998400670126,0.92931067723729943,1.0,66.0,66.0,68.0,13.5
+I04U-gNNS-p125-r1,The man is waking up.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wake	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%wake', 'aux$@%be$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%man', 'x$@%man$@%wake', 'x$@%be$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.21052322708027393,0.21506489278529783,0.13967957572557665,0.22043251832073485,0.22527512728212451,0.20531133241333532,1.0,8.0,10.0,16.0,13.5
+I04U-gNNS-p127-r1,The boy is stretching in the morning.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	morning	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%stretch', 'punct$@%.$@%stretch']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%stretch', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.89004526552828411,0.88837517869931593,0.76445778833751699,0.88438605814845317,0.88156362524563703,0.76204262856693894,0.635,38.5,39.5,53.5,64.5
+I04U-gNNS-p128-r1,The boy just woke up.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	wake	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.27655841426505257,0.26046698782604316,0.13387914815030899,0.30707948671916963,0.28810685436735084,0.19040941649799648,0.907,14.0,14.0,9.0,41.0
+I04U-gNNS-p133-r1,The alarm clock wakes up the boy from sleeping.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	alarm	_	NN	NN	_	3	nn	_	_
+3	clock	_	NN	NN	_	4	nsubj	_	_
+4	wake	_	VBZ	VBZ	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	boy	_	NN	NN	_	4	dobj	_	_
+8	from	_	IN	IN	_	0	erased	_	_
+9	sleep	_	VBG	VBG	_	7	prep_from	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%clock', 'nn$@%alarm$@%clock', 'nsubj$@%clock$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'det$@%the$@%boy', 'dobj$@%boy$@%wake', 'erased$@%from$@%WORDERASED', 'prep_from$@%sleep$@%boy', 'punct$@%.$@%wake']","['x$@%the$@%clock', 'x$@%alarm$@%clock', 'x$@%clock$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%from$@%WORDERASED', 'x$@%sleep$@%boy', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%clock$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%from$@%x', 'x$@%sleep$@%x', 'x$@%.$@%x']",0.46422024857337418,0.37674841927707992,0.2728864692599432,0.44438611866091016,0.35746366693879328,0.20959719572995017,0.907,26.0,19.0,18.0,41.0
+I04U-gNNS-p135-r1,The boy is stretching after waking up in the morning.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stretch	_	VBG	VBG	_	0	root	_	_
+5	after	_	IN	IN	_	0	erased	_	_
+6	wake	_	VBG	VBG	_	4	prepc_after	_	_
+7	up	_	RP	RP	_	6	prt	_	_
+8	in	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	morning	_	NN	NN	_	6	prep_in	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%stretch', 'aux$@%be$@%stretch', 'root$@%stretch$@%VROOT', 'erased$@%after$@%WORDERASED', 'prepc_after$@%wake$@%stretch', 'prt$@%up$@%wake', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%wake', 'punct$@%.$@%stretch']","['x$@%the$@%boy', 'x$@%boy$@%stretch', 'x$@%be$@%stretch', 'x$@%stretch$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%wake$@%stretch', 'x$@%up$@%wake', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%wake', 'x$@%.$@%stretch']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%stretch$@%x', 'x$@%after$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%.$@%x']",0.77103500449857076,0.76193834068784305,0.2641103151759151,0.76680644686408628,0.75722484806683621,0.30535243441192272,1.0,35.0,35.0,26.0,13.5
+I04U-gNNS-p136-r1,The boy wakes up when the alarm is ringing.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	wake	_	VBZ	VBZ	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	when	_	WRB	WRB	_	9	advmod	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	alarm	_	NN	NN	_	9	nsubj	_	_
+8	be	_	VBZ	VBZ	_	9	cop	_	_
+9	ring	_	JJ	JJ	_	3	advcl	_	_
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'advmod$@%when$@%ring', 'det$@%the$@%alarm', 'nsubj$@%alarm$@%ring', 'cop$@%be$@%ring', 'advcl$@%ring$@%wake', 'punct$@%.$@%wake']","['x$@%the$@%boy', 'x$@%boy$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%when$@%ring', 'x$@%the$@%alarm', 'x$@%alarm$@%ring', 'x$@%be$@%ring', 'x$@%ring$@%wake', 'x$@%.$@%wake']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%when$@%x', 'x$@%the$@%x', 'x$@%alarm$@%x', 'x$@%be$@%x', 'x$@%ring$@%x', 'x$@%.$@%x']",0.4862228340304362,0.47001753918775246,0.2772614507585458,0.49871177854065185,0.47670347463767027,0.24537159568772959,0.907,29.0,29.0,20.0,41.0
+I04U-gNNS-p140-r1,The boy just weak up in the morning by the alert. ,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	weak	_	VBD	VBD	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	morning	_	NN	NN	_	4	prep_in	_	_
+9	by	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	alert	_	NN	NN	_	4	prep_by	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%weak', 'advmod$@%just$@%weak', 'root$@%weak$@%VROOT', 'prt$@%up$@%weak', 'erased$@%in$@%WORDERASED', 'det$@%the$@%morning', 'prep_in$@%morning$@%weak', 'erased$@%by$@%WORDERASED', 'det$@%the$@%alert', 'prep_by$@%alert$@%weak', 'punct$@%.$@%weak']","['x$@%the$@%boy', 'x$@%boy$@%weak', 'x$@%just$@%weak', 'x$@%weak$@%VROOT', 'x$@%up$@%weak', 'x$@%in$@%WORDERASED', 'x$@%the$@%morning', 'x$@%morning$@%weak', 'x$@%by$@%WORDERASED', 'x$@%the$@%alert', 'x$@%alert$@%weak', 'x$@%.$@%weak']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%weak$@%x', 'x$@%up$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%morning$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%alert$@%x', 'x$@%.$@%x']",0.98517693404100593,0.98565476393264362,0.8919044097862151,0.98284304003676504,0.98336637457687648,0.8892518432705564,0.851,65.0,65.0,63.0,55.5
+I04U-gNNS-p141-r1,He just woke up,1,0,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	just	_	RB	RB	_	3	advmod	_	_
+3	wake	_	VBD	VBD	_	0	root	_	_
+4	up	_	RP	RP	_	3	prt	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%wake', 'advmod$@%just$@%wake', 'root$@%wake$@%VROOT', 'prt$@%up$@%wake', 'punct$@%.$@%wake']","['x$@%he$@%wake', 'x$@%just$@%wake', 'x$@%wake$@%VROOT', 'x$@%up$@%wake', 'x$@%.$@%wake']","['x$@%he$@%x', 'x$@%just$@%x', 'x$@%wake$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.33974327754200484,0.33705603965678366,0.15461878385575667,0.37032861063730793,0.36710062009551025,0.22042610093174686,0.907,19.0,20.0,19.0,41.0
