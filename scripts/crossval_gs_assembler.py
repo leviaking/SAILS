@@ -64,7 +64,4 @@ if __name__ == "__main__":
     main()
 
 
-# # XF recommends using these numbers for comparing Spearman:
-# # lower 5, median, 95, average, standard deviation, maybe also min and max
-## There should be a python command "describe"? that spits out many of the above measures;
-## This analysis would be considered "descriptive statistics"
+

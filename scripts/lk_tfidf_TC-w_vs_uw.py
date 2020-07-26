@@ -170,7 +170,7 @@ def get_weighted_term_tfidf_list(dtwl, listtokenlist, d): ##dtwl=[[terms from do
 	return tfidf_scores_and_terms_pairlist
 
 def get_unweighted_term_tfidf_list(dtwl, listtokenlist, d):  ## same inputs as weighted function
-	tokenlist = [i for sublist in listtokenlist for i in sublist] ## flatten 2d list; we don't need 2d for unweighted
+	tokenlist = [i for sublist in listtokenlist for i in sublist] ## flatten 2d list
 	total_number_corpus_docs = len(dtwl)
 	tfidf_scores_and_terms_pairlist = []
 	typelist=[]
@@ -296,13 +296,10 @@ def main():
 	outputrows=[]
 	while ni<len(all_test_rows):
 		origrow=all_test_rows[ni]
-		###	header=header+['ldh TC weighted', 'xdh TC weighted', 'xdx TC weighted', 'ldh TC unweighted', 'xdh TC unweighted', 'xdx TC unweighted'] ## We're adding these columns for scoring
-		origrow.append(ldh_w_scores[ni])
-		origrow.append(xdh_w_scores[ni])
-		origrow.append(xdx_w_scores[ni])
-		origrow.append(ldh_uw_scores[ni])
-		origrow.append(xdh_uw_scores[ni])
-		origrow.append(xdx_uw_scores[ni])
+		###	header=header+['ldh TC', 'xdh TC', 'xdx TC'] ## We're adding these columns for scoring
+		origrow.append(ldh_scores[ni])
+		origrow.append(xdh_scores[ni])
+		origrow.append(xdx_scores[ni])
 		outputrows.append(origrow)
 		ni+=1
 	outputrows.insert(0, header)

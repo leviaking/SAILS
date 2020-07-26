@@ -291,3 +291,41 @@ So now I'm going to generate the new sampled GSs for cross-validation. This need
 The new files will be stored here:
 /Users/leviking/Documents/dissertation/SAILS/gold_standards/cross-validation/depstrings/<sample_size>
 
+# # XF recommends using these numbers for comparing Spearman:
+# # lower 5, median, 95, average, standard deviation, maybe also min and max
+## There should be a python command "describe"? that spits out many of the above measures;
+## This analysis would be considered "descriptive statistics"
+
+
+###
+Parameters:
+(Item number, but we will always do all items)
+**Assuming bootstrapping with replacement
+1**. Number of training sets (K)
+2**. Number of responses per training set (J)
+3. Dependency format [ldh, xdh, xdx]
+4. Source: Familiar vs. Survey (crowd sourced)
+5. Targeted vs Untargeted
+## 6. Annotations: Any, Perfect, CoreYes
+7. First Responses vs. First and Second mixed
+8. Intransitive, Transitive, Ditransitive
+## 9. Normalized / non-normalized (are responses normalized for length so that dependencies in longer sentences weigh less than deps in shorter sentences?)
+
+So a given training set file will be something like:
+I01T-K081_100-J15-LDH-FAM-ANY-FIRST-I-NRM.csv ; meaning:
+Item01Targeted-Set81/100-15responses-LDH-Familiar-AnyAnnotation-FirstResponsesOnly-Intransitives-Normalized
+So we could have for each of these parameters:
+30 * 100 * 2 (or 3?) * 3 * 2 * 3 * 2 * 3 * 2 = 30 items * 43200 = 1,296,000
+
+## So exploring the space exhaustively means 1,296,000 models, each of which generates a Spearman rank correlation. Surely this is too much. I propose some simplifications.
+
+1. [3 above] Dependency formats: This should be broken down into 
+
+1. [7 above] Familiar vs Crowd Sourced: Let this be a one-off experiment that scopes across all other parameters (i.e., ignores them). We have very little familiar data vs the crowdsourced data -- 17-~30 familiar responses per item, vs. ~130-~160 crowdsourced. All other experiments should be trained with crowdsourced data only. This experiment is more of a "what if" to give some insights into the value of choosing trusted sources vs crowdsourcing.
+
+2. [9 above] Normalizing for response length. Let's skip this entirely. The numbers I've run so far show this as having very little impact anyway. I totally volunteered this experiment because I thought it was interesting, so knowing it isn't, I'd be fine with eliminating it. All processing would be non-normalized (the simpler approach).
+
+3. [6 above] Annotation based filtering. I was going to argue that since the annotations were applied manually and blindly for all responses without regard to other variables, these should be sufficiently independent of other variables and we could do this as a one-off, too. Then I realized -- we're probably not really learning anything in this experiment -- we're comparing one form of an annotation-based ranking (the binary annotations * the respective weights = the GS ranking) vs another annotation-based ranking (an encoder model where the training data responses is filtered by binary annotations).
+
+
+
