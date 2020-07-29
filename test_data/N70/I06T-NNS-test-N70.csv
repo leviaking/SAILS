@@ -1,4 +1,4 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank
 I06T-gNNS-p001-r1,The boy holding a package of fruit.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	0	root	_	_
 3	hold	_	VBG	VBG	_	2	partmod	_	_
@@ -6,7 +6,7 @@ I06T-gNNS-p001-r1,The boy holding a package of fruit.,1,1,0,1,1,"1	the	_	DT	DT	_
 5	package	_	NN	NN	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NN	NN	_	5	prep_of	_	_
-8	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%hold$@%boy', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%package', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%hold$@%boy', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%package', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%hold$@%boy', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%package', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%hold$@%boy', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%package', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p002-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -15,18 +15,18 @@ I06T-gNNS-p002-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p003-r1,he is laughing,0,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	laugh	_	VBG	VBG	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%laugh', 'aux$@%be$@%laugh', 'root$@%laugh$@%VROOT', 'punct$@%.$@%laugh']","['x$@%he$@%laugh', 'x$@%be$@%laugh', 'x$@%laugh$@%VROOT', 'x$@%.$@%laugh']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%laugh$@%x', 'x$@%.$@%x']"
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%laugh', 'aux$@%be$@%laugh', 'root$@%laugh$@%VROOT', 'punct$@%.$@%laugh']","['x$@%he$@%laugh', 'x$@%be$@%laugh', 'x$@%laugh$@%VROOT', 'x$@%.$@%laugh']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%laugh$@%x', 'x$@%.$@%x']",0.635,61.5
 I06T-gNNS-p008-r1,The boy is holding a bag.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	hold	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	bag	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p010-r1,The boy bought a lots of fruits,0,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	3	nsubj	_	_
 3	buy	_	VBD	VBD	_	0	root	_	_
@@ -34,14 +34,14 @@ I06T-gNNS-p010-r1,The boy bought a lots of fruits,0,0,0,1,1,"1	the	_	DT	DT	_	2	d
 5	lot	_	NNS	NNS	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NNS	NNS	_	5	prep_of	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'root$@%buy$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%buy', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%buy$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%buy', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%buy$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'root$@%buy$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%buy', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%buy$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%buy', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%buy$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.486,66.5
 I06T-gNNS-p011-r1,The boy is holding his groceries ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	hold	_	VBG	VBG	_	0	root	_	_
 5	he	_	PRP$	PRP$	_	6	poss	_	_
 6	grocery	_	NNS	NNS	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'poss$@%he$@%grocery', 'dobj$@%grocery$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%he$@%grocery', 'x$@%grocery$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%he$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'poss$@%he$@%grocery', 'dobj$@%grocery$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%he$@%grocery', 'x$@%grocery$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%he$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p015-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -50,7 +50,7 @@ I06T-gNNS-p015-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p016-r1,"He has already buy some fruit, and bring it to home.",1,0,0,1,1,"1	he	_	PRP	PRP	_	2	nsubj	_	_
 2	have	_	VBZ	VBZ	_	0	root	_	_
 3	already	_	RB	RB	_	2	advmod	_	_
@@ -63,7 +63,7 @@ I06T-gNNS-p016-r1,"He has already buy some fruit, and bring it to home.",1,0,0,1
 10	it	_	PRP	PRP	_	9	dobj	_	_
 11	to	_	TO	TO	_	0	erased	_	_
 12	home	_	NN	NN	_	9	prep_to	_	_
-13	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%have', 'root$@%have$@%VROOT', 'advmod$@%already$@%have', 'ccomp$@%buy$@%have', 'det$@%some$@%fruit', 'dobj$@%fruit$@%buy', 'punct$@%,$@%buy', 'erased$@%and$@%WORDERASED', 'conj_and$@%bring$@%buy', 'dobj$@%it$@%bring', 'erased$@%to$@%WORDERASED', 'prep_to$@%home$@%bring', 'punct$@%.$@%have']","['x$@%he$@%have', 'x$@%have$@%VROOT', 'x$@%already$@%have', 'x$@%buy$@%have', 'x$@%some$@%fruit', 'x$@%fruit$@%buy', 'x$@%,$@%buy', 'x$@%and$@%WORDERASED', 'x$@%bring$@%buy', 'x$@%it$@%bring', 'x$@%to$@%WORDERASED', 'x$@%home$@%bring', 'x$@%.$@%have']","['x$@%he$@%x', 'x$@%have$@%x', 'x$@%already$@%x', 'x$@%buy$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%bring$@%x', 'x$@%it$@%x', 'x$@%to$@%x', 'x$@%home$@%x', 'x$@%.$@%x']"
+13	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%have', 'root$@%have$@%VROOT', 'advmod$@%already$@%have', 'ccomp$@%buy$@%have', 'det$@%some$@%fruit', 'dobj$@%fruit$@%buy', 'punct$@%,$@%buy', 'erased$@%and$@%WORDERASED', 'conj_and$@%bring$@%buy', 'dobj$@%it$@%bring', 'erased$@%to$@%WORDERASED', 'prep_to$@%home$@%bring', 'punct$@%.$@%have']","['x$@%he$@%have', 'x$@%have$@%VROOT', 'x$@%already$@%have', 'x$@%buy$@%have', 'x$@%some$@%fruit', 'x$@%fruit$@%buy', 'x$@%,$@%buy', 'x$@%and$@%WORDERASED', 'x$@%bring$@%buy', 'x$@%it$@%bring', 'x$@%to$@%WORDERASED', 'x$@%home$@%bring', 'x$@%.$@%have']","['x$@%he$@%x', 'x$@%have$@%x', 'x$@%already$@%x', 'x$@%buy$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%bring$@%x', 'x$@%it$@%x', 'x$@%to$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.851,56.0
 I06T-gNNS-p018-r1,"The boy is holding a package, which contains many fruits. ",1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -75,7 +75,7 @@ I06T-gNNS-p018-r1,"The boy is holding a package, which contains many fruits. ",1
 9	contain	_	VBZ	VBZ	_	6	rcmod	_	_
 10	many	_	JJ	JJ	_	11	amod	_	_
 11	fruit	_	NNS	NNS	_	9	dobj	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'nsubj$@%package$@%contain', 'punct$@%,$@%package', 'erased$@%which$@%WORDERASED', 'rcmod$@%contain$@%package', 'amod$@%many$@%fruit', 'dobj$@%fruit$@%contain', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%contain', 'x$@%,$@%package', 'x$@%which$@%WORDERASED', 'x$@%contain$@%package', 'x$@%many$@%fruit', 'x$@%fruit$@%contain', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%,$@%x', 'x$@%which$@%x', 'x$@%contain$@%x', 'x$@%many$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'nsubj$@%package$@%contain', 'punct$@%,$@%package', 'erased$@%which$@%WORDERASED', 'rcmod$@%contain$@%package', 'amod$@%many$@%fruit', 'dobj$@%fruit$@%contain', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%contain', 'x$@%,$@%package', 'x$@%which$@%WORDERASED', 'x$@%contain$@%package', 'x$@%many$@%fruit', 'x$@%fruit$@%contain', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%,$@%x', 'x$@%which$@%x', 'x$@%contain$@%x', 'x$@%many$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p019-r1,The boy caring some vegetables ad fruits and seems very happy.,1,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	9	nsubj	_	_
 3	care	_	VBG	VBG	_	2	partmod	_	_
@@ -87,14 +87,14 @@ I06T-gNNS-p019-r1,The boy caring some vegetables ad fruits and seems very happy.
 9	seem	_	VBZ	VBZ	_	7	cop	_	_
 10	very	_	RB	RB	_	11	advmod	_	_
 11	happy	_	JJ	JJ	_	7	acomp	_	_
-12	.	_	.	.	_	7	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%seem', 'partmod$@%care$@%boy', 'det$@%some$@%ad', 'nn$@%vegetable$@%ad', 'dobj$@%ad$@%care', 'root$@%fruit$@%VROOT', 'erased$@%and$@%WORDERASED', 'cop$@%seem$@%fruit', 'advmod$@%very$@%happy', 'acomp$@%happy$@%fruit', 'punct$@%.$@%fruit']","['x$@%the$@%boy', 'x$@%boy$@%seem', 'x$@%care$@%boy', 'x$@%some$@%ad', 'x$@%vegetable$@%ad', 'x$@%ad$@%care', 'x$@%fruit$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%seem$@%fruit', 'x$@%very$@%happy', 'x$@%happy$@%fruit', 'x$@%.$@%fruit']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%care$@%x', 'x$@%some$@%x', 'x$@%vegetable$@%x', 'x$@%ad$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%seem$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	7	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%seem', 'partmod$@%care$@%boy', 'det$@%some$@%ad', 'nn$@%vegetable$@%ad', 'dobj$@%ad$@%care', 'root$@%fruit$@%VROOT', 'erased$@%and$@%WORDERASED', 'cop$@%seem$@%fruit', 'advmod$@%very$@%happy', 'acomp$@%happy$@%fruit', 'punct$@%.$@%fruit']","['x$@%the$@%boy', 'x$@%boy$@%seem', 'x$@%care$@%boy', 'x$@%some$@%ad', 'x$@%vegetable$@%ad', 'x$@%ad$@%care', 'x$@%fruit$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%seem$@%fruit', 'x$@%very$@%happy', 'x$@%happy$@%fruit', 'x$@%.$@%fruit']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%care$@%x', 'x$@%some$@%x', 'x$@%vegetable$@%x', 'x$@%ad$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%seem$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%.$@%x']",0.72,59.0
 I06T-gNNS-p020-r1,He is holding the shopping bag.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	hold	_	VBG	VBG	_	0	root	_	_
 4	the	_	DT	DT	_	6	det	_	_
 5	shopping	_	NN	NN	_	6	nn	_	_
 6	bag	_	NN	NN	_	3	dobj	_	_
-7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%bag', 'nn$@%shopping$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%bag', 'x$@%shopping$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%shopping$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%bag', 'nn$@%shopping$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%bag', 'x$@%shopping$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%shopping$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p024-r1,the boy just brought some fruit and he is taking these fruit to home.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	just	_	RB	RB	_	4	advmod	_	_
@@ -109,13 +109,13 @@ I06T-gNNS-p024-r1,the boy just brought some fruit and he is taking these fruit t
 12	fruit	_	NN	NN	_	10	dobj	_	_
 13	to	_	TO	TO	_	0	erased	_	_
 14	home	_	NN	NN	_	10	prep_to	_	_
-15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'advmod$@%just$@%bring', 'root$@%bring$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%bring', 'erased$@%and$@%WORDERASED', 'nsubj$@%he$@%take', 'aux$@%be$@%take', 'conj_and$@%take$@%bring', 'det$@%these$@%fruit', 'dobj$@%fruit$@%take', 'erased$@%to$@%WORDERASED', 'prep_to$@%home$@%take', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%just$@%bring', 'x$@%bring$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%bring', 'x$@%and$@%WORDERASED', 'x$@%he$@%take', 'x$@%be$@%take', 'x$@%take$@%bring', 'x$@%these$@%fruit', 'x$@%fruit$@%take', 'x$@%to$@%WORDERASED', 'x$@%home$@%take', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%bring$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%these$@%x', 'x$@%fruit$@%x', 'x$@%to$@%x', 'x$@%home$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'advmod$@%just$@%bring', 'root$@%bring$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%bring', 'erased$@%and$@%WORDERASED', 'nsubj$@%he$@%take', 'aux$@%be$@%take', 'conj_and$@%take$@%bring', 'det$@%these$@%fruit', 'dobj$@%fruit$@%take', 'erased$@%to$@%WORDERASED', 'prep_to$@%home$@%take', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%just$@%bring', 'x$@%bring$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%bring', 'x$@%and$@%WORDERASED', 'x$@%he$@%take', 'x$@%be$@%take', 'x$@%take$@%bring', 'x$@%these$@%fruit', 'x$@%fruit$@%take', 'x$@%to$@%WORDERASED', 'x$@%home$@%take', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%bring$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%these$@%x', 'x$@%fruit$@%x', 'x$@%to$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p025-r1,He is carrying some fruit.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	carry	_	VBG	VBG	_	0	root	_	_
 4	some	_	DT	DT	_	5	det	_	_
 5	fruit	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p029-r1,The boy is taking a lots of fruits.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -124,7 +124,7 @@ I06T-gNNS-p029-r1,The boy is taking a lots of fruits.,1,1,0,1,1,"1	the	_	DT	DT	_
 6	lot	_	NNS	NNS	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%take', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%take']","['x$@%the$@%boy', 'x$@%boy$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%take', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%take', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%take']","['x$@%the$@%boy', 'x$@%boy$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%take', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p031-r1,The boy is walking with holding a paper bag which is filled with fruits. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -139,14 +139,14 @@ I06T-gNNS-p031-r1,The boy is walking with holding a paper bag which is filled wi
 12	fill	_	VBN	VBN	_	9	rcmod	_	_
 13	with	_	IN	IN	_	0	erased	_	_
 14	fruit	_	NNS	NNS	_	12	prep_with	_	_
-15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'prepc_with$@%hold$@%walk', 'det$@%a$@%bag', 'nn$@%paper$@%bag', 'nsubjpass$@%bag$@%fill', 'erased$@%which$@%WORDERASED', 'auxpass$@%be$@%fill', 'rcmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%walk']","['x$@%the$@%boy', 'x$@%boy$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%hold$@%walk', 'x$@%a$@%bag', 'x$@%paper$@%bag', 'x$@%bag$@%fill', 'x$@%which$@%WORDERASED', 'x$@%be$@%fill', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%walk']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%be$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'prepc_with$@%hold$@%walk', 'det$@%a$@%bag', 'nn$@%paper$@%bag', 'nsubjpass$@%bag$@%fill', 'erased$@%which$@%WORDERASED', 'auxpass$@%be$@%fill', 'rcmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%walk']","['x$@%the$@%boy', 'x$@%boy$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%hold$@%walk', 'x$@%a$@%bag', 'x$@%paper$@%bag', 'x$@%bag$@%fill', 'x$@%which$@%WORDERASED', 'x$@%be$@%fill', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%walk']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%be$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p033-r1,A child has lots of fruit.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	child	_	NN	NN	_	3	nsubj	_	_
 3	have	_	VBZ	VBZ	_	0	root	_	_
 4	lot	_	NNS	NNS	_	3	dobj	_	_
 5	of	_	IN	IN	_	0	erased	_	_
 6	fruit	_	NN	NN	_	4	prep_of	_	_
-7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%have', 'root$@%have$@%VROOT', 'dobj$@%lot$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%have']","['x$@%a$@%child', 'x$@%child$@%have', 'x$@%have$@%VROOT', 'x$@%lot$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%have$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%have', 'root$@%have$@%VROOT', 'dobj$@%lot$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%have']","['x$@%a$@%child', 'x$@%child$@%have', 'x$@%have$@%VROOT', 'x$@%lot$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%have$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.907,52.5
 I06T-gNNS-p035-r1,The boy bought lots of different kinds of fruits.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	3	nsubj	_	_
 3	buy	_	VBD	VBD	_	0	root	_	_
@@ -156,14 +156,14 @@ I06T-gNNS-p035-r1,The boy bought lots of different kinds of fruits.,0,0,1,1,1,"1
 7	kind	_	NNS	NNS	_	4	prep_of	_	_
 8	of	_	IN	IN	_	0	erased	_	_
 9	fruit	_	NNS	NNS	_	7	prep_of	_	_
-10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'root$@%buy$@%VROOT', 'dobj$@%lot$@%buy', 'erased$@%of$@%WORDERASED', 'amod$@%different$@%kind', 'prep_of$@%kind$@%lot', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%buy$@%VROOT', 'x$@%lot$@%buy', 'x$@%of$@%WORDERASED', 'x$@%different$@%kind', 'x$@%kind$@%lot', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%buy$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%different$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'root$@%buy$@%VROOT', 'dobj$@%lot$@%buy', 'erased$@%of$@%WORDERASED', 'amod$@%different$@%kind', 'prep_of$@%kind$@%lot', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%buy$@%VROOT', 'x$@%lot$@%buy', 'x$@%of$@%WORDERASED', 'x$@%different$@%kind', 'x$@%kind$@%lot', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%buy$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%different$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.542,64.5
 I06T-gNNS-p045-r1,The boy is carrying some fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	carry	_	VBG	VBG	_	0	root	_	_
 5	some	_	DT	DT	_	6	det	_	_
 6	fruit	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%some$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%some$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%some$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p046-r1,He is carrying a bag filled with a lot of fruits.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	carry	_	VBG	VBG	_	0	root	_	_
@@ -175,7 +175,7 @@ I06T-gNNS-p046-r1,He is carrying a bag filled with a lot of fruits.,1,1,1,1,1,"1
 9	lot	_	NN	NN	_	6	prep_with	_	_
 10	of	_	IN	IN	_	0	erased	_	_
 11	fruit	_	NNS	NNS	_	9	prep_of	_	_
-12	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'partmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'det$@%a$@%lot', 'prep_with$@%lot$@%fill', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%a$@%lot', 'x$@%lot$@%fill', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'partmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'det$@%a$@%lot', 'prep_with$@%lot$@%fill', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%a$@%lot', 'x$@%lot$@%fill', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p047-r1,The boy is holding a bag of fruits,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -184,13 +184,13 @@ I06T-gNNS-p047-r1,The boy is holding a bag of fruits,1,1,1,1,1,"1	the	_	DT	DT	_	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p048-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	carry	_	VBG	VBG	_	0	root	_	_
 5	grocery	_	NNS	NNS	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p049-r1,The boy is carrying a bag of food ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -199,14 +199,14 @@ I06T-gNNS-p049-r1,The boy is carrying a bag of food ,1,1,1,1,1,"1	the	_	DT	DT	_	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	food	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p050-r1,The boy is just finishing shopping. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	5	nsubj	_	_
 3	be	_	VBZ	VBZ	_	5	aux	_	_
 4	just	_	RB	RB	_	5	advmod	_	_
 5	finish	_	VBG	VBG	_	0	root	_	_
 6	shopping	_	NN	NN	_	5	dobj	_	_
-7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%finish', 'aux$@%be$@%finish', 'advmod$@%just$@%finish', 'root$@%finish$@%VROOT', 'dobj$@%shopping$@%finish', 'punct$@%.$@%finish']","['x$@%the$@%boy', 'x$@%boy$@%finish', 'x$@%be$@%finish', 'x$@%just$@%finish', 'x$@%finish$@%VROOT', 'x$@%shopping$@%finish', 'x$@%.$@%finish']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%just$@%x', 'x$@%finish$@%x', 'x$@%shopping$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%finish', 'aux$@%be$@%finish', 'advmod$@%just$@%finish', 'root$@%finish$@%VROOT', 'dobj$@%shopping$@%finish', 'punct$@%.$@%finish']","['x$@%the$@%boy', 'x$@%boy$@%finish', 'x$@%be$@%finish', 'x$@%just$@%finish', 'x$@%finish$@%VROOT', 'x$@%shopping$@%finish', 'x$@%.$@%finish']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%just$@%x', 'x$@%finish$@%x', 'x$@%shopping$@%x', 'x$@%.$@%x']",0.411,68.0
 I06T-gNNS-p052-r1,A boy with yellow hair holds a paper bag which has full of fruits.,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	6	nsubj	_	_
 3	with	_	IN	IN	_	0	erased	_	_
@@ -221,7 +221,7 @@ I06T-gNNS-p052-r1,A boy with yellow hair holds a paper bag which has full of fru
 12	full	_	JJ	JJ	_	11	dobj	_	_
 13	of	_	IN	IN	_	0	erased	_	_
 14	fruit	_	NNS	NNS	_	12	prep_of	_	_
-15	.	_	.	.	_	6	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%hold', 'erased$@%with$@%WORDERASED', 'amod$@%yellow$@%hair', 'prep_with$@%hair$@%boy', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nn$@%paper$@%bag', 'nsubj$@%bag$@%have', 'erased$@%which$@%WORDERASED', 'rcmod$@%have$@%bag', 'dobj$@%full$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%hold']","['x$@%a$@%boy', 'x$@%boy$@%hold', 'x$@%with$@%WORDERASED', 'x$@%yellow$@%hair', 'x$@%hair$@%boy', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%paper$@%bag', 'x$@%bag$@%have', 'x$@%which$@%WORDERASED', 'x$@%have$@%bag', 'x$@%full$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%yellow$@%x', 'x$@%hair$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%have$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	6	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%hold', 'erased$@%with$@%WORDERASED', 'amod$@%yellow$@%hair', 'prep_with$@%hair$@%boy', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nn$@%paper$@%bag', 'nsubj$@%bag$@%have', 'erased$@%which$@%WORDERASED', 'rcmod$@%have$@%bag', 'dobj$@%full$@%have', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%hold']","['x$@%a$@%boy', 'x$@%boy$@%hold', 'x$@%with$@%WORDERASED', 'x$@%yellow$@%hair', 'x$@%hair$@%boy', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%paper$@%bag', 'x$@%bag$@%have', 'x$@%which$@%WORDERASED', 'x$@%have$@%bag', 'x$@%full$@%have', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%hold']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%yellow$@%x', 'x$@%hair$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%have$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.851,56.0
 I06T-gNNS-p053-r1,The boy is holding a bag of grocery,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -230,7 +230,7 @@ I06T-gNNS-p053-r1,The boy is holding a bag of grocery,1,1,0,1,1,"1	the	_	DT	DT	_
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	grocery	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p054-r1,The boy is bring a lots of fruits home.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -240,7 +240,7 @@ I06T-gNNS-p054-r1,The boy is bring a lots of fruits home.,1,0,0,1,1,"1	the	_	DT	
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	9	nn	_	_
 9	home	_	NN	NN	_	6	prep_of	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%bring', 'erased$@%of$@%WORDERASED', 'nn$@%fruit$@%home', 'prep_of$@%home$@%lot', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%bring', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%home', 'x$@%home$@%lot', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%home$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%lot', 'dobj$@%lot$@%bring', 'erased$@%of$@%WORDERASED', 'nn$@%fruit$@%home', 'prep_of$@%home$@%lot', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%lot', 'x$@%lot$@%bring', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%home', 'x$@%home$@%lot', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.851,56.0
 I06T-gNNS-p055-r1,The boy is grabbing a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -249,7 +249,7 @@ I06T-gNNS-p055-r1,The boy is grabbing a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grab', 'aux$@%be$@%grab', 'root$@%grab$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%grab', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%grab']","['x$@%the$@%boy', 'x$@%boy$@%grab', 'x$@%be$@%grab', 'x$@%grab$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%grab', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%grab']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grab$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grab', 'aux$@%be$@%grab', 'root$@%grab$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%grab', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%grab']","['x$@%the$@%boy', 'x$@%boy$@%grab', 'x$@%be$@%grab', 'x$@%grab$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%grab', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%grab']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grab$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p056-r1,The boy is holding a bag of food.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -258,13 +258,13 @@ I06T-gNNS-p056-r1,The boy is holding a bag of food.,1,1,1,1,1,"1	the	_	DT	DT	_	2
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	food	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%food$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p059-r1,The boy is carrying groceries.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	carry	_	VBG	VBG	_	0	root	_	_
 5	grocery	_	NNS	NNS	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p060-r1,He is walking and carrying a big bag.,1,1,1,1,1,"1	he	_	PRP	PRP	_	5	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	walk	_	VBG	VBG	_	0	root	_	_
@@ -273,7 +273,7 @@ I06T-gNNS-p060-r1,He is walking and carrying a big bag.,1,1,1,1,1,"1	he	_	PRP	PR
 6	a	_	DT	DT	_	8	det	_	_
 7	big	_	JJ	JJ	_	8	amod	_	_
 8	bag	_	NN	NN	_	3	dobj	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%carry$@%walk', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%walk', 'punct$@%.$@%walk']","['x$@%he$@%carry', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%carry$@%walk', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%walk', 'x$@%.$@%walk']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%and$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%carry$@%walk', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%walk', 'punct$@%.$@%walk']","['x$@%he$@%carry', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%carry$@%walk', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%walk', 'x$@%.$@%walk']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%and$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p061-r1,The boy is holding a package of food.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -282,12 +282,12 @@ I06T-gNNS-p061-r1,The boy is holding a package of food.,1,1,1,1,1,"1	the	_	DT	DT
 6	package	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	food	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%package', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%food$@%package', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%food$@%package', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%food$@%package', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p062-r1,The boy is laughing.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	laugh	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%laugh', 'aux$@%be$@%laugh', 'root$@%laugh$@%VROOT', 'punct$@%.$@%laugh']","['x$@%the$@%boy', 'x$@%boy$@%laugh', 'x$@%be$@%laugh', 'x$@%laugh$@%VROOT', 'x$@%.$@%laugh']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%laugh$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%laugh', 'aux$@%be$@%laugh', 'root$@%laugh$@%VROOT', 'punct$@%.$@%laugh']","['x$@%the$@%boy', 'x$@%boy$@%laugh', 'x$@%be$@%laugh', 'x$@%laugh$@%VROOT', 'x$@%.$@%laugh']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%laugh$@%x', 'x$@%.$@%x']",0.635,61.5
 I06T-gNNS-p063-r1,The boy is holding a bag that is full of all kinds of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -302,7 +302,7 @@ I06T-gNNS-p063-r1,The boy is holding a bag that is full of all kinds of fruits.,
 12	kind	_	NNS	NNS	_	9	prep_of	_	_
 13	of	_	IN	IN	_	0	erased	_	_
 14	fruit	_	NNS	NNS	_	12	prep_of	_	_
-15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%full', 'erased$@%that$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'det$@%all$@%kind', 'prep_of$@%kind$@%full', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%full', 'x$@%that$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%all$@%kind', 'x$@%kind$@%full', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%all$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%full', 'erased$@%that$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'det$@%all$@%kind', 'prep_of$@%kind$@%full', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%full', 'x$@%that$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%all$@%kind', 'x$@%kind$@%full', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%all$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p064-r1,The boy is holding a big grocery bag.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -311,7 +311,7 @@ I06T-gNNS-p064-r1,The boy is holding a big grocery bag.,1,1,1,1,1,"1	the	_	DT	DT
 6	big	_	JJ	JJ	_	8	amod	_	_
 7	grocery	_	NN	NN	_	8	nn	_	_
 8	bag	_	NN	NN	_	4	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'nn$@%grocery$@%bag', 'dobj$@%bag$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%grocery$@%bag', 'x$@%bag$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%grocery$@%x', 'x$@%bag$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p067-r1,He is carrying a bunch of fruits.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	carry	_	VBG	VBG	_	0	root	_	_
@@ -319,7 +319,7 @@ I06T-gNNS-p067-r1,He is carrying a bunch of fruits.,1,1,1,1,1,"1	he	_	PRP	PRP	_	
 5	bunch	_	NN	NN	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NNS	NNS	_	5	prep_of	_	_
-8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bunch', 'dobj$@%bunch$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bunch', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bunch', 'x$@%bunch$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bunch', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bunch$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bunch', 'dobj$@%bunch$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bunch', 'punct$@%.$@%carry']","['x$@%he$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bunch', 'x$@%bunch$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bunch', 'x$@%.$@%carry']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bunch$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p068-r1,He is walking with a bag of fruit,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	walk	_	VBG	VBG	_	0	root	_	_
@@ -328,7 +328,7 @@ I06T-gNNS-p068-r1,He is walking with a bag of fruit,1,1,1,1,1,"1	he	_	PRP	PRP	_	
 6	bag	_	NN	NN	_	3	prep_with	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%bag', 'prep_with$@%bag$@%walk', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%walk']","['x$@%he$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%bag', 'x$@%bag$@%walk', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%walk']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'det$@%a$@%bag', 'prep_with$@%bag$@%walk', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%walk']","['x$@%he$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%a$@%bag', 'x$@%bag$@%walk', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%walk']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p071-r1,He is holding a bag of groceries and walking.,1,1,1,1,1,"1	he	_	PRP	PRP	_	9	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	hold	_	VBG	VBG	_	0	root	_	_
@@ -338,7 +338,7 @@ I06T-gNNS-p071-r1,He is holding a bag of groceries and walking.,1,1,1,1,1,"1	he	
 7	grocery	_	NNS	NNS	_	5	prep_of	_	_
 8	and	_	CC	CC	_	0	erased	_	_
 9	walk	_	VBG	VBG	_	3	conj_and	_	_
-10	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%walk', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'erased$@%and$@%WORDERASED', 'conj_and$@%walk$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%walk', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%and$@%WORDERASED', 'x$@%walk$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%and$@%x', 'x$@%walk$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%walk', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%grocery$@%bag', 'erased$@%and$@%WORDERASED', 'conj_and$@%walk$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%walk', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%grocery$@%bag', 'x$@%and$@%WORDERASED', 'x$@%walk$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%grocery$@%x', 'x$@%and$@%x', 'x$@%walk$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p073-r1,The boy is carrying a bag of fruits,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -347,7 +347,7 @@ I06T-gNNS-p073-r1,The boy is carrying a bag of fruits,1,1,1,1,1,"1	the	_	DT	DT	_
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p076-r1,He is holding a bunch of fruit.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	hold	_	VBG	VBG	_	0	root	_	_
@@ -355,7 +355,7 @@ I06T-gNNS-p076-r1,He is holding a bunch of fruit.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	
 5	bunch	_	NN	NN	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NN	NN	_	5	prep_of	_	_
-8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bunch', 'dobj$@%bunch$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bunch', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bunch', 'x$@%bunch$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bunch', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bunch$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bunch', 'dobj$@%bunch$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bunch', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bunch', 'x$@%bunch$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bunch', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bunch$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p080-r1,The boy is grabing a bag with fruits. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -364,7 +364,7 @@ I06T-gNNS-p080-r1,The boy is grabing a bag with fruits. ,1,1,0,1,1,"1	the	_	DT	D
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	with	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	4	prep_with	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grabe', 'aux$@%be$@%grabe', 'root$@%grabe$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%grabe', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%grabe', 'punct$@%.$@%grabe']","['x$@%the$@%boy', 'x$@%boy$@%grabe', 'x$@%be$@%grabe', 'x$@%grabe$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%grabe', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%grabe', 'x$@%.$@%grabe']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grabe$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%grabe', 'aux$@%be$@%grabe', 'root$@%grabe$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%grabe', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%grabe', 'punct$@%.$@%grabe']","['x$@%the$@%boy', 'x$@%boy$@%grabe', 'x$@%be$@%grabe', 'x$@%grabe$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%grabe', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%grabe', 'x$@%.$@%grabe']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%grabe$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p084-r1,the boy holding the bags with the fruits and vegetables,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	0	root	_	_
 3	hold	_	VBG	VBG	_	2	partmod	_	_
@@ -375,7 +375,7 @@ I06T-gNNS-p084-r1,the boy holding the bags with the fruits and vegetables,1,1,0,
 8	fruit	_	NNS	NNS	_	3	prep_with	_	_
 9	and	_	CC	CC	_	0	erased	_	_
 10	vegetable	_	NNS	NNS	_	8	conj_and	_	_
-11	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%hold$@%boy', 'det$@%the$@%bag', 'dobj$@%bag$@%hold', 'erased$@%with$@%WORDERASED', 'det$@%the$@%fruit', 'prep_with$@%fruit$@%hold', 'erased$@%and$@%WORDERASED', 'conj_and$@%vegetable$@%fruit', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%hold$@%boy', 'x$@%the$@%bag', 'x$@%bag$@%hold', 'x$@%with$@%WORDERASED', 'x$@%the$@%fruit', 'x$@%fruit$@%hold', 'x$@%and$@%WORDERASED', 'x$@%vegetable$@%fruit', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%vegetable$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%hold$@%boy', 'det$@%the$@%bag', 'dobj$@%bag$@%hold', 'erased$@%with$@%WORDERASED', 'det$@%the$@%fruit', 'prep_with$@%fruit$@%hold', 'erased$@%and$@%WORDERASED', 'conj_and$@%vegetable$@%fruit', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%hold$@%boy', 'x$@%the$@%bag', 'x$@%bag$@%hold', 'x$@%with$@%WORDERASED', 'x$@%the$@%fruit', 'x$@%fruit$@%hold', 'x$@%and$@%WORDERASED', 'x$@%vegetable$@%fruit', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%vegetable$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p085-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -384,7 +384,7 @@ I06T-gNNS-p085-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p088-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -393,7 +393,7 @@ I06T-gNNS-p088-r1,The boy is carrying a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p089-r1,The boy seems to go back to his home with some groceries he bought.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	5	xsubj	_	_
 3	seem	_	VBZ	VBZ	_	0	root	_	_
@@ -408,14 +408,14 @@ I06T-gNNS-p089-r1,The boy seems to go back to his home with some groceries he bo
 12	grocery	_	NNS	NNS	_	14	dobj	_	_
 13	he	_	PRP	PRP	_	14	nsubj	_	_
 14	buy	_	VBD	VBD	_	12	rcmod	_	_
-15	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%go', 'root$@%seem$@%VROOT', 'aux$@%to$@%go', 'xcomp$@%go$@%seem', 'advmod$@%back$@%go', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%home', 'prep_to$@%home$@%back', 'erased$@%with$@%WORDERASED', 'det$@%some$@%grocery', 'dobj$@%grocery$@%buy', 'nsubj$@%he$@%buy', 'rcmod$@%buy$@%grocery', 'punct$@%.$@%seem']","['x$@%the$@%boy', 'x$@%boy$@%go', 'x$@%seem$@%VROOT', 'x$@%to$@%go', 'x$@%go$@%seem', 'x$@%back$@%go', 'x$@%to$@%WORDERASED', 'x$@%he$@%home', 'x$@%home$@%back', 'x$@%with$@%WORDERASED', 'x$@%some$@%grocery', 'x$@%grocery$@%buy', 'x$@%he$@%buy', 'x$@%buy$@%grocery', 'x$@%.$@%seem']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%seem$@%x', 'x$@%to$@%x', 'x$@%go$@%x', 'x$@%back$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%home$@%x', 'x$@%with$@%x', 'x$@%some$@%x', 'x$@%grocery$@%x', 'x$@%he$@%x', 'x$@%buy$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%go', 'root$@%seem$@%VROOT', 'aux$@%to$@%go', 'xcomp$@%go$@%seem', 'advmod$@%back$@%go', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%home', 'prep_to$@%home$@%back', 'erased$@%with$@%WORDERASED', 'det$@%some$@%grocery', 'dobj$@%grocery$@%buy', 'nsubj$@%he$@%buy', 'rcmod$@%buy$@%grocery', 'punct$@%.$@%seem']","['x$@%the$@%boy', 'x$@%boy$@%go', 'x$@%seem$@%VROOT', 'x$@%to$@%go', 'x$@%go$@%seem', 'x$@%back$@%go', 'x$@%to$@%WORDERASED', 'x$@%he$@%home', 'x$@%home$@%back', 'x$@%with$@%WORDERASED', 'x$@%some$@%grocery', 'x$@%grocery$@%buy', 'x$@%he$@%buy', 'x$@%buy$@%grocery', 'x$@%.$@%seem']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%seem$@%x', 'x$@%to$@%x', 'x$@%go$@%x', 'x$@%back$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%home$@%x', 'x$@%with$@%x', 'x$@%some$@%x', 'x$@%grocery$@%x', 'x$@%he$@%x', 'x$@%buy$@%x', 'x$@%.$@%x']",0.851,56.0
 I06T-gNNS-p090-r1,The boy is walking with fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	walk	_	VBG	VBG	_	0	root	_	_
 5	with	_	IN	IN	_	0	erased	_	_
 6	fruit	_	NNS	NNS	_	4	prep_with	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%walk', 'punct$@%.$@%walk']","['x$@%the$@%boy', 'x$@%boy$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%walk', 'x$@%.$@%walk']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%walk', 'aux$@%be$@%walk', 'root$@%walk$@%VROOT', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%walk', 'punct$@%.$@%walk']","['x$@%the$@%boy', 'x$@%boy$@%walk', 'x$@%be$@%walk', 'x$@%walk$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%walk', 'x$@%.$@%walk']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%walk$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p091-r1,The boy is helping carrying staff for his mom. ,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -425,7 +425,7 @@ I06T-gNNS-p091-r1,The boy is helping carrying staff for his mom. ,0,1,0,0,0,"1	t
 7	for	_	IN	IN	_	0	erased	_	_
 8	he	_	PRP$	PRP$	_	9	poss	_	_
 9	mom	_	NN	NN	_	5	prep_for	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'xcomp$@%carry$@%help', 'dobj$@%staff$@%carry', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%mom', 'prep_for$@%mom$@%carry', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%carry$@%help', 'x$@%staff$@%carry', 'x$@%for$@%WORDERASED', 'x$@%he$@%mom', 'x$@%mom$@%carry', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%staff$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%mom$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%help', 'aux$@%be$@%help', 'root$@%help$@%VROOT', 'xcomp$@%carry$@%help', 'dobj$@%staff$@%carry', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%mom', 'prep_for$@%mom$@%carry', 'punct$@%.$@%help']","['x$@%the$@%boy', 'x$@%boy$@%help', 'x$@%be$@%help', 'x$@%help$@%VROOT', 'x$@%carry$@%help', 'x$@%staff$@%carry', 'x$@%for$@%WORDERASED', 'x$@%he$@%mom', 'x$@%mom$@%carry', 'x$@%.$@%help']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%help$@%x', 'x$@%carry$@%x', 'x$@%staff$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%mom$@%x', 'x$@%.$@%x']",0.093,69.0
 I06T-gNNS-p092-r1,"The boy is holding a big bag of banana, pineapple and else.",1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -439,7 +439,7 @@ I06T-gNNS-p092-r1,"The boy is holding a big bag of banana, pineapple and else.",
 11	pineapple	_	NN	NN	_	9	conj_and	_	_
 12	and	_	CC	CC	_	0	erased	_	_
 13	else	_	NN	NN	_	9	conj_and	_	_
-14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%banana$@%bag', 'punct$@%,$@%banana', 'conj_and$@%pineapple$@%banana', 'erased$@%and$@%WORDERASED', 'conj_and$@%else$@%banana', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%banana$@%bag', 'x$@%,$@%banana', 'x$@%pineapple$@%banana', 'x$@%and$@%WORDERASED', 'x$@%else$@%banana', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%banana$@%x', 'x$@%,$@%x', 'x$@%pineapple$@%x', 'x$@%and$@%x', 'x$@%else$@%x', 'x$@%.$@%x']"
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%banana$@%bag', 'punct$@%,$@%banana', 'conj_and$@%pineapple$@%banana', 'erased$@%and$@%WORDERASED', 'conj_and$@%else$@%banana', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%banana$@%bag', 'x$@%,$@%banana', 'x$@%pineapple$@%banana', 'x$@%and$@%WORDERASED', 'x$@%else$@%banana', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%banana$@%x', 'x$@%,$@%x', 'x$@%pineapple$@%x', 'x$@%and$@%x', 'x$@%else$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p093-r1,The boy is holding the bag which is full of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -451,7 +451,7 @@ I06T-gNNS-p093-r1,The boy is holding the bag which is full of fruits.,1,1,1,1,1,
 9	full	_	JJ	JJ	_	6	rcmod	_	_
 10	of	_	IN	IN	_	0	erased	_	_
 11	fruit	_	NNS	NNS	_	9	prep_of	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%bag', 'nsubj$@%bag$@%full', 'erased$@%which$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%bag', 'x$@%bag$@%full', 'x$@%which$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%bag', 'nsubj$@%bag$@%full', 'erased$@%which$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%bag', 'x$@%bag$@%full', 'x$@%which$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p094-r1,The boy just bought a full packet of fruits from the market.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	just	_	RB	RB	_	4	advmod	_	_
@@ -464,14 +464,14 @@ I06T-gNNS-p094-r1,The boy just bought a full packet of fruits from the market.,0
 10	from	_	IN	IN	_	0	erased	_	_
 11	the	_	DT	DT	_	12	det	_	_
 12	market	_	NN	NN	_	4	prep_from	_	_
-13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'advmod$@%just$@%buy', 'root$@%buy$@%VROOT', 'det$@%a$@%packet', 'amod$@%full$@%packet', 'dobj$@%packet$@%buy', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%packet', 'erased$@%from$@%WORDERASED', 'det$@%the$@%market', 'prep_from$@%market$@%buy', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%just$@%buy', 'x$@%buy$@%VROOT', 'x$@%a$@%packet', 'x$@%full$@%packet', 'x$@%packet$@%buy', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%packet', 'x$@%from$@%WORDERASED', 'x$@%the$@%market', 'x$@%market$@%buy', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%buy$@%x', 'x$@%a$@%x', 'x$@%full$@%x', 'x$@%packet$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%market$@%x', 'x$@%.$@%x']"
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%buy', 'advmod$@%just$@%buy', 'root$@%buy$@%VROOT', 'det$@%a$@%packet', 'amod$@%full$@%packet', 'dobj$@%packet$@%buy', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%packet', 'erased$@%from$@%WORDERASED', 'det$@%the$@%market', 'prep_from$@%market$@%buy', 'punct$@%.$@%buy']","['x$@%the$@%boy', 'x$@%boy$@%buy', 'x$@%just$@%buy', 'x$@%buy$@%VROOT', 'x$@%a$@%packet', 'x$@%full$@%packet', 'x$@%packet$@%buy', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%packet', 'x$@%from$@%WORDERASED', 'x$@%the$@%market', 'x$@%market$@%buy', 'x$@%.$@%buy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%buy$@%x', 'x$@%a$@%x', 'x$@%full$@%x', 'x$@%packet$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%market$@%x', 'x$@%.$@%x']",0.542,64.5
 I06T-gNNS-p095-r1,He hugged a plenty of fruits. ,0,0,0,1,1,"1	he	_	PRP	PRP	_	2	nsubj	_	_
 2	hug	_	VBD	VBD	_	0	root	_	_
 3	a	_	DT	DT	_	4	det	_	_
 4	plenty	_	NN	NN	_	2	dobj	_	_
 5	of	_	IN	IN	_	0	erased	_	_
 6	fruit	_	NNS	NNS	_	4	prep_of	_	_
-7	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%plenty', 'dobj$@%plenty$@%hug', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%plenty', 'punct$@%.$@%hug']","['x$@%he$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%plenty', 'x$@%plenty$@%hug', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%plenty', 'x$@%.$@%hug']","['x$@%he$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%plenty$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%plenty', 'dobj$@%plenty$@%hug', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%plenty', 'punct$@%.$@%hug']","['x$@%he$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%plenty', 'x$@%plenty$@%hug', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%plenty', 'x$@%.$@%hug']","['x$@%he$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%plenty$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.486,66.5
 I06T-gNNS-p096-r1,the boy is bring food back yo home.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -480,7 +480,7 @@ I06T-gNNS-p096-r1,the boy is bring food back yo home.,1,0,0,1,1,"1	the	_	DT	DT	_
 6	back	_	NN	NN	_	8	nn	_	_
 7	yo	_	NN	NN	_	8	nn	_	_
 8	home	_	NN	NN	_	4	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'nn$@%food$@%home', 'nn$@%back$@%home', 'nn$@%yo$@%home', 'dobj$@%home$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%food$@%home', 'x$@%back$@%home', 'x$@%yo$@%home', 'x$@%home$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%food$@%x', 'x$@%back$@%x', 'x$@%yo$@%x', 'x$@%home$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'nn$@%food$@%home', 'nn$@%back$@%home', 'nn$@%yo$@%home', 'dobj$@%home$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%boy', 'x$@%boy$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%food$@%home', 'x$@%back$@%home', 'x$@%yo$@%home', 'x$@%home$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%food$@%x', 'x$@%back$@%x', 'x$@%yo$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.851,56.0
 I06T-gNNS-p097-r1,The boy is carrying a bag of fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -489,14 +489,14 @@ I06T-gNNS-p097-r1,The boy is carrying a bag of fruit.,1,1,1,1,1,"1	the	_	DT	DT	_
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p098-r1,The boy is carrying the fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	carry	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	fruit	_	NNS	NNS	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%fruit', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%fruit', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p100-r1,The boy is holding a package of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -505,7 +505,7 @@ I06T-gNNS-p100-r1,The boy is holding a package of fruits.,1,1,1,1,1,"1	the	_	DT	
 6	package	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%package', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%package', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%package', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%package', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p102-r1,The boy is holding a bag of fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -514,7 +514,7 @@ I06T-gNNS-p102-r1,The boy is holding a bag of fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p103-r1,The boy is holding a bag that is full of different kinds of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -529,13 +529,13 @@ I06T-gNNS-p103-r1,The boy is holding a bag that is full of different kinds of fr
 12	kind	_	NNS	NNS	_	9	prep_of	_	_
 13	of	_	IN	IN	_	0	erased	_	_
 14	fruit	_	NNS	NNS	_	12	prep_of	_	_
-15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%full', 'erased$@%that$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'amod$@%different$@%kind', 'prep_of$@%kind$@%full', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%full', 'x$@%that$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%different$@%kind', 'x$@%kind$@%full', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%different$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%full', 'erased$@%that$@%WORDERASED', 'cop$@%be$@%full', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'amod$@%different$@%kind', 'prep_of$@%kind$@%full', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%kind', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%full', 'x$@%that$@%WORDERASED', 'x$@%be$@%full', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%different$@%kind', 'x$@%kind$@%full', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%kind', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%different$@%x', 'x$@%kind$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p110-r1,He is packing the package.,0,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	pack	_	VBG	VBG	_	0	root	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	package	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pack', 'aux$@%be$@%pack', 'root$@%pack$@%VROOT', 'det$@%the$@%package', 'dobj$@%package$@%pack', 'punct$@%.$@%pack']","['x$@%he$@%pack', 'x$@%be$@%pack', 'x$@%pack$@%VROOT', 'x$@%the$@%package', 'x$@%package$@%pack', 'x$@%.$@%pack']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pack$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pack', 'aux$@%be$@%pack', 'root$@%pack$@%VROOT', 'det$@%the$@%package', 'dobj$@%package$@%pack', 'punct$@%.$@%pack']","['x$@%he$@%pack', 'x$@%be$@%pack', 'x$@%pack$@%VROOT', 'x$@%the$@%package', 'x$@%package$@%pack', 'x$@%.$@%pack']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pack$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.635,61.5
 I06T-gNNS-p113-r1,This boy is carrying a bag of fruit.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -544,10 +544,10 @@ I06T-gNNS-p113-r1,This boy is carrying a bag of fruit.,1,0,1,1,1,"1	this	_	DT	DT
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%this$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%this$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%this$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.907,52.5
 I06T-gNNS-p115-r1,Carrying fruits,1,1,1,1,1,"1	carry	_	VBG	VBG	_	0	root	_	_
 2	fruit	_	NNS	NNS	_	1	dobj	_	_
-3	.	_	.	.	_	1	punct	_	_","['root$@%carry$@%VROOT', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%carry$@%VROOT', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%carry$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+3	.	_	.	.	_	1	punct	_	_","['root$@%carry$@%VROOT', 'dobj$@%fruit$@%carry', 'punct$@%.$@%carry']","['x$@%carry$@%VROOT', 'x$@%fruit$@%carry', 'x$@%.$@%carry']","['x$@%carry$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p117-r1,The boy is carrying lots of fruits,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -555,7 +555,7 @@ I06T-gNNS-p117-r1,The boy is carrying lots of fruits,1,1,1,1,1,"1	the	_	DT	DT	_	
 5	lot	_	NNS	NNS	_	4	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NNS	NNS	_	5	prep_of	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%lot$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%lot$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'dobj$@%lot$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%lot$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p120-r1,The boy is carrying a huge bag of fruits and candies.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -567,7 +567,7 @@ I06T-gNNS-p120-r1,The boy is carrying a huge bag of fruits and candies.,1,1,1,1,
 9	fruit	_	NNS	NNS	_	7	prep_of	_	_
 10	and	_	CC	CC	_	0	erased	_	_
 11	candy	_	NNS	NNS	_	9	conj_and	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%huge$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'erased$@%and$@%WORDERASED', 'conj_and$@%candy$@%fruit', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%huge$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%and$@%WORDERASED', 'x$@%candy$@%fruit', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%huge$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%candy$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%huge$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'erased$@%and$@%WORDERASED', 'conj_and$@%candy$@%fruit', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%huge$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%and$@%WORDERASED', 'x$@%candy$@%fruit', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%huge$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%and$@%x', 'x$@%candy$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p121-r1,The boy is hugging a large amount of fruits.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -577,7 +577,7 @@ I06T-gNNS-p121-r1,The boy is hugging a large amount of fruits.,0,1,1,1,1,"1	the	
 7	amount	_	NN	NN	_	4	dobj	_	_
 8	of	_	IN	IN	_	0	erased	_	_
 9	fruit	_	NNS	NNS	_	7	prep_of	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%amount', 'amod$@%large$@%amount', 'dobj$@%amount$@%hug', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%amount', 'punct$@%.$@%hug']","['x$@%the$@%boy', 'x$@%boy$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%amount', 'x$@%large$@%amount', 'x$@%amount$@%hug', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%amount', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%amount$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hug', 'aux$@%be$@%hug', 'root$@%hug$@%VROOT', 'det$@%a$@%amount', 'amod$@%large$@%amount', 'dobj$@%amount$@%hug', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%amount', 'punct$@%.$@%hug']","['x$@%the$@%boy', 'x$@%boy$@%hug', 'x$@%be$@%hug', 'x$@%hug$@%VROOT', 'x$@%a$@%amount', 'x$@%large$@%amount', 'x$@%amount$@%hug', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%amount', 'x$@%.$@%hug']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hug$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%amount$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.635,61.5
 I06T-gNNS-p126-r1,He is holding one shopping bag which full of fruits.,1,1,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	hold	_	VBG	VBG	_	0	root	_	_
@@ -588,7 +588,7 @@ I06T-gNNS-p126-r1,He is holding one shopping bag which full of fruits.,1,1,0,1,1
 8	full	_	JJ	JJ	_	6	rcmod	_	_
 9	of	_	IN	IN	_	0	erased	_	_
 10	fruit	_	NNS	NNS	_	3	prep_of	_	_
-11	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'num$@%one$@%bag', 'nn$@%shopping$@%bag', 'dep$@%bag$@%full', 'erased$@%which$@%WORDERASED', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%one$@%bag', 'x$@%shopping$@%bag', 'x$@%bag$@%full', 'x$@%which$@%WORDERASED', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%one$@%x', 'x$@%shopping$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'num$@%one$@%bag', 'nn$@%shopping$@%bag', 'dep$@%bag$@%full', 'erased$@%which$@%WORDERASED', 'rcmod$@%full$@%bag', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%one$@%bag', 'x$@%shopping$@%bag', 'x$@%bag$@%full', 'x$@%which$@%WORDERASED', 'x$@%full$@%bag', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%one$@%x', 'x$@%shopping$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p129-r1,The boy with big smile is carrying a hug bag of fruit.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	7	nsubj	_	_
 3	with	_	IN	IN	_	0	erased	_	_
@@ -601,7 +601,7 @@ I06T-gNNS-p129-r1,The boy with big smile is carrying a hug bag of fruit.,1,1,0,1
 10	bag	_	NN	NN	_	7	dobj	_	_
 11	of	_	IN	IN	_	0	erased	_	_
 12	fruit	_	NN	NN	_	10	prep_of	_	_
-13	.	_	.	.	_	7	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'erased$@%with$@%WORDERASED', 'amod$@%big$@%smile', 'prep_with$@%smile$@%boy', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%hug$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%with$@%WORDERASED', 'x$@%big$@%smile', 'x$@%smile$@%boy', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%hug$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%big$@%x', 'x$@%smile$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%hug$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+13	.	_	.	.	_	7	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'erased$@%with$@%WORDERASED', 'amod$@%big$@%smile', 'prep_with$@%smile$@%boy', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nn$@%hug$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%with$@%WORDERASED', 'x$@%big$@%smile', 'x$@%smile$@%boy', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%hug$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%big$@%x', 'x$@%smile$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%hug$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p130-r1,the boy is carrying a bag that filled with fruits,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -612,7 +612,7 @@ I06T-gNNS-p130-r1,the boy is carrying a bag that filled with fruits,1,1,0,1,1,"1
 8	fill	_	VBN	VBN	_	6	rcmod	_	_
 9	with	_	IN	IN	_	0	erased	_	_
 10	fruit	_	NNS	NNS	_	8	prep_with	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%fill', 'erased$@%that$@%WORDERASED', 'rcmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%fill', 'x$@%that$@%WORDERASED', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'nsubj$@%bag$@%fill', 'erased$@%that$@%WORDERASED', 'rcmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%fill', 'x$@%that$@%WORDERASED', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%that$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.944,45.5
 I06T-gNNS-p131-r1,The boy is holding lots of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	5	nsubj	_	_
 3	be	_	VBZ	VBZ	_	5	cop	_	_
@@ -620,14 +620,14 @@ I06T-gNNS-p131-r1,The boy is holding lots of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	
 5	lot	_	NNS	NNS	_	0	root	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	fruit	_	NNS	NNS	_	5	prep_of	_	_
-8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%lot', 'cop$@%be$@%lot', 'amod$@%hold$@%lot', 'root$@%lot$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%lot']","['x$@%the$@%boy', 'x$@%boy$@%lot', 'x$@%be$@%lot', 'x$@%hold$@%lot', 'x$@%lot$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%lot']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%lot', 'cop$@%be$@%lot', 'amod$@%hold$@%lot', 'root$@%lot$@%VROOT', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%lot']","['x$@%the$@%boy', 'x$@%boy$@%lot', 'x$@%be$@%lot', 'x$@%hold$@%lot', 'x$@%lot$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%lot']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p132-r1,the boy is carrying the groceries,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	carry	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	grocery	_	NNS	NNS	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%the$@%grocery', 'dobj$@%grocery$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%the$@%grocery', 'x$@%grocery$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p134-r1,The boy is carrying a bag filled with fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -637,7 +637,7 @@ I06T-gNNS-p134-r1,The boy is carrying a bag filled with fruit.,1,1,1,1,1,"1	the	
 7	fill	_	VBN	VBN	_	6	partmod	_	_
 8	with	_	IN	IN	_	0	erased	_	_
 9	fruit	_	NN	NN	_	7	prep_with	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'partmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'partmod$@%fill$@%bag', 'erased$@%with$@%WORDERASED', 'prep_with$@%fruit$@%fill', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%fill$@%bag', 'x$@%with$@%WORDERASED', 'x$@%fruit$@%fill', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%fill$@%x', 'x$@%with$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p137-r1,The boy is holding a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -646,7 +646,7 @@ I06T-gNNS-p137-r1,The boy is holding a bag of fruits.,1,1,1,1,1,"1	the	_	DT	DT	_
 6	bag	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	fruit	_	NNS	NNS	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%hold', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,19.5
 I06T-gNNS-p138-r1,The boy is carrying many fruits with very happy emotion.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -657,4 +657,4 @@ I06T-gNNS-p138-r1,The boy is carrying many fruits with very happy emotion.,1,1,0
 8	very	_	RB	RB	_	9	advmod	_	_
 9	happy	_	JJ	JJ	_	10	amod	_	_
 10	emotion	_	NN	NN	_	4	prep_with	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'amod$@%many$@%fruit', 'dobj$@%fruit$@%carry', 'erased$@%with$@%WORDERASED', 'advmod$@%very$@%happy', 'amod$@%happy$@%emotion', 'prep_with$@%emotion$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%many$@%fruit', 'x$@%fruit$@%carry', 'x$@%with$@%WORDERASED', 'x$@%very$@%happy', 'x$@%happy$@%emotion', 'x$@%emotion$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%many$@%x', 'x$@%fruit$@%x', 'x$@%with$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%emotion$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'amod$@%many$@%fruit', 'dobj$@%fruit$@%carry', 'erased$@%with$@%WORDERASED', 'advmod$@%very$@%happy', 'amod$@%happy$@%emotion', 'prep_with$@%emotion$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%many$@%fruit', 'x$@%fruit$@%carry', 'x$@%with$@%WORDERASED', 'x$@%very$@%happy', 'x$@%happy$@%emotion', 'x$@%emotion$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%many$@%x', 'x$@%fruit$@%x', 'x$@%with$@%x', 'x$@%very$@%x', 'x$@%happy$@%x', 'x$@%emotion$@%x', 'x$@%.$@%x']",0.944,45.5

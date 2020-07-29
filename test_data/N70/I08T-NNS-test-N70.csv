@@ -1,18 +1,18 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank
 I08T-gNNS-p001-r1,The waiter is holding a dish.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	hold	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	dish	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%hold', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%hold', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']",0.635,49.5
 I08T-gNNS-p002-r1,The waiter is handing the food.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	hand	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	food	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%waiter', 'x$@%waiter$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%waiter', 'x$@%waiter$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.093,66.5
 I08T-gNNS-p003-r1,he is passing the chicken to the customer,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	pass	_	VBG	VBG	_	0	root	_	_
@@ -21,17 +21,17 @@ I08T-gNNS-p003-r1,he is passing the chicken to the customer,1,1,1,1,1,"1	he	_	PR
 6	to	_	TO	TO	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	customer	_	NN	NN	_	3	prep_to	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p008-r1,The waiter is serving. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%.$@%x']",0.411,61.5
 I08T-gNNS-p010-r1,The waiter is serving ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%.$@%x']",0.411,61.5
 I08T-gNNS-p011-r1,The waiter is serving a chicken to a woman,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -41,7 +41,7 @@ I08T-gNNS-p011-r1,The waiter is serving a chicken to a woman,1,1,1,1,1,"1	the	_	
 7	to	_	TO	TO	_	0	erased	_	_
 8	a	_	DT	DT	_	9	det	_	_
 9	woman	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p015-r1,The waiter is offering the woman a turkey leg.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -51,7 +51,7 @@ I08T-gNNS-p015-r1,The waiter is offering the woman a turkey leg.,0,1,1,1,1,"1	th
 7	a	_	DT	DT	_	9	det	_	_
 8	turkey	_	NN	NN	_	9	nn	_	_
 9	leg	_	NN	NN	_	4	dobj	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%offer', 'det$@%a$@%leg', 'nn$@%turkey$@%leg', 'dobj$@%leg$@%offer', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%offer', 'x$@%a$@%leg', 'x$@%turkey$@%leg', 'x$@%leg$@%offer', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%leg$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%offer', 'det$@%a$@%leg', 'nn$@%turkey$@%leg', 'dobj$@%leg$@%offer', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%offer', 'x$@%a$@%leg', 'x$@%turkey$@%leg', 'x$@%leg$@%offer', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%leg$@%x', 'x$@%.$@%x']",0.635,49.5
 I08T-gNNS-p016-r1,He is take a turkey to a women. ,1,0,0,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	take	_	VB	VB	_	0	root	_	_
@@ -60,7 +60,7 @@ I08T-gNNS-p016-r1,He is take a turkey to a women. ,1,0,0,0,1,"1	he	_	PRP	PRP	_	3
 6	to	_	TO	TO	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	woman	_	NNS	NNS	_	3	prep_to	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%take', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%take', 'punct$@%.$@%take']","['x$@%he$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%take', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%take', 'x$@%.$@%take']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%take', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%take', 'punct$@%.$@%take']","['x$@%he$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%take', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%take', 'x$@%.$@%take']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.627,52.0
 I08T-gNNS-p018-r1,The waiter is holding a chicken and giving it to the woman. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	8	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -73,7 +73,7 @@ I08T-gNNS-p018-r1,The waiter is holding a chicken and giving it to the woman. ,1
 10	to	_	TO	TO	_	0	erased	_	_
 11	the	_	DT	DT	_	12	det	_	_
 12	woman	_	NN	NN	_	8	prep_to	_	_
-13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%hold', 'erased$@%and$@%WORDERASED', 'conj_and$@%give$@%hold', 'dobj$@%it$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%hold', 'x$@%and$@%WORDERASED', 'x$@%give$@%hold', 'x$@%it$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%and$@%x', 'x$@%give$@%x', 'x$@%it$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%hold', 'erased$@%and$@%WORDERASED', 'conj_and$@%give$@%hold', 'dobj$@%it$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%hold', 'x$@%and$@%WORDERASED', 'x$@%give$@%hold', 'x$@%it$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%and$@%x', 'x$@%give$@%x', 'x$@%it$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p019-r1,The waiter is introduce a roast turkey for the woman.,0,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -84,7 +84,7 @@ I08T-gNNS-p019-r1,The waiter is introduce a roast turkey for the woman.,0,0,0,1,
 8	for	_	IN	IN	_	0	erased	_	_
 9	the	_	DT	DT	_	10	det	_	_
 10	woman	_	NN	NN	_	4	prep_for	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%introduce', 'aux$@%be$@%introduce', 'root$@%introduce$@%VROOT', 'det$@%a$@%turkey', 'nn$@%roast$@%turkey', 'dobj$@%turkey$@%introduce', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%introduce', 'punct$@%.$@%introduce']","['x$@%the$@%waiter', 'x$@%waiter$@%introduce', 'x$@%be$@%introduce', 'x$@%introduce$@%VROOT', 'x$@%a$@%turkey', 'x$@%roast$@%turkey', 'x$@%turkey$@%introduce', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%introduce', 'x$@%.$@%introduce']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%introduce$@%x', 'x$@%a$@%x', 'x$@%roast$@%x', 'x$@%turkey$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%introduce', 'aux$@%be$@%introduce', 'root$@%introduce$@%VROOT', 'det$@%a$@%turkey', 'nn$@%roast$@%turkey', 'dobj$@%turkey$@%introduce', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%introduce', 'punct$@%.$@%introduce']","['x$@%the$@%waiter', 'x$@%waiter$@%introduce', 'x$@%be$@%introduce', 'x$@%introduce$@%VROOT', 'x$@%a$@%turkey', 'x$@%roast$@%turkey', 'x$@%turkey$@%introduce', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%introduce', 'x$@%.$@%introduce']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%introduce$@%x', 'x$@%a$@%x', 'x$@%roast$@%x', 'x$@%turkey$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.486,59.5
 I08T-gNNS-p020-r1,The waiter is serving for the lady and holding the meal for the lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	9	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -99,7 +99,7 @@ I08T-gNNS-p020-r1,The waiter is serving for the lady and holding the meal for th
 12	for	_	IN	IN	_	0	erased	_	_
 13	the	_	DT	DT	_	14	det	_	_
 14	lady	_	NN	NN	_	11	prep_for	_	_
-15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%serve', 'erased$@%and$@%WORDERASED', 'conj_and$@%hold$@%serve', 'det$@%the$@%meal', 'dobj$@%meal$@%hold', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%meal', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%and$@%WORDERASED', 'x$@%hold$@%serve', 'x$@%the$@%meal', 'x$@%meal$@%hold', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%meal', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%and$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%meal$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%serve', 'erased$@%and$@%WORDERASED', 'conj_and$@%hold$@%serve', 'det$@%the$@%meal', 'dobj$@%meal$@%hold', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%meal', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%and$@%WORDERASED', 'x$@%hold$@%serve', 'x$@%the$@%meal', 'x$@%meal$@%hold', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%meal', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%and$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%meal$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p024-r1,the waiter is giving the woman the thanksgiving special dinner.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -110,13 +110,13 @@ I08T-gNNS-p024-r1,the waiter is giving the woman the thanksgiving special dinner
 8	thanksgive	_	JJ	JJ	_	10	amod	_	_
 9	special	_	JJ	JJ	_	10	amod	_	_
 10	dinner	_	NN	NN	_	4	dobj	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'det$@%the$@%dinner', 'amod$@%thanksgive$@%dinner', 'amod$@%special$@%dinner', 'dobj$@%dinner$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%the$@%dinner', 'x$@%thanksgive$@%dinner', 'x$@%special$@%dinner', 'x$@%dinner$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%the$@%x', 'x$@%thanksgive$@%x', 'x$@%special$@%x', 'x$@%dinner$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'det$@%the$@%dinner', 'amod$@%thanksgive$@%dinner', 'amod$@%special$@%dinner', 'dobj$@%dinner$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%the$@%dinner', 'x$@%thanksgive$@%dinner', 'x$@%special$@%dinner', 'x$@%dinner$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%the$@%x', 'x$@%thanksgive$@%x', 'x$@%special$@%x', 'x$@%dinner$@%x', 'x$@%.$@%x']",0.738,47.0
 I08T-gNNS-p025-r1,He is passing the turkey.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	pass	_	VBG	VBG	_	0	root	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	turkey	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%pass', 'punct$@%.$@%pass']","['x$@%he$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%pass', 'x$@%.$@%pass']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p029-r1,The waiter is putting the turkey on the table.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -126,7 +126,7 @@ I08T-gNNS-p029-r1,The waiter is putting the turkey on the table.,1,1,1,1,1,"1	th
 7	on	_	IN	IN	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	table	_	NN	NN	_	6	prep_on	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%put', 'aux$@%be$@%put', 'root$@%put$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%put', 'erased$@%on$@%WORDERASED', 'det$@%the$@%table', 'prep_on$@%table$@%turkey', 'punct$@%.$@%put']","['x$@%the$@%waiter', 'x$@%waiter$@%put', 'x$@%be$@%put', 'x$@%put$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%put', 'x$@%on$@%WORDERASED', 'x$@%the$@%table', 'x$@%table$@%turkey', 'x$@%.$@%put']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%put$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%table$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%put', 'aux$@%be$@%put', 'root$@%put$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%put', 'erased$@%on$@%WORDERASED', 'det$@%the$@%table', 'prep_on$@%table$@%turkey', 'punct$@%.$@%put']","['x$@%the$@%waiter', 'x$@%waiter$@%put', 'x$@%be$@%put', 'x$@%put$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%put', 'x$@%on$@%WORDERASED', 'x$@%the$@%table', 'x$@%table$@%turkey', 'x$@%.$@%put']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%put$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%table$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p031-r1,The waiter is passing a roasted chicken to the female customer. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -138,7 +138,7 @@ I08T-gNNS-p031-r1,The waiter is passing a roasted chicken to the female customer
 9	the	_	DT	DT	_	11	det	_	_
 10	female	_	JJ	JJ	_	11	amod	_	_
 11	customer	_	NN	NN	_	7	prep_to	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%chicken', 'amod$@%roasted$@%chicken', 'dobj$@%chicken$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'amod$@%female$@%customer', 'prep_to$@%customer$@%chicken', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%chicken', 'x$@%roasted$@%chicken', 'x$@%chicken$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%female$@%customer', 'x$@%customer$@%chicken', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%roasted$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%female$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%chicken', 'amod$@%roasted$@%chicken', 'dobj$@%chicken$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'amod$@%female$@%customer', 'prep_to$@%customer$@%chicken', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%chicken', 'x$@%roasted$@%chicken', 'x$@%chicken$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%female$@%customer', 'x$@%customer$@%chicken', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%roasted$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%female$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p033-r1,A woman is waiting to eat turkey.,0,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -146,7 +146,7 @@ I08T-gNNS-p033-r1,A woman is waiting to eat turkey.,0,0,1,1,1,"1	a	_	DT	DT	_	2	d
 5	to	_	TO	TO	_	6	aux	_	_
 6	eat	_	VB	VB	_	4	xcomp	_	_
 7	turkey	_	NN	NN	_	6	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'xsubj$@%woman$@%eat', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%wait', 'dobj$@%turkey$@%eat', 'punct$@%.$@%wait']","['x$@%a$@%woman', 'x$@%woman$@%eat', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%wait', 'x$@%turkey$@%eat', 'x$@%.$@%wait']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'xsubj$@%woman$@%eat', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'aux$@%to$@%eat', 'xcomp$@%eat$@%wait', 'dobj$@%turkey$@%eat', 'punct$@%.$@%wait']","['x$@%a$@%woman', 'x$@%woman$@%eat', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%to$@%eat', 'x$@%eat$@%wait', 'x$@%turkey$@%eat', 'x$@%.$@%wait']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",0.542,57.5
 I08T-gNNS-p035-r1,The waiter is carrying a chicken to the customer.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -156,7 +156,7 @@ I08T-gNNS-p035-r1,The waiter is carrying a chicken to the customer.,1,1,1,1,1,"1
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	customer	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%carry', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%carry', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%carry', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%carry', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%carry', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%carry', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p045-r1,The waiter is taking a roast chicken.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -164,7 +164,7 @@ I08T-gNNS-p045-r1,The waiter is taking a roast chicken.,0,1,1,1,1,"1	the	_	DT	DT
 5	a	_	DT	DT	_	7	det	_	_
 6	roast	_	NN	NN	_	7	nn	_	_
 7	chicken	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%chicken', 'nn$@%roast$@%chicken', 'dobj$@%chicken$@%take', 'punct$@%.$@%take']","['x$@%the$@%waiter', 'x$@%waiter$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%chicken', 'x$@%roast$@%chicken', 'x$@%chicken$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%roast$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%chicken', 'nn$@%roast$@%chicken', 'dobj$@%chicken$@%take', 'punct$@%.$@%take']","['x$@%the$@%waiter', 'x$@%waiter$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%chicken', 'x$@%roast$@%chicken', 'x$@%chicken$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%roast$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']",0.635,49.5
 I08T-gNNS-p046-r1,The waiter is passing a turkey to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -174,7 +174,7 @@ I08T-gNNS-p046-r1,The waiter is passing a turkey to the woman.,1,1,1,1,1,"1	the	
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	woman	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p047-r1,The waiter is serving food to a woman,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -183,14 +183,14 @@ I08T-gNNS-p047-r1,The waiter is serving food to a woman,1,1,1,1,1,"1	the	_	DT	DT
 6	to	_	TO	TO	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	woman	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p048-r1,The waiter is serving the turkey. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	turkey	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p049-r1,The waiter is bringing the food to the lady,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -200,14 +200,14 @@ I08T-gNNS-p049-r1,The waiter is bringing the food to the lady,1,1,1,1,1,"1	the	_
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	lady	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p050-r1,The waiter is serving a woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	woman	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%woman', 'dobj$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%woman', 'dobj$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p052-r1,This handsome waiter who dress formal is serving a yummy chicken to a young lady.,1,0,0,1,0,"1	this	_	DT	DT	_	3	det	_	_
 2	handsome	_	JJ	JJ	_	3	amod	_	_
 3	waiter	_	NN	NN	_	8	nsubj	_	_
@@ -223,7 +223,7 @@ I08T-gNNS-p052-r1,This handsome waiter who dress formal is serving a yummy chick
 13	a	_	DT	DT	_	15	det	_	_
 14	young	_	JJ	JJ	_	15	amod	_	_
 15	lady	_	NN	NN	_	8	prep_to	_	_
-16	.	_	.	.	_	8	punct	_	_","['det$@%this$@%waiter', 'amod$@%handsome$@%waiter', 'nsubj$@%waiter$@%serve', 'erased$@%who$@%WORDERASED', 'rcmod$@%dress$@%waiter', 'acomp$@%formal$@%dress', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'amod$@%yummy$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%this$@%waiter', 'x$@%handsome$@%waiter', 'x$@%waiter$@%serve', 'x$@%who$@%WORDERASED', 'x$@%dress$@%waiter', 'x$@%formal$@%dress', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%yummy$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%this$@%x', 'x$@%handsome$@%x', 'x$@%waiter$@%x', 'x$@%who$@%x', 'x$@%dress$@%x', 'x$@%formal$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%yummy$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+16	.	_	.	.	_	8	punct	_	_","['det$@%this$@%waiter', 'amod$@%handsome$@%waiter', 'nsubj$@%waiter$@%serve', 'erased$@%who$@%WORDERASED', 'rcmod$@%dress$@%waiter', 'acomp$@%formal$@%dress', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'amod$@%yummy$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%this$@%waiter', 'x$@%handsome$@%waiter', 'x$@%waiter$@%serve', 'x$@%who$@%WORDERASED', 'x$@%dress$@%waiter', 'x$@%formal$@%dress', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%yummy$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%this$@%x', 'x$@%handsome$@%x', 'x$@%waiter$@%x', 'x$@%who$@%x', 'x$@%dress$@%x', 'x$@%formal$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%yummy$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.589,53.5
 I08T-gNNS-p053-r1,The waiter is serving a dish to the lady,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -233,7 +233,7 @@ I08T-gNNS-p053-r1,The waiter is serving a dish to the lady,1,1,1,1,1,"1	the	_	DT
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	lady	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p054-r1,The waiter is offer a cooking chicken to a women.,0,0,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -244,7 +244,7 @@ I08T-gNNS-p054-r1,The waiter is offer a cooking chicken to a women.,0,0,0,0,0,"1
 8	to	_	TO	TO	_	0	erased	_	_
 9	a	_	DT	DT	_	10	det	_	_
 10	woman	_	NNS	NNS	_	4	prep_to	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%a$@%chicken', 'amod$@%cooking$@%chicken', 'dobj$@%chicken$@%offer', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%offer', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%a$@%chicken', 'x$@%cooking$@%chicken', 'x$@%chicken$@%offer', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%offer', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%a$@%x', 'x$@%cooking$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%a$@%chicken', 'amod$@%cooking$@%chicken', 'dobj$@%chicken$@%offer', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%offer', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%a$@%chicken', 'x$@%cooking$@%chicken', 'x$@%chicken$@%offer', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%offer', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%a$@%x', 'x$@%cooking$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.0,68.5
 I08T-gNNS-p055-r1,The waiter is handling a dish to customer.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -253,20 +253,20 @@ I08T-gNNS-p055-r1,The waiter is handling a dish to customer.,1,1,0,1,1,"1	the	_	
 6	dish	_	NN	NN	_	4	dobj	_	_
 7	to	_	TO	TO	_	0	erased	_	_
 8	customer	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%handle', 'aux$@%be$@%handle', 'root$@%handle$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%handle', 'erased$@%to$@%WORDERASED', 'prep_to$@%customer$@%handle', 'punct$@%.$@%handle']","['x$@%the$@%waiter', 'x$@%waiter$@%handle', 'x$@%be$@%handle', 'x$@%handle$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%handle', 'x$@%to$@%WORDERASED', 'x$@%customer$@%handle', 'x$@%.$@%handle']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%handle$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%handle', 'aux$@%be$@%handle', 'root$@%handle$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%handle', 'erased$@%to$@%WORDERASED', 'prep_to$@%customer$@%handle', 'punct$@%.$@%handle']","['x$@%the$@%waiter', 'x$@%waiter$@%handle', 'x$@%be$@%handle', 'x$@%handle$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%handle', 'x$@%to$@%WORDERASED', 'x$@%customer$@%handle', 'x$@%.$@%handle']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%handle$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",0.944,39.0
 I08T-gNNS-p056-r1,The waiter is serving dishes.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	dish	_	NNS	NNS	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%dish$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%dish$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%dish$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%dish$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p059-r1,The waiter is serving a chicken.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	chicken	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p060-r1,He is putting a chicken on the table.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	put	_	VBG	VBG	_	0	root	_	_
@@ -275,7 +275,7 @@ I08T-gNNS-p060-r1,He is putting a chicken on the table.,1,1,1,1,1,"1	he	_	PRP	PR
 6	on	_	IN	IN	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	table	_	NN	NN	_	5	prep_on	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%put', 'aux$@%be$@%put', 'root$@%put$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%put', 'erased$@%on$@%WORDERASED', 'det$@%the$@%table', 'prep_on$@%table$@%chicken', 'punct$@%.$@%put']","['x$@%he$@%put', 'x$@%be$@%put', 'x$@%put$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%put', 'x$@%on$@%WORDERASED', 'x$@%the$@%table', 'x$@%table$@%chicken', 'x$@%.$@%put']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%put$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%table$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%put', 'aux$@%be$@%put', 'root$@%put$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%put', 'erased$@%on$@%WORDERASED', 'det$@%the$@%table', 'prep_on$@%table$@%chicken', 'punct$@%.$@%put']","['x$@%he$@%put', 'x$@%be$@%put', 'x$@%put$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%put', 'x$@%on$@%WORDERASED', 'x$@%the$@%table', 'x$@%table$@%chicken', 'x$@%.$@%put']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%put$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%table$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p061-r1,The waiter is serving a turkey to the lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -285,7 +285,7 @@ I08T-gNNS-p061-r1,The waiter is serving a turkey to the lady.,1,1,1,1,1,"1	the	_
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	lady	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p062-r1,The waiter is showing his ability to the lady,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -295,7 +295,7 @@ I08T-gNNS-p062-r1,The waiter is showing his ability to the lady,0,1,1,1,0,"1	the
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	lady	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'poss$@%he$@%ability', 'dobj$@%ability$@%show', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%show', 'punct$@%.$@%show']","['x$@%the$@%waiter', 'x$@%waiter$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%he$@%ability', 'x$@%ability$@%show', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%he$@%x', 'x$@%ability$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'poss$@%he$@%ability', 'dobj$@%ability$@%show', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%show', 'punct$@%.$@%show']","['x$@%the$@%waiter', 'x$@%waiter$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%he$@%ability', 'x$@%ability$@%show', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%he$@%x', 'x$@%ability$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.373,63.0
 I08T-gNNS-p063-r1,The waiter is gently serving the young lady with a well cooked turkey in a restaurant. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	5	nsubj	_	_
 3	be	_	VBZ	VBZ	_	5	aux	_	_
@@ -312,7 +312,7 @@ I08T-gNNS-p063-r1,The waiter is gently serving the young lady with a well cooked
 14	in	_	IN	IN	_	0	erased	_	_
 15	a	_	DT	DT	_	16	det	_	_
 16	restaurant	_	NN	NN	_	13	prep_in	_	_
-17	.	_	.	.	_	5	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'advmod$@%gently$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%lady', 'amod$@%young$@%lady', 'dobj$@%lady$@%serve', 'erased$@%with$@%WORDERASED', 'det$@%a$@%turkey', 'advmod$@%well$@%cook', 'amod$@%cook$@%turkey', 'prep_with$@%turkey$@%serve', 'erased$@%in$@%WORDERASED', 'det$@%a$@%restaurant', 'prep_in$@%restaurant$@%turkey', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%gently$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%with$@%WORDERASED', 'x$@%a$@%turkey', 'x$@%well$@%cook', 'x$@%cook$@%turkey', 'x$@%turkey$@%serve', 'x$@%in$@%WORDERASED', 'x$@%a$@%restaurant', 'x$@%restaurant$@%turkey', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%gently$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%well$@%x', 'x$@%cook$@%x', 'x$@%turkey$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%restaurant$@%x', 'x$@%.$@%x']"
+17	.	_	.	.	_	5	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'advmod$@%gently$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%lady', 'amod$@%young$@%lady', 'dobj$@%lady$@%serve', 'erased$@%with$@%WORDERASED', 'det$@%a$@%turkey', 'advmod$@%well$@%cook', 'amod$@%cook$@%turkey', 'prep_with$@%turkey$@%serve', 'erased$@%in$@%WORDERASED', 'det$@%a$@%restaurant', 'prep_in$@%restaurant$@%turkey', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%gently$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%with$@%WORDERASED', 'x$@%a$@%turkey', 'x$@%well$@%cook', 'x$@%cook$@%turkey', 'x$@%turkey$@%serve', 'x$@%in$@%WORDERASED', 'x$@%a$@%restaurant', 'x$@%restaurant$@%turkey', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%gently$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%well$@%x', 'x$@%cook$@%x', 'x$@%turkey$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%restaurant$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p064-r1,The waiter is serving chicken to a lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -321,14 +321,14 @@ I08T-gNNS-p064-r1,The waiter is serving chicken to a lady.,1,1,1,1,1,"1	the	_	DT
 6	to	_	TO	TO	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	lady	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%a$@%lady', 'prep_to$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%a$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p067-r1,The waiter is serving a dish.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	dish	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']",0.776,45.5
 I08T-gNNS-p068-r1,He advise the female to try the turkey.,0,0,0,0,0,"1	he	_	PRP	PRP	_	2	nsubj	_	_
 2	advise	_	VBP	VBP	_	0	root	_	_
 3	the	_	DT	DT	_	4	det	_	_
@@ -337,12 +337,12 @@ I08T-gNNS-p068-r1,He advise the female to try the turkey.,0,0,0,0,0,"1	he	_	PRP	
 6	try	_	VB	VB	_	2	xcomp	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	turkey	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%advise', 'root$@%advise$@%VROOT', 'det$@%the$@%female', 'nsubj$@%female$@%try', 'aux$@%to$@%try', 'xcomp$@%try$@%advise', 'det$@%the$@%turkey', 'dobj$@%turkey$@%try', 'punct$@%.$@%advise']","['x$@%he$@%advise', 'x$@%advise$@%VROOT', 'x$@%the$@%female', 'x$@%female$@%try', 'x$@%to$@%try', 'x$@%try$@%advise', 'x$@%the$@%turkey', 'x$@%turkey$@%try', 'x$@%.$@%advise']","['x$@%he$@%x', 'x$@%advise$@%x', 'x$@%the$@%x', 'x$@%female$@%x', 'x$@%to$@%x', 'x$@%try$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	2	punct	_	_","['nsubj$@%he$@%advise', 'root$@%advise$@%VROOT', 'det$@%the$@%female', 'nsubj$@%female$@%try', 'aux$@%to$@%try', 'xcomp$@%try$@%advise', 'det$@%the$@%turkey', 'dobj$@%turkey$@%try', 'punct$@%.$@%advise']","['x$@%he$@%advise', 'x$@%advise$@%VROOT', 'x$@%the$@%female', 'x$@%female$@%try', 'x$@%to$@%try', 'x$@%try$@%advise', 'x$@%the$@%turkey', 'x$@%turkey$@%try', 'x$@%.$@%advise']","['x$@%he$@%x', 'x$@%advise$@%x', 'x$@%the$@%x', 'x$@%female$@%x', 'x$@%to$@%x', 'x$@%try$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",0.0,68.5
 I08T-gNNS-p071-r1,He is serving food.,1,1,1,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	serve	_	VBG	VBG	_	0	root	_	_
 4	food	_	NN	NN	_	3	dobj	_	_
-5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'punct$@%.$@%serve']","['x$@%he$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%.$@%serve']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'punct$@%.$@%serve']","['x$@%he$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%.$@%serve']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.776,45.5
 I08T-gNNS-p073-r1,The waiter is holding a plate of chicken for the customer.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -354,7 +354,7 @@ I08T-gNNS-p073-r1,The waiter is holding a plate of chicken for the customer.,1,1
 9	for	_	IN	IN	_	0	erased	_	_
 10	the	_	DT	DT	_	11	det	_	_
 11	customer	_	NN	NN	_	8	prep_for	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%plate', 'dobj$@%plate$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%chicken$@%plate', 'erased$@%for$@%WORDERASED', 'det$@%the$@%customer', 'prep_for$@%customer$@%chicken', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%plate', 'x$@%plate$@%hold', 'x$@%of$@%WORDERASED', 'x$@%chicken$@%plate', 'x$@%for$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%chicken', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%plate$@%x', 'x$@%of$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%plate', 'dobj$@%plate$@%hold', 'erased$@%of$@%WORDERASED', 'prep_of$@%chicken$@%plate', 'erased$@%for$@%WORDERASED', 'det$@%the$@%customer', 'prep_for$@%customer$@%chicken', 'punct$@%.$@%hold']","['x$@%the$@%waiter', 'x$@%waiter$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%plate', 'x$@%plate$@%hold', 'x$@%of$@%WORDERASED', 'x$@%chicken$@%plate', 'x$@%for$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%chicken', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%plate$@%x', 'x$@%of$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p076-r1,He is giving a turkey to the woman.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	give	_	VBG	VBG	_	0	root	_	_
@@ -363,14 +363,14 @@ I08T-gNNS-p076-r1,He is giving a turkey to the woman.,1,1,1,1,1,"1	he	_	PRP	PRP	
 6	to	_	TO	TO	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	woman	_	NN	NN	_	3	prep_to	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%turkey', 'dobj$@%turkey$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%turkey', 'x$@%turkey$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p080-r1,The waiter is delivering a chicken.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	deliver	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	chicken	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%waiter', 'x$@%waiter$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%waiter', 'x$@%waiter$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p084-r1,the waiter is serving for a woman,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -378,7 +378,7 @@ I08T-gNNS-p084-r1,the waiter is serving for a woman,1,1,0,1,1,"1	the	_	DT	DT	_	2
 5	for	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	woman	_	NN	NN	_	4	prep_for	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%woman', 'prep_for$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%woman', 'prep_for$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.944,39.0
 I08T-gNNS-p085-r1,The waiter is serving a roasted chicken to the lady. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -389,7 +389,7 @@ I08T-gNNS-p085-r1,The waiter is serving a roasted chicken to the lady. ,1,1,1,1,
 8	to	_	TO	TO	_	0	erased	_	_
 9	the	_	DT	DT	_	10	det	_	_
 10	lady	_	NN	NN	_	7	prep_to	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'amod$@%roasted$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%chicken', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%roasted$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%roasted$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%chicken', 'amod$@%roasted$@%chicken', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%chicken', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%chicken', 'x$@%roasted$@%chicken', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%roasted$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p088-r1,The woman is waiting to be served her meal.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	7	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -399,14 +399,14 @@ I08T-gNNS-p088-r1,The woman is waiting to be served her meal.,0,0,1,1,1,"1	the	_
 7	serve	_	VBN	VBN	_	4	xcomp	_	_
 8	she	_	PRP$	PRP$	_	9	poss	_	_
 9	meal	_	NN	NN	_	7	dobj	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'xsubj$@%woman$@%serve', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'aux$@%to$@%serve', 'auxpass$@%be$@%serve', 'xcomp$@%serve$@%wait', 'poss$@%she$@%meal', 'dobj$@%meal$@%serve', 'punct$@%.$@%wait']","['x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%to$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%wait', 'x$@%she$@%meal', 'x$@%meal$@%serve', 'x$@%.$@%wait']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%she$@%x', 'x$@%meal$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'xsubj$@%woman$@%serve', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'aux$@%to$@%serve', 'auxpass$@%be$@%serve', 'xcomp$@%serve$@%wait', 'poss$@%she$@%meal', 'dobj$@%meal$@%serve', 'punct$@%.$@%wait']","['x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%to$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%wait', 'x$@%she$@%meal', 'x$@%meal$@%serve', 'x$@%.$@%wait']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%she$@%x', 'x$@%meal$@%x', 'x$@%.$@%x']",0.542,57.5
 I08T-gNNS-p089-r1,The waiter is bringing a dish,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	bring	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	dish	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p090-r1,The waiter is bring the food to the woman.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -416,7 +416,7 @@ I08T-gNNS-p090-r1,The waiter is bring the food to the woman.,1,0,0,1,1,"1	the	_	
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	woman	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.851,43.5
 I08T-gNNS-p091-r1,The waiter is carrying a chicken for the lady. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -426,7 +426,7 @@ I08T-gNNS-p091-r1,The waiter is carrying a chicken for the lady. ,1,1,1,1,1,"1	t
 7	for	_	IN	IN	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	lady	_	NN	NN	_	6	prep_for	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%carry', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%chicken', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%carry', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%carry', 'erased$@%for$@%WORDERASED', 'det$@%the$@%lady', 'prep_for$@%lady$@%chicken', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%carry', 'x$@%for$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p092-r1,The waiter is serving chicken to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -435,7 +435,7 @@ I08T-gNNS-p092-r1,The waiter is serving chicken to the woman.,1,1,1,1,1,"1	the	_
 6	to	_	TO	TO	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	woman	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%chicken$@%serve', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%chicken$@%serve', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p093-r1,The waiter is giving the meal to his clients.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -445,7 +445,7 @@ I08T-gNNS-p093-r1,The waiter is giving the meal to his clients.,1,1,1,1,1,"1	the
 7	to	_	TO	TO	_	0	erased	_	_
 8	he	_	PRP$	PRP$	_	9	poss	_	_
 9	client	_	NNS	NNS	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%meal', 'dobj$@%meal$@%give', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%client', 'prep_to$@%client$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%meal', 'x$@%meal$@%give', 'x$@%to$@%WORDERASED', 'x$@%he$@%client', 'x$@%client$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%meal$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%client$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%meal', 'dobj$@%meal$@%give', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%client', 'prep_to$@%client$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%meal', 'x$@%meal$@%give', 'x$@%to$@%WORDERASED', 'x$@%he$@%client', 'x$@%client$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%meal$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%client$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p094-r1,The woman is waiting for the tasty duck.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -454,7 +454,7 @@ I08T-gNNS-p094-r1,The woman is waiting for the tasty duck.,0,0,1,0,1,"1	the	_	DT
 6	the	_	DT	DT	_	8	det	_	_
 7	tasty	_	JJ	JJ	_	8	amod	_	_
 8	duck	_	NN	NN	_	4	prep_for	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%wait', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%duck', 'amod$@%tasty$@%duck', 'prep_for$@%duck$@%wait', 'punct$@%.$@%wait']","['x$@%the$@%woman', 'x$@%woman$@%wait', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%duck', 'x$@%tasty$@%duck', 'x$@%duck$@%wait', 'x$@%.$@%wait']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%tasty$@%x', 'x$@%duck$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%wait', 'aux$@%be$@%wait', 'root$@%wait$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%duck', 'amod$@%tasty$@%duck', 'prep_for$@%duck$@%wait', 'punct$@%.$@%wait']","['x$@%the$@%woman', 'x$@%woman$@%wait', 'x$@%be$@%wait', 'x$@%wait$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%duck', 'x$@%tasty$@%duck', 'x$@%duck$@%wait', 'x$@%.$@%wait']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%wait$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%tasty$@%x', 'x$@%duck$@%x', 'x$@%.$@%x']",0.318,64.0
 I08T-gNNS-p095-r1,He is giving the chicken for a lady. ,1,1,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	give	_	VBG	VBG	_	0	root	_	_
@@ -463,7 +463,7 @@ I08T-gNNS-p095-r1,He is giving the chicken for a lady. ,1,1,0,1,1,"1	he	_	PRP	PR
 6	for	_	IN	IN	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	lady	_	NN	NN	_	5	prep_for	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%give', 'erased$@%for$@%WORDERASED', 'det$@%a$@%lady', 'prep_for$@%lady$@%chicken', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%give', 'x$@%for$@%WORDERASED', 'x$@%a$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%give', 'erased$@%for$@%WORDERASED', 'det$@%a$@%lady', 'prep_for$@%lady$@%chicken', 'punct$@%.$@%give']","['x$@%he$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%give', 'x$@%for$@%WORDERASED', 'x$@%a$@%lady', 'x$@%lady$@%chicken', 'x$@%.$@%give']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.944,39.0
 I08T-gNNS-p096-r1,The waiter is bring turkey to the customer.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -472,14 +472,14 @@ I08T-gNNS-p096-r1,The waiter is bring turkey to the customer.,1,0,0,1,1,"1	the	_
 6	to	_	TO	TO	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	customer	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'dobj$@%turkey$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%turkey$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'dobj$@%turkey$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%turkey$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%turkey$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",0.851,43.5
 I08T-gNNS-p097-r1,The waiter is serving the food.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	food	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p098-r1,The waiter is bring the chicken to the women.,1,0,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -489,7 +489,7 @@ I08T-gNNS-p098-r1,The waiter is bring the chicken to the women.,1,0,0,1,0,"1	the
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	woman	_	NNS	NNS	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%the$@%chicken', 'dobj$@%chicken$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%the$@%chicken', 'x$@%chicken$@%bring', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%the$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.589,53.5
 I08T-gNNS-p100-r1,The waiter is serving the woman with the turkey.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -499,14 +499,14 @@ I08T-gNNS-p100-r1,The waiter is serving the woman with the turkey.,1,1,1,1,1,"1	
 7	with	_	IN	IN	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	turkey	_	NN	NN	_	4	prep_with	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%woman', 'dobj$@%woman$@%serve', 'erased$@%with$@%WORDERASED', 'det$@%the$@%turkey', 'prep_with$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%with$@%WORDERASED', 'x$@%the$@%turkey', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%woman', 'dobj$@%woman$@%serve', 'erased$@%with$@%WORDERASED', 'det$@%the$@%turkey', 'prep_with$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%serve', 'x$@%with$@%WORDERASED', 'x$@%the$@%turkey', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p102-r1,The waiter is serving the lady.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	serve	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	lady	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%lady', 'dobj$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%the$@%lady', 'dobj$@%lady$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%the$@%lady', 'x$@%lady$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p103-r1,The waiter is serving a young lady with turkey.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -516,13 +516,13 @@ I08T-gNNS-p103-r1,The waiter is serving a young lady with turkey.,1,1,1,1,1,"1	t
 7	lady	_	NN	NN	_	4	dobj	_	_
 8	with	_	IN	IN	_	0	erased	_	_
 9	turkey	_	NN	NN	_	4	prep_with	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'dobj$@%lady$@%serve', 'erased$@%with$@%WORDERASED', 'prep_with$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%with$@%WORDERASED', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%with$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'dobj$@%lady$@%serve', 'erased$@%with$@%WORDERASED', 'prep_with$@%turkey$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%serve', 'x$@%with$@%WORDERASED', 'x$@%turkey$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%with$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p110-r1,He is holding a food.,0,1,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	hold	_	VBG	VBG	_	0	root	_	_
 4	a	_	DT	DT	_	5	det	_	_
 5	food	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%food', 'dobj$@%food$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%food', 'x$@%food$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hold', 'aux$@%be$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%food', 'dobj$@%food$@%hold', 'punct$@%.$@%hold']","['x$@%he$@%hold', 'x$@%be$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%food', 'x$@%food$@%hold', 'x$@%.$@%hold']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.579,55.5
 I08T-gNNS-p113-r1,The waiter is carrying on a plate of turkey.,0,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -532,13 +532,13 @@ I08T-gNNS-p113-r1,The waiter is carrying on a plate of turkey.,0,1,0,1,1,"1	the	
 7	plate	_	NN	NN	_	4	prep_on	_	_
 8	of	_	IN	IN	_	0	erased	_	_
 9	turkey	_	NN	NN	_	7	prep_of	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%a$@%plate', 'prep_on$@%plate$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%turkey$@%plate', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%a$@%plate', 'x$@%plate$@%carry', 'x$@%of$@%WORDERASED', 'x$@%turkey$@%plate', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%plate$@%x', 'x$@%of$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%a$@%plate', 'prep_on$@%plate$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%turkey$@%plate', 'punct$@%.$@%carry']","['x$@%the$@%waiter', 'x$@%waiter$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%a$@%plate', 'x$@%plate$@%carry', 'x$@%of$@%WORDERASED', 'x$@%turkey$@%plate', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%plate$@%x', 'x$@%of$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",0.579,55.5
 I08T-gNNS-p115-r1,Sending chicken to the lady,0,1,1,0,0,"1	send	_	VBG	VBG	_	0	root	_	_
 2	chicken	_	NN	NN	_	1	dobj	_	_
 3	to	_	TO	TO	_	0	erased	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	lady	_	NN	NN	_	1	prep_to	_	_
-6	.	_	.	.	_	1	punct	_	_","['root$@%send$@%VROOT', 'dobj$@%chicken$@%send', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%send', 'punct$@%.$@%send']","['x$@%send$@%VROOT', 'x$@%chicken$@%send', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%send', 'x$@%.$@%send']","['x$@%send$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	1	punct	_	_","['root$@%send$@%VROOT', 'dobj$@%chicken$@%send', 'erased$@%to$@%WORDERASED', 'det$@%the$@%lady', 'prep_to$@%lady$@%send', 'punct$@%.$@%send']","['x$@%send$@%VROOT', 'x$@%chicken$@%send', 'x$@%to$@%WORDERASED', 'x$@%the$@%lady', 'x$@%lady$@%send', 'x$@%.$@%send']","['x$@%send$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",0.149,65.0
 I08T-gNNS-p117-r1,The waiter bring a hot dish to a female guest.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	3	nsubj	_	_
 3	bring	_	VBP	VBP	_	0	root	_	_
@@ -549,7 +549,7 @@ I08T-gNNS-p117-r1,The waiter bring a hot dish to a female guest.,1,0,1,1,1,"1	th
 8	a	_	DT	DT	_	10	det	_	_
 9	female	_	JJ	JJ	_	10	amod	_	_
 10	guest	_	NN	NN	_	3	prep_to	_	_
-11	.	_	.	.	_	3	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%dish', 'amod$@%hot$@%dish', 'dobj$@%dish$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%a$@%guest', 'amod$@%female$@%guest', 'prep_to$@%guest$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%dish', 'x$@%hot$@%dish', 'x$@%dish$@%bring', 'x$@%to$@%WORDERASED', 'x$@%a$@%guest', 'x$@%female$@%guest', 'x$@%guest$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%hot$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%female$@%x', 'x$@%guest$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	3	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%dish', 'amod$@%hot$@%dish', 'dobj$@%dish$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%a$@%guest', 'amod$@%female$@%guest', 'prep_to$@%guest$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%dish', 'x$@%hot$@%dish', 'x$@%dish$@%bring', 'x$@%to$@%WORDERASED', 'x$@%a$@%guest', 'x$@%female$@%guest', 'x$@%guest$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%hot$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%female$@%x', 'x$@%guest$@%x', 'x$@%.$@%x']",0.907,42.0
 I08T-gNNS-p120-r1,The waiter is passing a dish to the customer.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -559,7 +559,7 @@ I08T-gNNS-p120-r1,The waiter is passing a dish to the customer.,1,1,1,1,1,"1	the
 7	to	_	TO	TO	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	customer	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%pass', 'aux$@%be$@%pass', 'root$@%pass$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%pass', 'erased$@%to$@%WORDERASED', 'det$@%the$@%customer', 'prep_to$@%customer$@%pass', 'punct$@%.$@%pass']","['x$@%the$@%waiter', 'x$@%waiter$@%pass', 'x$@%be$@%pass', 'x$@%pass$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%pass', 'x$@%to$@%WORDERASED', 'x$@%the$@%customer', 'x$@%customer$@%pass', 'x$@%.$@%pass']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%pass$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%customer$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p121-r1,The waiter is serving for a woman.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -567,7 +567,7 @@ I08T-gNNS-p121-r1,The waiter is serving for a woman.,1,1,0,1,1,"1	the	_	DT	DT	_	
 5	for	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	woman	_	NN	NN	_	4	prep_for	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%woman', 'prep_for$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%a$@%woman', 'prep_for$@%woman$@%serve', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%serve', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.944,39.0
 I08T-gNNS-p126-r1,Waiter holds the plate which have turkey on it.,0,0,0,1,1,"1	waiter	_	NNP	NNP	_	2	nsubj	_	_
 2	hold	_	VBZ	VBZ	_	0	root	_	_
 3	the	_	DT	DT	_	4	det	_	_
@@ -577,14 +577,14 @@ I08T-gNNS-p126-r1,Waiter holds the plate which have turkey on it.,0,0,0,1,1,"1	w
 7	turkey	_	VBN	VBN	_	4	rcmod	_	_
 8	on	_	IN	IN	_	0	erased	_	_
 9	it	_	PRP	PRP	_	7	prep_on	_	_
-10	.	_	.	.	_	2	punct	_	_","['nsubj$@%waiter$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%plate', 'nsubj$@%plate$@%turkey', 'erased$@%which$@%WORDERASED', 'aux$@%have$@%turkey', 'rcmod$@%turkey$@%plate', 'erased$@%on$@%WORDERASED', 'prep_on$@%it$@%turkey', 'punct$@%.$@%hold']","['x$@%waiter$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%plate', 'x$@%plate$@%turkey', 'x$@%which$@%WORDERASED', 'x$@%have$@%turkey', 'x$@%turkey$@%plate', 'x$@%on$@%WORDERASED', 'x$@%it$@%turkey', 'x$@%.$@%hold']","['x$@%waiter$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%plate$@%x', 'x$@%which$@%x', 'x$@%have$@%x', 'x$@%turkey$@%x', 'x$@%on$@%x', 'x$@%it$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	2	punct	_	_","['nsubj$@%waiter$@%hold', 'root$@%hold$@%VROOT', 'det$@%the$@%plate', 'nsubj$@%plate$@%turkey', 'erased$@%which$@%WORDERASED', 'aux$@%have$@%turkey', 'rcmod$@%turkey$@%plate', 'erased$@%on$@%WORDERASED', 'prep_on$@%it$@%turkey', 'punct$@%.$@%hold']","['x$@%waiter$@%hold', 'x$@%hold$@%VROOT', 'x$@%the$@%plate', 'x$@%plate$@%turkey', 'x$@%which$@%WORDERASED', 'x$@%have$@%turkey', 'x$@%turkey$@%plate', 'x$@%on$@%WORDERASED', 'x$@%it$@%turkey', 'x$@%.$@%hold']","['x$@%waiter$@%x', 'x$@%hold$@%x', 'x$@%the$@%x', 'x$@%plate$@%x', 'x$@%which$@%x', 'x$@%have$@%x', 'x$@%turkey$@%x', 'x$@%on$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",0.486,59.5
 I08T-gNNS-p129-r1,He is servicing for the woman.,0,1,0,0,0,"1	he	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	cop	_	_
 3	service	_	NN	NN	_	0	root	_	_
 4	for	_	IN	IN	_	0	erased	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	woman	_	NN	NN	_	3	prep_for	_	_
-7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%service', 'cop$@%be$@%service', 'root$@%service$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%service', 'punct$@%.$@%service']","['x$@%he$@%service', 'x$@%be$@%service', 'x$@%service$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%service', 'x$@%.$@%service']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%service$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%service', 'cop$@%be$@%service', 'root$@%service$@%VROOT', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%service', 'punct$@%.$@%service']","['x$@%he$@%service', 'x$@%be$@%service', 'x$@%service$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%service', 'x$@%.$@%service']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%service$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.093,66.5
 I08T-gNNS-p130-r1,The waiter is serving food for a young lady,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -594,7 +594,7 @@ I08T-gNNS-p130-r1,The waiter is serving food for a young lady,1,1,1,1,1,"1	the	_
 7	a	_	DT	DT	_	9	det	_	_
 8	young	_	JJ	JJ	_	9	amod	_	_
 9	lady	_	NN	NN	_	5	prep_for	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'erased$@%for$@%WORDERASED', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'prep_for$@%lady$@%food', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%for$@%WORDERASED', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%food', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%serve', 'aux$@%be$@%serve', 'root$@%serve$@%VROOT', 'dobj$@%food$@%serve', 'erased$@%for$@%WORDERASED', 'det$@%a$@%lady', 'amod$@%young$@%lady', 'prep_for$@%lady$@%food', 'punct$@%.$@%serve']","['x$@%the$@%waiter', 'x$@%waiter$@%serve', 'x$@%be$@%serve', 'x$@%serve$@%VROOT', 'x$@%food$@%serve', 'x$@%for$@%WORDERASED', 'x$@%a$@%lady', 'x$@%young$@%lady', 'x$@%lady$@%food', 'x$@%.$@%serve']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%serve$@%x', 'x$@%food$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%lady$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p131-r1,The waiter is giving a dish of turkey.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -603,14 +603,14 @@ I08T-gNNS-p131-r1,The waiter is giving a dish of turkey.,1,1,0,1,1,"1	the	_	DT	D
 6	dish	_	NN	NN	_	4	dobj	_	_
 7	of	_	IN	IN	_	0	erased	_	_
 8	turkey	_	NN	NN	_	6	prep_of	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%give', 'erased$@%of$@%WORDERASED', 'prep_of$@%turkey$@%dish', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%give', 'x$@%of$@%WORDERASED', 'x$@%turkey$@%dish', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%of$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%dish', 'dobj$@%dish$@%give', 'erased$@%of$@%WORDERASED', 'prep_of$@%turkey$@%dish', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%dish', 'x$@%dish$@%give', 'x$@%of$@%WORDERASED', 'x$@%turkey$@%dish', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%dish$@%x', 'x$@%of$@%x', 'x$@%turkey$@%x', 'x$@%.$@%x']",0.944,39.0
 I08T-gNNS-p132-r1,The waiter is delivering the food,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	deliver	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	food	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%waiter', 'x$@%waiter$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%waiter', 'x$@%waiter$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p134-r1,The waiter is bringing a chicken to a woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -620,7 +620,7 @@ I08T-gNNS-p134-r1,The waiter is bringing a chicken to a woman.,1,1,1,1,1,"1	the	
 7	to	_	TO	TO	_	0	erased	_	_
 8	a	_	DT	DT	_	9	det	_	_
 9	woman	_	NN	NN	_	4	prep_to	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%bring', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%bring', 'aux$@%be$@%bring', 'root$@%bring$@%VROOT', 'det$@%a$@%chicken', 'dobj$@%chicken$@%bring', 'erased$@%to$@%WORDERASED', 'det$@%a$@%woman', 'prep_to$@%woman$@%bring', 'punct$@%.$@%bring']","['x$@%the$@%waiter', 'x$@%waiter$@%bring', 'x$@%be$@%bring', 'x$@%bring$@%VROOT', 'x$@%a$@%chicken', 'x$@%chicken$@%bring', 'x$@%to$@%WORDERASED', 'x$@%a$@%woman', 'x$@%woman$@%bring', 'x$@%.$@%bring']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%bring$@%x', 'x$@%a$@%x', 'x$@%chicken$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,18.0
 I08T-gNNS-p137-r1,The waiter is offering the turkey for the woman.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -630,7 +630,7 @@ I08T-gNNS-p137-r1,The waiter is offering the turkey for the woman.,0,1,1,1,1,"1	
 7	for	_	IN	IN	_	0	erased	_	_
 8	the	_	DT	DT	_	9	det	_	_
 9	woman	_	NN	NN	_	6	prep_for	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%offer', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%turkey', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%offer', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%turkey', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%offer', 'aux$@%be$@%offer', 'root$@%offer$@%VROOT', 'det$@%the$@%turkey', 'dobj$@%turkey$@%offer', 'erased$@%for$@%WORDERASED', 'det$@%the$@%woman', 'prep_for$@%woman$@%turkey', 'punct$@%.$@%offer']","['x$@%the$@%waiter', 'x$@%waiter$@%offer', 'x$@%be$@%offer', 'x$@%offer$@%VROOT', 'x$@%the$@%turkey', 'x$@%turkey$@%offer', 'x$@%for$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%turkey', 'x$@%.$@%offer']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%offer$@%x', 'x$@%the$@%x', 'x$@%turkey$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.635,49.5
 I08T-gNNS-p138-r1,The waiter is giving the woman her dish.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	waiter	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -639,4 +639,4 @@ I08T-gNNS-p138-r1,The waiter is giving the woman her dish.,1,1,1,1,1,"1	the	_	DT
 6	woman	_	NN	NN	_	4	iobj	_	_
 7	she	_	PRP$	PRP$	_	8	poss	_	_
 8	dish	_	NN	NN	_	4	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'poss$@%she$@%dish', 'dobj$@%dish$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%she$@%dish', 'x$@%dish$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%she$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%waiter', 'nsubj$@%waiter$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'poss$@%she$@%dish', 'dobj$@%dish$@%give', 'punct$@%.$@%give']","['x$@%the$@%waiter', 'x$@%waiter$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%she$@%dish', 'x$@%dish$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%waiter$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%she$@%x', 'x$@%dish$@%x', 'x$@%.$@%x']",1.0,18.0
