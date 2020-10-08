@@ -1,0 +1,1 @@
+These image files are referred to in the annotation guide; moving or renaming will cause problems if rendering the annotation guide again.

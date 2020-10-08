@@ -1,0 +1,1 @@
+all_spearman_N70-clustering_vectors.csv is simply a modified version of all_spearman_N70.csv, where I've manually reorganized the scores into the vectors I need to cluster items according to the performance of different parameter settings. This clustering will be performed with cluster_by_spearman.R.
