@@ -22,7 +22,7 @@ def get_source_rows(tdf):
 	print("\n\n\n")
 	print_vectors(skipheader, all_rank_vecs)
 
-	
+
 def print_vectors(h, ev):
 	print("""', '""".join(h))
 	for v in ev:

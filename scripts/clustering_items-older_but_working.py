@@ -2,14 +2,12 @@
 
 
 import sys, csv
+from scipy.stats import rankdata
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.cluster.hierarchy as sch
 import random
-
-
-working_dir = "/Users/leviking/Documents/dissertation/SAILS/stats/N70/"
 
 
 def get_rows_by_param_settings(ps, fd):
@@ -59,68 +57,29 @@ def draw_all_single_model_clusters(mlabs, workdir, fulld):
 		mlab_avgs = get_param_averages([mlab], mlab_rows)  ## hacky -- single row doesn't need to be averaged, but does need formatting
 		draw_cluster_from_matrix(workdir, "cluster_"+mlab, mlab_avgs)
 
-
-def draw_df_cluster(my_df, my_title):
-	my_dendrogram = sch.dendrogram(sch.linkage(my_df, method  = "ward"), orientation="left", leaf_font_size=8, labels=my_df.index)
-	# plt.tight_layout()
-	plt.title(my_title)
-	plt.xlabel('Items')
-	plt.ylabel('Euclidean distances')
-	plt.savefig(working_dir+"cluster_"+my_title+".png", bbox_inches = "tight", pad_inches=0.3)
-	# plt.savefig(working_dir+"clustering_raw_model_scores_df"+".png",  pad_inches=1.0)
-	plt.clf()
-	my_df.to_csv(working_dir+my_title+".csv")
-
-
-def draw_single_vector_clusters_from_df(my_df, my_title):
-	for index in my_df:
-		index_series = my_df[index]  ## series is single column vector from df
-		index_df = index_series.to_frame()  ## convert back to df
-		new_title = my_title+"_"+index
-		draw_df_cluster(index_df, new_title)
-
-
-def draw_item_avg_clusters(my_df, my_title):
-	my_avgs_df = my_df.mean(axis=1).to_frame()
-	my_avgs_df.rename(columns={0:my_title}, inplace = True)
-	draw_df_cluster(my_avgs_df, my_title)
-
-
-def draw_item_median_clusters(my_df, my_title):
-	my_median_df = my_df.median(axis=1).to_frame()
-	my_median_df.rename(columns={0:my_title}, inplace = True)
-	draw_df_cluster(my_median_df, my_title)
-
+	
+## 2020/10/12: Need to rethink the handling of clusters using *ranked* values... I've been ranking the items 1-30 according to their scores for a given model; instead, I should look at a given item and rank the models (1-12 I think). Ranking items by model isn't interesting -- an item with a weak spearman score will have a relatively weak spearman score across all models. Ranking models by item might be more interesting: Perhaps for certain models rank higher for certain types of items. I need a good pandas tutorial to teach me how to better handle dataframes. 
 
 def main():
+	working_dir = "/Users/leviking/Documents/dissertation/SAILS/stats/N70/"
 	source_csv = working_dir+"all_spearman_N70-clustering_vectors.csv"
-	full_df = pd.read_csv(source_csv, index_col=0)
-	raw_df = full_df.T  ## Transpose
-	ranked_models_by_item_df = raw_df.rank(axis=1)  ## models ranked by item
-	ranked_items_by_model_df = raw_df.rank(axis=0)  ## items ranked by model
-	plt.figure(figsize=(7,10))
-	draw_df_cluster(raw_df, "raw_model_scores")
-	draw_df_cluster(ranked_models_by_item_df, "ranked_model_scores")
-	draw_single_vector_clusters_from_df(raw_df, "raw_model_scores")
-	draw_single_vector_clusters_from_df(ranked_models_by_item_df, "ranked_model_scores")
-	draw_item_avg_clusters(raw_df, "item_avg_raw_scores")
-	draw_item_avg_clusters(ranked_items_by_model_df, "item_avg_ranked_scores")
-	draw_item_median_clusters(raw_df, "item_median_raw_scores")
-	draw_item_median_clusters(ranked_items_by_model_df, "item_median_ranked_scores")
-	
-
+	dataset = pd.read_csv(source_csv)
+	print(dataset)
+	print(type(dataset))
+	print("####################################")
+	full_dataset = dataset.iloc[:].values
+	print(full_dataset)
+	print(type(full_dataset))
+	model_labels = ['T_ldh_r1', 'T_xdh_r1', 'T_xdx_r1', 'T_ldh_r2', 'T_xdh_r2', 'T_xdx_r2', 'U_ldh_r1', 'U_xdh_r1', 'U_xdx_r1', 'U_ldh_r2', 'U_xdh_r2', 'U_xdx_r2']  ## column 0; currently unused here
 	depform_settings = ["ldh", "xdh", "xdx"]
 	r1r2_settings = ["r1", "r2"]
 	TU_settings = ["T_", "U_"]
 
-
-## TODO: 2020/10/15. Tomorrow, replicate the below using proper pandas as above.
-
-	# # depform_rows = get_rows_by_param_settings(depform_settings, full_dataset)  ## shouldn't need this with dataframes
-	# depform_avgs = get_param_averages(depform_settings, depform_rows)
-	# # depform_avgsranked = [list(rankdata(row).astype(float)) for row in depform_avgs]
-	# draw_cluster_from_matrix(working_dir, "cluster_depform_avgs", depform_avgs)
-	# # draw_cluster_from_matrix(working_dir, "cluster_depform_avgsranked", depform_avgsranked)
+	depform_rows = get_rows_by_param_settings(depform_settings, full_dataset)  ## shouldn't need this with dataframes
+	depform_avgs = get_param_averages(depform_settings, depform_rows)
+	# depform_avgsranked = [list(rankdata(row).astype(float)) for row in depform_avgs]
+	draw_cluster_from_matrix(working_dir, "cluster_depform_avgs", depform_avgs)
+	# draw_cluster_from_matrix(working_dir, "cluster_depform_avgsranked", depform_avgsranked)
 
 	# r1r2_rows = get_rows_by_param_settings(r1r2_settings, full_dataset)
 	# r1r2_avgs = get_param_averages(r1r2_settings, r1r2_rows)
@@ -134,6 +93,13 @@ def main():
 	# # TU_avgsranked = [list(rankdata(row).astype(float)) for row in TU_avgs]
 	# draw_cluster_from_matrix(working_dir, "cluster_TU_avgs", TU_avgs)
 	# # draw_cluster_from_matrix(working_dir, "cluster_TU_avgsranked", TU_avgsranked)
+	# 
+	# draw_all_single_model_clusters(model_labels, working_dir, full_dataset)
+
+	# T_ldh_r1_rows = get_rows_by_param_settings(["T_ldh_r1"], full_dataset)
+	# T_ldh_r1_avgs = get_param_averages(["T_ldh_r1"], T_ldh_r1_rows)  ## hacky -- single row doesn't need to be averaged, but does need formatting
+	# draw_cluster_from_matrix(working_dir, "cluster_T_ldh_r1", T_ldh_r1_avgs)
+	# # draw_cluster_from_matrix(working_dir, "cluster_T_ldh_r1_ranked", T_ldh_r1_ranked)
 	
 	
 
