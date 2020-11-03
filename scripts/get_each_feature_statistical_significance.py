@@ -17,7 +17,7 @@ import random
 test_sample = "N70"
 # sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+test_sample+'/')
 sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/N70/')
-outdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+test_sample+'/significance/')
+# outdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+test_sample+'/significance/')
 outdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+test_sample+'/')
 inicks = {'I01': 'i01_in_dance', 'I02': 'i02_tr_eat', 'I03': 'i03_di_deliver', 'I04': 'i04_in_wake', 'I05': 'i05_di_teach', 'I06': 'i06_tr_carry', 'I07': 'i07_in_fly', 'I08': 'i08_di_serve', 'I09': 'i09_tr_ride', 'I10': 'i10_in_cry', 'I11': 'i11_di_ask', 'I12': 'i12_tr_cut', 'I13': 'i13_in_swim', 'I14': 'i14_di_sell', 'I15': 'i15_tr_plant', 'I16': 'i16_tr_catch', 'I17': 'i17_di_feed', 'I18': 'i18_in_cough', 'I19': 'i19_tr_photo', 'I20': 'i20_in_laugh', 'I21': 'i21_di_throw', 'I22': 'i22_tr_forecast', 'I23': 'i23_di_inject', 'I24': 'i24_in_sleep', 'I25': 'i25_tr_chase', 'I26': 'i26_di_readto', 'I27': 'i27_in_sing', 'I28': 'i28_di_givedirection', 'I29': 'i29_tr_cuddle', 'I30': 'i30_in_run'}
 depforms = ["ldh", "xdh"]
