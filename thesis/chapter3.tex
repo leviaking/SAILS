@@ -8,9 +8,9 @@ In Chapter~\ref{chap:intro} I explained that a major motivation of this work is 
 
 %\subsection{PDT Stimuli}
 
-The picture description task (PDT) is built around 30 images. Each image is a simple, cartoon-like vector graphic. These images were purchased from Shutterstock, a web-based graphics library\footnote{https://www.shutterstock.com/vectors}. In order to constrain response contents to the main action of each image, the images were modified to remove any non-essential detail or background; an example is shown in Figure~\ref{fig:image-prep}. Vector graphics are ideal for this use, because they tend to have an illustrational style with very little detail, as compared to photographs or drawings. Moreover, most consist of layers of graphic objects, and these objects can be easily moved, resized, deleted, combined or otherwise modified to compose the desired stimulus. Example images are presented in Table~\ref{tab:example-pdt-items} and the full set is found in Appendix \ref{appendix:PDT_items}.
+The picture description task (PDT) is built around 30 images. Each image is a simple, cartoon-like vector graphic. These images were purchased from Shutterstock, a web-based graphics library\footnote{https://www.shutterstock.com/vectors}. In order to constrain response contents to the main action of each image, the images were modified to remove any non-essential detail or background; an example is shown in Figure~\ref{fig:image-prep}. Vector graphics are ideal for this use, because they tend to have an illustrational style with very little detail, as compared to photographs or drawings. Moreover, most consist of layers of graphic objects, and these objects can be easily moved, resized, deleted, combined or otherwise modified to compose the desired stimulus. More example images are presented in Figure~\ref{fig:example-pdt-items} and the full set is found in Appendix \ref{appendix:PDT_items}.
 
-To factor out the influence of previous linguistic context, images are intentionally devoid of any text. In a few cases, symbols are used: two images have music notes, one displays a legible analog clock, one uses numerals in an arithmetic problem, and one shows a question mark. The symbols were intended to elicit abstract concepts that are otherwise difficult to portray visually, like \textit{teaching math} and \textit{asking a question}. 
+To factor out the influence of previous linguistic context, images are intentionally devoid of any text. In a few cases, symbols are used: two images have music notes; one displays a legible analog clock; one uses numerals in an arithmetic problem and one shows a question mark. The symbols were intended to elicit abstract concepts that are otherwise difficult to portray visually, like \textsc{teaching math} and \textsc{asking a question}. 
 
 \begin{figure}[htb!]
 \begin{center}
@@ -25,13 +25,28 @@ Original image & Simplified PDT image \\
 \end{center}
 \end{figure}
 
-Each image was chosen for its depiction of an ongoing or imminent action (as opposed to a static image) performed by a person or an animal. The images are divided evenly into actions that are canonically intransitive, transitive or ditransitive in English.
+Each image was chosen for its depiction of an ongoing or imminent action (as opposed to a static image) performed by a person or an animal. The images are divided evenly into actions that are canonically intransitive, transitive or ditransitive in English. I chose these three categories because they indicate the number of actors and objects in a given event, and my approach to scoring responses should be able to handle this range of complexity. It should be noted that this categorization is imperfect, however, as some events in the PDT can be expressed in multiple ways, like \textit{The girl is riding a horse} (transitive construction) versus \textit{The girl is horseback riding} (intransitive construction). I attempted to minimize ambiguity (especially between intransitives and transitives) by avoiding images with possible light constructions, like \textit{He is taking a shower} versus \textit{He is showering}.
 
-Each PDT image is used in two different contexts: \textbf{targeted} and \textbf{untargeted}. An \textbf{item} consists of an image and a prompt question. For \textbf{targeted} items, questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the girl}, \textit{the boy}; see Table~\ref{tab:example-pdt-items}). For all \textbf{untargeted} items, the question is \textit{What is happening?}
+
+\begin{figure}[htb!]
+%\begin{table}[t!] This line is giving me trouble when I go to typeset
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+{\includegraphics[width=0.29\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I02.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I17.jpg}} \\
+\hline
+What is the girl doing? & What is the boy doing? & What is the girl doing? \\
+\hline
+\end{tabular}
+\caption{\label{fig:example-pdt-items} PDT example images with their targeted questions. In the untargeted form, the question for each is \textit{What is happening?} From left to right, the examples represent one intransitive, transitive and ditransitive item.}
+\end{center}
+\end{figure}
+
+Each PDT image is used in two different contexts: \textbf{targeted} and \textbf{untargeted}. An \textbf{item} consists of an image and a prompt question. For \textbf{targeted} items, questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the girl}, \textit{the boy}; see Figure~\ref{fig:example-pdt-items}). For all \textbf{untargeted} items, the question is \textit{What is happening?}
 %Thus, there are a total of 60 different items used in this study, with each of 30 images used once in a targeted prompt and once in an untargeted prompt.
-Collecting these targeted and untargeted responses allows for the examination of response variation with and without a subject constraint. This could help inform approaches to task design and automatic content assessment \citep{foster2009native, cho2013investigating}. 
+Collecting these targeted and untargeted responses allows for the examination of response variation with and without a subject constraint. To elaborate, for targeted items, I expect less variation among responses; defining the subject in the prompt means all responses should reuse this subject and only vary in how they express the predicate. For untargeted items, some image prompts might allow for variation of the subject, however. For the image in Figure~\ref{fig:image-prep}, for example, valid responses could include \textit{The boy is throwing a ball to the girl} as well as \textit{The girl is catching a ball from the boy}. Understanding the effect of the subject constraint could help inform approaches to task design and automatic content assessment \citep{foster2009native, cho2013investigating}. 
 
-Different participants performed different versions of the PDT, and multiple versions were necessary to collect roughly equal numbers of targeted and untargeted \textbf{responses} for each image. These versions vary in which images are presented as targeted items and which images are presented as untargeted items. Additionally, native speakers (NSs) were asked to provide two non-identical responses to each item, but non-native speakers (NNSs) were asked to provide only one response per item, so different PDT versions were used for these groups. The PDTs were hosted online via Survey Monkey\footnote{https://www.surveymonkey.com}, and all participants submitted their responses through this platform. %Survey Monkey restricts the number of questions included in surveys used for purchasing crowdsourced responses, so the PDTs were split accordingly for this group.
+Different participants performed different versions of the PDT, and multiple versions were necessary to collect roughly equal numbers of targeted and untargeted \textbf{responses} for each image. These versions vary in which images are presented as targeted items and which images are presented as untargeted items. Additionally, native speakers (NSs) were asked to provide two non-identical responses to each item (see Section~\ref{sec:participants}), but non-native speakers (NNSs) were asked to provide only one response per item, so different PDT versions were used for these groups. The PDTs were hosted online via Survey Monkey\footnote{https://www.surveymonkey.com}, and all participants submitted their responses through this platform. %Survey Monkey restricts the number of questions included in surveys used for purchasing crowdsourced responses, so the PDTs were split accordingly for this group.
 
 In each (full-length) PDT, targeted items are presented in the first half, and untargeted items are presented in the second half. This targeted-untargeted ordering is intended to avoid the possibility that in an untargeted-targeted task, respondents might notice that the question for each untargeted item is always the same in the first half and finish the task hastily without noticing that later targeted items specify the subject. Each half is introduced with instructions, including an example item with sample responses. The instructions ask participants to focus on the main event depicted in the image and for each response to be one complete sentence. Because the PDT was presented as an online survey, all participants typed their responses. Participants were instructed not to use any reference materials, but browser-based spell checking was not disabled, and participants are assumed to have used it as necessary.
 
@@ -45,34 +60,14 @@ The main task instructions are presented in (\ref{exe:pdt-instructions-a}). Addi
   \ex\label{exe:pdt-instructions-b}\textbf{Additional Instructions for NSs:} Then, you will be asked to write a second, \textit{different} answer, which is also a complete sentence. This might involve rewording or reorganizing your first sentence. It does not need to be \textit{completely} different; some words may be the same. If you cannot think of another way to answer the question, you may leave the second answer space empty, but any second responses you provide will be greatly appreciated.
 \end{exe}
 
-%% LK NTS:
-%%intransitive is I30 (woman is running)
-%%transitive is I29 (woman is hugging dog)
-%%ditransitive is I28 (man is giving directions)
-\begin{table}[htb!]
-%\begin{table}[t!] This line is giving me trouble when I go to typeset
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-{\includegraphics[width=0.29\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I02.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I17.jpg}} \\
-\hline
-What is the girl doing? & What is the boy doing? & What is the girl doing? \\
-\hline
-\end{tabular}
-\caption{\label{tab:example-pdt-items} PDT example images with their targeted questions. In the untargeted form, the question for each is \textit{What is happening?} From left to right, the examples represent one intransitive, transitive and ditransitive item.}
-\end{center}
-\end{table}
-
-
-%\subsection{Data Collection}
 \section{Participants}
 \label{sec:participants}
 
 This study involved a total of 499 PDT participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses in the English Language Improvement Program at Indiana University. These participants performed the task in a computer lab with a researcher present. They were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese. Because nearly 90\% of these recruits were native speakers of Chinese, care should be taken when drawing conclusions from the corpus; patterns observed among the NNSs here might not apply broadly to all NNSs.
 
-Responses from 329 of the NSs were purchased via Survey Monkey, where survey takers can earn credits that they can redeem for prizes or convert to donations to charities. Due to survey length restrictions for purchased responses, these NSs each completed only half of the task, so their data is equivalent to that of 164.5 full participants.
+Responses from 329 of the NSs were purchased via Survey Monkey, where survey takers can earn credits that they can redeem for prizes or convert to donations to charities. Asking NSs to provide two responses doubles the length of the survey, exceeding the platform's limits on survey length for purchases responses, so the task was divided into two separate surveys for NSs. Thus while each NS and NNS provided 30 responses, each NNS responded to all 30 PDT items while each NS responded to only 15.
 
-The remaining 29 NS participants were people known to me personally. Due to this relatively small number of participants, their data was not used for modeling or evaluating NNS responses, but it was annotated and is included in the SAILS Corpus. The NS data discussed throughout this dissertation is the crowdsourced data. Where relevant, however, I refer to these two groups as the \textbf{Familiar Native Speakers (FNSs)} and the \textbf{Crowdsourced Native Speakers (CNSs)}. With considerably more FNS data, future work should include comparisons of the two groups to better understand the differences in quality, as CNSs might be less likely to perform the task in good faith.
+The remaining 29 NS participants were people known to me personally. Due to this relatively small number of participants, their data was not used for modeling or evaluating NNS responses, but it was annotated and is included in the SAILS Corpus. The NS data discussed throughout this dissertation is the crowdsourced data. Where relevant, however, I refer to these two groups as the \textbf{Familiar Native Speakers (FNSs)} and the \textbf{Crowdsourced Native Speakers (CNSs)}. Future work should include collecting much more FNS data and comparison of the two groups to better understand the differences in quality, as CNSs are almost certainly less likely to perform the task in good faith.
 
 All participants completed a background questionnaire at the beginning of the PDT. This included questions about first and second languages, gender, age, national origin, amount of English language instruction and length of residency in English-speaking locations. This questionnaire is included as part of the PDT, and the background information provided by participants is included in the SAILS Corpus files. A summary of some of the demographic information is shown in Table~\ref{tab:demographics}.
 
@@ -95,7 +90,7 @@ Female & 76 & (53.2\%) & 172 & (52.3\%) & 11 & (37.9\%) \\
 Unknown & 9 & (6.4\%) & 19 & (5.8\%) & 1 & (3.4\%) \\
 \hline
 \end{tabular}
-\caption{\label{tab:demographics} Age and gender information for the three participant groups.}
+\caption{\label{tab:demographics} Age and gender information for the three participant groups (Non Native Speakers, Crowdsourced Native Speakers and Familiar Native Speakers).}
 \end{center}
 \end{table}
 %& \multicolumn{3}{|c|}{Response Counts} \\
@@ -105,8 +100,8 @@ In previous similar work \citep{king:dickinson:13},
 %\citep{king:dickinson:13,king:dickinson:16},
 NSs were found to produce less variation than NNSs. Many NSs provided identical responses or responses that hew very closely to the most canonical way of expressing the main action. A major motivation for collecting the current corpus was the notion of assessing NNS response content by comparing it against the NS responses. Among other things, this involves the matching of words or syntactic dependencies and thus benefits from a broad set of acceptable responses in the gold standard. For this reason, NSs were asked to provide two non-identical responses, in the hopes that this would result in a wide range of examples of native-like responses for the NNS responses to be compared against.
 
-\section{Responses}
-\label{sec:responses}
+\section{Response Totals}
+\label{sec:response-totals}
 
 A total of 13,533 responses were collected. The response counts for each participant group are presented in Table~\ref{tab:response-counts}. Including the second responses collected from NSs, roughly two thirds of the corpus come from the NS groups. The overwhelming majority of responses appear to be given in good faith, but a small number of responses (primarily from the CNS group) are problematic in this regard, as shown in Table~\ref{tab:bad-faith}. These may contain gibberish or obscenities or are otherwise inappropriate for the task. Such responses would also be expected in an ICALL environment, so they were not removed from the corpus. Instead, these responses were simply annotated like all others (see Chapter~\ref{chap:annotation}). Indeed, automatically assigning low scores to inappropriate responses is a central challenge and goal in this project (see Chapter \ref{chap:method}).
 
@@ -163,11 +158,13 @@ Hoj \\
 %Hey man \\
 %\hline
 \end{tabular}
-\caption{\label{tab:bad-faith} Crowdsourced responses for the items shown in Table~\ref{tab:example-pdt-items}, showing one exemplar response and two examples of problematic or bad faith responses for each item.}
+\caption{\label{tab:bad-faith} Crowdsourced responses for the items shown in Figure~\ref{fig:example-pdt-items}, showing one exemplar response and two examples of problematic or bad faith responses for each item.}
 \end{center}
 \end{table}
 
 
+\section{Response Variation}
+\label{sec:response-variation}
 Type-to-token ratios (TTR) are commonly used as an indication of how varied or homogenous a set of data is. This number ranges between 0 and 1. In a set of data where most instances or \textit{tokens} are unique (\textit{types}), the number of types per tokens approaches 1. In a set of data where most tokens are identical, the number of types per tokens approaches 0. With regard to language data, TTRs are often used on the word level, to calculate the lexical density of a document, for example \citep{granger2002computer}. In this study, however, type-to-token ratios (TTR) were calculated on the response level for the entire set of items. For this calculation, final punctuation was ignored, and all responses were converted to lowercase. To illustrate, the first three response \textit{tokens} in Table~\ref{tab:type-token-examples} would constitute a single response \textit{type}.
 
 \begin{table}[htb!]
@@ -187,7 +184,7 @@ Types & Tokens & Response \\
 3 & 5 & The woman squeezed a dog. \\
 \hline
 \end{tabular}
-\caption{\label{tab:type-token-examples} This toy dataset shows how TTR is calculated on the response level. Ignoring punctuation and capitalization, the first three response tokens here constitute a single response type. The TTR for this set would be 3:5, or 0.6.}
+\caption{\label{tab:type-token-examples} This toy dataset shows how TTR is calculated on the response (sentence) level. Ignoring punctuation and capitalization, the first three response tokens here constitute a single response type. The TTR for this set would be 3:5, or 0.6.}
 \end{center}
 \end{table}
 
@@ -203,7 +200,7 @@ Types & Tokens & Response \\
 
 The TTRs for the corpus are presented in Table~\ref{tab:ttr}. 
 For each cell in this table, the corpus contains 10 items, for each of which there are roughly 150 NS responses and 70 NNS responses. 
-To control for this imbalance between NS and NNS responses, the TTR was calculated for each item based on a random sample of 50 responses.  This was repeated 10 times and then averaged to produce a final TTR for each item. These item TTRs were then averaged as intransitives, transitives and ditransitives. The ratios show the direct relationship between the complexity of the event portrayed (represented here as intransitive, transitive and ditransitive) and the degree of variation elicited. In all cases, TTR increases with this complexity.
+TTR is highly sensitive to text length, so to control for the imbalance between NS and NNS responses, the TTR was calculated for each item based on a random sample of 50 responses \citep{grieve2007}.  This was repeated 10 times and then averaged to produce a final TTR for each item. These item TTRs were then averaged as intransitives, transitives and ditransitives. The ratios show the direct relationship between the complexity of the event portrayed (represented here as intransitive, transitive and ditransitive) and the degree of variation elicited. In all cases, TTR increases with this complexity.
 %Interestingly, this trend seems more pronounced in the NNS responses; in the targeted NNS responses, the TTRs for intransitive and ditransitive items are 0.381 and 0.817, respectively, compared to 0.628 and 0.835 for NS responses. \textbf{*Might this be explained by the inclusion of NNS 2nd responses? Let's investigate*}\lk{1st vs 2nd?} 
 The ratios also show that in all cases, as expected, variation is greater for untargeted items than it is for targeted items. In other words, asking about a particular subject in the prompt question does constrain the variety of responses, as expected.
 
