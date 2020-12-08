@@ -54,14 +54,14 @@ In order to handle the relevant kinds of variation observed in the responses, fi
 A set of annotation guidelines were produced with definitions, rules and examples for each feature. For most features, the rules for targeted and untargeted items (See Section~\ref{sec:pdt}) vary slightly; the untargeted rules are generally less strict to accommodate the less restrictive prompt question. The complete annotation guide is included in Appendix~\ref{appendix:annotation_guide}. The features and brief descriptions are listed here and discussed further in the discussion of inter-annotator agreement in Section~\ref{sec:agreement}.
 
 \begin{enumerate}
-\item \textbf{Core Event}: Does the response capture the core event depicted in the image? Core events are not pre-defined for annotators but should be clear given the stripped down nature of the images. Crucially, the response should link an appropriate subject to the event.  In Table~\ref{fig:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
-\item \textbf{Answerhood}: Does the response make a clear attempt to answer the prompt question? This generally requires a progressive verb, because the PDT questions are in the present progressive. For targeted items, the subject of the question or an appropriate pronoun must be used as the subject of the response.  For example, \textit{The dog is so happy!} (Table~\ref{fig:sample-responses}) is answering a question other than \textit{What is the woman doing?}. 
-\item \textbf{Grammaticality}: Is the response free from errors of spelling and grammar?  
+\item \textbf{\feat{Core Event}}: Does the response capture the core event depicted in the image? Core events are not pre-defined for annotators but should be clear given the stripped down nature of the images. Crucially, the response should link an appropriate subject to the event.  In Table~\ref{fig:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
+\item \textbf{\feat{Answerhood}}: Does the response make a clear attempt to answer the prompt question? This generally requires a progressive verb, because the PDT questions are in the present progressive. For targeted items, the subject of the question or an appropriate pronoun must be used as the subject of the response.  For example, \textit{The dog is so happy!} (Table~\ref{fig:sample-responses}) is answering a question other than \textit{What is the woman doing?}. 
+\item \textbf{\feat{Grammaticality}}: Is the response free from errors of spelling and grammar?  
 %While the focus of GEC work, 
 This is a relatively straightforward feature to annotate. For example, from Table~\ref{fig:sample-responses}, \textit{She is wear a blue dress} contains an ungrammatical verb form.
 %\lk{Is it straightforward?} 
-\item \textbf{Interpretability}: Does the response evoke a clear mental image (even if different from the actual item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{She loves her pet} (Table~\ref{fig:sample-responses}) is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a goldfish, etc.
-\item \textbf{Verifiability}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial or professional relationship between persons depicted in the image.  For example, in Table~\ref{fig:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (core event=0, verifiability=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be verified from the picture (core event=1, verifiability=0).
+\item \textbf{\feat{Interpretability}}: Does the response evoke a clear mental image (even if different from the actual item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{She loves her pet} (Table~\ref{fig:sample-responses}) is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a goldfish, etc.
+\item \textbf{\feat{Verifiability}}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial or professional relationship between persons depicted in the image.  For example, in Table~\ref{fig:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (\feat{core event}=0, \feat{verifiability}=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be verified from the picture (\feat{core event}=1, \feat{verifiability}=0).
 \end{enumerate}
 
 \paragraph{Annotation process}
@@ -120,7 +120,7 @@ The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
 Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
 \hline
 \end{tabular}
-\caption{\label{tab:dev-transitive} Targeted and untargeted sample responses from the development set transitive item, shown with adjudicated annotations for the five features: core event (\textit{C}), verifiability (\textit{V}), answerhood (\textit{A}), interpretability (\textit{I}) and grammaticality (\textit{G}).}
+\caption{\label{tab:dev-transitive} Targeted and untargeted sample responses from the development set transitive item, shown with adjudicated annotations for the five features: \feat{core event} (\textit{C}), \feat{verifiability} (\textit{V}), \feat{answerhood} (\textit{A}), \feat{interpretability} (\textit{I}) and \feat{grammaticality} (\textit{G}).}
 \end{center}
 \end{table}
 
@@ -154,7 +154,7 @@ The test set parallels the development set and consists of one intransitive, one
 \begin{center}
 \begin{tabular}{|l|l|l|l|l||l|l||l|}
 \hline
-Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observed & Kappa \\
+Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observ & Kappa \\
 \hline
 \hline
 Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
@@ -169,18 +169,18 @@ Targeted & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
 Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
 \hline
 \hline
-Core Event & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
+\feat{Core Event} & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
 \hline
-Answerhood & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+\feat{Answerhood} & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
 \hline
-Grammaticality & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
+\feat{Grammaticality} & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \hline
-Interpretability & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+\feat{Interpretability} & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
 \hline
-Verifiability & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+\feat{Verifiability} & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
 \hline
 \end{tabular}
-\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observed}) and Cohen's kappa (\textit{Kappa}).}
+\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observ}) and Cohen's kappa (\textit{Kappa}).}
 \end{center}
 \end{table*}
 
@@ -200,17 +200,17 @@ When asked to compare the annotation process for targeted and untargeted items, 
 \label{sec:features}
 Grouped by feature, the annotations all show raw agreement scores above 91\% and Cohen's kappa scores above 0.74 (Table~\ref{tab:agreement}). For future use of this corpus in content assessment, these kappa scores are comfortably above the 0.67 suggested as a threshhold for meaningful, reliable agreement \citep{landis1977measurement, artstein:massimo:2008}.  I discuss each feature in turn here, highlighting difficulties in coming to an agreement, as such disagreements illustrate some of the impactful ways in which responses vary.
 
-\paragraph{Core event} Isolating whether the main content of the picture is described in the response, the \feat{core event} feature is the most relevant of the five for content assessment. All five features are skewed toward \textit{yes} annotations, but with an average \textit{yes} rate of 72.5\%, core event is the least skewed; i.e., more responses receive a \textit{no} annotation for \feat{core event} than for any other feature.
+\paragraph{\feat{Core event}} Isolating whether the main content of the picture is described in the response, the \feat{core event} feature is the most relevant of the five for content assessment. All five features are skewed toward \textit{yes} annotations, but with an average \textit{yes} rate of 72.5\%, core event is the least skewed; i.e., more responses receive a \textit{no} annotation for \feat{core event} than for any other feature.
 
 \feat{Core event} has the second lowest inter-annotator agreement kappa score, at 0.808. This is somewhat lower than expected, as the pre-adjudication development set score was 0.889. This appears to be largely attributable to the difficulty of the ditransitive item, challenging for both participants and annotators (section~\ref{sec:transitivity}). 
 
-The main issue in this case has to do with the amount of specificity required to be the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Figure~\ref{fig:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
+The main issue in this case has to do with the amount of specificity required to capture the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Figure~\ref{fig:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
 %\textit{guiding}, 
 \textit{helping a lost person} or \textit{reading a map}, with A2 more likely to accept these less specific descriptions.
 
 Similarly, but to a lesser extent, the transitive item, which shows a woman hugging a dog (Figure~\ref{fig:test-sample-items}), resulted in disagreements where A2 accepts the word \textit{pet} as the object, but A1 rejects such responses as too vague. Despite the acceptable scores for \feat{core event} agreement, the fact that many disagreements hinge on particular word choice or annotators having minor differences in interpretation of the event suggest that greater agreement could be achieved by providing annotators with suggestions about the acceptable content for each response. In other words: by more clearly determining the desired level of specificity of a response---for the verb or its arguments---agreement could be higher. The desired specificity may vary in accordance with the intended use of the annotations; in the current annotations, the standard discussed between annotators and in the guidelines included pragmatic considerations like naturalness, native-likeness and effort.
 
-\paragraph{Answerhood} Capturing the semantic content of the picture isn't the only criterion for determining the quality of a response; the \feat{answerhood} feature was added largely as a way to identify responses that simply do not follow the instructions. Such responses tend to fall into one of the following categories:
+\paragraph{\feat{Answerhood}} Capturing the semantic content of the picture isn't the only criterion for determining the quality of a response; the \feat{answerhood} feature was added largely as a way to identify responses that simply do not follow the instructions. Such responses tend to fall into one of the following categories:
 
 \begin{enumerate}
 \item Responses that do not directly answer the given question, perhaps by reframing the perspective so that it seems like a different question was asked, e.g., \textit{He may get fat eating pizza}, in response to \textit{What is the boy doing?} (Table~\ref{tab:dev-transitive});
@@ -227,7 +227,7 @@ Another ten disagreements involve responses lacking a progressive verb, generall
 
 \paragraph{Grammaticality} The \feat{grammaticality} feature is the most heavily skewed one, with an average \textit{yes} rate of 86.6\%.  As the only non-semantic annotation, this is perhaps not surprising.
 
-Grammaticality has a raw agreement score of 96.0\% and a kappa of 0.827. Among 52 disagreements, annotators concurred in discussion that 19 involve an avoidable annotator error. These are primarily responses with typos, misspellings, subject-verb disagreement and bare nouns, all rejected by the annotation rules. Such cases are likely attributable to annotator fatigue.
+\feat{Grammaticality} has a raw agreement score of 96.0\% and a kappa of 0.827. Among 52 disagreements, annotators concurred in discussion that 19 involve an avoidable annotator error. These are primarily responses with typos, misspellings, subject-verb disagreement and bare nouns, all rejected by the annotation rules. Such cases are likely attributable to annotator fatigue.
 
 % http://www.cs.rochester.edu/~tetreaul/acl11-mturk-grammar.pdf
 The remainder reflect an unavoidable level of disagreement. Many of these stem from differing interpretations of bare nouns as either errors or as acceptable mass nouns, as in \textit{The man is giving \textbf{direction} to the tourist}. In several cases, annotators disagree over prepositions, which are known to be a common source of disagreement and pose special challenges in the context of learner language \citep{tetreault-chodorow:2008:HJCL,tetreault:chodorow:08}. For example, annotators could not agree on the grammaticality of the prepositions in \textit{The girl is asking for help \textbf{to} the man} and \textit{The girl is hugging \textbf{with} her cat}. 
@@ -247,7 +247,7 @@ Consider a response like \textit{A woman is receiving a package}.  By these crit
 
 Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog} (Figure~\ref{fig:test-sample-items}). A2 argued that these are too vague to illustrate as an action, but A1 disagreed. This disagreement may also hinge on differing judgments regarding the use of \textit{love} as a dynamic verb, and such idiolectal differences are an unavoidable source of noise in annotating this feature. As mentioned above (see \feat{verifiability} below), expanding the guidelines might help cover some such situations, but likely at the cost of increased annotator fatigue.
 
-\paragraph{Verifiability} On the flipside of the question of whether the core semantic content is expressed is the question of whether any extraneous content is added, or any content used in a way which cannot be verified from the picture.  The average \textit{yes} rate for \feat{verifiability} is 83.1\%, making it the third most skewed feature.
+\paragraph{\feat{Verifiability}} On the flipside of the question of whether the core semantic content is expressed is the question of whether any extraneous content is added, or any content used in a way which cannot be verified from the picture.  The average \textit{yes} rate for \feat{verifiability} is 83.1\%, making it the third most skewed feature.
 
 The raw agreement score is 96.8\%, and the kappa score is 0.884. By both measures, this is the second highest agreement score, after \feat{answerhood}. Of 42 disagreements for \feat{verifiability}, annotators agree that at least eight are avoidable. Of these, five involve the incorrect use of plurals. For example, A1 accepted \textit{A man is pointing the way for the women}, when the image shows only one woman, but the guidelines reject such responses. Two other errors stem from inaccuracy, with respondents referring to a dog in the illustration as a cat. Each annotator incorrectly accepted one such response. One disagreement involved the misspelling of a crucial object: \textit{The woman is holding the pat}. It is unclear whether \textit{pet} or \textit{cat} was intended. This should render the response unverifiable, but A1 accepted it.
 
@@ -276,15 +276,15 @@ with twice as many responses to provide for each item for NSs, fatigue and bored
  Set & NS & NNS & NS & NNS & NS & NNS & NS & NNS \\
 \hline
 \hline
-Core  & 0.686 & 0.805 & 0.569 & 0.686 & 0.922 & 0.927 & 0.819 & 0.767 \\
+\feat{Core}  & 0.686 & 0.805 & 0.569 & 0.686 & 0.922 & 0.927 & 0.819 & 0.767 \\
 \hline
-Answer  & 0.800 & 0.899 & 0.680 & 0.819 & 0.977 & 0.993 & 0.928 & 0.961 \\
+\feat{Answer}  & 0.800 & 0.899 & 0.680 & 0.819 & 0.977 & 0.993 & 0.928 & 0.961 \\
 \hline
-Gramm  & 0.902 & 0.793 & 0.823 & 0.671 & 0.962 & 0.955 & 0.786 & 0.863 \\
+\feat{Gramm}  & 0.902 & 0.793 & 0.823 & 0.671 & 0.962 & 0.955 & 0.786 & 0.863 \\
 \hline
-Interp  & 0.764 & 0.881 & 0.638 & 0.789 & 0.910 & 0.936 &  0.752 & 0.697 \\
+\feat{Interp}  & 0.764 & 0.881 & 0.638 & 0.789 & 0.910 & 0.936 &  0.752 & 0.697 \\
 \hline
-Verif  & 0.807 & 0.882 & 0.687 & 0.791 & 0.970 & 0.962 & 0.904 & 0.819 \\
+\feat{Verif}  & 0.807 & 0.882 & 0.687 & 0.791 & 0.970 & 0.962 & 0.904 & 0.819 \\
 \hline
 \end{tabular}
 \caption{\label{tab:NSvNNSagreement} Comparing feature annotation agreement scores for NSs and NNSs: average \textit{yes} annotations (\textit{Average Yes}), total expected chance agreement (for \textit{yes}es and \textit{no}s) (\textit{Chance Agree}), actual observed agreement (\textit{Observed Agree}) and Cohen's kappa (\textit{Kappa}).}
@@ -376,7 +376,7 @@ To calculate the weights, the total number of times a feature occurred with the 
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-	& Core	& Answer & Grammar & Interpret & Verif & Total \\
+	& \feat{Core} & \feat{Answer} & \feat{Gramm} & \feat{Interp} & \feat{Verif} & Total \\
 \hline
 \hline
 Tot. Pref. & 944 & 807 & 910 & 1021 & 1026 & 4708 \\
@@ -406,4 +406,4 @@ A number of lessons have been learned in this process, and as I intend this work
 
 %\smallskip
 %The current work is appropriate for a broad examination of variation; if one has more specific research questions in mind, however, a more tailored approach to this kind of data collection and annotation would likely mean more efficiency in terms of effort and expense. 
-Additionally, more clearly defining acceptable \feat{core events} could lessen the ambiguity for annotators. While I intend the NS responses collected here to be useful for comparing with NNS responses and addressing related research questions, for specific applications like language testing, the use of expert annotators and constructed reference materials or gold standards may be more desirable or cost effective (see, for example, \citet{somasundaran:chodorow:14}).
+Additionally, more clearly defining acceptable core events could lessen the ambiguity for annotators. While I intend the NS responses collected here to be useful for comparing with NNS responses and addressing related research questions, for specific applications like language testing, the use of expert annotators and constructed reference materials or gold standards may be more desirable or cost effective (see, for example, \citet{somasundaran:chodorow:14}).
