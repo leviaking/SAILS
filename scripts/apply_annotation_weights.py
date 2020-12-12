@@ -17,7 +17,7 @@ def get_infile_names(somedir):
 	for (dirpath, dirnames, filenames) in walk(somedir):
 		docnames.extend(filenames)
 		break
-	docnames = [dn for dn in docnames if "test_pool" in dn]
+	docnames = [dn for dn in docnames if "training_pool" in dn]
 	docnames.sort()
 	return docnames
 
@@ -31,7 +31,9 @@ def get_source_rows(tdf): ## tdf ~= test doc file; returns csv lines as lists
 	tdoc=open(tdf, 'rU')
 	tdocreader=csv.reader(tdoc, dialect=csv.excel)
 	skipheader=next(tdocreader, None)
+	skipheader = skipheader[:11]
 	for row in tdocreader:
+		row = row[:11]
 		everything.append(row)
 	tdoc.close()
 	return skipheader, everything
@@ -63,9 +65,11 @@ def apply_annotation_weights(somerows):
 
 
 def main():
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/pool/')
+	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/training_data/pool/')
+	# sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/pool/')
 	input_files = get_infile_names(sourcedir)
 	for inp in input_files:
+		print(inp)
 		header, new_source_rows = get_source_rows(sourcedir+inp)
 		header.append("AnnoScore")
 		output_rows = apply_annotation_weights(new_source_rows)

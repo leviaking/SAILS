@@ -1,11 +1,11 @@
 \chapter{Annotation \& Weighting}
 \label{chap:annotation}
 
-I begin this chapter with a discussion of the development and implementation of an annotation scheme that captures aspects of native-likeness and accuracy that are appropriate for content analysis. In the second section of this chapter, I examine inter-annotator agreement for the individual annotation features on a sample of the responses. In the final section of this chapter, I discuss how weights were assigned to these features.
+Using the dataset introduced in Chapter~\ref{chap:data}, this chapter focuses on adding annotation to allow for content analysis. I begin with a discussion of the development and implementation of an annotation scheme that captures aspects of native-likeness and accuracy in the picture description task (PDT) responses. In the second section of this chapter, I examine inter-annotator agreement for the individual annotation features on a sample of the responses. In the final section of this chapter, I discuss how weights are assigned to these binary features in order to determine a holistic score for each response.
 
 \section{Annotation scheme}
 \label{sec:scheme}
-The goal of the annotation is to provide information that would be useful for the automatic content assessment of NNS responses via comparison with NS responses. The idea here is that annotations of relevant features can be used to score and then rank responses. Because my automatic assessment system relies only on surface level features (not annotations), the system's performance can be tuned and evaluated by comparing its ranked output to the annotation based rankings.
+The goal of the annotation is to provide information that would be useful for the automatic content assessment of NNS responses via comparison with NS responses. The idea here is that annotations of relevant features can be used to score and then rank responses. Because my automatic assessment system relies only on surface-level features (not annotations), the system's performance can be tuned and evaluated by comparing its ranked output to the annotation-based rankings.
 %A five-dimension annotation scheme was developed to capture different facets of assessment.
 %
 %; insights gained from the annotation, and in particular an interannotator agreement study, are covered in section~\ref{sec:agreement}.
@@ -15,9 +15,6 @@ The annotation scheme was developed through an iterative process of annotation, 
 An ICALL system following my approach would crowdsource NS responses and use those to evaluate NNS responses, but of course such responses would not be annotated. Thus, by annotating the NS data collected in the current work, I can assess the quality of crowdsourced NS responses for the task of evaluating NNS responses. 
 
 For NNS responses, such annotation could be used in a testing scenario to evaluate responses; in an ICALL scenario, it could be used to gauge a participant's understanding and influence the next steps in the activity. In my current work, the annotations function as benchmarks which can be compared to scores provided by my automatic system, allowing for evaluation of the system itself (See Section~\ref{sec:est-feat-weights}). Furthermore, the annotation lends insights into which aspects of a response are the most difficult to account for in my approach to content assessment.
-
-The scheme was initially envisioned as a single three-point scale, ranging from \textit{accurate and native-like} to \textit{accurate but not native-like} to \textit{not accurate}. This proved problematic, however, as \textit{accuracy} and \textit{native-likeness} could not be adequately defined and applied to the data as a single score.
-For example, in Table~\ref{fig:sample-responses}, it is not clear how native-like \textit{She is happy with the dog} is.  Grammatically, it is native-like, but it does not seem like an appropriate answer to the question, \textit{What is the woman doing?} Moreover, \textit{The dog is so happy!} may be native-like in terms of language use, but does not seem appropriate in the context of the question. Thus, for the purpose of analyzing content in PDT responses, native-likeness seems to encompass considerations beyond language use and grammar. 
 
 \begin{figure}[htb!]
 %\begin{table}[t!] This line is giving me trouble when I go to typeset
@@ -44,29 +41,23 @@ For example, in Table~\ref{fig:sample-responses}, it is not clear how native-lik
 \end{center}
 \end{figure}
 
+The scheme was initially envisioned as a single three-point scale, ranging from \textit{accurate and native-like} to \textit{accurate but not native-like} to \textit{not accurate}. This proved problematic, however, as \textit{accuracy} and \textit{native-likeness} could not be adequately defined and applied to the data as a single score.
+For example, in Figure~\ref{fig:sample-responses}, it is not clear how native-like \textit{She is happy with the dog} is.  Grammatically, it is native-like, but it does not seem like an appropriate answer to the question, \textit{What is the woman doing?} Moreover, \textit{The dog is so happy!} may be native-like in terms of language use, but does not seem appropriate in the context of the question. Thus, for the purpose of analyzing content in PDT responses, native-likeness seems to encompass considerations beyond language use and grammar. 
 
-Likewise, accuracy could not be satisfactorily defined as a simple \textit{yes} or \textit{no} construct. To illustrate, consider the ramifications of the response \textit{hugging her dog Fluffy that she missed while on vacation} (Table~\ref{fig:sample-responses}) as either a NS or NNS response. The response does capture the main action of the item, but embellishes with unknowable details like the dog's name and the subject's motivation. This kind of response is undesirable in its own right, but could also lead to real problems during the automatic scoring. If included in a set of NS responses which serve as the basis for scoring new NNS responses, this kind of embellishment would dilute the most salient and desirable information in the NS set. Furthermore, if such a NNS response is annotated as accurate, this additional information is unlikely to be readily mapped to information found in the NS set, which would lead to lower scores for the response. Accuracy, it seems, is an inadequate construct for the approach to content assessment envisioned for this work. Clearly, \textit{verifiability} is an important consideration as well.
+Likewise, accuracy could not be satisfactorily defined as a simple \textit{yes} or \textit{no} construct. To illustrate, consider the ramifications of the response \textit{hugging her dog Fluffy that she missed while on vacation} (Figure~\ref{fig:sample-responses}) as either a NS or NNS response. The response does capture the main action of the item, but embellishes with unknowable details like the dog's name and the subject's motivation. This kind of response is undesirable in its own right, but could also lead to real problems during the automatic scoring. If included in a set of NS responses which serve as the basis for scoring new NNS responses, this kind of embellishment would dilute the most salient and desirable information in the NS set. Furthermore, if such a NNS response is annotated as accurate, this additional information is unlikely to be readily mapped to information found in the NS set, which would lead to lower scores for the response. Accuracy, it seems, is an inadequate construct for the approach to content assessment envisioned for this work. Clearly, \textit{verifiability} is an important consideration, as well.
 
-%%% LK 20201202 Resume here...
 
-In order to handle the relevant kinds of variation observed in the responses, five binary features were eventually settled on, with each feature having some relation to the original concepts of accuracy and native-likeness. As with most annotation schemes in linguistics, the final SAILS scheme is a compromise. This scheme represents the minimal set of features that I believe necessary to accomplish two major goals of this work: investigating the use of NS responses as an evaluation model for NNS, and examining the factors that lead a NNS response to be rated highly or lowly. Besides the features explained below, others were explored but rejected. For example, a \textit{good faith} feature was considered to identify responses that were not given in good faith, such as gibberish, profanity and irrelevant responses. Such a discrimination was applicable to less than three percent of responses in the development set, however, so this feature was deemed too costly for the value it would provide.
+In order to handle the relevant kinds of variation observed in the responses, five binary features were eventually settled on, with each feature having some relation to the original concepts of accuracy and native-likeness. As with most annotation schemes in linguistics, the final SAILS scheme is a compromise. This scheme represents the minimal set of features that I believe necessary to accomplish two major goals of this work: investigating the use of NS responses as an evaluation model for NNS, and examining the factors that lead a NNS response to be rated highly or lowly. Besides the features explained below, others were explored but rejected. For example, a \textit{good faith} feature was considered to identify responses that were not given in good faith, such as gibberish, profanity and irrelevant responses. Such a discrimination was applicable to less than three percent of responses in the development set, however, so this feature was deemed too costly for the value it would provide. Moreover, this feature is largely subsumed by the others, as bad faith responses tend to score poorly across the board.
 
-A set of annotation guidelines were produced with definitions, rules and examples for each feature. For most features, the rules for targeted and untargeted items (See Section~\ref{sec:pdt}) vary slightly; the untargeted rules are generally less strict to accommodate the less restrictive prompt question. The complete annotation guide is included in Appendix~\ref{appendix:annotation_guide}. The features and brief descriptions are listed here and discussed further in the discussion of inter-annotator agreement in Section~\ref{sec:agreement}.
+A set of annotation guidelines was produced with definitions, rules and examples for each feature. For most features, the rules for targeted and untargeted items (see Section~\ref{sec:pdt}) vary slightly; the untargeted rules are generally less strict to accommodate the less restrictive prompt question. The complete annotation guide is included in Appendix~\ref{appendix:annotation_guide}. The features and brief descriptions are listed here and discussed further in the discussion of inter-annotator agreement in Section~\ref{sec:agreement}.
 
 \begin{enumerate}
-\item \textbf{\feat{Core Event}}: Does the response capture the core event depicted in the image? Core events are not pre-defined for annotators but should be clear given the stripped down nature of the images. Crucially, the response should link an appropriate subject to the event.  In Table~\ref{fig:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
-\item \textbf{\feat{Answerhood}}: Does the response make a clear attempt to answer the prompt question? This generally requires a progressive verb, because the PDT questions are in the present progressive. For targeted items, the subject of the question or an appropriate pronoun must be used as the subject of the response.  For example, \textit{The dog is so happy!} (Table~\ref{fig:sample-responses}) is answering a question other than \textit{What is the woman doing?}. 
+\item \textbf{\feat{Core Event}}: Does the response capture the core event depicted in the image? Core events are not pre-defined for annotators but should be clear given the stripped down nature of the images. Crucially, the response should link an appropriate subject to the event.  In Figure~\ref{fig:sample-responses}, \textit{[The woman is] holding a puppy and looks happy} clearly captures the core event, while \textit{She is wear a blue dress} is irrelevant to the event happening.
+\item \textbf{\feat{Answerhood}}: Does the response make a clear attempt to answer the prompt question? This generally requires a progressive verb, because the PDT questions are in the present progressive. For targeted items, the subject of the question or an appropriate pronoun must be used as the subject of the response.  For example, \textit{The dog is so happy!} (Figure~\ref{fig:sample-responses}) is answering a question other than \textit{What is the woman doing?}. 
 \item \textbf{\feat{Grammaticality}}: Is the response free from errors of spelling and grammar?  
 %While the focus of GEC work, 
-This is a relatively straightforward feature to annotate. For example, from Table~\ref{fig:sample-responses}, \textit{She is wear a blue dress} contains an ungrammatical verb form.
+This is a relatively straightforward feature to annotate. For example, from Figure~\ref{fig:sample-responses}, \textit{She is wear a blue dress} contains an ungrammatical verb form.
 %\lk{Is it straightforward?} 
-\item \textbf{\feat{Interpretability}}: Does the response evoke a clear mental image (even if different from the actual item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{She loves her pet} (Table~\ref{fig:sample-responses}) is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a goldfish, etc.
-\item \textbf{\feat{Verifiability}}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial or professional relationship between persons depicted in the image.  For example, in Table~\ref{fig:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (\feat{core event}=0, \feat{verifiability}=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be verified from the picture (\feat{core event}=1, \feat{verifiability}=0).
-\end{enumerate}
-
-\paragraph{Annotation process}
-The annotation was performed one feature at a time, so that annotators did not have to remember the criteria for multiple features while working through the responses. To facilitate this workflow, I created a simple interface that displays the PDT image and question, along with the current feature name and prompt for the annotator, shown in Figure~\ref{fig:annotation-interface}. The annotations are written out to a spreadsheet.
-
 
 \begin{figure}[htb!]
 %\begin{table}[t!] This line is giving me trouble when I go to typeset
@@ -77,6 +68,13 @@ The annotation was performed one feature at a time, so that annotators did not h
 \caption{\label{fig:annotation-interface} Interface used for feature annotations. Note that ``Not sure'' is not a final annotation value; it merely puts the response aside for a later decision.}
 \end{center}
 \end{figure}
+
+\item \textbf{\feat{Interpretability}}: Does the response evoke a clear mental image (even if different from the actual item image)? Any required verb arguments must be present and unambiguous.  For example, \textit{She loves her pet} (Figure~\ref{fig:sample-responses}) is too vague to generate a clear mental image. No action is specified (unless we force an unlikely reading of \textit{loves} as a dynamic, simple present verb), and we cannot know if the \textit{pet} is a dog, a goldfish, etc.
+\item \textbf{\feat{Verifiability}}: Does the response contain only information that is true and verifiable based on the image? Inferences should not be speculations and are allowed only when necessary and highly probable, as when describing a familial or professional relationship between persons depicted in the image.  For example, in Figure~\ref{fig:sample-responses}, \textit{She is wear a blue dress} conveys information that is irrelevant to the core event but is nonetheless recoverable from the image (\feat{core event}=0, \feat{verifiability}=1), while \textit{hugging her dog Fluffy that she missed while on vacation} fulfills the core event but also has information that cannot be verified from the picture (\feat{core event}=1, \feat{verifiability}=0).
+\end{enumerate}
+
+\paragraph{Annotation process}
+The annotation was performed one feature at a time, so that annotators did not have to remember the criteria for multiple features while working through the responses. To facilitate this workflow, I created a simple interface that displays the PDT image and question, along with the current feature name and prompt for the annotator, shown in Figure~\ref{fig:annotation-interface}. The annotations are written out to a spreadsheet.
 
 
 \paragraph{Example annotations}
@@ -204,11 +202,36 @@ Grouped by feature, the annotations all show raw agreement scores above 91\% and
 
 \feat{Core event} has the second lowest inter-annotator agreement kappa score, at 0.808. This is somewhat lower than expected, as the pre-adjudication development set score was 0.889. This appears to be largely attributable to the difficulty of the ditransitive item, challenging for both participants and annotators (section~\ref{sec:transitivity}). 
 
-The main issue in this case has to do with the amount of specificity required to capture the core event.  The development set item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Figure~\ref{fig:test-sample-items}), and this resulted in a greater degree of variation. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
+The main issue in this case has to do with the amount of specificity required to capture the core event.  The development set ditransitive item depicts a man delivering a package to a woman, and most responses describe this as such a transaction, using \textit{give}, \textit{deliver} or \textit{receive}. The test set item shows a man giving directions to a woman (Figure~\ref{fig:test-sample-items}), and this resulted in a greater degree of variation. This is confirmed by the lower type-to-token ratio  (TTR) of main verbs among development set responses versus test set responses (0.189 versus 0.247), as presented in Table~\ref{tab:pref-dev-vs-test}. Many  (particularly NNS) responses portray this not as a canonical \textit{giving directions} event but as \textit{pointing}, 
 %\textit{guiding}, 
 \textit{helping a lost person} or \textit{reading a map}, with A2 more likely to accept these less specific descriptions.
 
-Similarly, but to a lesser extent, the transitive item, which shows a woman hugging a dog (Figure~\ref{fig:test-sample-items}), resulted in disagreements where A2 accepts the word \textit{pet} as the object, but A1 rejects such responses as too vague. Despite the acceptable scores for \feat{core event} agreement, the fact that many disagreements hinge on particular word choice or annotators having minor differences in interpretation of the event suggest that greater agreement could be achieved by providing annotators with suggestions about the acceptable content for each response. In other words: by more clearly determining the desired level of specificity of a response---for the verb or its arguments---agreement could be higher. The desired specificity may vary in accordance with the intended use of the annotations; in the current annotations, the standard discussed between annotators and in the guidelines included pragmatic considerations like naturalness, native-likeness and effort.
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||r|r||r|r|}
+\hline
+ & \multicolumn{2}{|c||}{Development Set} & \multicolumn{2}{|c|}{Test Set} \\
+\hline
+Version	& Types/Tokens & TTR & Types/Tokens & TTR \\
+\hline
+\hline
+NNS Target & 12/71 & 0.169 & 16/70 & 0.229 \\
+\hline
+NS Target & 32/157 & 0.204 & 37/156 & 0.237 \\
+\hline
+NNS Untarg & 14/70 & 0.200 & 18/71 & 0.254 \\
+\hline
+NS Untarg & 33/180 & 0.183 & 36/134 & 0.269 \\
+\hline
+\hline
+Average & 22.8/119.5 & 0.189 & 26.8/107.8 & 0.247 \\
+\hline
+\end{tabular}
+\caption{\label{tab:pref-dev-vs-test} Comparing type-to-token ratios (\textit{TTR}) for \textbf{main verbs} among the development and test set \textbf{ditransitive items}; greater variation correlates with lower \feat{core event} inter-annotator agreement, which helps explain why in Table~\ref{tab:agreement} \feat{core event} agreement is lower than agreement for other features.}
+\end{center}
+\end{table}
+
+Similarly, but to a lesser extent, the transitive item, which shows a woman hugging a dog (Figure~\ref{fig:test-sample-items}), resulted in disagreements where A2 accepts the word \textit{pet} as the object, but A1 rejects such responses as too vague. Despite the acceptable scores for \feat{core event} agreement, the fact that many disagreements hinge on particular word choice or annotators having minor differences in interpretation of the event suggest that greater agreement could be achieved by providing annotators with suggestions about the acceptable content for each response. In other words: by more clearly determining the desired level of specificity of a response---for the verb or its arguments---agreement could be higher. The desired specificity may vary in accordance with the intended use of the annotations; in the current annotations, the standard discussed between annotators and in the guidelines (see Appendix~\ref{appendix:annotation_guide}) included pragmatic considerations like naturalness, native-likeness and effort.
 
 \paragraph{\feat{Answerhood}} Capturing the semantic content of the picture isn't the only criterion for determining the quality of a response; the \feat{answerhood} feature was added largely as a way to identify responses that simply do not follow the instructions. Such responses tend to fall into one of the following categories:
 
@@ -243,7 +266,7 @@ All necessary verb arguments would be identifiable from the sentence and thus no
 %
 Vague language should be avoided, but human gender does not need to be specified, especially when a non-gendered word like \textit{doctor} or \textit{teacher} is natural. 
 
-Consider a response like \textit{A woman is receiving a package}.  By these criteria, the response is annotated as 0 because the person or entity delivering the package is not specified, and an illustrator would need to either guess or compose the image with the deliverer conspicuously out of the frame. \textit{A man is delivering a package}, on the other hand, would be accepted. An illustrator could simply show a delivery person carrying a package or placing it in a mailbox or on a doorstep, as an indirect object is not necessary for the verb \textit{deliver}.
+Consider a response like \textit{A woman is receiving a package}.  By these criteria, the response is annotated as 0 because the person or entity delivering the package is not specified, and an illustrator would need to either guess or compose the image with the deliverer conspicuously out of the frame. \textit{A man is delivering a package}, on the other hand, would be accepted. An illustrator could simply show a delivery person carrying a package or placing it in a mailbox or on a doorstep, as an indirect object is not necessary to convey the meaning of the verb \textit{deliver}.
 
 Among the 105 annotator disagreements, fatigue accounts for roughly 30; this is difficult to determine precisely because annotators expressed difficulty in identifying a single root cause for many disagreements. Those that are clearly attributable to annotator error tend to involve responses with some internal inconsistency, as with subject-verb disagreements, where the number of the subject is uninterpretable. Among true disagreements, the level of specificity is often the point of contention, as with \feat{core event}. For example, A1 accepted several transitive item responses with the verb \textit{love}, as in \textit{The woman loves her dog} (Figure~\ref{fig:test-sample-items}). A2 argued that these are too vague to illustrate as an action, but A1 disagreed. This disagreement may also hinge on differing judgments regarding the use of \textit{love} as a dynamic verb, and such idiolectal differences are an unavoidable source of noise in annotating this feature. As mentioned above (see \feat{verifiability} below), expanding the guidelines might help cover some such situations, but likely at the cost of increased annotator fatigue.
 
@@ -291,16 +314,16 @@ with twice as many responses to provide for each item for NSs, fatigue and bored
 \end{center}
 \end{table}
 
-Turning to the question of annotation quality, raw agreement scores are high among both groups, ranging from 91\% to 99.3\%. Notably, for \feat{core event},  \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS ones; i.e., annotators agree more on NS responses for these features. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form.
+Turning to the question of annotation quality, raw agreement scores are high among both groups, ranging from 91\% to 99.3\%. Notably, for \feat{core event},  \feat{verifiability} and \feat{interpretability}, kappa scores are higher for NS responses than for NNS responses. It may be no coincidence that these three features are the most closely tied to meaning, while \feat{answerhood} gets at pragmatics and \feat{grammaticality} focuses on form.
 
 The lower kappa score for NS \feat{answerhood} is also attributable to task effects, as a second response (as required of NSs) is more likely to be off topic or in bad faith. For \feat{grammaticality}, kappas for annotator agreement are higher for NNS responses. A relatively low rate of expected (chance) agreement contributes to this fact. Additionally, annotators note that many grammar problems with NNS responses are obvious (e.g., \textit{The \textbf{man who in yellow} is showing the way to a girl}, see Figure~\ref{fig:test-sample-items}), but the few grammar problems in NS data are mostly typos and more easily overlooked (e.g., \textit{The man is giving \textbf{ditections}}).
 
 \section{Establishing Feature Weights}
 \label{sec:est-feat-weights}
 
-The five annotation features were chosen for their relevance to the construct of ``response goodness'' for the picture description task (PDT). However, we cannot assume that these binary features bear equal weight in determining the quality of a response. Certainly \feat{core event} is more important than \feat{grammaticality}, for example. Thus the annotations alone cannot be used to assign scores to responses, a crucial necessity in order to rank responses and evaluate my approach to content analysis.
+The five annotation features were chosen for their relevance to the construct of ``response goodness'' for the picture description task (PDT). However, we cannot assume that these binary features bear equal weight in determining the quality of a response. Certainly \feat{core event} is more important than \feat{grammaticality}, for example. Thus, the annotations alone cannot be used to assign scores to responses, a crucial necessity in order to rank responses and evaluate my approach to content analysis.
 
-Clearly, weights must be assigned to each feature. One way to derive weights would be to manually rank responses from best to worst, then use the distribution of annotations across this ranking to determine some coefficient that represents the importance (weight) of each feature in the rankings. For each task item, the corpus contains roughly 150 NS responses and 70 NNS responses, so producing a manual ranking of the full set of responses is highly impractical. Manually ranking even a subset of 10 or 20 responses is frustrating and unreliable. Ranking a single pair of responses is a much more practical task, so I decided to have annotators perform a holistic preference test with pairs of responses. With enough of these decisions, it becomes possible to derive annotation weights.
+Clearly, weights must be assigned to each feature. These could simply be intuitively chosen, but a data-driven approach would be both more justifiable and more reliable. One might consider starting by manually ranking the responses. With responses ranked from best to worst, the distribution of annotations across this ranking could be used to determine some coefficient that represents the importance (weight) of each feature in the rankings. However, for each task item, the corpus contains roughly 150 NS responses and 70 NNS responses, so producing a manual ranking of the full set of responses is highly impractical. Manually ranking even a subset of 10 or 20 responses is frustrating and unreliable. Ranking a single pair of responses is a much more practical task, so I decided to have annotators perform a holistic preference test with pairs of responses. With enough of these decisions, it becomes possible to derive annotation weights.
 
 The full corpus consists of 13,533 responses across 60 items (30 images presented with two prompts each; see Section~\ref{sec:response-totals}). For the preference test to determine feature weights, a sample of 1200 response pairs was used -- 20 targeted and 20 untargeted response pairs from each of the 30 PDT items. Among the response annotations  ([\feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, \feat{verifiability}]), some vectors are more common than others; \textit{perfect} annotations ([1, 1, 1, 1, 1]) and those with grammar problems only ([1, 1, 0, 1, 1]), for example, are frequent, while responses annotated positively only for \feat{interpretability} and \feat{verifiability} ([0, 0, 0, 1, 1]) are far less frequent. Thus, to maximize the informativeness of the preference tests, for each item, no annotation vector was represented multiple times in the sample until every unique vector in the item responses was included once. Moreover, no pair contained responses with identical vectors, as nothing is learned nothing by comparing two \textit{perfect} responses, for example.
 
@@ -309,7 +332,7 @@ Annotator 1 (A1) performed the preference test for all 1,200 of the sampled resp
 Annotators were given the following instructions for the preference test:
 
 \begin{quote}
-You will be presented with picture description task items and pairs of sample responses. Your task is to decide which of the two responses in each pair is the best response for the accompanying image and question. For our purposes, a good response is relevant and reasonable given the prompt. While you should consider form, please prioritize communicativeness and content. Naturally, you may consider what you know about the previously annotated features, but do not overthink them. These features are not of equal importance. A quick decision based on your own experience and intuition about communication is the goal here. If you feel that the responses are equally appropriate to the task, or if you cannot decide which is better, you may choose the ``same/unsure'' option, but please do so sparingly.
+You will be presented with picture description task items and pairs of sample responses. Your task is to decide which of the two responses in each pair is a better response for the accompanying image and question. For our purposes, a good response is relevant and reasonable given the prompt. While you should consider form, please prioritize communicativeness and content. Naturally, you may consider what you know about the previously annotated features, but do not overthink them. These features are not of equal importance. A quick decision based on your own experience and intuition about communication is the goal here. If you feel that the responses are equally appropriate to the task, or if you cannot decide which is better, you may choose the ``same/unsure'' option, but please do so sparingly.
 \end{quote}
 
 \begin{figure}[htb!]
@@ -353,9 +376,9 @@ B: The boy is excited about his bag of groceries. & & & \\
 \end{table}
 %\lk{add annotation vectors to table}
 
-The two disagreements shown in the table are representative of the majority of the 35/300 disagreements in the sample in that one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality). Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in the third pair involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., response A is a sentence fragment and contains a bare noun). Moreover, \textit{is excited about} in response A would likely not satisfy the \feat{core event} feature, while in response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} because the image contains no car.
+For the two disagreements shown in the table, one could make a reasonable argument for preferring either response (or marking them \textit{same} in quality); this is true for  most of the 35/300 disagreements in the sample. Disagreement over \textit{The boy is holding a box of fruits} and \textit{A boy carries a bag} seems to involve the weighing of issues related to \feat{answerhood} (\textit{\textbf{is} hold\textbf{ing}} versus \textit{carries}), \feat{core event} (i.e., the descriptiveness of \textit{a box of fruits} versus \textit{a bag}) and \feat{verifiability} (with \textit{box} being quite clearly inaccurate). The disagreement in the third pair involves similar \feat{answerhood} issues as well as potential concerns related to \feat{grammaticality} (e.g., response A is a sentence fragment and contains a bare noun). Moreover, \textit{is excited about} in response A would likely not satisfy the \feat{core event} feature, while in response B, \textit{towing} is a questionable verb choice, and \textit{to the car} would arguably violate \feat{verifiability} because the image contains no car.
 
-Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:preference-agreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. With these scores, I am confident in using the full set of Annotator 1's 1,200 A/B decisions to derive the feature weights.
+Agreement was calculated for the 300 response pairs judged by both annotators, presented in Table~\ref{tab:preference-agreement}. The agreement rate of 0.883 with a Cohen's kappa of 0.692 confirms that high agreement on this task is both possible and reliable \citep{landis1977measurement, artstein:massimo:2008}. Moreover, the disagreements appear to be noise spread among all features, rather than an indication of difficulty with a particular feature. With these scores, I am confident in using the full set of Annotator 1's 1,200 A/B decisions to derive the feature weights.
 
 \begin{table}[htb!]
 \begin{center}
@@ -392,10 +415,55 @@ Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \end{center}
 \end{table*}
 
-The weights yielded from the preference test are well aligned with my intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected.
+The weights yielded from the preference test are well aligned with my (admittedly unempirical) intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected.
+
+\section{Holistic Scoring and Ranking}
+\label{sec:holistic-scoring}
+The feature weights established by the preference tests can now be applied to the binary annotations to produce a holistic score for each response, which I call the \textbf{weighted annotation score}.
+%or S$_{WA}$. 
+For each item, I ranked the NNS responses according to this score. I call the resulting ranking a \textbf{weighted annotation ranking}. Because these rankings are based on human annotator decisions, they can serve as a benchmark for comparing the output of an automatic scoring system, as discussed in Chapter~\ref{chap:method}.
+
+The NS responses were also annotated for the binary features, but in the current work there is no real use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare and contrast the holistic performance of NS and NNS participants.
+
+
+\begin{table*}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l||l|l||l|}
+\hline
+Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observ & Kappa \\
+\hline
+\hline
+Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
+\hline
+Transitive & 2155 & 0.780 & 0.774 & 0.777 & 0.653 & 0.949 & 0.853 \\
+\hline
+Ditransitive & 2155 & 0.812 & 0.786 & 0.799 & 0.678 & 0.924 & 0.764 \\ 
+\hline
+\hline
+Targeted & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
+\hline
+Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
+\hline
+\hline
+\feat{Core Event} & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
+\hline
+\feat{Answerhood} & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+\hline
+\feat{Grammaticality} & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
+\hline
+\feat{Interpretability} & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+\hline
+\feat{Verifiability} & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+\hline
+\end{tabular}
+\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observ}) and Cohen's kappa (\textit{Kappa}).}
+\end{center}
+\end{table*}
+
+
 
 \section{Annotation Conclusions}
-%\lk{Not sure what to call this section}
+\label{sec:annotation-conclusions}
 
 %\subsection{Annotator feedback}
 The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. I have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but I believe the annotations and raw responses could find uses in question answering, dialog systems, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. To facilitate expansion, guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}

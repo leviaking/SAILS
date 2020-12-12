@@ -25,7 +25,7 @@
 %get spearman of XGS \& TC based ranking vs ranking via the weighted feature annotations.
 %
 \section{Introduction}
-The method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own earlier attempts. In this chapter, I summarize this work and explain the current method.
+In this chapter, I discuss my approach to rating responses automatically, a process which should approximate the benchmark rankings described in The method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own earlier attempts. In this chapter, I summarize this work and explain the current method.
 
 In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
 
