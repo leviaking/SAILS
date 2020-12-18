@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+
+## 2020-12-12. BE CAREFUL running this script as I have modified it... In particular
+## note the "get_source_rows" function -- I currently have it stripping off
+## any columns beyond the 11th column...
+
 ## This script operates on the test pool files, which are 1 per test item (60 total).
 ## This applies the annotation feature weights to the existing annotation for
 ## each response, yielding a single score for each response.
@@ -17,7 +22,9 @@ def get_infile_names(somedir):
 	for (dirpath, dirnames, filenames) in walk(somedir):
 		docnames.extend(filenames)
 		break
-	docnames = [dn for dn in docnames if "training_pool" in dn]
+	# docnames = [dn for dn in docnames if "test_pool" in dn]
+	# docnames = [dn for dn in docnames if "training_pool" in dn]
+	docnames = [dn for dn in docnames if "N50" in dn]
 	docnames.sort()
 	return docnames
 
@@ -65,7 +72,8 @@ def apply_annotation_weights(somerows):
 
 
 def main():
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/training_data/pool/')
+	# sourcedir=('/Users/leviking/Documents/dissertation/SAILS/training_data/sets/')
+	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/training_data/N50/')
 	# sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/pool/')
 	input_files = get_infile_names(sourcedir)
 	for inp in input_files:

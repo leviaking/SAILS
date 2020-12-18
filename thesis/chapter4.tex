@@ -44,10 +44,10 @@ For NNS responses, such annotation could be used in a testing scenario to evalua
 The scheme was initially envisioned as a single three-point scale, ranging from \textit{accurate and native-like} to \textit{accurate but not native-like} to \textit{not accurate}. This proved problematic, however, as \textit{accuracy} and \textit{native-likeness} could not be adequately defined and applied to the data as a single score.
 For example, in Figure~\ref{fig:sample-responses}, it is not clear how native-like \textit{She is happy with the dog} is.  Grammatically, it is native-like, but it does not seem like an appropriate answer to the question, \textit{What is the woman doing?} Moreover, \textit{The dog is so happy!} may be native-like in terms of language use, but does not seem appropriate in the context of the question. Thus, for the purpose of analyzing content in PDT responses, native-likeness seems to encompass considerations beyond language use and grammar. 
 
-Likewise, accuracy could not be satisfactorily defined as a simple \textit{yes} or \textit{no} construct. To illustrate, consider the ramifications of the response \textit{hugging her dog Fluffy that she missed while on vacation} (Figure~\ref{fig:sample-responses}) as either a NS or NNS response. The response does capture the main action of the item, but embellishes with unknowable details like the dog's name and the subject's motivation. This kind of response is undesirable in its own right, but could also lead to real problems during the automatic scoring. If included in a set of NS responses which serve as the basis for scoring new NNS responses, this kind of embellishment would dilute the most salient and desirable information in the NS set. Furthermore, if such a NNS response is annotated as accurate, this additional information is unlikely to be readily mapped to information found in the NS set, which would lead to lower scores for the response. Accuracy, it seems, is an inadequate construct for the approach to content assessment envisioned for this work. Clearly, \textit{verifiability} is an important consideration, as well.
+Likewise, accuracy could not be satisfactorily defined as a simple \textit{yes} or \textit{no} construct. To illustrate, consider the ramifications of the response \textit{hugging her dog Fluffy that she missed while on vacation} (Figure~\ref{fig:sample-responses}) as either a NS or NNS response. The response does capture the main action of the item, but embellishes with unknowable details like the dog's name and the subject's motivation. This kind of response is undesirable in its own right, but would also lead to problems during the automatic scoring. If included in a set of NS responses which serve as the basis for scoring new NNS responses, this kind of embellishment would dilute the most salient and desirable information in the NS set. Furthermore, if such a NNS response is annotated as accurate, this additional information is unlikely to be readily mapped to information found in the NS set, which would lead to lower scores for the response. Accuracy, then, is an inadequate construct for the approach to content assessment envisioned for this work. Clearly, \textit{verifiability} is an important consideration, as well.
 
 
-In order to handle the relevant kinds of variation observed in the responses, five binary features were eventually settled on, with each feature having some relation to the original concepts of accuracy and native-likeness. As with most annotation schemes in linguistics, the final SAILS scheme is a compromise. This scheme represents the minimal set of features that I believe necessary to accomplish two major goals of this work: investigating the use of NS responses as an evaluation model for NNS, and examining the factors that lead a NNS response to be rated highly or lowly. Besides the features explained below, others were explored but rejected. For example, a \textit{good faith} feature was considered to identify responses that were not given in good faith, such as gibberish, profanity and irrelevant responses. Such a discrimination was applicable to less than three percent of responses in the development set, however, so this feature was deemed too costly for the value it would provide. Moreover, this feature is largely subsumed by the others, as bad faith responses tend to score poorly across the board.
+In order to handle the issues discussed above, five binary features were developed, with each feature having some relation to the original concepts of accuracy and native-likeness. As with most annotation schemes in linguistics, the final SAILS scheme is a compromise. This scheme represents the minimal set of features necessary to accomplish two major goals of this work: investigating the use of NS responses as an evaluation model for NNS, and examining the factors that lead a NNS response to be rated highly or lowly. Besides the features explained below, others were explored but rejected. For example, a \textit{good faith} feature was considered to identify responses that were not given in good faith, such as gibberish, profanity and irrelevant responses. Such a discrimination was applicable to less than three percent of responses in the development set, however, so this feature was deemed too costly for the value it would provide. Moreover, this feature is largely subsumed by the others, as bad faith responses tend to score poorly across the board.
 
 A set of annotation guidelines was produced with definitions, rules and examples for each feature. For most features, the rules for targeted and untargeted items (see Section~\ref{sec:pdt}) vary slightly; the untargeted rules are generally less strict to accommodate the less restrictive prompt question. The complete annotation guide is included in Appendix~\ref{appendix:annotation_guide}. The features and brief descriptions are listed here and discussed further in the discussion of inter-annotator agreement in Section~\ref{sec:agreement}.
 
@@ -325,7 +325,7 @@ The five annotation features were chosen for their relevance to the construct of
 
 Clearly, weights must be assigned to each feature. These could simply be intuitively chosen, but a data-driven approach would be both more justifiable and more reliable. One might consider starting by manually ranking the responses. With responses ranked from best to worst, the distribution of annotations across this ranking could be used to determine some coefficient that represents the importance (weight) of each feature in the rankings. However, for each task item, the corpus contains roughly 150 NS responses and 70 NNS responses, so producing a manual ranking of the full set of responses is highly impractical. Manually ranking even a subset of 10 or 20 responses is frustrating and unreliable. Ranking a single pair of responses is a much more practical task, so I decided to have annotators perform a holistic preference test with pairs of responses. With enough of these decisions, it becomes possible to derive annotation weights.
 
-The full corpus consists of 13,533 responses across 60 items (30 images presented with two prompts each; see Section~\ref{sec:response-totals}). For the preference test to determine feature weights, a sample of 1200 response pairs was used -- 20 targeted and 20 untargeted response pairs from each of the 30 PDT items. Among the response annotations  ([\feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, \feat{verifiability}]), some vectors are more common than others; \textit{perfect} annotations ([1, 1, 1, 1, 1]) and those with grammar problems only ([1, 1, 0, 1, 1]), for example, are frequent, while responses annotated positively only for \feat{interpretability} and \feat{verifiability} ([0, 0, 0, 1, 1]) are far less frequent. Thus, to maximize the informativeness of the preference tests, for each item, no annotation vector was represented multiple times in the sample until every unique vector in the item responses was included once. Moreover, no pair contained responses with identical vectors, as nothing is learned nothing by comparing two \textit{perfect} responses, for example.
+The full corpus consists of 13,533 responses across 60 items (30 images presented with two prompts each; see Section~\ref{sec:response-totals}). For the preference test to determine feature weights, a sample of 1200 response pairs was used -- 20 targeted and 20 untargeted response pairs from each of the 30 PDT items. Among the response annotations  ([\feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, \feat{verifiability}]), some vectors are more common than others; \textit{perfect} annotations ([1, 1, 1, 1, 1]) and those with grammar problems only ([1, 1, 0, 1, 1]), for example, are frequent, while responses annotated positively only for \feat{interpretability} and \feat{verifiability} ([0, 0, 0, 1, 1]) are far less frequent. Thus, to maximize the informativeness of the preference tests, for each item, no annotation vector was represented multiple times in the sample until every unique vector in the item responses was included once. Moreover, no pair contained responses with identical vectors, as nothing is learned by comparing two \textit{perfect} responses, for example.
 
 Annotator 1 (A1) performed the preference test for all 1,200 of the sampled response pairs. Annotator 2 (A2) performed the preference test for a subset of 300 response pairs, for the purpose of measuring inter-annotator agreement. These are the same annotators from the feature annotation task, discussed in Section~\ref{sec:agreement}. 
 
@@ -415,7 +415,7 @@ Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \end{center}
 \end{table*}
 
-The weights yielded from the preference test are well aligned with my (admittedly unempirical) intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected.
+The weights yielded from the preference test are well aligned with my intuitions about the features and their importance in the PDT and seem to support this work's ethos of content and communication over form. The features that relate closely to meaning carry the most weight. \feat{Core event}, which directly addresses the focus of the image, ranks well above the other features in terms of weight. \feat{Verifiability}, which limits the scope of response content, and \feat{interpretability}, which addresses a response's ability to communicate content, have similar weights that indicate a medium degree of importance. Finally, \feat{answerhood}, which deals with discourse and pragmatics, and \feat{grammaticality}, which only addresses surface forms, carry much lesser weights, as expected.
 
 \section{Holistic Scoring and Ranking}
 \label{sec:holistic-scoring}
@@ -423,42 +423,67 @@ The feature weights established by the preference tests can now be applied to th
 %or S$_{WA}$. 
 For each item, I ranked the NNS responses according to this score. I call the resulting ranking a \textbf{weighted annotation ranking}. Because these rankings are based on human annotator decisions, they can serve as a benchmark for comparing the output of an automatic scoring system, as discussed in Chapter~\ref{chap:method}.
 
-The NS responses were also annotated for the binary features, but in the current work there is no real use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare and contrast the holistic performance of NS and NNS participants.
+The NS responses were also annotated for the binary features, but in the current work there is no use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare the holistic performance of NS and NNS participants. As shown in Table~\ref{tab:was1}, in terms of weighted annotation scores, \textit{familiar native speakers} (\textit{FNSs}; see Section~\ref{sec:participants}) outperform NNSs, who outperform \textit{crowdsourced native speakers} (\textit{CNSs}). The FNSs have the highest rate of perfect responses, the lowest rate of zero-scoring responses and the highest mean and median weighted annotation scores. Moreover, the standard deviation shows that FNSs have the least varied weighted annotation scores, which makes sense as scores for this group are heavily skewed toward the upper limit. In each of these measures, the FNSs are followed by the NNSs, then the CNSs. It should be noted that these scores cover the entire set of all responses for all items, which includes the two responses from NSs per item, whereas the NNSs provided only a single response per item.
 
 
 \begin{table*}[htb!]
 \begin{center}
-\begin{tabular}{|l|l|l|l|l||l|l||l|}
+\begin{tabular}{|l||r||r|r||r|}
 \hline
-Set	& Total	& A1Yes & A2Yes & AvgYes & Chance & Observ & Kappa \\
-\hline
-\hline
-Intransitive & 2155 & 0.863 & 0.855 & 0.859 & 0.758 & 0.978 & 0.910 \\
-\hline
-Transitive & 2155 & 0.780 & 0.774 & 0.777 & 0.653 & 0.949 & 0.853 \\
-\hline
-Ditransitive & 2155 & 0.812 & 0.786 & 0.799 & 0.678 & 0.924 & 0.764 \\ 
+ & NNS	& CNS & FNS & C$+$F \\
 \hline
 \hline
-Targeted & 3390 & 0.829 & 0.818 & 0.824 & 0.709 & 0.949 & 0.823 \\
-\hline
-Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
+Total & 4230 & 7723 & 1580 & 9303 \\
 \hline
 \hline
-\feat{Core Event} & 1293 & 0.733 & 0.717 & 0.725 & 0.601 & 0.923 & 0.808 \\
+Perfect & 0.614 & 0.495 & 0.692 & 0.528 \\
 \hline
-\feat{Answerhood} & 1293 & 0.834 & 0.831 & 0.833 & 0.721 & 0.982 & 0.936 \\
+Zero & 0.011 & 0.048 & 0.001 & 0.040 \\
 \hline
-\feat{Grammaticality} & 1293 & 0.861 & 0.872 & 0.866 & 0.768 & 0.960 & 0.827 \\
 \hline
-\feat{Interpretability} & 1293 & 0.818 & 0.787 & 0.802 & 0.682 & 0.919 & 0.744 \\
+Mean & 0.862 & 0.763 & 0.880 & 0.783 \\
 \hline
-\feat{Verifiability} & 1293 & 0.845 & 0.817 & 0.831 & 0.719 & 0.968 & 0.884 \\
+Median & 1.000 & 0.944 & 1.000 & 1.000 \\
+\hline
+Std Dev & 0.248 & 0.323 & 0.226 & 0.312 \\
 \hline
 \end{tabular}
-\caption{\label{tab:agreement} Agreement scores broken down by different properties of the test set: total annotations (\textit{Total}), \textit{yes} annotations for Annotator 1 and 2 (\textit{A1Yes}, \textit{A2Yes}), average \textit{yes} annotations (\textit{AvgYes}), total expected chance agreement for \textit{yes}es and \textit{no}s (\textit{Chance}), actual observed agreement (\textit{Observ}) and Cohen's kappa (\textit{Kappa}).}
+\caption{\label{tab:was1} Comparing scores for non-native speakers (\textit{NNS}), \textbf{crowdsourced} native speakers (\textit{CNS}) and \textbf{familiar} native speakers (\textit{FNS}) across all items. \textit{C$+$F} is the combination of CNS and FNS (i.e., \textit{all} NS). \textit{Total} is the response count. \textit{Perfect} and \textit{Zero} are the rates of responses with weighted annotation scores of 1.0 and 0.0, respectively. The \textit{Mean}, \textit{Median} and \textit{Standard Deviation} values here are weighted annotation scores.}
 \end{center}
 \end{table*}
+
+The relative performance of these three groups has important implications for how this data is used and how data for related purposes might be collected in the future. Because my work is geared toward communicative applications like intelligent computer-assisted language learning (ICALL) rather than grammatical error correction or placement testing, the models I use must be flexible enough to process NNS responses without heavily penalizing them for minor issues in form or pragmatics. Models built only from FNS responses would be overfitted to the near-perfect pragmatics and grammar of the FNS group. Models built from the slightly noisier CNS responses are preferable for my purposes. In effect, they will allow for more of the variations in form and usage that we see among the NNS responses. In other words, an FNS-based model will accurately identify those responses that closely match a limited set of well-formed possibilities, but it will harshly penalize those that deviate even slightly, resulting in scores that tend toward the high and low range. A CNS-based model will be less discriminatory; slight deviations from ideal, ``native-like'' possibilities will be penalized less harshly, and scores will be distributed more evenly across the range from 0.0 to 1.0.
+
+Due to the sparsity of the FNS data, it is discussed in this chapter but not used to train models and evaluate NNS responses. Except where noted, the NS data used throughout this dissertation is the CNS data. With more data from this group, it is possible to break down the CNS metrics seen in Table~\ref{tab:was1} for a more granular look, as shown in Table~\ref{tab:was2}.
+
+\begin{table*}[htb!]
+\begin{center}
+\begin{tabular}{|l||r|r||r|r||r|r|r|}
+\hline
+ & R1 & R2 & Target & Untarg & Intran & Trans & Ditran \\
+\hline
+\hline
+Total & 3872 & 3851 & 3877 & 3846 & 2592 & 2569 & 2562 \\
+\hline
+\hline
+Perfect & 0.623 & 0.366 & 0.535 & 0.454 & 0.519 & 0.502 & 0.463 \\
+\hline
+Zero  & 0.037 & 0.058 & 0.043 & 0.053 & 0.040 & 0.051 & 0.053  \\
+\hline
+\hline
+Mean  & 0.838 & 0.687 & 0.772 & 0.753 & 0.775 & 0.757 & 0.756  \\
+\hline
+Median  & 1.000 & 0.851 & 1.000 & 0.944 & 1.000 & 1.000 & 0.907  \\
+\hline
+Std Dev  & 0.286 & 0.340 & 0.315 & 0.330 & 0.319 & 0.330 & 0.320  \\
+\hline
+\end{tabular}
+\caption{\label{tab:was2} Examining \textbf{crowdsourced} native speaker response scores in different contexts: first and second responses (\textit{R1} and \textit{R2});  targeted and untargeted prompts; intransitives, transitives and ditransitives. (See Table~\ref{tab:was1}.)}
+\end{center}
+\end{table*}
+
+Naturally, the best way to score the variability of NNS responses would be to use models trained on NNS responses. However, these responses would need to be validated in some way by annotators, which would require developing annotation guidelines. The idea is also counter to the motivations behind my work, because it means new items would require manual annotation by experts in order to train a scoring model, which places a greater burden on educators or researchers who might follow my approach. Ideally, a system could train an initial model based on unannotated CNS responses; after scoring NNS responses, it could then add examples of the highest scoring NNS responses to the training data and retrain iteratively---an approach known as self-training. I do not explore the use of NNS responses as training data, but future work to do so can build on the work here.
+
 
 
 
@@ -466,7 +491,7 @@ Untargeted & 3075 & 0.806 & 0.790 & 0.798 & 0.678 & 0.952 & 0.872 \\
 \label{sec:annotation-conclusions}
 
 %\subsection{Annotator feedback}
-The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. I have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but I believe the annotations and raw responses could find uses in question answering, dialog systems, pragmatic modeling, visual references and other challenges in natural language processing. The feature set could also be expanded to better suit other purposes, and the task could easily be extended to include new items. To facilitate expansion, guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}
+The SAILS corpus presented here was developed with specific research in mind, but also in the hopes that it may be used to address a broad range of questions. I have demonstrated here a set of binary features that were successfully implemented with reliable levels of inter-annotator agreement. These features were defined with an eye toward content analysis and ICALL, but the annotations and raw responses would also be useful for question answering, dialog systems, pragmatics modeling, visual references and other challenges in natural language processing. The feature set can also be expanded to better suit other purposes, and the task can easily be extended to include new items. To facilitate expansion, guidelines, task materials and annotation tools are included with the corpus.\footnote{https://github.com/sailscorpus/sails}
 
 %\smallskip
 A number of lessons have been learned in this process, and as I intend this work to be extendable, a few suggestions are in order. The inclusion of any symbols or numerals in items should be avoided as they resulted in response complications; some participants gave clever ``meta'' responses (\textit{She's breathing in music notes}, rather than \textit{She's singing}), and others focused on the symbols rather than the abstract concepts they represent (\textit{The teacher is teaching `2 $+$ 2 $=$ 4'}, rather than \textit{The teacher is teaching math}). The comparison of crowdsourced NS data with the data of familiar NS participants and the NNS student data makes it clear that motivations and task environment can affect the quality of responses.

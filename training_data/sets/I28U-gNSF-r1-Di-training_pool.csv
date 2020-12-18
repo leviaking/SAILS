@@ -1,4 +1,4 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
 I28U-gNSF-p142-r1,A man is giving a woman directions.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -6,7 +6,7 @@ I28U-gNSF-p142-r1,A man is giving a woman directions.,1,1,1,1,1,"1	a	_	DT	DT	_	2
 5	a	_	DT	DT	_	6	det	_	_
 6	woman	_	NN	NN	_	4	iobj	_	_
 7	direction	_	NNS	NNS	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%a$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%a$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p145-r1,A girl asks a man for directions. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	3	nsubj	_	_
 3	ask	_	VBZ	VBZ	_	0	root	_	_
@@ -14,14 +14,14 @@ I28U-gNSF-p145-r1,A girl asks a man for directions. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	
 5	man	_	NN	NN	_	3	dobj	_	_
 6	for	_	IN	IN	_	0	erased	_	_
 7	direction	_	NNS	NNS	_	5	prep_for	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%man', 'dobj$@%man$@%ask', 'erased$@%for$@%WORDERASED', 'prep_for$@%direction$@%man', 'punct$@%.$@%ask']","['x$@%a$@%girl', 'x$@%girl$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%for$@%WORDERASED', 'x$@%direction$@%man', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%for$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%man', 'dobj$@%man$@%ask', 'erased$@%for$@%WORDERASED', 'prep_for$@%direction$@%man', 'punct$@%.$@%ask']","['x$@%a$@%girl', 'x$@%girl$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%for$@%WORDERASED', 'x$@%direction$@%man', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%for$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",0.907
 I28U-gNSF-p146-r1,The woman is listening to directions.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	listen	_	VBG	VBG	_	0	root	_	_
 5	to	_	TO	TO	_	0	erased	_	_
 6	direction	_	NNS	NNS	_	4	prep_to	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%direction$@%listen', 'punct$@%.$@%listen']","['x$@%the$@%woman', 'x$@%woman$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%direction$@%listen', 'x$@%.$@%listen']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%direction$@%listen', 'punct$@%.$@%listen']","['x$@%the$@%woman', 'x$@%woman$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%direction$@%listen', 'x$@%.$@%listen']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",0.776
 I28U-gNSF-p147-r1,The man is giving the woman directions. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -29,12 +29,12 @@ I28U-gNSF-p147-r1,The man is giving the woman directions. ,1,1,1,1,1,"1	the	_	DT
 5	the	_	DT	DT	_	6	det	_	_
 6	woman	_	NN	NN	_	4	iobj	_	_
 7	direction	_	NNS	NNS	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p148-r1,She is getting directions.,1,1,1,0,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	get	_	VBG	VBG	_	0	root	_	_
 4	direction	_	NNS	NNS	_	3	dobj	_	_
-5	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'dobj$@%direction$@%get', 'punct$@%.$@%get']","['x$@%she$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%direction$@%get', 'x$@%.$@%get']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%get', 'aux$@%be$@%get', 'root$@%get$@%VROOT', 'dobj$@%direction$@%get', 'punct$@%.$@%get']","['x$@%she$@%get', 'x$@%be$@%get', 'x$@%get$@%VROOT', 'x$@%direction$@%get', 'x$@%.$@%get']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%get$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",0.776
 I28U-gNSF-p149-r1,A young couple who are on a backpacking adventure are consulting a map following an argument about the route to be taken to reach their next destination. ,1,1,1,1,0,"1	a	_	DT	DT	_	3	det	_	_
 2	young	_	JJ	JJ	_	3	amod	_	_
 3	couple	_	NN	NN	_	11	nsubj	_	_
@@ -62,13 +62,13 @@ I28U-gNSF-p149-r1,A young couple who are on a backpacking adventure are consulti
 25	they	_	PRP$	PRP$	_	27	poss	_	_
 26	next	_	JJ	JJ	_	27	amod	_	_
 27	destination	_	NN	NN	_	24	dobj	_	_
-28	.	_	.	.	_	11	punct	_	_","['det$@%a$@%couple', 'amod$@%young$@%couple', 'nsubj$@%couple$@%consult', 'erased$@%who$@%WORDERASED', 'rcmod$@%be$@%couple', 'erased$@%on$@%WORDERASED', 'det$@%a$@%adventure', 'amod$@%backpacking$@%adventure', 'prep_on$@%adventure$@%be', 'aux$@%be$@%consult', 'root$@%consult$@%VROOT', 'det$@%a$@%map', 'dobj$@%map$@%consult', 'erased$@%follow$@%WORDERASED', 'det$@%a$@%argument', 'prep_following$@%argument$@%map', 'erased$@%about$@%WORDERASED', 'det$@%the$@%route', 'prep_about$@%route$@%argument', 'aux$@%to$@%take', 'auxpass$@%be$@%take', 'infmod$@%take$@%route', 'aux$@%to$@%reach', 'xcomp$@%reach$@%take', 'poss$@%they$@%destination', 'amod$@%next$@%destination', 'dobj$@%destination$@%reach', 'punct$@%.$@%consult']","['x$@%a$@%couple', 'x$@%young$@%couple', 'x$@%couple$@%consult', 'x$@%who$@%WORDERASED', 'x$@%be$@%couple', 'x$@%on$@%WORDERASED', 'x$@%a$@%adventure', 'x$@%backpacking$@%adventure', 'x$@%adventure$@%be', 'x$@%be$@%consult', 'x$@%consult$@%VROOT', 'x$@%a$@%map', 'x$@%map$@%consult', 'x$@%follow$@%WORDERASED', 'x$@%a$@%argument', 'x$@%argument$@%map', 'x$@%about$@%WORDERASED', 'x$@%the$@%route', 'x$@%route$@%argument', 'x$@%to$@%take', 'x$@%be$@%take', 'x$@%take$@%route', 'x$@%to$@%reach', 'x$@%reach$@%take', 'x$@%they$@%destination', 'x$@%next$@%destination', 'x$@%destination$@%reach', 'x$@%.$@%consult']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%couple$@%x', 'x$@%who$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%backpacking$@%x', 'x$@%adventure$@%x', 'x$@%be$@%x', 'x$@%consult$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%argument$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%route$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%to$@%x', 'x$@%reach$@%x', 'x$@%they$@%x', 'x$@%next$@%x', 'x$@%destination$@%x', 'x$@%.$@%x']"
+28	.	_	.	.	_	11	punct	_	_","['det$@%a$@%couple', 'amod$@%young$@%couple', 'nsubj$@%couple$@%consult', 'erased$@%who$@%WORDERASED', 'rcmod$@%be$@%couple', 'erased$@%on$@%WORDERASED', 'det$@%a$@%adventure', 'amod$@%backpacking$@%adventure', 'prep_on$@%adventure$@%be', 'aux$@%be$@%consult', 'root$@%consult$@%VROOT', 'det$@%a$@%map', 'dobj$@%map$@%consult', 'erased$@%follow$@%WORDERASED', 'det$@%a$@%argument', 'prep_following$@%argument$@%map', 'erased$@%about$@%WORDERASED', 'det$@%the$@%route', 'prep_about$@%route$@%argument', 'aux$@%to$@%take', 'auxpass$@%be$@%take', 'infmod$@%take$@%route', 'aux$@%to$@%reach', 'xcomp$@%reach$@%take', 'poss$@%they$@%destination', 'amod$@%next$@%destination', 'dobj$@%destination$@%reach', 'punct$@%.$@%consult']","['x$@%a$@%couple', 'x$@%young$@%couple', 'x$@%couple$@%consult', 'x$@%who$@%WORDERASED', 'x$@%be$@%couple', 'x$@%on$@%WORDERASED', 'x$@%a$@%adventure', 'x$@%backpacking$@%adventure', 'x$@%adventure$@%be', 'x$@%be$@%consult', 'x$@%consult$@%VROOT', 'x$@%a$@%map', 'x$@%map$@%consult', 'x$@%follow$@%WORDERASED', 'x$@%a$@%argument', 'x$@%argument$@%map', 'x$@%about$@%WORDERASED', 'x$@%the$@%route', 'x$@%route$@%argument', 'x$@%to$@%take', 'x$@%be$@%take', 'x$@%take$@%route', 'x$@%to$@%reach', 'x$@%reach$@%take', 'x$@%they$@%destination', 'x$@%next$@%destination', 'x$@%destination$@%reach', 'x$@%.$@%consult']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%couple$@%x', 'x$@%who$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%backpacking$@%x', 'x$@%adventure$@%x', 'x$@%be$@%x', 'x$@%consult$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%argument$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%route$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%to$@%x', 'x$@%reach$@%x', 'x$@%they$@%x', 'x$@%next$@%x', 'x$@%destination$@%x', 'x$@%.$@%x']",0.738
 I28U-gNSF-p150-r1,The girl is asking directions. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	ask	_	VBG	VBG	_	0	root	_	_
 5	direction	_	NNS	NNS	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%direction$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%girl', 'x$@%girl$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%direction$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%direction$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%girl', 'x$@%girl$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%direction$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",0.776
 I28U-gNSF-p293-r1,The man is giving the woman directions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -76,14 +76,14 @@ I28U-gNSF-p293-r1,The man is giving the woman directions.,1,1,1,1,1,"1	the	_	DT	
 5	the	_	DT	DT	_	6	det	_	_
 6	woman	_	NN	NN	_	4	iobj	_	_
 7	direction	_	NNS	NNS	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%woman', 'iobj$@%woman$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p299-r1,The man is giving the directions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	give	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	direction	_	NNS	NNS	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%direction', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%direction', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%direction', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%direction', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p301-r1,The man is giving the girl directions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -91,7 +91,7 @@ I28U-gNSF-p301-r1,The man is giving the girl directions.,1,1,1,1,1,"1	the	_	DT	D
 5	the	_	DT	DT	_	6	det	_	_
 6	girl	_	NN	NN	_	4	iobj	_	_
 7	direction	_	NNS	NNS	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%girl', 'iobj$@%girl$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%girl', 'iobj$@%girl$@%give', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p302-r1,The man is giving directions to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -100,7 +100,7 @@ I28U-gNSF-p302-r1,The man is giving directions to the woman.,1,1,1,1,1,"1	the	_	
 6	to	_	TO	TO	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	woman	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p303-r1,They are trying to read a map.,0,1,1,1,1,"1	they	_	PRP	PRP	_	5	xsubj	_	_
 2	be	_	VBP	VBP	_	3	aux	_	_
 3	try	_	VBG	VBG	_	0	root	_	_
@@ -108,7 +108,7 @@ I28U-gNSF-p303-r1,They are trying to read a map.,0,1,1,1,1,"1	they	_	PRP	PRP	_	5
 5	read	_	VB	VB	_	3	xcomp	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	map	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	3	punct	_	_","['xsubj$@%they$@%read', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%read', 'xcomp$@%read$@%try', 'det$@%a$@%map', 'dobj$@%map$@%read', 'punct$@%.$@%try']","['x$@%they$@%read', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%read', 'x$@%read$@%try', 'x$@%a$@%map', 'x$@%map$@%read', 'x$@%.$@%try']","['x$@%they$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	3	punct	_	_","['xsubj$@%they$@%read', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%read', 'xcomp$@%read$@%try', 'det$@%a$@%map', 'dobj$@%map$@%read', 'punct$@%.$@%try']","['x$@%they$@%read', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%read', 'x$@%read$@%try', 'x$@%a$@%map', 'x$@%map$@%read', 'x$@%.$@%try']","['x$@%they$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%read$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.635
 I28U-gNSF-p306-r1,A couple is looking at a map.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	couple	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -116,13 +116,13 @@ I28U-gNSF-p306-r1,A couple is looking at a map.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_
 5	at	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	map	_	NN	NN	_	4	prep_at	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%couple', 'nsubj$@%couple$@%look', 'aux$@%be$@%look', 'root$@%look$@%VROOT', 'erased$@%at$@%WORDERASED', 'det$@%a$@%map', 'prep_at$@%map$@%look', 'punct$@%.$@%look']","['x$@%a$@%couple', 'x$@%couple$@%look', 'x$@%be$@%look', 'x$@%look$@%VROOT', 'x$@%at$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%look', 'x$@%.$@%look']","['x$@%a$@%x', 'x$@%couple$@%x', 'x$@%be$@%x', 'x$@%look$@%x', 'x$@%at$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%couple', 'nsubj$@%couple$@%look', 'aux$@%be$@%look', 'root$@%look$@%VROOT', 'erased$@%at$@%WORDERASED', 'det$@%a$@%map', 'prep_at$@%map$@%look', 'punct$@%.$@%look']","['x$@%a$@%couple', 'x$@%couple$@%look', 'x$@%be$@%look', 'x$@%look$@%VROOT', 'x$@%at$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%look', 'x$@%.$@%look']","['x$@%a$@%x', 'x$@%couple$@%x', 'x$@%be$@%x', 'x$@%look$@%x', 'x$@%at$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.635
 I28U-gNSF-p495-r1,The man is giving directions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	give	_	VBG	VBG	_	0	root	_	_
 5	direction	_	NNS	NNS	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'punct$@%.$@%give']","['x$@%the$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%.$@%x']",1.0
 I28U-gNSF-p496-r1,The yellow people are trying to find their way back home.,1,1,1,0,0,"1	the	_	DT	DT	_	3	det	_	_
 2	yellow	_	JJ	JJ	_	3	amod	_	_
 3	people	_	NNS	NNS	_	7	xsubj	_	_
@@ -134,7 +134,7 @@ I28U-gNSF-p496-r1,The yellow people are trying to find their way back home.,1,1,
 9	way	_	NN	NN	_	7	dobj	_	_
 10	back	_	RB	RB	_	7	advmod	_	_
 11	home	_	NN	NN	_	10	dep	_	_
-12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%people', 'amod$@%yellow$@%people', 'xsubj$@%people$@%find', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%find', 'xcomp$@%find$@%try', 'poss$@%they$@%way', 'dobj$@%way$@%find', 'advmod$@%back$@%find', 'dep$@%home$@%back', 'punct$@%.$@%try']","['x$@%the$@%people', 'x$@%yellow$@%people', 'x$@%people$@%find', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%find', 'x$@%find$@%try', 'x$@%they$@%way', 'x$@%way$@%find', 'x$@%back$@%find', 'x$@%home$@%back', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%people$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%find$@%x', 'x$@%they$@%x', 'x$@%way$@%x', 'x$@%back$@%x', 'x$@%home$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%people', 'amod$@%yellow$@%people', 'xsubj$@%people$@%find', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%find', 'xcomp$@%find$@%try', 'poss$@%they$@%way', 'dobj$@%way$@%find', 'advmod$@%back$@%find', 'dep$@%home$@%back', 'punct$@%.$@%try']","['x$@%the$@%people', 'x$@%yellow$@%people', 'x$@%people$@%find', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%find', 'x$@%find$@%try', 'x$@%they$@%way', 'x$@%way$@%find', 'x$@%back$@%find', 'x$@%home$@%back', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%people$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%find$@%x', 'x$@%they$@%x', 'x$@%way$@%x', 'x$@%back$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.514
 I28U-gNSF-p497-r1,A man is giving directions to a hiker.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	man	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -143,4 +143,4 @@ I28U-gNSF-p497-r1,A man is giving directions to a hiker.,1,1,1,1,1,"1	a	_	DT	DT	
 6	to	_	TO	TO	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	hiker	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%hiker', 'prep_to$@%hiker$@%give', 'punct$@%.$@%give']","['x$@%a$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%hiker', 'x$@%hiker$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%hiker$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%man', 'nsubj$@%man$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%direction$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%hiker', 'prep_to$@%hiker$@%give', 'punct$@%.$@%give']","['x$@%a$@%man', 'x$@%man$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%direction$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%hiker', 'x$@%hiker$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%direction$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%hiker$@%x', 'x$@%.$@%x']",1.0

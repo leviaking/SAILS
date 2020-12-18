@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 
+## This is for calculating main verb type-to-token ratios for the development set and test set used for the holistic preference task, which was used to establish feature weights. The output of this script went directly into a table in Chapter 4 (Currently Table 4.3).
+
 import sys, csv
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,7 +22,7 @@ nns_test_u = "/Users/leviking/Documents/dissertation/SAILS/test_data/pool/I28U_N
 ns_test_u = "/Users/leviking/Documents/dissertation/SAILS/training_data/pool/I28U_training_pool.csv"
 
 
-def ch_5_numbers():
+def ch_4_numbers():
 	print("NNS dev set T:")
 	mytt = get_tt(nns_dev_t)
 	print(mytt)
@@ -97,7 +99,7 @@ def tokens_to_types(my_tokens):
 
 
 def main():
-	ch_5_numbers()
+	ch_4_numbers()
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
 I22U-gNSC-p155-r1,The weather lady is on the TV,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	lady	_	NN	NN	_	4	nsubj	_	_
@@ -6,14 +6,14 @@ I22U-gNSC-p155-r1,The weather lady is on the TV,1,0,1,1,1,"1	the	_	DT	DT	_	3	det
 5	on	_	IN	IN	_	0	erased	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	tv	_	NN	NN	_	4	prep_on	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%be', 'root$@%be$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%tv', 'prep_on$@%tv$@%be', 'punct$@%.$@%be']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%be', 'x$@%be$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%tv', 'x$@%tv$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%be', 'root$@%be$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%tv', 'prep_on$@%tv$@%be', 'punct$@%.$@%be']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%be', 'x$@%be$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%tv', 'x$@%tv$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']",0.907
 I22U-gNSC-p156-r1,The meteorologist explains the weather forecast.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	3	nsubj	_	_
 3	explain	_	VBZ	VBZ	_	0	root	_	_
 4	the	_	DT	DT	_	6	det	_	_
 5	weather	_	NN	NN	_	6	nn	_	_
 6	forecast	_	NN	NN	_	3	dobj	_	_
-7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%explain', 'root$@%explain$@%VROOT', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%explain', 'punct$@%.$@%explain']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%explain', 'x$@%explain$@%VROOT', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%explain', 'x$@%.$@%explain']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%explain$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%explain', 'root$@%explain$@%VROOT', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%explain', 'punct$@%.$@%explain']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%explain', 'x$@%explain$@%VROOT', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%explain', 'x$@%.$@%explain']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%explain$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",0.907
 I22U-gNSC-p157-r1,The woman is standing in front of a weather map.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -24,7 +24,7 @@ I22U-gNSC-p157-r1,The woman is standing in front of a weather map.,0,1,1,1,1,"1	
 8	a	_	DT	DT	_	10	det	_	_
 9	weather	_	NN	NN	_	10	nn	_	_
 10	map	_	NN	NN	_	4	prep_in_front_of	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%stand', 'aux$@%be$@%stand', 'root$@%stand$@%VROOT', 'erased$@%in$@%WORDERASED', 'erased$@%front$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_in_front_of$@%map$@%stand', 'punct$@%.$@%stand']","['x$@%the$@%woman', 'x$@%woman$@%stand', 'x$@%be$@%stand', 'x$@%stand$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%front$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%stand', 'x$@%.$@%stand']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%stand$@%x', 'x$@%in$@%x', 'x$@%front$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%stand', 'aux$@%be$@%stand', 'root$@%stand$@%VROOT', 'erased$@%in$@%WORDERASED', 'erased$@%front$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_in_front_of$@%map$@%stand', 'punct$@%.$@%stand']","['x$@%the$@%woman', 'x$@%woman$@%stand', 'x$@%be$@%stand', 'x$@%stand$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%front$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%stand', 'x$@%.$@%stand']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%stand$@%x', 'x$@%in$@%x', 'x$@%front$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.635
 I22U-gNSC-p158-r1,The weather lady is showing the forecast. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	lady	_	NN	NN	_	5	nsubj	_	_
@@ -32,7 +32,7 @@ I22U-gNSC-p158-r1,The weather lady is showing the forecast. ,1,1,1,1,1,"1	the	_	
 5	show	_	VBG	VBG	_	0	root	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	forecast	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%forecast', 'dobj$@%forecast$@%show', 'punct$@%.$@%show']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%forecast', 'x$@%forecast$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%forecast', 'dobj$@%forecast$@%show', 'punct$@%.$@%show']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%forecast', 'x$@%forecast$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p161-r1,There is a woman pointing to a weather map.,1,1,1,1,1,"1	there	_	EX	EX	_	2	expl	_	_
 2	be	_	VBZ	VBZ	_	0	root	_	_
 3	a	_	DT	DT	_	4	det	_	_
@@ -42,7 +42,7 @@ I22U-gNSC-p161-r1,There is a woman pointing to a weather map.,1,1,1,1,1,"1	there
 7	a	_	DT	DT	_	9	det	_	_
 8	weather	_	NN	NN	_	9	nn	_	_
 9	map	_	NN	NN	_	5	prep_to	_	_
-10	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'det$@%a$@%woman', 'nsubj$@%woman$@%be', 'partmod$@%point$@%woman', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%be', 'x$@%point$@%woman', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	2	punct	_	_","['expl$@%there$@%be', 'root$@%be$@%VROOT', 'det$@%a$@%woman', 'nsubj$@%woman$@%be', 'partmod$@%point$@%woman', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%be']","['x$@%there$@%be', 'x$@%be$@%VROOT', 'x$@%a$@%woman', 'x$@%woman$@%be', 'x$@%point$@%woman', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%be']","['x$@%there$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p165-r1,The woman is talking about the weather. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -50,7 +50,7 @@ I22U-gNSC-p165-r1,The woman is talking about the weather. ,1,1,1,0,1,"1	the	_	DT
 5	about	_	IN	IN	_	0	erased	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	weather	_	NN	NN	_	4	prep_about	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'erased$@%about$@%WORDERASED', 'det$@%the$@%weather', 'prep_about$@%weather$@%talk', 'punct$@%.$@%talk']","['x$@%the$@%woman', 'x$@%woman$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%talk', 'x$@%.$@%talk']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'erased$@%about$@%WORDERASED', 'det$@%the$@%weather', 'prep_about$@%weather$@%talk', 'punct$@%.$@%talk']","['x$@%the$@%woman', 'x$@%woman$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%talk', 'x$@%.$@%talk']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",0.776
 I22U-gNSC-p166-r1,A woman is explaining a weather map.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -58,7 +58,7 @@ I22U-gNSC-p166-r1,A woman is explaining a weather map.,1,1,1,1,1,"1	a	_	DT	DT	_	
 5	a	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	map	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%explain', 'aux$@%be$@%explain', 'root$@%explain$@%VROOT', 'det$@%a$@%map', 'nn$@%weather$@%map', 'dobj$@%map$@%explain', 'punct$@%.$@%explain']","['x$@%a$@%woman', 'x$@%woman$@%explain', 'x$@%be$@%explain', 'x$@%explain$@%VROOT', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%explain', 'x$@%.$@%explain']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%explain$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%explain', 'aux$@%be$@%explain', 'root$@%explain$@%VROOT', 'det$@%a$@%map', 'nn$@%weather$@%map', 'dobj$@%map$@%explain', 'punct$@%.$@%explain']","['x$@%a$@%woman', 'x$@%woman$@%explain', 'x$@%be$@%explain', 'x$@%explain$@%VROOT', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%explain', 'x$@%.$@%explain']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%explain$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p167-r1,A woman is informing people of the predicted weather patterns.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -69,13 +69,13 @@ I22U-gNSC-p167-r1,A woman is informing people of the predicted weather patterns.
 8	predict	_	JJ	JJ	_	10	amod	_	_
 9	weather	_	NN	NN	_	10	nn	_	_
 10	pattern	_	NNS	NNS	_	5	prep_of	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%inform', 'aux$@%be$@%inform', 'root$@%inform$@%VROOT', 'dobj$@%people$@%inform', 'erased$@%of$@%WORDERASED', 'det$@%the$@%pattern', 'amod$@%predict$@%pattern', 'nn$@%weather$@%pattern', 'prep_of$@%pattern$@%people', 'punct$@%.$@%inform']","['x$@%a$@%woman', 'x$@%woman$@%inform', 'x$@%be$@%inform', 'x$@%inform$@%VROOT', 'x$@%people$@%inform', 'x$@%of$@%WORDERASED', 'x$@%the$@%pattern', 'x$@%predict$@%pattern', 'x$@%weather$@%pattern', 'x$@%pattern$@%people', 'x$@%.$@%inform']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%inform$@%x', 'x$@%people$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%predict$@%x', 'x$@%weather$@%x', 'x$@%pattern$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%inform', 'aux$@%be$@%inform', 'root$@%inform$@%VROOT', 'dobj$@%people$@%inform', 'erased$@%of$@%WORDERASED', 'det$@%the$@%pattern', 'amod$@%predict$@%pattern', 'nn$@%weather$@%pattern', 'prep_of$@%pattern$@%people', 'punct$@%.$@%inform']","['x$@%a$@%woman', 'x$@%woman$@%inform', 'x$@%be$@%inform', 'x$@%inform$@%VROOT', 'x$@%people$@%inform', 'x$@%of$@%WORDERASED', 'x$@%the$@%pattern', 'x$@%predict$@%pattern', 'x$@%weather$@%pattern', 'x$@%pattern$@%people', 'x$@%.$@%inform']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%inform$@%x', 'x$@%people$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%predict$@%x', 'x$@%weather$@%x', 'x$@%pattern$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p178-r1,woman is showing the weather,1,1,0,0,1,"1	woman	_	NN	NN	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	show	_	VBG	VBG	_	0	root	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	weather	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%woman$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'punct$@%.$@%show']","['x$@%woman$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%.$@%show']","['x$@%woman$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%woman$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'punct$@%.$@%show']","['x$@%woman$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%.$@%show']","['x$@%woman$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",0.72
 I22U-gNSC-p179-r1,she is explaing the weather condition in that region,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	explae	_	VBG	VBG	_	0	root	_	_
@@ -85,7 +85,7 @@ I22U-gNSC-p179-r1,she is explaing the weather condition in that region,1,1,1,1,1
 7	in	_	IN	IN	_	0	erased	_	_
 8	that	_	DT	DT	_	9	det	_	_
 9	region	_	NN	NN	_	6	prep_in	_	_
-10	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%explae', 'aux$@%be$@%explae', 'root$@%explae$@%VROOT', 'det$@%the$@%condition', 'nn$@%weather$@%condition', 'dobj$@%condition$@%explae', 'erased$@%in$@%WORDERASED', 'det$@%that$@%region', 'prep_in$@%region$@%condition', 'punct$@%.$@%explae']","['x$@%she$@%explae', 'x$@%be$@%explae', 'x$@%explae$@%VROOT', 'x$@%the$@%condition', 'x$@%weather$@%condition', 'x$@%condition$@%explae', 'x$@%in$@%WORDERASED', 'x$@%that$@%region', 'x$@%region$@%condition', 'x$@%.$@%explae']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%explae$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%condition$@%x', 'x$@%in$@%x', 'x$@%that$@%x', 'x$@%region$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%explae', 'aux$@%be$@%explae', 'root$@%explae$@%VROOT', 'det$@%the$@%condition', 'nn$@%weather$@%condition', 'dobj$@%condition$@%explae', 'erased$@%in$@%WORDERASED', 'det$@%that$@%region', 'prep_in$@%region$@%condition', 'punct$@%.$@%explae']","['x$@%she$@%explae', 'x$@%be$@%explae', 'x$@%explae$@%VROOT', 'x$@%the$@%condition', 'x$@%weather$@%condition', 'x$@%condition$@%explae', 'x$@%in$@%WORDERASED', 'x$@%that$@%region', 'x$@%region$@%condition', 'x$@%.$@%explae']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%explae$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%condition$@%x', 'x$@%in$@%x', 'x$@%that$@%x', 'x$@%region$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p180-r1,A woman is reviewing the weather map.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -93,7 +93,7 @@ I22U-gNSC-p180-r1,A woman is reviewing the weather map.,1,1,1,1,1,"1	a	_	DT	DT	_
 5	the	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	map	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%review', 'aux$@%be$@%review', 'root$@%review$@%VROOT', 'det$@%the$@%map', 'nn$@%weather$@%map', 'dobj$@%map$@%review', 'punct$@%.$@%review']","['x$@%a$@%woman', 'x$@%woman$@%review', 'x$@%be$@%review', 'x$@%review$@%VROOT', 'x$@%the$@%map', 'x$@%weather$@%map', 'x$@%map$@%review', 'x$@%.$@%review']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%review$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%review', 'aux$@%be$@%review', 'root$@%review$@%VROOT', 'det$@%the$@%map', 'nn$@%weather$@%map', 'dobj$@%map$@%review', 'punct$@%.$@%review']","['x$@%a$@%woman', 'x$@%woman$@%review', 'x$@%be$@%review', 'x$@%review$@%VROOT', 'x$@%the$@%map', 'x$@%weather$@%map', 'x$@%map$@%review', 'x$@%.$@%review']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%review$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p182-r1,The meteorologist is showing us the weather,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -101,7 +101,7 @@ I22U-gNSC-p182-r1,The meteorologist is showing us the weather,1,1,1,1,1,"1	the	_
 5	we	_	PRP	PRP	_	4	iobj	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	weather	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'iobj$@%we$@%show', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'punct$@%.$@%show']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%we$@%show', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%we$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'iobj$@%we$@%show', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'punct$@%.$@%show']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%we$@%show', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%we$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p186-r1,The woman is giving the weather report.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -109,7 +109,7 @@ I22U-gNSC-p186-r1,The woman is giving the weather report.,1,1,1,1,1,"1	the	_	DT	
 5	the	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	report	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p188-r1,A meteorologist is giving a weather prediction. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -117,21 +117,21 @@ I22U-gNSC-p188-r1,A meteorologist is giving a weather prediction. ,1,1,1,1,1,"1	
 5	a	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	prediction	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%prediction', 'nn$@%weather$@%prediction', 'dobj$@%prediction$@%give', 'punct$@%.$@%give']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%prediction', 'x$@%weather$@%prediction', 'x$@%prediction$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%prediction$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%prediction', 'nn$@%weather$@%prediction', 'dobj$@%prediction$@%give', 'punct$@%.$@%give']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%prediction', 'x$@%weather$@%prediction', 'x$@%prediction$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%prediction$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p189-r1,The meteorologist is giving the forecast. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	give	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	forecast	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p191-r1,A woman is reporting the weather. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	report	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p193-r1,The weather person is telling us what the weather will be.,1,1,1,0,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	person	_	NN	NN	_	5	nsubj	_	_
@@ -143,7 +143,7 @@ I22U-gNSC-p193-r1,The weather person is telling us what the weather will be.,1,1
 9	weather	_	NN	NN	_	11	nsubj	_	_
 10	will	_	MD	MD	_	11	aux	_	_
 11	be	_	VB	VB	_	5	dep	_	_
-12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%person', 'nn$@%weather$@%person', 'nsubj$@%person$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%we$@%tell', 'dobj$@%what$@%be', 'det$@%the$@%weather', 'nsubj$@%weather$@%be', 'aux$@%will$@%be', 'dep$@%be$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%person', 'x$@%weather$@%person', 'x$@%person$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%we$@%tell', 'x$@%what$@%be', 'x$@%the$@%weather', 'x$@%weather$@%be', 'x$@%will$@%be', 'x$@%be$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%we$@%x', 'x$@%what$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%will$@%x', 'x$@%be$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	5	punct	_	_","['det$@%the$@%person', 'nn$@%weather$@%person', 'nsubj$@%person$@%tell', 'aux$@%be$@%tell', 'root$@%tell$@%VROOT', 'dobj$@%we$@%tell', 'dobj$@%what$@%be', 'det$@%the$@%weather', 'nsubj$@%weather$@%be', 'aux$@%will$@%be', 'dep$@%be$@%tell', 'punct$@%.$@%tell']","['x$@%the$@%person', 'x$@%weather$@%person', 'x$@%person$@%tell', 'x$@%be$@%tell', 'x$@%tell$@%VROOT', 'x$@%we$@%tell', 'x$@%what$@%be', 'x$@%the$@%weather', 'x$@%weather$@%be', 'x$@%will$@%be', 'x$@%be$@%tell', 'x$@%.$@%tell']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%tell$@%x', 'x$@%we$@%x', 'x$@%what$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%will$@%x', 'x$@%be$@%x', 'x$@%.$@%x']",0.776
 I22U-gNSC-p194-r1,The weather lady says that it will be sunny and then cloudy.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	lady	_	NN	NN	_	4	nsubj	_	_
@@ -156,14 +156,14 @@ I22U-gNSC-p194-r1,The weather lady says that it will be sunny and then cloudy.,1
 10	and	_	CC	CC	_	0	erased	_	_
 11	then	_	RB	RB	_	12	advmod	_	_
 12	cloudy	_	RB	RB	_	9	conj_and	_	_
-13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%say', 'root$@%say$@%VROOT', 'complm$@%that$@%sunny', 'nsubj$@%it$@%sunny', 'aux$@%will$@%sunny', 'cop$@%be$@%sunny', 'ccomp$@%sunny$@%say', 'erased$@%and$@%WORDERASED', 'advmod$@%then$@%cloudy', 'conj_and$@%cloudy$@%sunny', 'punct$@%.$@%say']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%say', 'x$@%say$@%VROOT', 'x$@%that$@%sunny', 'x$@%it$@%sunny', 'x$@%will$@%sunny', 'x$@%be$@%sunny', 'x$@%sunny$@%say', 'x$@%and$@%WORDERASED', 'x$@%then$@%cloudy', 'x$@%cloudy$@%sunny', 'x$@%.$@%say']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%say$@%x', 'x$@%that$@%x', 'x$@%it$@%x', 'x$@%will$@%x', 'x$@%be$@%x', 'x$@%sunny$@%x', 'x$@%and$@%x', 'x$@%then$@%x', 'x$@%cloudy$@%x', 'x$@%.$@%x']"
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nn$@%weather$@%lady', 'nsubj$@%lady$@%say', 'root$@%say$@%VROOT', 'complm$@%that$@%sunny', 'nsubj$@%it$@%sunny', 'aux$@%will$@%sunny', 'cop$@%be$@%sunny', 'ccomp$@%sunny$@%say', 'erased$@%and$@%WORDERASED', 'advmod$@%then$@%cloudy', 'conj_and$@%cloudy$@%sunny', 'punct$@%.$@%say']","['x$@%the$@%lady', 'x$@%weather$@%lady', 'x$@%lady$@%say', 'x$@%say$@%VROOT', 'x$@%that$@%sunny', 'x$@%it$@%sunny', 'x$@%will$@%sunny', 'x$@%be$@%sunny', 'x$@%sunny$@%say', 'x$@%and$@%WORDERASED', 'x$@%then$@%cloudy', 'x$@%cloudy$@%sunny', 'x$@%.$@%say']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%say$@%x', 'x$@%that$@%x', 'x$@%it$@%x', 'x$@%will$@%x', 'x$@%be$@%x', 'x$@%sunny$@%x', 'x$@%and$@%x', 'x$@%then$@%x', 'x$@%cloudy$@%x', 'x$@%.$@%x']",0.907
 I22U-gNSC-p195-r1,A woman is reporting the weather.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	report	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p198-r1,The weather woman is discribing he weather patterns which the believes with bring rain.,1,1,0,0,0,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	woman	_	NN	NN	_	5	nsubj	_	_
@@ -178,21 +178,21 @@ I22U-gNSC-p198-r1,The weather woman is discribing he weather patterns which the 
 12	with	_	IN	IN	_	0	erased	_	_
 13	bring	_	JJ	JJ	_	14	amod	_	_
 14	rain	_	NN	NN	_	11	prep_with	_	_
-15	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'nn$@%weather$@%woman', 'nsubj$@%woman$@%discribe', 'aux$@%be$@%discribe', 'root$@%discribe$@%VROOT', 'nsubj$@%he$@%weather', 'ccomp$@%weather$@%discribe', 'dobj$@%pattern$@%believe', 'rel$@%which$@%believe', 'nsubj$@%the$@%believe', 'rcmod$@%believe$@%pattern', 'erased$@%with$@%WORDERASED', 'amod$@%bring$@%rain', 'prep_with$@%rain$@%believe', 'punct$@%.$@%discribe']","['x$@%the$@%woman', 'x$@%weather$@%woman', 'x$@%woman$@%discribe', 'x$@%be$@%discribe', 'x$@%discribe$@%VROOT', 'x$@%he$@%weather', 'x$@%weather$@%discribe', 'x$@%pattern$@%believe', 'x$@%which$@%believe', 'x$@%the$@%believe', 'x$@%believe$@%pattern', 'x$@%with$@%WORDERASED', 'x$@%bring$@%rain', 'x$@%rain$@%believe', 'x$@%.$@%discribe']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%discribe$@%x', 'x$@%he$@%x', 'x$@%weather$@%x', 'x$@%pattern$@%x', 'x$@%which$@%x', 'x$@%the$@%x', 'x$@%believe$@%x', 'x$@%with$@%x', 'x$@%bring$@%x', 'x$@%rain$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'nn$@%weather$@%woman', 'nsubj$@%woman$@%discribe', 'aux$@%be$@%discribe', 'root$@%discribe$@%VROOT', 'nsubj$@%he$@%weather', 'ccomp$@%weather$@%discribe', 'dobj$@%pattern$@%believe', 'rel$@%which$@%believe', 'nsubj$@%the$@%believe', 'rcmod$@%believe$@%pattern', 'erased$@%with$@%WORDERASED', 'amod$@%bring$@%rain', 'prep_with$@%rain$@%believe', 'punct$@%.$@%discribe']","['x$@%the$@%woman', 'x$@%weather$@%woman', 'x$@%woman$@%discribe', 'x$@%be$@%discribe', 'x$@%discribe$@%VROOT', 'x$@%he$@%weather', 'x$@%weather$@%discribe', 'x$@%pattern$@%believe', 'x$@%which$@%believe', 'x$@%the$@%believe', 'x$@%believe$@%pattern', 'x$@%with$@%WORDERASED', 'x$@%bring$@%rain', 'x$@%rain$@%believe', 'x$@%.$@%discribe']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%discribe$@%x', 'x$@%he$@%x', 'x$@%weather$@%x', 'x$@%pattern$@%x', 'x$@%which$@%x', 'x$@%the$@%x', 'x$@%believe$@%x', 'x$@%with$@%x', 'x$@%bring$@%x', 'x$@%rain$@%x', 'x$@%.$@%x']",0.45799999999999996
 I22U-gNSC-p200-r1,The woman is reporting the weather.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	report	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%woman', 'x$@%woman$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p201-r1,The woman is broadcasting the weather. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	broadcast	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%broadcast', 'aux$@%be$@%broadcast', 'root$@%broadcast$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%broadcast', 'punct$@%.$@%broadcast']","['x$@%the$@%woman', 'x$@%woman$@%broadcast', 'x$@%be$@%broadcast', 'x$@%broadcast$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%broadcast', 'x$@%.$@%broadcast']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%broadcast$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%broadcast', 'aux$@%be$@%broadcast', 'root$@%broadcast$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%broadcast', 'punct$@%.$@%broadcast']","['x$@%the$@%woman', 'x$@%woman$@%broadcast', 'x$@%be$@%broadcast', 'x$@%broadcast$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%broadcast', 'x$@%.$@%broadcast']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%broadcast$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p205-r1,A woman is doing the weather report.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -200,7 +200,7 @@ I22U-gNSC-p205-r1,A woman is doing the weather report.,1,1,1,1,1,"1	a	_	DT	DT	_	
 5	the	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	report	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%do', 'punct$@%.$@%do']","['x$@%a$@%woman', 'x$@%woman$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%do', 'x$@%.$@%do']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%do', 'punct$@%.$@%do']","['x$@%a$@%woman', 'x$@%woman$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%do', 'x$@%.$@%do']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p206-r1,The meteorologist is showing what the weather is in New Mexico.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -212,14 +212,14 @@ I22U-gNSC-p206-r1,The meteorologist is showing what the weather is in New Mexico
 9	in	_	IN	IN	_	0	erased	_	_
 10	new	_	NNP	NNP	_	11	nn	_	_
 11	mexico	_	NNP	NNP	_	8	prep_in	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'dobj$@%what$@%be', 'det$@%the$@%weather', 'nsubj$@%weather$@%be', 'ccomp$@%be$@%show', 'erased$@%in$@%WORDERASED', 'nn$@%new$@%mexico', 'prep_in$@%mexico$@%be', 'punct$@%.$@%show']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%what$@%be', 'x$@%the$@%weather', 'x$@%weather$@%be', 'x$@%be$@%show', 'x$@%in$@%WORDERASED', 'x$@%new$@%mexico', 'x$@%mexico$@%be', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%what$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%be$@%x', 'x$@%in$@%x', 'x$@%new$@%x', 'x$@%mexico$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'dobj$@%what$@%be', 'det$@%the$@%weather', 'nsubj$@%weather$@%be', 'ccomp$@%be$@%show', 'erased$@%in$@%WORDERASED', 'nn$@%new$@%mexico', 'prep_in$@%mexico$@%be', 'punct$@%.$@%show']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%what$@%be', 'x$@%the$@%weather', 'x$@%weather$@%be', 'x$@%be$@%show', 'x$@%in$@%WORDERASED', 'x$@%new$@%mexico', 'x$@%mexico$@%be', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%what$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%be$@%x', 'x$@%in$@%x', 'x$@%new$@%x', 'x$@%mexico$@%x', 'x$@%.$@%x']",0.738
 I22U-gNSC-p207-r1,A weather reporter explains a map.,0,0,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	reporter	_	NN	NN	_	4	nsubj	_	_
 4	explain	_	VBZ	VBZ	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	map	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%reporter', 'nn$@%weather$@%reporter', 'nsubj$@%reporter$@%explain', 'root$@%explain$@%VROOT', 'det$@%a$@%map', 'dobj$@%map$@%explain', 'punct$@%.$@%explain']","['x$@%a$@%reporter', 'x$@%weather$@%reporter', 'x$@%reporter$@%explain', 'x$@%explain$@%VROOT', 'x$@%a$@%map', 'x$@%map$@%explain', 'x$@%.$@%explain']","['x$@%a$@%x', 'x$@%weather$@%x', 'x$@%reporter$@%x', 'x$@%explain$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%reporter', 'nn$@%weather$@%reporter', 'nsubj$@%reporter$@%explain', 'root$@%explain$@%VROOT', 'det$@%a$@%map', 'dobj$@%map$@%explain', 'punct$@%.$@%explain']","['x$@%a$@%reporter', 'x$@%weather$@%reporter', 'x$@%reporter$@%explain', 'x$@%explain$@%VROOT', 'x$@%a$@%map', 'x$@%map$@%explain', 'x$@%.$@%explain']","['x$@%a$@%x', 'x$@%weather$@%x', 'x$@%reporter$@%x', 'x$@%explain$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.542
 I22U-gNSC-p208-r1,Sally is trying to point to Iraq on a map,0,1,1,1,0,"1	sally	_	NNP	NNP	_	5	xsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	try	_	VBG	VBG	_	0	root	_	_
@@ -230,7 +230,7 @@ I22U-gNSC-p208-r1,Sally is trying to point to Iraq on a map,0,1,1,1,0,"1	sally	_
 8	on	_	IN	IN	_	0	erased	_	_
 9	a	_	DT	DT	_	10	det	_	_
 10	map	_	NN	NN	_	5	prep_on	_	_
-11	.	_	.	.	_	3	punct	_	_","['xsubj$@%sally$@%point', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%point', 'xcomp$@%point$@%try', 'erased$@%to$@%WORDERASED', 'prep_to$@%iraq$@%point', 'erased$@%on$@%WORDERASED', 'det$@%a$@%map', 'prep_on$@%map$@%point', 'punct$@%.$@%try']","['x$@%sally$@%point', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%point', 'x$@%point$@%try', 'x$@%to$@%WORDERASED', 'x$@%iraq$@%point', 'x$@%on$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%point', 'x$@%.$@%try']","['x$@%sally$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%iraq$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+11	.	_	.	.	_	3	punct	_	_","['xsubj$@%sally$@%point', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%point', 'xcomp$@%point$@%try', 'erased$@%to$@%WORDERASED', 'prep_to$@%iraq$@%point', 'erased$@%on$@%WORDERASED', 'det$@%a$@%map', 'prep_on$@%map$@%point', 'punct$@%.$@%try']","['x$@%sally$@%point', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%point', 'x$@%point$@%try', 'x$@%to$@%WORDERASED', 'x$@%iraq$@%point', 'x$@%on$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%point', 'x$@%.$@%try']","['x$@%sally$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%iraq$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.373
 I22U-gNSC-p214-r1,The woman is giving the weather forecast,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -238,14 +238,14 @@ I22U-gNSC-p214-r1,The woman is giving the weather forecast,1,1,1,1,1,"1	the	_	DT
 5	the	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	forecast	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p218-r1,The lady is a weather forecaster.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	lady	_	NN	NN	_	6	nsubj	_	_
 3	be	_	VBZ	VBZ	_	6	cop	_	_
 4	a	_	DT	DT	_	6	det	_	_
 5	weather	_	NN	NN	_	6	nn	_	_
 6	forecaster	_	NN	NN	_	0	root	_	_
-7	.	_	.	.	_	6	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%forecaster', 'cop$@%be$@%forecaster', 'det$@%a$@%forecaster', 'nn$@%weather$@%forecaster', 'root$@%forecaster$@%VROOT', 'punct$@%.$@%forecaster']","['x$@%the$@%lady', 'x$@%lady$@%forecaster', 'x$@%be$@%forecaster', 'x$@%a$@%forecaster', 'x$@%weather$@%forecaster', 'x$@%forecaster$@%VROOT', 'x$@%.$@%forecaster']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecaster$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	6	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%forecaster', 'cop$@%be$@%forecaster', 'det$@%a$@%forecaster', 'nn$@%weather$@%forecaster', 'root$@%forecaster$@%VROOT', 'punct$@%.$@%forecaster']","['x$@%the$@%lady', 'x$@%lady$@%forecaster', 'x$@%be$@%forecaster', 'x$@%a$@%forecaster', 'x$@%weather$@%forecaster', 'x$@%forecaster$@%VROOT', 'x$@%.$@%forecaster']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecaster$@%x', 'x$@%.$@%x']",0.542
 I22U-gNSC-p223-r1,A person has a hand on its stomach and a hand on a map.,0,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	person	_	NN	NN	_	3	nsubj	_	_
 3	have	_	VBZ	VBZ	_	0	root	_	_
@@ -260,7 +260,7 @@ I22U-gNSC-p223-r1,A person has a hand on its stomach and a hand on a map.,0,0,0,
 12	on	_	IN	IN	_	0	erased	_	_
 13	a	_	DT	DT	_	14	det	_	_
 14	map	_	NN	NN	_	11	prep_on	_	_
-15	.	_	.	.	_	3	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%hand', 'dobj$@%hand$@%have', 'erased$@%on$@%WORDERASED', 'poss$@%its$@%stomach', 'prep_on$@%stomach$@%hand', 'erased$@%and$@%WORDERASED', 'det$@%a$@%hand', 'conj_and$@%hand$@%hand', 'erased$@%on$@%WORDERASED', 'det$@%a$@%map', 'prep_on$@%map$@%hand', 'punct$@%.$@%have']","['x$@%a$@%person', 'x$@%person$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%hand', 'x$@%hand$@%have', 'x$@%on$@%WORDERASED', 'x$@%its$@%stomach', 'x$@%stomach$@%hand', 'x$@%and$@%WORDERASED', 'x$@%a$@%hand', 'x$@%hand$@%hand', 'x$@%on$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%hand', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%hand$@%x', 'x$@%on$@%x', 'x$@%its$@%x', 'x$@%stomach$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%hand$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+15	.	_	.	.	_	3	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%hand', 'dobj$@%hand$@%have', 'erased$@%on$@%WORDERASED', 'poss$@%its$@%stomach', 'prep_on$@%stomach$@%hand', 'erased$@%and$@%WORDERASED', 'det$@%a$@%hand', 'conj_and$@%hand$@%hand', 'erased$@%on$@%WORDERASED', 'det$@%a$@%map', 'prep_on$@%map$@%hand', 'punct$@%.$@%have']","['x$@%a$@%person', 'x$@%person$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%hand', 'x$@%hand$@%have', 'x$@%on$@%WORDERASED', 'x$@%its$@%stomach', 'x$@%stomach$@%hand', 'x$@%and$@%WORDERASED', 'x$@%a$@%hand', 'x$@%hand$@%hand', 'x$@%on$@%WORDERASED', 'x$@%a$@%map', 'x$@%map$@%hand', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%hand$@%x', 'x$@%on$@%x', 'x$@%its$@%x', 'x$@%stomach$@%x', 'x$@%and$@%x', 'x$@%a$@%x', 'x$@%hand$@%x', 'x$@%on$@%x', 'x$@%a$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",0.486
 I22U-gNSC-p225-r1,She is reporting the weather for all to see.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	report	_	VBG	VBG	_	0	root	_	_
@@ -270,7 +270,7 @@ I22U-gNSC-p225-r1,She is reporting the weather for all to see.,1,1,1,1,1,"1	she	
 7	all	_	DT	DT	_	5	prep_for	_	_
 8	to	_	TO	TO	_	9	aux	_	_
 9	see	_	VB	VB	_	3	xcomp	_	_
-10	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'erased$@%for$@%WORDERASED', 'prep_for$@%all$@%weather', 'aux$@%to$@%see', 'xcomp$@%see$@%report', 'punct$@%.$@%report']","['x$@%she$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%for$@%WORDERASED', 'x$@%all$@%weather', 'x$@%to$@%see', 'x$@%see$@%report', 'x$@%.$@%report']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%for$@%x', 'x$@%all$@%x', 'x$@%to$@%x', 'x$@%see$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'erased$@%for$@%WORDERASED', 'prep_for$@%all$@%weather', 'aux$@%to$@%see', 'xcomp$@%see$@%report', 'punct$@%.$@%report']","['x$@%she$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%for$@%WORDERASED', 'x$@%all$@%weather', 'x$@%to$@%see', 'x$@%see$@%report', 'x$@%.$@%report']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%for$@%x', 'x$@%all$@%x', 'x$@%to$@%x', 'x$@%see$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p227-r1,The woman is pointing to a weather map.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -279,7 +279,7 @@ I22U-gNSC-p227-r1,The woman is pointing to a weather map.,1,1,1,1,1,"1	the	_	DT	
 6	a	_	DT	DT	_	8	det	_	_
 7	weather	_	NN	NN	_	8	nn	_	_
 8	map	_	NN	NN	_	4	prep_to	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%point', 'aux$@%be$@%point', 'root$@%point$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%point']","['x$@%the$@%woman', 'x$@%woman$@%point', 'x$@%be$@%point', 'x$@%point$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%point']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%point', 'aux$@%be$@%point', 'root$@%point$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%point']","['x$@%the$@%woman', 'x$@%woman$@%point', 'x$@%be$@%point', 'x$@%point$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%point']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p228-r1,the lady is reporting on the weather,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	lady	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -287,7 +287,7 @@ I22U-gNSC-p228-r1,the lady is reporting on the weather,1,1,1,1,1,"1	the	_	DT	DT	
 5	on	_	IN	IN	_	0	erased	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	weather	_	NN	NN	_	4	prep_on	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%weather', 'prep_on$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%lady', 'x$@%lady$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%weather', 'prep_on$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%lady', 'x$@%lady$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p229-r1,The weatherlady is showing the weather on tv.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	weatherlady	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -296,14 +296,14 @@ I22U-gNSC-p229-r1,The weatherlady is showing the weather on tv.,1,1,1,1,1,"1	the
 6	weather	_	NN	NN	_	4	dobj	_	_
 7	on	_	IN	IN	_	0	erased	_	_
 8	tv	_	NN	NN	_	6	prep_on	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%weatherlady', 'nsubj$@%weatherlady$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'erased$@%on$@%WORDERASED', 'prep_on$@%tv$@%weather', 'punct$@%.$@%show']","['x$@%the$@%weatherlady', 'x$@%weatherlady$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%on$@%WORDERASED', 'x$@%tv$@%weather', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weatherlady$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%on$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%weatherlady', 'nsubj$@%weatherlady$@%show', 'aux$@%be$@%show', 'root$@%show$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%show', 'erased$@%on$@%WORDERASED', 'prep_on$@%tv$@%weather', 'punct$@%.$@%show']","['x$@%the$@%weatherlady', 'x$@%weatherlady$@%show', 'x$@%be$@%show', 'x$@%show$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%show', 'x$@%on$@%WORDERASED', 'x$@%tv$@%weather', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weatherlady$@%x', 'x$@%be$@%x', 'x$@%show$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%on$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p232-r1,The lady is reporting the weather,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	lady	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	report	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%lady', 'x$@%lady$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%the$@%lady', 'x$@%lady$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p238-r1,The woman is giving a weather forecast.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -311,13 +311,13 @@ I22U-gNSC-p238-r1,The woman is giving a weather forecast.,1,1,1,1,1,"1	the	_	DT	
 5	a	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	forecast	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p240-r1,She is reporting the weather. ,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	report	_	VBG	VBG	_	0	root	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	weather	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%she$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%report', 'aux$@%be$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%she$@%report', 'x$@%be$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p241-r1,A person is presenting a weather forecast.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	person	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -325,7 +325,7 @@ I22U-gNSC-p241-r1,A person is presenting a weather forecast.,1,1,1,1,1,"1	a	_	DT
 5	a	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	forecast	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%present', 'aux$@%be$@%present', 'root$@%present$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%present', 'punct$@%.$@%present']","['x$@%a$@%person', 'x$@%person$@%present', 'x$@%be$@%present', 'x$@%present$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%present', 'x$@%.$@%present']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%present$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%person', 'nsubj$@%person$@%present', 'aux$@%be$@%present', 'root$@%present$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%present', 'punct$@%.$@%present']","['x$@%a$@%person', 'x$@%person$@%present', 'x$@%be$@%present', 'x$@%present$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%present', 'x$@%.$@%present']","['x$@%a$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%present$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p242-r1,The woman is giving a weather forecast.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -333,14 +333,14 @@ I22U-gNSC-p242-r1,The woman is giving a weather forecast.,1,1,1,1,1,"1	the	_	DT	
 5	a	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	forecast	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'nn$@%weather$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%the$@%woman', 'x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p248-r1,A meteorologist is predicting the weather.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	predict	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%predict', 'aux$@%be$@%predict', 'root$@%predict$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%predict', 'punct$@%.$@%predict']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%predict', 'x$@%be$@%predict', 'x$@%predict$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%predict', 'x$@%.$@%predict']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%predict$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%predict', 'aux$@%be$@%predict', 'root$@%predict$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%predict', 'punct$@%.$@%predict']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%predict', 'x$@%be$@%predict', 'x$@%predict$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%predict', 'x$@%.$@%predict']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%predict$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p250-r1,The lady is trying to tell us about the weather forecast,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	lady	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -352,11 +352,11 @@ I22U-gNSC-p250-r1,The lady is trying to tell us about the weather forecast,1,1,1
 9	the	_	DT	DT	_	11	det	_	_
 10	weather	_	NN	NN	_	11	nn	_	_
 11	forecast	_	NN	NN	_	6	prep_about	_	_
-12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'xsubj$@%lady$@%tell', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%tell', 'xcomp$@%tell$@%try', 'dobj$@%we$@%tell', 'erased$@%about$@%WORDERASED', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'prep_about$@%forecast$@%tell', 'punct$@%.$@%try']","['x$@%the$@%lady', 'x$@%lady$@%tell', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%tell', 'x$@%tell$@%try', 'x$@%we$@%tell', 'x$@%about$@%WORDERASED', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%tell', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%tell$@%x', 'x$@%we$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'xsubj$@%lady$@%tell', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%tell', 'xcomp$@%tell$@%try', 'dobj$@%we$@%tell', 'erased$@%about$@%WORDERASED', 'det$@%the$@%forecast', 'nn$@%weather$@%forecast', 'prep_about$@%forecast$@%tell', 'punct$@%.$@%try']","['x$@%the$@%lady', 'x$@%lady$@%tell', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%tell', 'x$@%tell$@%try', 'x$@%we$@%tell', 'x$@%about$@%WORDERASED', 'x$@%the$@%forecast', 'x$@%weather$@%forecast', 'x$@%forecast$@%tell', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%tell$@%x', 'x$@%we$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",0.776
 I22U-gNSC-p251-r1,Meteorologist delivers forecast.,1,0,0,1,1,"1	meteorologist	_	NNP	NNP	_	2	nsubj	_	_
 2	deliver	_	VBZ	VBZ	_	0	root	_	_
 3	forecast	_	NN	NN	_	2	dobj	_	_
-4	.	_	.	.	_	2	punct	_	_","['nsubj$@%meteorologist$@%deliver', 'root$@%deliver$@%VROOT', 'dobj$@%forecast$@%deliver', 'punct$@%.$@%deliver']","['x$@%meteorologist$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%forecast$@%deliver', 'x$@%.$@%deliver']","['x$@%meteorologist$@%x', 'x$@%deliver$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+4	.	_	.	.	_	2	punct	_	_","['nsubj$@%meteorologist$@%deliver', 'root$@%deliver$@%VROOT', 'dobj$@%forecast$@%deliver', 'punct$@%.$@%deliver']","['x$@%meteorologist$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%forecast$@%deliver', 'x$@%.$@%deliver']","['x$@%meteorologist$@%x', 'x$@%deliver$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",0.851
 I22U-gNSC-p265-r1,The weather report shows part clouds and sun today.,0,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	report	_	NN	NN	_	4	nsubj	_	_
@@ -366,14 +366,14 @@ I22U-gNSC-p265-r1,The weather report shows part clouds and sun today.,0,0,1,1,1,
 7	and	_	CC	CC	_	0	erased	_	_
 8	sun	_	NN	NN	_	6	conj_and	_	_
 9	today	_	NN	NN	_	4	tmod	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%report', 'nn$@%weather$@%report', 'nsubj$@%report$@%show', 'root$@%show$@%VROOT', 'nn$@%part$@%cloud', 'dobj$@%cloud$@%show', 'erased$@%and$@%WORDERASED', 'conj_and$@%sun$@%cloud', 'tmod$@%today$@%show', 'punct$@%.$@%show']","['x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%show', 'x$@%show$@%VROOT', 'x$@%part$@%cloud', 'x$@%cloud$@%show', 'x$@%and$@%WORDERASED', 'x$@%sun$@%cloud', 'x$@%today$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%show$@%x', 'x$@%part$@%x', 'x$@%cloud$@%x', 'x$@%and$@%x', 'x$@%sun$@%x', 'x$@%today$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%report', 'nn$@%weather$@%report', 'nsubj$@%report$@%show', 'root$@%show$@%VROOT', 'nn$@%part$@%cloud', 'dobj$@%cloud$@%show', 'erased$@%and$@%WORDERASED', 'conj_and$@%sun$@%cloud', 'tmod$@%today$@%show', 'punct$@%.$@%show']","['x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%show', 'x$@%show$@%VROOT', 'x$@%part$@%cloud', 'x$@%cloud$@%show', 'x$@%and$@%WORDERASED', 'x$@%sun$@%cloud', 'x$@%today$@%show', 'x$@%.$@%show']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%show$@%x', 'x$@%part$@%x', 'x$@%cloud$@%x', 'x$@%and$@%x', 'x$@%sun$@%x', 'x$@%today$@%x', 'x$@%.$@%x']",0.542
 I22U-gNSC-p267-r1,Weather lady is giving a forecast. ,1,1,0,1,1,"1	weather	_	NNP	NNP	_	2	nn	_	_
 2	lady	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	give	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	forecast	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['nn$@%weather$@%lady', 'nsubj$@%lady$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%weather$@%lady', 'x$@%lady$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['nn$@%weather$@%lady', 'nsubj$@%lady$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%forecast', 'dobj$@%forecast$@%give', 'punct$@%.$@%give']","['x$@%weather$@%lady', 'x$@%lady$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%forecast', 'x$@%forecast$@%give', 'x$@%.$@%give']","['x$@%weather$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%forecast$@%x', 'x$@%.$@%x']",0.944
 I22U-gNSC-p268-r1,The weather person is pointing to a weather map.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	weather	_	NN	NN	_	3	nn	_	_
 3	person	_	NN	NN	_	5	nsubj	_	_
@@ -383,14 +383,14 @@ I22U-gNSC-p268-r1,The weather person is pointing to a weather map.,1,1,1,1,1,"1	
 7	a	_	DT	DT	_	9	det	_	_
 8	weather	_	NN	NN	_	9	nn	_	_
 9	map	_	NN	NN	_	5	prep_to	_	_
-10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%person', 'nn$@%weather$@%person', 'nsubj$@%person$@%point', 'aux$@%be$@%point', 'root$@%point$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%point']","['x$@%the$@%person', 'x$@%weather$@%person', 'x$@%person$@%point', 'x$@%be$@%point', 'x$@%point$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%point']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']"
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%person', 'nn$@%weather$@%person', 'nsubj$@%person$@%point', 'aux$@%be$@%point', 'root$@%point$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%map', 'nn$@%weather$@%map', 'prep_to$@%map$@%point', 'punct$@%.$@%point']","['x$@%the$@%person', 'x$@%weather$@%person', 'x$@%person$@%point', 'x$@%be$@%point', 'x$@%point$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%map', 'x$@%weather$@%map', 'x$@%map$@%point', 'x$@%.$@%point']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%person$@%x', 'x$@%be$@%x', 'x$@%point$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%weather$@%x', 'x$@%map$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p275-r1,A woman reports the weather.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	3	nsubj	_	_
 3	report	_	VBZ	VBZ	_	0	root	_	_
 4	the	_	DT	DT	_	5	det	_	_
 5	weather	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
-I22U-gNSC-p278-r1,H,0,0,0,0,0,1	h.	_	NNP	NNP	_	0	root	_	_,['root$@%h.$@%VROOT'],['x$@%h.$@%VROOT'],['x$@%h.$@%x']
+6	.	_	.	.	_	3	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%report', 'root$@%report$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%report', 'punct$@%.$@%report']","['x$@%a$@%woman', 'x$@%woman$@%report', 'x$@%report$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%report', 'x$@%.$@%report']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%report$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",0.907
+I22U-gNSC-p278-r1,H,0,0,0,0,0,1	h.	_	NNP	NNP	_	0	root	_	_,['root$@%h.$@%VROOT'],['x$@%h.$@%VROOT'],['x$@%h.$@%x'],0.0
 I22U-gNSC-p279-r1,The meteorologist is delivering the weather report. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -398,14 +398,14 @@ I22U-gNSC-p279-r1,The meteorologist is delivering the weather report. ,1,1,1,1,1
 5	the	_	DT	DT	_	7	det	_	_
 6	weather	_	NN	NN	_	7	nn	_	_
 7	report	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']"
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%the$@%report', 'nn$@%weather$@%report', 'dobj$@%report$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%the$@%report', 'x$@%weather$@%report', 'x$@%report$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%report$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p280-r1,A meteorologist is describing the weather.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	describe	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	weather	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%describe', 'aux$@%be$@%describe', 'root$@%describe$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%describe', 'punct$@%.$@%describe']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%describe', 'x$@%be$@%describe', 'x$@%describe$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%describe', 'x$@%.$@%describe']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%describe$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%meteorologist', 'nsubj$@%meteorologist$@%describe', 'aux$@%be$@%describe', 'root$@%describe$@%VROOT', 'det$@%the$@%weather', 'dobj$@%weather$@%describe', 'punct$@%.$@%describe']","['x$@%a$@%meteorologist', 'x$@%meteorologist$@%describe', 'x$@%be$@%describe', 'x$@%describe$@%VROOT', 'x$@%the$@%weather', 'x$@%weather$@%describe', 'x$@%.$@%describe']","['x$@%a$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%describe$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",1.0
 I22U-gNSC-p283-r1,Woman is giving a description of the weather,1,1,0,0,1,"1	woman	_	NNP	NNP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	give	_	VBG	VBG	_	0	root	_	_
@@ -414,11 +414,11 @@ I22U-gNSC-p283-r1,Woman is giving a description of the weather,1,1,0,0,1,"1	woma
 6	of	_	IN	IN	_	0	erased	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	weather	_	NN	NN	_	5	prep_of	_	_
-9	.	_	.	.	_	3	punct	_	_","['nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%description', 'dobj$@%description$@%give', 'erased$@%of$@%WORDERASED', 'det$@%the$@%weather', 'prep_of$@%weather$@%description', 'punct$@%.$@%give']","['x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%description', 'x$@%description$@%give', 'x$@%of$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%description', 'x$@%.$@%give']","['x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%description$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%woman$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%description', 'dobj$@%description$@%give', 'erased$@%of$@%WORDERASED', 'det$@%the$@%weather', 'prep_of$@%weather$@%description', 'punct$@%.$@%give']","['x$@%woman$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%description', 'x$@%description$@%give', 'x$@%of$@%WORDERASED', 'x$@%the$@%weather', 'x$@%weather$@%description', 'x$@%.$@%give']","['x$@%woman$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%description$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%weather$@%x', 'x$@%.$@%x']",0.72
 I22U-gNSC-p284-r1,Weather ,0,0,0,0,0,"1	weather	_	VB	VB	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%weather$@%VROOT', 'punct$@%.$@%weather']","['x$@%weather$@%VROOT', 'x$@%.$@%weather']","['x$@%weather$@%x', 'x$@%.$@%x']"
+2	.	_	.	.	_	1	punct	_	_","['root$@%weather$@%VROOT', 'punct$@%.$@%weather']","['x$@%weather$@%VROOT', 'x$@%.$@%weather']","['x$@%weather$@%x', 'x$@%.$@%x']",0.0
 I22U-gNSC-p285-r1,Hahahah,0,0,0,0,0,"1	hahahah	_	VB	VB	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%hahahah$@%VROOT', 'punct$@%.$@%hahahah']","['x$@%hahahah$@%VROOT', 'x$@%.$@%hahahah']","['x$@%hahahah$@%x', 'x$@%.$@%x']"
+2	.	_	.	.	_	1	punct	_	_","['root$@%hahahah$@%VROOT', 'punct$@%.$@%hahahah']","['x$@%hahahah$@%VROOT', 'x$@%.$@%hahahah']","['x$@%hahahah$@%x', 'x$@%.$@%x']",0.0
 I22U-gNSC-p287-r1,Young woman visualizing the bloated feeling she has after a large Mexican meal.,0,1,0,0,0,"1	young	_	NNP	NNP	_	2	nsubj	_	_
 2	woman	_	NN	NN	_	0	root	_	_
 3	visualize	_	VBG	VBG	_	2	xcomp	_	_
@@ -432,7 +432,7 @@ I22U-gNSC-p287-r1,Young woman visualizing the bloated feeling she has after a la
 11	large	_	JJ	JJ	_	13	amod	_	_
 12	mexican	_	JJ	JJ	_	13	amod	_	_
 13	meal	_	NN	NN	_	9	pobj	_	_
-14	.	_	.	.	_	2	punct	_	_","['nsubj$@%young$@%woman', 'root$@%woman$@%VROOT', 'xcomp$@%visualize$@%woman', 'det$@%the$@%feeling', 'amod$@%bloated$@%feeling', 'dobj$@%feeling$@%after', 'nsubj$@%she$@%after', 'aux$@%have$@%after', 'rcmod$@%after$@%feeling', 'det$@%a$@%meal', 'amod$@%large$@%meal', 'amod$@%mexican$@%meal', 'pobj$@%meal$@%after', 'punct$@%.$@%woman']","['x$@%young$@%woman', 'x$@%woman$@%VROOT', 'x$@%visualize$@%woman', 'x$@%the$@%feeling', 'x$@%bloated$@%feeling', 'x$@%feeling$@%after', 'x$@%she$@%after', 'x$@%have$@%after', 'x$@%after$@%feeling', 'x$@%a$@%meal', 'x$@%large$@%meal', 'x$@%mexican$@%meal', 'x$@%meal$@%after', 'x$@%.$@%woman']","['x$@%young$@%x', 'x$@%woman$@%x', 'x$@%visualize$@%x', 'x$@%the$@%x', 'x$@%bloated$@%x', 'x$@%feeling$@%x', 'x$@%she$@%x', 'x$@%have$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%mexican$@%x', 'x$@%meal$@%x', 'x$@%.$@%x']"
+14	.	_	.	.	_	2	punct	_	_","['nsubj$@%young$@%woman', 'root$@%woman$@%VROOT', 'xcomp$@%visualize$@%woman', 'det$@%the$@%feeling', 'amod$@%bloated$@%feeling', 'dobj$@%feeling$@%after', 'nsubj$@%she$@%after', 'aux$@%have$@%after', 'rcmod$@%after$@%feeling', 'det$@%a$@%meal', 'amod$@%large$@%meal', 'amod$@%mexican$@%meal', 'pobj$@%meal$@%after', 'punct$@%.$@%woman']","['x$@%young$@%woman', 'x$@%woman$@%VROOT', 'x$@%visualize$@%woman', 'x$@%the$@%feeling', 'x$@%bloated$@%feeling', 'x$@%feeling$@%after', 'x$@%she$@%after', 'x$@%have$@%after', 'x$@%after$@%feeling', 'x$@%a$@%meal', 'x$@%large$@%meal', 'x$@%mexican$@%meal', 'x$@%meal$@%after', 'x$@%.$@%woman']","['x$@%young$@%x', 'x$@%woman$@%x', 'x$@%visualize$@%x', 'x$@%the$@%x', 'x$@%bloated$@%x', 'x$@%feeling$@%x', 'x$@%she$@%x', 'x$@%have$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%mexican$@%x', 'x$@%meal$@%x', 'x$@%.$@%x']",0.093
 I22U-gNSC-p288-r1,The weather is supposed to be partly cloudy.,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	weather	_	NN	NN	_	8	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	auxpass	_	_
@@ -441,10 +441,10 @@ I22U-gNSC-p288-r1,The weather is supposed to be partly cloudy.,0,0,1,0,1,"1	the	
 6	be	_	VB	VB	_	8	cop	_	_
 7	partly	_	RB	RB	_	8	advmod	_	_
 8	cloudy	_	JJ	JJ	_	4	xcomp	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%weather', 'xsubj$@%weather$@%cloudy', 'auxpass$@%be$@%suppose', 'root$@%suppose$@%VROOT', 'aux$@%to$@%cloudy', 'cop$@%be$@%cloudy', 'advmod$@%partly$@%cloudy', 'xcomp$@%cloudy$@%suppose', 'punct$@%.$@%suppose']","['x$@%the$@%weather', 'x$@%weather$@%cloudy', 'x$@%be$@%suppose', 'x$@%suppose$@%VROOT', 'x$@%to$@%cloudy', 'x$@%be$@%cloudy', 'x$@%partly$@%cloudy', 'x$@%cloudy$@%suppose', 'x$@%.$@%suppose']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%be$@%x', 'x$@%suppose$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%partly$@%x', 'x$@%cloudy$@%x', 'x$@%.$@%x']"
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%weather', 'xsubj$@%weather$@%cloudy', 'auxpass$@%be$@%suppose', 'root$@%suppose$@%VROOT', 'aux$@%to$@%cloudy', 'cop$@%be$@%cloudy', 'advmod$@%partly$@%cloudy', 'xcomp$@%cloudy$@%suppose', 'punct$@%.$@%suppose']","['x$@%the$@%weather', 'x$@%weather$@%cloudy', 'x$@%be$@%suppose', 'x$@%suppose$@%VROOT', 'x$@%to$@%cloudy', 'x$@%be$@%cloudy', 'x$@%partly$@%cloudy', 'x$@%cloudy$@%suppose', 'x$@%.$@%suppose']","['x$@%the$@%x', 'x$@%weather$@%x', 'x$@%be$@%x', 'x$@%suppose$@%x', 'x$@%to$@%x', 'x$@%be$@%x', 'x$@%partly$@%x', 'x$@%cloudy$@%x', 'x$@%.$@%x']",0.318
 I22U-gNSC-p292-r1,The meteorologist is on TV.,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	meteorologist	_	NN	NN	_	3	nsubj	_	_
 3	be	_	VBZ	VBZ	_	0	root	_	_
 4	on	_	IN	IN	_	0	erased	_	_
 5	tv	_	NN	NN	_	3	prep_on	_	_
-6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%be', 'root$@%be$@%VROOT', 'erased$@%on$@%WORDERASED', 'prep_on$@%tv$@%be', 'punct$@%.$@%be']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%be', 'x$@%be$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%tv$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']"
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%meteorologist', 'nsubj$@%meteorologist$@%be', 'root$@%be$@%VROOT', 'erased$@%on$@%WORDERASED', 'prep_on$@%tv$@%be', 'punct$@%.$@%be']","['x$@%the$@%meteorologist', 'x$@%meteorologist$@%be', 'x$@%be$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%tv$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%meteorologist$@%x', 'x$@%be$@%x', 'x$@%on$@%x', 'x$@%tv$@%x', 'x$@%.$@%x']",0.542
