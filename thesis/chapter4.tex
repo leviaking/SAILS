@@ -93,32 +93,32 @@ Teasing apart these annotations is the focus of the next section.
 \multicolumn{6}{|c|}{\includegraphics[width=0.45\columnwidth]{figures/I02.jpg}} \\
 \hline
 %\multicolumn{3}{|l|}{What is the woman doing? [Intransitive]} \\
-\textit{What is the boy doing?} & C & V & A & I & G \\
+\textit{What is the boy doing?} & C & A & G & I & V \\
 \hline
 \hline
 He is eating food. & 0 & 1 & 1 & 1 & 1 \\
 \hline
-eatting. & 0 & 1 & 1 & 1 & 0 \\
+eatting. & 0 & 1 & 0 & 1 & 1 \\
 \hline
-The child is about to eat pizza. & 1 & 1 & 0 & 1 & 1 \\
+The child is about to eat pizza. & 1 & 0 & 1 & 1 & 1 \\
 \hline
-He may get fat eating pizza. & 1 & 0 & 0 & 1 & 1 \\
-\hline
-\hline
-\hline
-\textit{What is happening?} & C & V & A & I & G \\
+He may get fat eating pizza. & 1 & 0 & 1 & 1 & 0 \\
 \hline
 \hline
-Child is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
 \hline
-Tommy is eating pizza. & 1 & 0 & 1 & 1 & 1 \\
+\textit{What is happening?} & C & A & G & I & V \\
 \hline
-The boy's eating his favorite food. & 0 & 0 & 1 & 0 & 1 \\
 \hline
-Pizza is this boy's favorite food. & 0 & 0 & 0 & 0 & 1 \\
+Child is eating pizza. & 1 & 1 & 0 & 1 & 1 \\
+\hline
+Tommy is eating pizza. & 1 & 1 & 1 & 1 & 0 \\
+\hline
+The boy's eating his favorite food. & 0 & 1 & 1 & 0 & 0 \\
+\hline
+Pizza is this boy's favorite food. & 0 & 0 & 1 & 0 & 0 \\
 \hline
 \end{tabular}
-\caption{\label{tab:dev-transitive} Targeted and untargeted sample responses from the development set transitive item, shown with adjudicated annotations for the five features: \feat{core event} (\textit{C}), \feat{verifiability} (\textit{V}), \feat{answerhood} (\textit{A}), \feat{interpretability} (\textit{I}) and \feat{grammaticality} (\textit{G}).}
+\caption{\label{tab:dev-transitive} Targeted and untargeted sample responses from the development set transitive item, shown with adjudicated annotations for \feat{core event} (\textit{C}), \feat{answerhood} (\textit{A}), \feat{grammaticality} (\textit{G}), \feat{interpretability} (\textit{I}) and \feat{verifiability} (\textit{V}).}
 \end{center}
 \end{table}
 
@@ -420,8 +420,31 @@ The weights yielded from the preference test are well aligned with my intuitions
 \section{Holistic Scoring and Ranking}
 \label{sec:holistic-scoring}
 The feature weights established by the preference tests can now be applied to the binary annotations to produce a holistic score for each response, which I call the \textbf{weighted annotation score}.
+
+\begin{table}[htb!]
+%Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
+\begin{center}
+%\begin{tabular}{|p{3.7cm}|c|c|c|c|c|}
+\begin{tabular}{|l||r|r|r|r|r||r|r|}
+\hline
+\textit{What is happening?} & C & A & G & I & V & WAS & WAR \\
+\hline
+\hline
+Child is eating pizza. & 0.365 & 0.093 & 0.000 & 0.224 & 0.263 & 0.945 & 1 \\
+\hline
+Tommy is eating pizza. & 0.365 & 0.093 & 0.056 & 0.224 & 0.000 & 0.738 & 2 \\
+\hline
+The boy's eating his fav... & 0.000 & 0.093 & 0.056 & 0.000 & 0.000 & 0.514 & 3 \\
+\hline
+Pizza is this boy's fav... & 0.000 & 0.000 & 0.056 & 0.000 & 0.000 & 0.056 & 4 \\
+\hline
+\end{tabular}
+\caption{\label{tab:applied-weights} Example NNS responses (see Table~\ref{tab:dev-transitive}) with feature weights applied to the binary annotations, resulting in weighted annotation scores (\textit{WAS}) and a weighted annotation ranking (\textit{WAR}).}
+\end{center}
+\end{table}
+
 %or S$_{WA}$. 
-For each item, I ranked the NNS responses according to this score. I call the resulting ranking a \textbf{weighted annotation ranking}. Because these rankings are based on human annotator decisions, they can serve as a benchmark for comparing the output of an automatic scoring system, as discussed in Chapter~\ref{chap:method}.
+For each item, I rank the NNS responses according to this score. I call the resulting ranking a \textbf{weighted annotation ranking}. Because these rankings are based on human annotator decisions, they can serve as a benchmark for comparing the output of an automatic scoring system, as discussed in Chapter~\ref{chap:method}.
 
 The NS responses were also annotated for the binary features, but in the current work there is no practical use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare the holistic performance of NS and NNS participants. As shown in Table~\ref{tab:was1}, in terms of weighted annotation scores, \textit{familiar native speakers} (\textit{FNSs}; see Section~\ref{sec:participants}) outperform NNSs, who outperform \textit{crowdsourced native speakers} (\textit{CNSs}). The FNSs have the highest rate of perfect responses, the lowest rate of zero-scoring responses and the highest mean and median weighted annotation scores. Moreover, the standard deviation shows that FNSs have the least varied weighted annotation scores, which makes sense as scores for this group are heavily skewed toward the upper limit. In each of these measures, the FNSs are followed by the NNSs, then the CNSs. It should be noted that these scores cover the entire set of all responses for all items, which includes the two responses from NSs per item, whereas the NNSs provided only a single response per item.
 
@@ -452,7 +475,7 @@ Std Dev & 0.248 & 0.323 & 0.226 & 0.312 \\
 \end{center}
 \end{table*}
 
-The relative performance of these three groups has important implications for how this data is used and how data for related purposes might be collected in the future. Because my work is geared toward communicative applications like intelligent computer-assisted language learning (ICALL) rather than grammatical error correction or placement testing, the models I use must be flexible enough to process NNS responses without heavily penalizing them for minor issues in form or pragmatics. Models built only from FNS responses would be overfitted to the near-perfect language usage of the FNS group. Models built from the slightly noisier CNS responses are preferable for my purposes. In effect, they will allow for more of the variations in form and usage that we see among the NNS responses. In other words, an FNS-based model will accurately identify those responses that closely match a limited set of well-formed possibilities, but it will harshly penalize minor deviations, resulting in scores that tend toward the high and low ranges. A CNS-based model will be less discriminatory; slight deviations from ideal, ``native-like'' possibilities will be penalized less harshly, and scores will be distributed more evenly across the range from 0.0 to 1.0.
+The relative performance of these three groups has important implications for how this data is used and how data for related purposes might be collected in the future. Because my work is geared toward communicative applications like intelligent computer-assisted language learning (ICALL) rather than grammatical error correction or placement testing, the models I use must be flexible enough to process NNS responses without heavily penalizing them for minor issues in form or pragmatics. For my purposes, models built only from FNS responses would be overfitted to the near-perfect language usage of the FNS group. Models built from the slightly noisier CNS responses are preferable for my purposes. In effect, they will allow for more of the variations in form and usage that we see among the NNS responses. In other words, an FNS-based model will accurately identify those responses that closely match a limited set of well-formed possibilities, but it will harshly penalize minor deviations, resulting in scores that tend toward the high and low ranges. A CNS-based model will be less discriminatory; slight deviations from ideal, ``native-like'' possibilities will be penalized less harshly, and scores will be distributed more evenly across the range from 0.0 to 1.0.
 
 Due to the sparsity of the FNS data, it is discussed in this chapter but not used to train models and evaluate NNS responses. Except where noted, the NS data used throughout this dissertation is the CNS data. With more data from this group, it is possible to break down the CNS metrics seen in Table~\ref{tab:was1} for a more granular look, as shown in Table~\ref{tab:was2}.
 
@@ -484,7 +507,7 @@ Std Dev  & 0.286 & 0.340 & 0.315 & 0.330 & 0.319 & 0.330 & 0.320  \\
 \end{center}
 \end{table*}
 
-These observations strengthen my conviction that CNS-based scoring models are preferable for my approach, while higher-quality, more uniform FNS-based scoring models would be preferable for stricter contexts like language assessment or placement testing. Naturally, the best way to score NNS responses would be to use models trained on NNS responses. However, these responses would need to be validated or classified in some way by annotators, which would require developing new annotation guidelines. The idea is also counter to the motivations behind my work, because it means new items would require manual annotation by experts in order to train a scoring model, which places a greater burden on educators or researchers who might follow my approach. Ideally, a system could train an initial model based on unannotated CNS responses; after scoring some NNS responses, it could then add examples of the highest scoring NNS responses to the training data and retrain iteratively---an approach known as self-training. I do not explore the use of NNS responses as training data, but future work to do so can build on the work here.
+These observations strengthen my conviction that CNS-based scoring models are preferable for my approach, while higher-quality, more uniform FNS-based scoring models would be preferable for stricter contexts like language assessment or placement testing. Naturally, the best way to score NNS responses would be to use models trained on NNS responses. However, these responses would need to be validated or classified in some way by annotators, which would require developing new annotation guidelines. The idea is also counter to the motivations behind my work, because it means every new item would require manual annotation by experts in order to train a scoring model, which places a greater burden on educators or researchers who might follow my approach. Ideally, a system could train an initial model based on unannotated CNS responses; after scoring some NNS responses, it could then add examples of the highest scoring NNS responses to the training data and retrain iteratively---an approach known as self-training. I do not explore the use of NNS responses as training data, but future work to do so can build on the work here.
 
 
 

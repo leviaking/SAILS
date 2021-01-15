@@ -25,15 +25,20 @@
 %get spearman of XGS \& TC based ranking vs ranking via the weighted feature annotations.
 %
 \section{Introduction}
-In this chapter, I discuss my approach to rating responses automatically, a process which should approximate the benchmark rankings described in The method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own earlier attempts. In this chapter, I summarize this work and explain the current method.
+In this chapter, I explain my system for rating and ranking responses automatically, where the goal is to approximate the benchmark rankings described in Chapter~\ref{chap:annotation}. 
+The data-driven method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own previous rule-based method. In this chapter, I briefly summarize this earlier study and the lessons learned there, then lay out the current approach.
 
-In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
+In short, my first approach was heavily rule-based and relied on strict matching with a pre-established set of acceptable responses. This found moderate success, but lead to the current approach, which is data-driven and relies on more flexible methods of comparison. 
+
+%In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
-\section{First approaches: Rule based semantic triple matching}
+\section{Previous approach: Rule-based semantic triple matching}
 \label{sec:first-approaches}
 %% I feel like this needs some kind of tldr up front...
-This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussion. Like the current research, my previous work focused on analyzing NNS responses to a PDT by comparison with NS responses. I did not know a priori if such a task would be within reach for a single researcher using off the shelf tools, so my initial work sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
+This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussions.
+
+Like the current research, my previous work focused on analyzing English non-native speaker (NNS) responses to a PDT by comparison with (native speaker) NS responses. I was initially unsure if such a task would be within reach for a single researcher using off-the-shelf tools, so this study sought to uncover challenges and determine whether variation in the form and content of responses could be manageable.
 
 %Research in SLA often
 %relies on the ability of task design to induce particular linguistic
@@ -52,22 +57,26 @@ This section summarizes relevant work first presented in \citet{king:dickinson:1
 %response should contain is limited to the information contained in the
 %image. Relatedly, particularly simple images should restrict elicited
 %responses to a tight range of expected contents.
-%
-I knew this would require some constraint of the responses, and without a suitable dataset available, I decided to develop my own. This research is motivated by a desire to see intelligent computer-assisted language learning (ICALL) applications move toward natural communication in game-like visual contexts, so I determined that a picture description task (PDT) would produce a fitting dataset. Research in second language acquisition (SLA) often relies on the
-ability of task design to induce particular linguistic behavior
-\citep{skehan1998assessing}, and the PDT should induce context-focused
-communicative behavior. PDT data allows one to investigate
-pure interlanguage without the influence of verbal prompts and shows
-learner language being used to convey meaning and not just manipulate forms.
-I knew that I would be relying on some kind of rule based approach for extracting \textit{verb(subject,object)} triples from syntactic dependency parses. Thus, for this experiment, I chose or developed each of the visual stimuli because it presents an event that I believe to be transitive in nature and likely to elicit responses with an unambiguous subject, verb and
-object, thereby imposing some restrictions on form and content.
+
+\subsection{Rule-based matching method}
+\label{sec:rule-method}
+
+My earlier method was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text (citations XYZ)\lk{XYZ}. My idea was to extract a \textit{verb(subj,obj)} triple from each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be ``correct,'' while a non-match would be ``incorrect.''
+%This research is motivated by a desire to see intelligent computer-assisted language learning (ICALL) applications move toward natural communication in game-like visual contexts, so I determined that a picture description task (PDT) would produce a fitting dataset. Research in second language acquisition (SLA) often relies on the
+%ability of task design to induce particular linguistic behavior
+%\citep{skehan1998assessing}, and the PDT should induce context-focused
+%communicative behavior. PDT data allows one to investigate
+%pure interlanguage without the influence of verbal prompts and shows
+%learner language being used to convey meaning and not just manipulate forms.
+
+For these experiments, I chose or developed PDT images that present an event that I believed to be transitive in nature and likely to elicit responses with an unambiguous subject, verb and object.
 
 \begin{figure}[htb!]
 %[width=0.8\columnwidth]
 \begin{center}
 \begin{tabular}{|c|}
 \hline
-\includegraphics[width=0.7\columnwidth]{figures/exampleprompt.jpg}\\
+\includegraphics[width=0.55\columnwidth]{figures/exampleprompt.jpg}\\
 \hline
 \textbf{Response (L1)} \\
 \hline
@@ -81,115 +90,93 @@ The painter is painting a woman's paint. (Spanish)\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Example item and NNS responses}
+\caption{Example item and NNS responses from previous study.}
 \label{fig:example-picture}
 \end{figure}
 
-The PDT consists of 10 items (8 line drawings and 2 photographs) intended to elicit a single sentence each; an example is given in Figure~\ref{fig:example-picture}. Participants
-were asked to view the image and describe the action in either past or present tense. Responses were typed by the participants themselves in a computer lab with spell checking disabled.
-I collected responses from 53 participants for a total of 530 sentences. There were 14 NSs (non-linguist university and graduate students) and 39 NNSs (university students enrolled in English as a Second Language courses).
-\subsection{Method}
-\label{sec:method}
+The PDT consisted of 10 items (8 line drawings and 2 photographs) intended to elicit a single sentence each; an example is given in Figure~\ref{fig:example-picture}. Participants were asked to view the image and ``describe the action in either past or present tense.'' Responses were typed by the participants themselves in a computer lab with spell checking disabled.
+I collected responses from 53 participants for a total of 530 sentences. There were 14 NSs (non-linguistics undergraduate and graduate students) and 39 NNSs (university students enrolled in English as a Second Language courses).
 
-My process in this initial work was to parse a NNS sentence into a dependency representation
-(section~\ref{sec:syntactic-form})
-and then extract a simple semantic
-form from this parse
-(section~\ref{sec:semantic-form})
-to compare to a set of gold standard (GS) semantic forms similarly derived from the NS responses.
+My process was to parse a NNS sentence into a dependency representation
+%(section~\ref{sec:syntactic-form})
+and then extract and lemmatize a semantic triple from this parse
+%(section~\ref{sec:semantic-form})
+to compare to a set of gold standard semantic triples similarly derived from the NS responses. As in my current research, I used the Stanford Parser for this task, trained on the Penn Treebank \citep{demarneffe:ea:06, klein:manning:03}.\footnote{\url{http://nlp.stanford.edu/software/lex-parser.shtml}} 
 
-\subsection{Obtaining a syntactic representation}
-\label{sec:syntactic-form}
-Because dependency parsing focuses on identifying dependency
-relations, rather than constituents or phrase structure, it clearly
-labels the subject, verb and object of a sentence, which can then map
-to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In these experiments, I took a na\"ive approach in which subject, verb and
-object were considered sufficient for deciding whether or not a
-response accurately describes the visual prompt.
-
-As in my current research, I used the Stanford Parser for this task, trained on the Penn Treebank 
-\citep{demarneffe:ea:06, 
-klein:manning:03}.\footnote{\url{http://nlp.stanford.edu/software/lex-parser.shtml}} 
-%
-Using the parser's options, I set the output to be Stanford typed
-dependencies, a set of labels for dependency relations. The Stanford
-parser has a variety of options for the specific
-ouput, e.g., how one wishes to treat prepositions
-\citep{defmarneffe:manning:12}.  I used only two non-default parser options ({\tt
-  CCPropagatedDependencies} and {\tt CCprocessed}\footnote{\url{http://nlp.stanford.edu/software/dependencies_manual.pdf}}) in order to:
-%
-1) omit prepositions and conjunctions from the sentence text and
-instead add the word to the dependency label between content words;
-and 2) propagate relations across conjunctions.  These decisions
-are important to consider for any semantically-informed processing of
-learner language.
-
-To see the impetus for removing prepositions, consider the learner
-example in Figure~\ref{fig:prep-dependency}, where the preposition \textit{with} is
-relatively unimportant to collecting the meaning.  Additionally,
-learners often omit, insert, or otherwise use the wrong preposition
-\citep{chodorow:et:al:07}.  The default parser would present a
-\texttt{prep} relation between \textit{played} and \textit{with},
-obscuring what the object is; with the options set as above, however,
-the dependency representation folds the preposition into the label
-(\texttt{prep\_with}), instead of keeping it in the parsed string, as
-shown in Figure~\ref{fig:prep-dependency}.
-
-\begin{figure}[htb!]
-\begin{center}
-    \begin{dependency}[arc edge,text only label,label style={above}]
-    \begin{deptext}[column sep=.5em]
-      \textit{vroot} \& The \&[1em] boy \&[1em] played \& with \& a \&[1em] ball \\
-    \end{deptext}
-    \depedge{4}{3}{nsubj}
-    \depedge[arc angle=90]{1}{4}{root}
-    \depedge{4}{7}{prep\_with}
-%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
-%    \depedge[edge style={dotted}]{3}{2}{det}
-    \depedge[arc angle=35]{7}{6}{det}
-    \depedge{3}{2}{det}
-  \end{dependency}
-\end{center}
-\caption{Dependency parse showing collapsed preposition dependencies.}
-\label{fig:prep-dependency}
-\end{figure}
-
-\lk{it may be worthwhile to add the conll parse for this example so it's clear how these graphs come about}
-This is a lenient approach to prepositions, as prepositions
-are not without semantic meaning---e.g., \textit{the boy played in a
-  ball} means something quite different from the \textit{with} example.  However, this option makes it moderately easier to compare the meaning to an expected semantic form (e.g., \textit{play(boy,ball)}).
-
-As for propagating relations across conjunctions, this also simplifies the representation somewhat and makes it easier to connect verbs and their arguments, as needed for the semantic
-form used in comparisons. For a conjunction like \textit{cats and dogs}, for example, the default settings would produce \texttt{cc(cats, and)} and \texttt{conj(cats, dogs)}, but the chosen settings would collapse this into \texttt{conj\_and(cats, dogs)}, omitting the dependency that merely labels a conjunction relation between the first conjunct and the conjunction.
-
-Given the rule based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces
-noun phrases. 
-
-\subsection{Obtaining a semantic representation}
-\label{sec:semantic-form}
-
-\subsubsection{Sentence types}
-
-I categorized the sentences in the corpus into 12 types, shown in
+I manually categorized the 530 sentences in the dataset into 11 types plus one catch-all category, as shown in
 Table~\ref{tab:sentence-type}. I established these types because each
-type corresponds to a basic sentence structure and thus has consistent
+one corresponds to a basic sentence structure and thus has consistent
 syntactic features, leading to predictable patterns in the dependency
 parses.
-%We discuss the distribution of sentence types in
-%section~\ref{sec:sentence-distribution}.
 
-\subsubsection{Rules for sentence types}
 
-A sentence type indicates that the subject,
-verb, and object can be found in a particular place in the parse,
-e.g., under a particular dependency label.
-For example, for simple transitive sentences of type A,
-the words labeled {\tt nsubj}, {\tt root}, and {\tt dobj} exactly
-pinpoint the necessary information.
-Thus, the patterns for extracting semantic information---in the form
-of \textit{verb(subj,obj)} triples---reference particular Stanford
-typed dependency labels, part-of-speech (POS) tags, and interactions
-with word indices.
+%\subsection{Obtaining a syntactic representation}
+%\label{sec:syntactic-form}
+%Because dependency parsing focuses on identifying dependency
+%relations, rather than constituents or phrase structure, it clearly
+%labels the subject, verb and object of a sentence, which can then map
+%to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In these experiments, I took a na\"ive approach in which subject, verb and
+%object were considered sufficient for deciding whether or not a
+%response accurately describes the visual prompt.
+
+%
+%Using the parser's options, I set the output to be Stanford typed
+%dependencies, a set of labels for dependency relations. The Stanford
+%parser has a variety of options for the specific
+%ouput, e.g., how one wishes to treat prepositions
+%\citep{defmarneffe:manning:12}.  I used only two non-default parser options ({\tt
+%  CCPropagatedDependencies} and {\tt CCprocessed}\footnote{\url{http://nlp.stanford.edu/software/dependencies_manual.pdf}}) in order to:
+%%
+%1) omit prepositions and conjunctions from the sentence text and
+%instead add the word to the dependency label between content words;
+%and 2) propagate relations across conjunctions.  These decisions
+%are important to consider for any semantically-informed processing of
+%learner language.
+%
+%To see the impetus for removing prepositions, consider the learner
+%example in Figure~\ref{fig:prep-dependency}, where the preposition \textit{with} is
+%relatively unimportant to collecting the meaning.  Additionally,
+%learners often omit, insert, or otherwise use the wrong preposition
+%\citep{chodorow:et:al:07}.  The default parser would present a
+%\texttt{prep} relation between \textit{played} and \textit{with},
+%obscuring what the object is; with the options set as above, however,
+%the dependency representation folds the preposition into the label
+%(\texttt{prep\_with}), instead of keeping it in the parsed string, as
+%shown in Figure~\ref{fig:prep-dependency}.
+%
+%\begin{figure}[htb!]
+%\begin{center}
+%    \begin{dependency}[arc edge,text only label,label style={above}]
+%    \begin{deptext}[column sep=.5em]
+%      \textit{vroot} \& The \&[1em] boy \&[1em] played \& with \& a \&[1em] ball \\
+%    \end{deptext}
+%    \depedge{4}{3}{nsubj}
+%    \depedge[arc angle=90]{1}{4}{root}
+%    \depedge{4}{7}{prep\_with}
+%%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%%    \depedge[edge style={dotted}]{3}{2}{det}
+%    \depedge[arc angle=35]{7}{6}{det}
+%    \depedge{3}{2}{det}
+%  \end{dependency}
+%\end{center}
+%\caption{Dependency parse showing collapsed preposition dependencies.}
+%\label{fig:prep-dependency}
+%\end{figure}
+%
+%%\lk{it may be worthwhile to add the conll parse for this example so it's clear how these graphs come about}
+%This is a lenient approach to prepositions, as prepositions
+%are not without semantic meaning---e.g., \textit{the boy played in a
+%  ball} means something quite different from the \textit{with} example.  However, this option makes it moderately easier to compare the meaning to an expected semantic form (e.g., \textit{play(boy,ball)}).
+%
+%As for propagating relations across conjunctions, this also simplifies the representation somewhat and makes it easier to connect verbs and their arguments, as needed for the semantic
+%form used in comparisons. For a conjunction like \textit{cats and dogs}, for example, the default settings would produce \texttt{cc(cats, and)} and \texttt{conj(cats, dogs)}, but the chosen settings would collapse this into \texttt{conj\_and(cats, dogs)}, omitting the dependency that merely labels a conjunction relation between the first conjunct and the conjunction.
+
+%Given the rule-based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces noun phrases. 
+
+%\subsection{Obtaining a semantic representation}
+%\label{sec:semantic-form}
+%
+%\subsubsection{Sentence types}
 
 \begin{table*}[htb!]
 \begin{center}
@@ -230,15 +217,68 @@ Type & Description & Example & NS & NNS \\
 \label{tab:sentence-type}
 \end{table*}
 
-More complicated sentences or those containing common learner errors
-(e.g., omission of the copula \textit{be}) required slightly more
-complicated extraction rules, but, since this work examined only transitive
-verbs, these still boiled down to identifying the
-sentence type and extracting the appropriate triple.  This was accomplished by
-arranging a small set of binary features into a decision tree to
-determine the sentence type, as shown in
-Figure~\ref{fig:decision-tree}.
+%\subsubsection{Rules for sentence types}
 
+A sentence type indicates that the subject,
+verb, and object can be found in a consistent place in the parse,
+e.g., under a particular dependency label.
+For example, for simple transitive sentences (type \textit{A} in Table~\ref{tab:sentence-type}),
+the words labeled {\tt nsubj}, {\tt root}, and {\tt dobj} 
+pinpoint the necessary information.
+Thus, the patterns for extracting semantic information---in the form
+of \textit{verb(subj,obj)} triples---reference particular Stanford
+typed dependency labels, part-of-speech (POS) tags, and locations
+relative to word indices (see Figure~\ref{fig:conll}).
+
+\begin{figure}[htb!]
+\begin{center}
+\begin{tabular}{|C{4em}|C{5em}|C{4em}|C{4em}|C{4em}|}
+\hline
+\textbf{Index} & \textbf{Word} & \textbf{POS} & \textbf{Head} & \textbf{Label} \\
+\hline
+0 & \textit{root} & ROOT & 0 & root \\
+\hline
+1 & the & DET & 2 & det \\
+\hline
+2 & boy & NN & 4 & nsubj \\
+\hline
+3 & is & VBZ & 4 & aux \\
+\hline
+4 & kicking & VBG & 0 & root \\
+\hline
+5 & the & DT & 6 & det \\
+\hline
+6 & ball & NN & 4 & dobj \\
+\hline
+\hline
+    \multicolumn{5}{|c|}{\begin{dependency}[arc edge,text only label,label style={above}]
+    \begin{deptext}[column sep=.5em]
+      ROOT \& DET \&[1em] NN \& VBZ \&[1em] VBG \& DET \&[1em] NN \\
+      \textit{root} \& The \&[1em] boy \& is \&[1em] kicking \& the \&[1em] ball \\
+    \end{deptext}
+    \depedge[arc angle=90]{5}{3}{nsubj}
+    \depedge{5}{4}{aux}
+    \depedge[arc angle=92]{1}{5}{root}
+    \depedge[arc angle=80]{5}{7}{dobj}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+    \depedge[arc angle=35]{7}{6}{det}
+    \depedge{3}{2}{det}
+  \end{dependency}} \\
+\hline
+\end{tabular}
+\end{center}
+%\caption{The dependency parse of an example NNS response in CoNLL\footnote{Standard dependency parse format established by the Conference on Computational Natural Language Learning (CoNLL).} format and the corresponding visual representation.}
+\caption{The dependency parse of an example NNS response in a standard format (CoNLL) and the corresponding visual representation.}
+\label{fig:conll}
+\end{figure}
+
+%More complicated sentences or those containing common learner errors
+%(e.g., omission of the copula \textit{be}) required slightly more
+%complicated extraction rules, but, since this work examined only transitive
+%verbs, these still boiled down to identifying the
+%sentence type and extracting the appropriate triple.
+Determining the sentence type is accomplished by arranging a small set of binary decisions into a tree, as shown in Figure~\ref{fig:decision-tree}. This decision tree checks for the presence of various dependency labels. The extraction rules for the particular sentence type are then applied to obtain the semantic triple. Finally, for each NNS response, the resulting triple was checked against the gold standard list of NS triples. Ideally, each acceptable response should find a match, and unacceptable responses should not.
 
 \begin{figure*}[htb!]
 \begin{center}
@@ -305,303 +345,59 @@ Figure~\ref{fig:decision-tree}.
 ]
 \end{tikzpicture}
 \end{center}
-\caption{Decision tree for determining sentence type and extracting semantic information}
+\caption{Decision tree for determining sentence type and extracting semantic triple}
 \label{fig:decision-tree}
 \end{figure*}
 
-To illustrate, consider the process for the example in Figure~\ref{fig:F2-dependency}.  The
-sentence is passed through the parser to obtain the dependency parse shown.
-The parsed sentence then moves to the
-decision tree shown in Figure~\ref{fig:decision-tree}.
-At the top of the tree, the sentence is checked for an {\tt expl}
-(expletive) label; having none, it moves rightward to the {\tt
-  nsubjpass} (noun subject, passive) node. Because a {\tt
-  nsubjpass} label is found, the sentence moves leftward to the {\tt agent}
-node. This label is also found, and because the sentence has reached a terminal node, it is labeled as a type F2 sentence.
+%To illustrate, consider the process for the example in Figure~\ref{fig:F2-dependency}.  The
+%sentence is passed through the parser to obtain the dependency parse shown.
+%The parsed sentence then moves to the
+%decision tree shown in Figure~\ref{fig:decision-tree}.
+%At the top of the tree, the sentence is checked for an {\tt expl}
+%(expletive) label; having none, it moves rightward to the {\tt
+%  nsubjpass} (noun subject, passive) node. Because a {\tt
+%  nsubjpass} label is found, the sentence moves leftward to the {\tt agent}
+%node. This label is also found, and because the sentence has reached a terminal node, it is labeled as a type F2 sentence.
 %
-%\begin{exe}
-%  \ex\label{ex:F2-type}A bird is shot by a man.
-%\end{exe}
+%
+%With the sentence now typed as F2, specific F2 extraction
+%rules are applied. The logical subject is taken from under the {\tt agent} label,
+%the verb from {\tt root}, and the logical object from {\tt nsubjpass},
+%to obtain \textit{shot(man,bird)}, which can be lemmatized to
+%\textit{shoot(man,bird)}. 
+%%Very little effort goes into this process:
+%%the parser is pre-built; the decision tree is small; and the
+%%extraction rules are minimal.
+%
+%This much is possible with relatively little effort in part due to the constraints in the
+%pictures.  For figure~\ref{fig:example-picture}, for example,
+%\textit{the artist}, \textit{the man in the beret}, and \textit{the
+%  man} are all acceptable subjects, whereas if there were multiple men
+%in the picture, \textit{the man} would not be specific enough.
+%%In future work, we expect to relax such constraints on image contents
+%%by including rules to handle relative clauses, adjectives and other
+%%modifiers in order to distinguish between references to similar
+%%elements, e.g., 
+%%\textit{a man shooting a bird} vs. \textit{a man reading the
+%%  newspaper}.
 
-\begin{figure}[htb!]
-\begin{center}
-    \begin{dependency}[arc edge,text only label,label style={above}]
-    \begin{deptext}[column sep=.5em]
-      \textit{vroot} \& A \& bird \& is \&[2em] shot \& by \& a \&[1em] man \\
-    \end{deptext}
-    \depedge[arc angle=90]{1}{5}{root}
-    \depedge[edge style={dotted}]{3}{2}{det}
-    \depedge[arc angle=90]{5}{3}{nsubjpass}
-    \depedge[arc angle=30]{5}{4}{auxpass}
-    \depedge{5}{8}{agent}
-    \depedge[arc angle=40,edge style={dotted}]{8}{7}{det}
-  \end{dependency}
-\end{center}
-\caption{The dependency parse of an example NNS response.}
-\label{fig:F2-dependency}
-\end{figure}
-
-With the sentence now typed as F2, specific F2 extraction
-rules are applied. The logical subject is taken from under the {\tt agent} label,
-the verb from {\tt root}, and the logical object from {\tt nsubjpass},
-to obtain \textit{shot(man,bird)}, which can be lemmatized to
-\textit{shoot(man,bird)}. 
-%Very little effort goes into this process:
-%the parser is pre-built; the decision tree is small; and the
-%extraction rules are minimal.
-
-This much is possible with relatively little effort in part due to the constraints in the
-pictures.  For figure~\ref{fig:example-picture}, for example,
-\textit{the artist}, \textit{the man in the beret}, and \textit{the
-  man} are all acceptable subjects, whereas if there were multiple men
-in the picture, \textit{the man} would not be specific enough.
-%In future work, we expect to relax such constraints on image contents
-%by including rules to handle relative clauses, adjectives and other
-%modifiers in order to distinguish between references to similar
-%elements, e.g., 
-%\textit{a man shooting a bird} vs. \textit{a man reading the
-%  newspaper}.
-
-\subsection{Evaluation}
-\label{sec:evaluation}
+\subsection{Rule-based matching results}
+\label{sec:rule-results}
 
 Evaluating this work required addressing two major questions.  First,
 how accurately does this approach extract semantic information from potentially
-innovative sentences (section~\ref{sec:eval:extraction})?  Due to the
-simple structures of the sentences
-(section~\ref{sec:sentence-distribution}), this simple system performs moderately well.
-Secondly, how many semantic forms does one need in
-order to capture the variability in meaning in learner sentences
-(section~\ref{sec:eval:coverage})? I operationalized this second
-question by asking how well the set of native speaker semantic forms
-models a gold standard, with the intuition that a language is largely defined
-by native speaker usage, so their answers can serve as targets.  As we
-will see, this is a na\"ive view.
-\subsection{Basic distribution of sentences}
-\label{sec:sentence-distribution}
+innovative sentences?
+%Due to the simple structures of the sentences (section~\ref{sec:sentence-distribution}), this simple system performs moderately well.
+Secondly, how many semantic forms does one need in order to capture the variability in meaning in NNS sentences? I operationalized this second question by asking how well a given set of NS semantic forms models a gold standard.
+% (section~\ref{sec:eval:coverage})?
 
-\begin{table*}[htb!]
-\begin{center}
-\setlength{\tabcolsep}{.3em}
-\begin{tabular}{|l|l|l|cc|r|}
-  \hline
-  & & Err. type & \multicolumn{2}{c|}{Example} &  \\
-  & & (Tot. resp.) & Sentence & Triple & Count (\%)\\
-  \hline
-  \hline
-  \multirow{8}{*}{\begin{sideways}Triple error\end{sideways}} &
-  \multirow{4}{*}{\begin{sideways}NNS\end{sideways}} & Speaker & A man swipped leaves. & leaves(swipped,man) & 16 (4.1\%) \\
+An accurate extraction was defined as one in which the extraction rules chose the desired subject, verb, and object given the sentence at hand and without regard to the PDT image. Accuracy was 92.3\% for NNS responses and 92.9\% for NS responses. I attribute the high extraction scores to the constrained nature of the task and the relatively small range of sentence types it elicits. As seen in Table~\ref{tab:sentence-type}, only three sentence types account for more than 90\% of all responses. 
 
-  \cline{3-6}
-  & & Parser & Two boys boat. & NONE(boys,NONE) & 5 (1.3\%) \\
-  \cline{3-6}
-  & & \multirow{2}{*}{Extract} & A man is gathering & \multirow{2}{*}{gathering(man,lots)} & \multirow{2}{*}{9 (2.3\%)} \\
-  & & & lots of leafs. & & \\
-  \cline{3-6}
-  & & (390) & & & \textbf{30 (7.7\%)} \\
- \cline{2-6}
- & \multirow{4}{*}{\begin{sideways}NS\end{sideways}} & Speaker & (\textit{None}) & & 0 (0\%) \\
- \cline{3-6}
- & & \multirow{2}{*}{Parser} & An old man raking & \multirow{2}{*}{leaves(man,path)} & \multirow{2}{*}{2 (1.4\%)} \\
-  & & & leaves on a path. & & \\
- \cline{3-6}
- & & \multirow{2}{*}{Extract} & A man has shot a bird & \multirow{2}{*}{shot(bird,sky)} & \multirow{2}{*}{8 (5.7\%)} \\
- & & & that is falling from the sky. & & \\
- \cline{3-6}
- & & (140) & & & \textbf{10 (7.1\%)} \\
- \hline
- \hline
- \multirow{6}{*}{\begin{sideways}Content error\end{sideways}} & \multirow{3}{*}{\begin{sideways}NNS\end{sideways}} & \multirow{2}{*}{Spelling} & The artiest is drawing & \multirow{2}{*}{drawing(artiest,portret)} & \multirow{2}{*}{35 (9.0\%)} \\
-   & & & a portret. & & \\
-\cline{3-6}
-  & & \multirow{2}{*}{Meaning} & The woman is making & \multirow{2}{*}{making(woman,laundry)} & \multirow{2}{*}{23 (5.9\%)} \\
-& & & her laundry. & & \\
-\cline{3-6}
-  & & (390) & & & \textbf{58 (14.9\%)} \\
- \cline{2-6}
- & \multirow{3}{*}{\begin{sideways}NS\end{sideways}} & Spelling & (\textit{None}) & & 0 (0\%) \\
- \cline{3-6}
- & & \multirow{2}{*}{Meaning} & A picture is being taken & \multirow{2}{*}{taken(NONE,picture)} & \multirow{2}{*}{3 (2.1\%)} \\
-  & & & of a girl on a bike. & & \\
-
- \cline{3-6}
- & & (140) & & & \textbf{3 (2.1\%)} \\
- \hline
-\end{tabular}
-\end{center}
-\caption{Triple errors and content errors by subcategory, with error
-  rates reported (e.g., 7.7\% error = 92.3\% accuracy)}
-\label{tab:error-types}
-\end{table*}
-
-The distribution of
-sentence types is shown in Table~\ref{tab:sentence-type}, broken down
-between native speakers (NSs) and non-native speakers (NNSs).  A few
-sentence types clearly dominate here: simple
-declaratives with or without a main verb (types A and C) account for
-90.7\% of the NS forms and 84.6\% of the NNS ones.
-Adding prepositional forms (types B and D) brings the
-total to 94.3\% and 90.8\%, respectively. This suggests in a constrained dataset, a custom set of rules can provide a high degree of coverage. 
-
-\subsection{Semantic extraction}
-\label{sec:eval:extraction}
-
-For the purpose of evaluating this extraction system, I defined two
-major classes of errors. The first are \textit{triple errors},
-responses for which the system fails to extract one or more of the
-desired subject, verb, or object, based on the sentence at hand and
-without regard to the target content. Second are \textit{content
-  errors}, responses for which the system extracts the desired
-subject, verb and object, but the resulting triple does not accurately
-describe the image (i.e., is an error of the participant's). This work 
-was concerned with reducing the triple errors, as such content errors 
-are expected in NNS data, and in fact, identifying them is an important part of the overall task.  Examples are in
-Table~\ref{tab:error-types}.
-
-Triple errors are subcategorized as \textit{speaker}, \textit{parser},
-or \textit{extraction} errors, based on the earliest part of the
-process that led to the error. Speaker errors (addressed in detail in Section~\ref{sec:spellingcorrection}) typically involve
-misspellings in the original sentence, leading to an incorrect POS tag
-and parse. Parser errors involve a correct sentence parsed incorrectly
-or in such a way as to indicate a different meaning from the one
-intended; an example is given in
-Figure~\ref{fig:parser-error}. Extraction errors involve a failure of
-the extraction script to find one or more of the desired subject, verb
-or object in a correct sentence. These typically involve more
-complex sentence structures such as conjoined or embedded clauses.
-
-\begin{figure}[htb!]
-\begin{center}
-\begin{tabular}{|c|}
-\hline
-    \begin{dependency}[arc edge,text only label,label style={above}]
-    \begin{deptext}[column sep=.5em]
-      \textit{vroot} \& Two \&[1em] boys \&[1em] boat \\
-      				\&	CD \&	NNS		\&	NN	\\
-    \end{deptext}
-    \depedge{3}{2}{num}
-    \depedge[arc angle=90]{1}{3}{root}
-    \depedge{3}{4}{dep}
-  \end{dependency} \\
-  NONE(boys,NONE) \\
-\hline
-    \begin{dependency}[arc edge,text only label,label style={above}]
-    \begin{deptext}[column sep=.5em]
-      \textit{vroot} \& Two \&[1em] boys \&[1em] boat \\
-      				\&	CD \&	NNS		\&	VBP	\\
-    \end{deptext}
-    \depedge{3}{2}{num}
-    \depedge{1}{4}{root}
-    \depedge{4}{3}{nsubj}
-  \end{dependency} \\
-  boat(boys,NONE) \\
-\hline
-\end{tabular}
-\end{center}
-\caption{A parser error leading to a triple error (top), and the
-  desired parse and triple (bottom).}
-\label{fig:parser-error}
-\end{figure}
-
-As shown in table~\ref{tab:error-types}, we obtain 92.3\% accuracy on
-extraction for NNS data and roughly the same for NS data, 92.9\%.
-However, many of the errors for NNSs involve misspellings, while for
-NSs a higher percentage of the extraction errors stem only from our
-hand-written extractor, due to native speakers using more complex
-structures.  For a system interacting with learners, spelling errors
-are thus more of a priority \citep[cf.][]{hovermale:08}.
-
-Content errors are subcategorized as \textit{spelling} or
-\textit{meaning} errors. Spelling errors involve one or more of the
-extracted subject, verb or object being misspelled severely enough
-that the intended spelling cannot be discerned. A spelling error here
-is unlike those included in \textit{speaker} errors above in that it
-does not result in downstream errors and is a well-formed triple
-except for a misspelled target word. Meaning errors involve an
-inaccurate word within the triple.
-This includes misspellings that result in a real but unintended word
-(e.g., \textit{shout(man,bird)} instead of \textit{shoot(man,bird)}).
-
-The goal of a system is to identify the 14.9\% of NNS sentences
-which are content errors; in turn, this could be used to provide explicit feedback or, for example, change the direction of the story in a language tutoring application.  Currently, without manual arbitration, the 7.7\% triple errors would also be grouped into this set of triple errors, showing
-the need for further extraction improvements.  Also notable is that
-three content errors were encountered among the NS responses. All
-three were meaning errors involving some meta-description of the image
-prompt rather than a direct description of the image contents, e.g.,
-\textit{A picture is being taken of a girl on a bike} vs. \textit{A
-  girl is riding a bike}.
-
-\subsection{Semantic coverage}
-\label{sec:eval:coverage}
-
-\begin{table*}[htb!]
-\begin{center}
-\begin{tabular}{|c||c|c||c|c|c||cc|cc|}
-\hline
-  & & & & & & \multicolumn{2}{c|}{Coverage} & \multicolumn{2}{c|}{Accuracy}\\
- Item & NS & NNS & TP & TN & FN & Ty. & Tok. & Ty. & Tok.\\
-\hline
-\hline
-1 & 5 & 13 & 3 & 1 & 9 & 3/12 & 23/38 & 4/13 & 24/39 \\%done
-\hline
-2 & 6 & 13 & 3 & 4 & 6 & 3/9 & 15/28 & 7/13 & 19/32 \\%done
-\hline
-3 & 6 & 17 & 5 & 5 & 7 & 5/12 & 23/30 & 10/17 & 28/35 \\%done
-\hline
-4 & 4 & 6 & 2 & 0 & 4 & 2/6 & 32/37 & 2/6 & 32/37 \\%done
-\hline
-5 & 4 & 24 & 1 & 8 & 15 & 1/16 & 3/25 & 9/24 & 11/33 \\%done
-\hline
-6 & 8 & 22 & 3 & 5 & 14 & 3/17 & 16/32 & 8/22 & 21/37 \\%done
-\hline
-7 & 7 & 23 & 5 & 4 & 14 & 5/19 & 14/35 & 9/23 & 18/39 \\%done
-\hline
-8 & 6 & 23 & 5 & 7 & 11 & 5/16 & 10/30 & 12/23 & 17/37 \\%done
-\hline
-9 & 7 & 33 & 3 & 12 & 18 & 3/21 & 3/23 & 15/33 & 15/35 \\%done
-\hline
-10 & 5 & 20 & 2 & 12 & 6 & 2/8 & 15/24 & 14/20 & 27/36 \\%done
-\hline
-\hline
-Total & 58 & 194 & 32 & 58 & 104 & 32/136 & 154/302 & 90/194 & 212/360\\%done
-      &    &     &    &    &     & 23.5\% & 51.0\% & 46.4\% & 58.9\%\\%done
-\hline
-\end{tabular}
-\end{center}
-\caption{Matching of semantic triples: \emph{NS}/\emph{NNS}: number of
-  unique triples for NSs/NNSs. Comparing NNS triples to NS triples,
-  \emph{TP}: number of true positives (types); \emph{TN}: number of
-  true negatives; \emph{FN}: number of false negatives.
-  \emph{Coverage} for \emph{Ty}pes and \emph{Tok}ens =
-  $\frac{TP}{TP+FN}$; \emph{Accuracy} for \emph{Ty}pes and
-  \emph{Tok}ens = $\frac{TP+TN}{TP+TN+FN}$}
-
-\label{tab:triple-coverage}
-\end{table*}
-
-Given a fairly accurate extraction system, as reported above, we now
-turn to evaluating how well a gold standard represents unseen data, in
-terms of semantic matching.  To measure coverage, we take the
-intuition that a language is defined by native speaker usage, so their
-answers can serve as targets, and use NS triples as our gold standard. The result is more a measure of nativelikeness than accuracy, which admittedly was a limitation to this approach.
-
-The set of NS responses was manually arbitrated to remove any
-unacceptable triples (both \textit{triple} and \textit{content}
-errors), and the remaining set of lemmatized triples was taken as a gold standard
-set for each item.
-
-Similarly, with the focus on coverage, the NNS triples were amended to
-remove any triple errors.
-From the remaining NNS triples, I called an appropriate NNS triple
-found in the gold standard set a \textbf{true positive (TP)} (i.e., a
-correct match), and an appropriate NNS triple \textit{not found} in
-the gold standard set a \textbf{false negative (FN)} (i.e., an
-incorrect non-match), as shown in Table~\ref{tab:contingencies}.  I
-used standard terminology here (TP, FN), but because this was an investigation of what \emph{should be} in the gold standard, these were considered
+Assessing the coverage of NNS forms required first manually determining which extracted triples \textit{should} be matched given a hypothetical perfect gold standard set of triples. To separate the problem of coverage from extraction, I removed any incorrectly extracted triples from the NNS set and the NS gold standard.
+ 
+I called an appropriate NNS triple found in the gold standard set a \textbf{true positive (TP)} (i.e., a correct match), and an appropriate NNS triple \textit{not found} in the gold standard set a \textbf{false negative (FN)} (i.e., an incorrect non-match), as shown in Table~\ref{tab:contingencies}. I used standard terminology here (TP, FN), but because this was an investigation of what \emph{should be} in the gold standard, these were considered
 false negatives and not false positives.  To address the question of
-how many (NS) sentences are needed to obtain good coverage, I defined
-\textbf{coverage} (=recall) as \textit{TP/(TP+FN)}. As shown in
-Table~\ref{tab:triple-coverage}, I reported 23.5\% coverage for unique triple
+how many (NS) sentences are needed to obtain good coverage, \textbf{coverage} was defined as recall: \textit{TP/(TP+FN)}. I reported 23.5\% coverage for unique triple
 types and 51.0\% coverage for triple tokens.
 
 \begin{table}[htb!]
@@ -627,147 +423,76 @@ I defined an inappropriate NNS triple (i.e., a content error)
 \textit{not found} in the gold standard set as a \textbf{true negative
   (TN)} (i.e., a correct non-match). \textbf{Accuracy} based on this
 gold standard---assuming perfect extraction---is defined as
-\textit{(TP+TN)/(TP+TN+FN)}.\footnote{Accuracy is typically defined as
-  (TP+TN)/(TP+TN+FN+FP), but false positives (FPs) are cases where an
-  incorrect learner response was in the gold standard; by removing errors from the NS responses, we prevent this scenario (i.e., FP=0).} I reported 46.4\% accuracy for types and 58.9\% accuracy for tokens.
+\textit{(TP+TN)/(TP+TN+FN)}.\footnote{Accuracy is typically defined as (TP+TN)/(TP+TN+FN+FP), but false positives (FPs) are cases where an incorrect NNS response was in the gold standard; by removing errors from the NS responses, I prevented this scenario (i.e., FP=0).} I reported 46.4\% accuracy for types and 58.9\% accuracy for tokens.
 
-The immediate lesson taken from this was: given a strict matching approach, NS data alone may not make a sufficient gold standard, in that many correct NNS answers are not counted as
-correct.  However, there are a couple of issues to consider here.
+The immediate lesson taken from this was: given a strict matching approach, NS data alone does not make a sufficient gold standard, in that many correct NNS answers are not counted as correct. I explored expanding the set of NS triples by separating individual subjects, verbs and objects from NS triples and recombining them into the various possible combinations. However, this lead to new problems as it generates a lot of nonsensical triples. Consider, for example, \textit{do(woman,shirt)}---an incorrect triple derived from the correct NS triples, \textit{wash(woman,shirt)} and \textit{do(woman,laundry)}. Instead, my current work has attempted to improve coverage by prompting NSs to give an initial PDT response, followed by a second alternative.
 
-First, the approach required exact matching of triples.  To maximize coverage, I considered extracting individual subjects, verbs and objects from NS
-triples and recombining them into the various possible
-\textit{verb(subj,obj)} combinations. An example of triples distribution and coverage for a
-single item, along with this recombination approach is presented in
-Table~\ref{tab:item8types}.
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|c|c|c|}
-  \hline
-  Type & NNS & NS & Coverage \\
-  \hline
-  \hline
-\textit{cut(woman,apple)} & \textit{5} & \textit{0} & \textit{(5)} \\
- \hline
- cut(someone,apple) & 4 & 2 & 4 \\
- \hline
- cut(somebody,apple) & 3 & 0 & \\
- \hline
- cut(she,apple) & 3 & 0 & \\
- \hline
- slice(someone,apple) & 2 & 5 & 2 \\
- \hline
- cut(person,apple) & 2 & 1 & 2\\
- \hline
- \textit{cut(NONE,apple)} & \textit{2} & \textit{0} & \textit{(2)} \\
- \hline
- slice(woman,apple) & 1 & 1 & 1 \\
- \hline
- slice(person,apple) & 1 & 1 & 1 \\
- \hline
- slice(man,apple) & 1 & 0 & \\
- \hline
- cut(person,fruit) & 1 & 0 & \\
- \hline
- cut(people,apple) & 1 & 0 & \\
- \hline
- cut(man,apple) & 1 & 0 & \\
- \hline
- cut(knife,apple) & 1 & 0 & \\
- \hline
- chop(woman,apple) & 1 & 0 & \\
- \hline
- chop(person,apple) & 1 & 0 & \\
- \hline
- slice(NONE,apple) & 0 & 2 & \\
- \hline
- Total  &  30 & 12 & 10 \textit{(17)} \\
- \hline
-\end{tabular}
-\end{center}
-\caption{Distribution of valid tokens across types for a single PDT item. Types in italics did not occur in the NS sample, but could be inferred to expand coverage by recombining elements of NS types that do occur.}
-\label{tab:item8types}
-\end{table}
-
-This modification was not pursued, however, because automating this recombination
-would require more sophisticated lexical knowledge to avoid adding unwanted
-triples in the gold standard set.  Consider, for example,
-\textit{do(woman,shirt)}---an incorrect triple derived from the
-correct NS triples, \textit{wash(woman,shirt)} and
-\textit{do(woman,laundry)}. Instead, my subsequent work has attempted to improve coverage by prompting NSs to give an initial PDT response, followed by a second alternative.
-
-A second issue that emerged was that, even when only examining cases
+A related concern was that, even when only examining cases
 where the meaning is literally correct, NNSs produced a wider range of
-forms to describe the prompts than NSs.  For example, for a picture
+forms to describe the prompts than NSs. For example, for a picture
 showing what NSs overwhelmingly described as a \textit{raking} action,
-many NNSs referred to a man \textit{cleaning} an area.  Literally,
-this may be true, but it does not align with a NS based GS. 
-This behavior was somewhat expected, given that learners are encouraged
+many NNSs referred to a man \textit{cleaning} an area. Literally,
+this may be true, but it does not align with a NS based gold standard. 
+This behavior was expected, given that learners are encouraged
 to use words they know to compensate for gaps in their vocabularies
-\citep{AgustinLlach2010}. This also parallels the observation in SLA research that while second
-language learners may attain native-like grammar, their ability to use
+\citep{AgustinLlach2010}. This also parallels the observation in SLA research that while second language learners may attain native-like grammar, their ability to use
 pragmatically native-like language is often much lower
 \citep{BardoviDornyei1998}. \lk{Work a D Stringer citation in here?}
-These findings highlighted the need for a more flexible approach that considers how native-like a sentence is as well as how appropriate its meaning is.
+These findings highlighted the need for a more flexible approach.
+%that considers how native-like a sentence is as well as how appropriate its meaning is.
 
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-Triple & Example sentence \\
-\hline
-\hline
-shoot(man, bird) & A man just shot a bird. \\
- \hline
-shoot(man, fowl) & The man shoots the fowl. \\
- \hline
-shoot(man, duck) & A man just shot a duck. \\
- \hline
-shoot(hunter, bird) & The hunter has shot a bird. \\
- \hline
-shoot(he, bird) & He shot the bird down! \\
- \hline
- \end{tabular}
-\end{center}
-\caption{The NS gold standard for Item 10.}
-\label{tab:item10GS}
-\end{table}
+Moreover, evaluating this strict matching approach required an annotator to decide whether a given response is correct or incorrect. Partial matching is not allowed; this is an inherent weakness of the approach, because while a complete triple gives some indication of the meaning of the sentence, any single element of the triple taken alone does not provide enough context to indicate meaning. This inflexibility means that using this approach would effectively require the manual curation of a robust gold standard set of acceptable responses, which is counter to my goal of producing an approach that can be expanded to new PDT items simply by crowdsourcing a gold standard from NSs.
 
-I followed up this work with an expanded approach that relied on language models and spell checking tools to attempt to identify and fix misspellings that lead to downstream problems \citep{king:dickinson:14}. I omit this discussion because it is not applicable to the current work; I now take a simpler approach --- respondents use spell checking during the task. This is because in most contexts where my system would be used, like a language tutoring application or game, spelling instruction is not really the goal, and a built in spell checker would likely be available. Moreover, omitting this step removes a layer of analysis (a potential source of errors), and allows the current study to focus more directly on meaning.
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|c|c|}
+%\hline
+%Triple & Example sentence \\
+%\hline
+%\hline
+%shoot(man, bird) & A man just shot a bird. \\
+% \hline
+%shoot(man, fowl) & The man shoots the fowl. \\
+% \hline
+%shoot(man, duck) & A man just shot a duck. \\
+% \hline
+%shoot(hunter, bird) & The hunter has shot a bird. \\
+% \hline
+%shoot(he, bird) & He shot the bird down! \\
+% \hline
+% \end{tabular}
+%\end{center}
+%\caption{The NS gold standard for Item 10.}
+%\label{tab:item10GS}
+%\end{table}
+
+I followed up this work with a modification of this strict matching approach that included  language models and spell checking tools to attempt to identify and fix misspellings that lead to downstream problems \citep{king:dickinson:14}. I omit this discussion because it is not applicable to the current work; I now take a simpler approach --- respondents use spell checking during the task. This is because in most contexts where my system would be used, like a language tutoring application or game, spelling instruction is not the objective, and a built-in spell checker would likely be available. Moreover, omitting this step removes a layer of analysis---and importantly, a potential source of errors---and allows the research to focus more directly on meaning.
 
 %%%% END material from Qual Paper (BEA 2013) %%%%
 
 
 %%%% BEGIN material from BEA 2016 %%%%
-\section{Recent work: More general, distance-based approaches}
+\section{Recent work: Generalized, similarity-based approaches}
 
 %%%% 2020/05/21. Resume here. %%%% 
 
-In subsequent work \citep{king:dickinson:16}, I moved towards finding a ``sweet spot'' of
-semantic analysis \citep[cf.][]{bailey:meurers:08} for
-image-based learner productions.
-In particular, using available NLP tools,
-I moved away from specific correct semantic representations and an
-exact definition of correctness, to more abstract data representations
-and more gradable notions of correctness (section~\ref{sec:ranking}).
-A benefit of more abstract representations is to allow correct
-and relevant information to be derived from a relatively small set of
-native speaker responses, as opposed to deriving them by hand, in
-addition to allowing for a range of sentence types.
+In subsequent work \citep{king:dickinson:16}, I began looking for a ``sweet spot'' of
+semantic analysis \citep[cf.][]{bailey:meurers:08} for image-based learner productions. I applied new methods to the same dataset, and the current dissertation research applies a refined version of these methods to the new dataset discussed in Chapters~\ref{chap:data} and~\ref{chap:annotation}.
+In particular, using available NLP tools, I moved away from specific correct semantic representations and an exact definition of correctness, to more abstract representations
+and more gradable notions of correctness (section~\ref{sec:ranking}). This obviates the need for a rule-based extraction of sentence elements, which must be customized for a limited range of expected sentence types. It also allows for graded scoring of results, meaning that a response is not outright rejected because only one element of a triple is not found. On the other hand, it means that the system does not provide a discrete ``acceptable'' or ``not acceptable'' decision, which means that downstream tasks like assessment, providing feedback or effecting game outcomes would require more careful consideration of what to do with the system output.
 
 I should note, in this context, that I am discussing semantic
-analysis given a GS of native sentences.  Image processing
-tasks can often rely on breaking images into semantic primitives
+analysis given a gold standard set of NS sentences.  Image processing
+tasks often rely on breaking images into semantic primitives
 \citep[see, e.g.,][and references therein]{ortiz:wolff:lapata:15}, but
-for learner data, I want to ensure that I can account not just for
+for NNS data, I want to ensure that I can account not just for
 correct semantics (the \emph{what} of a picture), but natural
 expressions of the semantics (the \emph{how} of expressing the
-content).  In other words, the goal is  to reason about meaning based on
+content).  In other words, the goal is to reason about meaning based on
 specific linguistic forms.
 
-A second issue regarding semantic analysis, beyond correctness, stems
-from using an incomplete GS. The productive nature of language means that a sentence can be expressed in countless ways, and thus a GS can never really be ``complete''. Examining the degree
-of this variability both for NSs and NNSs is necessary to determine whether a crowd-sourced GS can account for a sizable portion of test responses. Analyzing variability can also help determine the most effective parameters for an NLP system for image based responses. Additionally, it can offer insights into theoretical research on variability 
-in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consistency}).
+A second issue regarding content analysis, beyond correctness, stems
+from using an incomplete GS. The productive nature of language means that a sentence can be expressed in countless ways, and thus a GS can never really be ``complete''. Examining the degree of this variability both for NSs and NNSs is necessary to determine whether a crowd-sourced gold standard can account for a sizable portion of test responses. Analyzing variability can also help determine the most effective parameters for an NLP system for image based responses. Additionally, it can offer insights into theoretical research on variability in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consistency}).
 
 %That is, different types of image content might require
 %different mechanisms for processing.  Additionally, knowing how
@@ -828,22 +553,19 @@ in learner language (cf. \citet{ellis1987variability}, \citet{kanno1998consisten
 %not require distinguishing between between spelling and meaning
 %errors.  In the future, we plan on fine-tuning the annotation
 %criteria.
+\bigskip
+START HERE 2021/01/15
+\bigskip
 
 \subsection{Generalizing the Methods}
 \label{sec:ranking}
 
 The previous work assumed that the assessment of NNS responses
-involves determining whether the GS contains the same
+involves determining whether a gold standard set contains the same
 semantic triple that the NNS produced, i.e., whether a \textit{triple}
 is \textit{covered} or \textit{non-covered}.  In such a situation the
-GS need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples.  But
-the GS is comprised of the small set of NS responses and is thus
-incomplete---meaning that exact matching is going to miss many cases,
-and indeed in \citet{king:dickinson:13}, coverage was only at 50.8\%.  Additionally, relying on matching
-of triples limits the utility of the method to specific semantic
-requirements, namely transitive sentences.  By changing to ``bags of
-dependencies'' and tallying the counts of dependencies in the NS responses comprising the GS, I
-moved into a gradable, or ranking, approach to NNS responses.
+gold standard need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples. But the gold standard is comprised of the small set of NS responses---here, only 14---and is thus incomplete. This means that exact matching is going to miss many cases,
+and indeed as discussed in Section~\ref{sec:rule-results}, coverage was only at 51\%. Even with a much larger sample of NS responses, a gold standard will always be incomplete. Additionally, relying on matching of triples limits the utility of the method to specific semantic requirements, namely transitive sentences.  By changing to ``bags of dependencies'' and tallying the counts of dependencies in the NS responses comprising the gold standard, I moved into a gradable, or ranking, approach to NNS responses.
 
 My goal is to emphasize the degree to which a response conveys the same
 meaning as the GS, necessitating an approach which can automatically
