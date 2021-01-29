@@ -773,16 +773,16 @@ responses, a reference corpus of narrative texts would be ideal, but as no such 
 %(\param{NNSO}) and the output of a language model spelling corrector
 %(\param{NNSLM}). (The current dissertation relies on a corpus for which participants used spell checking at the time of the task, so this offline spelling correction is no longer applicable. In short, it used a spelling tool to find candidate spellings for each word in a NNS sentence, pruned the lists of candidate words by comparing against words in NS responses, formed new candidate sentences by combining candidate words, and finally chose the most likely sentence by rating each candidate with a trigram word model. I omit the exact details here for brevity, but more can be found in \cite{king:dickinson:14}).
 %
-\subsection{Results}
-%\subsubsection{Evaluation metrics}
+\subsection{Experiments and Results}
+\subsubsection{Evaluation metrics}
 \label{sec:metrics}
 
 %I ran 60 response experiments, each with different system settings
 I ran 30 response experiments, each with different system settings
 (section~\ref{sec:parameters}). Within each experiment, I ranked the 39
-scored NNS responses from least to most similar to the GS.
+scored NNS responses from least to most similar to the NS model.
 
-For assessing these settings themselves, I relied on the past annotation, which counted unacceptable responses as errors (see section~\ref{sec:rule-results}).  As the highest numerical rank indicates the greatest distance from the NS model, a good system setting should position the unacceptable responses among those with the highest rankings.
+For assessing these settings themselves, I relied on the past annotation, which counted unacceptable responses as errors (see section~\ref{sec:rule-results}).  As the lowest numerical rank indicates the greatest distance from the NS model, a good system setting should position the unacceptable responses among those with the lowest rankings.
 %Thus, I assigned each error-containing
 %response a score equal to its rank (or the average rank in the case of tied responses).
 To evaluate this discriminatory power, I used \textbf{(mean) average precision ((M)AP)}
@@ -791,7 +791,7 @@ To evaluate this discriminatory power, I used \textbf{(mean) average precision (
 \begin{table}[htb!]
 \begin{center}
 \setlength{\tabcolsep}{0.3em}
-\begin{tabular}{|r|c|l|r|}
+\begin{tabular}{|r|c|l|c|}
 \hline
 Rank & Score & Sentence & Error \\
 \hline
@@ -832,10 +832,9 @@ identified, and both are errors ($\frac{2}{2}$). At the 11th- and
 12-ranked response, precision is 1.0 ($\frac{11}{11}$) and 0.917
 (=$\frac{11}{12}$), respectively, precision dropping when the item is
 not an error.
-AP averages over the precisions for all $m$ responses ($m=39$ for our
+AP averages over the precisions for all $m$ responses ($m=39$ for the
 NNS data), as shown in (\ref{ex:ap}), with each response notated as
 $R_k$.  Averaging over all 10 items results in the Mean AP (MAP).
-
 
 %In Table~\ref{tab:i10responses-avgprec}, an excerpt of sentence
 %responses is shown for one item, ranked from lowest to highest.  To
@@ -879,56 +878,17 @@ Precision(R_k)$
 To start the search for the best system parameters, it may help to
 continue with the example in
 Table~\ref{tab:i10responses-avgprec}. The best setting, as determined by the
-MAP metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{B}),
-the spelling corrected response (\param{NNSLM}), and the full form of
-the dependencies (\param{ldh}). It ranks highest because errors are
+MAP metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{B}), and the full form of the dependencies (\param{ldh}). It ranks highest because errors are
 well separated from non-errors; the highest ranked of 17 total errors
 is at rank 19.  Digging a bit deeper, one can see in this example how
 the verb \textit{shoot} is common in all the highest-ranked cases shown
 (\#37--39), but absent from all the lowest, showing both the effect of
-the GS (as all NSs used \textit{shoot} to describe the action) and the
+the NS model (as all NSs used \textit{shoot} to describe the action) and the
 potential importance of even simple representations like lemmas.  In
-this case, the \param{ldh} representation is best, likely because the
+this case, the labeled dependency (\param{ldh}) representation is best, likely because the
 word \textit{shoot} is not only important by itself, but also in terms
 of which words it relates to, and how it relates (e.g.,
-\texttt{dobj\#bird\#shoot}).
-
-\begin{table*}
-\begin{center}
-\begin{tabular}{|l|r||l|r||l|r||l|r|}
-\hline
-\multicolumn{2}{|c||}{Approach} & \multicolumn{2}{|c||}{Term Form} & \multicolumn{2}{|c||}{Ref. Corpus (TA/TC)} & \multicolumn{2}{|c|}{NNS Source} \\
-\hline
-\hline
-0.51577 & TC & xdh & 0.51810 & Brown & 0.51534 & NNSLM & 0.51937 \\
-\hline
-0.50780 & FC & ldh & 0.51677 & WSJ & 0.50798 & NNSO & 0.49699 \\
-\hline
-0.50755 & TA & lxh & 0.51350 & & & & \\
-\hline
-0.49464 & FA & xdx & 0.49901 & & & & \\
-\hline
-& 	& ldx & 0.49352 &  &  &  & \\
-\hline
-\end{tabular}
-\caption{Approaches and parameters ranked by mean average precision for all 10 PDT items.}
-\label{tab:dist-ranked-parameters}
-\end{center}
-\end{table*}
-
-Table~\ref{tab:all-dist-ranked-settings} shows the five best and five
-worst system settings averaged across all 10 PDT items, as ranked by
-MAP. Among the trends that pop out is a favoritism
-towards \param{NNSLM} models (i.e., spelling correction). This is due
-to the fact that higher numbers of errors inflate the MAP scores, and
-somewhat counterintuitively, the spelling correction module introduces
-more errors than it corrects, meaning there are more errors present
-overall in the \param{NNSLM} responses than in the \param{NNSO}
-responses.\footnote{Note that among the remaining parameter classes,
-variation does not effect the number of errors.}
-
-Another feature among the best settings is the inclusion of heads in the dependency representations. In fact, the top 17 ranked settings all include heads (\param{lxh}, \param{xdh}, \param{ldh}); \param{xdx} first enters the rankings at 18, and \param{xdx} and \param{ldx} are common among the worst performers. This is likely due to the salience of the verbs in these transitive sentences; they constitute the heads of the subjects and objects, in relatively short sentences with few dependencies.
-Furthermore, the tf-idf weighted models dominate the rankings, especially \param{TC}. It is also clear that for my data tf-idf works best with the Brown Corpus (\param{B}).
+\textit{dobj(bird,shoot)}).
 
 \begin{table}[htb!]
 \begin{center}
@@ -937,26 +897,26 @@ Furthermore, the tf-idf weighted models dominate the rankings, especially \param
 Rank & MAP & Settings \\
 \hline
 \hline
-1 & 0.5534 & TC\_B\_NNSLM\_lxh \\
+1 &  &  \\
 \hline
-2 & 0.5445 & TA\_B\_NNSLM\_lxh \\
+2 &  &  \\
 \hline
-3 & 0.5435 & TC\_W\_NNSLM\_lxh \\
+3 &  &  \\
 \hline
-4 & 0.5422 & TC\_B\_NNSLM\_xdh \\
+4 &  &  \\
 \hline
-5 & 0.5368 & TC\_B\_NNSLM\_ldh \\
+5 &  &  \\
 \hline
 \hline
-56 & 0.4816 & TA\_B\_NNSO\_xdx \\
+26 &  &  \\
 \hline
-57 & 0.4796 & FA\_na\_NNSLM\_ldx \\
+27 &  &  \\
 \hline
-58 & 0.4769 & FC\_na\_NNSO\_lxh \\
+28 &  &  \\
 \hline
-59 & 0.4721 & TA\_W\_NNSO\_xdx \\
+29 &  &  \\
 \hline
-60 & 0.4530 & FA\_na\_NNSO\_lxh \\
+30 &  &  \\
 \hline
 \end{tabular}
 \caption{Based on Mean Average Precision, the five best and five worst settings across all 10 PDT items.}
@@ -964,11 +924,45 @@ Rank & MAP & Settings \\
 \end{center}
 \end{table}
 
+Table~\ref{tab:all-dist-ranked-settings} shows the five best and five
+worst system settings averaged across all 10 PDT items, as ranked by
+MAP.
+
+\bigskip
+LK: Here, 1/29. Verify/update the following observations
+\bigskip
+
+One salient trend among the best settings is the inclusion of heads in the dependency representations. In fact, the top 17 ranked settings all include heads (\param{lxh}, \param{xdh}, \param{ldh}); \param{xdx} first enters the rankings at 18, and \param{xdx} and \param{ldx} are common among the worst performers. This is likely due to the salience of the verbs in these transitive sentences; they constitute the heads of the subjects and objects, in relatively short sentences with few dependencies.
+Furthermore, the tf-idf weighted models dominate the rankings, especially \param{TC}. It is also clear that for my data tf-idf works best with the Brown Corpus (\param{B}).
+
 I also summarize the rankings for the individual parameter classes,
 presented in Table~\ref{tab:dist-ranked-parameters}, confirming the
 trends in Table~\ref{tab:all-dist-ranked-settings}. For a given
 parameter, e.g., \param{ldh}, I averaged the experiment scores from
 all settings including \param{ldh} across all 10 items. Notably, \param{TC} outperforms the other models, with \param{FC} and \param{TA} close behind (and nearly tied). Performance falls for the simplest model, \param{FA}, which was in fact intended as a baseline. With \param{TC}$>$\param{FC} and \param{TA}$>$\param{FA}, tf-idf weighting seems preferable to basic frequencies.
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{|l|r||l|r||l|r|}
+\hline
+\multicolumn{2}{|c||}{Approach} & \multicolumn{2}{|c||}{Term Form} & \multicolumn{2}{|c||}{Ref. Corpus (TA/TC)} \\
+\hline
+\hline
+0.51577 & TC & xdh & 0.51810 & Brown & 0.51534 \\
+\hline
+0.50780 & FC & ldh & 0.51677 & WSJ & 0.50798 \\
+\hline
+0.50755 & TA & lxh & 0.51350 & & \\
+\hline
+0.49464 & FA & xdx & 0.49901 & & \\
+\hline
+& 	& ldx & 0.49352 &  & \\
+\hline
+\end{tabular}
+\caption{System parameters ranked by mean average precision for all 10 PDT items.}
+\label{tab:dist-ranked-parameters}
+\end{center}
+\end{table*}
 
 Again, the importance of including heads in dependencies is apparent here; the three dependency representations containing heads constitute the top three, with a sizable drop in performance for the remaining two forms (\param{xdx} and \param{ldx}). Moreover, given the content and narrative style of the PDT responses, it is unsurprising that the Brown Corpus serves as a better reference corpus than the WSJ Corpus for tf-idf. Finally, the \param{NNSLM} source significantly outperforms the \param{NNSO} source.
 
@@ -998,74 +992,108 @@ the higher performance of \param{xdx} (cf. lemmas), is that for this
 item, all the NSs use the verb \textit{rake}, while none of the NNSs use this word.  For item 1 (the boy kicking a ball), there is lexical variation
 for both NSs and NNSs.
 
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|r|c|c|}
-\hline
-Rank & AP & Settings \\
-\hline
-\hline
-1 & 0.30997 & TC\_B\_NNSLM\_ldx \\
-\hline
-2 & 0.30466 & TA\_B\_NNSLM\_ldx \\
-\hline
-3 & 0.30015 & TA\_B\_NNSLM\_xdh \\
-\hline
-4 & 0.29704 & FC\_na\_NNSLM\_xdh \\
-\hline
-5 & 0.29650 & FA\_na\_NNSLM\_ldh \\
-\hline
-\hline
-56 & 0.06474 & TC\_B\_NNSO\_ldx \\
-\hline
-57 & 0.06174 & TC\_W\_NNSO\_ldx \\
-\hline
-58 & 0.06102 & TA\_W\_NNSO\_lxh \\
-\hline
-59 & 0.05603 & TA\_W\_NNSO\_xdx \\
-\hline
-60 & 0.05094 & TA\_W\_NNSO\_ldx \\
-\hline
-\end{tabular}
-\caption{Based on Average Precision, the five best and five worst settings for item 1.}
-\label{tab:i01-dist-ranked-settings}
-\end{center}
-\end{table}
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|r|c|c|}
+\begin{tabular}{|r|l|c|}
 \hline
-Rank & AP & Settings \\
+Rank & MAP & Settings \\
 \hline
 \hline
-1 & 0.80965 & FA\_na\_NNSLM\_xdx \\
+1 &  &  \\
 \hline
-2 & 0.80720 & TA\_B\_NNSLM\_lxh \\
+2 &  &  \\
 \hline
-3 & 0.80473 & TC\_B\_NNSLM\_lxh \\
+3 &  &  \\
 \hline
-4 & 0.79438 & TC\_B\_NNSLM\_xdx \\
+4 &  &  \\
 \hline
-5 & 0.78108 & TC\_W\_NNSLM\_xdx \\
+5 &  &  \\
 \hline
-\hline 
-56 & 0.56495 & FC\_na\_NNSO\_xdh \\
 \hline
-57 & 0.56414 & TC\_B\_NNSO\_lxh \\
+26 &  &  \\
 \hline
-58 & 0.55890 & TC\_W\_NNSO\_lxh \\
+27 &  &  \\
 \hline
-59 & 0.54506 & FC\_na\_NNSO\_lxh \\
+28 &  &  \\
 \hline
-60 & 0.52013 & FA\_na\_NNSO\_lxh \\
+29 &  &  \\
+\hline
+30 &  &  \\
 \hline
 \end{tabular}
-\caption{Based on Average Precision, the five best and five worst settings for item 5.}
-%%LK: fixed 4/6 pm.
-\label{tab:i05-dist-ranked-settings}
+\caption{Based on Average Precision, the five best and five worst settings for item 10, shown in Figure~\ref{fig:example-picture} and Table~\ref{tab:i10responses-avgprec}.}
+\label{tab:i10-dist-ranked-settings}
 \end{center}
 \end{table}
+
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|r|c|c|}
+%\hline
+%Rank & AP & Settings \\
+%\hline
+%\hline
+%1 & 0.30997 & TC\_B\_NNSLM\_ldx \\
+%\hline
+%2 & 0.30466 & TA\_B\_NNSLM\_ldx \\
+%\hline
+%3 & 0.30015 & TA\_B\_NNSLM\_xdh \\
+%\hline
+%4 & 0.29704 & FC\_na\_NNSLM\_xdh \\
+%\hline
+%5 & 0.29650 & FA\_na\_NNSLM\_ldh \\
+%\hline
+%\hline
+%56 & 0.06474 & TC\_B\_NNSO\_ldx \\
+%\hline
+%57 & 0.06174 & TC\_W\_NNSO\_ldx \\
+%\hline
+%58 & 0.06102 & TA\_W\_NNSO\_lxh \\
+%\hline
+%59 & 0.05603 & TA\_W\_NNSO\_xdx \\
+%\hline
+%60 & 0.05094 & TA\_W\_NNSO\_ldx \\
+%\hline
+%\end{tabular}
+%\caption{Based on Average Precision, the five best and five worst settings for item 1.}
+%\label{tab:i01-dist-ranked-settings}
+%\end{center}
+%\end{table}
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|r|c|c|}
+%\hline
+%Rank & AP & Settings \\
+%\hline
+%\hline
+%1 & 0.80965 & FA\_na\_NNSLM\_xdx \\
+%\hline
+%2 & 0.80720 & TA\_B\_NNSLM\_lxh \\
+%\hline
+%3 & 0.80473 & TC\_B\_NNSLM\_lxh \\
+%\hline
+%4 & 0.79438 & TC\_B\_NNSLM\_xdx \\
+%\hline
+%5 & 0.78108 & TC\_W\_NNSLM\_xdx \\
+%\hline
+%\hline 
+%56 & 0.56495 & FC\_na\_NNSO\_xdh \\
+%\hline
+%57 & 0.56414 & TC\_B\_NNSO\_lxh \\
+%\hline
+%58 & 0.55890 & TC\_W\_NNSO\_lxh \\
+%\hline
+%59 & 0.54506 & FC\_na\_NNSO\_lxh \\
+%\hline
+%60 & 0.52013 & FA\_na\_NNSO\_lxh \\
+%\hline
+%\end{tabular}
+%\caption{Based on Average Precision, the five best and five worst settings for item 5.}
+%\label{tab:i05-dist-ranked-settings}
+%\end{center}
+%\end{table}
 
 These types of differences---for these items and others---lead me to explore the clustering of item patterns, in order to
 leverage these differences and automatically choose the optimal
