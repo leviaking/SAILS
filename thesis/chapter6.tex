@@ -1,11 +1,42 @@
 \chapter{Optimization}
 \label{chap:optimize}
-This chapter will discuss experiments in tuning the TC encoder pipeline.
+In this chapter, I detail my research applying the methods discussed in Chapter~\ref{chap:method} to the much larger and more richly annotated dataset described in Chapters~\ref{chap:data} and \ref{chap:annotation}. The chapter primarily consists of a series of experiments focused on isolating and optimizing a number of parameters or variables in my picture description task (PDT) response analysis pipeline. 
 
-\section{Normalizing for response length}
-\label{section:experiment-normalizing-length}
+The experiments are organized here according to the sequence in which the variables appear or become relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; in Section~\ref{sec:exp-transitivity}, I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding a variable I call \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are crowdsourced. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first responses, or an equal number of first and second responses (also discussed in Section~\ref{sec:pdt}). I then evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-normalizing}; I call this variable \textit{term normalization}.\lk{Is this technically norming the terms or the responses?} For the final variable experiments, I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset.
+
+After examining these variables individually, in Section~\ref{sec:exp-combos} I consider the hypothesis that particular combinations \lk{Check research Qs and sync this up}of settings will perform better than others in particular conditions. This is a ``non-exhaustive,'' mostly future-looking set of experiments, where I do report some promising trends.
+
+\section{Transitivity experments}
+\label{sec:exp-transitivity}
+Here we compare the performance of my ranking system when applied to items that are (predominantly): intransitive, transitive, ditransitive.
+\subsection{Transitivity results}
+\label{sec:transitivity-results}
+
+\section{Targeting experiments}
+\label{sec:exp-targeting}
+Here we compare the performance of my ranking system when applied to targeted vs untargeted data.
+\subsection{Targeting results}
+\label{sec:targeting-results}
+
+\section{Familiarity experiments}
+\label{sec:exp-familiarity}
+Here we compare how well the system works when using different sources of NSs. (Crowdsourced informants drastically outnumbered Familiar, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Familiarity results}
+\label{sec:familiarity-results}
+
+\section{Primacy experiments}
+\label{sec:exp-primacy}
+Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses. (The latter is nearly double the former, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Primacy results}
+\label{sec:primacy-results}
+
+\section{Term normalization experiments}
+\label{sec:exp-term-norm}
 
 Each experimental gold standard (XGS) is comprised of some number of native speaker (NS) responses to the picture description task (PDT). Even among native speaker (NS) data, response lengths can vary; some valid responses contain only one or two words, while the longest top out at around 15 words. These longer, well-formed responses are relatively uncommon, but understanding their impact on an XGS is an important step in optimizing the rating process. So far, the approach to each XGS has been to treat it as a ``bag of dependencies'' in which each dependency contributes equally, meaning longer responses can carry a greater weight in the GS. This has the potential to introduce noise. Table~\ref{tab:normalize-responses-deps} illustrates this. These responses are both included in a toy XGS consisting of NS responses with ``perfect'' feature annotations. The first response contributes four dependencies to the GS, each of which is necessary to fulfill the feature annotations and contributes meaningfully to the GS. The second response, however, contributes 10 dependencies, some of which, like \textit{amod(purple, dress)}, add non-critical detail, and these details could receive too much weight.
+
+\section{Term normalization results}
+\label{sec:term-norm-results}
 
 %%\begin{table}[htb!]
 %%\begin{center}
@@ -26,8 +57,8 @@ Each experimental gold standard (XGS) is comprised of some number of native spea
 %%\end{center}
 %%\end{table}
 
-0.464012874
-0.463905084
+%0.464012874
+%0.463905084
 
 \begin{table}[htb!]
 \begin{center}
@@ -105,40 +136,20 @@ NTS: For different test responses, find some examples where the non-normalized m
 
 Because the non-normalized GSs outperform their normalized counterparts, and because normalization adds complexity to the process, this step was not used in the remaining optimization experiments.
 
-\section{Dependency formats}
-\label{section:experiment-dependency-formats}
+\section{Term representation experiments}
+\label{sec:exp-term-reps}
 One parameter I vary in my pipeline is the format with which I represent each dependency. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching; the results are shown in Table~\ref{tab:dist-ranked-parameters}. In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (ldh), \textit{dependent-head} only (xdh), and \textit{dependent} only (xdx). In other words, in my ``bag of terms'' approach, the bags contain either labeled dependencies (ldh), unlabeled dependencies (xdh) or words (xdx). The labeled and unlabeled dependencies were the top performers in my previous work, and the xdx format is included as a kind of baseline showing a bag of words approach.
 
-\subsection{Results}
-\label{subsection:dependency-formats-results}
+\subsection{Term representation results}
+\label{sec:term-norm-results}
 In all cases, the \texttt{ldh} format results in a higher Spearman correlation than \texttt{xdh}. As expected, \texttt{xdx} performs significantly worse than either \texttt{ldh} or \texttt{xdh}.
 
-\section{Targeted vs Untargeted}
-\label{section:experiment-targeted}
-Here we compare the performance of my ranking system when applied to targeted vs untargeted data.
-\subsection{Results}
-\label{subsection:targeted-results}
 
-\section{Intransitive vs Transitive vs Ditransitive}
-\label{section:experiment-transitive}
-Here we compare the performance of my ranking system when applied to items that are (predominantly): intransitive, transitive, ditransitive.
-\subsection{Results}
-\label{subsection:transitive-results}
 
-\section{Familiar vs Crowdsourced response XGS}
-\label{section:experiment-crowdsource}
-Here we compare how well the system works when using different sources of NSs. (Crowdsourced informants drastically outnumbered Familiar, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
-\subsection{Results}
-\label{subsection:crowdsource-results}
 
-\section{First responses XGS vs First and second responses XGS}
-\label{section:experiment-first-responses}
-Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses. (The latter is nearly double the former, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
-\subsection{Results}
-\label{subsection:first-responses-results}
-
-\section{XGS filtered by annotation}
-\label{section:experiment-filtered}
-Here we examine how performance changes when we filter the XGS to include only ``perfect'' annotation responses or ``core event = yes'' responses. (Response counts will vary depending on exactly how I do this, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
-\subsection{Results}
-\label{subsection:filtered-results}
+%\section{XGS filtered by annotation}
+%% No, we decided this is mostly pointless / uninformative
+%\label{section:experiment-filtered}
+%Here we examine how performance changes when we filter the XGS to include only ``perfect'' annotation responses or ``core event = yes'' responses. (Response counts will vary depending on exactly how I do this, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+%\subsection{Results}
+%\label{subsection:filtered-results}

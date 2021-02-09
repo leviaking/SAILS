@@ -584,11 +584,11 @@ is \textit{covered} or \textit{non-covered}.  In such a situation the
 gold standard need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples. Here the gold standard is comprised of the small set of NS responses---only 14. This means that exact matching is going to miss many cases,
 and indeed as discussed in Section~\ref{sec:rule-results}, coverage was only 51\%. Even with a much larger gold standard, we can expect responses to follow Zipf's law; a sample of language data will always be incomplete because it will not contain all ``long tail,'' low-frequency phenomena.
 
-Additionally, relying on matching of triples limits the utility of the method to specific semantic constraints, namely transitive sentences. By dropping the exact matching approach and instead comparing the frequencies of elements in the NNS response with those of the gold standard, I moved into a gradable, or ranking, approach to the analysis. For this reason, I shift terminology here from NS \textit{\textbf{gold standard}} to NS \textit{\textbf{model}}. A gold standard is roughly akin to an answer key, which was appropriate for my strict triple-matching approach. A model is typically a richer data structure containing statistics from observations of known correct data. This distinction and its relevance will be more apparent with the discussion of response representations in Section~\ref{sec:representation}.
+Additionally, relying on matching of triples limits the utility of the method to specific semantic constraints, namely transitive sentences. By dropping the exact matching approach and instead comparing the frequencies of elements in the NNS response with those of the gold standard, I moved into a gradable, or ranking, approach to the analysis. For this reason, I shift terminology here from NS \textit{\textbf{gold standard}} to NS \textit{\textbf{model}}. A gold standard is roughly akin to an answer key, which was appropriate for my strict triple-matching approach. A model is typically a richer data structure containing statistics from observations of known correct data. This distinction and its relevance will be more apparent with the discussion of response representations in Section~\ref{sec:response-rep}.
 
 My goal is to emphasize the degree to which a NNS response conveys the same
 meaning as the set of NS responses, necessitating an approach which can automatically
-determine the importance of a piece of information among the set of NS responses.  This required two major decisions: 1) how to \textbf{represent} each response as a set of sub-elements, and 2) how exactly to \textbf{score} these sub-elements via comparison with the NS data. In Section~\ref{sec:representation}, I detail how I represented the information and in Section~\ref{sec:scoring}, I discuss comparing NNS information to NS information, which allowed me to rank responses from most to least similar to the NS model. In Section~\ref{sec:parameters}, I outline the system parameters that I combined to generate scores, and in Section~\ref{sec:metrics} I present and interpret the results of the various settings.
+determine the importance of a piece of information among the set of NS responses.  This required two major decisions: 1) how to \textbf{represent} each response as a set of sub-elements, and 2) how exactly to \textbf{score} these sub-elements via comparison with the NS data. In Section~\ref{sec:response-rep}, I detail how I represented the information and in Section~\ref{sec:scoring}, I discuss comparing NNS information to NS information, which allowed me to rank responses from most to least similar to the NS model. In Section~\ref{sec:parameters}, I outline the system parameters that I combined to generate scores, and in Section~\ref{sec:metrics} I present and interpret the results of the various settings.
 %to rank responses from least to most similar to the NS gold standard.
 %\footnote{Although rankings often go from highest to lowest, I prioritize identifying problematic cases, so I rank accordingly.}
 %I also discuss the handling of various other system parameters (section~\ref{sec:parameters}).
@@ -618,7 +618,7 @@ determine the importance of a piece of information among the set of NS responses
 %\end{figure}
 %
 \subsection{Representing responses}
-\label{sec:representation}
+\label{sec:response-rep}
 
 %To overcome the limitations of an incomplete GS,
 I first represented each NNS response as a list of dependencies taken directly from the parse. 
@@ -749,7 +749,7 @@ In many natural language processing scenarios where high dimensional vectors are
 I ran a total of 30 experiments, with each representing a combination of these system parameters for processing responses (see also Table~\ref{tab:dist-ranked-parameters}): 
 
 \paragraph{Term representation} As discussed in
-section~\ref{sec:representation}, the terms can take one of five
+section~\ref{sec:response-rep}, the terms can take one of five
 representations: \param{\textbf{ldh}}, \param{\textbf{xdh}}, \param{\textbf{lxh}}, \param{\textbf{ldx}},
 or \param{\textbf{xdx}}.
 
