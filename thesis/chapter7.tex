@@ -1,2 +1,162 @@
-\chapter{Conclusion}
-This chapter is concludes the thesis, summing up the work and findings, and suggesting possible future research.
+\chapter{Optimization}
+\label{chap:optimization}
+In this chapter, I detail my research applying the methods discussed in Chapter~\ref{chap:method} to the much larger and more richly annotated dataset described in Chapters~\ref{chap:data} and \ref{chap:annotation}. The chapter primarily consists of a series of experiments focused on isolating and optimizing a number of parameters or variables in my picture description task (PDT) response analysis pipeline. 
+
+The experiments are organized here according to the sequence in which the variables appear or become relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, in Section~\ref{sec:exp-transitivity}, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are crowdsourced. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first responses, or an equal number of first and second responses (also discussed in Section~\ref{sec:pdt}). I then evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-term-norm}; I call this variable \textit{term normalization}.\lk{Is this technically norming the terms or the responses?} For the final variable experiments, I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset.
+
+After examining these variables individually, in Section~\ref{sec:exp-combos} I consider the hypothesis that particular combinations \lk{Check research Qs and sync this up}of settings will perform better than others in particular conditions. This is a ``non-exhaustive,'' mostly future-looking set of experiments, where I report some promising trends.
+
+Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
+
+\section{Transitivity experments}
+\label{sec:exp-transitivity}
+Here we compare the performance of my ranking system when applied to items that are (predominantly): intransitive, transitive, ditransitive.
+\subsection{Transitivity results}
+\label{sec:transitivity-results}
+
+\section{Targeting experiments}
+\label{sec:exp-targeting}
+Here we compare the performance of my ranking system when applied to targeted vs untargeted data.
+\subsection{Targeting results}
+\label{sec:targeting-results}
+
+\section{Familiarity experiments}
+\label{sec:exp-familiarity}
+Here we compare how well the system works when using different sources of NSs. (Crowdsourced informants drastically outnumbered Familiar, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Familiarity results}
+\label{sec:familiarity-results}
+
+\section{Primacy experiments}
+\label{sec:exp-primacy}
+Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses. (The latter is nearly double the former, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+\subsection{Primacy results}
+\label{sec:primacy-results}
+
+\section{Term normalization experiments}
+\label{sec:exp-term-norm}
+
+In my pipeline, the NS model for each PDT item is comprised of some number of NS responses. The length of these responses can vary; some valid responses contain only one or two words\footnote{Participants were instructed to provide complete sentences, but incomplete sentences were still judged valid where appropriate; see Chapter~\ref{chap:data} and the Annotation Guide in Appendix~\ref{appendix:annotation_guide}.}, while the longest top out at around 15 words. These longer, well-formed responses are relatively uncommon, but understanding their impact on a model is an important step in optimizing my response rating process. So far, I have treated each NS model as a flat ``bag of terms'' in which each term (cf. \textit{dependency}; see Section~\ref{sec:response-rep}) contributes equally, meaning longer responses carry more weight in the model. This has the potential to introduce noise. 
+
+My hypothesis is that system performance should improve by using NS models where each term is re-weighted by $1/\textit{n}$, where \textit{n} is the number of terms in the response containing the term. In other words, I believe dependencies should be re-weighted to ensure that every NS response contributes equal weight to the model. The rationale here is simple. Every response used in the NS model is assumed to contain the information that is crucial for satisfying the PDT prompt, and the number of terms conveying this information is roughly equivalent from one response to another. Thus, as the number of terms in a response increases (above some minimum number), the likelihood that any given term in that response is crucial decreases.
+
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Response A & Response B & Norm. wt. & Non-norm. wt.\\
+\hline
+\multirow{2}{*}{The girl is singing} & The girl in the cute purple & & \\
+& dress is singing a song & & \\
+\hline
+\hline
+det(the, girl) & det(the, girl) & 0.175 & 0.143 \\
+\hline
+nsubj(girl, sing) & nsubj(girl, sing) & 0.175 & 0.143 \\
+\hline
+%& erased(in, ERASED) & 0.050 & 0.071 \\
+%& \textit{erased(in, ERASED)} & 0.000 & 0.000 \\
+& \textit{erased(in, ERASED)} & --- & --- \\
+\hline
+& det(the, dress) & 0.050 & 0.071 \\
+\hline
+& amod(cute, dress) & 0.050 & 0.071 \\
+\hline
+& amod(purple, dress) & 0.050 & 0.071 \\
+\hline
+%& prep\_in(dress, girl) & 0.050 & 0.071 \\
+& prep\_in(dress, girl) & 0.050 & 0.071 \\
+\hline
+aux(be, sing) & aux(be, sing) & 0.175 & 0.143 \\
+\hline
+root(sing, ROOT) & root(sing, ROOT) & 0.175 & 0.143 \\
+\hline
+& det(a, song) & 0.050 & 0.071 \\
+\hline
+& dobj(song, sing) & 0.050 & 0.071 \\
+\hline
+\hline
+4 & 10 & 1.0 & 1.0 \\
+\hline
+\end{tabular}
+\caption{\label{tab:normalize-responses-deps} A ``toy'' model consisting of lemmatized syntactic dependencies from only two NS responses, each with perfect annotation scores. (Note that the version of Stanford typed dependencies used in this work collapses dependencies containing prepositions and incorporates prepositions in a label, resulting in the ``prep\_in'' and ``erased'' dependencies above. See Chapter~\ref{chap:method} for more on the parsing and lemmatization.)}
+\end{center}
+\end{table}
+
+This is illustrated by the responses in Table~\ref{tab:normalize-responses-deps}. If we take these two responses to constitute one NS model, Response A contributes four dependencies, each of which is necessary to satisfy the five annotated features and contributes meaningfully to the model. Response B, however, contributes 10 dependencies, some of which, like \textit{amod(purple, dress)}, add non-critical detail. In a non-normalized setting, this dependency constitutes one out of a total 14 dependencies in the NS model, approximately 0.071. In a normalized setting, however, this dependency appears as zero of four (0.0) dependencies in Response A, and one of 10 (0.1) in Response B, making it 0.05 of the overall model (0.1 divided by two responses). This should have the effect of making extraneous information in the model less impactful on response ratings.
+
+Taking this example further, consider the dependency \textit{nsubj(girl, sing)}, also from Table~\ref{tab:normalize-responses-deps}. In the non-normalized setting, this dependency appears as two out of a total 14 dependencies, or 0.143 of the NS model. In the normalized setting, the dependency appears as one out of four (0.25) dependencies in Response A, and one out of 10 (0.1) dependencies in Response B, equating to 0.175 of the NS model (0.35 divided by two responses). Because this dependency is critical, raising its weight from 0.143 to 0.175 should have a positive impact on system performance; NNS responses containing the dependency should rise in the rankings relative to those without it. 
+
+To test my hypothesis, I compared the performance of normalized and non-normalized models. This followed my standard design of ranking NNS responses by their system scores, then comparing this ranking with the weighted annotation ranking using Spearman rank correlation. I isolate this variable as before: for all system configurations, I generate a Spearman score using a non-normalized NS model, and again using a normalized NS model, then compare the averages.
+
+Such normalization can be sensitive to the effects of size\lk{Citation?}, so I conducted the  experiments using models of my standard sample size of 50 NS responses, and again using a sample size of 15.
+
+%This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
+
+%
+%To account for this and examine whether or not it poses a problem, I conducted experiments in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response. The responses were then ranked by these scores, and Spearman's rank correlation coefficient (``Spearman'') was used to compare the ranking against the ``true'' GS (TGS), which is the result of ranking the responses using the weighted annotations (discussed in Chapter~\ref{chap:annotation}). This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. \lk{Get avg \# responses for All NS vs Familiar NS} This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
+
+\subsection{Term normalization results}
+\label{sec:term-norm-results}
+
+The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}.\lk{UPDATE table with n50 and n15, and discussion here} The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized model. The simplest explanation for this is the fact that longer responses with extraneous information are relatively uncommon, so we can expect this normalization to have a low impact.
+%\lk{But what else can I say here}
+
+\bigskip
+NTS: For different test responses, find some examples where the non-normalized model is rated/ranked higher than in the normalized model.
+
+Because the non-normalized GSs outperform their normalized counterparts, and because normalization adds complexity to the process, this step was not used in the remaining optimization experiments.
+
+
+
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+ & \multicolumn{2}{|c||}{\textit{All NS GS}} & \multicolumn{2}{|c|}{\textit{Familiar NS GS}} \\
+\hline
+ Dep & Norm & Non-norm & Norm & Non-norm \\
+\hline
+\hline
+ldh & -0.474 & \textbf{-0.477} & -0.462 & \textbf{-0.471} \\
+\hline
+xdh & -0.476 & \textbf{-0.478} & -0.470 & \textbf{-0.474} \\
+\hline
+xdx & \textbf{-0.441} & -0.438 & -0.428 & \textbf{-0.431} \\
+\hline
+Avg & -0.463 & \textbf{-0.465} & -0.454 & \textbf{-0.458} \\
+\hline
+\end{tabular}
+\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient using gold standards (GSs) that are normalized for length (number of dependencies) and GSs that are non-normalized. This was conducted for various dependency representations: \textit{label, dependent, head (ldh)}; \textit{dependent, head} (xdh); \textit{dependent} only (xdx). The p-values are not indicated but range between 0.034 and 0.068 for all cases, indicating that the correlations are very unlikely to be coincidental.}
+\end{center}
+\end{table}
+
+
+
+
+\section{Term representation experiments}
+\label{sec:exp-term-reps}
+One parameter I vary in my pipeline is the format with which I represent each dependency. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching; the results are shown in Table~\ref{tab:dist-ranked-parameters}. In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (ldh), \textit{dependent-head} only (xdh), and \textit{dependent} only (xdx). In other words, in my ``bag of terms'' approach, the bags contain either labeled dependencies (ldh), unlabeled dependencies (xdh) or words (xdx). The labeled and unlabeled dependencies were the top performers in my previous work, and the xdx format is included as a kind of baseline showing a bag of words approach.
+
+\subsection{Term representation results}
+\label{sec:term-norm-results}
+In all cases, the \texttt{ldh} format results in a higher Spearman correlation than \texttt{xdh}. As expected, \texttt{xdx} performs significantly worse than either \texttt{ldh} or \texttt{xdh}.
+
+
+\section{Combined settings experiments}
+\label{sec:exp-combos}
+\subsection{Combined settings results}
+\label{sec:combos-results}
+
+\section{BERT experiments}
+\label{sec:exp-bert}
+\subsection{BERT results}
+\label{sec:bert-results}
+
+%\section{XGS filtered by annotation}
+%% No, we decided this is mostly pointless / uninformative
+%\label{section:experiment-filtered}
+%Here we examine how performance changes when we filter the XGS to include only ``perfect'' annotation responses or ``core event = yes'' responses. (Response counts will vary depending on exactly how I do this, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+%\subsection{Results}
+%\label{subsection:filtered-results}

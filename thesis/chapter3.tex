@@ -1,272 +1,833 @@
-\chapter{Data Collection}
-\label{chap:data}
+\chapter{Pilot Study}
+\label{chap:pilot}
 
-In Chapter~\ref{chap:intro} I explained that a major motivation of this work is to investigate relatively low-resource mechanisms for content analysis that can help shift the focus of ICALL from form to meaning. In Chapter~\ref{chap:lit}, I examined related work in testing and ICALL. While numerous creative approaches to contextual content analysis are discussed in the literature, the data they rely on is typically not available to other researchers. With these considerations in mind, I decided to collect a corpus of picture description task responses for use in my experiments. This chapter will discuss the data collection task, participants and responses.
+\section{Introduction}
+As discussed in Chapter~\ref{chap:intro}, this dissertation grew from a desire to introduce lightweight, transparent methods of content analysis for contexts involving non-native speakers (NNSs) and second language instruction or assessment. In this chapter, I detail my initial foray into this work, where I conducted a small set of experiments to uncover the challenges involved and determine the feasibility of my goals. In that sense, the work described in this chapter can be seen as a pilot study and a proof-of-concept for the expanded study described in the chapters that follow.
 
-\section{Picture Description Task}
-\label{sec:pdt}
+In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on rules to extract important elements from responses in order to match NNS responses to native speaker (NS) responses for assessment. In Section~\ref{sec:2016work}, I lay out a more data-driven set of experiments and the findings there that lead directly to the collection and annotation of a much more robust corpus (see Chapters~\ref{chap:data} and~\ref{chap:annotation}) and a deeper investigation into the impact of several variables on system performance (see Chapters~\ref{chap:method} and~\ref{chap:optimization}).
 
-%\subsection{PDT Stimuli}
+%
+%In this chapter, I explain my system for rating and ranking responses automatically, where the goal is to approximate the benchmark rankings described in Chapter~\ref{chap:annotation}. 
+%The data-driven method used to analyze picture description task (PDT) responses throughout this dissertation represents an evolution from my own previous rule-based methods. In this chapter, I summarize my earlier work and the lessons I learned there, then lay out the current approach.
 
-The picture description task (PDT) is built around 30 images. Each image is a simple, cartoon-like vector graphic. These images were purchased from Shutterstock, a web-based graphics library\footnote{https://www.shutterstock.com/vectors}. In order to constrain response contents to the main action of each image, the images were modified to remove any non-essential detail or background; an example is shown in Figure~\ref{fig:image-prep}. Vector graphics are ideal for this use, because they tend to have an illustrational style with very little detail, as compared to photographs or drawings. Moreover, most consist of layers of graphic objects, and these objects can be easily moved, resized, deleted, combined or otherwise modified to compose the desired stimulus. More example images are presented in Figure~\ref{fig:example-pdt-items} and the full set is found in Appendix \ref{appendix:PDT_items}.
+%In short, my first approach was heavily rule-based and relied on strict matching with a pre-established set of acceptable responses. This found moderate success, leading to the improved current approach, which is data-driven and relies on more flexible methods of comparison. 
 
-To factor out the influence of previous linguistic context, images are intentionally devoid of any text. In a few cases, symbols are used: two images have music notes; one displays a legible analog clock; one uses numerals in an arithmetic problem and one shows a question mark. The symbols were intended to elicit abstract concepts that are otherwise difficult to portray visually, like \textsc{teaching math} and \textsc{asking a question}. 
+%In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
+
+%%%% BEGIN material from Qual Paper (BEA 2013) %%%%
+\section{Rule-based study}
+\label{sec:pilot-study}
+This study focused on analyzing English NNS responses to a picture description task (PDT) by comparison with NS responses. It was largely intended to determine if such a task would be within reach for a single researcher using off-the-shelf tools. This meant identifying problem areas and gauging whether variation in the form and content of responses could be manageable.
+
+This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussions. However, please note that some experiments included in those papers are omitted here, and thus some results involving the averaging or ranking of scores differ slightly here.
+
+\section{Data}
+\label{sec:pilot-data}
+My work is inspired by various intelligent computer-assisted language learning (ICALL) projects and their reliance on visual stimuli\lk{XYZ: cite}. ICALL itself is heavily influenced by video games, which tend to be visual and interactive\lk{XYZ: cite}. Thus, a dataset of responses to visual prompts was needed to develop the kind of content analysis pipeline I envisioned.
+
+Without an appropriate dataset available, I opted to collect my own using a PDT. Linguistic research often relies on the ability of task design to induce particular behavior \citep{skehan1998assessing}, and a PDT can be used to induce behavior similar to that of an ICALL application.  Moreover, the use of the PDT as a reliable language research tool is well-established in areas of study ranging from language acquisition to Alzheimer's disease \citep{ellis2000task,forbes2005detecting}. Crucially, a PDT constrains the range of potential responses to contain only information depicted in the image, which greatly reduces the kind of processing needed to ``understand'' and assess responses with an automated system. Relatedly, particularly simple images should restrict elicited responses to a an even tighter range of expected contents.
+
+I designed a data collection instrument consisting of a brief background questionnaire and 10 PDT items (eight line drawings and two photographs). Examples are given in Figure~\ref{fig:example-picture}. Each item was intended to elicit a single sentence and consisted of an image depicting an action canonically framed as transitive event in English, along with the question, ``What is happening?'' The instructions simply asked participants to ``view the image and describe the action in either past or present tense'' alone and without the use of any resources. The task was administered in a computer lab, where participants typed their own responses. Automatic spelling correction was intentionally disabled on the machines.
+
+
+\begin{figure}[htb!]
+%[width=0.8\columnwidth]
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline
+\includegraphics[width=0.40\columnwidth]{figures/exampleprompt.jpg} & \includegraphics[width=0.40\columnwidth]{figures/exampleprompt2.jpg}\\
+\hline
+\textbf{Response (L1)} & \textbf{Response (L1)} \\
+\hline
+He is droning his wife pitcher. (Ar) & The man killing the beard. (Ar) \\
+\hline
+The artist is drawing a pretty women. (Ch) & A man is shutting a bird. (Ch) \\
+\hline
+The artist is painting a portrait of a lady. (En) & A man is shooting a bird. (En) \\
+\hline
+The painter is painting a woman's paint. (Sp) & The man shouted the bird. (Sp)\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Example items from the previous study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
+\label{fig:example-picture}
+\end{figure}
+
+I collected responses from 53 participants for a total of 530 sentences. There were 14 NSs (non-linguistics undergraduate and graduate students) and 39 NNSs (university students enrolled in intensive English as a Second Language courses at Indiana University). The distribution of NNSs' first languages (L1s) was: 16 Arabic, 7 Chinese, 2 Japanese, 4 Korean, 1 Kurdish, 1 Polish, 2 Portuguese, and 6 Spanish.
+
+Once the data had been collected, I removed a small number of low quality responses from the NS set and annotated the NNS responses for appropriateness, with respect to the content of the picture. My annotation guidelines for this labeling were minimal: \textit{Given the prompt, would the response be acceptable to most English speakers?} This simplistic approach to annotation was admittedly a weak point in the study, and in subsequent work I sought to correct it (see Chapter~\ref{chap:annotation}). The resulting corpus was used in the experiments described next.
+
+
+\section{Rule-based method}
+\label{sec:rule-method}
+
+The processing behind my work was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text \citep{nastase2006,bailey:meurers:08,dicaro2013}. Because dependency parsing focuses on identifying dependency relations, rather than constituents or phrase structure, it clearly labels the subject, verb and object of a sentence, which can then map to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In this study, I took a na\"ive approach in which subject, verb and object were considered sufficient for deciding whether or not a response accurately describes the visual prompt. My idea was to extract and lemmatize a \textit{verb(subj,obj)} semantic triple from the dependency parse for each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be labeled automatically as ``correct,'' while a non-match would be labeled ``incorrect.''
+
+For lemmatization, I used the pre-trained tool in the Stanford Core NLP package \citep{stanford-corenlp-2014}.\footnote{\url{https://stanfordnlp.github.io/CoreNLP/}} The purpose of lemmatization is to minimize data sparsity by reducing the number of word forms. For example, the main verb in the forms \textit{kicks}, \textit{kicked}, \textit{has kicked} and \textit{is kicking} was reduced to \textit{kick} in all cases, increasing the likelihood of finding matches. For parsing, I used the Stanford Parser, trained on the Penn Treebank \citep{demarneffe:ea:06, klein:manning:03}.\footnote{\url{http://nlp.stanford.edu/software/lex-parser.shtml}}
+
+
+Using the parser's options, I set the output to be Stanford typed dependencies, a set of labels for dependency relations. The Stanford parser has a variety of options for the specific ouput, e.g., how one wishes to treat prepositions \citep{defmarneffe:manning:12}.  I used the parser's default settings, but added two non-default options (\textit{CCPropagatedDependencies} and \textit{CCprocessed}\footnote{\url{http://nlp.stanford.edu/software/dependencies_manual.pdf}}) in order to: 1) omit prepositions and conjunctions as heads and dependents and instead add such words to the dependency label between content words; and 2) propagate relations across conjunctions.  These decisions are important to consider for any semantically-informed processing of NNS language.
+
+To see the impetus for removing prepositions, consider the learner
+example in Figure~\ref{fig:prep-dependency}, where the preposition \textit{with} is
+relatively unimportant to collecting the meaning.  Additionally,
+learners often omit, insert, or otherwise use the wrong preposition
+\citep{chodorow:et:al:07}.  The default parser would present a
+\textit{prep} relation between \textit{played} and \textit{with},
+obscuring what the object is; with the options set as above, however,
+the dependency representation folds the preposition into the label
+(\textit{prep\_with}), instead of keeping it in the parsed string, as
+shown in Figure~\ref{fig:prep-dependency}. Importantly, this option results in a direct relationship between the verb \textit{played} and the object \textit{ball}.
 
 \begin{figure}[htb!]
 \begin{center}
-\begin{tabular}{|c|c|}
-\hline
-{\includegraphics[width=0.38\columnwidth]{figures/throw-original.jpg}} & {\includegraphics[width=0.38\columnwidth]{figures/I21cropped.jpg}} \\
-\hline
-Original image & Simplified PDT image \\
-\hline
-\end{tabular}
-\caption{\label{fig:image-prep} All non-essential details were removed from the PDT images in order to focus participants' attention on the main action.}
+    \begin{dependency}[arc edge,text only label,label style={above}]
+    \begin{deptext}[column sep=.5em]
+      \textit{root} \& The \&[1em] boy \&[1em] played \& with \& a \&[1em] ball \\
+    \end{deptext}
+    \depedge{4}{3}{nsubj}
+    \depedge[arc angle=90]{1}{4}{root}
+    \depedge{4}{7}{prep\_with}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+    \depedge[arc angle=35]{7}{6}{det}
+    \depedge{3}{2}{det}
+  \end{dependency}
 \end{center}
+\caption{Dependency parse showing collapsed preposition dependencies.}
+\label{fig:prep-dependency}
 \end{figure}
 
-Each image was chosen for its depiction of an ongoing or imminent action (as opposed to a static image) performed by a person or an animal. The images are divided evenly into actions that are canonically intransitive, transitive or ditransitive in English. I chose these three categories because they indicate the number of actors and objects in a given event, and my approach to scoring responses should be able to handle this range of complexity. It should be noted that this categorization is imperfect, however, as some events in the PDT can be expressed in multiple ways, like \textit{The girl is riding a horse} (transitive construction) versus \textit{The girl is horseback riding} (intransitive construction). I attempted to minimize ambiguity (especially between intransitives and transitives) by avoiding images with possible light constructions, like \textit{He is taking a shower} versus \textit{He is showering}.
+%\lk{it may be worthwhile to add the conll parse for this example so it's clear how these graphs come about}
+This is a lenient approach to prepositions, as prepositions
+are not without semantic meaning---e.g., \textit{the boy played in a
+  ball} means something quite different from the \textit{with} example.  However, this option makes it moderately easier to compare the meaning to an expected semantic form (e.g., \textit{play(boy,ball)}).
+
+As for propagating relations across conjunctions, this option is less important as conjunctions are rare in the data, but it is advantageous as it simplifies the representation and makes it easier to connect verbs and their arguments, as needed for the semantic form used in comparisons. For a conjunction like \textit{cats and dogs}, for example, the default settings would produce \textit{cc(cats, and)} and \textit{conj(cats, dogs)}, but the chosen settings would collapse this into \textit{conj\_and(cats, dogs)}, omitting the dependency that merely labels a conjunction relation between the first conjunct and the conjunction.
+
+%Given the rule-based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces noun phrases. 
+
+\subsection{Obtaining a semantic representation}
+%\label{sec:semantic-form}
+%
+%\subsubsection{Sentence types}
+
+\begin{table*}[htb!]
+\begin{center}
+\begin{tabular}{|c|l|l|r|r|}
+\hline
+Type & Description & Example & NS & NNS \\
+\hline
+ A & Simple declar. trans. & The boy is kicking the ball. & 117 & 286 \\
+ \hline
+ B & Simple + preposition & The boy played with a ball. & 5 & 23 \\
+ \hline
+ C & No tensed verb & Girl driving bicycle. & 10 & 44 \\
+ \hline
+ D & No tensed verb + prep & Boy playing with a ball. & 0 & 1 \\
+ \hline
+ E & Intransitive (No object) & A woman is cycling. & 2 & 21 \\
+ \hline
+ F1 & Passive & An apple is being cut. & 4 & 2 \\
+ \hline
+ F2 & Passive with agent & A bird is shot by a man. & 0 & 6 \\
+ \hline
+ Ax & Existential A or C & There is a boy kicking a ball. & 0 & 0 \\
+ \hline
+ Bx & Existential B  or D & There was a boy playing with a ball. & 0 & 0 \\
+ \hline
+ Ex & Existential E & There is a woman cycling. & 0 & 0 \\
+ \hline
+ F1x & Existential F1 & There is an apple being cut. & 0 & 1 \\
+ \hline
+ F2x & Existential F2 & There is a bird being shot by a man. & 0 & 0 \\
+ \hline
+ Z & All other forms & The man is trying to hunt a bird. & 2 & 6 \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Sentence type examples, with distributions of types for
+  native speakers (NS) and non-native speakers (NNS)}
+\label{tab:sentence-type}
+\end{table*}
+
+
+I manually categorized the 530 sentences in the dataset into 11 types plus one catch-all category, as shown in
+Table~\ref{tab:sentence-type}. I established these types because each
+one corresponds to a basic sentence structure and thus has consistent
+syntactic features, leading to predictable patterns in the dependency
+parses. A sentence type indicates that the subject,
+verb, and object can be found in a consistent place in the parse,
+such as under a particular dependency label.
+For simple transitive sentences (type \textit{A} in Table~\ref{tab:sentence-type}), for example, the dependents labeled \textit{nsubj}, \textit{root}, and \textit{dobj} 
+pinpoint the necessary information.
+Thus, the patterns for extracting semantic information---in the form
+of \textit{verb(subj,obj)} triples---reference particular Stanford
+typed dependency labels, part-of-speech (POS) tags, and locations
+relative to word indices (see Figure~\ref{fig:conll}).
 
 
 \begin{figure}[htb!]
-%\begin{table}[t!] This line is giving me trouble when I go to typeset
 \begin{center}
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|C{4em}|C{5em}|C{4em}|C{6em}|C{4em}|}
 \hline
-{\includegraphics[width=0.29\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I02.jpg}} & {\includegraphics[width=0.3\columnwidth]{figures/I17.jpg}} \\
-\hline
-What is the girl doing? & What is the boy doing? & What is the girl doing? \\
-\hline
-\end{tabular}
-\caption{\label{fig:example-pdt-items} PDT example images with their targeted questions. In the untargeted form, the question for each is \textit{What is happening?} From left to right, the examples represent one intransitive, transitive and ditransitive item.}
-\end{center}
-\end{figure}
-
-Each PDT image is used in two different contexts: \textbf{targeted} and \textbf{untargeted}. An \textbf{item} consists of an image and a prompt question. For \textbf{targeted} items, questions take the form of \textit{What is $<$subject$>$ doing?}, with the subject provided (e.g., \textit{the girl}, \textit{the boy}; see Figure~\ref{fig:example-pdt-items}). For all \textbf{untargeted} items, the question is \textit{What is happening?}
-%Thus, there are a total of 60 different items used in this study, with each of 30 images used once in a targeted prompt and once in an untargeted prompt.
-Collecting these targeted and untargeted responses allows for the examination of response variation with and without a subject constraint. To elaborate, for targeted items, I expect less variation among responses; defining the subject in the prompt means all responses should reuse this subject and only vary in how they express the predicate. For untargeted items, some image prompts might allow for variation of the subject, however. For the image in Figure~\ref{fig:image-prep}, for example, valid responses could include \textit{The boy is throwing a ball to the girl} as well as \textit{The girl is catching a ball from the boy}. Understanding the effect of the subject constraint could help inform approaches to task design and automatic content assessment \citep{foster2009native, cho2013investigating}. 
-
-Different participants performed different versions of the PDT, and multiple versions were necessary to collect roughly equal numbers of targeted and untargeted \textbf{responses} for each image. These versions vary in which images are presented as targeted items and which images are presented as untargeted items. Additionally, native speakers (NSs) were asked to provide two non-identical responses to each item (see Section~\ref{sec:participants}), but non-native speakers (NNSs) were asked to provide only one response per item, so different PDT versions were used for these groups. The PDTs were hosted online via Survey Monkey\footnote{https://www.surveymonkey.com}, and all participants submitted their responses through this platform. %Survey Monkey restricts the number of questions included in surveys used for purchasing crowdsourced responses, so the PDTs were split accordingly for this group.
-
-In each (full-length) PDT, targeted items are presented in the first half, and untargeted items are presented in the second half. This targeted-untargeted ordering is intended to avoid the possibility that in an untargeted-targeted task, respondents might notice that the question for each untargeted item is always the same in the first half and finish the task hastily without noticing that later targeted items specify the subject. Each half is introduced with instructions, including an example item with sample responses. The instructions ask participants to focus on the main event depicted in the image and for each response to be one complete sentence. Because the PDT was presented as an online survey, all participants typed their responses. Participants were instructed not to use any reference materials, but browser-based spell checking was not disabled, and participants are assumed to have used it as necessary.
-
-The main task instructions are presented in (\ref{exe:pdt-instructions-a}). Additional instructions provided to NSs are presented in (\ref{exe:pdt-instructions-b}). The full set of PDT versions is available for download with the SAILS Corpus.\footnote{https://github.com/sailscorpus/sails}
-
-\begin{exe}
-  \ex\label{exe:pdt-instructions-a}\textbf{Instructions:} In this task, you will view a set of images. For each image, please write \textbf{one sentence} to answer the question provided with the image. It is important to write a \textbf{complete sentence}, not a word or phrase.
-\end{exe}
-
-\begin{exe}
-  \ex\label{exe:pdt-instructions-b}\textbf{Additional Instructions for NSs:} Then, you will be asked to write a second, \textit{different} answer, which is also a complete sentence. This might involve rewording or reorganizing your first sentence. It does not need to be \textit{completely} different; some words may be the same. If you cannot think of another way to answer the question, you may leave the second answer space empty, but any second responses you provide will be greatly appreciated.
-\end{exe}
-
-\section{Participants}
-\label{sec:participants}
-
-This study involved a total of 499 PDT participants. Of these, 141 were NNSs, recruited from intermediate and advanced writing courses in the English Language Improvement Program at Indiana University. These participants performed the task in a computer lab with a researcher present. They were native speakers of Mandarin Chinese (125), Korean (4), Burmese (3), Hindi (2), and one native speaker each of Arabic, Indonesian Bahasa, German, Gujarati, Spanish, Thai and Vietnamese. Because nearly 90\% of these recruits were native speakers of Chinese, care should be taken when drawing conclusions from the corpus; patterns observed among the NNSs here might not apply broadly to all NNSs.
-
-Responses from 329 of the NSs were purchased via Survey Monkey, where survey takers can earn credits that they can redeem for prizes or convert to donations to charities. Asking NSs to provide two responses doubles the length of the survey, exceeding the platform's limits on survey length for purchases responses, so the task was divided into two separate surveys for NSs. Thus while each NS and NNS provided 30 responses, each NNS responded to all 30 PDT items while each NS responded to only 15.
-
-The remaining 29 NS participants were people known to me personally. Due to this relatively small number of participants, their data was not used for modeling or evaluating NNS responses, but it was annotated and is included in the SAILS Corpus. Unless specifically noted otherwise, the NS data discussed throughout this dissertation is the crowdsourced data. Where relevant, however, I refer to these two groups as the \textbf{Familiar Native Speakers (FNSs)} and the \textbf{Crowdsourced Native Speakers (CNSs)}. Future work should include collecting much more FNS data and comparison of the two groups to better understand the differences in quality, as CNSs are almost certainly less likely to perform the task in good faith.
-
-All participants completed a background questionnaire at the beginning of the PDT. This included questions about first and second languages, gender, age, national origin, amount of English language instruction and length of residency in English-speaking locations. This questionnaire is included as part of the PDT, and the background information provided by participants is included in the SAILS Corpus files. A summary of some of the demographic information is shown in Table~\ref{tab:demographics}.
-
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|rr|rr|rr|}
-\hline
-& \multicolumn{2}{|c|}{NNS} & \multicolumn{2}{|c|}{CNS} & \multicolumn{2}{|c|}{FNS} \\
+\textbf{Index} & \textbf{Dependent} & \textbf{POS} & \textbf{Head} & \textbf{Label} \\
 \hline
 \hline
-Mean age & \multicolumn{2}{|r|}{18.7} & \multicolumn{2}{|r|}{45.0} & \multicolumn{2}{|r|}{39.1} \\
-\hline
-Median age & \multicolumn{2}{|r|}{18.0} & \multicolumn{2}{|r|}{44.0} & \multicolumn{2}{|r|}{35.0} \\
-\hline
-\hline
-Male & 56 & (39.7\%) & 138 & (41.9\%) & 17 & (58.8\%) \\
-\hline
-Female & 76 & (53.2\%) & 172 & (52.3\%) & 11 & (37.9\%) \\
-\hline
-Unknown & 9 & (6.4\%) & 19 & (5.8\%) & 1 & (3.4\%) \\
-\hline
-\end{tabular}
-\caption{\label{tab:demographics} Age and gender information for the three participant groups (Non Native Speakers, Crowdsourced Native Speakers and Familiar Native Speakers).}
-\end{center}
-\end{table}
-%& \multicolumn{3}{|c|}{Response Counts} \\
-
-
-In previous similar work \citep{king:dickinson:13},
-%\citep{king:dickinson:13,king:dickinson:16},
-NSs were found to produce less variation than NNSs. Many NSs provided identical responses or responses that hew very closely to the most canonical way of expressing the main action. A major motivation for collecting the current corpus was the notion of assessing NNS response content by comparing it against the NS responses. Among other things, this involves the matching of words or syntactic dependencies and thus benefits from a broad set of acceptable responses in the gold standard. For this reason, NSs were asked to provide two non-identical responses, in the hopes that this would result in a wide range of examples of native-like responses for the NNS responses to be compared against.
-
-\section{Response Totals}
-\label{sec:response-totals}
-
-A total of 13,533 responses were collected. The response counts for each participant group are presented in Table~\ref{tab:response-counts}. Including the second responses collected from NSs, roughly two thirds of the corpus come from the NS groups. The overwhelming majority of responses appear to be given in good faith, but a small number of responses (primarily from the CNS group) are problematic in this regard, as shown in Table~\ref{tab:bad-faith}. These may contain gibberish or obscenities or are otherwise inappropriate for the task. Such responses would also be expected in an ICALL environment, so they were not removed from the corpus. Instead, these responses were simply annotated like all others (see Chapter~\ref{chap:annotation}). Indeed, automatically assigning low scores to inappropriate responses is a central challenge and goal in this project (see Chapter \ref{chap:method}).
-
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l||r|r||r|}
-\hline
-& \multicolumn{3}{|c|}{Response Counts} \\
-\hline
- Group & First & Second & Total \\
-\hline
-\hline
-NNS & 4290 & 0 & 4290 \\
-\hline
-\hline
-NS (all) & 4634 & 4609 & 9243 \\ %%LK: Yes, 0.949 is correct in both cases here
-\hline
-\multicolumn{1}{|r||}{FNS} & 642 & 641 & 1283 \\ 
-\hline
-\multicolumn{1}{|r||}{CNS} & 3992 & 3968 & 7960 \\
-\hline
-\hline
-Total & 8924 & 4609 & 13,533 \\
-\hline
-\end{tabular}
-\caption{\label{tab:response-counts} First and second response counts for the SAILS Corpus participant groups. Familiar (FNS) and crowdsourced (CNS) are subgroups of NS. NNS participants are not asked to provide a second response.}
-\end{center}
-\end{table}
-
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|}
-\hline
-Exemplar: \textit{The girl is laughing.} \\
-\hline
-Girl ate a 2x4 and is vomiting toothpicks. \\
-\hline
-I have to poop so bad. \\
-\hline
-\hline
-Exemplar: \textit{The boy is eating pizza.} \\
-\hline
-How is the pizza staying perfectly horizontal when the boy is holding it so close to the tip? \\
-\hline
-see my last statement \\
-\hline
-\hline
-Exemplar: \textit{The girl is feeding a carrot to a horse.} \\
-\hline
-Creepy clown child grinding her carrot down on poor Ed's beaver teeth \\
-\hline
-Hoj \\
-\hline
-%Hey man \\
+%0 & \textit{root} & N/A & N/A & N/A \\
 %\hline
+1 & the & DET & 2 (boy) & det \\
+\hline
+2 & boy & NN & 4 (kicking) & nsubj \\
+\hline
+3 & is & VBZ & 4 (kicking) & aux \\
+\hline
+4 & kicking & VBG & 0 (\textit{root}) & root \\
+\hline
+5 & the & DT & 6 (ball) & det \\
+\hline
+6 & ball & NN & 4 (kicking) & dobj \\
+\hline
+\hline
+    \multicolumn{5}{|c|}{\begin{dependency}[arc edge,text only label,label style={above}]
+    \begin{deptext}[column sep=.5em]
+      ROOT \& DET \&[1em] NN \& VBZ \&[1em] VBG \& DET \&[1em] NN \\
+      \textit{root} \& The \&[1em] boy \& is \&[1em] kicking \& the \&[1em] ball \\
+    \end{deptext}
+    \depedge[arc angle=90]{5}{3}{nsubj}
+    \depedge{5}{4}{aux}
+    \depedge[arc angle=92]{1}{5}{root}
+    \depedge[arc angle=80]{5}{7}{dobj}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+    \depedge[arc angle=35]{7}{6}{det}
+    \depedge{3}{2}{det}
+  \end{dependency}} \\
+\hline
 \end{tabular}
-\caption{\label{tab:bad-faith} Crowdsourced responses for the items shown in Figure~\ref{fig:example-pdt-items}, showing one exemplar response and two examples of problematic or bad faith responses for each item.}
 \end{center}
-\end{table}
+%\caption{The dependency parse of an example NNS response in CoNLL\footnote{Standard dependency parse format established by the Conference on Computational Natural Language Learning (CoNLL).} format and the corresponding visual representation.}
+\caption{The dependency parse of an example NNS response in a standard format (CoNLL) and the corresponding visual representation}
+\label{fig:conll}
+\end{figure}
 
+%More complicated sentences or those containing common learner errors
+%(e.g., omission of the copula \textit{be}) required slightly more
+%complicated extraction rules, but, since this work examined only transitive
+%verbs, these still boiled down to identifying the
+%sentence type and extracting the appropriate triple.
+Determining the sentence type was accomplished by arranging a small set of binary decisions into a tree, as shown in Figure~\ref{fig:decision-tree}. This decision tree checks for the presence of various dependency labels. The extraction rules for the particular sentence type were then applied to obtain the semantic triple. Finally, for each NNS response, the resulting triple was lemmatized and checked against the list of lemmatized NS triples. Ideally, each acceptable response will find a match, and unacceptable responses will not.
 
-\section{Response Variation}
-\label{sec:response-variation}
-Type-to-token ratios (TTR) are commonly used as an indication of how varied or homogenous a set of data is. This number ranges between 0 and 1. In a set of data where most instances or \textit{tokens} are unique (\textit{types}), the number of types per tokens approaches 1. In a set of data where most tokens are identical, the number of types per tokens approaches 0. With regard to language data, TTRs are often used on the word level, to calculate the lexical density of a document, for example \citep{granger2002computer}. In this study, however, type-to-token ratios (TTR) were calculated on the response level for the entire set of items. For this calculation, final punctuation was ignored, and all responses were converted to lowercase. To illustrate, the first three response \textit{tokens} in Table~\ref{tab:type-token-examples} would constitute a single response \textit{type}.
+\begin{figure*}[htb!]
+\begin{center}
+\begin{tikzpicture}
+\tikzset{level distance=3.5em}
+\tikzset{edge from parent/.append style={->}}
+\Tree
+[.{\tt expl}?
+  \edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+  [.{\tt auxpass}? 
+  	\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+  	[.{\tt agent}? 
+		\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+		[.F2x ]
+		\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+		[.F1x ]
+	]
+	\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+	[.{\tt dobj}? 
+		\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+		[.Ax ]
+		\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+		[.{\tt prep\_}$\ast$?
+			\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+			[.Bx ]
+			\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+			[.Ex ]
+		]
+	]
+  ]
+  \edge node[auto=left,pos=.6,inner sep=1pt]{N};
+  [.{\tt nsubjpass}? 
+  	\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+  	[.{\tt agent}? 
+		\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+		[.F2 ]
+		\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+		[.F1 ]
+	]
+	\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+	[.{\tt dobj}? 
+		\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+		[.{\tt nsubj}?
+			\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+			[.A ]
+			\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+			[.C ]
+		]
+		\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+		[.{\tt nsubj}?
+			\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+			[.{\tt prep\_}$\ast$?
+			 	\edge node[auto=right,pos=.6,inner sep=1pt]{Y};
+				[.B ]
+				\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+				[.E ]
+			]
+			\edge node[auto=left,pos=.6,inner sep=1pt]{N};
+			[.D ]
+			]
+		]
+	]
+  ]
+]
+\end{tikzpicture}
+\end{center}
+\caption{Decision tree for determining sentence type and extracting semantic triple based on the presence of syntactic dependency labels}
+\label{fig:decision-tree}
+\end{figure*}
+
+%To illustrate, consider the process for the example in Figure~\ref{fig:F2-dependency}.  The
+%sentence is passed through the parser to obtain the dependency parse shown.
+%The parsed sentence then moves to the
+%decision tree shown in Figure~\ref{fig:decision-tree}.
+%At the top of the tree, the sentence is checked for an {\tt expl}
+%(expletive) label; having none, it moves rightward to the {\tt
+%  nsubjpass} (noun subject, passive) node. Because a {\tt
+%  nsubjpass} label is found, the sentence moves leftward to the {\tt agent}
+%node. This label is also found, and because the sentence has reached a terminal node, it is labeled as a type F2 sentence.
+%
+%
+%With the sentence now typed as F2, specific F2 extraction
+%rules are applied. The logical subject is taken from under the {\tt agent} label,
+%the verb from {\tt root}, and the logical object from {\tt nsubjpass},
+%to obtain \textit{shot(man,bird)}, which can be lemmatized to
+%\textit{shoot(man,bird)}. 
+%%Very little effort goes into this process:
+%%the parser is pre-built; the decision tree is small; and the
+%%extraction rules are minimal.
+%
+%This much is possible with relatively little effort in part due to the constraints in the
+%pictures.  For figure~\ref{fig:example-picture}, for example,
+%\textit{the artist}, \textit{the man in the beret}, and \textit{the
+%  man} are all acceptable subjects, whereas if there were multiple men
+%in the picture, \textit{the man} would not be specific enough.
+%%In future work, we expect to relax such constraints on image contents
+%%by including rules to handle relative clauses, adjectives and other
+%%modifiers in order to distinguish between references to similar
+%%elements, e.g., 
+%%\textit{a man shooting a bird} vs. \textit{a man reading the
+%%  newspaper}.
+
+\section{Rule-based results}
+\label{sec:rule-results}
+
+Evaluating this work required addressing two major questions.  First,
+how accurately does this approach extract semantic information from potentially
+innovative sentences?
+%Due to the simple structures of the sentences (section~\ref{sec:sentence-distribution}), this simple system performs moderately well.
+Second, how many semantic forms does one need in order to capture the variability in meaning in NNS sentences? I operationalized this second question by asking how well a given set of NS semantic forms functions as an ``answer key'' or gold standard.
+% (section~\ref{sec:eval:coverage})?
+
+An accurate extraction was defined as one in which the extraction rules chose the desired subject, verb, and object given the sentence at hand and without regard to the PDT image. Accuracy was 92.3\% for NNS responses and 92.9\% for NS responses. I attribute the high extraction scores to the constrained nature of the task and the relatively small range of sentence types it elicits. As seen in Table~\ref{tab:sentence-type}, only three sentence types (A, B, and C) account for more than 90\% of all responses.
+
+Assessing the coverage of NNS forms required first manually determining which extracted triples \textit{should} be matched given a hypothetical perfect gold standard set of triples. To separate the problem of coverage from extraction, I first removed any incorrectly extracted triples from the NNS set and the NS gold standard.
+
+Using the annotations discussed in Section~\ref{sec:pilot-data}, I called an appropriate NNS triple found in the NS gold standard set a \textbf{true positive (TP)} (i.e., a correct match), and an appropriate NNS triple \textit{not found} in the gold standard set a \textbf{false negative (FN)} (i.e., an incorrect non-match), as shown in Table~\ref{tab:contingencies}. I used standard terminology here (TP, FN), but because this was an investigation of what \emph{should be} in the gold standard, these were considered
+false negatives and not false positives.  To address the question of
+how many NS sentences are needed to obtain good coverage, \textbf{coverage} was defined as recall: \textit{TP/(TP+FN)}. I reported 23.5\% coverage for unique triple \textit{types} and 51.0\% coverage for triple \textit{tokens}.
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-Types & Tokens & Response \\
-\hline
-1 & 1 & The woman is holding a dog \\
-\hline
-1 & 2 & the woman is holding a dog! \\
-\hline
-1 & 3 & The Woman is holding a Dog. \\
-\hline
-2 & 4 & The woman is hugging a puppy. \\
-\hline
-3 & 5 & The woman squeezed a dog. \\
-\hline
+\begin{tabular}{|ll||l|l|}
+  \hline
+  & & \multicolumn{2}{c|}{NNS}\\
+  & & $+$ & $-$ \\
+  \hline
+  \hline
+  \multirow{2}{*}{NS} & Y & TP & FP \\
+  \cline{2-4}
+  & N & FN & TN\\
+  \hline
 \end{tabular}
-\caption{\label{tab:type-token-examples} This toy dataset shows how TTR is calculated on the response (sentence) level. Ignoring punctuation and capitalization, the first three response tokens here constitute a single response type. The TTR for this set would be 3:5, or 0.6.}
 \end{center}
+\caption{Contingency table comparing presence of NS forms (Y/N) with
+  appropriateness ($+$/$-$) of NNS forms}
+\label{tab:contingencies}
 \end{table}
 
-%\begin{exe}[h!]
-%  \ex\label{exe:ttr-1}The woman is holding a dog
-%\end{exe}
-%\begin{exe}[h!]
-%  \ex\label{exe:ttr-2}the woman is holding a dog!
-%\end{exe}
-%\begin{exe}[h!]
-%  \ex\label{exe:ttr-3}The Woman is holding a Dog.
-%\end{exe}
+I defined an inappropriate NNS triple (i.e., a content error)
+\textit{not found} in the gold standard as a \textbf{true negative
+  (TN)} (i.e., a correct non-match). \textbf{Accuracy} based on this
+gold standard---assuming perfect extraction---is defined as
+\textit{(TP+TN)/(TP+TN+FN)}.\footnote{Accuracy is typically defined as (TP+TN)/(TP+TN+FN+FP), but false positives (FPs) are cases where an incorrect NNS response was matched in the NS gold standard; by removing errors from the NS gold standard, I prevented this scenario (i.e., FP=0).} I reported 46.4\% accuracy for types and 58.9\% accuracy for tokens.
 
-The TTRs for the corpus are presented in Table~\ref{tab:ttr}. 
-For each cell in this table, the corpus contains 10 items, for each of which there are roughly 150 NS responses and 70 NNS responses. 
-TTR is highly sensitive to text length, so to control for the imbalance between NS and NNS responses, the TTR was calculated for each item and each group (NS and NNS) based on a random sample of 50 responses \citep{grieve2007}.  This was repeated 10 times and then averaged to produce a final TTR for each item. These item TTRs were then averaged as intransitives, transitives and ditransitives. The ratios show the direct relationship between the complexity of the event portrayed (represented here as intransitive, transitive and ditransitive) and the degree of variation elicited. In all cases, TTR increases with this complexity.
-%Interestingly, this trend seems more pronounced in the NNS responses; in the targeted NNS responses, the TTRs for intransitive and ditransitive items are 0.381 and 0.817, respectively, compared to 0.628 and 0.835 for NS responses. \textbf{*Might this be explained by the inclusion of NNS 2nd responses? Let's investigate*}\lk{1st vs 2nd?} 
-The ratios also show that in all cases, as expected, variation is greater for untargeted items than it is for targeted items. In other words, asking about a particular subject in the prompt question does constrain the variety of responses, as expected.
+The immediate lesson taken from this work was this: given a strict matching approach, NS data alone does not make for a sufficient gold standard, in that many appropriate NNS answers are not counted as correct. I explored expanding the set of NS triples by separating individual subjects, verbs and objects from NS triples and recombining them into the various possible combinations. However, this recombination generates a lot of nonsensical triples and degrades the gold standard. Consider, for example, \textit{do(woman,shirt)}---an incorrect triple derived from the correct NS triples, \textit{wash(woman,shirt)} and \textit{do(woman,laundry)}. This could be improved somewhat by evaluating new combinations with a language model, but this would both complicate the approach and diverge from my vision of content analysis driven by real speaker behavior. Instead, my current work has attempted to improve coverage by prompting NSs to give an initial PDT response, followed by a second alternative, as discussed in Chapters~\ref{chap:data} and~\ref{chap:optimization}.
 
-\begin{table}[h!]
+A related concern was that, even when only examining cases
+where the meaning is literally correct, NNSs produced a wider range of
+forms to describe the prompts than NSs. For example, for a picture
+showing what 100\% of NSs described as a \textit{raking} action,
+many NNSs referred to a man \textit{cleaning} an area. Literally,
+this may be true, but it does not align with a NS gold standard. 
+This behavior was expected, given that learners are encouraged
+to use words they know to compensate for gaps in their vocabularies
+\citep{AgustinLlach2010}. This also parallels the observation in SLA research that while second language learners may attain native-like grammar, their ability to use
+pragmatically native-like language is often much lower
+\citep{BardoviDornyei1998}. These findings highlighted the need for a more flexible approach.
+%that considers how native-like a sentence is as well as how appropriate its meaning is.
+
+Moreover, evaluating this strict matching approach required an annotator to decide whether a given response is correct or incorrect. Partial matching is not allowed; this is an inherent weakness of the approach, because while a complete triple gives some indication of the meaning of the sentence, any single element of the triple taken alone does not provide enough context to indicate meaning. This inflexibility means that using this approach would effectively require the manual curation of a robust gold standard set of acceptable responses, which is counter to my goal of producing an approach that can be expanded to new PDT items simply by crowdsourcing responses from NSs.
+
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|c|c|}
+%\hline
+%Triple & Example sentence \\
+%\hline
+%\hline
+%shoot(man, bird) & A man just shot a bird. \\
+% \hline
+%shoot(man, fowl) & The man shoots the fowl. \\
+% \hline
+%shoot(man, duck) & A man just shot a duck. \\
+% \hline
+%shoot(hunter, bird) & The hunter has shot a bird. \\
+% \hline
+%shoot(he, bird) & He shot the bird down! \\
+% \hline
+% \end{tabular}
+%\end{center}
+%\caption{The NS gold standard for Item 10.}
+%\label{tab:item10GS}
+%\end{table}
+
+I followed up this work with a modification that included language models and spelling correction tools to attempt to identify and fix misspellings that lead to downstream problems \citep{king:dickinson:14}. I omit this discussion because it is not applicable or comparable to my expanded corpus; I now take a much simpler approach---respondents used their browser's spell checker as necessary during the task (see Section~\ref{sec:pdt}). This is because in most contexts where my system would be used, like a language tutoring application or game, spelling instruction is not the objective, and a built-in spell checker would likely be available. Moreover, omitting this step removes a layer of analysis---and importantly, a potential source of errors---and allows the research to focus more directly on meaning.
+
+Ultimately, I was not satisfied with effectiveness of the rule-based approach. While the roughly 92\% accuracy rate for extraction may seem high, triple extraction only represents an intermediate step of the processing and effectively sets a ceiling for downstream performance. With regard to matching semantic triples, the coverage score of 51\% is somewhat less informative because it is at least partially a function of the small gold standard (n=14). However, the homogenous nature of NS responses seen for several items here (such as the \textit{raking} example discussed above) suggests that expanding NNS coverage is not simply a question of collecting responses from more NSs. These findings led me to experiment with new approaches, beginning with the work described in Section~\ref{sec:2016work}.
+%%%% END material from Qual Paper (BEA 2013) %%%%
+
+
+%%%% BEGIN material from BEA 2016 %%%%
+\section{Semantic similarity study}
+\label{sec:2016work}
+%%%% 2020/05/21. Resume here. %%%% 
+
+In subsequent work \citep{king:dickinson:16}, I began looking for a ``sweet spot'' of
+semantic analysis \citep[cf.][]{bailey:meurers:08} for image-based learner productions. I should note, in this context, that I am discussing semantic analysis given a reliable set of NS sentences, as opposed to other areas of research tying images and language. Image processing tasks like automatic captioning often rely on breaking images into semantic primitives \citep[see, e.g.,][and references therein]{ortiz:wolff:lapata:15}, but for NNS data, I want to ensure that I can account not just for correct semantics (the \emph{what} of a picture), but natural expressions of the semantics (the \emph{how} of expressing the content).  In other words, the goal is to reason about meaning based on specific linguistic forms.
+
+A second issue regarding content analysis, beyond correctness, stems
+from using an incomplete gold standard. The productive nature of language means that a sentence can be expressed in countless ways, and thus a gold standard can never really be ``complete.'' For this reason, it is necessary to assume that novel NNS productions will occur, and the methods of analysis should be robust enough to differentiate between responses that do not appear in the gold standard because they are bad responses, and those that do not appear in the gold standard simply because they are infrequent.
+In particular, using available NLP tools, I moved away from discrete representations of correctness in the form of a NS gold standard set of semantic triples to a more continuous notion of correctness using a NS model comprised of smaller, overlapping pieces of information. This obviates the need for a rule-based extraction of semantic triples, which is a source of errors and must be customized for a limited range of expected sentence types. It also allows for graded scoring of results, meaning that a response is not outright rejected because only one argument of a triple is not found. On the other hand, it means that the system does not provide a discrete ``thumbs up'' or ``thumbs down'' decision for each response, which may be desirable in some use cases.
+
+%Starting in Section~\ref{sec:ranking}, I explain a set of revised methods, and in Section~\ref{sec:metrics}, I discuss the results of those methods applied to the same 530 response dataset. The work and findings here became the basis of the much larger study discussed in Chapters~\ref{chap:data} through~\ref{chap:optimization}. 
+
+\subsection{Generalizing the methods}
+\label{sec:ranking}
+
+The previous work assumed that the assessment of NNS responses
+involves determining whether a NS gold standard set contains the same
+semantic triple that the NNS produced, i.e., whether a triple
+is \textit{covered} or \textit{non-covered}.  In such a situation the
+gold standard need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples. Here the gold standard is comprised of the small set of NS responses---only 14. This means that exact matching is going to miss many cases,
+and indeed as discussed in Section~\ref{sec:rule-results}, coverage was only 51\%. Even with a much larger gold standard, we can expect responses to follow Zipf's law; a sample of language data will always be incomplete because it will not contain all ``long tail,'' low-frequency phenomena.
+
+Additionally, relying on matching of triples limits the utility of the method to specific semantic constraints, namely transitive sentences. By dropping the exact matching approach and instead comparing the frequencies of elements in the NNS response with those of the gold standard, I moved into a gradable, or ranking, approach to the analysis, which is agnostic with regard to an item's transitivity or sentence type (see Table~\ref{tab:sentence-type}). For this reason, I shift terminology here from NS \textit{\textbf{gold standard}} to NS \textit{\textbf{model}}. A gold standard is roughly akin to an answer key, which was appropriate for my strict triple-matching approach. A model is typically a richer data structure containing statistics from observations of known correct data. This distinction and its relevance will be more apparent with the discussion of response representations in Section~\ref{sec:response-rep}.
+
+My goal is to emphasize the degree to which a NNS response conveys the same
+meaning as the set of NS responses, necessitating an approach which can automatically
+determine the importance of a piece of information among the set of NS responses.  This required two major decisions: 1) how to \textbf{represent} each response as a set of sub-elements, and 2) how exactly to \textbf{score} these sub-elements via comparison with the NS data. In Section~\ref{sec:response-rep}, I detail how I represented the information and in Section~\ref{sec:scoring}, I discuss comparing NNS information to NS information, which allowed me to rank responses from most to least similar to the NS model. In Section~\ref{sec:parameters}, I describe the system parameters that I combined to generate scores, and in Section~\ref{sec:metrics} I present and interpret the results of the various settings.
+%to rank responses from least to most similar to the NS gold standard.
+%\footnote{Although rankings often go from highest to lowest, I prioritize identifying problematic cases, so I rank accordingly.}
+%I also discuss the handling of various other system parameters (section~\ref{sec:parameters}).
+
+%This work used the same 10 item PDT dataset described in section~\ref{sec:first-approaches}. Another example is shown in Figure~\ref{fig:example-picture2}.
+%
+%\begin{figure}
+%\begin{center}
+%\begin{tabular}{|c|}
+%\hline
+%\includegraphics[width=0.7\columnwidth]{figures/exampleprompt2.jpg}\\
+%\hline
+%\textbf{Response (L1)} \\
+%\hline
+%The man killing the beard. (Arabic)\\
+%\hline
+%A man is shutting a bird. (Chinese) \\
+%\hline
+%A man is shooting a bird. (English) \\
+%\hline
+%The man shouted the bird. (Spanish)\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Example item and responses}
+%\label{fig:example-picture2}
+%\end{figure}
+%
+\subsection{Representing responses}
+\label{sec:response-rep}
+
+%To overcome the limitations of an incomplete GS,
+I first represented each NNS response as a list of dependencies taken directly from the parse. 
+%\citep{demarneffe:ea:06}, the terms referring to
+%%being either 
+%individual dependencies (i.e., relations between words).
+%or individual words. 
+This eliminates the complications of extracting semantic triples from
+dependency parses, which only handled a very restricted set of
+sentence patterns and resulted in errors in 7--8\% of cases, as discussed in Section~\ref{sec:rule-results}.
+Operating directly on individual dependencies from the overall tree also means the system can allow for ``partial credit;'' it distributes the matching over smaller,
+overlapping pieces of information rather than a single, highly specific triple. As before, the responses were lemmatized to minimize data sparsity.
+
+\begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\begin{tabular}{|C{7em}||C{6em}||C{5.5em}||C{5.5em}||C{5em}|}
 \hline
- & \multicolumn{2}{|c||}{Targeted} & \multicolumn{2}{|c|}{Untargeted} \\
-\hline
- Set & NS & NNS & NS & NNS \\
+\multicolumn{5}{|c|}{The boy is kicking the ball.} \\
 \hline
 \hline
-Intrans & 0.628 & 0.381 & 0.782 & 0.492 \\
+\textbf{ldh} (labeled) & \textbf{xdh} (unlab.) & \textbf{lxh} & \textbf{ldx} & \textbf{xdx} (word)\\
 \hline
-Trans & 0.752 & 0.655 & 0.859 & 0.779 \\ %%LK: Yes, 0.949 is correct in both cases here
 \hline
-Ditrans & 0.835 & 0.817 & 0.942 & 0.936 \\ 
+det(the,boy) & \textit{x}(the,boy) & det(\textit{x},boy) & det(the,\textit{x}) & \textit{x}(the,\textit{x}) \\
+\hline
+nsubj(boy,kick) & \textit{x}(boy,kick) & nsubj(\textit{x},kick) & nsubj(boy,\textit{x}) &  \textit{x}(boy,\textit{x}) \\
+\hline
+aux(is,kick) & \textit{x}(is,kick) & aux(\textit{x},kick) & aux(is,\textit{x}) & \textit{x}(is,\textit{x}) \\
+\hline
+root(kick,root) & \textit{x}(kick,root) & root(\textit{x},root) & root(kick,\textit{x}) & \textit{x}(kick,\textit{x}) \\
+\hline
+det(the,ball) & \textit{x}(the,ball) & det(\textit{x},ball) & det(the,\textit{x}) & \textit{x}(the,\textit{x}) \\
+\hline
+dobj(ball,kick) & \textit{x}(ball,kick) & dobj(\textit{x},kick) & dobj(ball,\textit{x}) & \textit{x}(ball,\textit{x}) \\
 \hline
 \end{tabular}
-\caption{\label{tab:ttr} NS and NNS type-to-token ratios (TTR) for complete responses (not words), for the full corpus.}
 \end{center}
+%\caption{The dependency parse of an example NNS response in CoNLL\footnote{Standard dependency parse format established by the Conference on Computational Natural Language Learning (CoNLL).} format and the corresponding visual representation.}
+\caption{Given the example sentence above, the updated approach represents responses in the dependency formats shown: ldh (for \textit{label}, \textit{head}, \textit{dependent}; i.e., labeled dependencies)), xdh (unlabeled dependencies), lxh (label+head), ldx(label+dependent), or xdx (word, or more technically, \textit{dependent}).}
+\label{tab:dep-rep}
 \end{table}
 
-Additionally, from Table~\ref{tab:ttr} we can see that the NS set contains a greater degree of response variation than does the NNS set. Note that the TTRs here are calculated on \textit{all} responses, and the NS participants each provided two responses per item, whereas the NNS participants were only asked to provide one response per item. This suggests that asking for two responses is an effective way of collecting a broader range of NS responses. This variability can be more closely examined in Table~\ref{tab:ttr1v2}, which presents separate TTRs for all NS participants' first responses and second responses. The numbers show that in general, first responses are far less varied than second responses. As we can see, among first responses, variability increases along with item complexity. The pattern holds for targeted second responses, although it is not as pronounced. For untargeted second responses, this monotonic increase in variability is not present, but all three TTRs vary by less than three percent, indicating that a ceiling effect is at work. In other words, untargeted second responses are unconstrained by the task to such an extent that even the least complex responses---the intransitives---approach a level of variation roughly equal to the more complex transitive and ditransitive responses.
+Next, I obtained five different representations from the lemmatized dependencies, as shown in Table~\ref{tab:dep-rep}. I refer to this variable as \textbf{term representation}, in keeping with \textit{term} frequency-inverse document frequency, discussed in Section~\ref{sec:scoring}.
+%I first tokenized and lemmatized a response to a list of dependencies that represents the response.
+The five term representations are then variations on dependencies. The
+full form is the \textbf{labeled dependency} and includes the \textbf{l}abel, \textbf{d}ependent and \textbf{h}ead, so I refer to it in shorthand as \textbf{ldh}. The remaining four forms abstract over either the label, dependent and/or head. I refer to these forms as \textbf{xdh} (i.e., unlabeled dependency), \textbf{lxh} (label+head), \textbf{ldx} (label+dependent), and \textbf{xdx} (dependent only, roughly equivalent to \textit{word} in a bag-of-words approach).
 
-Finally, for ease of comparison, Table~\ref{tab:ttr1v1} presents the (NS only) first response TTRs from Table~\ref{tab:ttr1v2} alongside the NNS first (and only) response TTRs from Table~\ref{tab:ttr}. These comparisons should be made with caution, however, as they cannot account for the possibility of task effects arising from the different instructions given to NS and NNS participants. In other words, it is possible that the anticipation of providing a second response influences a NS participant's choice of first response, and any such effect would be absent for NNS participants. A future study in which NSs are asked to provide only one response per item could be useful in examining the possibility of such a task effect. As it stands, the table suggests that NNSs generally do exhibit greater response variability than NSs; the only exception to this trend appears among the intransitive untargeted items. This trend is in keeping with the observations from previous work \citep{king:dickinson:13}, which found that NSs tend toward canonical forms, while NNSs use whatever language may be available to them, resulting in greater variation. As described above, this was the motivation for asking NSs for two responses.
+The goal in choosing these five representations was to find the optimal combination of dependency features and the right level of detail to obtain the best system performance. The bag-of-words representation was implemented largely to provide a baseline by which to compare the others.
 
-\begin{table}[h!]
+This processing was applied to the collection of NS responses as well. For each item, the dependencies from all NS responses was pooled into a single flat list---a ``bag-of-dependencies.'' From this list, a copy in each of the five term representations was produced, allowing for comparison with the corresponding NNS data.
+%I tested the system performance using each of these term representations separately.
+
+%The \param{xdx} model is on a par with treating the sentence as a ``bag
+%of words'' (or more accurately, a bag of lemmas), except that some function words not receiving parses (e.g., prepositions) are not included (see section~\ref{sec:syntactic-form}).
+
+\subsection{Scoring responses}
+\label{sec:scoring}
+
+Taking the five term representations, my next step was to automatically score them in a way which ranks responses from most to least appropriate.  I devised four scoring approaches, each using one of two methods to \textbf{weight} response terms combined with one of two methods to \textbf{compare} the weighted NNS terms with the NS data.
+
+For weighting, the simplest method used the relative frequency of each term (i.e., dependency). This is the token count of a given term in a document normalized by the total count of tokens in the document.
+
+The other method of weighting was based on \textit{term frequency-inverse document frequency} (\textit{tf-idf}), which scores the importance of terms in a test document according to their frequencies in the language generally \citep[][ch. 6]{manning-et-al:08}. It approximates this by taking a large reference corpus comprised of many smaller documents, and counting the number of those documents in which the terms in question occur. Most commonly, a \textit{term} for tf-idf purposes would be a \textit{word}. However, \textit{term} here refers to a single syntactic dependency, and this is a central conceit of this dissertation:  the dependency, which captures aspects of semantic and syntactic relationships, is an ideal atomic unit for evaluating meaning by comparing distributions in crowdsourced data. As discussed in Section~\ref{sec:response-rep}, the dependencies were represented in one of the five term representations---some combination of label, dependent and head. For the NNS data, each response was treated as a tf-idf test document. For the NS data, the entire collection of NS responses was treated as one tf-idf test document. The idea here is to obtain a similarity measure between a single NNS response and the full collection of NS responses, so each is handled as a single document.
+
+I used tf-idf as a measure of a term's importance with the expectation that it would reduce the impact
+of semantically less important terms---e.g., determiners like
+\textit{the}, frequent in the responses, but mostly unnecessary for evaluating the
+semantic contents---and to upweight terms which may
+be salient but infrequent, e.g., only used in a handful of NS
+sentences. For example, for an item depicting a man shooting a bird
+(see Figure~\ref{fig:example-picture}), of 14 NS responses, 12 described the subject as \textit{man}, one as \textit{he} and one as
+\textit{hunter}. Since \textit{hunter} is relatively infrequent in English, even
+one instance in the NS responses should get upweighted via tf-idf, and indeed
+that was the effect; in the bag-of-words approach, the term \textit{hunter} is weighted among the highest, and the same is true for dependencies containing the word \textit{hunter} among the other term representations. This is valuable, as numerous NNS responses used \textit{hunter}.
+
+Calculating tf-idf relies on both \emph{term frequency} ($tf$) and
+\emph{inverse document frequency} ($idf$).  Term frequency is simply
+the raw count of a term within a document. Inverse document frequency is derived from a reference corpus of documents, and it is based on the notion that appearing in more documents makes a term less informative with respect
+to distinguishing between documents.  The formula is shown in
+(\ref{ex:tfidf}) for a term $t$, where $N$ is the number of documents
+in the reference corpus, and $df_{t}$ is the number of documents
+featuring the term ($idf_{t} = \log \frac{N}{df_{t}}$).  A term
+appearing in fewer documents will thus obtain a higher $idf$ weight,
+and this should readjust frequencies based on semantic importance.
+
+\begin{exe}
+\ex\label{ex:tfidf} $tfidf(t) = tf_{GS} \log \frac{N}{df_{t}}$
+%, where $df_t = |\{d\in D, t \in d\}|$
+\end{exe}
+
+After this frequency counting or tf-idf weighting, the scores were then either
+\textbf{averaged} to yield a response score, or NNS term
+weights and NS term weights were treated as vectors and the response
+score was the \textbf{cosine distance} between them.  This
+yields the four approaches:
+
+%%former approach names: b = FA; m = IC (TC); c = FC; a = IA (TA)
+\paragraph{Frequency Average (FA).} 
+%This approach serves as our baseline. 
+Within the set of NS responses, the relative frequency of each term is calculated. The NS \textit{model} here is simply each NS term and its relative frequency. Each term in
+the NNS response is then given a score equal to its frequency in the
+NS model; terms missing from the NS model are scored zero. The response score is
+the average of the term scores, with higher scores closer to the NS model.
+
+\paragraph{Tf-idf Average (TA).} This involves the same
+averaging of term scores as with approach FA, but here the term scores are the tf-idf scores. The NS model here is thus each NS term and its tf-idf score. 
+
+\paragraph{Frequency Cosine (FC).} Each term score is taken as its relative frequency 
+calculated within its document: either the NS response set or the single NNS response. The NS model is then the set of all NS terms and their scores. The term scores are then treated as vectors---one vector of the NS term scores (i.e., the NS model here)---and one vector of the NNS term scores. Each vector is an ordered list of term scores for each term observed in either the NS document or the NNS document. In other words, each vector represents term scores for the sorted union set of NS and NNS terms. Naturally, many of the term scores are zero for the much shorter NNS document. The response score is the cosine distance between the vectors, with lower scores being closer to the NS model.
+
+\paragraph{Tf-idf Cosine (TC).} This involves the same distance comparison as with approach FC, but now the term scores in the vectors are tf-idf scores. The NS model here is thus the vector representing the union set of terms for the NS and NNS document, populated with the tf-idf scores from the NS document.
+
+\bigskip
+
+%The two cosine approaches are effectively primitive versions of sentence encoders like the currently popular BERT \citep{BertDevlin2018} and Universal Sentence Encoder \citep{UniversalSentenceEncoder}. Sentence encoders are a form of language model that learns mathematical representations of words by observing them in context, accounting for things like average distance from a given word type to another given word type. Sentence encodings are thus vectors representing these word values for a full sentence. These approaches result in very high dimensional spaces---imagine a sentence representation that consists of a vector for each word in the sentence, where each vector is a list of average distances from that word type to \textit{every other word type in the language}. Thus sentence encoders typically rely on methods of dimensionality reduction to compress these representations into vectors of manageable length.
+%I say my cosine approaches constitute ``primitive'' encoders because they omit this step.
+In many natural language processing scenarios where high dimensional vectors are involved, such as sentence encoders or word embeddings, methods for dimensionality reduction are employed \citep{BertDevlin2018,word2vec}. This improves efficiency by reducing the storage and computing power needed. In my FC and TC approaches, however, the number of term types remained small enough that the raw vectors representing dependencies' tf-idf scores can be processed easily with an ordinary PC. Not only does this simplify the task, it means that the process remains transparent. There are no transformers or attention mechanisms to produce compressed and unexplainable representations.  If desired, each sentence vector can be examined value by value, where each number maps to a real syntactic dependency. This is important because it leaves the door open for meaningful feedback on each response. For example, one might choose to identify the most salient dependencies in the NS model and use them to guide an ICALL user from a low scoring response to a better response.
+%That is to say, a full encoder could determine how similar a response is to a GS, but it could not tell us \textit{why} it made its determination.
+
+\subsection{System Parameters}
+\label{sec:parameters}
+
+I ran a total of 30 experiments, with each representing a combination of these system parameters for processing responses: 
+
+\paragraph{Term representation} As discussed in
+section~\ref{sec:response-rep}, the terms can take one of five
+representations: \param{\textbf{ldh}}, \param{\textbf{xdh}}, \param{\textbf{lxh}}, \param{\textbf{ldx}},
+or \param{\textbf{xdx}}.
+
+\paragraph{Scoring approach.} As discussed in
+section~\ref{sec:scoring}, the NNS responses can be
+compared with the NS models via approaches \param{\textbf{FA}}, \param{\textbf{TA}}, \param{\textbf{FC}}, or \param{\textbf{TC}}.
+
+\paragraph{Reference corpus.} The reference corpus for deriving tf-idf
+scores can be either the Brown Corpus (\param{\textbf{Brown}}) \citep{kucera:francis:67} or the Wall Street Journal Corpus (\param{\textbf{WSJ}}) \citep{marcus-et-al:93}. The Brown Corpus is just over one million words across 500 documents intended to cover a broad range of genres, registers, and contents and to serve as a sample of the written English language at large.
+The WSJ Corpus used here consists 1,640 documents; the documents are newspaper articles from 1989 and total one million words. Considering the narrative nature of PDT responses, a reference corpus of narrative texts would be ideal, but as no such reliably parsed corpus is available, I chose the widely used, pre-parsed \param{Brown} and \param{WSJ} corpora. The corpora were converted from their standard dependency parse format to each of the five term representations used in order to be compatible with the NS and NNS data for tf-idf.
+
+%\paragraph{NNS source.} Each response has an original version
+%(\param{NNSO}) and the output of a language model spelling corrector
+%(\param{NNSLM}). (The current dissertation relies on a corpus for which participants used spell checking at the time of the task, so this offline spelling correction is no longer applicable. In short, it used a spelling tool to find candidate spellings for each word in a NNS sentence, pruned the lists of candidate words by comparing against words in NS responses, formed new candidate sentences by combining candidate words, and finally chose the most likely sentence by rating each candidate with a trigram word model. I omit the exact details here for brevity, but more can be found in \cite{king:dickinson:14}).
+%
+\subsection{Experiments and Results}
+\label{sec:metrics}
+\subsubsection{Evaluation metrics}
+
+%I ran 60 response experiments, each with different system settings
+I ran 30 response scoring experiments, each with different system settings
+(section~\ref{sec:parameters}). Within each experiment, I ranked the 39
+scored NNS responses from least to most similar to the NS model.
+
+For assessing these settings themselves, I relied on the past annotation, which counted unacceptable responses as errors (see section~\ref{sec:rule-results}).  As the lowest numerical rank indicates the greatest distance from the NS model, a good system setting should position the unacceptable responses among those with the lowest rankings.
+%Thus, I assigned each error-containing
+%response a score equal to its rank (or the average rank in the case of tied responses).
+To evaluate this discriminatory power, I used \textbf{(mean) average precision ((M)AP)}
+\citep[][ch. 8]{manning-et-al:08}.
+
+\begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\setlength{\tabcolsep}{0.3em}
+\begin{tabular}{|r|c|l|c|}
 \hline
- & \multicolumn{2}{|c||}{Targeted} & \multicolumn{2}{|c|}{Untargeted} \\
-\hline
- Set & R1 & R2 & R1 & R2 \\
+Rank & Score & Sentence & Error \\
 \hline
 \hline
-Intrans & 0.343 & 0.819 & 0.549 & 0.939 \\
+\multirow{2}{*}{1} & 1.000 & she is hurting. & 1 \\
+& 1.000 & man mull bird & 1 \\
 \hline
-Trans & 0.509 & 0.895 & 0.682 & 0.926 \\ %%LK: Yes, 0.949 is correct in both cases here
+3 & 0.996 & the man is hurting duck. & 1 \\
+4 & 0.990 & he is hurting the bird. & 1 \\
 \hline
-Ditrans & 0.641 & 0.948 & 0.864 & 0.955  \\ 
+11 & 0.865 & the man is trying to hurt a bird & 1 \\
+12 & 0.856 & a man hunted a bird. & 0 \\
+\hline
+17 & 0.775 & the bird not shot dead.  & 1 \\
+18 & 0.706 & he shot at the bird & 0 \\
+19 & 0.669 & a bird is shot by a un & 1 \\
+20 & 0.646 & the old man shooting the birds & 0 \\
+\hline
+37 & 0.086 & the old man shot a bird. & 0 \\
+38 & 0.084 & a old man shot a bird. & 0 \\
+39 & 0.058 & a man shot a bird & 0 \\
+\hline
+\hline
+\multicolumn{4}{|c|}{Average Precision: 0.75084} \\
 \hline
 \end{tabular}
-\caption{\label{tab:ttr1v2} TTRs for complete responses, separated by first responses (R1) and second responses (R2). The ratios here are calculated from all NS responses; NNS responses are not included.}
+\caption{Example item rankings for the system setting combining these parameters: \param{TC}, \param{Brown}, and \param{ldh} (labeled dependencies). This was the best system setting based on average precision scores. Note that not all 39 responses are shown.}
+\label{tab:i10responses-avgprec}
 \end{center}
 \end{table}
 
-\begin{table}[h!]
+For average precision (AP), one calculates the precision of error
+detection at every point in the ranking, lowest to highest. Consider
+Table~\ref{tab:i10responses-avgprec}, which presents an excerpt of ranked sentence
+responses for one PDT item. The precision for
+the first cut-off (1.000) is 1.0, as two responses have been
+identified, and both are errors ($\frac{2}{2}$). At the 11th- and
+12-ranked response, precision is 1.0 (=$\frac{11}{11}$) and 0.917
+(=$\frac{11}{12}$), respectively, precision dropping when the item is
+not an error.
+AP averages over the precisions for all $m$ responses ($m=39$ for the
+NNS data), as shown in (\ref{ex:ap}), with each response notated as
+$R_k$.  Averaging over all 10 items results in the Mean AP (MAP).
+
+\begin{exe}
+\ex\label{ex:ap} $AP(item) = \frac{1}{m} \sum\limits_{k=1}^m
+Precision(R_k)$
+\end{exe}
+
+\subsubsection{Best system parameters} 
+
+To start the search for the best system parameters, it may help to
+continue with the example in
+Table~\ref{tab:i10responses-avgprec}. The best setting, as determined by the
+MAP metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{Brown}), and the full form of the labeled dependencies (\param{ldh}). It ranks highest because errors are
+well separated from non-errors; the highest ranked of 17 total errors
+is at rank 19.  Digging a bit deeper, one can see in this example how
+the verb \textit{shoot} is common in all the highest-ranked cases shown
+(\#37--39), but absent from all the lowest, showing both the effect of
+the NS model (as all NSs used \textit{shoot} to describe the action) and the
+potential importance of even simple representations like lemmas.  In
+this case, the labeled dependency (\param{ldh}) representation is best, likely because the
+word \textit{shoot} is not only important by itself, but also in terms
+of which words it relates to, and how it relates (e.g.,
+\textit{dobj(bird,shoot)}).
+
+\begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\begin{tabular}{|r|l|c|c|c|}
 \hline
- & \multicolumn{2}{|c||}{Targeted} & \multicolumn{2}{|c|}{Untargeted} \\
-\hline
- Set & NS & NNS & NS & NNS \\
+Rank & MAP & Approach & Reference & Term rep.\\
 \hline
 \hline
-Intrans & 0.343 & 0.381 & 0.549 & 0.492 \\
+1 & 0.5168 & \param{TC} & \param{Brown} & \param{ldh} \\
 \hline
-Trans & 0.509 & 0.655 & 0.682 & 0.779 \\ %%LK: Yes, 0.949 is correct in both cases here
+2 & 0.5128 & \param{TC} & \param{WSJ} & \param{ldh} \\
 \hline
-Ditrans & 0.641 & 0.817 & 0.864 & 0.936  \\ 
+3 & 0.5124 & \param{TC} & \param{Brown} & \param{xdh} \\
+\hline
+4 & 0.5109 & \param{TC} & \param{Brown} & \param{lxh} \\
+\hline
+5 & 0.5102 & \param{TC} & \param{WSJ} & \param{xdh} \\
+\hline
+\hline
+26 & 0.4826 & \param{FA} & \textit{na} & \param{ldx} \\
+\hline
+27 & 0.4816 & \param{TA} & \param{Brown} & \param{xdx} \\ 
+\hline
+28 & 0.4769 & \param{FC} & \textit{na} & \param{lxh} \\ 
+\hline
+29 & 0.4721 & \param{TA} & \param{WSJ} & \param{xdx} \\
+\hline
+30 & 0.4530 & \param{FA} & \textit{na} & \param{lxh} \\ 
 \hline
 \end{tabular}
-\caption{\label{tab:ttr1v1} TTRs for complete responses, comparing first responses only.}
+\caption{Based on Mean Average Precision, the five best and five worst combinations of system parameters across all 10 PDT items.}
+\label{tab:all-dist-ranked-settings}
 \end{center}
 \end{table}
 
-Having examined response variation in a rather abstract sense here, Chapter~\ref{chap:annotation} will focus on annotating response features to obtain a more fine-grained view of the ways in which responses can vary.
+Table~\ref{tab:all-dist-ranked-settings} shows the five best and five
+worst combinations of system settings averaged across all 10 PDT items, as ranked by
+MAP. The table clearly indicates that the \param{TC} approach is superior, occurring in all of the top five combinations.
+%, while approaches \param{FA} and \param{FC} compete for worst. 
+\param{Brown} appears among top scoring combinations more often than does \param{WSJ}. Finally, for the term representation, labeled (\param{ldh}) and unlabeled (\param{xdh}) dependencies score are used most among the top scoring combinations.
+
+I also summarize the rankings for each isolated parameter, presented in Table~\ref{tab:dist-ranked-parameters}. For a given parameter, e.g., \param{ldh}, I averaged the scores from all settings including \param{ldh} across all 10 items. Generally, the same trends appear salient. Notably, \param{TC} outperformed the other models, with \param{FC} and \param{TA} close behind (and nearly tied). Performance fell for the simplest model, \param{FA}, which was in fact intended as a kind of baseline. With \param{\textbf{T}C}$>$\param{\textbf{F}C} and \param{\textbf{T}A}$>$\param{\textbf{F}A}, tf-idf weighting seems preferable to basic frequencies. Likewise, with \param{T\textbf{C}}$>$\param{T\textbf{A}} and \param{F\textbf{C}}$>$\param{F\textbf{A}}, for my term based scoring, taking the cosine of  score vectors outperformed simply comparing score averages.
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{|l|r||l|r||l|r|}
+\hline
+\multicolumn{2}{|c||}{Approach} & \multicolumn{2}{|c||}{Term rep.} & \multicolumn{2}{|c|}{Ref. corpus} \\
+\hline
+\hline
+0.50630 & \param{TC} &0.50499 & \param{ldh} & 0.50461 & \param{Brown} \\
+\hline
+0.49609 & \param{TA} & 0.50405 & \param{xdh} & 0.49777 & \param{WSJ} \\
+\hline
+0.49471 & \param{FC} & 0.49287 & \param{ldx} & & \\
+\hline
+0.48247 & \param{FA} & 0.49190 & \param{xdx} & & \\
+\hline
+ & & 0.49115 & \param{lxh} & & \\
+\hline
+\end{tabular}
+\caption{Individual parameters ranked by Mean Average Precision for all 10 PDT items.}
+\label{tab:dist-ranked-parameters}
+\end{center}
+\end{table*}
+
+These findings largely confirmed my expectations. The \param{TC} approach was intended to evaluate responses by focusing comparison on the most salient content. The scores here show that to be successful. Regarding the top term representations, labeled and unlabeled dependencies both capture the relationship between dependents and their heads, making them an ideal unit for analyzing ``who did what to whom'' in the context of a PDT. Finally, given the subject matter and narrative style of the task, it is unsurprising that \param{Brown} serves as a better tf-idf reference than \param{WSJ}.
+
+The trends noted in these averages were strong overall, but a closer look at individual PDT items revealed some exceptions. For example, for the item depicting a man raking leaves, the \param{ldx} and \param{xdx} term representations were the top performers. As discussed in Section~\ref{sec:rule-results}, 100\% of NSs used the verb \textit{rake}, but only 3/39 NNSs used \textit{rake}. Consider the response, ``The man rakes leaves.'' We can expect the main verb of a transitive sentence to appear in at least three dependencies: root(rakes, ROOT), nsubj(man, rakes), and dobj(leaves, rakes). Note that in two of these three, the verb is the syntactic head. Thus, by omitting heads, the \param{ldx} and \param{xdx} representations increase the likelihood of overlap between the NS response and the NNS model. For example, ``The man rakes leaves'' and ``The man sweeps leaves'' both result in the \param{ldx} terms nsubj(man, \textit{x}) and dobj(leaves, \textit{x}).
+
+A similar pattern emerged for an item that 12 out of 14 NSs described as some version of ``a woman is riding a bike/bicycle,'' using the same subject, verb and object. Seven of 39 NNSs  simply framed this as an intransitive, e.g., ``The woman is biking.'' Two NNSs chose another verb---\textit{pedal} or \textit{drive}. Finally, while 30 NNSs used the verb \textit{ride}, six of these misspelled it---\textit{rid/ridding} or \textit{ridging}. It is also worth noting that seven of 37 instances of \textit{bike} or \textit{bicycle} were misspelled. For this item, the top system performance came from combining the \param{FC} approach with the \param{xdx} (bag-of-words) representation. The combination of noisy (misspelled) NNS data and the small, homogenous set of NS data meant that the least granular term representation (\param{xdx}) worked best. The more sophisticated tf-idf based approaches suffer here due to the level of noise, allowing the \param{FC} to win out.
+
+\bigskip
+
+LK: Feb 16: ADD A CONCLUDING/TRANSITION PARAGRAPH OR SUBSECTION
+
+%In the next section (\ref{sec:current-method}), I discuss how I applied these findings in the design of the current study, including the data collection and the methods of content analysis used on the much larger corpus described in Chapters~\ref{chap:data} and ~\ref{chap:annotation}.
+%
+%Despite the strength of these overall trends, variability
+%does exist among the best settings for different items, a point obscured
+%in the averages.  In Tables~\ref{tab:i01-dist-ranked-settings} and
+%\ref{tab:i05-dist-ranked-settings}, I present the best and worst
+%ranked settings for two of the least similar items, 1 and 5.
+%Their dissimilarity can be seen at a glance, simply from the range of
+%the AP scores (0.05--0.31 for item 1 vs. 0.52--0.81 for item 5), which
+%in itself reflects a differing number of erroneous responses (2 [\param{NNSO}]
+%or 6 [\param{NNSLM}] for item 1 vs. 23 or 24 for item 5).
+%
+%For item 1, a drawing of a boy kicking a ball, there is considerable
+%variability in the best scoring approach just within the top five settings:
+%all four approaches (TA, TC, FA, FC) are in the top five.  Contrary to the overall
+%trends, I also found the \param{ldx} form---without any head
+%information---in the two best settings.  Note also that, even though
+%tf-idf weighting (\param{TA}/\param{TC}) is usually among the best settings, it is
+%occurs among the worst settings, too.
+%
+%For item 5 in Table~\ref{tab:i05-dist-ranked-settings}, a drawing of a
+%man raking leaves, the most noticeable difference is that
+%of \param{xdx} being among three of the top five settings.
+%I believe that part of the reason for
+%the higher performance of \param{xdx} (cf. lemmas), is that for this
+%item, all the NSs use the verb \textit{rake}, while none of the NNSs use this word.  For item 1 (the boy kicking a ball), there is lexical variation
+%for both NSs and NNSs.
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|r|l|c|}
+%\hline
+%Rank & MAP & Settings \\
+%\hline
+%\hline
+%1 &  &  \\
+%\hline
+%2 &  &  \\
+%\hline
+%3 &  &  \\
+%\hline
+%4 &  &  \\
+%\hline
+%5 &  &  \\
+%\hline
+%\hline
+%26 &  &  \\
+%\hline
+%27 &  &  \\
+%\hline
+%28 &  &  \\
+%\hline
+%29 &  &  \\
+%\hline
+%30 &  &  \\
+%\hline
+%\end{tabular}
+%\caption{Based on Average Precision, the five best and five worst settings for item 10, shown in Figure~\ref{fig:example-picture} and Table~\ref{tab:i10responses-avgprec}.}
+%\label{tab:i10-dist-ranked-settings}
+%\end{center}
+%\end{table}
+
 
