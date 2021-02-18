@@ -2,9 +2,9 @@
 \label{chap:pilot}
 
 \section{Introduction}
-As discussed in Chapter~\ref{chap:intro}, this dissertation grew from a desire to introduce lightweight, transparent methods of content analysis for contexts involving non-native speakers (NNSs) and second language instruction or assessment. In this chapter, I detail my initial foray into this work, where I conducted a small set of experiments to uncover the challenges involved and determine the feasibility of my goals. In that sense, the work described in this chapter can be seen as a pilot study and a proof-of-concept for the expanded study described in the chapters that follow.
+As discussed in Chapter~\ref{chap:intro}, this dissertation grew from a desire to introduce lightweight, transparent methods of content analysis for contexts involving non-native speakers (NNSs) and second language instruction or assessment. In this chapter, I detail my initial foray into this work, where I conducted experiments to uncover the challenges involved and determine the feasibility of my goals. In that sense, the work described in this chapter can be seen as a pilot study and a proof-of-concept for the expanded study described in the chapters that follow.
 
-In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on rules to extract important elements from responses in order to match NNS responses to native speaker (NS) responses for assessment. In Section~\ref{sec:2016work}, I lay out a more data-driven set of experiments and the findings there that lead directly to the collection and annotation of a much more robust corpus (see Chapters~\ref{chap:data} and~\ref{chap:annotation}) and a deeper investigation into the impact of several variables on system performance (see Chapters~\ref{chap:method} and~\ref{chap:optimization}).
+In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on custom rules to extract important elements from responses in order to match NNS responses to native speaker (NS) responses for assessment. In Section~\ref{sec:2016work}, I lay out a more data-driven set of experiments and the findings there that led directly to the collection and annotation of a much more robust corpus (see Chapters~\ref{chap:data} and~\ref{chap:annotation}) and a deeper investigation into the impact of several variables on system performance (see Chapters~\ref{chap:method} and~\ref{chap:optimization}).
 
 %
 %In this chapter, I explain my system for rating and ranking responses automatically, where the goal is to approximate the benchmark rankings described in Chapter~\ref{chap:annotation}. 
@@ -17,11 +17,11 @@ In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
 \section{Rule-based study}
 \label{sec:pilot-study}
-This study focused on analyzing English NNS responses to a picture description task (PDT) by comparison with NS responses. It was largely intended to determine if such a task would be within reach for a single researcher using off-the-shelf tools. This meant identifying problem areas and gauging whether variation in the form and content of responses could be manageable.
+This study focused on analyzing English NNS responses to a picture description task (PDT) by comparison with NS responses. It was largely intended to determine if such a task would be feasible for a single researcher using off-the-shelf tools. This meant identifying problem areas and gauging whether variation in the form and content of responses could be manageable.
 
 This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussions. However, please note that some experiments included in those papers are omitted here, and thus some results involving the averaging or ranking of scores differ slightly here.
 
-\section{Data}
+\subsection{Data}
 \label{sec:pilot-data}
 My work is inspired by various intelligent computer-assisted language learning (ICALL) projects and their reliance on visual stimuli\lk{XYZ: cite}. ICALL itself is heavily influenced by video games, which tend to be visual and interactive\lk{XYZ: cite}. Thus, a dataset of responses to visual prompts was needed to develop the kind of content analysis pipeline I envisioned.
 
@@ -58,7 +58,7 @@ I collected responses from 53 participants for a total of 530 sentences. There w
 Once the data had been collected, I removed a small number of low quality responses from the NS set and annotated the NNS responses for appropriateness, with respect to the content of the picture. My annotation guidelines for this labeling were minimal: \textit{Given the prompt, would the response be acceptable to most English speakers?} This simplistic approach to annotation was admittedly a weak point in the study, and in subsequent work I sought to correct it (see Chapter~\ref{chap:annotation}). The resulting corpus was used in the experiments described next.
 
 
-\section{Rule-based method}
+\subsection{Rule-based method}
 \label{sec:rule-method}
 
 The processing behind my work was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text \citep{nastase2006,bailey:meurers:08,dicaro2013}. Because dependency parsing focuses on identifying dependency relations, rather than constituents or phrase structure, it clearly labels the subject, verb and object of a sentence, which can then map to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In this study, I took a na\"ive approach in which subject, verb and object were considered sufficient for deciding whether or not a response accurately describes the visual prompt. My idea was to extract and lemmatize a \textit{verb(subj,obj)} semantic triple from the dependency parse for each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be labeled automatically as ``correct,'' while a non-match would be labeled ``incorrect.''
@@ -107,7 +107,7 @@ As for propagating relations across conjunctions, this option is less important 
 
 %Given the rule-based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces noun phrases. 
 
-\subsection{Obtaining a semantic representation}
+\subsection{Semantic triple representation}
 %\label{sec:semantic-form}
 %
 %\subsubsection{Sentence types}
@@ -319,7 +319,7 @@ Determining the sentence type was accomplished by arranging a small set of binar
 %%\textit{a man shooting a bird} vs. \textit{a man reading the
 %%  newspaper}.
 
-\section{Rule-based results}
+\subsection{Rule-based results}
 \label{sec:rule-results}
 
 Evaluating this work required addressing two major questions.  First,
@@ -465,7 +465,7 @@ determine the importance of a piece of information among the set of NS responses
 %\label{fig:example-picture2}
 %\end{figure}
 %
-\subsection{Representing responses}
+\subsection{Term representation}
 \label{sec:response-rep}
 
 %To overcome the limitations of an incomplete GS,
@@ -764,9 +764,7 @@ The trends noted in these averages were strong overall, but a closer look at ind
 
 A similar pattern emerged for an item that 12 out of 14 NSs described as some version of ``a woman is riding a bike/bicycle,'' using the same subject, verb and object. Seven of 39 NNSs  simply framed this as an intransitive, e.g., ``The woman is biking.'' Two NNSs chose another verb---\textit{pedal} or \textit{drive}. Finally, while 30 NNSs used the verb \textit{ride}, six of these misspelled it---\textit{rid/ridding} or \textit{ridging}. It is also worth noting that seven of 37 instances of \textit{bike} or \textit{bicycle} were misspelled. For this item, the top system performance came from combining the \param{FC} approach with the \param{xdx} (bag-of-words) representation. The combination of noisy (misspelled) NNS data and the small, homogenous set of NS data meant that the least granular term representation (\param{xdx}) worked best. The more sophisticated tf-idf based approaches suffer here due to the level of noise, allowing the \param{FC} to win out.
 
-\bigskip
-
-LK: Feb 16: ADD A CONCLUDING/TRANSITION PARAGRAPH OR SUBSECTION
+Overall, the results of the dependency-based similarity approaches to content analysis were sufficiently promising to warrant deeper investigation. The biggest challenge to the validity of these results was the size of the dataset and the nature of its annotation, so I next sought to expand on this work by building a better dataset and conducting similar experiments. In Chapter~\ref{chap:data}, I discuss the collection of a much larger dataset that includes intransitive and ditransitive items in addition to transitives. This also involved a new task variable, where half of the prompts focus the participant's attention on the desired subject of the response, and the other half do not. Additionally, NS participants were instructed to provide two responses per item. These modifications allowed for deeper investigation into task effects and the variability of responses under different conditions. In Chapter~\ref{chap:annotation}, I discuss the development of a new non-binary annotation and weighting system intended to improve the utility of the dataset and the reliability of its annotation. In Chapter~\ref{chap:method}, I detail the revisions to my methods that sprang from the findings here. These include building NS models based on familiar NSs and crowdsourced NSs and the move to rank correlation metrics to accommodate the updated annotation scheme. In Chapter~\ref{chap:optimization}, I discuss how I explored the results of the experiments to find the optimal system settings.
 
 %In the next section (\ref{sec:current-method}), I discuss how I applied these findings in the design of the current study, including the data collection and the methods of content analysis used on the much larger corpus described in Chapters~\ref{chap:data} and ~\ref{chap:annotation}.
 %
