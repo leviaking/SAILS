@@ -4,7 +4,7 @@
 \section{Introduction}
 As discussed in Chapter~\ref{chap:intro}, this dissertation grew from a desire to introduce lightweight, transparent methods of content analysis for contexts involving non-native speakers (NNSs) and second language instruction or assessment. In this chapter, I detail my initial foray into this work, where I conducted experiments to uncover the challenges involved and determine the feasibility of my goals. In that sense, the work described in this chapter can be seen as a pilot study and a proof-of-concept for the expanded study described in the chapters that follow.
 
-In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on custom rules to extract important elements from responses in order to match NNS responses to native speaker (NS) responses for assessment. In Section~\ref{sec:2016work}, I lay out a more data-driven set of experiments and the findings there that led directly to the collection and annotation of a much more robust corpus (see Chapters~\ref{chap:data} and~\ref{chap:annotation}) and a deeper investigation into the impact of several variables on system performance (see Chapters~\ref{chap:method} and~\ref{chap:optimization}).
+In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on custom rules to extract important elements from responses in order to match NNS responses to native speaker (NS) responses for assessment. In Section~\ref{sec:2016work}, I lay out a more data-driven set of experiments and the findings there that led directly to the collection and annotation of a much more robust corpus (see Chapters~\ref{chap:data} and~\ref{chap:annotation}) and a deeper investigation into the impact of several variables on system performance (see Chapter~\ref{chap:optimization}).
 
 %
 %In this chapter, I explain my system for rating and ranking responses automatically, where the goal is to approximate the benchmark rankings described in Chapter~\ref{chap:annotation}. 
@@ -23,7 +23,7 @@ This section summarizes relevant work first presented in \citet{king:dickinson:1
 
 \subsection{Data}
 \label{sec:pilot-data}
-My work is inspired by various intelligent computer-assisted language learning (ICALL) projects and their reliance on visual stimuli\lk{XYZ: cite}. ICALL itself is heavily influenced by video games, which tend to be visual and interactive\lk{XYZ: cite}. Thus, a dataset of responses to visual prompts was needed to develop the kind of content analysis pipeline I envisioned.
+My work is inspired by various intelligent computer-assisted language learning (ICALL) projects and their reliance on visual stimuli \citep{nagata:02, granstrom2004, yamazaki2014}. ICALL itself is heavily influenced by video games, which tend to be visual and interactive \citep{collentine2011}. Thus, a dataset of responses to visual prompts was needed to develop the kind of content analysis pipeline I envisioned.
 
 Without an appropriate dataset available, I opted to collect my own using a PDT. Linguistic research often relies on the ability of task design to induce particular behavior \citep{skehan1998assessing}, and a PDT can be used to induce behavior similar to that of an ICALL application.  Moreover, the use of the PDT as a reliable language research tool is well-established in areas of study ranging from language acquisition to Alzheimer's disease \citep{ellis2000task,forbes2005detecting}. Crucially, a PDT constrains the range of potential responses to contain only information depicted in the image, which greatly reduces the kind of processing needed to ``understand'' and assess responses with an automated system. Relatedly, particularly simple images should restrict elicited responses to a an even tighter range of expected contents.
 
@@ -589,7 +589,7 @@ In many natural language processing scenarios where high dimensional vectors are
 \subsection{System Parameters}
 \label{sec:parameters}
 
-I ran a total of 30 experiments, with each representing a combination of these system parameters for processing responses: 
+Each experiment was run with a unique system \textbf{configuration}, which is a combination of the following parameter settings:
 
 \paragraph{Term representation} As discussed in
 section~\ref{sec:response-rep}, the terms can take one of five
@@ -613,11 +613,10 @@ The WSJ Corpus used here consists 1,640 documents; the documents are newspaper a
 \subsubsection{Evaluation metrics}
 
 %I ran 60 response experiments, each with different system settings
-I ran 30 response scoring experiments, each with different system settings
-(section~\ref{sec:parameters}). Within each experiment, I ranked the 39
-scored NNS responses from least to most similar to the NS model.
+Combining the various parameter settings results in 30 different configurations, and an experiment was run with each (section~\ref{sec:parameters}). For example, one such configuration is $[$\param{ldh}, \param{TC}, \param{WSJ}$]$.
+Within each experiment, I ranked the 39 scored NNS responses from least to most similar to the NS model.
 
-For assessing these settings themselves, I relied on the past annotation, which counted unacceptable responses as errors (see section~\ref{sec:rule-results}).  As the lowest numerical rank indicates the greatest distance from the NS model, a good system setting should position the unacceptable responses among those with the lowest rankings.
+For assessing these configurations, I relied on the past annotation, which counted unacceptable responses as errors (see section~\ref{sec:rule-results}).  As the lowest numerical rank indicates the greatest distance from the NS model, a good system configuration should position the unacceptable responses among those with the lowest rankings.
 %Thus, I assigned each error-containing
 %response a score equal to its rank (or the average rank in the case of tied responses).
 To evaluate this discriminatory power, I used \textbf{(mean) average precision ((M)AP)}
@@ -680,7 +679,7 @@ Precision(R_k)$
 
 To start the search for the best system parameters, it may help to
 continue with the example in
-Table~\ref{tab:i10responses-avgprec}. The best setting, as determined by the
+Table~\ref{tab:i10responses-avgprec}. The best configuration, as determined by the
 MAP metric, uses the tf-idf cosine (\param{TC}) approach with the Brown Corpus (\param{Brown}), and the full form of the labeled dependencies (\param{ldh}). It ranks highest because errors are
 well separated from non-errors; the highest ranked of 17 total errors
 is at rank 19.  Digging a bit deeper, one can see in this example how
@@ -722,18 +721,18 @@ Rank & MAP & Approach & Reference & Term rep.\\
 30 & 0.4530 & \param{FA} & \textit{na} & \param{lxh} \\ 
 \hline
 \end{tabular}
-\caption{Based on Mean Average Precision, the five best and five worst combinations of system parameters across all 10 PDT items.}
+\caption{Based on Mean Average Precision, the five best and five worst system configurations across all 10 PDT items.}
 \label{tab:all-dist-ranked-settings}
 \end{center}
 \end{table}
 
 Table~\ref{tab:all-dist-ranked-settings} shows the five best and five
-worst combinations of system settings averaged across all 10 PDT items, as ranked by
+worst configurations averaged across all 10 PDT items, as ranked by
 MAP. The table clearly indicates that the \param{TC} approach is superior, occurring in all of the top five combinations.
 %, while approaches \param{FA} and \param{FC} compete for worst. 
-\param{Brown} appears among top scoring combinations more often than does \param{WSJ}. Finally, for the term representation, labeled (\param{ldh}) and unlabeled (\param{xdh}) dependencies score are used most among the top scoring combinations.
+\param{Brown} appears among top scoring configurations more often than does \param{WSJ}. Finally, for the term representation, labeled (\param{ldh}) and unlabeled (\param{xdh}) dependencies score are used most among the top scoring configurations.
 
-I also summarize the rankings for each isolated parameter, presented in Table~\ref{tab:dist-ranked-parameters}. For a given parameter, e.g., \param{ldh}, I averaged the scores from all settings including \param{ldh} across all 10 items. Generally, the same trends appear salient. Notably, \param{TC} outperformed the other models, with \param{FC} and \param{TA} close behind (and nearly tied). Performance fell for the simplest model, \param{FA}, which was in fact intended as a kind of baseline. With \param{\textbf{T}C}$>$\param{\textbf{F}C} and \param{\textbf{T}A}$>$\param{\textbf{F}A}, tf-idf weighting seems preferable to basic frequencies. Likewise, with \param{T\textbf{C}}$>$\param{T\textbf{A}} and \param{F\textbf{C}}$>$\param{F\textbf{A}}, for my term based scoring, taking the cosine of  score vectors outperformed simply comparing score averages.
+I also summarize the rankings for each isolated parameter, presented in Table~\ref{tab:dist-ranked-parameters}. For a given parameter, e.g., \param{ldh}, I averaged the scores from all configurations including \param{ldh} across all 10 items. Generally, the same trends appear salient. Notably, \param{TC} outperformed the other approaches, with \param{FC} and \param{TA} close behind (and nearly tied). Performance fell for the simplest approach, \param{FA}, which was in fact intended as a kind of baseline. With \param{\textbf{T}C}$>$\param{\textbf{F}C} and \param{\textbf{T}A}$>$\param{\textbf{F}A}, tf-idf weighting seems preferable to basic frequencies. Likewise, with \param{T\textbf{C}}$>$\param{T\textbf{A}} and \param{F\textbf{C}}$>$\param{F\textbf{A}}, for my term based scoring, taking the cosine of  score vectors outperformed simply comparing score averages.
 
 \begin{table*}
 \begin{center}
@@ -762,9 +761,9 @@ These findings largely confirmed my expectations. The \param{TC} approach was in
 
 The trends noted in these averages were strong overall, but a closer look at individual PDT items revealed some exceptions. For example, for the item depicting a man raking leaves, the \param{ldx} and \param{xdx} term representations were the top performers. As discussed in Section~\ref{sec:rule-results}, 100\% of NSs used the verb \textit{rake}, but only 3/39 NNSs used \textit{rake}. Consider the response, ``The man rakes leaves.'' We can expect the main verb of a transitive sentence to appear in at least three dependencies: root(rakes, ROOT), nsubj(man, rakes), and dobj(leaves, rakes). Note that in two of these three, the verb is the syntactic head. Thus, by omitting heads, the \param{ldx} and \param{xdx} representations increase the likelihood of overlap between the NS response and the NNS model. For example, ``The man rakes leaves'' and ``The man sweeps leaves'' both result in the \param{ldx} terms nsubj(man, \textit{x}) and dobj(leaves, \textit{x}).
 
-A similar pattern emerged for an item that 12 out of 14 NSs described as some version of ``a woman is riding a bike/bicycle,'' using the same subject, verb and object. Seven of 39 NNSs  simply framed this as an intransitive, e.g., ``The woman is biking.'' Two NNSs chose another verb---\textit{pedal} or \textit{drive}. Finally, while 30 NNSs used the verb \textit{ride}, six of these misspelled it---\textit{rid/ridding} or \textit{ridging}. It is also worth noting that seven of 37 instances of \textit{bike} or \textit{bicycle} were misspelled. For this item, the top system performance came from combining the \param{FC} approach with the \param{xdx} (bag-of-words) representation. The combination of noisy (misspelled) NNS data and the small, homogenous set of NS data meant that the least granular term representation (\param{xdx}) worked best. The more sophisticated tf-idf based approaches suffer here due to the level of noise, allowing the \param{FC} to win out.
+A similar pattern emerged for an item that 12 out of 14 NSs described as some version of ``a woman is riding a bike/bicycle,'' using the same subject, verb and object. Seven of 39 NNSs  simply framed this as an intransitive, e.g., ``The woman is biking.'' Two NNSs chose another verb---\textit{pedal} or \textit{drive}. Finally, while 30 NNSs used the verb \textit{ride}, six of these misspelled it---\textit{rid/ridding} or \textit{ridging}. It is also worth noting that seven of 37 instances of \textit{bike} or \textit{bicycle} were misspelled. For this item, the top system performance came from combining the \param{FC} approach with the \param{xdx} (bag-of-words) representation. The combination of noisy (misspelled) NNS data and the small, homogenous set of NS data meant that the least granular term representation (\param{xdx}) worked best. The more sophisticated tf-idf based approaches suffer here due to the level of noise, allowing \param{FC} to win out.
 
-Overall, the results of the dependency-based similarity approaches to content analysis were sufficiently promising to warrant deeper investigation. The biggest challenge to the validity of these results was the size of the dataset and the nature of its annotation, so I next sought to expand on this work by building a better dataset and conducting similar experiments. In Chapter~\ref{chap:data}, I discuss the collection of a much larger dataset that includes intransitive and ditransitive items in addition to transitives. This also involved a new task variable, where half of the prompts focus the participant's attention on the desired subject of the response, and the other half do not. Additionally, NS participants were instructed to provide two responses per item. These modifications allowed for deeper investigation into task effects and the variability of responses under different conditions. In Chapter~\ref{chap:annotation}, I discuss the development of a new non-binary annotation and weighting system intended to improve the utility of the dataset and the reliability of its annotation. In Chapter~\ref{chap:method}, I detail the revisions to my methods that sprang from the findings here. These include building NS models based on familiar NSs and crowdsourced NSs and the move to rank correlation metrics to accommodate the updated annotation scheme. In Chapter~\ref{chap:optimization}, I discuss how I explored the results of the experiments to find the optimal system settings.
+Overall, the results of the dependency-based similarity approaches to content analysis were sufficiently promising to warrant deeper investigation. The biggest challenge to the validity of these results was the size of the dataset and the nature of its annotation, so I next sought to expand on this work by building a better dataset and conducting similar experiments. In Chapter~\ref{chap:data}, I discuss the collection of a much larger dataset that includes intransitive and ditransitive items in addition to transitives. This also involved a new task variable, where half of the prompts focus the participant's attention on the desired subject of the response, and the other half do not. Additionally, NS participants were instructed to provide two responses per item. These modifications allowed for deeper investigation into task effects and the variability of responses under different conditions. In Chapter~\ref{chap:annotation}, I discuss the development of a new non-binary annotation and weighting system intended to improve the utility of the dataset and the reliability of its annotation. In Chapter~\ref{chap:optimization}, I detail the revisions to my methods that sprang from the findings here. These include building NS models based on familiar NSs and crowdsourced NSs and the move to rank correlation metrics to accommodate the updated annotation scheme. The chapter includes the results of several experiments to find the optimal system settings.
 
 %In the next section (\ref{sec:current-method}), I discuss how I applied these findings in the design of the current study, including the data collection and the methods of content analysis used on the much larger corpus described in Chapters~\ref{chap:data} and ~\ref{chap:annotation}.
 %
