@@ -1,0 +1,431 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh_TC,xdh_TC,xdx_TC,ldh_rank,xdh_rank,xdx_rank,BERT_score,BERT_rank
+I07U-gNNS-p004-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p005-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p006-r1,A green bird is flying in the sky.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	sky	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.30068935133400243,0.2900924388791335,0.3145128264121089,43.5,42.5,54.5,0.6396661400794983,56
+I07U-gNNS-p007-r1,The green is flying. ,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	green	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%green', 'nsubj$@%green$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%green', 'x$@%green$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%green$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",0.09300000000000001,68.0,0.6101169383955263,0.6137587307122006,0.603816497614748,58.0,58.0,66.0,0.5113915801048279,65
+I07U-gNNS-p009-r1,Bird is flying.,1,1,0,1,1,"1	bird	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	fly	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.2859172196555209,0.292587273933401,0.11842793625118365,42.0,44.0,36.0,0.715697705745697,38
+I07U-gNNS-p012-r1,the bird is flying ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7111006379127502,42
+I07U-gNNS-p013-r1,The green bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2679714350484034,0.2748091160506401,0.2036797265511892,40.5,40.5,44.5,0.6538199782371521,52
+I07U-gNNS-p014-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p017-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p021-r1,a bird is flying ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7463054060935974,1
+I07U-gNNS-p022-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p023-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p026-r1,A bird is enjoying its day,0,1,1,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	enjoy	_	VBG	VBG	_	0	root	_	_
+5	its	_	PRP$	PRP$	_	6	poss	_	_
+6	day	_	NN	NN	_	4	tmod	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%enjoy', 'aux$@%be$@%enjoy', 'root$@%enjoy$@%VROOT', 'poss$@%its$@%day', 'tmod$@%day$@%enjoy', 'punct$@%.$@%enjoy']","['x$@%a$@%bird', 'x$@%bird$@%enjoy', 'x$@%be$@%enjoy', 'x$@%enjoy$@%VROOT', 'x$@%its$@%day', 'x$@%day$@%enjoy', 'x$@%.$@%enjoy']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%enjoy$@%x', 'x$@%its$@%x', 'x$@%day$@%x', 'x$@%.$@%x']",0.149,67.0,0.8602500418375459,0.8540617088433096,0.3756667710386836,65.0,65.0,60.0,0.3655281066894531,68
+I07U-gNNS-p027-r1,the bird's flying,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	's	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', ""aux$@%'s$@%fly"", 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', ""x$@%'s$@%fly"", 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', ""x$@%'s$@%x"", 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.4774166835596928,0.4822979930959485,0.11925366457302213,56.0,56.0,37.0,0.7091328501701355,44
+I07U-gNNS-p028-r1,A bird is flying ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7463054060935974,1
+I07U-gNNS-p030-r1,The green bird is flying in the sky.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	sky	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.3585698841655577,0.35337478205313155,0.3145150802253325,48.0,49.0,56.0,0.6334931254386902,59
+I07U-gNNS-p032-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p034-r1,A bird is flying,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p036-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p037-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p038-r1,A bird is flying on the sky.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_on	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sky', 'prep_on$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.30997332593941485,0.29738801468835185,0.2949067273309106,45.5,45.5,51.5,0.7399795055389404,12
+I07U-gNNS-p039-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p040-r1,a bird is flying on the sky.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_on	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sky', 'prep_on$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.30997332593941485,0.29738801468835185,0.2949067273309106,45.5,45.5,51.5,0.7399795055389404,12
+I07U-gNNS-p041-r1,The bird is flapping its wings to fly,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	flap	_	VBG	VBG	_	0	root	_	_
+5	its	_	PRP$	PRP$	_	6	poss	_	_
+6	wing	_	NNS	NNS	_	4	dobj	_	_
+7	to	_	TO	TO	_	8	aux	_	_
+8	fly	_	VB	VB	_	4	xcomp	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%flap', 'aux$@%be$@%flap', 'root$@%flap$@%VROOT', 'poss$@%its$@%wing', 'dobj$@%wing$@%flap', 'aux$@%to$@%fly', 'xcomp$@%fly$@%flap', 'punct$@%.$@%flap']","['x$@%the$@%bird', 'x$@%bird$@%flap', 'x$@%be$@%flap', 'x$@%flap$@%VROOT', 'x$@%its$@%wing', 'x$@%wing$@%flap', 'x$@%to$@%fly', 'x$@%fly$@%flap', 'x$@%.$@%flap']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%flap$@%x', 'x$@%its$@%x', 'x$@%wing$@%x', 'x$@%to$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.7160072642181932,0.6994903594859061,0.2772610961898613,63.0,62.0,46.0,0.672732412815094,47
+I07U-gNNS-p042-r1,The bird is flying on the sky.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_on	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sky', 'prep_on$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.3736542008169299,0.36704602593583024,0.2949096515603663,53.0,53.0,53.0,0.7125481963157654,40
+I07U-gNNS-p043-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p044-r1,A green bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.20384015423931467,0.20432076337725524,0.20367890808043845,13.5,13.5,41.5,0.6542432308197021,49
+I07U-gNNS-p051-r1,a bird is flying,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p057-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p058-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p065-r1,A green bird is flying in the sky.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	sky	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.30068935133400243,0.2900924388791335,0.3145128264121089,43.5,42.5,54.5,0.6396661400794983,56
+I07U-gNNS-p066-r1,The bird is flying to find food.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	find	_	VB	VB	_	4	xcomp	_	_
+7	food	_	NN	NN	_	6	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'xsubj$@%bird$@%find', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'aux$@%to$@%find', 'xcomp$@%find$@%fly', 'dobj$@%food$@%find', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%find', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%to$@%find', 'x$@%find$@%fly', 'x$@%food$@%find', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%to$@%x', 'x$@%find$@%x', 'x$@%food$@%x', 'x$@%.$@%x']",0.738,62.5,0.6047479728342535,0.5930776791035103,0.2881139098757067,57.0,57.0,47.0,0.4419423043727875,67
+I07U-gNNS-p069-r1,A brid in the air ,0,0,0,0,1,"1	a	_	NNP	NNP	_	2	nsubj	_	_
+2	brid	_	VBD	VBD	_	0	root	_	_
+3	in	_	IN	IN	_	0	erased	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	air	_	NN	NN	_	2	prep_in	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%a$@%brid', 'root$@%brid$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%air', 'prep_in$@%air$@%brid', 'punct$@%.$@%brid']","['x$@%a$@%brid', 'x$@%brid$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%air', 'x$@%air$@%brid', 'x$@%.$@%brid']","['x$@%a$@%x', 'x$@%brid$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%air$@%x', 'x$@%.$@%x']",0.262,66.0,0.9918276047010722,0.9920605552930016,0.9856617875303298,70.0,70.0,70.0,0.3150205910205841,70
+I07U-gNNS-p070-r1,The parrot is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	parrot	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%parrot', 'nsubj$@%parrot$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%parrot', 'x$@%parrot$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%parrot$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.6195306513765974,0.6230845127442717,0.7577027363460805,59.0,59.0,67.0,0.47593754529953003,66
+I07U-gNNS-p072-r1,A little green bird is waving its wings,1,1,1,1,1,"1	a	_	DT	DT	_	4	det	_	_
+2	little	_	RB	RB	_	3	advmod	_	_
+3	green	_	JJ	JJ	_	4	amod	_	_
+4	bird	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	wave	_	VBG	VBG	_	0	root	_	_
+7	its	_	PRP$	PRP$	_	8	poss	_	_
+8	wing	_	NNS	NNS	_	6	dobj	_	_
+9	.	_	.	.	_	6	punct	_	_","['det$@%a$@%bird', 'advmod$@%little$@%green', 'amod$@%green$@%bird', 'nsubj$@%bird$@%wave', 'aux$@%be$@%wave', 'root$@%wave$@%VROOT', 'poss$@%its$@%wing', 'dobj$@%wing$@%wave', 'punct$@%.$@%wave']","['x$@%a$@%bird', 'x$@%little$@%green', 'x$@%green$@%bird', 'x$@%bird$@%wave', 'x$@%be$@%wave', 'x$@%wave$@%VROOT', 'x$@%its$@%wing', 'x$@%wing$@%wave', 'x$@%.$@%wave']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%wave$@%x', 'x$@%its$@%x', 'x$@%wing$@%x', 'x$@%.$@%x']",1.0,27.5,0.7965629290946152,0.7914768366042217,0.4347726053254333,64.0,64.0,64.0,0.5530498623847961,64
+I07U-gNNS-p074-r1,A green bird is flying up high on the sky.,1,1,0,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	up	_	RB	RB	_	7	advmod	_	_
+7	high	_	JJ	JJ	_	5	advmod	_	_
+8	on	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	sky	_	NN	NN	_	5	prep_on	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'advmod$@%up$@%high', 'advmod$@%high$@%fly', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sky', 'prep_on$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%up$@%high', 'x$@%high$@%fly', 'x$@%on$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%up$@%x', 'x$@%high$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.39579949133621817,0.3866438749272911,0.3262401122167127,55.0,55.0,57.0,0.6378728747367859,58
+I07U-gNNS-p075-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p077-r1,The bird is flying in the sky. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.3736452182425998,0.3670368883320063,0.2948728791676329,51.0,51.0,49.0,0.7180750370025635,15
+I07U-gNNS-p078-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p079-r1,The bird is flying ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7111006379127502,42
+I07U-gNNS-p081-r1,the bird is flapping its wings,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	flap	_	VBG	VBG	_	0	root	_	_
+5	its	_	PRP$	PRP$	_	6	poss	_	_
+6	wing	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%flap', 'aux$@%be$@%flap', 'root$@%flap$@%VROOT', 'poss$@%its$@%wing', 'dobj$@%wing$@%flap', 'punct$@%.$@%flap']","['x$@%the$@%bird', 'x$@%bird$@%flap', 'x$@%be$@%flap', 'x$@%flap$@%VROOT', 'x$@%its$@%wing', 'x$@%wing$@%flap', 'x$@%.$@%flap']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%flap$@%x', 'x$@%its$@%x', 'x$@%wing$@%x', 'x$@%.$@%x']",1.0,27.5,0.6870867900324262,0.6794636796668427,0.3908318640342533,60.0,60.0,62.0,0.6788207292556763,46
+I07U-gNNS-p082-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p083-r1,The green bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2679714350484034,0.2748091160506401,0.2036797265511892,40.5,40.5,44.5,0.6530864238739014,53
+I07U-gNNS-p086-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p087-r1,a green bird is taking off ,0,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	take	_	VBG	VBG	_	0	root	_	_
+6	off	_	RP	RP	_	5	prt	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'prt$@%off$@%take', 'punct$@%.$@%take']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%off$@%take', 'x$@%.$@%take']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%off$@%x', 'x$@%.$@%x']",0.635,64.0,0.7134718215239944,0.7013265421176644,0.35146027033360805,62.0,63.0,58.0,0.5749748945236206,63
+I07U-gNNS-p099-r1,A bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p101-r1,The bird is flying in the sky.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.3736452182425998,0.3670368883320063,0.2948728791676329,51.0,51.0,49.0,0.7141148447990417,39
+I07U-gNNS-p104-r1,A green bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.20384015423931467,0.20432076337725524,0.20367890808043845,13.5,13.5,41.5,0.6542432308197021,49
+I07U-gNNS-p105-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p106-r1,The bird is waving its wings.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	wave	_	VBG	VBG	_	0	root	_	_
+5	its	_	PRP$	PRP$	_	6	poss	_	_
+6	wing	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%wave', 'aux$@%be$@%wave', 'root$@%wave$@%VROOT', 'poss$@%its$@%wing', 'dobj$@%wing$@%wave', 'punct$@%.$@%wave']","['x$@%the$@%bird', 'x$@%bird$@%wave', 'x$@%be$@%wave', 'x$@%wave$@%VROOT', 'x$@%its$@%wing', 'x$@%wing$@%wave', 'x$@%.$@%wave']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%wave$@%x', 'x$@%its$@%x', 'x$@%wing$@%x', 'x$@%.$@%x']",1.0,27.5,0.9053524173024796,0.9051220425112896,0.42973970322611216,66.0,66.0,63.0,0.6434290409088135,54
+I07U-gNNS-p107-r1,The green bird is flying in the blue sky.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	9	det	_	_
+8	blue	_	JJ	JJ	_	9	amod	_	_
+9	sky	_	NN	NN	_	5	prep_in	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'amod$@%blue$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%blue$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%blue$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.3942963368062664,0.3848745167909571,0.3563106458366881,54.0,54.0,59.0,0.629950761795044,60
+I07U-gNNS-p108-r1,A bird is flying,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.1841588993694161,0.18374448722807424,0.1184265048500559,6.0,6.0,6.0,0.7451564073562622,7
+I07U-gNNS-p109-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p111-r1,A green bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.20384015423931467,0.20432076337725524,0.20367890808043845,13.5,13.5,41.5,0.6542432308197021,49
+I07U-gNNS-p112-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p114-r1,A birding is shaking its wings.,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	birding	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	shake	_	VBG	VBG	_	0	root	_	_
+5	its	_	PRP$	PRP$	_	6	poss	_	_
+6	wing	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%birding', 'nsubj$@%birding$@%shake', 'aux$@%be$@%shake', 'root$@%shake$@%VROOT', 'poss$@%its$@%wing', 'dobj$@%wing$@%shake', 'punct$@%.$@%shake']","['x$@%a$@%birding', 'x$@%birding$@%shake', 'x$@%be$@%shake', 'x$@%shake$@%VROOT', 'x$@%its$@%wing', 'x$@%wing$@%shake', 'x$@%.$@%shake']","['x$@%a$@%x', 'x$@%birding$@%x', 'x$@%be$@%x', 'x$@%shake$@%x', 'x$@%its$@%x', 'x$@%wing$@%x', 'x$@%.$@%x']",0.579,65.0,0.9726578761037856,0.9726409370621344,0.9202134251253472,69.0,69.0,68.0,0.6183369159698486,61
+I07U-gNNS-p116-r1,The bird is flying ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7111006379127502,42
+I07U-gNNS-p118-r1,A green bird is flying.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	green	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	fly	_	VBG	VBG	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.20384015423931467,0.20432076337725524,0.20367890808043845,13.5,13.5,41.5,0.6542432308197021,49
+I07U-gNNS-p119-r1,the birding is green.,0,0,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	birding	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	green	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%birding', 'nsubj$@%birding$@%green', 'cop$@%be$@%green', 'root$@%green$@%VROOT', 'punct$@%.$@%green']","['x$@%the$@%birding', 'x$@%birding$@%green', 'x$@%be$@%green', 'x$@%green$@%VROOT', 'x$@%.$@%green']","['x$@%the$@%x', 'x$@%birding$@%x', 'x$@%be$@%x', 'x$@%green$@%x', 'x$@%.$@%x']",0.0,69.0,0.9655887603022288,0.9659101863929722,0.9409803867404825,68.0,68.0,69.0,0.3292243480682373,69
+I07U-gNNS-p122-r1,A green feather bird is flying on the sky. ,1,1,0,1,1,"1	a	_	DT	DT	_	4	det	_	_
+2	green	_	JJ	JJ	_	4	amod	_	_
+3	feather	_	NN	NN	_	4	nn	_	_
+4	bird	_	NN	NN	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	aux	_	_
+6	fly	_	VBG	VBG	_	0	root	_	_
+7	on	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	sky	_	NN	NN	_	6	prep_on	_	_
+10	.	_	.	.	_	6	punct	_	_","['det$@%a$@%bird', 'amod$@%green$@%bird', 'nn$@%feather$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%on$@%WORDERASED', 'det$@%the$@%sky', 'prep_on$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%a$@%bird', 'x$@%green$@%bird', 'x$@%feather$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%a$@%x', 'x$@%green$@%x', 'x$@%feather$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",0.9440000000000001,58.5,0.3589215010992627,0.3492070623661233,0.4508023268194613,49.0,48.0,65.0,0.643068790435791,55
+I07U-gNNS-p123-r1,The bird is flying,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p124-r1,the bird is flying,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p125-r1,The little bird is learning flying.,1,1,1,1,0,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	bird	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	learn	_	VBG	VBG	_	0	root	_	_
+6	fly	_	VBG	VBG	_	5	xcomp	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%bird', 'amod$@%little$@%bird', 'nsubj$@%bird$@%learn', 'aux$@%be$@%learn', 'root$@%learn$@%VROOT', 'xcomp$@%fly$@%learn', 'punct$@%.$@%learn']","['x$@%the$@%bird', 'x$@%little$@%bird', 'x$@%bird$@%learn', 'x$@%be$@%learn', 'x$@%learn$@%VROOT', 'x$@%fly$@%learn', 'x$@%.$@%learn']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%learn$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",0.738,62.5,0.9286106983433356,0.9278523392050104,0.20216491717976093,67.0,67.0,39.0,0.5895857214927673,62
+I07U-gNNS-p127-r1,The bird is flapping his wings.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	flap	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	wing	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%flap', 'aux$@%be$@%flap', 'root$@%flap$@%VROOT', 'poss$@%he$@%wing', 'dobj$@%wing$@%flap', 'punct$@%.$@%flap']","['x$@%the$@%bird', 'x$@%bird$@%flap', 'x$@%be$@%flap', 'x$@%flap$@%VROOT', 'x$@%he$@%wing', 'x$@%wing$@%flap', 'x$@%.$@%flap']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%flap$@%x', 'x$@%he$@%x', 'x$@%wing$@%x', 'x$@%.$@%x']",1.0,27.5,0.6954781294640635,0.6877766378645198,0.3903672872287949,61.0,61.0,61.0,0.6831229329109192,45
+I07U-gNNS-p128-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p133-r1,The bird is flying. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7166553735733032,34
+I07U-gNNS-p135-r1,The bird is flying in the air.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	air	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%air', 'prep_in$@%air$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%air', 'x$@%air$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%air$@%x', 'x$@%.$@%x']",1.0,27.5,0.327687637080915,0.3134264975152411,0.19004222234197288,47.0,47.0,38.0,0.7181647419929504,14
+I07U-gNNS-p136-r1,The bird is flying.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
+I07U-gNNS-p140-r1,The bird is flying in the sky. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	sky	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%sky', 'prep_in$@%sky$@%fly', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%sky', 'x$@%sky$@%fly', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%sky$@%x', 'x$@%.$@%x']",1.0,27.5,0.3736452182425998,0.3670368883320063,0.2948728791676329,51.0,51.0,49.0,0.7180750370025635,15
+I07U-gNNS-p141-r1,The bird is flying,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	bird	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fly	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%bird', 'nsubj$@%bird$@%fly', 'aux$@%be$@%fly', 'root$@%fly$@%VROOT', 'punct$@%.$@%fly']","['x$@%the$@%bird', 'x$@%bird$@%fly', 'x$@%be$@%fly', 'x$@%fly$@%VROOT', 'x$@%.$@%fly']","['x$@%the$@%x', 'x$@%bird$@%x', 'x$@%be$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,27.5,0.2562305426271864,0.2631778921326777,0.11842752235501808,27.5,27.5,23.5,0.7179903984069824,24
