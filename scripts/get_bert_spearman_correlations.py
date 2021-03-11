@@ -43,9 +43,12 @@ def combine_csvs(bfull):
 	newdf.to_csv(statsdir+"/combined_spearman_"+test_sample+".csv", index=False)
 
 
-bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/bert_N70/')
+train_sample = "N50"
 test_sample = "N70"
-statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+test_sample+'/')
+bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
+		  train_sample+'-VS-'+test_sample+'-BERT/')
+statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+
+		  train_sample+'-VS-'+test_sample+'/')
 
 
 def main():
@@ -63,13 +66,16 @@ def main():
 		bpvals.append(bpval)
 	bdict = {"Source": blabels, "BERT_spear": bspears, "BERT_p": bpvals}
 	bdf = pd.DataFrame(data=bdict)	
-	bdf.to_csv(statsdir+"/bert_spearman_"+test_sample+".csv", index=False)
+	bdf.to_csv(statsdir+"bert_spearman_"+train_sample+"-VS-"+test_sample+
+			   ".csv", index=False)
 	
 	# b = pd.DataFrame([bfull["BERT_spear"], bfull["BERT_p"]])
-	oldie = pd.read_csv(statsdir+"all_spearman_N70.csv")
+	oldie = pd.read_csv(statsdir+"all_spearman_"+
+						train_sample+"-VS-"+test_sample+".csv")
 	newdf = pd.merge(oldie, bdf, on="Source")
-	print(newdf)
-	newdf.to_csv(statsdir+"/combined_spearman_"+test_sample+".csv", index=False)
+	# print(newdf)
+	newdf.to_csv(statsdir+"/combined_spearman_"+train_sample+"-VS-"+
+				 test_sample+".csv", index=False)
 
 
 if __name__ == "__main__":

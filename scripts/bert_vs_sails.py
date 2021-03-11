@@ -15,11 +15,18 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 
-
 model = SentenceTransformer('stsb-roberta-large')
-testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/N70/')
-traindir=('/Users/leviking/Documents/dissertation/SAILS/training_data/N50/')
-bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/bert_N70/')
+model.eval()
+
+
+train_sample = 'N50'
+test_sample = 'N70'
+testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
+		 train_sample+'-VS-'+test_sample+'/')
+traindir=('/Users/leviking/Documents/dissertation/SAILS/training_data/'+
+		  train_sample+'/')
+bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
+		  train_sample+'-VS-'+test_sample+'-BERT/')
 
 
 def get_file_names(x_dir):

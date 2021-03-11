@@ -94,9 +94,12 @@ def write_output(rs, nm):
 
 
 def main():
+	train_sample = "N14"
 	test_sample = "N70"
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+test_sample+'/')
-	statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+test_sample+'/')
+	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
+			   train_sample+'-VS-'+test_sample+'/')
+	statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+
+			   train_sample+'-VS-'+test_sample+'/')
 	input_files = get_infile_names(sourcedir)
 	spearman_rows = [["Source", "ldh_spear", "ldh_p", "xdh_spear", "xdh_p", "xdx_spear", "xdx_p"]]
 	for inf in input_files:
@@ -106,7 +109,8 @@ def main():
 		spearman_row.insert(0, out_label)
 		spearman_rows.append(spearman_row)
 		# write_output(output_rows, sourcedir+inf)
-	write_output(spearman_rows, statsdir+"/all_spearman_"+test_sample+".csv")
+	write_output(spearman_rows, statsdir+"/all_spearman_"+
+				 train_sample+'-VS-'+test_sample+".csv")
 
 
 if __name__ == "__main__":

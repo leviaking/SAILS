@@ -62,7 +62,7 @@ def get_training_file_names(inum, tr_dir):
 
 def get_source_content(tdf):
 	everything=[]
-	tdoc=open(tdf, 'rU')
+	tdoc=open(tdf, 'r')
 	tdocreader=csv.reader(tdoc, dialect=csv.excel)
 	skipheader=next(tdocreader, None)
 	for row in tdocreader:
@@ -170,8 +170,9 @@ def get_TC_score(modelpairs, testpairs, terms_union_vec, vecs_path_name):
 	return mycosine
 
 
-def write_output(rs, nm):
-	outdir =('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/N70/')
+def write_output(sname, rs, nm):
+	outdir =('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'
+			 +sname+'-VS-N70/')
 	thisfile=open(outdir+nm, 'w')
 	thiswriter=csv.writer(thisfile, dialect=csv.excel)
 	for r in rs:
@@ -179,15 +180,18 @@ def write_output(rs, nm):
 	thisfile.close()
 
 
+samplename = "N14"
 testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/N70/')
-trainingdir=('/Users/leviking/Documents/dissertation/SAILS/training_data/N50/')
-scored_vecs_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/N70/')
+trainingdir=('/Users/leviking/Documents/dissertation/SAILS/training_data/'
+			 +samplename+"/")
+scored_vecs_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'
+				 +samplename+'-VS-N70/')
 refcorpusdir=('/Users/leviking/Documents/dissertation/SAILS_annex/brown/')
 depcols={'ldh':8, 'xdh':9, 'xdx':10}
 
 
 def main():
-	test_file_names = get_test_file_names(testdir)
+	test_file_names = get_test_file_names(testdir)  ## e.g., I01T-NNS-test-N70.csv
 	dtwdict = build_ref_termlists()
 	for testfn in test_file_names:
 		print("\nCurrent test: "+testfn)
@@ -196,7 +200,7 @@ def main():
 		for trainingfn in training_fns:
 			header, curr_test_rows=get_source_content(testdir+testfn) 
 			header=header+['ldh TC', 'xdh TC', 'xdx TC']
-			print("\tCurrent model: "+trainingfn)
+			print("\tCurrent training: "+trainingfn)
 			dummy, curr_training_rows = get_source_content(trainingdir+trainingfn)
 			ldh_scores=[]
 			xdh_scores=[]
@@ -231,7 +235,7 @@ def main():
 				outputrows.append(origrow)
 				ni+=1
 			outname=trainingfn.replace(".csv", "-VS-N70.csv")
-			write_output(outputrows, outname)
+			write_output(samplename, outputrows, outname)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,621 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I17U-gNNS-p001-r1,The girl is feeding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p002-r1,The girl is feeding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p003-r1,the horse is eating,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'punct$@%.$@%eat']","['x$@%the$@%horse', 'x$@%horse$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",0.635,62.0,0.9377187980414816,0.9395289331773792,0.7226459371596874,0.502613365650177,66
+I17U-gNNS-p008-r1,The girl is feeding the horse with a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'det$@%a$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.2928504043808562,0.04161458444650945,0.025426117036578263,0.8355798721313477,22
+I17U-gNNS-p010-r1,the girl is feeding the horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p011-r1,A girl is feeding her horse a carrot ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	horse	_	NN	NN	_	4	dep	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'poss$@%she$@%horse', 'dep$@%horse$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.1836764636755508,0.08397407496793262,0.027686332208067044,0.8600424528121948,9
+I17U-gNNS-p015-r1,The girl is feeding the horse with a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'det$@%a$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.2928504043808562,0.04161458444650945,0.025426117036578263,0.8355798721313477,22
+I17U-gNNS-p016-r1,The girl is feeding the horse. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6420220732688904,51
+I17U-gNNS-p018-r1,The girl is feeding the house a carrot. ,0,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	house	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%house', 'iobj$@%house$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%house', 'x$@%house$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%house$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",0.355,66.5,0.18532601501398027,0.22204510665426647,0.1310630655419821,0.7483839988708496,35
+I17U-gNNS-p019-r1,The girl are feeding horses.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBP	VBP	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	horse	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.9440000000000001,54.0,0.3747813867611468,0.24536481557618814,0.36547663544787534,0.628779411315918,62
+I17U-gNNS-p020-r1,The girl is feeding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p024-r1,the girl feed the horse a carrot. ,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	feed	_	VBP	VBP	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	horse	_	NN	NN	_	7	nsubj	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	carrot	_	NN	NN	_	3	xcomp	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'nsubj$@%horse$@%carrot', 'det$@%a$@%carrot', 'xcomp$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%carrot', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",0.851,59.0,0.4110254162947238,0.24899371018748465,0.02538785470440508,0.8465998768806458,19
+I17U-gNNS-p025-r1,A girl is giving carrot to a giraffe. ,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	carrot	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	giraffe	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%giraffe', 'prep_to$@%giraffe$@%give', 'punct$@%.$@%give']","['x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%giraffe', 'x$@%giraffe$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%giraffe$@%x', 'x$@%.$@%x']",0.635,62.0,0.94881408235212,0.955093318485976,0.5021907203490439,0.6471540331840515,50
+I17U-gNNS-p029-r1,The girl is feeding the horse a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.14741795151854686,0.041602235547259725,0.025387644342274918,0.8612537980079651,6
+I17U-gNNS-p031-r1,The little girl is feeding a horse with carrot. ,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	feed	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	dobj	_	_
+8	with	_	IN	IN	_	0	erased	_	_
+9	carrot	_	NN	NN	_	5	prep_with	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4740503655336531,0.20163015542942972,0.031065644424769112,0.8536992073059082,11
+I17U-gNNS-p033-r1,A girl is giving the horse a carrot to eat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	to	_	TO	TO	_	10	aux	_	_
+10	eat	_	VB	VB	_	8	infmod	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%give', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'aux$@%to$@%eat', 'infmod$@%eat$@%carrot', 'punct$@%.$@%give']","['x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%give', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%eat', 'x$@%eat$@%carrot', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",1.0,25.5,0.717743733401795,0.7281866612874561,0.2008454781143104,0.8170493245124817,27
+I17U-gNNS-p035-r1,The girl is feeding the carrot to the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%carrot', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.2480469513465239,0.2255453365456105,0.025391910549521057,0.8565003275871277,10
+I17U-gNNS-p045-r1,The girl is feeding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p046-r1,The girl is feeding the horse one carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	one	_	CD	CD	_	8	num	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%feed', 'num$@%one$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%one$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%one$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.33191068578662103,0.2255482524273933,0.02558702870695817,0.8294005990028381,25
+I17U-gNNS-p047-r1,The horse is eating the carrot from a girl's hand,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	11	poss	_	_
+10	's	_	POS	POS	_	0	erased	_	_
+11	hand	_	NN	NN	_	4	prep_from	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%the$@%carrot', 'dobj$@%carrot$@%eat', 'erased$@%from$@%WORDERASED', 'det$@%a$@%girl', 'poss$@%girl$@%hand', ""erased$@%'s$@%WORDERASED"", 'prep_from$@%hand$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%horse', 'x$@%horse$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%the$@%carrot', 'x$@%carrot$@%eat', 'x$@%from$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%hand', ""x$@%'s$@%WORDERASED"", 'x$@%hand$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%carrot$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', ""x$@%'s$@%x"", 'x$@%hand$@%x', 'x$@%.$@%x']",1.0,25.5,0.9421105102084932,0.9438229263445688,0.2090250063412138,0.7421907186508179,36
+I17U-gNNS-p048-r1,The girl is giving the horse carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	horse	_	NN	NN	_	7	nn	_	_
+7	carrot	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%carrot', 'nn$@%horse$@%carrot', 'dobj$@%carrot$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%carrot', 'x$@%horse$@%carrot', 'x$@%carrot$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.9567675241434864,0.9624316293597076,0.12970263986925354,0.7675709128379822,33
+I17U-gNNS-p049-r1,A girl is feeding a horse ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3699820439855318,0.249944189820395,0.3654740207931293,0.6236712336540222,63
+I17U-gNNS-p050-r1,A girl is feeding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3699820439855318,0.249944189820395,0.3654740207931293,0.6215977668762207,64
+I17U-gNNS-p052-r1,This girl is feeding a horse with vegetables.,1,1,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	vegetable	_	NNS	NNS	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%vegetable$@%feed', 'punct$@%.$@%feed']","['x$@%this$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%vegetable$@%feed', 'x$@%.$@%feed']","['x$@%this$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%vegetable$@%x', 'x$@%.$@%x']",1.0,25.5,0.4890496490603111,0.3937970571890146,0.5249204642384375,0.7161136865615845,40
+I17U-gNNS-p053-r1,The horse is eating a carrot that is being given by the girl,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	10	nsubjpass	_	_
+7	that	_	WDT	WDT	_	0	erased	_	_
+8	be	_	VBZ	VBZ	_	10	aux	_	_
+9	be	_	VBG	VBG	_	10	auxpass	_	_
+10	give	_	VBN	VBN	_	6	rcmod	_	_
+11	by	_	IN	IN	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	girl	_	NN	NN	_	10	agent	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%carrot', 'nsubjpass$@%carrot$@%give', 'erased$@%that$@%WORDERASED', 'aux$@%be$@%give', 'auxpass$@%be$@%give', 'rcmod$@%give$@%carrot', 'erased$@%by$@%WORDERASED', 'det$@%the$@%girl', 'agent$@%girl$@%give', 'punct$@%.$@%eat']","['x$@%the$@%horse', 'x$@%horse$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%that$@%WORDERASED', 'x$@%be$@%give', 'x$@%be$@%give', 'x$@%give$@%carrot', 'x$@%by$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%that$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%by$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",1.0,25.5,0.7778470134792016,0.7689212891225298,0.20100230963823296,0.7949123978614807,31
+I17U-gNNS-p054-r1,A little is feeding a house.,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	little	_	JJ	JJ	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	house	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%little', 'nsubj$@%little$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%house', 'dobj$@%house$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%little', 'x$@%little$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%house', 'x$@%house$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%house$@%x', 'x$@%.$@%x']",0.09300000000000001,68.5,0.6706524095116502,0.7190712259569174,0.6208398732291687,0.31382185220718384,70
+I17U-gNNS-p055-r1,The girl is feeding a horse with carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	carrot	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4463265991289691,0.15711830183624487,0.02542529441194508,0.8505497574806213,13
+I17U-gNNS-p056-r1,The girl is feeding the horse a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.14741795151854686,0.041602235547259725,0.025387644342274918,0.8612537980079651,6
+I17U-gNNS-p059-r1,The girl is feeding the horse carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	horse	_	NN	NN	_	7	nn	_	_
+7	carrot	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%carrot', 'nn$@%horse$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%carrot', 'x$@%horse$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.3681520947514885,0.4010485270000089,0.025389748458144682,0.8604597449302673,8
+I17U-gNNS-p060-r1,"A girl is giving a carrot to a horse, and the horse is eating it.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	,	_	,	,	_	4	punct	_	_
+11	and	_	CC	CC	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	horse	_	NN	NN	_	15	nsubj	_	_
+14	be	_	VBZ	VBZ	_	15	aux	_	_
+15	eat	_	VBG	VBG	_	4	conj_and	_	_
+16	it	_	PRP	PRP	_	15	dobj	_	_
+17	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%horse', 'prep_to$@%horse$@%give', 'punct$@%,$@%give', 'erased$@%and$@%WORDERASED', 'det$@%the$@%horse', 'nsubj$@%horse$@%eat', 'aux$@%be$@%eat', 'conj_and$@%eat$@%give', 'dobj$@%it$@%eat', 'punct$@%.$@%give']","['x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%give', 'x$@%,$@%give', 'x$@%and$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%give', 'x$@%it$@%eat', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%,$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",1.0,25.5,0.7549073315016774,0.7486951230397512,0.21669910137695314,0.8036893010139465,29
+I17U-gNNS-p061-r1,The girl is feeding a horse with a carrot. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'det$@%a$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.307932291657971,0.053339944313603116,0.0254248579400046,0.8495216965675354,16
+I17U-gNNS-p062-r1,The girl is feeding a horse with carrots.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	carrot	_	NNS	NNS	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4463265991289691,0.15711830183624487,0.02542529441194508,0.8507859110832214,12
+I17U-gNNS-p063-r1,The girl is feeding a horse with a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'det$@%a$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.307932291657971,0.053339944313603116,0.0254248579400046,0.8405241966247559,20
+I17U-gNNS-p064-r1,The girl is feeding a carrot to a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%a$@%horse', 'prep_to$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.07632149233117236,0.053325594908738894,0.025386056607245244,0.8667804002761841,3
+I17U-gNNS-p067-r1,The girl is feeding a giraffe. ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	giraffe	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%giraffe', 'dobj$@%giraffe$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%giraffe', 'x$@%giraffe$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%giraffe$@%x', 'x$@%.$@%x']",0.635,62.0,0.4943594773184246,0.5242901489103277,0.7618523507414963,0.4494597017765045,67
+I17U-gNNS-p068-r1,A girl is feeding a house,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	house	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%house', 'dobj$@%house$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%house', 'x$@%house$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%house$@%x', 'x$@%.$@%x']",0.09300000000000001,68.5,0.439370883954924,0.46932186710710494,0.5377975552494739,0.4163219928741455,69
+I17U-gNNS-p071-r1,The girl is giving a carrot to the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.7051055323158051,0.6960631996102005,0.1296999133844282,0.7969643473625183,30
+I17U-gNNS-p073-r1,The girl is feeding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p076-r1,A girl is feeding a horse with carrot.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	carrot	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4409752478754431,0.1535157179829688,0.025425702929810837,0.8492776155471802,17
+I17U-gNNS-p080-r1,The girl gives a carrot to the horse. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	give	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	carrot	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	horse	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.907,57.5,0.7005839256945086,0.6948344681823488,0.12970014892435144,0.7703560590744019,32
+I17U-gNNS-p084-r1,the girl is feeding a horse,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p085-r1,The girl is feeding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p088-r1, A horse is eating carrots. ,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	carrot	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%horse', 'nsubj$@%horse$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'dobj$@%carrot$@%eat', 'punct$@%.$@%eat']","['x$@%a$@%horse', 'x$@%horse$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%carrot$@%eat', 'x$@%.$@%eat']","['x$@%a$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",0.635,62.0,0.9736460293910668,0.9745055259756013,0.23964358798489796,0.6472917795181274,49
+I17U-gNNS-p089-r1,A girl is feeing a carrot to a horse.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	fee	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%fee', 'aux$@%be$@%fee', 'root$@%fee$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%fee', 'erased$@%to$@%WORDERASED', 'det$@%a$@%horse', 'prep_to$@%horse$@%fee', 'punct$@%.$@%fee']","['x$@%a$@%girl', 'x$@%girl$@%fee', 'x$@%be$@%fee', 'x$@%fee$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%fee', 'x$@%to$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%fee', 'x$@%.$@%fee']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%fee$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.9440000000000001,54.0,0.7929883061362081,0.7992472570907906,0.2547185327657786,0.7365953326225281,38
+I17U-gNNS-p090-r1,The girl is giving the food to horse.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	food	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	horse	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%food', 'dobj$@%food$@%give', 'erased$@%to$@%WORDERASED', 'prep_to$@%horse$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%food', 'x$@%food$@%give', 'x$@%to$@%WORDERASED', 'x$@%horse$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%food$@%x', 'x$@%to$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.9440000000000001,54.0,0.9741190541971296,0.9584607670184462,0.6489634899378841,0.6524071097373962,42
+I17U-gNNS-p091-r1,The girl is feeding an animal. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	animal	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%animal', 'dobj$@%animal$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%animal', 'x$@%animal$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",0.41100000000000003,65.0,0.4570354860659591,0.4627364530103628,0.6010416375377776,0.4248352646827698,68
+I17U-gNNS-p092-r1,The girl is using a red carrot to feed the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	use	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	red	_	JJ	JJ	_	7	amod	_	_
+7	carrot	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	feed	_	VB	VB	_	4	xcomp	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	horse	_	NN	NN	_	9	dobj	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%use', 'aux$@%be$@%use', 'root$@%use$@%VROOT', 'det$@%a$@%carrot', 'amod$@%red$@%carrot', 'dobj$@%carrot$@%use', 'aux$@%to$@%feed', 'xcomp$@%feed$@%use', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%use']","['x$@%the$@%girl', 'x$@%girl$@%use', 'x$@%be$@%use', 'x$@%use$@%VROOT', 'x$@%a$@%carrot', 'x$@%red$@%carrot', 'x$@%carrot$@%use', 'x$@%to$@%feed', 'x$@%feed$@%use', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%use']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%use$@%x', 'x$@%a$@%x', 'x$@%red$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.7580802764298726,0.6603639703948241,0.0944234996832587,0.8344475030899048,24
+I17U-gNNS-p093-r1,The girl gives the carrots to the horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	give	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	carrot	_	NNS	NNS	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	horse	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.907,57.5,0.915178507881408,0.9001709485703151,0.12970522859567446,0.7369930148124695,37
+I17U-gNNS-p094-r1,The girl is feeding the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.35757124187878186,0.2392031676992038,0.3654778550999228,0.6510352492332458,45
+I17U-gNNS-p095-r1,The girl is giving a carrot for a horse. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%for$@%WORDERASED', 'det$@%a$@%horse', 'prep_for$@%horse$@%carrot', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%for$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%carrot', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.9440000000000001,54.0,0.7258756452039515,0.7348847570924925,0.1297278057692981,0.7326751947402954,39
+I17U-gNNS-p096-r1,the girl giving a carrot to the hose.,0,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	0	root	_	_
+3	give	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	carrot	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	hose	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	2	punct	_	_","['det$@%the$@%girl', 'root$@%girl$@%VROOT', 'partmod$@%give$@%girl', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%the$@%hose', 'prep_to$@%hose$@%give', 'punct$@%.$@%girl']","['x$@%the$@%girl', 'x$@%girl$@%VROOT', 'x$@%give$@%girl', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%the$@%hose', 'x$@%hose$@%give', 'x$@%.$@%girl']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%hose$@%x', 'x$@%.$@%x']",0.355,66.5,0.7873786732058042,0.7965516442474051,0.44632943809492975,0.6301959753036499,61
+I17U-gNNS-p097-r1,The girl is feeding the horse a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.14741795151854686,0.041602235547259725,0.025387644342274918,0.8612537980079651,6
+I17U-gNNS-p098-r1,The girl is feeding a little horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	horse	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'amod$@%little$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%little$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%little$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.4260083586666362,0.3186985125666695,0.373891453883738,0.6365131139755249,58
+I17U-gNNS-p100-r1,The girl is feeding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p102-r1,The girl is feeding the horse with carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	carrot	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4288598233856745,0.14400155754725294,0.02542822112511245,0.8499557375907898,15
+I17U-gNNS-p103-r1,A girl is feeding her horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	6	poss	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'poss$@%she$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%she$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%she$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.4003082897175693,0.2906369843240916,0.3688002239533654,0.6354236006736755,59
+I17U-gNNS-p110-r1,A girl is feeding a horse.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3699820439855318,0.249944189820395,0.3654740207931293,0.6215977668762207,64
+I17U-gNNS-p113-r1,The girl is feeding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p115-r1,The girl is feeding a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.3752356713345094,0.2540117678684232,0.3654734206985517,0.6391714811325073,54
+I17U-gNNS-p117-r1,The girl is feeding a horse with carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	carrot	_	NN	NN	_	4	prep_with	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4463265991289691,0.15711830183624487,0.02542529441194508,0.8505497574806213,13
+I17U-gNNS-p120-r1,The girl is feeding a carrot to the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.063555178099854,0.04160035999616896,0.025387315761110085,0.8705093264579773,1
+I17U-gNNS-p121-r1,The girl is feeding a horse with a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'det$@%a$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.307932291657971,0.053339944313603116,0.0254248579400046,0.8405241966247559,20
+I17U-gNNS-p126-r1,A girl is feeding a horse with one carrot.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	one	_	CD	CD	_	9	num	_	_
+9	carrot	_	NN	NN	_	4	prep_with	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'dobj$@%horse$@%feed', 'erased$@%with$@%WORDERASED', 'num$@%one$@%carrot', 'prep_with$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%with$@%WORDERASED', 'x$@%one$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%with$@%x', 'x$@%one$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.4923498140763482,0.23530875043518784,0.025622957192379947,0.8266578316688538,26
+I17U-gNNS-p129-r1,The horse is pretty enjoying the carrot from the girl.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	horse	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	pretty	_	JJ	JJ	_	0	root	_	_
+5	enjoy	_	VBG	VBG	_	4	xcomp	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	carrot	_	NN	NN	_	5	dobj	_	_
+8	from	_	IN	IN	_	0	erased	_	_
+9	the	_	DT	DT	_	10	det	_	_
+10	girl	_	NN	NN	_	5	prep_from	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%horse', 'nsubj$@%horse$@%pretty', 'cop$@%be$@%pretty', 'root$@%pretty$@%VROOT', 'xcomp$@%enjoy$@%pretty', 'det$@%the$@%carrot', 'dobj$@%carrot$@%enjoy', 'erased$@%from$@%WORDERASED', 'det$@%the$@%girl', 'prep_from$@%girl$@%enjoy', 'punct$@%.$@%pretty']","['x$@%the$@%horse', 'x$@%horse$@%pretty', 'x$@%be$@%pretty', 'x$@%pretty$@%VROOT', 'x$@%enjoy$@%pretty', 'x$@%the$@%carrot', 'x$@%carrot$@%enjoy', 'x$@%from$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%enjoy', 'x$@%.$@%pretty']","['x$@%the$@%x', 'x$@%horse$@%x', 'x$@%be$@%x', 'x$@%pretty$@%x', 'x$@%enjoy$@%x', 'x$@%the$@%x', 'x$@%carrot$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.9440000000000001,54.0,0.9512438793854044,0.9533473301033626,0.2343806294764691,0.6334966421127319,60
+I17U-gNNS-p130-r1,A young girl is feeding a horse a big carrot and the horse loves it.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	young	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	feed	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	5	iobj	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	big	_	JJ	JJ	_	10	amod	_	_
+10	carrot	_	NN	NN	_	5	dobj	_	_
+11	and	_	CC	CC	_	0	erased	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	horse	_	NN	NN	_	14	nsubj	_	_
+14	love	_	VBZ	VBZ	_	5	conj_and	_	_
+15	it	_	PRP	PRP	_	14	dobj	_	_
+16	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'iobj$@%horse$@%feed', 'det$@%a$@%carrot', 'amod$@%big$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%and$@%WORDERASED', 'det$@%the$@%horse', 'nsubj$@%horse$@%love', 'conj_and$@%love$@%feed', 'dobj$@%it$@%love', 'punct$@%.$@%feed']","['x$@%a$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%big$@%carrot', 'x$@%carrot$@%feed', 'x$@%and$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%love', 'x$@%love$@%feed', 'x$@%it$@%love', 'x$@%.$@%feed']","['x$@%a$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%carrot$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%love$@%x', 'x$@%it$@%x', 'x$@%.$@%x']",1.0,25.5,0.3180360217717879,0.2480804283007927,0.11792410696068167,0.7489885687828064,34
+I17U-gNNS-p131-r1,The girl is feeding a carrot to the horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	horse	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%the$@%horse', 'prep_to$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,25.5,0.063555178099854,0.04160035999616896,0.025387315761110085,0.8705093264579773,1
+I17U-gNNS-p132-r1,the girl is feeding a carrot to a giraffe ,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	carrot	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	giraffe	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%a$@%giraffe', 'prep_to$@%giraffe$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%a$@%giraffe', 'x$@%giraffe$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%giraffe$@%x', 'x$@%.$@%x']",0.635,62.0,0.24215021300044715,0.27863946567914644,0.38616389412357066,0.7030472159385681,41
+I17U-gNNS-p134-r1,The girl is feeding the horse carrots.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	carrot	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%feed', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%feed', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.26793324953277264,0.1439881239780254,0.025389748458144682,0.8480429649353027,18
+I17U-gNNS-p137-r1,The girl is feeding a horse a carrot.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%horse', 'iobj$@%horse$@%feed', 'det$@%a$@%carrot', 'dobj$@%carrot$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%a$@%carrot', 'x$@%carrot$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",1.0,25.5,0.16097564990771962,0.05332750120828689,0.025386385185975916,0.8626744151115417,4
+I17U-gNNS-p138-r1,The girl is giving the horse a carrot to eat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	horse	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	carrot	_	NN	NN	_	4	dobj	_	_
+9	to	_	TO	TO	_	10	aux	_	_
+10	eat	_	VB	VB	_	8	infmod	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%the$@%horse', 'iobj$@%horse$@%give', 'det$@%a$@%carrot', 'dobj$@%carrot$@%give', 'aux$@%to$@%eat', 'infmod$@%eat$@%carrot', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%the$@%horse', 'x$@%horse$@%give', 'x$@%a$@%carrot', 'x$@%carrot$@%give', 'x$@%to$@%eat', 'x$@%eat$@%carrot', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%the$@%x', 'x$@%horse$@%x', 'x$@%a$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%.$@%x']",1.0,25.5,0.7236584860165789,0.7335990491809963,0.2008467632861779,0.8130170106887817,28

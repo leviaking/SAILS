@@ -45,11 +45,20 @@ Ditransitive & & & & & \param{xdx} \\
 %\label{chap:optimization}
 %In this chapter, I detail my research applying the methods discussed in Chapter~\ref{chap:pilot} to the much larger and more richly annotated dataset described in Chapters~\ref{chap:data} and \ref{chap:annotation}. The chapter primarily consists of a series of experiments focused on isolating and optimizing a number of parameters or variables in my picture description task (PDT) response analysis pipeline. 
 
+To help contextualize the results of these experiments, I used a state of the art language modeling tool called BERT to rank responses according to their similarity to the NS model. I discuss this tool and its use as a baseline in Section~\ref{sec:bert-baseline}.
+
 The optimization experiments are organized here according to the sequence in which the variables are relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, in Section~\ref{sec:exp-transitivity}, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are \textit{crowdsourced}. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first responses, or an equal number of first and second responses (also discussed in Section~\ref{sec:pdt}). I then evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-term-norm}; I call this variable \textit{term normalization}.\lk{Is this technically norming the terms or the responses?} For the final variable experiments, I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset.
 
 After examining these variables individually, in Section~\ref{sec:exp-combos} I consider the hypothesis that particular configurations \lk{Check research Qs and sync this up} will perform better than others in particular conditions. This is a ``non-exhaustive,'' mostly future-looking set of experiments, where I report some promising trends.
 
-Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
+%Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
+
+\section{Establishing a baseline}
+\label{sec:bert-baseline}
+\subsection{About BERT}
+\label{sec:about-bert}
+\subsection{BERT results}
+\label{sec:bert-results}
 
 \section{Transitivity experiments}
 \label{sec:exp-transitivity}
@@ -58,28 +67,75 @@ Here I compare the performance of my ranking system when applied to items that a
 \subsection{Transitivity results}
 \label{sec:transitivity-results}
 
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|l||l|l||l|l|}
+%\hline
+% & \multicolumn{2}{c||}{NS model (n=50)} & \multicolumn{2}{c|}{NS model (n=15)} \\
+%\hline
+%% Dep & Norm & Non-norm & Norm & Non-norm \\
+%& Norm & Non-norm & Norm & Non-norm \\
+%\hline
+%%\hline
+%%ldh & -0.474 & \textbf{-0.477} & -0.462 & \textbf{-0.471} \\
+%%\hline
+%%xdh & -0.476 & \textbf{-0.478} & -0.470 & \textbf{-0.474} \\
+%%\hline
+%%xdx & \textbf{-0.441} & -0.438 & -0.428 & \textbf{-0.431} \\
+%\hline
+%Spearman avg & -0.463 & \textbf{-0.465} & -0.449 & \textbf{-0.456} \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:temptest} Just a test.}
+%\end{center}
+%\end{table}
+
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l|l|}
+\begin{tabular}{|l||l|l||l|l||l|l|}
 \hline
-% Dep & Norm & Non-norm & Norm & Non-norm \\
-& Intransitives & Transitives & Ditransitives \\
+ & \multicolumn{6}{c|}{NS model sample size = 14} \\
+\hline
+ & \multicolumn{2}{c||}{Intransitives} & \multicolumn{2}{c||}{Transitives} & \multicolumn{2}{c|}{Ditransitives} \\
+\hline
+		& System 	& BERT 		& System 	& BERT 		& System 	& BERT 		\\
 \hline
 \hline
-count & 120 & 120 & 120 \\
+count 	& 120 		& 40 		& 120 		& 40 		& 120 		& 40		 \\
 \hline
-mean & 0.4126 & 0.3420 & 0.2733 \\
+mean 	& 0.4126 	& 0.4536 	& 0.3420 	& 0.3226	& 0.2733 	& 0.2526	 \\
 \hline
-median & 0.4164 & 0.3314 & 0.2780 \\
+median 	& 0.4164 	& 0.4456 	& 0.3314 	& 0.3180	& 0.2780 	& 0.2482	 \\
 \hline
-min & -0.0766 & -0.0303 & -0.2690 \\
+min 	& -0.0766 	& -0.0723 	& -0.0303 	& -0.0381	& -0.2690 	& -0.3146	 \\
 \hline
-max & 0.8949 & 0.7784 & 0.7099 \\
+max 	& 0.8949 	& 0.8953	& 0.7784 	& 0.7462	& 0.7099 	& 0.6576	 \\
 \hline
-std dev & 0.2435 & 0.2047 & 0.1957 \\
+std dev & 0.2435 	& 0.2377	& 0.2047 	& 0.2283	& 0.1957 	& 0.2249	 \\
+\hline
+\multicolumn{7}{c}{} \\
+\hline
+ & \multicolumn{6}{c|}{NS model sample size = 50} \\
+\hline
+ & \multicolumn{2}{c||}{Intransitives} & \multicolumn{2}{c||}{Transitives} & \multicolumn{2}{c|}{Ditransitives} \\
+\hline
+		& System 	& BERT 			& System 	& BERT 			& System 	& BERT \\
+\hline
+\hline
+count 	& 120 		& 40 			& 120 		& 40 			& 120 		& 40 	\\
+\hline
+mean 	& 0.4126 	& 0.4267 		& 0.3420 	& 0.3494	 	& 0.2733 	& 0.2744 \\
+\hline
+median 	& 0.4164 	& 0.4482	 	& 0.3314 	& 0.3466	 	& 0.2780 	& 0.2718 \\
+\hline
+min 	& -0.0766 	& -0.0723	 	& -0.0303 	& 0.0051	 	& -0.2690 	& -0.1476 \\
+\hline
+max 	& 0.8949 	& 0.8924	 	& 0.7784 	& 0.7513	 	& 0.7099 	& 0.6619 \\
+\hline
+std dev & 0.2435 	& 0.2632 		& 0.2047 	& 0.1996 		& 0.1957 	& 0.1984 \\
 \hline
 \end{tabular}
-\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items. Each column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking.}
+\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 40 rankings (4 system configurations $\times$ 10 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
 \end{center}
 \end{table}
 
@@ -91,27 +147,31 @@ Here we compare the performance of my ranking system when applied to targeted vs
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l|}
+\begin{tabular}{|l||l|l||l|l||l|l||l|l|}
 \hline
-& \param{Targeted} & \param{Untargeted} \\
+& \multicolumn{4}{c||}{NS model sample size = 14} & \multicolumn{4}{c|}{NS model sample size = 50} \\
 \hline
+ & \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c||}{Untargeted} & \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c|}{Untargeted} \\
 \hline
-count & 180 & 180  \\
+	& System 		& BERT 		& System 	& BERT 		& System 	& BERT 		& System 	& BERT \\
 \hline
-mean & 0.3850 & 0.3001  \\
+count 	& 180 		& 60 		& 180 		& 60 		& 180 		& 60 		& 180 		& 60 \\
 \hline
-median & 0.3828 & 0.3137  \\
+mean 	& 0.3906 	& 0.3870 	& 0.2966 	& 0.2988 	& 0.3850 	& 0.3932 	& 0.3001 	& 0.3072  \\
 \hline
-min & -0.0482 & -0.2690  \\
+mdn. 	& 0.3845 	& 0.3998 	& 0.3071 	& 0.3271 	& 0.3828 	& 0.3827 	& 0.3137 	& 0.3020 \\
 \hline
-max & 0.8723 & 0.8949 \\
+min 	& -0.0767 	& -0.0431 	& -0.3146 	& -0.3146 	& -0.0482 	& 0.0051	& -0.2690 	& -0.1476 \\
 \hline
-std dev & 0.2329 & 0.2033 \\
+max 	& 0.8598 	& 0.8446 	& 0.9011	& 0.8953 	& 0.8723 	& 0.8568	& 0.8949 	& 0.8924 \\
+\hline
+st dv & 0.2380 	& 0.2518 	& 0.2169 	& 0.2280 	& 0.2329 	& 0.2348	& 0.2033 	& 0.2171 \\
 \hline
 \end{tabular}
-\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{targeted} and \param{untargeted} versions of the PDT data. Each column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking.}
+\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{targeted} and \param{untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
 \end{center}
 \end{table}
+
 
 \section{Familiarity experiments}
 \label{sec:exp-familiarity}
@@ -127,22 +187,24 @@ Here we compare how well the system works when using NSs' first responses vs a m
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l|}
+\begin{tabular}{|l||l|l||l|l|}
 \hline
-& \param{Primary} & \param{Mixed} \\
+ & \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c|}{Mixed} \\
+\hline
+& System & BERT & System & BERT \\
 \hline
 \hline
-count & 180 & 180  \\
+count & 180 & 60 & 180 & 60 \\
 \hline
-mean & 0.3376 & 0.3475  \\
+mean & 0.3376 & 0.5127 & 0.3475 & 0.5058 \\
 \hline
-median & 0.3272 & 0.3616  \\
+median & 0.3272 & 0.5294 & 0.3616 & 0.5161  \\
 \hline
-min & -0.2690 & -0.1476  \\
+min & -0.2690 & -0.0908 & -0.1476 & 0.04962  \\
 \hline
-max & 0.8903 & 0.8949 \\
+max & 0.8903 & 0.8802 & 0.8949 & 0.8810 \\
 \hline
-std dev & 0.2182 & 0.2270 \\
+std dev & 0.2182 & 0.1870 & 0.2270 & 0.1686 \\
 \hline
 \end{tabular}
 \caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain 50 first responses from NSs and \param{mixed} models contain 25 first and 25 second responses from NSs. Each column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking.}
@@ -224,6 +286,31 @@ Because the non-normalized GSs outperform their normalized counterparts, and for
 
 
 
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+ & \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c|}{Mixed} \\
+\hline
+& System & BERT & System & BERT \\
+\hline
+\hline
+count & 180 & 60 & 180 & 60 \\
+\hline
+mean & 0.3376 & 0.5127 & 0.3475 & 0.5058 \\
+\hline
+median & 0.3272 & 0.5294 & 0.3616 & 0.5161  \\
+\hline
+min & -0.2690 & -0.0908 & -0.1476 & 0.04962  \\
+\hline
+max & 0.8903 & 0.8802 & 0.8949 & 0.8810 \\
+\hline
+std dev & 0.2182 & 0.1870 & 0.2270 & 0.1686 \\
+\hline
+\end{tabular}
+\caption{\label{tab:toy} Toy.}
+\end{center}
+\end{table}
 
 \begin{table}[htb!]
 \begin{center}
@@ -259,22 +346,22 @@ The current system allows for different \textit{term representations}, which are
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l|l|}
+\begin{tabular}{|l||l|l|l||l|}
 \hline
-& \param{ldh} & \param{xdh} & \param{xdx} \\
+& \param{ldh} & \param{xdh} & \param{xdx} & BERT \\
 \hline
 \hline
-count & 120 & 120 & 120  \\
+count & 120 & 120 & 120 & 120 \\
 \hline
-mean & 0.3502 & 0.3422 & 0.3353  \\
+mean & 0.3502 & 0.3422 & 0.3353 & 0.5092 \\
 \hline
-median & 0.3642 & 0.3687 & 0.3224  \\
+median & 0.3642 & 0.3687 & 0.3224 & 0.5231 \\
 \hline
-min & -0.1476 & -0.2690 & -0.0751  \\
+min & -0.1476 & -0.2690 & -0.0751 & -0.0908 \\
 \hline
-max & 0.8924 & 0.8915 & 0.8949 \\
+max & 0.8924 & 0.8915 & 0.8949 & 0.8810 \\
 \hline
-std dev & 0.2293 & 0.2359 & 0.2022 \\
+std dev & 0.2293 & 0.2359 & 0.2022 & 0.1773 \\
 \hline
 \end{tabular}
 \caption{\label{tab:termrep-results} Comparing Spearman rank correlation scores where system configurations use different term representations: \param{ldh} (labeled dependencies), \param{xdh} (unlabeled dependencies), or \param{xdx} (dependents only; i.e., \textit{words}). Each column represents 120 different rankings (4 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking.}
@@ -289,10 +376,4 @@ std dev & 0.2293 & 0.2359 & 0.2022 \\
 \label{sec:exp-combos}
 \subsection{Combined settings results}
 \label{sec:combos-results}
-
-\section{BERT experiments}
-\label{sec:exp-bert}
-\subsection{BERT results}
-\label{sec:bert-results}
-
 

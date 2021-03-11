@@ -44,9 +44,11 @@ Investigate Table 6.6--these probably shouldn't be negatives!
 
 Check in in a week with email updates;
 Meet on 3/12 at 1:30pm.
+################################################################################
 
 
 2021/02/28, Sunday. BERT.
+################################################################################
 
 2021/03/01. Monday. BERT.
 Today:
@@ -55,7 +57,41 @@ Run BERT on my data;
 Generate Spearman scores (BERT vs Weighted Annotation);
 DONE;
 Tomorrow: modify and rerun thesis_spearman_stats.py to include BERT scores
+################################################################################
 
+2021/03/09. Tuesday.
+When BERT is finished running on all N14 samples, run get_bert_spearman_correlations.py.
+update thesis_bert_spearman_stats.py (cf thesis_spearman_stats.py); run it.
+DONE
+
+##
+ARGH! I've been using BERT in training mode (default?); this results in non-deterministic scores.
+I'm going to run it again in "eval" mode.:
+#
+Run BERT N14 vs N70:
+change bert_vs_sails.py: train_sample = 'N14'
+change get_bert_spearman_correlations.py: train_sample = 'N14'
+change thesis_bert_spearman_stats.py: train_sample = 'N14'
+python bert_vs_sails.py
+python get_bert_spearman_correlations.py
+python thesis_bert_spearman_stats.py
+DONE ALL
+#
+Run BERT N50 vs N70:
+change bert_vs_sails.py: train_sample = 'N50'
+change get_bert_spearman_correlations.py: train_sample = 'N50'
+change thesis_bert_spearman_stats.py: train_sample = 'N50'
+python bert_vs_sails.py
+DONE
+python get_bert_spearman_correlations.py
+DONE
+python thesis_bert_spearman_stats.py
+DONE
+#
+###
+TODO:
+UPDATE ALL CHAPTER 6 TABLES WRT BERT SCORES!
+###
 
 ################################################################################
 ################################################################################
