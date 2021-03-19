@@ -54,7 +54,9 @@ param_dict = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'
 
 
 def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
+	# print(wd)
 	tag = trr+"-VS-"+tss
+	print(tag)
 	for param in exp:
 		# print(all_sources)
 		# print("param: "+param)
@@ -71,13 +73,16 @@ def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
 			for sr in all_sources:  ## e.g. 'I01T-gNSC-r1-In-N50-VS-N70'
 				# print("setting b: "+setting)
 				# print("sr: "+sr)
-				if setting in sr:
+				if setting == 'bert':
 					sr_spmn = sd[sr][0]
 					sr_pval = sd[sr][1]
 					ps_rows.append([sr, sr_spmn, sr_pval])
-					# t_rep_rows = query_termrep_dicts(sr, sd)
-					# for tr in t_rep_rows:
-					# 	ps_rows.append(tr)
+				elif setting in sr:
+					sr_spmn = sd[sr][0]
+					sr_pval = sd[sr][1]
+					ps_rows.append([sr, sr_spmn, sr_pval])
+				else:
+					pass
 			ps_df = pandas.DataFrame(ps_rows)
 			# print(ps_df)
 			ps_sp_descriptive = ps_df[1].describe()
@@ -86,8 +91,8 @@ def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
 			param_header.append(ps_name)
 			param_stats.append(ps_sp_descriptive)
 			# print(ps_name)
-			ps_df.to_csv(wd+"bert-"+ps_name+'_spearman.csv', encoding='utf-8',
-						 index=False, header=x_head)
+			ps_df.to_csv(wd+"bert-"+ps_name+'_spearman-'+tag+'.csv',
+						 encoding='utf-8', index=False, header=x_head)
 			ps_sp_descriptive.to_csv(wd+"bert-"+ps_name+'_spearman_stats-'+tag+
 									 '.csv', encoding='utf-8', header=['spearman'])
 			ps_pv_descriptive.to_csv(wd+"bert-"+ps_name+'_sp_pval_stats-'+tag+
@@ -99,11 +104,11 @@ def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
 
 
 def main():
-	train_sample = "N50"
+	train_sample = "N14"
 	test_sample = "N70"
 	working_dir=("/Users/leviking/Documents/dissertation/SAILS/stats/"+
 				 train_sample+'-VS-'+test_sample+'/')
-	all_spearman_file = "all_spearman_"+train_sample+"-VS-"+test_sample+".csv"
+	all_spearman_file = "bert_spearman_"+train_sample+"-VS-"+test_sample+".csv"
 	oldheader, all_spearman_rows = get_source_rows(working_dir+all_spearman_file)
 	# oldheader = ["Source", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]
 	all_sources, s_dict = get_spearman_dict(all_spearman_rows)  ## ['I01T-gNSC-r1-In-N50-VS-N70', ...], [ldh_sd, xdh_sd, xdx_sd]
