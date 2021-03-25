@@ -54,11 +54,22 @@ After examining these variables individually, in Section~\ref{sec:exp-combos} I 
 %Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
 
 \section{Establishing a baseline}
+\section{Establishing a baseline}
 \label{sec:bert-baseline}
+The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations. In order to give some frame of reference for this work, I chose to use a BERT, a widely adopted state-of-the-art language modeling tool. My system scores each single (NNS) test response according to its similarity with the set of (NS) model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting Spearman scores are discussed throughout to help contextualize my system's performance.
 \subsection{About BERT}
 \label{sec:about-bert}
-\subsection{BERT results}
-\label{sec:bert-results}
+Let's talk about BERT, baby. Let's talk about you and me.
+
+\subsection{BERT implementation}
+RoBERTa?
+
+For each experiment reported throughout this chapter, my system and BERT are given access to the same NS responses as the basis for their similarity measures. Naturally, however, each is trained on or makes use of very different language resources. The linguistic "intelligence" of my system comes largely from the Stanford Parser, pre-trained on the Penn Treebank. The Penn Treebank is approximately 1 million words, manually annotated for part of speech and constituency parsing. The content is a mix of Wall Street Journal articles and narrative texts from the Brown Corpus. It also uses the Brown Corpus for tf-idf, meaning a word frequency model extracted from the Brown Corpus also serves as a linguistic resource. BERT, on the other hand, is trained on vastly larger amounts of unannotated text, from a much broader range of sources.
+
+My implementation of BERT here varies slightly from the way I implemented my own system's similarity measuring approach throughout most of this chapter. In my system, each NS response in the model is processed and dumped into a single ''bag of dependencies,'' which is then used to generate a single similarity score (via tf-idf cosine). BERT operates directly on plain text sentences, and because the use of punctuation in the PDT responses is not consistent, concatenating all NS model responses in order to generate a single similarity score is not ideal. Instead, I use BERT to do a pairwise comparison between the NNS test response and each NS response in the model and then average these similarity scores.
+
+I did explore an implementation of my system's similarity scoring that is more consistent with this individual treatment of model responses for BERT, and this is discussed in Section~\ref{sec:exp-term-norm}.
+
 
 \section{Transitivity experiments}
 \label{sec:exp-transitivity}
