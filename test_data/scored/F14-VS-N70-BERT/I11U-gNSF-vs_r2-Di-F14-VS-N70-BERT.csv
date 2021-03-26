@@ -1,0 +1,665 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I11U-gNNS-p004-r1,A boy is questioning his father.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	question	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	father	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%question', 'aux$@%be$@%question', 'root$@%question$@%VROOT', 'poss$@%he$@%father', 'dobj$@%father$@%question', 'punct$@%.$@%question']","['x$@%a$@%boy', 'x$@%boy$@%question', 'x$@%be$@%question', 'x$@%question$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%question', 'x$@%.$@%question']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%question$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,1.0,1.0,0.4137091988112903,0.7359566688537598,47
+I11U-gNNS-p005-r1,A boy is asking questions to the man.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.4416145053801219,0.3103578893968598,0.17796782284165213,0.8118497133255005,20
+I11U-gNNS-p006-r1,"The son is asking his father a question, which makes his father proud.",1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	son	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	father	_	NN	NN	_	4	dep	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	question	_	NN	NN	_	11	nsubj	_	_
+9	,	_	,	,	_	8	punct	_	_
+10	which	_	WDT	WDT	_	0	erased	_	_
+11	make	_	VBZ	VBZ	_	8	rcmod	_	_
+12	he	_	PRP$	PRP$	_	13	poss	_	_
+13	father	_	NN	NN	_	14	nsubj	_	_
+14	proud	_	JJ	JJ	_	11	xcomp	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%son', 'nsubj$@%son$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%father', 'dep$@%father$@%ask', 'det$@%a$@%question', 'nsubj$@%question$@%make', 'punct$@%,$@%question', 'erased$@%which$@%WORDERASED', 'rcmod$@%make$@%question', 'poss$@%he$@%father', 'nsubj$@%father$@%proud', 'xcomp$@%proud$@%make', 'punct$@%.$@%ask']","['x$@%the$@%son', 'x$@%son$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%a$@%question', 'x$@%question$@%make', 'x$@%,$@%question', 'x$@%which$@%WORDERASED', 'x$@%make$@%question', 'x$@%he$@%father', 'x$@%father$@%proud', 'x$@%proud$@%make', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%son$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%,$@%x', 'x$@%which$@%x', 'x$@%make$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%proud$@%x', 'x$@%.$@%x']",1.0,20.5,0.8454130441953982,0.8751535365618175,0.8094832498351455,0.5320594906806946,69
+I11U-gNNS-p007-r1,The little boy is confused about the something and he is trying to ask others. ,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubjpass	_	_
+4	be	_	VBZ	VBZ	_	5	auxpass	_	_
+5	confuse	_	VBN	VBN	_	0	root	_	_
+6	about	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	something	_	NN	NN	_	5	prep_about	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	he	_	PRP	PRP	_	14	xsubj	_	_
+11	be	_	VBZ	VBZ	_	12	aux	_	_
+12	try	_	VBG	VBG	_	5	conj_and	_	_
+13	to	_	TO	TO	_	14	aux	_	_
+14	ask	_	VB	VB	_	12	xcomp	_	_
+15	other	_	NNS	NNS	_	14	dobj	_	_
+16	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubjpass$@%boy$@%confuse', 'auxpass$@%be$@%confuse', 'root$@%confuse$@%VROOT', 'erased$@%about$@%WORDERASED', 'det$@%the$@%something', 'prep_about$@%something$@%confuse', 'erased$@%and$@%WORDERASED', 'xsubj$@%he$@%ask', 'aux$@%be$@%try', 'conj_and$@%try$@%confuse', 'aux$@%to$@%ask', 'xcomp$@%ask$@%try', 'dobj$@%other$@%ask', 'punct$@%.$@%confuse']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%confuse', 'x$@%be$@%confuse', 'x$@%confuse$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%the$@%something', 'x$@%something$@%confuse', 'x$@%and$@%WORDERASED', 'x$@%he$@%ask', 'x$@%be$@%try', 'x$@%try$@%confuse', 'x$@%to$@%ask', 'x$@%ask$@%try', 'x$@%other$@%ask', 'x$@%.$@%confuse']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%confuse$@%x', 'x$@%about$@%x', 'x$@%the$@%x', 'x$@%something$@%x', 'x$@%and$@%x', 'x$@%he$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%ask$@%x', 'x$@%other$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.9369591033594614,0.935881342908464,0.6590529469380033,0.6620844602584839,59
+I11U-gNNS-p009-r1,A boy is asking his older brother a question.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	7	poss	_	_
+6	older	_	JJR	JJR	_	7	amod	_	_
+7	brother	_	NN	NN	_	4	dep	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	question	_	NN	NN	_	4	dobj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%brother', 'amod$@%older$@%brother', 'dep$@%brother$@%ask', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%brother', 'x$@%older$@%brother', 'x$@%brother$@%ask', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%older$@%x', 'x$@%brother$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.4597658453057354,0.4502539138975816,0.4653729704655794,0.7538448572158813,43
+I11U-gNNS-p012-r1,the boy is questioning the man,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	question	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	man	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%question', 'aux$@%be$@%question', 'root$@%question$@%VROOT', 'det$@%the$@%man', 'dobj$@%man$@%question', 'punct$@%.$@%question']","['x$@%the$@%boy', 'x$@%boy$@%question', 'x$@%be$@%question', 'x$@%question$@%VROOT', 'x$@%the$@%man', 'x$@%man$@%question', 'x$@%.$@%question']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%question$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.9350511534124532,0.8964042097864646,0.2509156537768844,0.7833911180496216,30
+I11U-gNNS-p013-r1,The little boy is asking question to his father. ,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	question	_	NN	NN	_	5	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	5	prep_to	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.4031420579743597,0.3455221693431806,0.340344987387166,0.779974639415741,31
+I11U-gNNS-p014-r1,A boy is asking questions to a man.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.4491464083971805,0.3183838294969029,0.17799465441940965,0.8063434362411499,24
+I11U-gNNS-p017-r1,The boy is asking questions. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.22894297737016034,0.18059045798036644,0.17644016034792176,0.7994059324264526,27
+I11U-gNNS-p021-r1,son is asking a question to his dad,1,1,0,1,1,"1	son	_	NN	NN	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	ask	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	question	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	dad	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['nsubj$@%son$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%dad', 'prep_to$@%dad$@%ask', 'punct$@%.$@%ask']","['x$@%son$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%dad', 'x$@%dad$@%ask', 'x$@%.$@%ask']","['x$@%son$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.6628537144551228,0.68318482948587,0.6950407780889479,0.7357693910598755,48
+I11U-gNNS-p022-r1,The boy is asking a question to her brother.,1,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	brother	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%she$@%brother', 'prep_to$@%brother$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%she$@%brother', 'x$@%brother$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%brother$@%x', 'x$@%.$@%x']",0.514,68.0,0.3591692119737606,0.3479595838907935,0.475558005409947,0.6726809740066528,58
+I11U-gNNS-p023-r1,The boy ask his father some problems he could not solve.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	ask	_	VBP	VBP	_	0	root	_	_
+4	he	_	PRP$	PRP$	_	5	poss	_	_
+5	father	_	NN	NN	_	7	nsubj	_	_
+6	some	_	DT	DT	_	7	det	_	_
+7	problem	_	NNS	NNS	_	11	dobj	_	_
+8	he	_	PRP	PRP	_	11	nsubj	_	_
+9	could	_	MD	MD	_	11	aux	_	_
+10	not	_	RB	RB	_	11	neg	_	_
+11	solve	_	VB	VB	_	7	rcmod	_	_
+12	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%father', 'nsubj$@%father$@%problem', 'det$@%some$@%problem', 'dobj$@%problem$@%solve', 'nsubj$@%he$@%solve', 'aux$@%could$@%solve', 'neg$@%not$@%solve', 'rcmod$@%solve$@%problem', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%problem', 'x$@%some$@%problem', 'x$@%problem$@%solve', 'x$@%he$@%solve', 'x$@%could$@%solve', 'x$@%not$@%solve', 'x$@%solve$@%problem', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%some$@%x', 'x$@%problem$@%x', 'x$@%he$@%x', 'x$@%could$@%x', 'x$@%not$@%x', 'x$@%solve$@%x', 'x$@%.$@%x']",0.851,55.5,0.7338782729255331,0.6935951365413203,0.6532481866045194,0.5657145977020264,66
+I11U-gNNS-p026-r1,The younger boy is asking question from the elder one,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	younger	_	JJR	JJR	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	question	_	NN	NN	_	5	dobj	_	_
+7	from	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	elder	_	JJR	JJR	_	10	amod	_	_
+10	one	_	NN	NN	_	5	prep_from	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%younger$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%from$@%WORDERASED', 'det$@%the$@%one', 'amod$@%elder$@%one', 'prep_from$@%one$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%younger$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%from$@%WORDERASED', 'x$@%the$@%one', 'x$@%elder$@%one', 'x$@%one$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%younger$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%from$@%x', 'x$@%the$@%x', 'x$@%elder$@%x', 'x$@%one$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.4882578347358674,0.4492754965590272,0.6049959692825946,0.749424934387207,44
+I11U-gNNS-p027-r1,the boy's asking a question,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	's	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', ""aux$@%'s$@%ask"", 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', ""x$@%'s$@%ask"", 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', ""x$@%'s$@%x"", 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.3852843987934099,0.33575852197277,0.17800343087884796,0.8185430765151978,13
+I11U-gNNS-p028-r1,A studendt is asking question to his teacher,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	studendt	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	teacher	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%studendt', 'nsubj$@%studendt$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%teacher', 'prep_to$@%teacher$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%studendt', 'x$@%studendt$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%teacher', 'x$@%teacher$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%studendt$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.7705186372335686,0.7838536113868786,0.8510582722256838,0.562433660030365,67
+I11U-gNNS-p030-r1,The kid is asking his father a question.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	kid	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	father	_	NN	NN	_	4	dep	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	question	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%kid', 'nsubj$@%kid$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%father', 'dep$@%father$@%ask', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%kid', 'x$@%kid$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%kid$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.6851803395929246,0.7254776628562891,0.76203377110667,0.7621392607688904,39
+I11U-gNNS-p032-r1,A boy is asking his father a question.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	6	poss	_	_
+6	father	_	NN	NN	_	4	dep	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	question	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%father', 'dep$@%father$@%ask', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.3951501090464763,0.3358808478065938,0.3326087602109168,0.7704352736473083,37
+I11U-gNNS-p034-r1,A boy is asking question to a man,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.4491464083971805,0.3183838294969029,0.17799465441940965,0.8172271847724915,15
+I11U-gNNS-p036-r1,The boy asks a question to his dad.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	ask	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	question	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	dad	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%dad', 'prep_to$@%dad$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%dad', 'x$@%dad$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%.$@%x']",0.907,54.0,0.43391505505221695,0.35894767527662064,0.5222895615690806,0.7717314958572388,36
+I11U-gNNS-p037-r1,The boy is asking the man questions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	man	_	NN	NN	_	7	nn	_	_
+7	question	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%question', 'nn$@%man$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%question', 'x$@%man$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.3829536680123016,0.2989704454651231,0.1779668784928009,0.8029714822769165,25
+I11U-gNNS-p038-r1,A student is asking a question for a young teacher. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	a	_	DT	DT	_	10	det	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	teacher	_	NN	NN	_	6	prep_for	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%student', 'nsubj$@%student$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%for$@%WORDERASED', 'det$@%a$@%teacher', 'amod$@%young$@%teacher', 'prep_for$@%teacher$@%question', 'punct$@%.$@%ask']","['x$@%a$@%student', 'x$@%student$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%for$@%WORDERASED', 'x$@%a$@%teacher', 'x$@%young$@%teacher', 'x$@%teacher$@%question', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%young$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,20.5,0.7187276097715228,0.7654583498645235,0.7372568953582148,0.550594687461853,68
+I11U-gNNS-p039-r1,The student is asking questions to the teacher.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	teacher	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%student', 'nsubj$@%student$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%teacher', 'prep_to$@%teacher$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%student', 'x$@%student$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%teacher', 'x$@%teacher$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,20.5,0.7619790821148218,0.7666822226930188,0.7168100535830009,0.5889402031898499,63
+I11U-gNNS-p040-r1,A child is asking a problem to a man.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	child	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	problem	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%problem', 'dobj$@%problem$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%child', 'x$@%child$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%problem', 'x$@%problem$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%problem$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.8241346928455726,0.8190178175462731,0.7570774885374194,0.7458515167236328,45
+I11U-gNNS-p041-r1,The boy is asking a question to his father,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.3316144326808803,0.26885155951100603,0.33258620942091605,0.7773255109786987,33
+I11U-gNNS-p042-r1,The son is asking the question to his father.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	son	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%son', 'nsubj$@%son$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%son', 'x$@%son$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%son$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.7621626001377203,0.800764581153419,0.7165319441074056,0.7197532653808594,50
+I11U-gNNS-p043-r1,A boy is asking questions to his father.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	father	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.4645023765264287,0.3968375037211456,0.33260255895974944,0.7651857733726501,38
+I11U-gNNS-p044-r1,A boy who wear a glasses is asking some questions to a man who also wear a glasses.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	8	nsubj	_	_
+3	who	_	WP	WP	_	0	erased	_	_
+4	wear	_	VBP	VBP	_	2	rcmod	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	glass	_	NNS	NNS	_	4	dobj	_	_
+7	be	_	VBZ	VBZ	_	8	aux	_	_
+8	ask	_	VBG	VBG	_	0	root	_	_
+9	some	_	DT	DT	_	10	det	_	_
+10	question	_	NNS	NNS	_	8	dobj	_	_
+11	to	_	TO	TO	_	0	erased	_	_
+12	a	_	DT	DT	_	13	det	_	_
+13	man	_	NN	NN	_	16	nsubj	_	_
+14	who	_	WP	WP	_	0	erased	_	_
+15	also	_	RB	RB	_	16	advmod	_	_
+16	wear	_	VBP	VBP	_	13	rcmod	_	_
+17	a	_	DT	DT	_	18	det	_	_
+18	glass	_	NNS	NNS	_	16	dobj	_	_
+19	.	_	.	.	_	8	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'erased$@%who$@%WORDERASED', 'rcmod$@%wear$@%boy', 'det$@%a$@%glass', 'dobj$@%glass$@%wear', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%some$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'nsubj$@%man$@%wear', 'erased$@%who$@%WORDERASED', 'advmod$@%also$@%wear', 'rcmod$@%wear$@%man', 'det$@%a$@%glass', 'dobj$@%glass$@%wear', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%who$@%WORDERASED', 'x$@%wear$@%boy', 'x$@%a$@%glass', 'x$@%glass$@%wear', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%some$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%wear', 'x$@%who$@%WORDERASED', 'x$@%also$@%wear', 'x$@%wear$@%man', 'x$@%a$@%glass', 'x$@%glass$@%wear', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%who$@%x', 'x$@%wear$@%x', 'x$@%a$@%x', 'x$@%glass$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%some$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%who$@%x', 'x$@%also$@%x', 'x$@%wear$@%x', 'x$@%a$@%x', 'x$@%glass$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.7078780573521479,0.7006084901221079,0.7340922030271178,0.6894977688789368,56
+I11U-gNNS-p051-r1,a oy is asking some question to his dad,1,1,0,1,0,"1	a	_	DT	DT	_	2	det	_	_
+2	oy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	some	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	dad	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%oy', 'nsubj$@%oy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%some$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%dad', 'prep_to$@%dad$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%oy', 'x$@%oy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%some$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%dad', 'x$@%dad$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%oy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%some$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%.$@%x']",0.682,67.0,0.7847738539360113,0.7979742906116819,0.7791451661949526,0.5889317393302917,64
+I11U-gNNS-p057-r1,A boy is asking question to a man. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.4491464083971805,0.3183838294969029,0.17799465441940965,0.8182536363601685,14
+I11U-gNNS-p058-r1,The little boy is asking a question. ,1,1,1,0,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	question	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.2039677433895709,0.1811777659491736,0.2017074882264548,0.8234284520149231,6
+I11U-gNNS-p065-r1,A boy with a pair of glasses is asking his father questions.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	9	nsubj	_	_
+3	with	_	IN	IN	_	0	erased	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	pair	_	NN	NN	_	2	prep_with	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	glass	_	NNS	NNS	_	5	prep_of	_	_
+8	be	_	VBZ	VBZ	_	9	aux	_	_
+9	ask	_	VBG	VBG	_	0	root	_	_
+10	he	_	PRP$	PRP$	_	12	poss	_	_
+11	father	_	NN	NN	_	12	nn	_	_
+12	question	_	NNS	NNS	_	9	dobj	_	_
+13	.	_	.	.	_	9	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'erased$@%with$@%WORDERASED', 'det$@%a$@%pair', 'prep_with$@%pair$@%boy', 'erased$@%of$@%WORDERASED', 'prep_of$@%glass$@%pair', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%father$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%with$@%WORDERASED', 'x$@%a$@%pair', 'x$@%pair$@%boy', 'x$@%of$@%WORDERASED', 'x$@%glass$@%pair', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%father$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%pair$@%x', 'x$@%of$@%x', 'x$@%glass$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.6101104501006024,0.5970369069621446,0.5934755799066629,0.6995855569839478,52
+I11U-gNNS-p066-r1,The boy is asking question.,1,1,0,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.72,65.0,0.22894297737016034,0.18059045798036644,0.17644016034792176,0.8123117089271545,19
+I11U-gNNS-p069-r1,Son asks his father questions ,1,0,0,1,1,"1	son	_	NNP	NNP	_	2	nsubj	_	_
+2	ask	_	VBZ	VBZ	_	0	root	_	_
+3	he	_	PRP$	PRP$	_	5	poss	_	_
+4	father	_	NN	NN	_	5	nn	_	_
+5	question	_	NNS	NNS	_	2	dobj	_	_
+6	.	_	.	.	_	2	punct	_	_","['nsubj$@%son$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%father$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%son$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%father$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%son$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.851,55.5,0.8628703428310454,0.8703885487793328,0.7165720166110441,0.6944688558578491,54
+I11U-gNNS-p070-r1,The boy is asking questions to the man.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.3732177902477532,0.23577119067809216,0.17796525473216995,0.815528929233551,17
+I11U-gNNS-p072-r1,The little boy is talking about his question to the man stand next him,1,1,0,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	talk	_	VBG	VBG	_	0	root	_	_
+6	about	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	question	_	NN	NN	_	5	prep_about	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	the	_	DT	DT	_	12	det	_	_
+11	man	_	NN	NN	_	12	nn	_	_
+12	stand	_	NN	NN	_	5	prep_to	_	_
+13	next	_	IN	IN	_	0	erased	_	_
+14	he	_	PRP	PRP	_	12	prep_next	_	_
+15	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'erased$@%about$@%WORDERASED', 'poss$@%he$@%question', 'prep_about$@%question$@%talk', 'erased$@%to$@%WORDERASED', 'det$@%the$@%stand', 'nn$@%man$@%stand', 'prep_to$@%stand$@%talk', 'erased$@%next$@%WORDERASED', 'prep_next$@%he$@%stand', 'punct$@%.$@%talk']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%he$@%question', 'x$@%question$@%talk', 'x$@%to$@%WORDERASED', 'x$@%the$@%stand', 'x$@%man$@%stand', 'x$@%stand$@%talk', 'x$@%next$@%WORDERASED', 'x$@%he$@%stand', 'x$@%.$@%talk']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%about$@%x', 'x$@%he$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%stand$@%x', 'x$@%next$@%x', 'x$@%he$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.9318777396334428,0.929358712841194,0.508717535769147,0.7302135825157166,49
+I11U-gNNS-p074-r1,A boy is asking a question to a man,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.3793516794732589,0.26062064199855817,0.17801480442328987,0.8164043426513672,16
+I11U-gNNS-p075-r1,The boy asking a question to the man. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	ask	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	question	_	NN	NN	_	3	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	3	prep_to	_	_
+9	.	_	.	.	_	2	punct	_	_","['det$@%the$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%ask$@%boy', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%boy']","['x$@%the$@%boy', 'x$@%boy$@%VROOT', 'x$@%ask$@%boy', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%boy']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.7572690927044099,0.7171147220917715,0.1779630117781652,0.822153627872467,7
+I11U-gNNS-p077-r1,The boy is asking question to the man. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.3732177902477532,0.23577119067809216,0.17796525473216995,0.8295525312423706,1
+I11U-gNNS-p078-r1,The boy is asking a question to his father.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.3316144326808803,0.26885155951100603,0.33258620942091605,0.7773255109786987,33
+I11U-gNNS-p079-r1,The boy is asking a question to the man,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.3067810802522243,0.1825186387242046,0.17796114376656955,0.8206083178520203,12
+I11U-gNNS-p081-r1,the boy is asking the question,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.24274375305377996,0.19775377857443555,0.1764338000962734,0.8220714330673218,8
+I11U-gNNS-p082-r1,The boy is asking questions to the teacher.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	teacher	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%teacher', 'prep_to$@%teacher$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%teacher', 'x$@%teacher$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,20.5,0.4096852075138332,0.348594253186981,0.4041770305324933,0.6932626366615295,55
+I11U-gNNS-p083-r1,The boy is asking his teacher questions. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	7	poss	_	_
+6	teacher	_	NN	NN	_	7	nn	_	_
+7	question	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%teacher$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%teacher$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%teacher$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.4392880157711629,0.4148887879818168,0.4038893173045096,0.6967253684997559,53
+I11U-gNNS-p086-r1,The boy is asking a question to the teacher.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	teacher	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%teacher', 'prep_to$@%teacher$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%teacher', 'x$@%teacher$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,20.5,0.3432748951417255,0.29219998322641394,0.4041722527252992,0.704491913318634,51
+I11U-gNNS-p087-r1,a student is asking some questions to his teacher,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	some	_	DT	DT	_	6	det	_	_
+6	question	_	NNS	NNS	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	teacher	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%a$@%student', 'nsubj$@%student$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%some$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%teacher', 'prep_to$@%teacher$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%student', 'x$@%student$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%some$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%teacher', 'x$@%teacher$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%some$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,20.5,0.771898424053226,0.7796869245097683,0.7178064096362653,0.6017175912857056,62
+I11U-gNNS-p099-r1,A boy is asking a man some questions.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	man	_	NN	NN	_	4	iobj	_	_
+7	some	_	DT	DT	_	8	det	_	_
+8	question	_	NNS	NNS	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%man', 'iobj$@%man$@%ask', 'det$@%some$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%some$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%some$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.4729041588211567,0.41247066703516455,0.1900523454115043,0.8071557283401489,23
+I11U-gNNS-p101-r1,The boy is asking question to the man.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.3732177902477532,0.23577119067809216,0.17796525473216995,0.8255648016929626,4
+I11U-gNNS-p104-r1,A boy is asking his dad questions.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	7	poss	_	_
+6	dad	_	NN	NN	_	7	nn	_	_
+7	question	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%dad$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%dad$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.5007504391635176,0.4753253610642153,0.5223016779303249,0.7555351257324219,42
+I11U-gNNS-p105-r1,The boy is asking his father questions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	he	_	PRP$	PRP$	_	7	poss	_	_
+6	father	_	NN	NN	_	7	nn	_	_
+7	question	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%father$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%father$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.4392880157711629,0.4148887879818167,0.3325963361837865,0.7559594511985779,41
+I11U-gNNS-p106-r1,The boy is asking the man a question.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	man	_	NN	NN	_	4	iobj	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	question	_	NN	NN	_	4	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%man', 'iobj$@%man$@%ask', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.26596955069577805,0.1825194491706148,0.17796276754781234,0.8264824151992798,2
+I11U-gNNS-p107-r1,The little boy is asking a question about science to his older brother.,1,1,1,1,0,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	question	_	NN	NN	_	5	dobj	_	_
+8	about	_	IN	IN	_	0	erased	_	_
+9	science	_	NN	NN	_	7	prep_about	_	_
+10	to	_	TO	TO	_	0	erased	_	_
+11	he	_	PRP$	PRP$	_	13	poss	_	_
+12	older	_	JJR	JJR	_	13	amod	_	_
+13	brother	_	NN	NN	_	5	prep_to	_	_
+14	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%about$@%WORDERASED', 'prep_about$@%science$@%question', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%brother', 'amod$@%older$@%brother', 'prep_to$@%brother$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%about$@%WORDERASED', 'x$@%science$@%question', 'x$@%to$@%WORDERASED', 'x$@%he$@%brother', 'x$@%older$@%brother', 'x$@%brother$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%about$@%x', 'x$@%science$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%older$@%x', 'x$@%brother$@%x', 'x$@%.$@%x']",0.738,63.0,0.4568055015966843,0.44427442740807743,0.5536320131485312,0.6441501379013062,61
+I11U-gNNS-p108-r1,The little boy is asking questions to the older one.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	question	_	NNS	NNS	_	5	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	older	_	JJR	JJR	_	10	amod	_	_
+10	one	_	NN	NN	_	5	prep_to	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%one', 'amod$@%older$@%one', 'prep_to$@%one$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%one', 'x$@%older$@%one', 'x$@%one$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%older$@%x', 'x$@%one$@%x', 'x$@%.$@%x']",1.0,20.5,0.4514204379988514,0.40431581005344175,0.3352466329916286,0.7566443085670471,40
+I11U-gNNS-p109-r1,The boy is questioning. ,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	question	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%question', 'aux$@%be$@%question', 'root$@%question$@%VROOT', 'punct$@%.$@%question']","['x$@%the$@%boy', 'x$@%boy$@%question', 'x$@%be$@%question', 'x$@%question$@%VROOT', 'x$@%.$@%question']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.9313153683982808,0.9243911075472512,0.2487738859664104,0.7922410368919373,28
+I11U-gNNS-p111-r1,A nerd student is asking his father questions.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	nerd	_	JJ	JJ	_	3	amod	_	_
+3	student	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	he	_	PRP$	PRP$	_	8	poss	_	_
+7	father	_	NN	NN	_	8	nn	_	_
+8	question	_	NNS	NNS	_	5	dobj	_	_
+9	.	_	.	.	_	5	punct	_	_","['det$@%a$@%student', 'amod$@%nerd$@%student', 'nsubj$@%student$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'poss$@%he$@%question', 'nn$@%father$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%student', 'x$@%nerd$@%student', 'x$@%student$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%he$@%question', 'x$@%father$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%nerd$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.7999228239336511,0.8402019164139061,0.8689564495236469,0.6602069735527039,60
+I11U-gNNS-p112-r1,The boy is asking question to the man.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.3732177902477532,0.23577119067809216,0.17796525473216995,0.8255648016929626,4
+I11U-gNNS-p114-r1,A boy is asking question.,1,1,0,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%a$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.72,65.0,0.3158667266654405,0.2684704048434199,0.1764552090139404,0.8104658126831055,21
+I11U-gNNS-p116-r1,The boy is asking the question,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.24274375305377996,0.19775377857443555,0.1764338000962734,0.8220714330673218,8
+I11U-gNNS-p118-r1,The boy is asking questions to a man.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.380796014752864,0.2438583395062075,0.17796782284165213,0.8089117407798767,22
+I11U-gNNS-p119-r1,The older guy is way higher than the young dude.,0,0,1,0,0,"1	the	_	DT	DT	_	3	det	_	_
+2	older	_	JJR	JJR	_	3	amod	_	_
+3	guy	_	NN	NN	_	4	nsubj	_	_
+4	be	_	VBZ	VBZ	_	0	root	_	_
+5	way	_	RB	RB	_	6	advmod	_	_
+6	higher	_	JJR	JJR	_	4	advmod	_	_
+7	than	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	10	det	_	_
+9	young	_	JJ	JJ	_	10	amod	_	_
+10	dude	_	NN	NN	_	4	prep_than	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%guy', 'amod$@%older$@%guy', 'nsubj$@%guy$@%be', 'root$@%be$@%VROOT', 'advmod$@%way$@%higher', 'advmod$@%higher$@%be', 'erased$@%than$@%WORDERASED', 'det$@%the$@%dude', 'amod$@%young$@%dude', 'prep_than$@%dude$@%be', 'punct$@%.$@%be']","['x$@%the$@%guy', 'x$@%older$@%guy', 'x$@%guy$@%be', 'x$@%be$@%VROOT', 'x$@%way$@%higher', 'x$@%higher$@%be', 'x$@%than$@%WORDERASED', 'x$@%the$@%dude', 'x$@%young$@%dude', 'x$@%dude$@%be', 'x$@%.$@%be']","['x$@%the$@%x', 'x$@%older$@%x', 'x$@%guy$@%x', 'x$@%be$@%x', 'x$@%way$@%x', 'x$@%higher$@%x', 'x$@%than$@%x', 'x$@%the$@%x', 'x$@%young$@%x', 'x$@%dude$@%x', 'x$@%.$@%x']",0.055999999999999994,69.0,1.0,1.0,0.9453983158365856,0.27073934674263,70
+I11U-gNNS-p122-r1,A little nerd is talking to a man about his question. ,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	nerd	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	talk	_	VBG	VBG	_	0	root	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	5	prep_to	_	_
+9	about	_	IN	IN	_	0	erased	_	_
+10	he	_	PRP$	PRP$	_	11	poss	_	_
+11	question	_	NN	NN	_	8	prep_about	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%nerd', 'amod$@%little$@%nerd', 'nsubj$@%nerd$@%talk', 'aux$@%be$@%talk', 'root$@%talk$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%a$@%man', 'prep_to$@%man$@%talk', 'erased$@%about$@%WORDERASED', 'poss$@%he$@%question', 'prep_about$@%question$@%man', 'punct$@%.$@%talk']","['x$@%a$@%nerd', 'x$@%little$@%nerd', 'x$@%nerd$@%talk', 'x$@%be$@%talk', 'x$@%talk$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%a$@%man', 'x$@%man$@%talk', 'x$@%about$@%WORDERASED', 'x$@%he$@%question', 'x$@%question$@%man', 'x$@%.$@%talk']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%nerd$@%x', 'x$@%be$@%x', 'x$@%talk$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%man$@%x', 'x$@%about$@%x', 'x$@%he$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.9997942084569996,0.99980316346702,0.9172142194664776,0.5760863423347473,65
+I11U-gNNS-p123-r1,The boy is asking a question to his father,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	father	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.3316144326808803,0.26885155951100603,0.33258620942091605,0.7773255109786987,33
+I11U-gNNS-p124-r1,the little boy is asking question ,1,1,0,0,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	ask	_	VBG	VBG	_	0	root	_	_
+6	question	_	NN	NN	_	5	dobj	_	_
+7	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.72,65.0,0.267527089573781,0.23446858868107054,0.20171181261763185,0.8125076293945312,18
+I11U-gNNS-p125-r1,The boy is trying to find answer for something from his dad.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	find	_	VB	VB	_	4	xcomp	_	_
+7	answer	_	NN	NN	_	6	dobj	_	_
+8	for	_	IN	IN	_	0	erased	_	_
+9	something	_	NN	NN	_	7	prep_for	_	_
+10	from	_	IN	IN	_	0	erased	_	_
+11	he	_	PRP$	PRP$	_	12	poss	_	_
+12	dad	_	NN	NN	_	6	prep_from	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'xsubj$@%boy$@%find', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%find', 'xcomp$@%find$@%try', 'dobj$@%answer$@%find', 'erased$@%for$@%WORDERASED', 'prep_for$@%something$@%answer', 'erased$@%from$@%WORDERASED', 'poss$@%he$@%dad', 'prep_from$@%dad$@%find', 'punct$@%.$@%try']","['x$@%the$@%boy', 'x$@%boy$@%find', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%find', 'x$@%find$@%try', 'x$@%answer$@%find', 'x$@%for$@%WORDERASED', 'x$@%something$@%answer', 'x$@%from$@%WORDERASED', 'x$@%he$@%dad', 'x$@%dad$@%find', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%find$@%x', 'x$@%answer$@%x', 'x$@%for$@%x', 'x$@%something$@%x', 'x$@%from$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%.$@%x']",0.9440000000000001,47.5,0.9228984983393096,0.9245148281738466,0.6539990776555511,0.676366925239563,57
+I11U-gNNS-p127-r1,The boy is asking question to his father.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	father	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%father', 'prep_to$@%father$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%father', 'x$@%father$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.398218027466014,0.32635014242181426,0.3325911425882069,0.773715615272522,35
+I11U-gNNS-p128-r1,The boy is asking a question to his dad. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	he	_	PRP$	PRP$	_	9	poss	_	_
+9	dad	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'poss$@%he$@%dad', 'prep_to$@%dad$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%he$@%dad', 'x$@%dad$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%he$@%x', 'x$@%dad$@%x', 'x$@%.$@%x']",1.0,20.5,0.3626400771041843,0.3203282980869262,0.5222884371629466,0.7856556177139282,29
+I11U-gNNS-p133-r1,The boy is asking a question to the man. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	man	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.3067810802522243,0.1825186387242046,0.17796114376656955,0.826424241065979,3
+I11U-gNNS-p135-r1,The little boy is questioning his father.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	boy	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	question	_	VBG	VBG	_	0	root	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	father	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%boy', 'amod$@%little$@%boy', 'nsubj$@%boy$@%question', 'aux$@%be$@%question', 'root$@%question$@%VROOT', 'poss$@%he$@%father', 'dobj$@%father$@%question', 'punct$@%.$@%question']","['x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%question', 'x$@%be$@%question', 'x$@%question$@%VROOT', 'x$@%he$@%father', 'x$@%father$@%question', 'x$@%.$@%question']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%question$@%x', 'x$@%he$@%x', 'x$@%father$@%x', 'x$@%.$@%x']",1.0,20.5,0.9111559178549462,0.9081129604531272,0.4205637406813312,0.7421092987060547,46
+I11U-gNNS-p136-r1,The boy is asking the man questions.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	man	_	NN	NN	_	7	nn	_	_
+7	question	_	NNS	NNS	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%the$@%question', 'nn$@%man$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%the$@%question', 'x$@%man$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",1.0,20.5,0.3829536680123016,0.2989704454651231,0.1779668784928009,0.8029714822769165,25
+I11U-gNNS-p140-r1,The boy is asking questions to the man. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	question	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	man	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'dobj$@%question$@%ask', 'erased$@%to$@%WORDERASED', 'det$@%the$@%man', 'prep_to$@%man$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%question$@%ask', 'x$@%to$@%WORDERASED', 'x$@%the$@%man', 'x$@%man$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%question$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%man$@%x', 'x$@%.$@%x']",1.0,20.5,0.3732177902477532,0.23577119067809216,0.17796525473216995,0.8207707405090332,11
+I11U-gNNS-p141-r1,The boy is asking a question,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	ask	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	question	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%ask', 'aux$@%be$@%ask', 'root$@%ask$@%VROOT', 'det$@%a$@%question', 'dobj$@%question$@%ask', 'punct$@%.$@%ask']","['x$@%the$@%boy', 'x$@%boy$@%ask', 'x$@%be$@%ask', 'x$@%ask$@%VROOT', 'x$@%a$@%question', 'x$@%question$@%ask', 'x$@%.$@%ask']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%ask$@%x', 'x$@%a$@%x', 'x$@%question$@%x', 'x$@%.$@%x']",0.7759999999999999,59.5,0.16648460512492724,0.13124919288489667,0.17643611097926426,0.8219967484474182,10

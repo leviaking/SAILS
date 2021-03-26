@@ -1,0 +1,584 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I05U-gNNS-p004-r1,A math teacher is teaching her student.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	math	_	NN	NN	_	3	nn	_	_
+3	teacher	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	teach	_	VBG	VBG	_	0	root	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	student	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%teacher', 'nn$@%math$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'poss$@%she$@%student', 'dobj$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%math$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.7449624102843891,0.7741247636909585,0.10379478720362802,0.7987521886825562,24
+I05U-gNNS-p005-r1,The teacher is teaching math to a student.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	student	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%a$@%student', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%a$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.5187807019528496,0.5380821309832919,0.10023896224850183,0.8158011436462402,11
+I05U-gNNS-p006-r1,A teacher is teaching math in elementary school.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	in	_	IN	IN	_	0	erased	_	_
+7	elementary	_	JJ	JJ	_	8	amod	_	_
+8	school	_	NN	NN	_	5	prep_in	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%in$@%WORDERASED', 'amod$@%elementary$@%school', 'prep_in$@%school$@%math', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%in$@%WORDERASED', 'x$@%elementary$@%school', 'x$@%school$@%math', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%in$@%x', 'x$@%elementary$@%x', 'x$@%school$@%x', 'x$@%.$@%x']",1.0,26.0,0.6109395759662095,0.6344365619343237,0.2189771590633901,0.7851893305778503,30
+I05U-gNNS-p007-r1,The teacher is trying to teach the students to do the basic math like plus and minors. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	teach	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	student	_	NNS	NNS	_	10	nsubj	_	_
+9	to	_	TO	TO	_	10	aux	_	_
+10	do	_	VB	VB	_	6	xcomp	_	_
+11	the	_	DT	DT	_	13	det	_	_
+12	basic	_	JJ	JJ	_	13	amod	_	_
+13	math	_	NN	NN	_	10	dobj	_	_
+14	like	_	IN	IN	_	0	erased	_	_
+15	plus	_	NN	NN	_	10	prep_like	_	_
+16	and	_	CC	CC	_	0	erased	_	_
+17	minor	_	NNS	NNS	_	15	conj_and	_	_
+18	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'xsubj$@%teacher$@%teach', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%teach', 'xcomp$@%teach$@%try', 'det$@%the$@%student', 'nsubj$@%student$@%do', 'aux$@%to$@%do', 'xcomp$@%do$@%teach', 'det$@%the$@%math', 'amod$@%basic$@%math', 'dobj$@%math$@%do', 'erased$@%like$@%WORDERASED', 'prep_like$@%plus$@%do', 'erased$@%and$@%WORDERASED', 'conj_and$@%minor$@%plus', 'punct$@%.$@%try']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%teach', 'x$@%teach$@%try', 'x$@%the$@%student', 'x$@%student$@%do', 'x$@%to$@%do', 'x$@%do$@%teach', 'x$@%the$@%math', 'x$@%basic$@%math', 'x$@%math$@%do', 'x$@%like$@%WORDERASED', 'x$@%plus$@%do', 'x$@%and$@%WORDERASED', 'x$@%minor$@%plus', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%student$@%x', 'x$@%to$@%x', 'x$@%do$@%x', 'x$@%the$@%x', 'x$@%basic$@%x', 'x$@%math$@%x', 'x$@%like$@%x', 'x$@%plus$@%x', 'x$@%and$@%x', 'x$@%minor$@%x', 'x$@%.$@%x']",0.9440000000000001,55.0,0.920040261661494,0.8537241725696374,0.26528084542071706,0.721170961856842,55
+I05U-gNNS-p009-r1,Teacher is teaching math.,1,1,1,1,1,"1	teacher	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	teach	_	VBG	VBG	_	0	root	_	_
+4	math	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5107318342088902,0.5330735084177873,0.07183320509696499,0.8180580735206604,9
+I05U-gNNS-p012-r1,the teacher is teaching ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teaching	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teaching', 'aux$@%be$@%teaching', 'root$@%teaching$@%VROOT', 'punct$@%.$@%teaching']","['x$@%the$@%teacher', 'x$@%teacher$@%teaching', 'x$@%be$@%teaching', 'x$@%teaching$@%VROOT', 'x$@%.$@%teaching']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teaching$@%x', 'x$@%.$@%x']",0.41100000000000003,67.5,0.9079133416454906,0.905802055661182,0.8556191194838659,0.5852604508399963,65
+I05U-gNNS-p013-r1,The women is teachings math and the boy is learning. ,1,1,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NNS	NNS	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	teachings	_	JJ	JJ	_	5	amod	_	_
+5	math	_	NN	NN	_	0	root	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	10	nsubj	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	learn	_	VBG	VBG	_	5	conj_and	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%math', 'cop$@%be$@%math', 'amod$@%teachings$@%math', 'root$@%math$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%the$@%boy', 'nsubj$@%boy$@%learn', 'aux$@%be$@%learn', 'conj_and$@%learn$@%math', 'punct$@%.$@%math']","['x$@%the$@%woman', 'x$@%woman$@%math', 'x$@%be$@%math', 'x$@%teachings$@%math', 'x$@%math$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%learn', 'x$@%be$@%learn', 'x$@%learn$@%math', 'x$@%.$@%math']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teachings$@%x', 'x$@%math$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%learn$@%x', 'x$@%.$@%x']",0.682,60.0,0.8334901965956201,0.8564618153101278,0.3988909400823486,0.7104746103286743,57
+I05U-gNNS-p014-r1,A teacher is teaching math for her students.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	for	_	IN	IN	_	0	erased	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	student	_	NNS	NNS	_	5	prep_for	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%for$@%WORDERASED', 'poss$@%she$@%student', 'prep_for$@%student$@%math', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%for$@%WORDERASED', 'x$@%she$@%student', 'x$@%student$@%math', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%for$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.623123391570783,0.6464582894581481,0.10381784538681338,0.8038769960403442,21
+I05U-gNNS-p017-r1,The woman is teaching math to students. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	student	_	NNS	NNS	_	4	prep_to	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.6209156276600143,0.6465719035501394,0.1393543245850012,0.7543237805366516,42
+I05U-gNNS-p021-r1,a woman is having a math class,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%have', 'punct$@%.$@%have']","['x$@%a$@%woman', 'x$@%woman$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%have', 'x$@%.$@%have']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",0.635,62.5,1.0,1.0,0.16350675768819856,0.735861599445343,50
+I05U-gNNS-p022-r1,The student is taking a math class.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%student', 'nsubj$@%student$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%take', 'punct$@%.$@%take']","['x$@%the$@%student', 'x$@%student$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.9768499257573772,0.9753706481883916,0.17582074208286402,0.79390949010849,26
+I05U-gNNS-p023-r1,The teacher teach math for students.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	3	nsubj	_	_
+3	teach	_	VBP	VBP	_	0	root	_	_
+4	math	_	NN	NN	_	3	dobj	_	_
+5	for	_	IN	IN	_	0	erased	_	_
+6	student	_	NNS	NNS	_	4	prep_for	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%for$@%WORDERASED', 'prep_for$@%student$@%math', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%for$@%WORDERASED', 'x$@%student$@%math', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%for$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",0.851,59.0,0.573447266948818,0.5636676221777743,0.1002616078109756,0.8039870262145996,20
+I05U-gNNS-p026-r1,A teacher is teaching her student math,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	she	_	PRP$	PRP$	_	7	poss	_	_
+6	student	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'poss$@%she$@%math', 'nn$@%student$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%she$@%math', 'x$@%student$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6306023112083305,0.6538091358431994,0.10379478720362802,0.8178234100341797,10
+I05U-gNNS-p027-r1,the boy's taking math class,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	's	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	6	nn	_	_
+6	class	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%take', ""aux$@%'s$@%take"", 'root$@%take$@%VROOT', 'nn$@%math$@%class', 'dobj$@%class$@%take', 'punct$@%.$@%take']","['x$@%the$@%boy', 'x$@%boy$@%take', ""x$@%'s$@%take"", 'x$@%take$@%VROOT', 'x$@%math$@%class', 'x$@%class$@%take', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%boy$@%x', ""x$@%'s$@%x"", 'x$@%take$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.9740004931731692,0.9721457913741536,0.14997977599434487,0.7722422480583191,35
+I05U-gNNS-p028-r1,A student is taking math class,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	6	nn	_	_
+6	class	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%student', 'nsubj$@%student$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'nn$@%math$@%class', 'dobj$@%class$@%take', 'punct$@%.$@%take']","['x$@%a$@%student', 'x$@%student$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%math$@%class', 'x$@%class$@%take', 'x$@%.$@%take']","['x$@%a$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,1.0,1.0,0.17582259776017406,0.7836599349975586,33
+I05U-gNNS-p030-r1,The teacher is teaching math on the blackboard. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	on	_	IN	IN	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	blackboard	_	NN	NN	_	4	prep_on	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%on$@%WORDERASED', 'det$@%the$@%blackboard', 'prep_on$@%blackboard$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%on$@%WORDERASED', 'x$@%the$@%blackboard', 'x$@%blackboard$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%on$@%x', 'x$@%the$@%x', 'x$@%blackboard$@%x', 'x$@%.$@%x']",1.0,26.0,0.511709918412774,0.5296939488520336,0.2534658968019434,0.7552818059921265,41
+I05U-gNNS-p032-r1,A teacher is teaching a boy math.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%math', 'nn$@%boy$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%math', 'x$@%boy$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6306023112083305,0.6538091358431994,0.07685032376486113,0.790524423122406,27
+I05U-gNNS-p034-r1,A boy is taking a math class,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%take', 'punct$@%.$@%take']","['x$@%a$@%boy', 'x$@%boy$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%take', 'x$@%.$@%take']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,1.0,1.0,0.1496309911671817,0.7554491758346558,40
+I05U-gNNS-p036-r1,The woman is teaching the math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	math	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6209156351901429,0.646572091564457,0.10827393545233076,0.7131820321083069,56
+I05U-gNNS-p037-r1,The teacher is teaching the student.,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	student	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%student', 'dobj$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",0.635,62.5,0.5773725407048595,0.6023364468644958,0.7218747491113038,0.6255673766136169,63
+I05U-gNNS-p038-r1,A student is listening to the math class. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	student	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	listen	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	math	_	NN	NN	_	8	nn	_	_
+8	class	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%student', 'nsubj$@%student$@%listen', 'aux$@%be$@%listen', 'root$@%listen$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%class', 'nn$@%math$@%class', 'prep_to$@%class$@%listen', 'punct$@%.$@%listen']","['x$@%a$@%student', 'x$@%student$@%listen', 'x$@%be$@%listen', 'x$@%listen$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%class', 'x$@%math$@%class', 'x$@%class$@%listen', 'x$@%.$@%listen']","['x$@%a$@%x', 'x$@%student$@%x', 'x$@%be$@%x', 'x$@%listen$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.9999974094838948,0.9999973194788082,0.231975336404857,0.6968509554862976,59
+I05U-gNNS-p039-r1,The woman is teaching math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5662221715046627,0.5917155603228301,0.1082738703873506,0.738502025604248,48
+I05U-gNNS-p040-r1,The woman is teaching a child math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	child	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%math', 'nn$@%child$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%math', 'x$@%child$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%child$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6590596988301585,0.6839685205733905,0.13146508025362036,0.7369412183761597,49
+I05U-gNNS-p041-r1,The teacher is teaching mathematics to the boy in a classroom,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	mathematics	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	in	_	IN	IN	_	0	erased	_	_
+10	a	_	DT	DT	_	11	det	_	_
+11	classroom	_	NN	NN	_	8	prep_in	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%mathematics$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%teach', 'erased$@%in$@%WORDERASED', 'det$@%a$@%classroom', 'prep_in$@%classroom$@%boy', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%mathematics$@%teach', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%teach', 'x$@%in$@%WORDERASED', 'x$@%a$@%classroom', 'x$@%classroom$@%boy', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%mathematics$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%in$@%x', 'x$@%a$@%x', 'x$@%classroom$@%x', 'x$@%.$@%x']",1.0,26.0,0.6750236024918059,0.6874508426407103,0.8304012156340972,0.7679234147071838,37
+I05U-gNNS-p042-r1,The teacher is teaching the math to the boy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	math	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	boy	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.5378232454087717,0.5475350694958875,0.07684891683901895,0.8125338554382324,15
+I05U-gNNS-p043-r1,A teacher teaches a student math problems.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	3	nsubj	_	_
+3	teach	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	7	det	_	_
+5	student	_	NN	NN	_	7	nn	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	problem	_	NNS	NNS	_	3	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%problem', 'nn$@%student$@%problem', 'nn$@%math$@%problem', 'dobj$@%problem$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%problem', 'x$@%student$@%problem', 'x$@%math$@%problem', 'x$@%problem$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%student$@%x', 'x$@%math$@%x', 'x$@%problem$@%x', 'x$@%.$@%x']",0.907,58.0,0.7825250202687394,0.7775389355866693,0.10977673387511988,0.8130667805671692,14
+I05U-gNNS-p044-r1,A teacher is teaching the math problem to a boy.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	problem	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	boy	_	NN	NN	_	4	prep_to	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%problem', 'nn$@%math$@%problem', 'dobj$@%problem$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%a$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%problem', 'x$@%math$@%problem', 'x$@%problem$@%teach', 'x$@%to$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%problem$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.7160317806447448,0.7374333769583274,0.08724721156058922,0.8047923445701599,19
+I05U-gNNS-p051-r1,a teacher is teaching math to a boy,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%a$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.5977475369754085,0.6116681339904433,0.07685138912332012,0.7892889380455017,29
+I05U-gNNS-p057-r1,A teacher is teaching math to a boy. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%a$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.5977475369754085,0.6116681339904433,0.07685138912332012,0.790291428565979,28
+I05U-gNNS-p058-r1,The teacher is teaching Maths.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	maths	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%maths$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%maths$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%maths$@%x', 'x$@%.$@%x']",1.0,26.0,0.586595432198262,0.6128411113638694,0.8613505678669171,0.8236940503120422,7
+I05U-gNNS-p065-r1,A women is teaching a math class.,1,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NNS	NNS	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",0.45799999999999996,66.0,0.7674669468420475,0.7975120139647754,0.1595826074513157,0.7342655062675476,52
+I05U-gNNS-p066-r1,The woman is teaching kindergarten kid learning math.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	kindergarten	_	NN	NN	_	6	nn	_	_
+6	kid	_	NN	NN	_	4	dobj	_	_
+7	learn	_	VBG	VBG	_	4	xcomp	_	_
+8	math	_	NN	NN	_	7	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'nn$@%kindergarten$@%kid', 'dobj$@%kid$@%teach', 'xcomp$@%learn$@%teach', 'dobj$@%math$@%learn', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%kindergarten$@%kid', 'x$@%kid$@%teach', 'x$@%learn$@%teach', 'x$@%math$@%learn', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%kindergarten$@%x', 'x$@%kid$@%x', 'x$@%learn$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",0.9440000000000001,55.0,0.7246120129636952,0.7115551681174923,0.3666404226028071,0.7477075457572937,45
+I05U-gNNS-p069-r1,A boy having a math course ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	0	root	_	_
+3	have	_	VBG	VBG	_	2	partmod	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	math	_	NN	NN	_	6	nn	_	_
+6	course	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	2	punct	_	_","['det$@%a$@%boy', 'root$@%boy$@%VROOT', 'partmod$@%have$@%boy', 'det$@%a$@%course', 'nn$@%math$@%course', 'dobj$@%course$@%have', 'punct$@%.$@%boy']","['x$@%a$@%boy', 'x$@%boy$@%VROOT', 'x$@%have$@%boy', 'x$@%a$@%course', 'x$@%math$@%course', 'x$@%course$@%have', 'x$@%.$@%boy']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%course$@%x', 'x$@%.$@%x']",0.9440000000000001,55.0,1.0,1.0,0.10361367227794728,0.770873486995697,36
+I05U-gNNS-p070-r1,The lady is teaching addition and subtraction to the little boy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	addition	_	NN	NN	_	4	dobj	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	subtraction	_	NN	NN	_	5	conj_and	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	the	_	DT	DT	_	11	det	_	_
+10	little	_	JJ	JJ	_	11	amod	_	_
+11	boy	_	NN	NN	_	4	prep_to	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%addition$@%teach', 'erased$@%and$@%WORDERASED', 'conj_and$@%subtraction$@%addition', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'amod$@%little$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%lady', 'x$@%lady$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%addition$@%teach', 'x$@%and$@%WORDERASED', 'x$@%subtraction$@%addition', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%little$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%addition$@%x', 'x$@%and$@%x', 'x$@%subtraction$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%little$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.7826727603010615,0.807948574867396,0.9061315915582782,0.5425834059715271,68
+I05U-gNNS-p072-r1,The teacher is teaching math,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.4362528021445004,0.4532399952274254,0.07183149057577343,0.8334068655967712,2
+I05U-gNNS-p074-r1,A teacher is teaching the student math.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	student	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'nn$@%student$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%student$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%student$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6306023112083305,0.6538091358431993,0.10023800877077303,0.8248968124389648,6
+I05U-gNNS-p075-r1,The woman is teaching math to the boy. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.6038898680182214,0.6186494765016082,0.11420767310111768,0.7263092398643494,53
+I05U-gNNS-p077-r1,The teacher is giving lecture on basic math to the boy. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	give	_	VBG	VBG	_	0	root	_	_
+5	lecture	_	NN	NN	_	4	dobj	_	_
+6	on	_	IN	IN	_	0	erased	_	_
+7	basic	_	JJ	JJ	_	8	amod	_	_
+8	math	_	NN	NN	_	5	prep_on	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	boy	_	NN	NN	_	4	prep_to	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'dobj$@%lecture$@%give', 'erased$@%on$@%WORDERASED', 'amod$@%basic$@%math', 'prep_on$@%math$@%lecture', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%give', 'punct$@%.$@%give']","['x$@%the$@%teacher', 'x$@%teacher$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%lecture$@%give', 'x$@%on$@%WORDERASED', 'x$@%basic$@%math', 'x$@%math$@%lecture', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%lecture$@%x', 'x$@%on$@%x', 'x$@%basic$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",0.9440000000000001,55.0,0.8530060733894929,0.8523549513030054,0.23121183510708465,0.7723020911216736,34
+I05U-gNNS-p078-r1,The teacher is teaching a student math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	student	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%math', 'nn$@%student$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%math', 'x$@%student$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%student$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5527158017158624,0.5722526560057135,0.10023800877077303,0.8253275752067566,4
+I05U-gNNS-p079-r1,The woman is teaching maths to the boy,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.6038898680182214,0.6186494765016082,0.11420767310111768,0.7068987488746643,58
+I05U-gNNS-p081-r1,the teacher is teaching the class,0,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	class	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%class', 'dobj$@%class$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%class', 'x$@%class$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",0.635,62.5,0.58846557676557,0.6077583769858865,0.7535062968164971,0.5886607766151428,64
+I05U-gNNS-p082-r1,The boy is having the math class.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%the$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%have', 'punct$@%.$@%have']","['x$@%the$@%boy', 'x$@%boy$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%the$@%class', 'x$@%math$@%class', 'x$@%class$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.9717611582851884,0.9708738279727024,0.14792533652276518,0.7503234148025513,44
+I05U-gNNS-p083-r1,The teacher is teaching students math. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	student	_	NNS	NNS	_	6	nn	_	_
+6	math	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'nn$@%student$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%student$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%student$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5044689508281355,0.5235534852416173,0.10023774932663332,0.8252700567245483,5
+I05U-gNNS-p086-r1,The teacher is teaching the boy Math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'nn$@%boy$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%boy$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5527158017158624,0.5722526560057135,0.07684632662068491,0.8149824142456055,12
+I05U-gNNS-p087-r1,a boy is sitting in the classroom ,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	sit	_	VBG	VBG	_	0	root	_	_
+5	in	_	IN	IN	_	0	erased	_	_
+6	the	_	DT	DT	_	7	det	_	_
+7	classroom	_	NN	NN	_	4	prep_in	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%sit', 'aux$@%be$@%sit', 'root$@%sit$@%VROOT', 'erased$@%in$@%WORDERASED', 'det$@%the$@%classroom', 'prep_in$@%classroom$@%sit', 'punct$@%.$@%sit']","['x$@%a$@%boy', 'x$@%boy$@%sit', 'x$@%be$@%sit', 'x$@%sit$@%VROOT', 'x$@%in$@%WORDERASED', 'x$@%the$@%classroom', 'x$@%classroom$@%sit', 'x$@%.$@%sit']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%sit$@%x', 'x$@%in$@%x', 'x$@%the$@%x', 'x$@%classroom$@%x', 'x$@%.$@%x']",0.635,62.5,0.9999986433399548,0.9999985926466072,0.9695477675980649,0.44947895407676697,69
+I05U-gNNS-p099-r1,A teacher is teaching mathematics.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	mathematics	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%mathematics$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%mathematics$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%mathematics$@%x', 'x$@%.$@%x']",1.0,26.0,0.6847202817919922,0.7070222981349472,0.8077898592971434,0.8073944449424744,17
+I05U-gNNS-p101-r1,The woman is teaching the Mathematics to her students.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	mathematics	_	NNPS	NNPS	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	student	_	NNS	NNS	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%mathematics', 'dobj$@%mathematics$@%teach', 'erased$@%to$@%WORDERASED', 'poss$@%she$@%student', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%mathematics', 'x$@%mathematics$@%teach', 'x$@%to$@%WORDERASED', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%mathematics$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.7951095956607959,0.8209475877757326,0.8894750436949526,0.7520385384559631,43
+I05U-gNNS-p104-r1,A teacher is teaching math.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5340966246365186,0.5571421293857226,0.07183354818390142,0.8229737877845764,8
+I05U-gNNS-p105-r1,The teacher is teaching a math class.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.6439088136882857,0.6654248336813708,0.11935814113075285,0.8093619346618652,16
+I05U-gNNS-p106-r1,The teacher is teaching a boy math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%a$@%math', 'nn$@%boy$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%a$@%math', 'x$@%boy$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5527158017158624,0.5722526560057135,0.07684671595281145,0.7956162691116333,25
+I05U-gNNS-p107-r1,The woman is teaching primary school mathematics of addition and subtraction to the boy.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	primary	_	JJ	JJ	_	7	amod	_	_
+6	school	_	NN	NN	_	7	nn	_	_
+7	mathematics	_	NNS	NNS	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	addition	_	NN	NN	_	7	prep_of	_	_
+10	and	_	CC	CC	_	0	erased	_	_
+11	subtraction	_	NN	NN	_	9	conj_and	_	_
+12	to	_	TO	TO	_	0	erased	_	_
+13	the	_	DT	DT	_	14	det	_	_
+14	boy	_	NN	NN	_	4	prep_to	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'amod$@%primary$@%mathematics', 'nn$@%school$@%mathematics', 'dobj$@%mathematics$@%teach', 'erased$@%of$@%WORDERASED', 'prep_of$@%addition$@%mathematics', 'erased$@%and$@%WORDERASED', 'conj_and$@%subtraction$@%addition', 'erased$@%to$@%WORDERASED', 'det$@%the$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%primary$@%mathematics', 'x$@%school$@%mathematics', 'x$@%mathematics$@%teach', 'x$@%of$@%WORDERASED', 'x$@%addition$@%mathematics', 'x$@%and$@%WORDERASED', 'x$@%subtraction$@%addition', 'x$@%to$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%primary$@%x', 'x$@%school$@%x', 'x$@%mathematics$@%x', 'x$@%of$@%x', 'x$@%addition$@%x', 'x$@%and$@%x', 'x$@%subtraction$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.8097873125249451,0.8305545928927762,0.9104839962901262,0.6270169615745544,62
+I05U-gNNS-p108-r1,Math teacher is having a mathematics class,1,1,0,1,1,"1	math	_	NNP	NNP	_	2	nn	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	mathematics	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['nn$@%math$@%teacher', 'nsubj$@%teacher$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%class', 'nn$@%mathematics$@%class', 'dobj$@%class$@%have', 'punct$@%.$@%have']","['x$@%math$@%teacher', 'x$@%teacher$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%class', 'x$@%mathematics$@%class', 'x$@%class$@%have', 'x$@%.$@%have']","['x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%mathematics$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",0.9440000000000001,55.0,1.0,1.0,0.25758574934164424,0.7644859552383423,38
+I05U-gNNS-p109-r1,The teacher is teaching. ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teaching	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teaching', 'aux$@%be$@%teaching', 'root$@%teaching$@%VROOT', 'punct$@%.$@%teaching']","['x$@%the$@%teacher', 'x$@%teacher$@%teaching', 'x$@%be$@%teaching', 'x$@%teaching$@%VROOT', 'x$@%.$@%teaching']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teaching$@%x', 'x$@%.$@%x']",0.41100000000000003,67.5,0.9079133416454906,0.905802055661182,0.8556191194838659,0.578818142414093,66
+I05U-gNNS-p111-r1,A math teacher is giving a lecture to a male student.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	math	_	NN	NN	_	3	nn	_	_
+3	teacher	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	give	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	lecture	_	NN	NN	_	5	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	a	_	DT	DT	_	11	det	_	_
+10	male	_	JJ	JJ	_	11	amod	_	_
+11	student	_	NN	NN	_	5	prep_to	_	_
+12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%teacher', 'nn$@%math$@%teacher', 'nsubj$@%teacher$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%lecture', 'dobj$@%lecture$@%give', 'erased$@%to$@%WORDERASED', 'det$@%a$@%student', 'amod$@%male$@%student', 'prep_to$@%student$@%give', 'punct$@%.$@%give']","['x$@%a$@%teacher', 'x$@%math$@%teacher', 'x$@%teacher$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%lecture', 'x$@%lecture$@%give', 'x$@%to$@%WORDERASED', 'x$@%a$@%student', 'x$@%male$@%student', 'x$@%student$@%give', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%lecture$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%male$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.9553160343816144,0.9629173052873256,0.28015510606982186,0.7216108441352844,54
+I05U-gNNS-p112-r1,The woman is teaching the boy math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'nn$@%boy$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%boy$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6590596988301585,0.6839685205733905,0.11420650688668744,0.6901561617851257,60
+I05U-gNNS-p114-r1,A woman is teaching on class.,0,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	on	_	IN	IN	_	0	erased	_	_
+6	class	_	NN	NN	_	4	prep_on	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'erased$@%on$@%WORDERASED', 'prep_on$@%class$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%on$@%WORDERASED', 'x$@%class$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%on$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",0.579,65.0,0.7280978074524043,0.7498434329949931,0.8749057569166743,0.5470479726791382,67
+I05U-gNNS-p116-r1,The teacher is teaching math,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.4362528021445004,0.4532399952274254,0.07183149057577343,0.8334068655967712,2
+I05U-gNNS-p118-r1,The teacher is teaching calculations.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	calculation	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%calculation$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%calculation$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%calculation$@%x', 'x$@%.$@%x']",1.0,26.0,0.586595432198262,0.6128411113638694,0.8133183422349402,0.633641242980957,61
+I05U-gNNS-p119-r1,two plus two is four.,0,0,1,0,0,"1	two	_	CD	CD	_	5	nsubj	_	_
+2	plus	_	CC	CC	_	1	prep	_	_
+3	two	_	CD	CD	_	2	dep	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	four	_	CD	CD	_	0	root	_	_
+6	.	_	.	.	_	5	punct	_	_","['nsubj$@%two$@%four', 'prep$@%plus$@%two', 'dep$@%two$@%plus', 'cop$@%be$@%four', 'root$@%four$@%VROOT', 'punct$@%.$@%four']","['x$@%two$@%four', 'x$@%plus$@%two', 'x$@%two$@%plus', 'x$@%be$@%four', 'x$@%four$@%VROOT', 'x$@%.$@%four']","['x$@%two$@%x', 'x$@%plus$@%x', 'x$@%two$@%x', 'x$@%be$@%x', 'x$@%four$@%x', 'x$@%.$@%x']",0.055999999999999994,69.0,1.0,1.0,0.9999984847986298,-0.04701300710439682,70
+I05U-gNNS-p122-r1,A math teacher is teaching calculation to her students. ,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	math	_	NN	NN	_	3	nn	_	_
+3	teacher	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	teach	_	VBG	VBG	_	0	root	_	_
+6	calculation	_	NN	NN	_	5	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	she	_	PRP$	PRP$	_	9	poss	_	_
+9	student	_	NNS	NNS	_	5	prep_to	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%teacher', 'nn$@%math$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%calculation$@%teach', 'erased$@%to$@%WORDERASED', 'poss$@%she$@%student', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%math$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%calculation$@%teach', 'x$@%to$@%WORDERASED', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%calculation$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.7665281278528912,0.7940444941182965,0.2358796281530313,0.7629987597465515,39
+I05U-gNNS-p123-r1,The teacher is teaching math to her student,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	student	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'poss$@%she$@%student', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.5436770177550905,0.5631881277781234,0.1037937786301142,0.806865394115448,18
+I05U-gNNS-p124-r1,she is teaching the math,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	teach	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	math	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%she$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.6202714967988696,0.6473906791186839,0.0906719145828746,0.7463914752006531,46
+I05U-gNNS-p125-r1,The teacher is teaching math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.4362528021445004,0.4532399952274254,0.07183149057577343,0.8334068655967712,2
+I05U-gNNS-p127-r1,The math teacher is giving a class to students.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	math	_	NN	NN	_	3	nn	_	_
+3	teacher	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	give	_	VBG	VBG	_	0	root	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	class	_	NN	NN	_	5	dobj	_	_
+8	to	_	TO	TO	_	0	erased	_	_
+9	student	_	NNS	NNS	_	5	prep_to	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%the$@%teacher', 'nn$@%math$@%teacher', 'nsubj$@%teacher$@%give', 'aux$@%be$@%give', 'root$@%give$@%VROOT', 'det$@%a$@%class', 'dobj$@%class$@%give', 'erased$@%to$@%WORDERASED', 'prep_to$@%student$@%give', 'punct$@%.$@%give']","['x$@%the$@%teacher', 'x$@%math$@%teacher', 'x$@%teacher$@%give', 'x$@%be$@%give', 'x$@%give$@%VROOT', 'x$@%a$@%class', 'x$@%class$@%give', 'x$@%to$@%WORDERASED', 'x$@%student$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%give$@%x', 'x$@%a$@%x', 'x$@%class$@%x', 'x$@%to$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.8637342474725705,0.8638071054805451,0.15215855854274551,0.7415333390235901,47
+I05U-gNNS-p128-r1,The woman is teaching mathematics to a boy. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	mathematics	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%mathematics$@%teach', 'erased$@%to$@%WORDERASED', 'det$@%a$@%boy', 'prep_to$@%boy$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%woman', 'x$@%woman$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%mathematics$@%teach', 'x$@%to$@%WORDERASED', 'x$@%a$@%boy', 'x$@%boy$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%mathematics$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%boy$@%x', 'x$@%.$@%x']",1.0,26.0,0.7600165750359653,0.7810457328365736,0.8856371402837729,0.7351213097572327,51
+I05U-gNNS-p133-r1,The teacher is teaching Math to her student. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	math	_	NNP	NNP	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	she	_	PRP$	PRP$	_	8	poss	_	_
+8	student	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'dobj$@%math$@%teach', 'erased$@%to$@%WORDERASED', 'poss$@%she$@%student', 'prep_to$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%math$@%teach', 'x$@%to$@%WORDERASED', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%math$@%x', 'x$@%to$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,26.0,0.5436770177550905,0.5631881277781234,0.1037937786301142,0.800517201423645,23
+I05U-gNNS-p135-r1,The boy is learning math from his teacher.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	learn	_	VBG	VBG	_	0	root	_	_
+5	math	_	NN	NN	_	4	dobj	_	_
+6	from	_	IN	IN	_	0	erased	_	_
+7	he	_	PRP$	PRP$	_	8	poss	_	_
+8	teacher	_	NN	NN	_	4	prep_from	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%learn', 'aux$@%be$@%learn', 'root$@%learn$@%VROOT', 'dobj$@%math$@%learn', 'erased$@%from$@%WORDERASED', 'poss$@%he$@%teacher', 'prep_from$@%teacher$@%learn', 'punct$@%.$@%learn']","['x$@%the$@%boy', 'x$@%boy$@%learn', 'x$@%be$@%learn', 'x$@%learn$@%VROOT', 'x$@%math$@%learn', 'x$@%from$@%WORDERASED', 'x$@%he$@%teacher', 'x$@%teacher$@%learn', 'x$@%.$@%learn']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%learn$@%x', 'x$@%math$@%x', 'x$@%from$@%x', 'x$@%he$@%x', 'x$@%teacher$@%x', 'x$@%.$@%x']",1.0,26.0,0.5925308369651431,0.5679855117964375,0.0777397009737264,0.8016838431358337,22
+I05U-gNNS-p136-r1,The teacher is teaching the boy math.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teach	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	boy	_	NN	NN	_	7	nn	_	_
+7	math	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'det$@%the$@%math', 'nn$@%boy$@%math', 'dobj$@%math$@%teach', 'punct$@%.$@%teach']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%the$@%math', 'x$@%boy$@%math', 'x$@%math$@%teach', 'x$@%.$@%teach']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%math$@%x', 'x$@%.$@%x']",1.0,26.0,0.5527158017158624,0.5722526560057135,0.07684632662068491,0.8149824142456055,12
+I05U-gNNS-p140-r1,The teacher is having a math class. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%have', 'punct$@%.$@%have']","['x$@%the$@%teacher', 'x$@%teacher$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.8981658833641911,0.8921671079228627,0.12388302636452575,0.7849301099777222,31
+I05U-gNNS-p141-r1,The boy is having a math class.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	have	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	math	_	NN	NN	_	7	nn	_	_
+7	class	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%class', 'nn$@%math$@%class', 'dobj$@%class$@%have', 'punct$@%.$@%have']","['x$@%the$@%boy', 'x$@%boy$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%class', 'x$@%math$@%class', 'x$@%class$@%have', 'x$@%.$@%have']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%math$@%x', 'x$@%class$@%x', 'x$@%.$@%x']",1.0,26.0,0.9724931899550214,0.9716664039868148,0.1479257251929108,0.783962070941925,32

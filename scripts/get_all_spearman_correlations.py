@@ -94,7 +94,7 @@ def write_output(rs, nm):
 
 
 def main():
-	train_sample = "N14"
+	train_sample = "F14"
 	test_sample = "N70"
 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
 			   train_sample+'-VS-'+test_sample+'/')

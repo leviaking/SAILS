@@ -15,7 +15,7 @@ As discussed in Sections~\ref{sec:est-feat-weights} and~\ref{sec:holistic-scorin
 
 Because the annotations and evaluation are much different in the current work, it does not exactly follow that findings from the previous work will hold true. However, I believe that the previous work has highlighted some of the system settings that are most likely to perform well, and I chose to focus my experiments on some of the best performing settings. For example, all of the current experiments rely on the tf-idf cosine (\param{TC}) approach, as this generally outperformed the others. As discussed in Section~\ref{sec:metrics}, the \param{TC} performance suffers for items where the non-native speaker (NNS) data is noisiest (with regard to spellings) and the native speaker (NS) data is relatively homogenous (particularly with regard to verb choice). Rather than continue experimenting with the underperforming approaches, I chose to address these issues directly instead. As discussed in Chapter~\ref{chap:data}, to address the spelling noise, I made sure that data collection participants had access to spelling correction while typing their responses. To address the uniformity of the NS responses, I surveyed a much larger group of participants and instructed each of them to provide two responses per picture description task (PDT) item.
 
-The current work retains just three of the five term representations previously used (see Section~\ref{sec:response-rep}): \param{ldh}, \param{xdh}, and \param{xdx}. The \param{ldh} and \param{xdh} forms performed best with the older dataset. Moreover, as these represent labeled and unlabeled dependencies, their use in linguistics is standard. The \param{xdx} representation is kept here as a rough equivalent of a bag-of-words model, which is useful as a baseline for comparing the other two.
+The current work retains just three of the five term representations previously used (see Section~\ref{sec:response-rep}): \param{ldh}, \param{xdh}, and \param{xdx}. The \param{ldh} and \param{xdh} forms performed best with the older dataset. Moreover, as these represent labeled and unlabeled dependencies, their use in linguistics is well established. The \param{xdx} representation is kept here as a rough equivalent of a bag-of-words model, which is useful as a baseline for comparing the other two.
 
 Finally, as \param{Brown} overwhelmingly outperformed the \param{WSJ} as a tf-idf reference corpus, the current experiments rely exclusively on the former. The larger PDT dataset follows a similar narrative style to that described in Section~\ref{sec:pilot-data}, so I am confident \param{Brown} is again the best option here.
 
@@ -45,7 +45,7 @@ Ditransitive & & & & & \param{xdx} \\
 %\label{chap:optimization}
 %In this chapter, I detail my research applying the methods discussed in Chapter~\ref{chap:pilot} to the much larger and more richly annotated dataset described in Chapters~\ref{chap:data} and \ref{chap:annotation}. The chapter primarily consists of a series of experiments focused on isolating and optimizing a number of parameters or variables in my picture description task (PDT) response analysis pipeline. 
 
-To help contextualize the results of these experiments, I used a state of the art language modeling tool called BERT to rank responses according to their similarity to the NS model. I discuss this tool and its use as a baseline in Section~\ref{sec:bert-baseline}.
+To help contextualize the results of these experiments, I used a state-of-the-art language modeling tool to rank responses according to their similarity to the NS model. I discuss this tool and its use as a baseline in Section~\ref{sec:bert-baseline}.
 
 The optimization experiments are organized here according to the sequence in which the variables are relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, in Section~\ref{sec:exp-transitivity}, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are \textit{crowdsourced}. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first responses, or an equal number of first and second responses (also discussed in Section~\ref{sec:pdt}). I then evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-term-norm}; I call this variable \textit{term normalization}.\lk{Is this technically norming the terms or the responses?} For the final variable experiments, I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset.
 
@@ -54,17 +54,15 @@ After examining these variables individually, in Section~\ref{sec:exp-combos} I 
 %Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
 
 \section{Establishing a baseline}
-\section{Establishing a baseline}
 \label{sec:bert-baseline}
-The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations. In order to give some frame of reference for this work, I chose to use a BERT, a widely adopted state-of-the-art language modeling tool. My system scores each single (NNS) test response according to its similarity with the set of (NS) model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting Spearman scores are discussed throughout to help contextualize my system's performance.
+The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations or to compare this work against similar research. In order to give some frame of reference for this work, I chose to use a BERT, a widely adopted state-of-the-art language modeling tool \cite{BertDevlin2018}. My system scores each single (NNS) test response according to its similarity with the set of (NS) model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting Spearman scores are discussed throughout to help contextualize my system's performance.
 \subsection{About BERT}
 \label{sec:about-bert}
-Let's talk about BERT, baby. Let's talk about you and me.
+XYZ: BERT / SBERT
 
-\subsection{BERT implementation}
-RoBERTa?
+\subsection{Integrating BERT}
 
-For each experiment reported throughout this chapter, my system and BERT are given access to the same NS responses as the basis for their similarity measures. Naturally, however, each is trained on or makes use of very different language resources. The linguistic "intelligence" of my system comes largely from the Stanford Parser, pre-trained on the Penn Treebank. The Penn Treebank is approximately 1 million words, manually annotated for part of speech and constituency parsing. The content is a mix of Wall Street Journal articles and narrative texts from the Brown Corpus. It also uses the Brown Corpus for tf-idf, meaning a word frequency model extracted from the Brown Corpus also serves as a linguistic resource. BERT, on the other hand, is trained on vastly larger amounts of unannotated text, from a much broader range of sources.
+For each experiment reported throughout this chapter, my system and BERT are given access to the same NS responses as the basis for their similarity measures. Naturally, however, each is trained on or makes use of very different language resources. The linguistic ``intelligence'' of my system comes largely from the Stanford Parser and its pre-trained grammar model, as discussed in Section~\ref{sec:pilot-study} \cite{klein:manning:03}. The model is trained on the standard training sections of the Penn Treebank, which contain over one million words of English text, manually part-of-speech tagged and parsed, sourced from the Wall Street Journal and the Brown Corpus \cite{marcus-et-al:93}. My approach also uses the Brown Corpus for tf-idf, meaning a word frequency model extracted from the Brown Corpus also serves as a linguistic resource \cite{kucera:francis:67}. BERT, on the other hand, is trained on vastly larger amounts of unannotated text, from a much broader range of sources.
 
 My implementation of BERT here varies slightly from the way I implemented my own system's similarity measuring approach throughout most of this chapter. In my system, each NS response in the model is processed and dumped into a single ''bag of dependencies,'' which is then used to generate a single similarity score (via tf-idf cosine). BERT operates directly on plain text sentences, and because the use of punctuation in the PDT responses is not consistent, concatenating all NS model responses in order to generate a single similarity score is not ideal. Instead, I use BERT to do a pairwise comparison between the NNS test response and each NS response in the model and then average these similarity scores.
 
@@ -165,15 +163,9 @@ std dev 	& 0.238 	& 0.186 	& 0.216 	& 0.204 	& 0.232 	& 0.173		& 0.203 	& 0.172 
 
 \section{Familiarity experiments}
 \label{sec:exp-familiarity}
-Here we compare how well the system works when using different sources of NSs. (Crowdsourced informants drastically outnumbered Familiar, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
+Here we compare how well the system works when using different sources of NSs. 
 \subsection{Familiarity results}
 \label{sec:familiarity-results}
-
-\section{Primacy experiments}
-\label{sec:exp-primacy}
-Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses. (The latter is nearly double the former, so this will require some cross-validation -- which in turn requires tf-idf for the XGS in each cross-val cycle; i.e., time intensive computation).
-\subsection{Primacy results}
-\label{sec:primacy-results}
 
 \begin{table}[htb!]
 \begin{center}
@@ -201,6 +193,41 @@ std dev & 0.235 & 0.212 	& 0.229 	& 0.189 					& 0.218 & 0.187 	& 0.227 & 0.168 
 \end{tabular}
 %% 2021-03-12: Checked all numbers; table is accurate.
 \caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain only first responses from NSs and \param{mixed} models contain an equal mix of first and second responses from NSs. Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
+\end{center}
+\end{table}
+
+
+\section{Primacy experiments}
+\label{sec:exp-primacy}
+Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses.
+\subsection{Primacy results}
+\label{sec:primacy-results}
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+ & \multicolumn{4}{c|}{NS model sample size = 14} \\
+ \hline
+ & \multicolumn{2}{c||}{\param{Familiar} NS} & \multicolumn{2}{c|}{\param{Crowd} NS} \\
+\hline
+		& System & BERT 	& System 	& BERT 						\\
+\hline
+\hline
+count 	& 180 	& 60 		& 180 		& 60 						\\
+\hline
+mean 	& 0.355 & \textbf{0.503} & 0.337 & \textit{\textbf{0.505}} 	\\
+\hline
+median 	& 0.341 & \textit{\textbf{0.529}} & 0.342 & \textbf{0.520}   \\
+\hline
+min & -0.208 & \textbf{-0.254} & -0.199 & \textit{\textbf{-0.179}}  \\
+\hline
+max & \textit{\textbf{0.900}} & 0.881 & \textbf{0.895} & 0.878 		 \\
+\hline
+std dev & 0.216 & 0.183 	& 0.229 	& 0.189 					\\
+\hline
+\end{tabular}
+\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} models contain only responses from NSs \textit{familiar} to the researcher and \param{Crowd} models contain only responses from crowdsourced NSs. ... Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
 \end{center}
 \end{table}
 
