@@ -61,7 +61,10 @@ def get_spearman_dict(rws):
 # my_exps = [['transitivity'], ['targeting'], ['primacy'], ['termrep'], ['transitivity', 'targeting'], ['transitivity', 'primacy'], ['transitivity', 'termrep'], ['targeting', 'primacy'], ['targeting', 'termrep'], ['primacy', 'termrep']]
 ## 20210225: switch to above version of my_exps after adding the logic
 my_exps = [['transitivity'], ['targeting'], ['primacy'], ['termrep']]
+## Use this param_dict for any crowdsourced training runs
 param_dict = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'], 'familiarity': ["-gNSC-", "-gNSF-"], 'primacy': ["-r1-", "-r2-"], 'termrep': ['ldh', 'xdh', 'xdx']}
+## Use this param_dict for any familiar training runs
+# param_dict = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'], 'familiarity': ["-gNSC-", "-gNSF-"], 'primacy': ["-r2-"], 'termrep': ['ldh', 'xdh', 'xdx']}
 
 
 def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
@@ -97,22 +100,22 @@ def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
 			param_header.append(ps_name)
 			param_stats.append(ps_sp_descriptive)
 			# print(ps_name)
-			ps_df.to_csv(wd+ps_name+'_spearman-'+tag+'.csv', encoding='utf-8',
+			ps_df.to_csv(wd+ps_name+'_spearman-'+tag+'-W.csv', encoding='utf-8',
 						 index=False, header=x_head)
-			ps_sp_descriptive.to_csv(wd+ps_name+'_spearman_stats-'+tag+'.csv',
+			ps_sp_descriptive.to_csv(wd+ps_name+'_spearman_stats-'+tag+'-W.csv',
 									 encoding='utf-8', header=['spearman'])
-			ps_pv_descriptive.to_csv(wd+ps_name+'_sp_pval_stats-'+tag+'.csv', encoding='utf-8', header=['p_value'])
+			ps_pv_descriptive.to_csv(wd+ps_name+'_sp_pval_stats-'+tag+'-W.csv', encoding='utf-8', header=['p_value'])
 		# param_col_zero = ['null', 'count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max']
 		p_descriptive = pandas.concat([pd for pd in param_stats], axis=1)
-		p_descriptive.to_csv(wd+param+'_spearman_stats-'+tag+'.csv', encoding='utf-8', header=param_header)
+		p_descriptive.to_csv(wd+param+'_spearman_stats-'+tag+'-W.csv', encoding='utf-8', header=param_header)
 
 
 def main():
-	train_sample = "N14"
+	train_sample = "N50"
 	test_sample = "N70"
 	working_dir=("/Users/leviking/Documents/dissertation/SAILS/stats/"+
-				 train_sample+'-VS-'+test_sample+'/')
-	all_spearman_file = "all_spearman_"+train_sample+"-VS-"+test_sample+".csv"
+				 train_sample+'-VS-'+test_sample+'-W/')
+	all_spearman_file = "all_spearman_"+train_sample+"-VS-"+test_sample+"-W.csv"
 	oldheader, all_spearman_rows = get_source_rows(working_dir+all_spearman_file)
 	# oldheader = ["Source", "ldh_uw_spear", "ldh_uw_p", "xdh_uw_spear", "xdh_uw_p", "xdx_uw_spear", "xdx_uw_p"]
 	all_sources, s_dict = get_spearman_dict(all_spearman_rows)  ## ['I01T-gNSC-r1-In-N50-VS-N70', ...], [ldh_sd, xdh_sd, xdx_sd]
