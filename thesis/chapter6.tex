@@ -89,15 +89,15 @@ Here I compare the performance of my ranking system when applied to items that a
 \hline
 count 	& 120 		& 40 		& 120 		& 40 		& 120 		& 40		 \\
 \hline
-mean 	& 0.412 	& \textbf{0.508} 	& 0.342 	& \textit{\textbf{0.578}}		& 0.273 	& \textbf{0.409}	 \\
+mean 	& 0.437 	& \textbf{0.508} 	& 0.332 	& \textit{\textbf{0.578}}		& 0.260 	& \textbf{0.409}	 \\
 \hline
-median 	& 0.416 	& \textbf{0.490} 	& 0.331 	& \textit{\textbf{0.579}}		& 0.278 	& \textbf{0.455}	 \\
+median 	& 0.428 	& \textbf{0.490} 	& 0.312 	& \textit{\textbf{0.579}}		& 0.264 	& \textbf{0.455}	 \\
 \hline
-min 	& \textbf{-0.076} 	& -0.210 	& \textit{\textbf{-0.030}} 	& -0.243	& -0.269 	& \textbf{-0.212}	 \\
+min 	& \textbf{-0.089} 	& -0.210 	& \textit{\textbf{-0.076}} 	& -0.243	& -0.314 	& \textbf{-0.212}	 \\
 \hline
-max 	& \textit{\textbf{0.894}} 	& 0.884		& \textbf{0.778} 	& 0.773		& \textbf{0.709} 	& 0.701	 \\
+max 	& \textit{\textbf{0.901}} 	& 0.884		& \textbf{0.775} 	& 0.773		& \textbf{0.719} 	& 0.701	 \\
 \hline
-std dev & 0.243 	& 0.171		& 0.204 	& 0.130		& 0.195 	& 0.248	 \\
+std dev & 0.235 	& 0.171		& 0.219 	& 0.130		& 0.207 	& 0.248	 \\
 \hline
 \multicolumn{7}{c}{} \\
 \hline
@@ -121,8 +121,10 @@ max & \textit{\textbf{0.894}} & 0.881	& \textbf{0.778} & 0.771	 			& \textbf{0.7
 std dev & 0.243 	& 0.173 			& 0.204 	& 0.135 					& 0.195 	& 0.199 \\
 \hline
 \end{tabular}
-%% 2021-03-12: Checked all numbers; table is accurate.
-\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 40 rankings (4 system configurations $\times$ 10 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
+\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 40 rankings (4 system configurations $\times$ 10 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% YES, 100% confirmed 4/1/21! 
+%[ Should include 4 configs: TARG/UNTARG, PRIM/MIX; DONE: Double check numbers \& highlighting ]
+}
 \end{center}
 \end{table}
 
@@ -146,17 +148,19 @@ count 	& 180 		& 60 		& 180 		& 60 		& 180 		& 60 		& 180 		& 60 \\
 \hline
 mean 	& 0.390 	& \textit{\textbf{0.546}} 	& 0.296 	& \textbf{0.451} 	& 0.385 	& \textit{\textbf{0.550}} 	& 0.300 	& \textbf{0.468}  \\
 \hline
-median 	& 0.384 	& \textit{\textbf{0.546}} 	& 0.307 	& \textbf{0.485} 	& 0.382 	& \textbf{\textbf{0.564}} 	& 0.313		& \textbf{0.495} \\
+median 	& 0.384 	& \textit{\textbf{0.546}} 	& 0.307 	& \textbf{0.485} 	& 0.382 	& \textit{\textbf{0.564}} 	& 0.313		& \textbf{0.495} \\
 \hline
 min 	& \textit{\textbf{-0.076}} 	& -0.179 	& -0.314 	& \textbf{-0.212} 	& \textbf{-0.048} 	& -0.090	& -0.269 	& \textit{\textbf{0.142}} \\
 \hline
-max 	& 0.859 	& \textbf{0.884} 	& \textit{\textbf{0.901}}		& 0.879 	& 0.872 	& \textbf{0.881}		& \textbf{0.894} 	& 0.880 \\
+max 	& 0.859 	& \textbf{0.884} 	& \textit{\textbf{0.901}}		& 0.879 	& 0.872 	& \textbf{0.881}		& \textit{\textbf{0.894}} 	& 0.880 \\
 \hline
 std dev 	& 0.238 	& 0.186 	& 0.216 	& 0.204 	& 0.232 	& 0.173		& 0.203 	& 0.172 \\
 \hline
 \end{tabular}
-%% 2021-03-12: Checked all numbers; table is accurate.
-\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{targeted} and \param{untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
+\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{targeted} and \param{untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% YES, 100% confirmed 4/1/21! 
+%[ Should include 6 configs: PRIM/MIX, LDH/XDH/XDX; DONE: Double check numbers \& highlighting ]
+}
 \end{center}
 \end{table}
 
@@ -180,19 +184,21 @@ Here we compare how well the system works when using different sources of NSs.
 \hline
 count 	& 180 	& 60 		& 180 		& 60 						& 180 	& 60 		& 180 & 60 \\
 \hline
-mean 	& 0.349 & \textit{\textbf{0.512}} & 0.337 & \textbf{0.505} 	& 0.337 & 0.495 	& 0.347 & \textit{\textbf{0.502}} \\
+mean 	& 0.349 & \textbf{0.495} & 0.337 & \textit{\textbf{0.502}} 	& 0.337 & \textit{\textbf{0.512}} 	& 0.347 & \textbf{0.505} \\
 \hline
 median 	& 0.352 & \textit{\textbf{0.523}} & 0.342 & \textbf{0.520}  & 0.327 & \textit{\textbf{0.529}} 	& 0.361 & \textbf{0.516}  \\
 \hline
-min & -0.314 & \textbf{-0.212} & -0.199 & \textit{\textbf{-0.179}}  & -0.269 & \textbf{-0.090} 	& -0.147 & \textit{\textbf{-0.049}}  \\
+min & -0.314 & \textbf{-0.212} & -0.199 & \textit{\textbf{-0.179}}  & -0.269 & \textbf{-0.090} 	& -0.147 & \textit{\textbf{0.049}}  \\
 \hline
 max & \textit{\textbf{0.901}} & 0.884 & \textbf{0.895} & 0.878 		& \textbf{0.890} & 0.880 	& \textit{\textbf{0.894}} & 0.881 \\
 \hline
 std dev & 0.235 & 0.212 	& 0.229 	& 0.189 					& 0.218 & 0.187 	& 0.227 & 0.168 \\
 \hline
 \end{tabular}
-%% 2021-03-12: Checked all numbers; table is accurate.
-\caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain only first responses from NSs and \param{mixed} models contain an equal mix of first and second responses from NSs. Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
+\caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain only first responses from NSs and \param{mixed} models contain an equal mix of first and second responses from NSs. Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% YES, 100% confirmed 4/1/21! 
+%[ Should include 6 configs: TARG/UNTARG, LDH/XDH/XDX; DONE: Double check numbers \& highlighting ]
+}
 \end{center}
 \end{table}
 
@@ -216,7 +222,7 @@ Here we compare how well the system works when using NSs' first responses vs a m
 \hline
 count 	& 180 	& 60 		& 180 		& 60 						\\
 \hline
-mean 	& 0.355 & \textbf{0.503} & 0.337 & \textit{\textbf{0.505}} 	\\
+mean 	& 0.355 & \textit{\textbf{0.503}} & 0.337 & \textbf{0.502} 	\\
 \hline
 median 	& 0.341 & \textit{\textbf{0.529}} & 0.342 & \textbf{0.520}   \\
 \hline
@@ -227,7 +233,10 @@ max & \textit{\textbf{0.900}} & 0.881 & \textbf{0.895} & 0.878 		 \\
 std dev & 0.216 & 0.183 	& 0.229 	& 0.189 					\\
 \hline
 \end{tabular}
-\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} models contain only responses from NSs \textit{familiar} to the researcher and \param{Crowd} models contain only responses from crowdsourced NSs. ... Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).}
+\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} NS models contain only responses from participants \textit{familiar} to the researcher and \param{Crowd} NS models contain only responses from crowdsourced participants. Results are shown using NS models of 14 responses; note the models used here are \param{mixed} (containing first and second responses; see Section~\ref{sec:exp-primacy}) due to the sparsity of \param{familiar} data. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% YES, 100% confirmed 4/1/21! 
+%[ XYZ: Should include 6 configs: (MIX ONLY!), TARG/UNTARG, LDH/XDH/XDX; TODO: Double check numbers \& highlighting; pay special attention to use MIXED (r2) only ]
+}
 \end{center}
 \end{table}
 
@@ -289,7 +298,7 @@ Taking this example further, consider the dependency \textit{nsubj(girl, sing)},
 
 To test my hypothesis, I compared the performance of normalized and non-normalized models. This followed my standard design of ranking NNS responses by their system scores, then comparing this ranking with the weighted annotation ranking using Spearman rank correlation. I isolate this variable as before: for all system configurations, I generate a Spearman score. Then I obtain an average score for all normalized configurations and an average score for all non-normalized configurations and compare the two.
 
-Such normalization can be sensitive to the effects of size\lk{XYZ: Citation?}, so I conducted the  experiments using models of my standard sample size of 50 NS responses, and again using a sample size of 15.
+Such normalization can be sensitive to the effects of size\lk{XYZ: Citation?}, so I conducted two experiments: one in which each NS model contains a sample 50 responses, and one in which each model contains 14 responses.
 
 %This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
 
@@ -299,34 +308,39 @@ Such normalization can be sensitive to the effects of size\lk{XYZ: Citation?}, s
 \subsection{Term normalization results}
 \label{sec:term-norm-results}
 
-The results of this experiment are shown in Table~\ref{tab:normalize-responses-spearman}. The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized model. The simplest explanation for this is the fact that longer responses with extraneous information are relatively uncommon, so we can expect this normalization to have a low impact.
+The results of this experiment are shown in Table~\ref{tab:term-norm-results}. The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized model. The simplest explanation for this is the fact that longer responses with extraneous information are relatively uncommon, so we can expect this normalization to have a low impact.
 %\lk{XYZ. For different test responses, find some examples where the non-normalized config is rated/ranked higher than in the normalized config?}
 \lk{XYZ. Add examples}
 
 Because the non-normalized GSs outperform their normalized counterparts, and for the sake of simplicity, this parameter was not adopted in the other experiments discussed in this chapter; only non-normalized configurations were used in all other experiments.
-
-
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+%\begin{tabular}{|l||p{0.12\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}||l|l|l|}
+\begin{tabular}{|l||l|l|l||l|l|l|}
 \hline
- & \multicolumn{2}{c||}{NS model (n=50)} & \multicolumn{2}{c|}{NS model (n=15)} \\
+ & \multicolumn{3}{c||}{NS model sample size = 14} & \multicolumn{3}{c|}{NS model sample size = 50} \\
 \hline
-% Dep & Norm & Non-norm & Norm & Non-norm \\
-& Norm & Non-norm & Norm & Non-norm \\
+		& Non-n. 	& Norm 	& BERT 		& Non-n. 	& Norm 	& BERT 		\\
 \hline
-%\hline
-%ldh & -0.474 & \textbf{-0.477} & -0.462 & \textbf{-0.471} \\
-%\hline
-%xdh & -0.476 & \textbf{-0.478} & -0.470 & \textbf{-0.474} \\
-%\hline
-%xdx & \textbf{-0.441} & -0.438 & -0.428 & \textbf{-0.431} \\
 \hline
-Spearman avg & -0.463 & \textbf{-0.465} & -0.449 & \textbf{-0.456} \\
+count 	& 360 		& 360 	& 120 		& 360 			& 360 			& 120		 \\
+\hline
+mean 	& 0.343 	& 0.339 & 0.498		& 0.342 		& 0.345 		& 0.509		 \\
+\hline
+median 	& 0.350 	& 0.318 & 0.521 	& 0.344 		& 0.332 		& 0.523		 \\
+\hline
+min 	& -0.314 	& -0.281 & -0.212 	& -0.269 		& -0.234 		& -0.090		 \\
+\hline
+max		& 0.901 	& 0.900 & 0.884 	& 0.894 		& 0.900 		& 0.881		 \\
+\hline
+std dev & 0.232 	& 0.232 & 0.200 	& 0.222 		& 0.231 		& 0.177		 \\
 \hline
 \end{tabular}
-%\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient using gold standards (GSs) that are normalized for length (number of dependencies) and GSs that are non-normalized. This was conducted for various dependency representations: \textit{label, dependent, head (ldh)}; \textit{dependent, head} (xdh); \textit{dependent} only (xdx). The p-values are not indicated but range between 0.034 and 0.068 for all cases, indicating that the correlations are very unlikely to be coincidental.}
-\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient averaged for NS models with term scores normalized for response length (number of dependencies) and for NS models with non-normalized term scores. The p-values are not indicated but range between 0.034 and 0.068 for all cases, indicating that the correlations are very unlikely to be coincidental.}
+\caption{\label{tab:term-norm-results} Comparing Spearman rank correlation scores where all dependencies (terms) in \textit{Non-n(ormalized)} NS models carry equal weight, and all dependencies in \textit{Norm(alized)} NS models have their scores normalized proportionally to the length of the parent response. Results are shown using NS models of 14 responses and 50 responses. Each \textit{Norm(alized)} and \textit{Non-n(ormalized)} column represents 360 different rankings (12 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 120 rankings (4 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% YES, 100% confirmed 4/1/21! 
+%[ Should include 12 configs: TARG/UNTARG, PRIM/MIXED, LDH/XDH/XDX; DONE: Double check numbers \& highlighting; pay special attention... we haven't pulled stats from all 12 configs like this before... ]
+}
+%\caption{\label{tab:normalize-responses-spearman} Spearman correlation coefficient averaged for NS models with term scores normalized for response length (number of dependencies) and for NS models with non-normalized term scores. The p-values are not indicated but range between 0.034 and 0.068 for all cases, indicating that the correlations are very unlikely to be coincidental.}
 \end{center}
 \end{table}
 
@@ -379,8 +393,10 @@ max & 0.892 & 0.891 & 0.894 & 0.881 \\
 std dev & 0.229 & 0.235 & 0.202 & 0.177 \\
 \hline
 \end{tabular}
-%% 2021-03-12: Checked all numbers; table is accurate.
-\caption{\label{tab:termrep-results} Comparing Spearman rank correlation scores where system configurations use different term representations: \param{ldh} (labeled dependencies), \param{xdh} (unlabeled dependencies), or \param{xdx} (dependents only; i.e., \textit{words}). Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} and \textit{BERT} column represents 120 different rankings (4 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking.}
+\caption{\label{tab:termrep-results} Comparing Spearman rank correlation scores where system configurations use different term representations: \param{ldh} (labeled dependencies), \param{xdh} (unlabeled dependencies), or \param{xdx} (dependents only; i.e., \textit{words}). Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} and \textit{BERT} column represents 120 different rankings (4 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. 
+%%% YES, 100% confirmed 4/1/21! 
+%[ Should include 4 configs: TARG/UNTARG, PRIM/MIXED, (separately for LDH/XDH/XDX); DONE: Double check numbers \& highlighting; pay special attention... we haven't pulled stats from all 12 configs like this before... ]
+}
 \end{center}
 \end{table}
 

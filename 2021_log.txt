@@ -125,7 +125,7 @@ meet again on 4/9;
 TODO:
 ###
 CHANGE TO N14 and run:
-python get_all_tfidf_cosines-weighted_deps.py (DONE)
+python get_all_tfidf_cosines-weighted_deps.py DONE
 
 CHANGE TO N14 and run:
 python get_all_spearman_correlations.py DONE
@@ -135,7 +135,7 @@ python thesis_spearman_stats.py DONE
 
 ###
 CHANGE TO F14 and run:
-python get_all_tfidf_cosines-weighted_deps.py DONE, paused here;
+python get_all_tfidf_cosines-weighted_deps.py DONE
 
 CHANGE TO F14 and run:
 python get_all_spearman_correlations.py DONE
@@ -153,7 +153,47 @@ python get_all_spearman_correlations.py DONE
 CHANGE TO N50 and run:
 python thesis_spearman_stats.py DONE
 
-## For UNWEIGHTED F14 and N14 "term_vectors" folders -- restore these from Github
+## For UNWEIGHTED F14 and N14 "term_vectors" folders -- restore these from Github DONE
+################################################################################
+
+2021-04-01. Thursday.
+Today:
+Grind out the last of the table work in Ch. 6:
+	Confirm which configurations should be covered by each;
+		Confirm that the correct file (exists and) is used;
+		Confirm that the numbers in the tables are correct;
+Dig into the table and trends for Transitivity (currently Table 6.2);
+	"Observe and report" -- any explanations for trends?
+Same for remaining parameter stats tables in Ch. 6....
+
+
+Starting from term-norm table because that might involve some more coding to get the numbers...
+Yep. Adapting get_bert_spearman_correlations.py to get_bert_spearman_correlations-weighted_deps.py.
+Run this for F14-W, N14-W, N50-W. DONE
+Then...
+Adapting thesis_spearman_stats.py to combined_thesis_spearman_stats.py to operate on the combined_spearman_Nxx-VS-N70.csv... DONE
+it generates the appropriate spearman_stats csvs in the stats/* folders.
+Run this for Nxx =
+weighted N14, N50, F14 DONE
+unweighted N14, N50, F14 DONE
+I have confirmed that the descriptive stats produced are correct -- I verified it with formulas in the spearman csvs the descriptive stats are based on.
+
+I can now complete the term-norm table. DONE
+Double-check these tables:
+term-rep:
+familiarity:
+primacy:
+targeting:
+transitivity:
+
+
+
+
+
+#########################
+Re: Sturgill Simpson:
+High top mountain album first, then meta modern sounds, and sailors guide to galaxy.
+
 ################################################################################
 ################################################################################
 Citations, Lit Review, etc.
