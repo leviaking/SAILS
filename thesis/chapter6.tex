@@ -19,7 +19,7 @@ The current work retains just three of the five term representations previously 
 
 Finally, as \param{Brown} overwhelmingly outperformed the \param{WSJ} as a tf-idf reference corpus, the current experiments rely exclusively on the former. The larger PDT dataset follows a similar narrative style to that described in Section~\ref{sec:pilot-data}, so I am confident \param{Brown} is again the best option here.
 
-Unless otherwise noted, all experiments throughout this chapter score and rank 70 NNS responses per item; this is the maximum number of NNS responses available across all PDT items. Where more than 70 responses are available, a random sample of 70 is used. The large increase in the number of PDT items and the size of the datasets means that running an exhaustive search for the best parameters among all combinations is not feasible. The experiments in Chapter~\ref{chap:pilot} used 30 different combinations of system settings (i.e., \textbf{configurations}) for each of 10 items. By comparison, the variables and parameters used in this chapter result in up to 48 different configurations (see Table~\ref{tab:all-params}) for each of the 30 items. To make sense of this large number of results, I have chosen to focus my optimization efforts on each parameter individually.
+All experiments throughout this chapter score and rank 70 NNS responses per item; this is the maximum number of NNS responses available across all PDT items. Where more than 70 responses are available, a random sample of 70 is used. The large increase in the number of PDT items and the size of the datasets means that running an exhaustive search for the best parameters among all combinations is not feasible. The experiments in Chapter~\ref{chap:pilot} used 30 different combinations of system settings (i.e., \textbf{configurations}) for each of 10 items. By comparison, the variables and parameters used in this chapter result in up to 48 different configurations (see Table~\ref{tab:all-params}) for each of the 30 items. To make sense of this large number of results, I have chosen to focus my optimization efforts on each parameter individually.
 
 
 \begin{table*}
@@ -325,13 +325,13 @@ Because the non-normalized GSs outperform their normalized counterparts, and for
 \hline
 count 	& 360 		& 360 	& 120 		& 360 			& 360 			& 120		 \\
 \hline
-mean 	& 0.343 	& 0.339 & 0.498		& 0.342 		& 0.345 		& 0.509		 \\
+mean 	& \textbf{0.343} 	& 0.339 & \textit{\textbf{0.498}}		& 0.342 		& \textbf{0.345} 		& \textit{\textbf{0.509}}		 \\
 \hline
-median 	& 0.350 	& 0.318 & 0.521 	& 0.344 		& 0.332 		& 0.523		 \\
+median 	& \textbf{0.350} 	& 0.318 & \textit{\textbf{0.521}} 	& \textbf{0.344} 		& 0.332 		& \textit{\textbf{0.523}}		 \\
 \hline
-min 	& -0.314 	& -0.281 & -0.212 	& -0.269 		& -0.234 		& -0.090		 \\
+min 	& -0.314 	& \textbf{-0.281} & \textit{\textbf{-0.212}} 	& -0.269 		& \textbf{-0.234} 		& \textit{\textbf{-0.090}}		 \\
 \hline
-max		& 0.901 	& 0.900 & 0.884 	& 0.894 		& 0.900 		& 0.881		 \\
+max		& \textit{\textbf{0.901}} 	& 0.900 & 0.884 	& 0.894 		& \textit{\textbf{0.900}} 		& 0.881		 \\
 \hline
 std dev & 0.232 	& 0.232 & 0.200 	& 0.222 		& 0.231 		& 0.177		 \\
 \hline
@@ -363,13 +363,13 @@ The current system allows for different \textit{term representations}, which are
 \hline
 count & 120 & 120 & 120 & 120 \\
 \hline
-mean & 0.342 & 0.346 & 0.341 & 0.498 \\
+mean & 0.342 & \textbf{0.346} & 0.341 & \textit{\textbf{0.498}} \\
 \hline
-median & 0.347 & 0.367 & 0.330 & 0.521 \\
+median & 0.347 & \textbf{0.367} & 0.330 & \textit{\textbf{0.521}} \\
 \hline
-min & -0.314 & -0.199 & -0.076 & -0.212 \\
+min & -0.314 & -0.199 & \textbf{\textbf{-0.076}} & -0.212 \\
 \hline
-max & 0.895 & 0.901 & 0.900 & 0.884 \\
+max & 0.895 & \textit{\textbf{0.901}} & 0.900 & 0.884 \\
 \hline
 std dev & 0.243 & 0.238 & 0.216 & 0.200 \\
 \hline
@@ -382,13 +382,13 @@ std dev & 0.243 & 0.238 & 0.216 & 0.200 \\
 \hline
 count & 120 & 120 & 120 & 120 \\
 \hline
-mean & 0.350 & 0.342 & 0.335 & 0.509 \\
+mean & \textbf{0.350} & 0.342 & 0.335 & \textit{\textbf{0.509}} \\
 \hline
-median & 0.364 & 0.368 & 0.322 & 0.523 \\
+median & 0.364 & \textbf{0.368} & 0.322 & \textit{\textbf{0.523}} \\
 \hline
-min & -0.147 & -0.269 & -0.075 & -0.090 \\
+min & -0.147 & -0.269 & \textit{\textbf{-0.075}} & -0.090 \\
 \hline
-max & 0.892 & 0.891 & 0.894 & 0.881 \\
+max & 0.892 & 0.891 & \textbf{0.894} & 0.881 \\
 \hline
 std dev & 0.229 & 0.235 & 0.202 & 0.177 \\
 \hline

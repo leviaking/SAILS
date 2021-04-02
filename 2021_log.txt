@@ -185,9 +185,57 @@ familiarity:
 primacy:
 targeting:
 transitivity:
+ALL DONE
 
+################################################################################
 
+2021-04-02. Friday.
+Still working on the list from yesterday.
+Why do some rankings have such high p-values?
+What is going on with the negative Spearman correlations?
 
+Observations:
+
+Table 6.2 Transitivity:
+	For both samples (N14 and N50):
+		System scores: intrans > trans > ditrans
+		BERT scores: trans > intrans > ditrans
+	System rarely beats BERT: Intransitive max (N14, N50); Transitive min (N14);
+	For System mean and median, N50 beats N14 for trans and ditrans, but is worse for intrans;
+	For BERT mean and median, N50 beats N14 for intrans and ditrans, but is worse for trans;
+	Suggests that choices relating to sample size and the use of BERT vs system could be optimized for items according to transitivity.
+
+###
+Table 6.3 Targeting:
+	Targ > Untarg (always--system & BERT, both sample sizes)
+	For System mean and median: N14 narrowly beats N50 for Targeted; N14 narrowly loses to N50 for Untargeted;
+		Suggests that smaller samples work better than larger samples under more constrained conditions (i.e., likely higher type-to-token ratio? cf Transitivity Table 6.2 and similar pattern for intransitives)
+	For BERT mean and median: N50 is always better than N14 (Targ and Untarg)
+	For Untargeted, System achieves a higher max than BERT (N14 and N50)
+	
+Table 6.4 Primacy:
+	System mean and median: For Primary, N14 > N50; for Mixed, N14 < N50;
+	BERT mean and median: For Primary, N14 < N50;
+		Mixed mean: N14 < N50; Mixed median: N14 > N50;
+	System: For N14, Primary > Mixed; For N50, Primary < Mixed;
+	BERT: For N14, there is very little difference between Primary and Mixed; Primary has slightly lower mean but slightly higher median than Mixed. But for N50, Primary mean and median are both slightly higher than Mixed.
+		This suggests something about BERT's ability to zero in on the meaning common to all responses as it obvserves more examples. For System, the pattern is kind of intuitive--if you have a small model, you want those responses to be as on-target as possible, which happens with Primary responses; when you ask for second responses, you expand coverage but also get some lower-quality responses. Relatedly, if you do use second responses, it's probably best to do so in models that are large enough that a small number of bad responses cannot ruin the performance overall.
+		Cf. Transitivity and Targeting tables; For more constrained contexts like intrans, targeted, or primary response models only, we see that System performs best with the N14 model (vs N50); this likely correlates with type-to-token ratios;
+
+Table 6.5 Familiarity:
+	System and BERT show slightly better performance for Familiar > Crowd. This is expected, but there's only N14 and not a lot to go on here.
+	
+Table 6.7 Term normalization:
+	System: very little difference between Normalized and Non-Normalized models; slightly better performance from Non-normalized, more noticeable for N14 than N50.
+	Term-normalization isn't worth doing.
+
+Table 6.8 Term Representation:
+	For System mean & median: ldh clearly benefits from more training data (N14 < N50); xdx clearly suffers from more training data (N14 > N50); xdh is roughly unchanged (i.e., it's between ldh and xdx in terms of this effect, as we'd expect).
+	For N14, xdh is clearly best; xdh > ldh > xdx;
+	For N50, ldh has the highest mean, but xdh has the highest median;
+	xdx always has the highest minimum (including BERT);
+	xdx seems best at these sample sizes; ldh is much more competetive at N50, so maybe there's a sample size where ldh > xdh. With larger datasets, I suspect the labels would become more meaningful, but it's possible that they introduce a bit of noise at these sample sizes.
+	
 
 
 #########################
