@@ -71,10 +71,11 @@ I did explore an implementation of my system's similarity scoring that is more c
 
 \section{Transitivity experiments}
 \label{sec:exp-transitivity}
-Here I compare the performance of my ranking system when applied to items that are canonically either intransitive, transitive, or ditransitive. Unlike the other variables throughout this chapter, transitivity is not a parameter setting. Individual PDT items are assumed to fit predominately only one of the three categories here. In other words, I cannot choose to process a given item with any of the three transitivity settings. Rather, the experiments in this section are intended to illustrate strengths, weaknesses and trends related to this variable.
+Here I examine the performance of my ranking system when applied to items that are canonically either intransitive, transitive, or ditransitive. Unlike the other variables throughout this chapter, transitivity is not a parameter setting. Individual PDT items are assumed to fit predominately only one of the three transitivity types here. In other words, I cannot choose to process a given item with any of the three transitivity settings. Rather, the experiments in this section examine my system's performance across three sets of 10 items each, representing intransitive, transitive and ditransitive events.
 
-\subsection{Transitivity results}
-\label{sec:transitivity-results}
+In experimenting with this parameter (and most of the others throughout this chapter), I compare models of two different sizes in order to see the effects of sample size on performance. The smaller of the two models contains 14 NS responses per item, and the larger model contains 50 NS responses per item. My system uses these models as the basis of its tf-idf cosine similarity measure that is used to score each response and in turn rank the full set of 70 NNS responses. As a benchmark, I also use BERT with the same NS models to produce similarity scores and rank the NNS responses.
+
+Sets of descriptive statistics for the Spearman rank correlation scores produced by my system and BERT using these models are presented in Table~\ref{tab:transitivity-results}. There are 10 items per type. Each item has a targeted and untargeted version, which are separate datasets. For each dataset, I sample both primary and mixed models. My system converts the response text to three different term representations (\param{ldh}, \param{xdh}, \param{xdx}). This results in 12 system configurations: 2 targeting settings $\times$ 2 primacy settings $\times$ 3 term representations. Using all 12 configurations results in 120 Spearman rank correlations per transitivity type. The system statistics presented in Table~\ref{tab:transitivity-results} cover these 120 scores. Because BERT operates on plain text and cannot make use of the term representation variable, it involves only four configurations, resulting in 40 Spearman scores per transitivity type.
 
 \begin{table}[htb!]
 \begin{center}
@@ -127,6 +128,30 @@ std dev & 0.243 	& 0.173 			& 0.204 	& 0.135 					& 0.195 	& 0.199 \\
 }
 \end{center}
 \end{table}
+
+
+
+\subsection{Transitivity results}
+\label{sec:transitivity-results}
+Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here, mean and median Spearman scores. This is expected, as BERT and BERT are powerful, highly developed, state-of-the-art approaches to language modeling and sentence similarity and are trained on web-scale datasets. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but it preserves a high degree of transparency and explainability. My system does, however, reach a higher maximum Spearman score than BERT in all cases.
+
+For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. My system achieves its highest mean and median Spearman scores on the intransitives using the smaller model, even beating out its performance using the larger model. For the larger model, performance on the ditransitives increases over the smaller model in terms of the mean and median Spearman scores. Transitives, as might be expected, fall in the middle: for the larger model, the mean is higher but the median is lower.
+
+Naturally, we can expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. We can confirm this difference in complexity via the type-to-text ratios (TTRs) for the terms in these NS models. This is presented in Table XYZ. Combined with the TTRs, the observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could better explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses, which is the maximum number available across all items in my dataset, given the configurations used throughout this chapter.
+
+Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used BERT embeddings corresponding to the nouns derived from sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. BERT is most accurate with \textit{agent} role subjects and objects, which are most consistently present in transitive items. BERT's lower accuracy at handling \textit{experiencer} subjects, commonly seen in intransitive sentences, explains the lower performance on intransitive items, despite their relative simplicity. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table XYZ-1: average sentence lengths for IN, TR, DI). \citet{warstadt2019} also used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that performance correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more.
+
+``Table XYZ-1'':
+
+For N14 models, average NS response lengths:
+
+intransitives avg length: 4.941071428571429
+
+transitives avg length: 6.248214285714286
+
+ditransitives avg length: 7.2803571428571425
+
+N50 lengths to follow! 
 
 \section{Targeting experiments}
 \label{sec:exp-targeting}

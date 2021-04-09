@@ -196,6 +196,11 @@ What is going on with the negative Spearman correlations?
 
 Observations:
 
+I've gone over all the tables, noted some observations and now I'm going from there. The good news is that I'm fairly confident there are some trends I can latch on to. The most salient to me has been the effect of the size of the NS models. Throughout I compare "N14" models (14 NS responses) and N50 models; the N14 models typically outperform the N50 models when the conditions are relatively constrained: Targeted vs Untargeted, Primary vs Mixed (first responses vs first + second responses), and Intransitives vs Transitives/Ditransitives. "Constrained" might not be the right word, but these conditions tend to produce lower type-to-token ratios, which I'm also working to incorporate into the discussion.
+
+Right now I'm focusing on the discussion of transitivity and the related Spearman stats. I'm aiming to finish that section over the weekend, because I think whenever you next get a chance to provide some feedback, it would be helpful to know if I'm on the right track with the similar sections.
+
+
 Table 6.2 Transitivity:
 	For both samples (N14 and N50):
 		System scores: intrans > trans > ditrans
@@ -205,14 +210,13 @@ Table 6.2 Transitivity:
 	For BERT mean and median, N50 beats N14 for intrans and ditrans, but is worse for trans;
 	Suggests that choices relating to sample size and the use of BERT vs system could be optimized for items according to transitivity.
 
-###
 Table 6.3 Targeting:
 	Targ > Untarg (always--system & BERT, both sample sizes)
 	For System mean and median: N14 narrowly beats N50 for Targeted; N14 narrowly loses to N50 for Untargeted;
 		Suggests that smaller samples work better than larger samples under more constrained conditions (i.e., likely higher type-to-token ratio? cf Transitivity Table 6.2 and similar pattern for intransitives)
 	For BERT mean and median: N50 is always better than N14 (Targ and Untarg)
 	For Untargeted, System achieves a higher max than BERT (N14 and N50)
-	
+
 Table 6.4 Primacy:
 	System mean and median: For Primary, N14 > N50; for Mixed, N14 < N50;
 	BERT mean and median: For Primary, N14 < N50;
@@ -236,7 +240,18 @@ Table 6.8 Term Representation:
 	xdx always has the highest minimum (including BERT);
 	xdx seems best at these sample sizes; ldh is much more competetive at N50, so maybe there's a sample size where ldh > xdh. With larger datasets, I suspect the labels would become more meaningful, but it's possible that they introduce a bit of noise at these sample sizes.
 	
+################################################################################
+################################################################################
+4/9/2021
+Still need:
+Why do some rankings have such high p-values?
+What is going on with the negative Spearman correlations?
 
+Working on Transitivity section.
+Question: Why does SBERT perform best on transitives?
+
+"we use the dependency parse information to determine whether each noun is an A or an O, and if it is either we pass the whole sentence through mBERT and take the contextual embedding corresponding to the noun." --papadimitriou2021multilingual
+How does this work? how do you get the embedding corresponding to the noun from the sentence embedding?
 
 #########################
 Re: Sturgill Simpson:
@@ -246,6 +261,18 @@ High top mountain album first, then meta modern sounds, and sailors guide to gal
 ################################################################################
 Citations, Lit Review, etc.
 #####
+
+@article{papadimitriou2021multilingual,
+  title={Multilingual BERT, Ergativity, and Grammatical Subjecthood},
+  author={Papadimitriou, Isabel and Chi, Ethan A and Futrell, Richard and Mahowald, Kyle},
+  journal={Proceedings of the Society for Computation in Linguistics},
+  volume={4},
+  number={1},
+  pages={425--426},
+  year={2021}
+}
+###
+
 @article{yamazaki2014,
   title={Toward integrative CALL: A progressive outlook on the history, trends, and issues of CALL},
   author={Yamazaki, Kasumi},
