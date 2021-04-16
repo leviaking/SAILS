@@ -104,7 +104,7 @@ def from_experiment_get_stats_csvs(wd, exp, all_sources, sd, trr, tss):
 
 
 def main():
-	train_sample = "N14"
+	train_sample = "N50"
 	test_sample = "N70"
 	working_dir=("/Users/leviking/Documents/dissertation/SAILS/stats/"+
 				 train_sample+'-VS-'+test_sample+'/')
