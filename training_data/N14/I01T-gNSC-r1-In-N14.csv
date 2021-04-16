@@ -1,8 +1,22 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
-I01T-gNSC-p262-r1,He is dancing ,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
-2	be	_	VBZ	VBZ	_	3	aux	_	_
-3	dance	_	VBG	VBG	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%he$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
+I01T-gNSC-p260-r1,dancing,1,1,1,1,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p272-r1,Dancing to music ,1,1,1,1,1,"1	dance	_	VBG	VBG	_	0	root	_	_
+2	to	_	TO	TO	_	0	erased	_	_
+3	music	_	NN	NN	_	1	prep_to	_	_
+4	.	_	.	.	_	1	punct	_	_","['root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p247-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p237-r1,The boy is dancing. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p209-r1,DANCING,1,1,1,1,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",1
 I01T-gNSC-p174-r1,The boy is dancing to the music. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -10,59 +24,42 @@ I01T-gNSC-p174-r1,The boy is dancing to the music. ,1,1,1,1,1,"1	the	_	DT	DT	_	2
 5	to	_	TO	TO	_	0	erased	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	music	_	NN	NN	_	4	prep_to	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p244-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'det$@%the$@%music', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%the$@%music', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p173-r1,He's doing a happy dance.,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	do	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	happy	_	JJ	JJ	_	6	amod	_	_
+6	dance	_	NN	NN	_	3	dobj	_	_
+7	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%do', 'aux$@%be$@%do', 'root$@%do$@%VROOT', 'det$@%a$@%dance', 'amod$@%happy$@%dance', 'dobj$@%dance$@%do', 'punct$@%.$@%do']","['x$@%he$@%do', 'x$@%be$@%do', 'x$@%do$@%VROOT', 'x$@%a$@%dance', 'x$@%happy$@%dance', 'x$@%dance$@%do', 'x$@%.$@%do']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%do$@%x', 'x$@%a$@%x', 'x$@%happy$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p175-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p226-r1,The boy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p176-r1,Danceing,1,1,0,1,1,"1	dancee	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancee$@%VROOT', 'punct$@%.$@%dancee']","['x$@%dancee$@%VROOT', 'x$@%.$@%dancee']","['x$@%dancee$@%x', 'x$@%.$@%x']",0.944
+I01T-gNSC-p249-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	dance	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p159-r1,The boy is dancing to music.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	dance	_	VBG	VBG	_	0	root	_	_
 5	to	_	TO	TO	_	0	erased	_	_
 6	music	_	NN	NN	_	4	prep_to	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p168-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p253-r1,dancing,1,1,1,1,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']",1
+I01T-gNSC-p185-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	boy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p209-r1,DANCING,1,1,1,1,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p277-r1,The boy is dancing!,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	!	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%!$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%!$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%!$@%x']"
-I01T-gNSC-p170-r1,The boy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p272-r1,Dancing to music ,1,1,1,1,1,"1	dance	_	VBG	VBG	_	0	root	_	_
-2	to	_	TO	TO	_	0	erased	_	_
-3	music	_	NN	NN	_	1	prep_to	_	_
-4	.	_	.	.	_	1	punct	_	_","['root$@%dance$@%VROOT', 'erased$@%to$@%WORDERASED', 'prep_to$@%music$@%dance', 'punct$@%.$@%dance']","['x$@%dance$@%VROOT', 'x$@%to$@%WORDERASED', 'x$@%music$@%dance', 'x$@%.$@%dance']","['x$@%dance$@%x', 'x$@%to$@%x', 'x$@%music$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p260-r1,dancing,1,1,1,1,1,"1	dancing	_	VBG	VBG	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%dancing$@%VROOT', 'punct$@%.$@%dancing']","['x$@%dancing$@%VROOT', 'x$@%.$@%dancing']","['x$@%dancing$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p263-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p171-r1,The lad is dancing.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	lad	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lad', 'nsubj$@%lad$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%lad', 'x$@%lad$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%lad$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p234-r1,The boy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p226-r1,The boy is dancing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
-I01T-gNSC-p215-r1,The boy is dancing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	boy	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	dance	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%dance', 'aux$@%be$@%dance', 'root$@%dance$@%VROOT', 'punct$@%.$@%dance']","['x$@%the$@%boy', 'x$@%boy$@%dance', 'x$@%be$@%dance', 'x$@%dance$@%VROOT', 'x$@%.$@%dance']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%dance$@%x', 'x$@%.$@%x']",1

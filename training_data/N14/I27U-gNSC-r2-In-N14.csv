@@ -1,14 +1,4 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
-I27U-gNSC-p292-r1,The girl is singing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	girl	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	singing	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%the$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p180-r1,A girl is singing.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
-2	girl	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	singing	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%a$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']"
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
 I27U-gNSC-p238-r1,The little girl is singing a song.,1,1,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
 2	little	_	JJ	JJ	_	3	amod	_	_
 3	girl	_	NN	NN	_	5	nsubj	_	_
@@ -16,103 +6,86 @@ I27U-gNSC-p238-r1,The little girl is singing a song.,1,1,1,1,1,"1	the	_	DT	DT	_	
 5	sing	_	VBG	VBG	_	0	root	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	song	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%sing', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%sing', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p206-r1,This little girl is singing as loud as she can.,1,1,1,1,1,"1	this	_	DT	DT	_	3	det	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%sing', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%sing', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p284-r1,Child singing,1,1,0,1,1,"1	child	_	NN	NN	_	0	root	_	_
+2	singing	_	VBG	VBG	_	1	partmod	_	_
+3	.	_	.	.	_	1	punct	_	_","['root$@%child$@%VROOT', 'partmod$@%singing$@%child', 'punct$@%.$@%child']","['x$@%child$@%VROOT', 'x$@%singing$@%child', 'x$@%.$@%child']","['x$@%child$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",0.944
+I27U-gNSC-p228-r1,the girl is singing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	singing	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%the$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p195-r1,A little girl is singing.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
 2	little	_	JJ	JJ	_	3	amod	_	_
 3	girl	_	NN	NN	_	5	nsubj	_	_
 4	be	_	VBZ	VBZ	_	5	aux	_	_
 5	singing	_	VBG	VBG	_	0	root	_	_
-6	as	_	RB	RB	_	7	advmod	_	_
-7	loud	_	RB	RB	_	5	advmod	_	_
-8	as	_	IN	IN	_	10	mark	_	_
-9	she	_	PRP	PRP	_	10	nsubj	_	_
-10	can	_	MD	MD	_	7	ccomp	_	_
-11	.	_	.	.	_	5	punct	_	_","['det$@%this$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'advmod$@%as$@%loud', 'advmod$@%loud$@%singing', 'mark$@%as$@%can', 'nsubj$@%she$@%can', 'ccomp$@%can$@%loud', 'punct$@%.$@%singing']","['x$@%this$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%as$@%loud', 'x$@%loud$@%singing', 'x$@%as$@%can', 'x$@%she$@%can', 'x$@%can$@%loud', 'x$@%.$@%singing']","['x$@%this$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%as$@%x', 'x$@%loud$@%x', 'x$@%as$@%x', 'x$@%she$@%x', 'x$@%can$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p167-r1,A girl sings. ,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+6	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%a$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p156-r1,The girl sings.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	3	nsubj	_	_
 3	sing	_	VBZ	VBZ	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%sing', 'root$@%sing$@%VROOT', 'punct$@%.$@%sing']","['x$@%a$@%girl', 'x$@%girl$@%sing', 'x$@%sing$@%VROOT', 'x$@%.$@%sing']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%sing$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p232-r1,The girl is singing,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%sing', 'root$@%sing$@%VROOT', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%girl$@%sing', 'x$@%sing$@%VROOT', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%sing$@%x', 'x$@%.$@%x']",0.907
+I27U-gNSC-p240-r1,The girl is singing. ,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	singing	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%the$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p158-r1,The girl is singing.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%the$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p157-r1,The girl is singing a song.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	singing	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%singing', 'aux$@%be$@%singing', 'root$@%singing$@%VROOT', 'punct$@%.$@%singing']","['x$@%the$@%girl', 'x$@%girl$@%singing', 'x$@%be$@%singing', 'x$@%singing$@%VROOT', 'x$@%.$@%singing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%singing$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p214-r2,The girl is practicing singing Happy Birthday,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
-2	girl	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	practice	_	VBG	VBG	_	0	root	_	_
-5	singing	_	VBG	VBG	_	4	xcomp	_	_
-6	happy	_	JJ	JJ	_	7	amod	_	_
-7	birthday	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%practice', 'aux$@%be$@%practice', 'root$@%practice$@%VROOT', 'xcomp$@%singing$@%practice', 'amod$@%happy$@%birthday', 'dobj$@%birthday$@%singing', 'punct$@%.$@%practice']","['x$@%the$@%girl', 'x$@%girl$@%practice', 'x$@%be$@%practice', 'x$@%practice$@%VROOT', 'x$@%singing$@%practice', 'x$@%happy$@%birthday', 'x$@%birthday$@%singing', 'x$@%.$@%practice']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%practice$@%x', 'x$@%singing$@%x', 'x$@%happy$@%x', 'x$@%birthday$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p198-r2,"Yes, she can sing but her ability to keep to the proper key leaves something to behold. ",1,0,1,0,0,"1	yes	_	UH	UH	_	5	dep	_	_
-2	,	_	,	,	_	5	punct	_	_
-3	she	_	PRP	PRP	_	5	nsubj	_	_
-4	can	_	MD	MD	_	5	aux	_	_
-5	sing	_	VB	VB	_	0	root	_	_
-6	but	_	CC	CC	_	5	prep	_	_
-7	she	_	PRP$	PRP$	_	8	poss	_	_
-8	ability	_	NN	NN	_	6	dep	_	_
-9	to	_	TO	TO	_	10	aux	_	_
-10	keep	_	VB	VB	_	8	infmod	_	_
-11	to	_	TO	TO	_	0	erased	_	_
-12	the	_	DT	DT	_	16	det	_	_
-13	proper	_	JJ	JJ	_	16	amod	_	_
-14	key	_	JJ	JJ	_	16	amod	_	_
-15	leaf	_	NNS	NNS	_	16	nn	_	_
-16	something	_	NN	NN	_	10	prep_to	_	_
-17	to	_	TO	TO	_	18	aux	_	_
-18	behold	_	VB	VB	_	10	xcomp	_	_
-19	.	_	.	.	_	5	punct	_	_","['dep$@%yes$@%sing', 'punct$@%,$@%sing', 'nsubj$@%she$@%sing', 'aux$@%can$@%sing', 'root$@%sing$@%VROOT', 'prep$@%but$@%sing', 'poss$@%she$@%ability', 'dep$@%ability$@%but', 'aux$@%to$@%keep', 'infmod$@%keep$@%ability', 'erased$@%to$@%WORDERASED', 'det$@%the$@%something', 'amod$@%proper$@%something', 'amod$@%key$@%something', 'nn$@%leaf$@%something', 'prep_to$@%something$@%keep', 'aux$@%to$@%behold', 'xcomp$@%behold$@%keep', 'punct$@%.$@%sing']","['x$@%yes$@%sing', 'x$@%,$@%sing', 'x$@%she$@%sing', 'x$@%can$@%sing', 'x$@%sing$@%VROOT', 'x$@%but$@%sing', 'x$@%she$@%ability', 'x$@%ability$@%but', 'x$@%to$@%keep', 'x$@%keep$@%ability', 'x$@%to$@%WORDERASED', 'x$@%the$@%something', 'x$@%proper$@%something', 'x$@%key$@%something', 'x$@%leaf$@%something', 'x$@%something$@%keep', 'x$@%to$@%behold', 'x$@%behold$@%keep', 'x$@%.$@%sing']","['x$@%yes$@%x', 'x$@%,$@%x', 'x$@%she$@%x', 'x$@%can$@%x', 'x$@%sing$@%x', 'x$@%but$@%x', 'x$@%she$@%x', 'x$@%ability$@%x', 'x$@%to$@%x', 'x$@%keep$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%proper$@%x', 'x$@%key$@%x', 'x$@%leaf$@%x', 'x$@%something$@%x', 'x$@%to$@%x', 'x$@%behold$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p278-r2,F,0,0,0,0,0,1	f.	_	NNP	NNP	_	0	root	_	_,['root$@%f.$@%VROOT'],['x$@%f.$@%VROOT'],['x$@%f.$@%x']
-I27U-gNSC-p157-r2,The girl with the purple outfit is singing a song.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	girl	_	NN	NN	_	8	nsubj	_	_
-3	with	_	IN	IN	_	0	erased	_	_
-4	the	_	DT	DT	_	6	det	_	_
-5	purple	_	JJ	JJ	_	6	amod	_	_
-6	outfit	_	NN	NN	_	2	prep_with	_	_
-7	be	_	VBZ	VBZ	_	8	aux	_	_
-8	sing	_	VBG	VBG	_	0	root	_	_
-9	a	_	DT	DT	_	10	det	_	_
-10	song	_	NN	NN	_	8	dobj	_	_
-11	.	_	.	.	_	8	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%sing', 'erased$@%with$@%WORDERASED', 'det$@%the$@%outfit', 'amod$@%purple$@%outfit', 'prep_with$@%outfit$@%girl', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%girl$@%sing', 'x$@%with$@%WORDERASED', 'x$@%the$@%outfit', 'x$@%purple$@%outfit', 'x$@%outfit$@%girl', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%with$@%x', 'x$@%the$@%x', 'x$@%purple$@%x', 'x$@%outfit$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']"
+4	sing	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	song	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%sing', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%girl$@%sing', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p166-r2,A little girl is performing by singing a song.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	little	_	JJ	JJ	_	3	amod	_	_
+3	girl	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	perform	_	VBG	VBG	_	0	root	_	_
+6	by	_	IN	IN	_	0	erased	_	_
+7	sing	_	VBG	VBG	_	5	prepc_by	_	_
+8	a	_	DT	DT	_	9	det	_	_
+9	song	_	NN	NN	_	7	dobj	_	_
+10	.	_	.	.	_	5	punct	_	_","['det$@%a$@%girl', 'amod$@%little$@%girl', 'nsubj$@%girl$@%perform', 'aux$@%be$@%perform', 'root$@%perform$@%VROOT', 'erased$@%by$@%WORDERASED', 'prepc_by$@%sing$@%perform', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%perform']","['x$@%a$@%girl', 'x$@%little$@%girl', 'x$@%girl$@%perform', 'x$@%be$@%perform', 'x$@%perform$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%sing$@%perform', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%perform']","['x$@%a$@%x', 'x$@%little$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%perform$@%x', 'x$@%by$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",1
 I27U-gNSC-p228-r2,the girl is talented ,0,0,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubjpass	_	_
 3	be	_	VBZ	VBZ	_	4	auxpass	_	_
 4	talented	_	VBN	VBN	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubjpass$@%girl$@%talented', 'auxpass$@%be$@%talented', 'root$@%talented$@%VROOT', 'punct$@%.$@%talented']","['x$@%the$@%girl', 'x$@%girl$@%talented', 'x$@%be$@%talented', 'x$@%talented$@%VROOT', 'x$@%.$@%talented']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%talented$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p156-r2,The young girl is singing her favorite song out loud.,1,1,1,1,0,"1	the	_	DT	DT	_	3	det	_	_
-2	young	_	JJ	JJ	_	3	amod	_	_
-3	girl	_	NN	NN	_	5	nsubj	_	_
-4	be	_	VBZ	VBZ	_	5	aux	_	_
-5	sing	_	VBG	VBG	_	0	root	_	_
-6	she	_	PRP$	PRP$	_	8	poss	_	_
-7	favorite	_	JJ	JJ	_	8	amod	_	_
-8	song	_	NN	NN	_	5	dobj	_	_
-9	out	_	IN	IN	_	5	advmod	_	_
-10	loud	_	RB	RB	_	9	advmod	_	_
-11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'amod$@%young$@%girl', 'nsubj$@%girl$@%sing', 'aux$@%be$@%sing', 'root$@%sing$@%VROOT', 'poss$@%she$@%song', 'amod$@%favorite$@%song', 'dobj$@%song$@%sing', 'advmod$@%out$@%sing', 'advmod$@%loud$@%out', 'punct$@%.$@%sing']","['x$@%the$@%girl', 'x$@%young$@%girl', 'x$@%girl$@%sing', 'x$@%be$@%sing', 'x$@%sing$@%VROOT', 'x$@%she$@%song', 'x$@%favorite$@%song', 'x$@%song$@%sing', 'x$@%out$@%sing', 'x$@%loud$@%out', 'x$@%.$@%sing']","['x$@%the$@%x', 'x$@%young$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%sing$@%x', 'x$@%she$@%x', 'x$@%favorite$@%x', 'x$@%song$@%x', 'x$@%out$@%x', 'x$@%loud$@%x', 'x$@%.$@%x']"
-I27U-gNSC-p268-r2,"Margaret is trying out for the school talent show by singing her favorite song, Stand by Me.",1,1,1,1,0,"1	margaret	_	NNP	NNP	_	3	nsubj	_	_
-2	be	_	VBZ	VBZ	_	3	aux	_	_
-3	try	_	VBG	VBG	_	0	root	_	_
-4	out	_	RP	RP	_	3	prt	_	_
-5	for	_	IN	IN	_	0	erased	_	_
-6	the	_	DT	DT	_	8	det	_	_
-7	school	_	NN	NN	_	8	nn	_	_
-8	talent	_	NN	NN	_	3	prep_for	_	_
-9	show	_	VB	VB	_	3	ccomp	_	_
-10	by	_	IN	IN	_	0	erased	_	_
-11	sing	_	VBG	VBG	_	9	prepc_by	_	_
-12	she	_	PRP$	PRP$	_	14	poss	_	_
-13	favorite	_	JJ	JJ	_	14	amod	_	_
-14	song	_	NN	NN	_	11	dobj	_	_
-15	,	_	,	,	_	9	punct	_	_
-16	stand	_	VB	VB	_	9	dep	_	_
-17	by	_	IN	IN	_	0	erased	_	_
-18	i	_	PRP	PRP	_	16	prep_by	_	_
-19	.	_	.	.	_	3	punct	_	_","['nsubj$@%margaret$@%try', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'prt$@%out$@%try', 'erased$@%for$@%WORDERASED', 'det$@%the$@%talent', 'nn$@%school$@%talent', 'prep_for$@%talent$@%try', 'ccomp$@%show$@%try', 'erased$@%by$@%WORDERASED', 'prepc_by$@%sing$@%show', 'poss$@%she$@%song', 'amod$@%favorite$@%song', 'dobj$@%song$@%sing', 'punct$@%,$@%show', 'dep$@%stand$@%show', 'erased$@%by$@%WORDERASED', 'prep_by$@%i$@%stand', 'punct$@%.$@%try']","['x$@%margaret$@%try', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%out$@%try', 'x$@%for$@%WORDERASED', 'x$@%the$@%talent', 'x$@%school$@%talent', 'x$@%talent$@%try', 'x$@%show$@%try', 'x$@%by$@%WORDERASED', 'x$@%sing$@%show', 'x$@%she$@%song', 'x$@%favorite$@%song', 'x$@%song$@%sing', 'x$@%,$@%show', 'x$@%stand$@%show', 'x$@%by$@%WORDERASED', 'x$@%i$@%stand', 'x$@%.$@%try']","['x$@%margaret$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%out$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%school$@%x', 'x$@%talent$@%x', 'x$@%show$@%x', 'x$@%by$@%x', 'x$@%sing$@%x', 'x$@%she$@%x', 'x$@%favorite$@%x', 'x$@%song$@%x', 'x$@%,$@%x', 'x$@%stand$@%x', 'x$@%by$@%x', 'x$@%i$@%x', 'x$@%.$@%x']"
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubjpass$@%girl$@%talented', 'auxpass$@%be$@%talented', 'root$@%talented$@%VROOT', 'punct$@%.$@%talented']","['x$@%the$@%girl', 'x$@%girl$@%talented', 'x$@%be$@%talented', 'x$@%talented$@%VROOT', 'x$@%.$@%talented']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%talented$@%x', 'x$@%.$@%x']",0.056
+I27U-gNSC-p292-r2,"Wow, LSD is really cool.",0,0,1,0,0,"1	wow	_	UH	UH	_	6	dep	_	_
+2	,	_	,	,	_	6	punct	_	_
+3	lsd	_	NNP	NNP	_	6	nsubj	_	_
+4	be	_	VBZ	VBZ	_	6	cop	_	_
+5	really	_	RB	RB	_	6	advmod	_	_
+6	cool	_	JJ	JJ	_	0	root	_	_
+7	.	_	.	.	_	6	punct	_	_","['dep$@%wow$@%cool', 'punct$@%,$@%cool', 'nsubj$@%lsd$@%cool', 'cop$@%be$@%cool', 'advmod$@%really$@%cool', 'root$@%cool$@%VROOT', 'punct$@%.$@%cool']","['x$@%wow$@%cool', 'x$@%,$@%cool', 'x$@%lsd$@%cool', 'x$@%be$@%cool', 'x$@%really$@%cool', 'x$@%cool$@%VROOT', 'x$@%.$@%cool']","['x$@%wow$@%x', 'x$@%,$@%x', 'x$@%lsd$@%x', 'x$@%be$@%x', 'x$@%really$@%x', 'x$@%cool$@%x', 'x$@%.$@%x']",0.056
+I27U-gNSC-p284-r2,Song,0,0,0,0,0,"1	song	_	NN	NN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%song$@%VROOT', 'punct$@%.$@%song']","['x$@%song$@%VROOT', 'x$@%.$@%song']","['x$@%song$@%x', 'x$@%.$@%x']",0
+I27U-gNSC-p189-r2,The girl likes music. ,0,0,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	like	_	VBZ	VBZ	_	0	root	_	_
+4	music	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%like', 'root$@%like$@%VROOT', 'dobj$@%music$@%like', 'punct$@%.$@%like']","['x$@%the$@%girl', 'x$@%girl$@%like', 'x$@%like$@%VROOT', 'x$@%music$@%like', 'x$@%.$@%like']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%like$@%x', 'x$@%music$@%x', 'x$@%.$@%x']",0.318
+I27U-gNSC-p180-r2,"A girl is standing with her arms outstretched, singing a song.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	stand	_	VBG	VBG	_	0	root	_	_
+5	with	_	IN	IN	_	0	erased	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	arm	_	NNS	NNS	_	4	prep_with	_	_
+8	outstretch	_	RB	RB	_	4	advmod	_	_
+9	,	_	,	,	_	4	punct	_	_
+10	sing	_	VBG	VBG	_	4	xcomp	_	_
+11	a	_	DT	DT	_	12	det	_	_
+12	song	_	NN	NN	_	10	dobj	_	_
+13	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%stand', 'aux$@%be$@%stand', 'root$@%stand$@%VROOT', 'erased$@%with$@%WORDERASED', 'poss$@%she$@%arm', 'prep_with$@%arm$@%stand', 'advmod$@%outstretch$@%stand', 'punct$@%,$@%stand', 'xcomp$@%sing$@%stand', 'det$@%a$@%song', 'dobj$@%song$@%sing', 'punct$@%.$@%stand']","['x$@%a$@%girl', 'x$@%girl$@%stand', 'x$@%be$@%stand', 'x$@%stand$@%VROOT', 'x$@%with$@%WORDERASED', 'x$@%she$@%arm', 'x$@%arm$@%stand', 'x$@%outstretch$@%stand', 'x$@%,$@%stand', 'x$@%sing$@%stand', 'x$@%a$@%song', 'x$@%song$@%sing', 'x$@%.$@%stand']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%stand$@%x', 'x$@%with$@%x', 'x$@%she$@%x', 'x$@%arm$@%x', 'x$@%outstretch$@%x', 'x$@%,$@%x', 'x$@%sing$@%x', 'x$@%a$@%x', 'x$@%song$@%x', 'x$@%.$@%x']",1
+I27U-gNSC-p287-r2,Musical notes pouring out of a girl's mouth. ,0,1,0,1,0,"1	musical	_	JJ	JJ	_	2	amod	_	_
+2	note	_	NNS	NNS	_	0	root	_	_
+3	pour	_	VBG	VBG	_	2	partmod	_	_
+4	out	_	RP	RP	_	0	erased	_	_
+5	of	_	IN	IN	_	0	erased	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	girl	_	NN	NN	_	9	poss	_	_
+8	's	_	POS	POS	_	0	erased	_	_
+9	mouth	_	NN	NN	_	3	prep_out_of	_	_
+10	.	_	.	.	_	2	punct	_	_","['amod$@%musical$@%note', 'root$@%note$@%VROOT', 'partmod$@%pour$@%note', 'erased$@%out$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'det$@%a$@%girl', 'poss$@%girl$@%mouth', ""erased$@%'s$@%WORDERASED"", 'prep_out_of$@%mouth$@%pour', 'punct$@%.$@%note']","['x$@%musical$@%note', 'x$@%note$@%VROOT', 'x$@%pour$@%note', 'x$@%out$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%mouth', ""x$@%'s$@%WORDERASED"", 'x$@%mouth$@%pour', 'x$@%.$@%note']","['x$@%musical$@%x', 'x$@%note$@%x', 'x$@%pour$@%x', 'x$@%out$@%x', 'x$@%of$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', ""x$@%'s$@%x"", 'x$@%mouth$@%x', 'x$@%.$@%x']",0.317

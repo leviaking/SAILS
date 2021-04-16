@@ -1,6 +1,9 @@
 term,model tf-idf,test tf-idf,(last cell in A is cos)
 advmod$@%then$@%cloudy,0.47538589643481327,0.0
+amod$@%bloated$@%feeling,0.4414297609751837,0.0
 amod$@%bring$@%rain,0.41200111024350483,0.0
+amod$@%large$@%meal,0.4414297609751837,0.0
+amod$@%mexican$@%meal,0.4414297609751837,0.0
 amod$@%predict$@%pattern,0.5618196957865975,0.0
 aux$@%be$@%broadcast,0.8828595219503674,0.0
 aux$@%be$@%deliver,0.6858586841365785,0.0
@@ -22,6 +25,7 @@ aux$@%be$@%stand,0.35249377824168426,0.0
 aux$@%be$@%talk,0.3805653047154279,0.0
 aux$@%be$@%tell,0.34171459266439475,0.0
 aux$@%be$@%try,0.5091224443902658,0.0
+aux$@%have$@%after,0.3919192480780448,0.0
 aux$@%to$@%point,0.41550715829258844,0.0
 aux$@%to$@%see,0.14438182052580772,0.0
 aux$@%to$@%tell,0.20759476662821968,0.0
@@ -42,6 +46,7 @@ det$@%a$@%forecast,2.8414145485658246,0.0
 det$@%a$@%forecaster,0.8828595219503674,0.0
 det$@%a$@%hand,0.9258577206800966,0.0
 det$@%a$@%map,3.966580383254766,0.0
+det$@%a$@%meal,0.30243617889980423,0.0
 det$@%a$@%meteorologist,2.5382211256073064,0.0
 det$@%a$@%person,0.5030614801646055,0.0
 det$@%a$@%prediction,0.6858586841365785,0.0
@@ -49,6 +54,7 @@ det$@%a$@%reporter,0.6048723577996085,0.0
 det$@%a$@%woman,2.416762914282264,0.0
 det$@%that$@%region,0.5486869473092628,0.0
 det$@%the$@%condition,0.27460294491674264,0.0
+det$@%the$@%feeling,0.20870857968793502,0.0
 det$@%the$@%forecast,3.8257245951182592,0.0
 det$@%the$@%lady,3.0335770315609794,0.0
 det$@%the$@%map,0.5992152865665853,0.0
@@ -63,6 +69,7 @@ det$@%the$@%woman,2.9380500889075267,2.4911371995386364
 dobj$@%cloud$@%show,0.6180016653652572,0.0
 dobj$@%condition$@%explae,0.6180016653652572,0.0
 dobj$@%description$@%give,0.6096521636769586,0.0
+dobj$@%feeling$@%after,0.4414297609751837,0.0
 dobj$@%forecast$@%deliver,1.545004163413143,0.0
 dobj$@%forecast$@%explain,0.8828595219503674,0.0
 dobj$@%forecast$@%give,4.083225289020449,0.0
@@ -129,6 +136,7 @@ nsubj$@%person$@%present,0.6858586841365785,0.0
 nsubj$@%person$@%tell,0.42345036374870526,0.0
 nsubj$@%report$@%show,0.5486869473092628,0.0
 nsubj$@%reporter$@%explain,0.8828595219503674,0.0
+nsubj$@%she$@%after,0.4414297609751837,0.0
 nsubj$@%she$@%explae,0.6180016653652572,0.0
 nsubj$@%she$@%report,1.6480044409740193,0.0
 nsubj$@%the$@%believe,0.41200111024350483,0.0
@@ -148,7 +156,9 @@ nsubj$@%woman$@%review,0.7725020817065715,0.0
 nsubj$@%woman$@%show,1.030002775608762,0.0
 nsubj$@%woman$@%stand,0.49880631573569345,0.0
 nsubj$@%woman$@%talk,0.7725020817065715,0.0
+nsubj$@%young$@%woman,0.4414297609751837,0.0
 partmod$@%point$@%woman,0.6180016653652572,0.0
+pobj$@%meal$@%after,0.4414297609751837,0.0
 poss$@%its$@%stomach,0.41200111024350483,0.0
 prep_about$@%forecast$@%tell,0.515001387804381,0.0
 prep_about$@%weather$@%talk,0.7725020817065715,0.0
@@ -192,6 +202,8 @@ punct$@%.$@%talk,0.3432536811459283,0.0
 punct$@%.$@%tell,0.12405573095195241,0.0
 punct$@%.$@%try,0.34680548460152566,0.0
 punct$@%.$@%weather,2.743434736546314,0.0
+punct$@%.$@%woman,0.27015152720387153,0.0
+rcmod$@%after$@%feeling,0.4414297609751837,0.0
 rcmod$@%believe$@%pattern,0.41200111024350483,0.0
 rel$@%which$@%believe,0.30470524941456484,0.0
 root$@%be$@%VROOT,0.025629426798485615,0.0
@@ -204,7 +216,6 @@ root$@%explae$@%VROOT,0.6180016653652572,0.0
 root$@%explain$@%VROOT,0.9657434091921425,0.0
 root$@%forecaster$@%VROOT,0.8828595219503674,0.0
 root$@%give$@%VROOT,1.0913390191020935,0.0
-root$@%h.$@%VROOT,6.180016653652572,0.0
 root$@%have$@%VROOT,0.02071464936791988,0.0
 root$@%inform$@%VROOT,0.29414342495328477,0.0
 root$@%introduce$@%VROOT,0.0,3.001962823304627
@@ -220,10 +231,12 @@ root$@%talk$@%VROOT,0.33543863652326156,0.0
 root$@%tell$@%VROOT,0.12105240291168601,0.0
 root$@%try$@%VROOT,0.3340814080459009,0.0
 root$@%weather$@%VROOT,2.743434736546314,0.0
+root$@%woman$@%VROOT,0.2844851483083109,0.0
 tmod$@%today$@%show,0.5486869473092628,0.0
 xcomp$@%point$@%try,0.5618196957865975,0.0
 xcomp$@%see$@%report,0.5486869473092628,0.0
 xcomp$@%tell$@%try,0.39947685771105684,0.0
+xcomp$@%visualize$@%woman,0.4414297609751837,0.0
 xsubj$@%lady$@%tell,0.515001387804381,0.0
 xsubj$@%sally$@%point,0.5618196957865975,0.0
-0.8494999245546613
+0.8439482766050146

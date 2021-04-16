@@ -1,6 +1,9 @@
 term,model tf-idf,test tf-idf,(last cell in A is cos)
 advmod$@%then$@%cloudy,6.180016653652572,0.0
+amod$@%bloated$@%feeling,6.180016653652572,0.0
 amod$@%bring$@%rain,6.180016653652572,0.0
+amod$@%large$@%meal,6.180016653652572,0.0
+amod$@%mexican$@%meal,6.180016653652572,0.0
 amod$@%predict$@%pattern,6.180016653652572,0.0
 aux$@%be$@%broadcast,6.180016653652572,0.0
 aux$@%be$@%deliver,5.486869473092628,0.0
@@ -21,6 +24,7 @@ aux$@%be$@%stand,3.877431560658527,0.0
 aux$@%be$@%talk,3.044522437723423,0.0
 aux$@%be$@%tell,4.100575111972737,0.0
 aux$@%be$@%try,5.843840231262181,0.0
+aux$@%have$@%after,5.486869473092628,0.0
 aux$@%to$@%point,4.570578741218473,0.0
 aux$@%to$@%see,1.4438182052580772,0.0
 aux$@%to$@%tell,2.4911371995386364,0.0
@@ -41,6 +45,7 @@ det$@%a$@%forecast,21.94747789237051,0.0
 det$@%a$@%forecaster,6.180016653652572,0.0
 det$@%a$@%hand,6.943932905100725,0.0
 det$@%a$@%map,38.34977834026146,0.0
+det$@%a$@%meal,4.23410650459726,0.0
 det$@%a$@%meteorologist,18.540049960957717,0.0
 det$@%a$@%person,5.249337184326318,0.0
 det$@%a$@%prediction,5.486869473092628,0.0
@@ -48,6 +53,7 @@ det$@%a$@%reporter,4.23410650459726,0.0
 det$@%a$@%woman,18.986833311058025,0.0
 det$@%that$@%region,5.486869473092628,0.0
 det$@%the$@%condition,2.7460294491674264,0.0
+det$@%the$@%feeling,2.9219201156310906,0.0
 det$@%the$@%forecast,30.90008326826286,0.0
 det$@%the$@%lady,25.865770027052008,0.0
 det$@%the$@%map,4.793722292532682,0.0
@@ -62,6 +68,7 @@ det$@%the$@%woman,24.911371995386364,2.4911371995386364
 dobj$@%cloud$@%show,6.180016653652572,0.0
 dobj$@%condition$@%explae,6.180016653652572,0.0
 dobj$@%description$@%give,5.486869473092628,0.0
+dobj$@%feeling$@%after,6.180016653652572,0.0
 dobj$@%forecast$@%deliver,6.180016653652572,0.0
 dobj$@%forecast$@%explain,6.180016653652572,0.0
 dobj$@%forecast$@%give,30.90008326826286,0.0
@@ -127,6 +134,7 @@ nsubj$@%person$@%present,5.486869473092628,0.0
 nsubj$@%person$@%tell,5.081404364984463,0.0
 nsubj$@%report$@%show,5.486869473092628,0.0
 nsubj$@%reporter$@%explain,6.180016653652572,0.0
+nsubj$@%she$@%after,6.180016653652572,0.0
 nsubj$@%she$@%explae,6.180016653652572,0.0
 nsubj$@%she$@%report,12.360033307305144,0.0
 nsubj$@%the$@%believe,6.180016653652572,0.0
@@ -145,7 +153,9 @@ nsubj$@%woman$@%review,6.180016653652572,0.0
 nsubj$@%woman$@%show,6.180016653652572,0.0
 nsubj$@%woman$@%stand,5.486869473092628,0.0
 nsubj$@%woman$@%talk,6.180016653652572,0.0
+nsubj$@%young$@%woman,6.180016653652572,0.0
 partmod$@%point$@%woman,6.180016653652572,0.0
+pobj$@%meal$@%after,6.180016653652572,0.0
 poss$@%its$@%stomach,6.180016653652572,0.0
 prep_about$@%forecast$@%tell,6.180016653652572,0.0
 prep_about$@%weather$@%talk,6.180016653652572,0.0
@@ -188,6 +198,8 @@ punct$@%.$@%talk,2.7460294491674264,0.0
 punct$@%.$@%tell,1.488668771423429,0.0
 punct$@%.$@%try,3.980723823252294,0.0
 punct$@%.$@%weather,5.486869473092628,0.0
+punct$@%.$@%woman,3.782121380854202,0.0
+rcmod$@%after$@%feeling,6.180016653652572,0.0
 rcmod$@%believe$@%pattern,6.180016653652572,0.0
 rel$@%which$@%believe,4.570578741218473,0.0
 root$@%be$@%VROOT,0.2278171270976499,0.0
@@ -200,7 +212,6 @@ root$@%explae$@%VROOT,6.180016653652572,0.0
 root$@%explain$@%VROOT,7.054125771490433,0.0
 root$@%forecaster$@%VROOT,6.180016653652572,0.0
 root$@%give$@%VROOT,8.544230922368236,0.0
-root$@%h.$@%VROOT,6.180016653652572,0.0
 root$@%have$@%VROOT,0.3107197405187982,0.0
 root$@%inform$@%VROOT,3.2355776744861324,0.0
 root$@%point$@%VROOT,4.617631285489363,0.0
@@ -215,10 +226,12 @@ root$@%talk$@%VROOT,2.6835090921860925,0.0
 root$@%tell$@%VROOT,1.452628834940232,0.0
 root$@%try$@%VROOT,3.8346735532225145,0.0
 root$@%weather$@%VROOT,5.486869473092628,0.0
+root$@%woman$@%VROOT,3.982792076316353,0.0
 tmod$@%today$@%show,5.486869473092628,0.0
 xcomp$@%point$@%try,6.180016653652572,0.0
 xcomp$@%see$@%report,5.486869473092628,0.0
 xcomp$@%tell$@%try,4.793722292532682,0.0
+xcomp$@%visualize$@%woman,6.180016653652572,0.0
 xsubj$@%lady$@%tell,6.180016653652572,0.0
 xsubj$@%sally$@%point,6.180016653652572,0.0
-0.72084852630135399
+0.7226729075864127

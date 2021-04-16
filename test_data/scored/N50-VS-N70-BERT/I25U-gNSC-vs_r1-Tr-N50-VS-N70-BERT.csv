@@ -1,11 +1,11 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh_TC,xdh_TC,xdx_TC,ldh_rank,xdh_rank,xdx_rank,BERT_score,BERT_rank
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
 I25U-gNNS-p001-r1,The dog is chasing another dog.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	another	_	DT	DT	_	6	det	_	_
 6	dog	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.3307003242975245,0.26321662744853824,0.2489503711477331,18.0,19.0,24.0,0.5745406150817871,56
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.32989120713224485,0.262106183845375,0.25036839594265703,0.5880737900733948,56
 I25U-gNNS-p002-r1,The black and white dog is chasing the yellow dog.,0,1,1,1,0,"1	the	_	DT	DT	_	5	det	_	_
 2	black	_	JJ	JJ	_	5	amod	_	_
 3	and	_	CC	CC	_	0	erased	_	_
@@ -16,49 +16,49 @@ I25U-gNNS-p002-r1,The black and white dog is chasing the yellow dog.,0,1,1,1,0,"
 8	the	_	DT	DT	_	10	det	_	_
 9	yellow	_	JJ	JJ	_	10	amod	_	_
 10	dog	_	NN	NN	_	7	dobj	_	_
-11	.	_	.	.	_	7	punct	_	_","['det$@%the$@%dog', 'amod$@%black$@%dog', 'erased$@%and$@%WORDERASED', 'amod$@%white$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%dog', 'amod$@%yellow$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%black$@%dog', 'x$@%and$@%WORDERASED', 'x$@%white$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%dog', 'x$@%yellow$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%black$@%x', 'x$@%and$@%x', 'x$@%white$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.4186200951091516,0.3401269553911731,0.3443656210253251,25.0,26.0,58.0,0.5565967559814453,60
+11	.	_	.	.	_	7	punct	_	_","['det$@%the$@%dog', 'amod$@%black$@%dog', 'erased$@%and$@%WORDERASED', 'amod$@%white$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%dog', 'amod$@%yellow$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%black$@%dog', 'x$@%and$@%WORDERASED', 'x$@%white$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%dog', 'x$@%yellow$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%black$@%x', 'x$@%and$@%x', 'x$@%white$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.418998624011682,0.34009709815346695,0.3457066437940817,0.5687896013259888,60
 I25U-gNNS-p003-r1,he dog is pursuing the cat,1,1,0,1,1,"1	he	_	PRP	PRP	_	4	nsubj	_	_
 2	dog	_	RB	RB	_	4	advmod	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	pursue	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['nsubj$@%he$@%pursue', 'advmod$@%dog$@%pursue', 'aux$@%be$@%pursue', 'root$@%pursue$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%pursue', 'punct$@%.$@%pursue']","['x$@%he$@%pursue', 'x$@%dog$@%pursue', 'x$@%be$@%pursue', 'x$@%pursue$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%pursue', 'x$@%.$@%pursue']","['x$@%he$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%pursue$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.9307182918173736,0.9302839975329612,0.3393697439489309,64.0,64.0,57.0,0.7371222972869873,27
+7	.	_	.	.	_	4	punct	_	_","['nsubj$@%he$@%pursue', 'advmod$@%dog$@%pursue', 'aux$@%be$@%pursue', 'root$@%pursue$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%pursue', 'punct$@%.$@%pursue']","['x$@%he$@%pursue', 'x$@%dog$@%pursue', 'x$@%be$@%pursue', 'x$@%pursue$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%pursue', 'x$@%.$@%pursue']","['x$@%he$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%pursue$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.9323294757348836,0.9318863040439319,0.334455117002364,0.7650018930435181,27
 I25U-gNNS-p008-r1,The dog is chasing a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.06664561470527852,0.06620343338045809,0.009326195960936643,10.5,10.5,2.5,0.8517385721206665,14
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0671109324729311,0.06672059263650333,0.009517902121496724,0.8822089433670044,6
 I25U-gNNS-p010-r1,the dog is chasing the cat,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251606,4.5,4.5,10.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p011-r1,A dog is chasing a cat,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0716344928446424,0.07117656818692919,0.009327994501512893,14.5,14.5,13.0,0.8536704182624817,2
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.07206923915941342,0.07166368608414443,0.009519691804895205,0.8839579820632935,2
 I25U-gNNS-p015-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.2850781408889921,50.0,49.0,42.5,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p016-r1,A dog is catching a cat.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8388785971710838,0.8326411862389067,0.2850787779864997,40.5,40.5,44.5,0.6607626080513,35
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8426255632868768,0.8364876505723222,0.2798667743346097,0.6843841075897217,35
 I25U-gNNS-p018-r1,The white animal is catching up to a yellow animal. ,0,1,1,0,1,"1	the	_	DT	DT	_	3	det	_	_
 2	white	_	JJ	JJ	_	3	amod	_	_
 3	animal	_	NN	NN	_	5	nsubj	_	_
@@ -69,7 +69,7 @@ I25U-gNNS-p018-r1,The white animal is catching up to a yellow animal. ,0,1,1,0,1
 8	a	_	DT	DT	_	10	det	_	_
 9	yellow	_	JJ	JJ	_	10	amod	_	_
 10	animal	_	NN	NN	_	5	prep_to	_	_
-11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%animal', 'amod$@%white$@%animal', 'nsubj$@%animal$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'prt$@%up$@%catch', 'erased$@%to$@%WORDERASED', 'det$@%a$@%animal', 'amod$@%yellow$@%animal', 'prep_to$@%animal$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%animal', 'x$@%white$@%animal', 'x$@%animal$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%up$@%catch', 'x$@%to$@%WORDERASED', 'x$@%a$@%animal', 'x$@%yellow$@%animal', 'x$@%animal$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%white$@%x', 'x$@%animal$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%up$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%yellow$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",0.41100000000000003,59.5,0.9990361376048458,0.9991476969419804,0.996099161069222,69.0,69.0,70.0,0.3732462227344513,67
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%animal', 'amod$@%white$@%animal', 'nsubj$@%animal$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'prt$@%up$@%catch', 'erased$@%to$@%WORDERASED', 'det$@%a$@%animal', 'amod$@%yellow$@%animal', 'prep_to$@%animal$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%animal', 'x$@%white$@%animal', 'x$@%animal$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%up$@%catch', 'x$@%to$@%WORDERASED', 'x$@%a$@%animal', 'x$@%yellow$@%animal', 'x$@%animal$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%white$@%x', 'x$@%animal$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%up$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%yellow$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",0.41100000000000003,59.5,0.9990585527506396,0.9991672857120026,0.9962326653673826,0.38021668791770935,67
 I25U-gNNS-p019-r1,The dog want to catch the cat.,1,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	5	xsubj	_	_
 3	want	_	VBP	VBP	_	0	root	_	_
@@ -77,14 +77,14 @@ I25U-gNNS-p019-r1,The dog want to catch the cat.,1,0,0,1,1,"1	the	_	DT	DT	_	2	de
 5	catch	_	VB	VB	_	3	xcomp	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.851,39.5,0.8711706809085485,0.86738887407131,0.2963539421863268,58.5,58.5,47.5,0.6338416934013367,50
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.851,39.5,0.8741666770014384,0.8704367205195224,0.2912241600994655,0.6579905152320862,50
 I25U-gNNS-p020-r1,The dog is following the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	follow	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%follow', 'aux$@%be$@%follow', 'root$@%follow$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%follow']","['x$@%the$@%dog', 'x$@%dog$@%follow', 'x$@%be$@%follow', 'x$@%follow$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%follow']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%follow$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.862616220977878,0.8567078152756002,0.24533430379734844,55.0,54.0,22.0,0.6413189172744751,48
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%follow', 'aux$@%be$@%follow', 'root$@%follow$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%follow']","['x$@%the$@%dog', 'x$@%dog$@%follow', 'x$@%be$@%follow', 'x$@%follow$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%follow']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%follow$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8658111557029814,0.8600011481178516,0.2397196480092012,0.6659290194511414,48
 I25U-gNNS-p024-r1,the dog is so angry and chasing the cat because the cat waked him up,1,1,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	7	nsubj	_	_
 3	be	_	VBZ	VBZ	_	5	cop	_	_
@@ -100,21 +100,21 @@ I25U-gNNS-p024-r1,the dog is so angry and chasing the cat because the cat waked 
 13	wake	_	VBD	VBD	_	7	advcl	_	_
 14	he	_	PRP	PRP	_	13	dobj	_	_
 15	up	_	RP	RP	_	13	prt	_	_
-16	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'cop$@%be$@%angry', 'advmod$@%so$@%angry', 'root$@%angry$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%chase$@%angry', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'mark$@%because$@%wake', 'det$@%the$@%cat', 'nsubj$@%cat$@%wake', 'advcl$@%wake$@%chase', 'dobj$@%he$@%wake', 'prt$@%up$@%wake', 'punct$@%.$@%angry']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%angry', 'x$@%so$@%angry', 'x$@%angry$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%chase$@%angry', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%because$@%wake', 'x$@%the$@%cat', 'x$@%cat$@%wake', 'x$@%wake$@%chase', 'x$@%he$@%wake', 'x$@%up$@%wake', 'x$@%.$@%angry']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%so$@%x', 'x$@%angry$@%x', 'x$@%and$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%because$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%wake$@%x', 'x$@%he$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.682,56.5,0.6511367806579649,0.6434659409526948,0.14455173356824794,28.0,28.0,20.0,0.6110498905181885,52
+16	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'cop$@%be$@%angry', 'advmod$@%so$@%angry', 'root$@%angry$@%VROOT', 'erased$@%and$@%WORDERASED', 'conj_and$@%chase$@%angry', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'mark$@%because$@%wake', 'det$@%the$@%cat', 'nsubj$@%cat$@%wake', 'advcl$@%wake$@%chase', 'dobj$@%he$@%wake', 'prt$@%up$@%wake', 'punct$@%.$@%angry']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%angry', 'x$@%so$@%angry', 'x$@%angry$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%chase$@%angry', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%because$@%wake', 'x$@%the$@%cat', 'x$@%cat$@%wake', 'x$@%wake$@%chase', 'x$@%he$@%wake', 'x$@%up$@%wake', 'x$@%.$@%angry']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%so$@%x', 'x$@%angry$@%x', 'x$@%and$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%because$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%wake$@%x', 'x$@%he$@%x', 'x$@%up$@%x', 'x$@%.$@%x']",0.682,56.5,0.6528335242209152,0.6452223395597261,0.14291928208512272,0.6322228312492371,52
 I25U-gNNS-p025-r1,A dog is chasing another dog.,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	another	_	DT	DT	_	6	det	_	_
 6	dog	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.3346269387931362,0.2664691658399859,0.2489505959205301,20.5,20.5,25.5,0.5659095048904419,57
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.33379237708938514,0.26533792920294874,0.2503686130220957,0.5787235498428345,58
 I25U-gNNS-p029-r1,A dog is catching another dog.,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	another	_	DT	DT	_	6	det	_	_
 6	dog	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.944413957889458,0.9477845225667652,0.5606310455937229,65.0,66.0,64.0,0.34136009216308594,69
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.9457066416213668,0.9489846085800774,0.5577025539621361,0.3456821143627167,69
 I25U-gNNS-p031-r1,a dog is going after a cat. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -122,7 +122,7 @@ I25U-gNNS-p031-r1,a dog is going after a cat. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	
 5	after	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%go', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%go', 'punct$@%.$@%go']","['x$@%a$@%dog', 'x$@%dog$@%go', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%go', 'x$@%.$@%go']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8302516922800173,0.8270605548441645,0.2381066178294832,34.0,34.0,21.0,0.733695924282074,28
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%go', 'aux$@%be$@%go', 'root$@%go$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%go', 'punct$@%.$@%go']","['x$@%a$@%dog', 'x$@%dog$@%go', 'x$@%be$@%go', 'x$@%go$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%go', 'x$@%.$@%go']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%go$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8341992817750972,0.8310352807201629,0.2324474606722323,0.7598769664764404,28
 I25U-gNNS-p033-r1,A dog is running after a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -130,28 +130,28 @@ I25U-gNNS-p033-r1,A dog is running after a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_
 5	after	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8076897099384182,0.7933800063695158,0.25184643692031816,30.5,30.5,29.5,0.8272042870521545,19
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8121619906405927,0.7981288237052118,0.24639437082727436,0.8576620221138,19
 I25U-gNNS-p035-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.285078140888992,50.0,49.0,39.0,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p045-r1,the dog is catching a cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.836673474726146,0.8302555907357942,0.2850766454015495,37.5,37.5,34.5,0.6582522392272949,38
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8404717221673078,0.8341568840191197,0.27986463942784323,0.6821578145027161,38
 I25U-gNNS-p046-r1,The dog is catching a cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.836673474726146,0.8302555907357942,0.2850766454015495,37.5,37.5,34.5,0.6582522392272949,38
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8404717221673078,0.8341568840191197,0.27986463942784323,0.6821578145027161,38
 I25U-gNNS-p047-r1,The dog is trying to catch the cat,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -160,7 +160,7 @@ I25U-gNNS-p047-r1,The dog is trying to catch the cat,1,1,1,1,1,"1	the	_	DT	DT	_	
 6	catch	_	VB	VB	_	4	xcomp	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	cat	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8697690148381962,0.8655353777963684,0.2987015403526577,56.5,56.5,51.0,0.6889440417289734,31
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8727976074401719,0.8686258237776049,0.2936190761833437,0.7157064080238342,31
 I25U-gNNS-p048-r1,The spotty dog is chasing the yellow dog.,0,1,1,1,0,"1	the	_	DT	DT	_	3	det	_	_
 2	spotty	_	JJ	JJ	_	3	amod	_	_
 3	dog	_	NN	NN	_	5	nsubj	_	_
@@ -169,7 +169,7 @@ I25U-gNNS-p048-r1,The spotty dog is chasing the yellow dog.,0,1,1,1,0,"1	the	_	D
 6	the	_	DT	DT	_	8	det	_	_
 7	yellow	_	JJ	JJ	_	8	amod	_	_
 8	dog	_	NN	NN	_	5	dobj	_	_
-9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'amod$@%spotty$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%dog', 'amod$@%yellow$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%spotty$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%dog', 'x$@%yellow$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%spotty$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.3915777960409453,0.3152039394339832,0.4290982361355439,24.0,24.0,63.0,0.5529913902282715,61
+9	.	_	.	.	_	5	punct	_	_","['det$@%the$@%dog', 'amod$@%spotty$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%dog', 'amod$@%yellow$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%spotty$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%dog', 'x$@%yellow$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%spotty$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%yellow$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.3917821033545186,0.3150007718545409,0.4301761693129521,0.5647026896476746,61
 I25U-gNNS-p049-r1,A dog is chasing after a cat (maybe) ,1,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -180,7 +180,7 @@ I25U-gNNS-p049-r1,A dog is chasing after a cat (maybe) ,1,1,1,0,1,"1	a	_	DT	DT	_
 8	-lrb-	_	-LRB-	-LRB-	_	9	punct	_	_
 9	maybe	_	RB	RB	_	7	dep	_	_
 10	-rrb-	_	-RRB-	-RRB-	_	9	punct	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%chase', 'punct$@%-lrb-$@%maybe', 'dep$@%maybe$@%cat', 'punct$@%-rrb-$@%maybe', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%-lrb-$@%maybe', 'x$@%maybe$@%cat', 'x$@%-rrb-$@%maybe', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%-lrb-$@%x', 'x$@%maybe$@%x', 'x$@%-rrb-$@%x', 'x$@%.$@%x']",0.7759999999999999,41.5,0.3876302911236068,0.24634962999345145,0.08081370448773684,23.0,18.0,18.0,0.808146595954895,21
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%chase', 'punct$@%-lrb-$@%maybe', 'dep$@%maybe$@%cat', 'punct$@%-rrb-$@%maybe', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%-lrb-$@%maybe', 'x$@%maybe$@%cat', 'x$@%-rrb-$@%maybe', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%-lrb-$@%x', 'x$@%maybe$@%x', 'x$@%-rrb-$@%x', 'x$@%.$@%x']",0.7759999999999999,41.5,0.3886397119108057,0.24674607612570465,0.08099674223580411,0.8375740051269531,21
 I25U-gNNS-p050-r1,A dog want to catch a cat.,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	5	xsubj	_	_
 3	want	_	VBP	VBP	_	0	root	_	_
@@ -188,42 +188,42 @@ I25U-gNNS-p050-r1,A dog want to catch a cat.,1,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
 5	catch	_	VB	VB	_	3	xcomp	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.851,39.5,0.8500038229421678,0.8468155920754002,0.2963545692358021,44.0,44.0,49.0,0.6203243732452393,51
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.851,39.5,0.853492065863755,0.8503362812358675,0.29122476568675204,0.6444645524024963,51
 I25U-gNNS-p052-r1,One dog is chasing other dog.,1,1,0,1,0,"1	one	_	CD	CD	_	2	num	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	other	_	JJ	JJ	_	6	amod	_	_
 6	dog	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['num$@%one$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'amod$@%other$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%one$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%other$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%one$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%other$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.682,56.5,0.37960409266742345,0.3046862507211806,0.24552284327905136,22.0,23.0,23.0,0.5465362668037415,62
+7	.	_	.	.	_	4	punct	_	_","['num$@%one$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'amod$@%other$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%one$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%other$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%one$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%other$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.682,56.5,0.3777572602784805,0.3027043275879501,0.24694728937129465,0.5597315430641174,63
 I25U-gNNS-p053-r1,The dog is chasing the cat,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251495,4.5,4.5,6.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p054-r1,A doy is following a cat.,0,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
 2	doy	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	follow	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%doy', 'nsubj$@%doy$@%follow', 'aux$@%be$@%follow', 'root$@%follow$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%follow']","['x$@%a$@%doy', 'x$@%doy$@%follow', 'x$@%be$@%follow', 'x$@%follow$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%follow']","['x$@%a$@%x', 'x$@%doy$@%x', 'x$@%be$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.09300000000000001,69.0,0.9019341869803305,0.899291728287626,0.677162939355868,63.0,63.0,67.0,0.5152157545089722,64
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%doy', 'nsubj$@%doy$@%follow', 'aux$@%be$@%follow', 'root$@%follow$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%follow']","['x$@%a$@%doy', 'x$@%doy$@%follow', 'x$@%be$@%follow', 'x$@%follow$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%follow']","['x$@%a$@%x', 'x$@%doy$@%x', 'x$@%be$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.09300000000000001,69.0,0.9042147609577836,0.9016063406257282,0.6746569219014459,0.5357188582420349,64
 I25U-gNNS-p055-r1,The dog is catching a cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.836673474726146,0.8302555907357942,0.2850766454015495,37.5,37.5,34.5,0.6582522392272949,38
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8404717221673078,0.8341568840191197,0.27986463942784323,0.6821578145027161,38
 I25U-gNNS-p056-r1,The dog is chasing the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251495,4.5,4.5,6.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p059-r1,The dog is running after the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -231,7 +231,7 @@ I25U-gNNS-p059-r1,The dog is running after the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2
 5	after	_	IN	IN	_	0	erased	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%the$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%the$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8278312074235635,0.811966745669562,0.2518457702554979,33.0,33.0,28.0,0.8305577039718628,17
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%the$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%the$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8318350866143741,0.8162883776770076,0.24639372698056794,0.8613231182098389,17
 I25U-gNNS-p060-r1,A dog is running to catch up with a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -242,42 +242,42 @@ I25U-gNNS-p060-r1,A dog is running to catch up with a cat.,1,1,1,1,1,"1	a	_	DT	D
 8	with	_	IN	IN	_	0	erased	_	_
 9	a	_	DT	DT	_	10	det	_	_
 10	cat	_	NN	NN	_	6	prep_with	_	_
-11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%run', 'prt$@%up$@%catch', 'erased$@%with$@%WORDERASED', 'det$@%a$@%cat', 'prep_with$@%cat$@%catch', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%run', 'x$@%up$@%catch', 'x$@%with$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%up$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.856910709212855,0.8489030706750178,0.30007072067771023,46.0,45.0,54.0,0.7733516097068787,25
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%run', 'prt$@%up$@%catch', 'erased$@%with$@%WORDERASED', 'det$@%a$@%cat', 'prep_with$@%cat$@%catch', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%run', 'x$@%up$@%catch', 'x$@%with$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%up$@%x', 'x$@%with$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8602374625335087,0.8523749233793501,0.2950632582601204,0.8017134070396423,25
 I25U-gNNS-p061-r1,The dog is chasing a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.06664561470527852,0.06620343338045809,0.009326195960936643,10.5,10.5,2.5,0.8517385721206665,14
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0671109324729311,0.06672059263650333,0.009517902121496724,0.8822089433670044,6
 I25U-gNNS-p062-r1,The dog is chasing an animal.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	animal	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%animal', 'dobj$@%animal$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%animal', 'x$@%animal$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.2924104615109929,0.2931717422261968,0.29450139115651097,17.0,22.0,46.0,0.5888200998306274,54
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%animal', 'dobj$@%animal$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%animal', 'x$@%animal$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.2915550556855491,0.2923472590248579,0.2978028106580745,0.6080036759376526,54
 I25U-gNNS-p063-r1,A dog is chasing a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0716344928446424,0.07117656818692919,0.009327994501513006,14.5,14.5,15.0,0.8536704182624817,2
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.07206923915941342,0.07166368608414443,0.009519691804895205,0.8839579820632935,2
 I25U-gNNS-p064-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.285078140888992,50.0,49.0,39.0,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p067-r1,The dog is tracing the cat.,1,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	trace	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%trace', 'aux$@%be$@%trace', 'root$@%trace$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%trace', 'punct$@%.$@%trace']","['x$@%the$@%dog', 'x$@%dog$@%trace', 'x$@%be$@%trace', 'x$@%trace$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%trace', 'x$@%.$@%trace']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%trace$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.7759999999999999,41.5,0.8795271543938904,0.8764835746088755,0.3391781155816315,60.0,61.0,56.0,0.4359202980995178,66
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%trace', 'aux$@%be$@%trace', 'root$@%trace$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%trace', 'punct$@%.$@%trace']","['x$@%the$@%dog', 'x$@%dog$@%trace', 'x$@%be$@%trace', 'x$@%trace$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%trace', 'x$@%.$@%trace']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%trace$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.7759999999999999,41.5,0.8823288161373557,0.8793223944725019,0.3342616506661684,0.4544335603713989,66
 I25U-gNNS-p068-r1,A dog tries to catch a cat,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	5	xsubj	_	_
 3	try	_	VBZ	VBZ	_	0	root	_	_
@@ -285,28 +285,28 @@ I25U-gNNS-p068-r1,A dog tries to catch a cat,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 5	catch	_	VB	VB	_	3	xcomp	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.907,37.0,0.8464847156658707,0.8432605498890926,0.29870240714118723,42.0,42.0,53.0,0.6966501474380493,30
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.907,37.0,0.8500547973468692,0.846862945788907,0.2936199152043003,0.7229745388031006,30
 I25U-gNNS-p071-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.285078140888992,50.0,49.0,39.0,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p073-r1,the do is chasing a cat.,1,1,0,1,1,"1	the	_	DT	DT	_	2	nsubj	_	_
 2	do	_	VBP	VBP	_	0	root	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	2	ccomp	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	2	punct	_	_","['nsubj$@%the$@%do', 'root$@%do$@%VROOT', 'aux$@%be$@%chase', 'ccomp$@%chase$@%do', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%do']","['x$@%the$@%do', 'x$@%do$@%VROOT', 'x$@%be$@%chase', 'x$@%chase$@%do', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%do']","['x$@%the$@%x', 'x$@%do$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.5662969560607972,0.5529849565626952,0.12490792662780915,27.0,27.0,19.0,0.7970325350761414,23
+7	.	_	.	.	_	2	punct	_	_","['nsubj$@%the$@%do', 'root$@%do$@%VROOT', 'aux$@%be$@%chase', 'ccomp$@%chase$@%do', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%do']","['x$@%the$@%do', 'x$@%do$@%VROOT', 'x$@%be$@%chase', 'x$@%chase$@%do', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%do']","['x$@%the$@%x', 'x$@%do$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.5668901057212711,0.5536864142551031,0.12665991973038382,0.8252334594726562,23
 I25U-gNNS-p076-r1,A dog is catching a cat.,1,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8388785971710838,0.8326411862389067,0.2850787779864997,40.5,40.5,44.5,0.6607626080513,35
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8426255632868768,0.8364876505723222,0.2798667743346097,0.6843841075897217,35
 I25U-gNNS-p080-r1,The dog wants to catch the cat.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	5	xsubj	_	_
 3	want	_	VBZ	VBZ	_	0	root	_	_
@@ -314,7 +314,7 @@ I25U-gNNS-p080-r1,The dog wants to catch the cat.,1,0,1,1,1,"1	the	_	DT	DT	_	2	d
 5	catch	_	VB	VB	_	3	xcomp	_	_
 6	the	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.907,37.0,0.8711706809085485,0.86738887407131,0.2963539421863268,58.5,58.5,47.5,0.6350147128105164,49
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'root$@%want$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%want', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%want']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%want$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%want', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%want']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.907,37.0,0.8741666770014384,0.8704367205195224,0.2912241600994655,0.6589755415916443,49
 I25U-gNNS-p084-r1,the dog is running for capturing the cat,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -323,11 +323,11 @@ I25U-gNNS-p084-r1,the dog is running for capturing the cat,1,1,0,1,1,"1	the	_	DT
 6	capture	_	VBG	VBG	_	4	prepc_for	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	cat	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%for$@%WORDERASED', 'prepc_for$@%capture$@%run', 'det$@%the$@%cat', 'dobj$@%cat$@%capture', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%capture$@%run', 'x$@%the$@%cat', 'x$@%cat$@%capture', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%for$@%x', 'x$@%capture$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.8557136508618483,0.8538267026830898,0.37281089066038775,45.0,53.0,60.0,0.7807987332344055,24
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%for$@%WORDERASED', 'prepc_for$@%capture$@%run', 'det$@%the$@%cat', 'dobj$@%cat$@%capture', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%capture$@%run', 'x$@%the$@%cat', 'x$@%cat$@%capture', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%for$@%x', 'x$@%capture$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.8590684471816995,0.8571855966038044,0.3682315430776141,0.8105025291442871,24
 I25U-gNNS-p085-r1,They are running.,0,1,1,0,1,"1	they	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBP	VBP	_	3	aux	_	_
 3	run	_	VBG	VBG	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['nsubj$@%they$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'punct$@%.$@%run']","['x$@%they$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%.$@%run']","['x$@%they$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%.$@%x']",0.41100000000000003,59.5,0.9812351981322572,0.9820065503637536,0.988622891491557,68.0,68.0,69.0,0.4644656479358673,65
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%they$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'punct$@%.$@%run']","['x$@%they$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%.$@%run']","['x$@%they$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%.$@%x']",0.41100000000000003,59.5,0.9816715838360404,0.9824200999145992,0.9890122343262668,0.47314217686653137,65
 I25U-gNNS-p088-r1,A dog is trying to catch a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -336,35 +336,35 @@ I25U-gNNS-p088-r1,A dog is trying to catch a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det
 6	catch	_	VB	VB	_	4	xcomp	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	cat	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8487719527684091,0.845077936502363,0.2987021646615661,43.0,43.0,52.0,0.6846266984939575,33
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8522888435028821,0.8486385627897448,0.29361967912386555,0.7115391492843628,33
 I25U-gNNS-p089-r1,A dog is chasing another dog.,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	another	_	DT	DT	_	6	det	_	_
 6	dog	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.3346269387931362,0.2664691658399859,0.2489505959205301,20.5,20.5,25.5,0.5659095048904419,57
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%dog', 'dobj$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.373,64.5,0.33379237708938514,0.26533792920294874,0.2503686130220957,0.5787235498428345,58
 I25U-gNNS-p090-r1,The dog is catching a cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.836673474726146,0.8302555907357942,0.2850766454015495,37.5,37.5,34.5,0.6582522392272949,38
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8404717221673078,0.8341568840191197,0.27986463942784323,0.6821578145027161,38
 I25U-gNNS-p091-r1,The dog is chasing the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251606,4.5,4.5,10.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p092-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.285078140888992,50.0,49.0,39.0,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p093-r1,The dog is trying to catch that animal.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -373,21 +373,21 @@ I25U-gNNS-p093-r1,The dog is trying to catch that animal.,1,1,1,1,1,"1	the	_	DT	
 6	catch	_	VB	VB	_	4	xcomp	_	_
 7	that	_	DT	DT	_	8	det	_	_
 8	animal	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%that$@%animal', 'dobj$@%animal$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%that$@%animal', 'x$@%animal$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%that$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.9489878111901447,0.9424439615537425,0.6943877614039182,66.0,65.0,68.0,0.36642464995384216,68
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%that$@%animal', 'dobj$@%animal$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%that$@%animal', 'x$@%animal$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%that$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.9501741274684729,0.9437667914906964,0.6924444743447336,0.37927141785621643,68
 I25U-gNNS-p094-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.2850781408889921,50.0,49.0,42.5,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p095-r1,Two dogs are having a fight. ,0,1,1,1,0,"1	two	_	CD	CD	_	2	num	_	_
 2	dog	_	NNS	NNS	_	4	nsubj	_	_
 3	be	_	VBP	VBP	_	4	aux	_	_
 4	have	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	fight	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['num$@%two$@%dog', 'nsubj$@%dog$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%fight', 'dobj$@%fight$@%have', 'punct$@%.$@%have']","['x$@%two$@%dog', 'x$@%dog$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%fight', 'x$@%fight$@%have', 'x$@%.$@%have']","['x$@%two$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%fight$@%x', 'x$@%.$@%x']",0.373,64.5,1.0,1.0,0.6100406345994853,70.0,70.0,65.0,0.14995689690113068,70
+7	.	_	.	.	_	4	punct	_	_","['num$@%two$@%dog', 'nsubj$@%dog$@%have', 'aux$@%be$@%have', 'root$@%have$@%VROOT', 'det$@%a$@%fight', 'dobj$@%fight$@%have', 'punct$@%.$@%have']","['x$@%two$@%dog', 'x$@%dog$@%have', 'x$@%be$@%have', 'x$@%have$@%VROOT', 'x$@%a$@%fight', 'x$@%fight$@%have', 'x$@%.$@%have']","['x$@%two$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%fight$@%x', 'x$@%.$@%x']",0.373,64.5,1.0,1.0,0.6073619624202713,0.1528710424900055,70
 I25U-gNNS-p096-r1,The dog is trying to catch the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	6	xsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -396,7 +396,7 @@ I25U-gNNS-p096-r1,The dog is trying to catch the cat.,1,1,1,1,1,"1	the	_	DT	DT	_
 6	catch	_	VB	VB	_	4	xcomp	_	_
 7	the	_	DT	DT	_	8	det	_	_
 8	cat	_	NN	NN	_	6	dobj	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8697690148381962,0.8655353777963684,0.2987015403526576,56.5,56.5,50.0,0.6889440417289734,31
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8727976074401719,0.8686258237776049,0.2936190761833437,0.7157064080238342,31
 I25U-gNNS-p097-r1,The dog is running after a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -404,21 +404,21 @@ I25U-gNNS-p097-r1,The dog is running after a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	d
 5	after	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8048836711365118,0.7904722027154601,0.2518440249352307,29.0,29.0,27.0,0.8293693661689758,18
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%the$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8094212078017413,0.7952878510879718,0.24639195510338696,0.8601986765861511,18
 I25U-gNNS-p098-r1,The dog is catching the cat.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	catch	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.859826650576043,0.8534203550874315,0.285078140888992,50.0,49.0,39.0,0.6499167680740356,44
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.738,49.0,0.8630864582825739,0.8567892447412848,0.2798661590432073,0.672987163066864,44
 I25U-gNNS-p100-r1,The dog is chasing a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.06664561470527852,0.06620343338045809,0.009326195960936643,10.5,10.5,2.5,0.8517385721206665,14
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0671109324729311,0.06672059263650333,0.009517902121496724,0.8822089433670044,6
 I25U-gNNS-p102-r1,A dog is running after a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -426,14 +426,14 @@ I25U-gNNS-p102-r1,A dog is running after a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_
 5	after	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8076897099384182,0.7933800063695158,0.25184643692031816,30.5,30.5,29.5,0.8272042870521545,19
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8121619906405927,0.7981288237052118,0.24639437082727436,0.8576620221138,19
 I25U-gNNS-p103-r1,A dog is chasing a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0716344928446424,0.07117656818692919,0.009327994501513006,14.5,14.5,15.0,0.8536704182624817,2
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.07206923915941342,0.07166368608414443,0.009519691804895205,0.8839579820632935,2
 I25U-gNNS-p110-r1,A cat is running away from a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	cat	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -442,7 +442,7 @@ I25U-gNNS-p110-r1,A cat is running away from a dog.,1,1,1,1,1,"1	a	_	DT	DT	_	2	d
 6	from	_	IN	IN	_	0	erased	_	_
 7	a	_	DT	DT	_	8	det	_	_
 8	dog	_	NN	NN	_	4	prep_away_from	_	_
-9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%cat', 'nsubj$@%cat$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%away$@%WORDERASED', 'erased$@%from$@%WORDERASED', 'det$@%a$@%dog', 'prep_away_from$@%dog$@%run', 'punct$@%.$@%run']","['x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%away$@%WORDERASED', 'x$@%from$@%WORDERASED', 'x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%cat$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%away$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",1.0,15.5,0.8194143056694909,0.7955173938496184,0.2643736626043344,32.0,32.0,32.0,0.6676633358001709,34
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%cat', 'nsubj$@%cat$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%away$@%WORDERASED', 'erased$@%from$@%WORDERASED', 'det$@%a$@%dog', 'prep_away_from$@%dog$@%run', 'punct$@%.$@%run']","['x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%away$@%WORDERASED', 'x$@%from$@%WORDERASED', 'x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%cat$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%away$@%x', 'x$@%from$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",1.0,15.5,0.8236139245020792,0.8002170868845133,0.25903860512472265,0.6941056251525879,34
 I25U-gNNS-p113-r1,A bog is running after a cat.,1,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
 2	bog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -450,7 +450,7 @@ I25U-gNNS-p113-r1,A bog is running after a cat.,1,1,0,0,0,"1	a	_	DT	DT	_	2	det	_
 5	after	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	4	prep_after	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bog', 'nsubj$@%bog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%bog', 'x$@%bog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%bog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.45799999999999996,58.0,0.8844761081115978,0.8751968931748344,0.65025518480832,61.0,60.0,66.0,0.5865522027015686,55
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%bog', 'nsubj$@%bog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'erased$@%after$@%WORDERASED', 'det$@%a$@%cat', 'prep_after$@%cat$@%run', 'punct$@%.$@%run']","['x$@%a$@%bog', 'x$@%bog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%after$@%WORDERASED', 'x$@%a$@%cat', 'x$@%cat$@%run', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%bog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%after$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.45799999999999996,58.0,0.8871626792366643,0.8780652852739066,0.6476243113762028,0.6077004671096802,55
 I25U-gNNS-p115-r1,A cat is chased by a dog.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	cat	_	NN	NN	_	4	nsubjpass	_	_
 3	be	_	VBZ	VBZ	_	4	auxpass	_	_
@@ -458,7 +458,7 @@ I25U-gNNS-p115-r1,A cat is chased by a dog.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 5	by	_	IN	IN	_	0	erased	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	dog	_	NN	NN	_	4	agent	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%cat', 'nsubjpass$@%cat$@%chase', 'auxpass$@%be$@%chase', 'root$@%chase$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%dog', 'agent$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%cat$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.907,37.0,0.5550702693134943,0.07121902116185519,0.009496356471889731,26.0,17.0,17.0,0.7178513407707214,29
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%cat', 'nsubjpass$@%cat$@%chase', 'auxpass$@%be$@%chase', 'root$@%chase$@%VROOT', 'erased$@%by$@%WORDERASED', 'det$@%a$@%dog', 'agent$@%dog$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%by$@%WORDERASED', 'x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%cat$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%by$@%x', 'x$@%a$@%x', 'x$@%dog$@%x', 'x$@%.$@%x']",0.907,37.0,0.5579123908614316,0.07170617889144315,0.0096882983360026,0.7443026900291443,29
 I25U-gNNS-p117-r1,A dog is running follow a cat.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -466,21 +466,21 @@ I25U-gNNS-p117-r1,A dog is running follow a cat.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	
 5	follow	_	VB	VB	_	4	ccomp	_	_
 6	a	_	DT	DT	_	7	det	_	_
 7	cat	_	NN	NN	_	5	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'ccomp$@%follow$@%run', 'det$@%a$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%follow$@%run', 'x$@%a$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.8349970800104387,0.8295711439631182,0.2611244087033181,35.0,35.0,31.0,0.8030166625976562,22
+8	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%run', 'aux$@%be$@%run', 'root$@%run$@%VROOT', 'ccomp$@%follow$@%run', 'det$@%a$@%cat', 'dobj$@%cat$@%follow', 'punct$@%.$@%run']","['x$@%a$@%dog', 'x$@%dog$@%run', 'x$@%be$@%run', 'x$@%run$@%VROOT', 'x$@%follow$@%run', 'x$@%a$@%cat', 'x$@%cat$@%follow', 'x$@%.$@%run']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%run$@%x', 'x$@%follow$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.9440000000000001,33.5,0.8388343129252008,0.8334881681185741,0.2557309957747139,0.8331014513969421,22
 I25U-gNNS-p120-r1,The dog is hunting the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	hunting	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%hunting', 'aux$@%be$@%hunting', 'root$@%hunting$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%hunting', 'punct$@%.$@%hunting']","['x$@%the$@%dog', 'x$@%dog$@%hunting', 'x$@%be$@%hunting', 'x$@%hunting$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%hunting', 'x$@%.$@%hunting']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%hunting$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.88650056323474,0.8881120754939203,0.3750130723803157,62.0,62.0,61.0,0.750039279460907,26
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%hunting', 'aux$@%be$@%hunting', 'root$@%hunting$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%hunting', 'punct$@%.$@%hunting']","['x$@%the$@%dog', 'x$@%dog$@%hunting', 'x$@%be$@%hunting', 'x$@%hunting$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%hunting', 'x$@%.$@%hunting']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%hunting$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.8891400545515614,0.8906836335808872,0.3703632168372145,0.7795860767364502,26
 I25U-gNNS-p121-r1,A dog is arresting a cat.,0,1,1,1,0,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	arrest	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%arrest', 'aux$@%be$@%arrest', 'root$@%arrest$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%arrest', 'punct$@%.$@%arrest']","['x$@%a$@%dog', 'x$@%dog$@%arrest', 'x$@%be$@%arrest', 'x$@%arrest$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%arrest', 'x$@%.$@%arrest']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%arrest$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.373,64.5,0.8624963329590922,0.86028594374242,0.3544172860477484,54.0,55.0,59.0,0.5656899809837341,59
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%arrest', 'aux$@%be$@%arrest', 'root$@%arrest$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%arrest', 'punct$@%.$@%arrest']","['x$@%a$@%dog', 'x$@%dog$@%arrest', 'x$@%be$@%arrest', 'x$@%arrest$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%arrest', 'x$@%.$@%arrest']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%arrest$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",0.373,64.5,0.8656940557454723,0.8634970392455152,0.34961417535188205,0.5844869017601013,57
 I25U-gNNS-p126-r1,An angry dog is trying so hard to catch one cat.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
 2	angry	_	JJ	JJ	_	3	amod	_	_
 3	dog	_	NN	NN	_	9	xsubj	_	_
@@ -492,53 +492,53 @@ I25U-gNNS-p126-r1,An angry dog is trying so hard to catch one cat.,1,1,1,1,1,"1	
 9	catch	_	VB	VB	_	5	xcomp	_	_
 10	one	_	CD	CD	_	11	num	_	_
 11	cat	_	NN	NN	_	9	dobj	_	_
-12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'amod$@%angry$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'advmod$@%so$@%hard', 'advmod$@%hard$@%try', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'num$@%one$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%angry$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%so$@%hard', 'x$@%hard$@%try', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%one$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%angry$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%so$@%x', 'x$@%hard$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%one$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.9544357246507762,0.9502929799161338,0.4261934471339723,67.0,67.0,62.0,0.5911895036697388,53
+12	.	_	.	.	_	5	punct	_	_","['det$@%a$@%dog', 'amod$@%angry$@%dog', 'xsubj$@%dog$@%catch', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'advmod$@%so$@%hard', 'advmod$@%hard$@%try', 'aux$@%to$@%catch', 'xcomp$@%catch$@%try', 'num$@%one$@%cat', 'dobj$@%cat$@%catch', 'punct$@%.$@%try']","['x$@%a$@%dog', 'x$@%angry$@%dog', 'x$@%dog$@%catch', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%so$@%hard', 'x$@%hard$@%try', 'x$@%to$@%catch', 'x$@%catch$@%try', 'x$@%one$@%cat', 'x$@%cat$@%catch', 'x$@%.$@%try']","['x$@%a$@%x', 'x$@%angry$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%so$@%x', 'x$@%hard$@%x', 'x$@%to$@%x', 'x$@%catch$@%x', 'x$@%one$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.9554953467296968,0.9514354132040866,0.42203486162172055,0.6158936619758606,53
 I25U-gNNS-p129-r1,The dog is chasing the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251495,4.5,4.5,6.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p130-r1,the dog is chasing the cat,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251606,4.5,4.5,10.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p131-r1,The dog is chasing a cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.06664561470527852,0.06620343338045809,0.009326195960936643,10.5,10.5,2.5,0.8517385721206665,14
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0671109324729311,0.06672059263650333,0.009517902121496724,0.8822089433670044,6
 I25U-gNNS-p132-r1,the dog is chasing the cat,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251606,4.5,4.5,10.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p134-r1,The dog is chasing the cat.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	the	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05574313262511299,0.05488304214002882,0.009327494460251495,4.5,4.5,6.5,0.8518115282058716,8
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%the$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%the$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%the$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%the$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%the$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.05557370666715111,0.05478446311803342,0.00951920887867852,0.8821440935134888,12
 I25U-gNNS-p137-r1,A dog is chasing another animal.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	another	_	DT	DT	_	6	det	_	_
 6	animal	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%animal', 'dobj$@%animal$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%animal', 'x$@%animal$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.3346269387931361,0.33532660524267466,0.3001381568301168,19.0,25.0,55.0,0.5452749133110046,63
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%another$@%animal', 'dobj$@%animal$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%another$@%animal', 'x$@%animal$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%another$@%x', 'x$@%animal$@%x', 'x$@%.$@%x']",1.0,15.5,0.33379237708938514,0.3345219138239778,0.30341314281206033,0.5620806217193604,62
 I25U-gNNS-p138-r1,A dog is chasing a cat.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	dog	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	chase	_	VBG	VBG	_	0	root	_	_
 5	a	_	DT	DT	_	6	det	_	_
 6	cat	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.0716344928446424,0.07117656818692919,0.009327994501513006,14.5,14.5,15.0,0.8536704182624817,2
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%dog', 'nsubj$@%dog$@%chase', 'aux$@%be$@%chase', 'root$@%chase$@%VROOT', 'det$@%a$@%cat', 'dobj$@%cat$@%chase', 'punct$@%.$@%chase']","['x$@%a$@%dog', 'x$@%dog$@%chase', 'x$@%be$@%chase', 'x$@%chase$@%VROOT', 'x$@%a$@%cat', 'x$@%cat$@%chase', 'x$@%.$@%chase']","['x$@%a$@%x', 'x$@%dog$@%x', 'x$@%be$@%x', 'x$@%chase$@%x', 'x$@%a$@%x', 'x$@%cat$@%x', 'x$@%.$@%x']",1.0,15.5,0.07206923915941342,0.07166368608414443,0.009519691804895205,0.8839579820632935,2

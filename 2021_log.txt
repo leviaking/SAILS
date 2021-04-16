@@ -194,6 +194,10 @@ Still working on the list from yesterday.
 Why do some rankings have such high p-values?
 What is going on with the negative Spearman correlations?
 
+In each section:
+What is the story behind the min and max values? we won't have annotation to identify these in the wild.
+
+
 Observations:
 
 I've gone over all the tables, noted some observations and now I'm going from there. The good news is that I'm fairly confident there are some trends I can latch on to. The most salient to me has been the effect of the size of the NS models. Throughout I compare "N14" models (14 NS responses) and N50 models; the N14 models typically outperform the N50 models when the conditions are relatively constrained: Targeted vs Untargeted, Primary vs Mixed (first responses vs first + second responses), and Intransitives vs Transitives/Ditransitives. "Constrained" might not be the right word, but these conditions tend to produce lower type-to-token ratios, which I'm also working to incorporate into the discussion.
@@ -252,10 +256,97 @@ Question: Why does SBERT perform best on transitives?
 
 "we use the dependency parse information to determine whether each noun is an A or an O, and if it is either we pass the whole sentence through mBERT and take the contextual embedding corresponding to the noun." --papadimitriou2021multilingual
 How does this work? how do you get the embedding corresponding to the noun from the sentence embedding?
+################################################################################
+4/14/2021.
+OK, a few changes. I'd been working on getting two metrics: [see training_stats.py] response length and TTR for all NS models. In doing so, I noticed that some of the stats were distorted by extreme outliers -- namely, one response containing 49 words. There were also null/invalid responses coming through as empty strings. I believe some part of my system (lemmatizer?) was filtering them out. That also distorts the picture. My solution was to fix this first and re-run everything. My fix was this:
+Return to the training pool files from which the final training files were sampled. In the pool files, I removed any extreme outliers for length--I believe I *could* automate this, so I justify it: a simple rule like "delete from the pool any response which is more than 12 standard deviations away from the mean response length". In practice here, I simply deleted any response which was not just long, but overly long in bad faith. I also deleted any response which was gibberish (this can easily be done with a lexicon, language model, etc.), as well as a few single word, bad faith answers: I believe this could also be automated with a simple list-- most are interjections, "yes", "no", "hey", "ok", "none", "stupid", etc.
 
-#########################
-Re: Sturgill Simpson:
-High top mountain album first, then meta modern sounds, and sailors guide to galaxy.
+From there, I just redid everything:
+
+Sample training sets from NS pools: 
+sample_training_sets.py
+sample_training_sets-familiar.py
+
+Score NNS responses:
+get_all_tfidf_cosines.py
+get_all_tfidf_cosines-familiar.py
+get_all_tfidf_cosines-weighted_deps.py
+bert_vs_sails.py
+bert_vs_sails-familiar.py
+
+
+################################################################################
+
+As of 4/15 (Thursday) morning, I've completed the above and need to do the below:
+
+Get all Spearman scores:
+get_all_spearman_correlations.py
+get_bert_spearman_correlations.py
+get_bert_spearman_correlations-weighted_deps.py (F14, N14, N50)
+DONE
+
+Get all Spearman descriptive stats:
+thesis_spearman_stats-familiar.py (F14 weighted, F14 unweighted)
+DONE
+thesis_spearman_stats.py (N14 weighted, N50 weighted, N14 unweighted, N50 unweighted)
+DONE
+
+combined_thesis_spearman_stats.py (F14, N14, N50 x weighted, unweighted)
+DONE
+
+
+Now I'm returning to training_stats.py.
+This script should produce descriptive stats for TTRs and response lengths that correspond to the various spearman stats files generated in previous steps. For example, the spearman stats files show me how my system (and BERT) performs on intransitives vs transitives vs ditransitives; training_stats.py generates TTR stats and response length stats for the NS models corresponding to these 3 categories. Thus I can see if performance correlates with complexity (as seen through TTR) etc.
+The script is mostly complete but I need to fix the get_termrep_ttrs parts.
+DONE -- I got this working and it generates all the right stats files now.
+
+################################################################################
+OOPS. The termrep ttr stats file revealed that there were 5 fewer responses than should be present in the N50 models. That's 5/3000 total, so not a big deal, but I want to get this right. The issue is that I removed too many responses from the pool files before sampling. I tracked the problem down to just 4 N50 models:
+I26U-gNSC-r1-Di-N50.csv
+I28U-gNSC-r1-Di-N50.csv
+I29U-gNSC-r1-Di-N50.csv
+I30U-gNSC-r1-Di-N50.csv
+
+NOTE that NO FAMILIAR files are effected.
+
+
+I scrounged up enough previously unused responses (leftover from SurveyMonkey) and added them to the 4 corresponding pool files.
+I deleted ALL the stats files, because these will all be effected. I deleted the 4 scored files.
+
+I now need to regenerate the samples for these 4 files.
+DONE.
+Now, rescore them. Note that these all operate by walking the directory, so I need to set up a dummy folder or something for the desired files...
+get_all_tfidf_cosines.py
+get_all_tfidf_cosines-weighted_deps.py
+bert_vs_sails.py
+DONE
+
+Then, move everything back into place (2 renamed folders)
+DONE
+
+Get all Spearman scores:
+get_all_spearman_correlations.py N14, N50, F14 (weighted and unweighted -- uncomment script accordingly)
+get_bert_spearman_correlations.py N14, N50, F14
+get_bert_spearman_correlations-weighted_deps.py N14, N50, F14
+DONE
+Get all Spearman descriptive stats:
+thesis_spearman_stats.py (N14, N50 x weighted, unweighted)
+thesis_spearman_stats-familiar.py (F14 x weighted, unweighted)
+combined_thesis_spearman_stats.py (N14, N50, F14 x weighted, unweighted)
+DONE
+
+I think that brings me back to:
+training_stats.py
+DONE
+
+I think this means I end the day roughly where I expected. Tomorrow I need to repopulate all the numbers in the Ch 6 Tables, and add the word length and TTR tables.
+
+################################################################################
+
+
+
+
+
 
 ################################################################################
 ################################################################################

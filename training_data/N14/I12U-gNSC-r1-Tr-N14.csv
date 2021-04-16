@@ -1,11 +1,10 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
-I12U-gNSC-p377-r1,cutting,0,0,1,0,0,"1	cut	_	VBG	VBG	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p487-r1,a girl is cutting,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
-2	girl	_	NN	NN	_	4	nsubj	_	_
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
+I12U-gNSC-p355-r1,The woman is cutting paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	cut	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'punct$@%.$@%cut']","['x$@%a$@%girl', 'x$@%girl$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%.$@%cut']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%.$@%x']"
+5	paper	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
 I12U-gNSC-p410-r1,The girl is cutting a piece out of paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -15,78 +14,50 @@ I12U-gNSC-p410-r1,The girl is cutting a piece out of paper.,1,1,1,1,1,"1	the	_	D
 7	out	_	RB	RB	_	0	erased	_	_
 8	of	_	IN	IN	_	0	erased	_	_
 9	paper	_	NN	NN	_	6	prep_out_of	_	_
-10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%out$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'prep_out_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%the$@%girl', 'x$@%girl$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%out$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%out$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p334-r1,A woman pretends to cut paper while looking away.,1,0,1,0,0,"1	a	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	5	xsubj	_	_
-3	pretend	_	VBZ	VBZ	_	0	root	_	_
-4	to	_	TO	TO	_	5	aux	_	_
-5	cut	_	VB	VB	_	3	xcomp	_	_
-6	paper	_	NN	NN	_	5	dobj	_	_
-7	while	_	IN	IN	_	0	erased	_	_
-8	look	_	VBG	VBG	_	5	prepc_while	_	_
-9	away	_	RP	RP	_	8	prt	_	_
-10	.	_	.	.	_	3	punct	_	_","['det$@%a$@%woman', 'xsubj$@%woman$@%cut', 'root$@%pretend$@%VROOT', 'aux$@%to$@%cut', 'xcomp$@%cut$@%pretend', 'dobj$@%paper$@%cut', 'erased$@%while$@%WORDERASED', 'prepc_while$@%look$@%cut', 'prt$@%away$@%look', 'punct$@%.$@%pretend']","['x$@%a$@%woman', 'x$@%woman$@%cut', 'x$@%pretend$@%VROOT', 'x$@%to$@%cut', 'x$@%cut$@%pretend', 'x$@%paper$@%cut', 'x$@%while$@%WORDERASED', 'x$@%look$@%cut', 'x$@%away$@%look', 'x$@%.$@%pretend']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%pretend$@%x', 'x$@%to$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%while$@%x', 'x$@%look$@%x', 'x$@%away$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p401-r1,"Using her scissors, a woman cuts shapes of paper.",1,1,1,1,1,"1	use	_	VBG	VBG	_	7	partmod	_	_
-2	she	_	PRP$	PRP$	_	3	poss	_	_
-3	scissors	_	NNS	NNS	_	1	dobj	_	_
-4	,	_	,	,	_	7	punct	_	_
-5	a	_	DT	DT	_	6	det	_	_
-6	woman	_	NN	NN	_	7	nsubj	_	_
-7	cut	_	VBZ	VBZ	_	0	root	_	_
-8	shape	_	NNS	NNS	_	7	dobj	_	_
-9	of	_	IN	IN	_	0	erased	_	_
-10	paper	_	NN	NN	_	8	prep_of	_	_
-11	.	_	.	.	_	7	punct	_	_","['partmod$@%use$@%cut', 'poss$@%she$@%scissors', 'dobj$@%scissors$@%use', 'punct$@%,$@%cut', 'det$@%a$@%woman', 'nsubj$@%woman$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%shape$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%shape', 'punct$@%.$@%cut']","['x$@%use$@%cut', 'x$@%she$@%scissors', 'x$@%scissors$@%use', 'x$@%,$@%cut', 'x$@%a$@%woman', 'x$@%woman$@%cut', 'x$@%cut$@%VROOT', 'x$@%shape$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%shape', 'x$@%.$@%cut']","['x$@%use$@%x', 'x$@%she$@%x', 'x$@%scissors$@%x', 'x$@%,$@%x', 'x$@%a$@%x', 'x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%shape$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p367-r1,Woman cutting up paper. ,1,1,0,1,1,"1	woman	_	NNP	NNP	_	0	root	_	_
-2	cut	_	VBG	VBG	_	1	partmod	_	_
-3	up	_	RP	RP	_	2	prt	_	_
-4	paper	_	NN	NN	_	2	dobj	_	_
-5	.	_	.	.	_	1	punct	_	_","['root$@%woman$@%VROOT', 'partmod$@%cut$@%woman', 'prt$@%up$@%cut', 'dobj$@%paper$@%cut', 'punct$@%.$@%woman']","['x$@%woman$@%VROOT', 'x$@%cut$@%woman', 'x$@%up$@%cut', 'x$@%paper$@%cut', 'x$@%.$@%woman']","['x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%up$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p451-r1,The woman is joyfully cutting up a dear Jane letter.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	5	nsubj	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%out$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'prep_out_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%the$@%girl', 'x$@%girl$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%out$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%out$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12U-gNSC-p394-r1,The girl is creepily cutting the paper,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	5	nsubj	_	_
 3	be	_	VBZ	VBZ	_	5	aux	_	_
-4	joyfully	_	RB	RB	_	5	advmod	_	_
+4	creepily	_	RB	RB	_	5	advmod	_	_
 5	cut	_	VBG	VBG	_	0	root	_	_
-6	up	_	RP	RP	_	5	prt	_	_
-7	a	_	DT	DT	_	10	det	_	_
-8	dear	_	RB	RB	_	10	amod	_	_
-9	jane	_	NNP	NNP	_	10	nn	_	_
-10	letter	_	NN	NN	_	5	dobj	_	_
-11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'advmod$@%joyfully$@%cut', 'root$@%cut$@%VROOT', 'prt$@%up$@%cut', 'det$@%a$@%letter', 'amod$@%dear$@%letter', 'nn$@%jane$@%letter', 'dobj$@%letter$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%joyfully$@%cut', 'x$@%cut$@%VROOT', 'x$@%up$@%cut', 'x$@%a$@%letter', 'x$@%dear$@%letter', 'x$@%jane$@%letter', 'x$@%letter$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%joyfully$@%x', 'x$@%cut$@%x', 'x$@%up$@%x', 'x$@%a$@%x', 'x$@%dear$@%x', 'x$@%jane$@%x', 'x$@%letter$@%x', 'x$@%.$@%x']"
+6	the	_	DT	DT	_	7	det	_	_
+7	paper	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%cut', 'aux$@%be$@%cut', 'advmod$@%creepily$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%girl', 'x$@%girl$@%cut', 'x$@%be$@%cut', 'x$@%creepily$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%creepily$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",0.738
+I12U-gNSC-p383-r1,A woman is cutting paper. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cut	_	VBG	VBG	_	0	root	_	_
+5	paper	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%a$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12U-gNSC-p370-r1,A woman is cutting a piece of paper,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cut	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	paper	_	NN	NN	_	6	prep_of	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%a$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%a$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12U-gNSC-p374-r1,"The woman is cutting up old love letters from that cheating bastard, Brad.",1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cut	_	VBG	VBG	_	0	root	_	_
+5	up	_	RP	RP	_	4	prt	_	_
+6	old	_	JJ	JJ	_	8	amod	_	_
+7	love	_	NN	NN	_	8	nn	_	_
+8	letter	_	NNS	NNS	_	4	dobj	_	_
+9	from	_	IN	IN	_	0	erased	_	_
+10	that	_	DT	DT	_	12	det	_	_
+11	cheating	_	VBG	VBG	_	12	amod	_	_
+12	bastard	_	NN	NN	_	4	prep_from	_	_
+13	,	_	,	,	_	12	punct	_	_
+14	brad	_	NNP	NNP	_	12	appos	_	_
+15	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'prt$@%up$@%cut', 'amod$@%old$@%letter', 'nn$@%love$@%letter', 'dobj$@%letter$@%cut', 'erased$@%from$@%WORDERASED', 'det$@%that$@%bastard', 'amod$@%cheating$@%bastard', 'prep_from$@%bastard$@%cut', 'punct$@%,$@%bastard', 'appos$@%brad$@%bastard', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%up$@%cut', 'x$@%old$@%letter', 'x$@%love$@%letter', 'x$@%letter$@%cut', 'x$@%from$@%WORDERASED', 'x$@%that$@%bastard', 'x$@%cheating$@%bastard', 'x$@%bastard$@%cut', 'x$@%,$@%bastard', 'x$@%brad$@%bastard', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%up$@%x', 'x$@%old$@%x', 'x$@%love$@%x', 'x$@%letter$@%x', 'x$@%from$@%x', 'x$@%that$@%x', 'x$@%cheating$@%x', 'x$@%bastard$@%x', 'x$@%,$@%x', 'x$@%brad$@%x', 'x$@%.$@%x']",0.738
 I12U-gNSC-p390-r1,Where's the rock?,0,0,1,0,0,"1	where	_	WRB	WRB	_	2	advmod	_	_
 2	be	_	VBZ	VBZ	_	0	root	_	_
 3	the	_	DT	DT	_	4	det	_	_
 4	rock	_	NN	NN	_	2	nsubj	_	_
-5	?	_	.	.	_	2	punct	_	_","['advmod$@%where$@%be', 'root$@%be$@%VROOT', 'det$@%the$@%rock', 'nsubj$@%rock$@%be', 'punct$@%?$@%be']","['x$@%where$@%be', 'x$@%be$@%VROOT', 'x$@%the$@%rock', 'x$@%rock$@%be', 'x$@%?$@%be']","['x$@%where$@%x', 'x$@%be$@%x', 'x$@%the$@%x', 'x$@%rock$@%x', 'x$@%?$@%x']"
-I12U-gNSC-p483-r1,The woman cuts the paper.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	3	nsubj	_	_
-3	cut	_	VBZ	VBZ	_	0	root	_	_
-4	the	_	DT	DT	_	5	det	_	_
-5	paper	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p322-r1,The lady is bored out of her mind & is cutting paper.,1,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
-2	lady	_	NN	NN	_	4	nsubjpass	_	_
-3	be	_	VBZ	VBZ	_	4	auxpass	_	_
-4	bore	_	VBN	VBN	_	11	dep	_	_
-5	out	_	RP	RP	_	0	erased	_	_
-6	of	_	IN	IN	_	0	erased	_	_
-7	she	_	PRP$	PRP$	_	8	poss	_	_
-8	mind	_	NN	NN	_	4	prep_out_of	_	_
-9	&amp;	_	CC	CC	_	11	nsubj	_	_
-10	be	_	VBZ	VBZ	_	11	aux	_	_
-11	cut	_	VBG	VBG	_	0	root	_	_
-12	paper	_	NN	NN	_	11	dobj	_	_
-13	.	_	.	.	_	11	punct	_	_","['det$@%the$@%lady', 'nsubjpass$@%lady$@%bore', 'auxpass$@%be$@%bore', 'dep$@%bore$@%cut', 'erased$@%out$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'poss$@%she$@%mind', 'prep_out_of$@%mind$@%bore', 'nsubj$@%&amp;$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%lady', 'x$@%lady$@%bore', 'x$@%be$@%bore', 'x$@%bore$@%cut', 'x$@%out$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%she$@%mind', 'x$@%mind$@%bore', 'x$@%&amp;$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%bore$@%x', 'x$@%out$@%x', 'x$@%of$@%x', 'x$@%she$@%x', 'x$@%mind$@%x', 'x$@%&amp;$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p379-r1,A piece of paper is being cut into shapes.,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
-2	piece	_	NN	NN	_	7	nsubjpass	_	_
-3	of	_	IN	IN	_	0	erased	_	_
-4	paper	_	NN	NN	_	2	prep_of	_	_
-5	be	_	VBZ	VBZ	_	7	aux	_	_
-6	be	_	VBG	VBG	_	7	auxpass	_	_
-7	cut	_	VBN	VBN	_	0	root	_	_
-8	into	_	IN	IN	_	0	erased	_	_
-9	shape	_	NNS	NNS	_	7	prep_into	_	_
-10	.	_	.	.	_	7	punct	_	_","['det$@%a$@%piece', 'nsubjpass$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'aux$@%be$@%cut', 'auxpass$@%be$@%cut', 'root$@%cut$@%VROOT', 'erased$@%into$@%WORDERASED', 'prep_into$@%shape$@%cut', 'punct$@%.$@%cut']","['x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%be$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%into$@%WORDERASED', 'x$@%shape$@%cut', 'x$@%.$@%cut']","['x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%be$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%into$@%x', 'x$@%shape$@%x', 'x$@%.$@%x']"
+5	?	_	.	.	_	2	punct	_	_","['advmod$@%where$@%be', 'root$@%be$@%VROOT', 'det$@%the$@%rock', 'nsubj$@%rock$@%be', 'punct$@%?$@%be']","['x$@%where$@%be', 'x$@%be$@%VROOT', 'x$@%the$@%rock', 'x$@%rock$@%be', 'x$@%?$@%be']","['x$@%where$@%x', 'x$@%be$@%x', 'x$@%the$@%x', 'x$@%rock$@%x', 'x$@%?$@%x']",0.056
 I12U-gNSC-p452-r1,The girl is making a card for someone she cares about.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
 2	girl	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
@@ -98,13 +69,34 @@ I12U-gNSC-p452-r1,The girl is making a card for someone she cares about.,0,1,1,1
 9	she	_	PRP	PRP	_	10	nsubj	_	_
 10	care	_	VBZ	VBZ	_	0	root	_	_
 11	about	_	RP	RP	_	10	prt	_	_
-12	.	_	.	.	_	10	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%make', 'aux$@%be$@%make', 'dep$@%make$@%care', 'det$@%a$@%card', 'dobj$@%card$@%make', 'erased$@%for$@%WORDERASED', 'prep_for$@%someone$@%card', 'nsubj$@%she$@%care', 'root$@%care$@%VROOT', 'prt$@%about$@%care', 'punct$@%.$@%care']","['x$@%the$@%girl', 'x$@%girl$@%make', 'x$@%be$@%make', 'x$@%make$@%care', 'x$@%a$@%card', 'x$@%card$@%make', 'x$@%for$@%WORDERASED', 'x$@%someone$@%card', 'x$@%she$@%care', 'x$@%care$@%VROOT', 'x$@%about$@%care', 'x$@%.$@%care']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%card$@%x', 'x$@%for$@%x', 'x$@%someone$@%x', 'x$@%she$@%x', 'x$@%care$@%x', 'x$@%about$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p450-r1,cutting paper,0,0,1,0,0,"1	cut	_	VBG	VBG	_	0	root	_	_
-2	paper	_	NN	NN	_	1	dobj	_	_
-3	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12U-gNSC-p355-r1,The woman is cutting paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
+12	.	_	.	.	_	10	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%make', 'aux$@%be$@%make', 'dep$@%make$@%care', 'det$@%a$@%card', 'dobj$@%card$@%make', 'erased$@%for$@%WORDERASED', 'prep_for$@%someone$@%card', 'nsubj$@%she$@%care', 'root$@%care$@%VROOT', 'prt$@%about$@%care', 'punct$@%.$@%care']","['x$@%the$@%girl', 'x$@%girl$@%make', 'x$@%be$@%make', 'x$@%make$@%care', 'x$@%a$@%card', 'x$@%card$@%make', 'x$@%for$@%WORDERASED', 'x$@%someone$@%card', 'x$@%she$@%care', 'x$@%care$@%VROOT', 'x$@%about$@%care', 'x$@%.$@%care']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%card$@%x', 'x$@%for$@%x', 'x$@%someone$@%x', 'x$@%she$@%x', 'x$@%care$@%x', 'x$@%about$@%x', 'x$@%.$@%x']",0.373
+I12U-gNSC-p435-r1,woman,0,0,0,0,0,"1	woman	_	NN	NN	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%woman$@%VROOT', 'punct$@%.$@%woman']","['x$@%woman$@%VROOT', 'x$@%.$@%woman']","['x$@%woman$@%x', 'x$@%.$@%x']",0
+I12U-gNSC-p358-r1,A women cutting paper ,1,1,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
+2	woman	_	NNS	NNS	_	0	root	_	_
+3	cut	_	VBG	VBG	_	2	partmod	_	_
+4	paper	_	NN	NN	_	3	dobj	_	_
+5	.	_	.	.	_	2	punct	_	_","['det$@%a$@%woman', 'root$@%woman$@%VROOT', 'partmod$@%cut$@%woman', 'dobj$@%paper$@%cut', 'punct$@%.$@%woman']","['x$@%a$@%woman', 'x$@%woman$@%VROOT', 'x$@%cut$@%woman', 'x$@%paper$@%cut', 'x$@%.$@%woman']","['x$@%a$@%x', 'x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",0.458
+I12U-gNSC-p461-r1,The lady is cutting the paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	lady	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	cut	_	VBG	VBG	_	0	root	_	_
-5	paper	_	NN	NN	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
+5	the	_	DT	DT	_	6	det	_	_
+6	paper	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%lady', 'nsubj$@%lady$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%lady', 'x$@%lady$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%lady$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12U-gNSC-p487-r1,a girl is cutting,0,1,1,0,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cut	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'punct$@%.$@%cut']","['x$@%a$@%girl', 'x$@%girl$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%.$@%cut']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%.$@%x']",0.411
+I12U-gNSC-p367-r1,Woman cutting up paper. ,1,1,0,1,1,"1	woman	_	NNP	NNP	_	0	root	_	_
+2	cut	_	VBG	VBG	_	1	partmod	_	_
+3	up	_	RP	RP	_	2	prt	_	_
+4	paper	_	NN	NN	_	2	dobj	_	_
+5	.	_	.	.	_	1	punct	_	_","['root$@%woman$@%VROOT', 'partmod$@%cut$@%woman', 'prt$@%up$@%cut', 'dobj$@%paper$@%cut', 'punct$@%.$@%woman']","['x$@%woman$@%VROOT', 'x$@%cut$@%woman', 'x$@%up$@%cut', 'x$@%paper$@%cut', 'x$@%.$@%woman']","['x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%up$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",0.944
+I12U-gNSC-p483-r1,The woman cuts the paper.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	3	nsubj	_	_
+3	cut	_	VBZ	VBZ	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	paper	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",0.907

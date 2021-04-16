@@ -43,7 +43,7 @@ def combine_csvs(bfull):
 	newdf.to_csv(statsdir+"/combined_spearman_"+test_sample+".csv", index=False)
 
 
-train_sample = "N50"
+train_sample = "F14"
 test_sample = "N70"
 ## For weighted_deps, we don't need to change the BERT scores location -- we use the same
 bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+

@@ -53,6 +53,9 @@ After examining these variables individually, in Section~\ref{sec:exp-combos} I 
 
 %Finally, in Section~\ref{sec:exp-bert}, I present a set of experiments comparing the performance of my best system settings against BERT, a more sophisticated, state of the art language model capable of ranking NS responses according to their similarity to the collection of NNS responses. These results provide insights into the trade-offs between using my simpler, highly transparent tool and a more powerful yet highly opaque tool.
 
+\section{Sampling NS response models}
+\label{sec:sampling}
+
 \section{Establishing a baseline}
 \label{sec:bert-baseline}
 The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations or to compare this work against similar research. In order to give some frame of reference for this work, I chose to use a BERT, a widely adopted state-of-the-art language modeling tool \cite{BertDevlin2018}. My system scores each single (NNS) test response according to its similarity with the set of (NS) model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting Spearman scores are discussed throughout to help contextualize my system's performance.
@@ -133,7 +136,7 @@ std dev & 0.243 	& 0.173 			& 0.204 	& 0.135 					& 0.195 	& 0.199 \\
 
 \subsection{Transitivity results}
 \label{sec:transitivity-results}
-Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here, mean and median Spearman scores. This is expected, as BERT and BERT are powerful, highly developed, state-of-the-art approaches to language modeling and sentence similarity and are trained on web-scale datasets. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but it preserves a high degree of transparency and explainability. My system does, however, reach a higher maximum Spearman score than BERT in all cases.
+Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here, mean and median Spearman scores. This is expected, as BERT and SBERT are powerful, highly developed, state-of-the-art approaches to language modeling and sentence similarity and are trained on web-scale datasets. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but it preserves a high degree of transparency and explainability. My system does, however, reach a higher maximum Spearman score than BERT in all cases.
 
 For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. My system achieves its highest mean and median Spearman scores on the intransitives using the smaller model, even beating out its performance using the larger model. For the larger model, performance on the ditransitives increases over the smaller model in terms of the mean and median Spearman scores. Transitives, as might be expected, fall in the middle: for the larger model, the mean is higher but the median is lower.
 

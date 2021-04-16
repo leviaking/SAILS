@@ -115,7 +115,7 @@ def report_counts(srd):
 def main():
 	mysets_dict = get_sets_dict()
 	print("total number of sets: "+str(len(mysets_dict)))
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS_July_2020/training_data/')
+	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/training_data/')
 	input_files = get_infile_names(sourcedir)
 	resp_rows = []
 	for inp in input_files:

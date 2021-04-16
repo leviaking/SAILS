@@ -1,108 +1,86 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
-I10U-gNSC-p487-r1,a babys crying ,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
-2	baby	_	NNS	NNS	_	3	nsubj	_	_
-3	cry	_	VBZ	VBZ	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p483-r1,The baby cries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
+I10U-gNSC-p485-r1,The baby cries tears.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	baby	_	NN	NN	_	3	nsubj	_	_
 3	cry	_	VBZ	VBZ	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p420-r1,"A baby, wearing only a diaper, is crying.",1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
-2	baby	_	NN	NN	_	10	nsubj	_	_
-3	,	_	,	,	_	10	punct	_	_
-4	wear	_	VBG	VBG	_	10	partmod	_	_
-5	only	_	RB	RB	_	7	advmod	_	_
-6	a	_	DT	DT	_	7	det	_	_
-7	diaper	_	NN	NN	_	4	dobj	_	_
-8	,	_	,	,	_	10	punct	_	_
-9	be	_	VBZ	VBZ	_	10	aux	_	_
-10	cry	_	VBG	VBG	_	0	root	_	_
-11	.	_	.	.	_	10	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'punct$@%,$@%cry', 'partmod$@%wear$@%cry', 'advmod$@%only$@%diaper', 'det$@%a$@%diaper', 'dobj$@%diaper$@%wear', 'punct$@%,$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%,$@%cry', 'x$@%wear$@%cry', 'x$@%only$@%diaper', 'x$@%a$@%diaper', 'x$@%diaper$@%wear', 'x$@%,$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%,$@%x', 'x$@%wear$@%x', 'x$@%only$@%x', 'x$@%a$@%x', 'x$@%diaper$@%x', 'x$@%,$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p349-r1,A baby is crying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+4	tear	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'dobj$@%tear$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%tear$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%tear$@%x', 'x$@%.$@%x']",0.907
+I10U-gNSC-p493-r1,A baby is crying,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
 2	baby	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	cry	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p380-r1,baby cries,1,0,0,1,1,"1	baby	_	NN	NN	_	2	nsubj	_	_
-2	cry	_	VBZ	VBZ	_	0	root	_	_
-3	.	_	.	.	_	2	punct	_	_","['nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p457-r1,A baby is crying. ,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",1
+I10U-gNSC-p417-r1,The baby is crying,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	baby	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
 4	cry	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p462-r1,A baby is crying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",1
+I10U-gNSC-p390-r1,CHANGE MY DIAPER!,0,0,1,0,0,"1	change	_	NNP	NNP	_	3	nn	_	_
+2	my	_	NNP	NNP	_	3	nn	_	_
+3	diaper	_	NNP	NNP	_	0	root	_	_
+4	!	_	.	.	_	3	punct	_	_","['nn$@%change$@%diaper', 'nn$@%my$@%diaper', 'root$@%diaper$@%VROOT', 'punct$@%!$@%diaper']","['x$@%change$@%diaper', 'x$@%my$@%diaper', 'x$@%diaper$@%VROOT', 'x$@%!$@%diaper']","['x$@%change$@%x', 'x$@%my$@%x', 'x$@%diaper$@%x', 'x$@%!$@%x']",0.056
+I10U-gNSC-p435-r1,little baby,0,0,0,0,0,"1	little	_	JJ	JJ	_	2	amod	_	_
+2	baby	_	NN	NN	_	0	root	_	_
+3	.	_	.	.	_	2	punct	_	_","['amod$@%little$@%baby', 'root$@%baby$@%VROOT', 'punct$@%.$@%baby']","['x$@%little$@%baby', 'x$@%baby$@%VROOT', 'x$@%.$@%baby']","['x$@%little$@%x', 'x$@%baby$@%x', 'x$@%.$@%x']",0
+I10U-gNSC-p472-r1,This baby is displeased about something.,0,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
 2	baby	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cry	_	VBG	VBG	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p450-r2,where is my mother ?,0,0,1,0,0,"1	where	_	WRB	WRB	_	2	advmod	_	_
-2	be	_	VBZ	VBZ	_	0	root	_	_
-3	my	_	PRP$	PRP$	_	4	poss	_	_
-4	mother	_	NN	NN	_	2	nsubj	_	_
-5	?	_	.	.	_	2	punct	_	_","['advmod$@%where$@%be', 'root$@%be$@%VROOT', 'poss$@%my$@%mother', 'nsubj$@%mother$@%be', 'punct$@%?$@%be']","['x$@%where$@%be', 'x$@%be$@%VROOT', 'x$@%my$@%mother', 'x$@%mother$@%be', 'x$@%?$@%be']","['x$@%where$@%x', 'x$@%be$@%x', 'x$@%my$@%x', 'x$@%mother$@%x', 'x$@%?$@%x']"
-I10U-gNSC-p479-r2,A baby is pitching a fit.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
-2	baby	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	pitch	_	VBG	VBG	_	0	root	_	_
-5	a	_	DT	DT	_	6	det	_	_
-6	fit	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%pitch', 'aux$@%be$@%pitch', 'root$@%pitch$@%VROOT', 'det$@%a$@%fit', 'dobj$@%fit$@%pitch', 'punct$@%.$@%pitch']","['x$@%a$@%baby', 'x$@%baby$@%pitch', 'x$@%be$@%pitch', 'x$@%pitch$@%VROOT', 'x$@%a$@%fit', 'x$@%fit$@%pitch', 'x$@%.$@%pitch']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%pitch$@%x', 'x$@%a$@%x', 'x$@%fit$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p396-r2,The crying of the boy is so loud,0,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	cry	_	NN	NN	_	8	nsubj	_	_
-3	of	_	IN	IN	_	0	erased	_	_
-4	the	_	DT	DT	_	5	det	_	_
-5	boy	_	NN	NN	_	2	prep_of	_	_
-6	be	_	VBZ	VBZ	_	8	cop	_	_
-7	so	_	RB	RB	_	8	advmod	_	_
-8	loud	_	JJ	JJ	_	0	root	_	_
-9	.	_	.	.	_	8	punct	_	_","['det$@%the$@%cry', 'nsubj$@%cry$@%loud', 'erased$@%of$@%WORDERASED', 'det$@%the$@%boy', 'prep_of$@%boy$@%cry', 'cop$@%be$@%loud', 'advmod$@%so$@%loud', 'root$@%loud$@%VROOT', 'punct$@%.$@%loud']","['x$@%the$@%cry', 'x$@%cry$@%loud', 'x$@%of$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%cry', 'x$@%be$@%loud', 'x$@%so$@%loud', 'x$@%loud$@%VROOT', 'x$@%.$@%loud']","['x$@%the$@%x', 'x$@%cry$@%x', 'x$@%of$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%so$@%x', 'x$@%loud$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p409-r2,An infant wails.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
-2	infant	_	NN	NN	_	3	nsubj	_	_
-3	wail	_	VBZ	VBZ	_	0	root	_	_
-4	.	_	.	.	_	3	punct	_	_","['det$@%a$@%infant', 'nsubj$@%infant$@%wail', 'root$@%wail$@%VROOT', 'punct$@%.$@%wail']","['x$@%a$@%infant', 'x$@%infant$@%wail', 'x$@%wail$@%VROOT', 'x$@%.$@%wail']","['x$@%a$@%x', 'x$@%infant$@%x', 'x$@%wail$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p472-r2,"This baby is the center of his world and expects his mother, or someone to orbit nearby to care for his every need, or desire, as he should.",0,0,1,0,0,"1	this	_	DT	DT	_	2	det	_	_
-2	baby	_	NN	NN	_	10	nsubj	_	_
-3	be	_	VBZ	VBZ	_	5	cop	_	_
-4	the	_	DT	DT	_	5	det	_	_
-5	center	_	NN	NN	_	0	root	_	_
-6	of	_	IN	IN	_	0	erased	_	_
-7	he	_	PRP$	PRP$	_	8	poss	_	_
-8	world	_	NN	NN	_	5	prep_of	_	_
-9	and	_	CC	CC	_	0	erased	_	_
-10	expect	_	VBZ	VBZ	_	5	conj_and	_	_
-11	he	_	PRP$	PRP$	_	12	poss	_	_
-12	mother	_	NN	NN	_	10	dobj	_	_
-13	,	_	,	,	_	12	punct	_	_
-14	or	_	CC	CC	_	0	erased	_	_
-15	someone	_	NN	NN	_	12	conj_or	_	_
-16	to	_	TO	TO	_	17	aux	_	_
-17	orbit	_	VB	VB	_	10	xcomp	_	_
-18	nearby	_	RB	RB	_	17	advmod	_	_
-19	to	_	TO	TO	_	20	aux	_	_
-20	care	_	VB	VB	_	17	xcomp	_	_
-21	for	_	IN	IN	_	0	erased	_	_
-22	he	_	PRP$	PRP$	_	24	poss	_	_
-23	every	_	DT	DT	_	24	det	_	_
-24	need	_	NN	NN	_	20	prep_for	_	_
-25	,	_	,	,	_	24	punct	_	_
-26	or	_	CC	CC	_	0	erased	_	_
-27	desire	_	NN	NN	_	24	conj_or	_	_
-28	,	_	,	,	_	17	punct	_	_
-29	as	_	IN	IN	_	31	mark	_	_
-30	he	_	PRP	PRP	_	31	nsubj	_	_
-31	should	_	MD	MD	_	17	advcl	_	_
-32	.	_	.	.	_	5	punct	_	_","['det$@%this$@%baby', 'nsubj$@%baby$@%expect', 'cop$@%be$@%center', 'det$@%the$@%center', 'root$@%center$@%VROOT', 'erased$@%of$@%WORDERASED', 'poss$@%he$@%world', 'prep_of$@%world$@%center', 'erased$@%and$@%WORDERASED', 'conj_and$@%expect$@%center', 'poss$@%he$@%mother', 'dobj$@%mother$@%expect', 'punct$@%,$@%mother', 'erased$@%or$@%WORDERASED', 'conj_or$@%someone$@%mother', 'aux$@%to$@%orbit', 'xcomp$@%orbit$@%expect', 'advmod$@%nearby$@%orbit', 'aux$@%to$@%care', 'xcomp$@%care$@%orbit', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%need', 'det$@%every$@%need', 'prep_for$@%need$@%care', 'punct$@%,$@%need', 'erased$@%or$@%WORDERASED', 'conj_or$@%desire$@%need', 'punct$@%,$@%orbit', 'mark$@%as$@%should', 'nsubj$@%he$@%should', 'advcl$@%should$@%orbit', 'punct$@%.$@%center']","['x$@%this$@%baby', 'x$@%baby$@%expect', 'x$@%be$@%center', 'x$@%the$@%center', 'x$@%center$@%VROOT', 'x$@%of$@%WORDERASED', 'x$@%he$@%world', 'x$@%world$@%center', 'x$@%and$@%WORDERASED', 'x$@%expect$@%center', 'x$@%he$@%mother', 'x$@%mother$@%expect', 'x$@%,$@%mother', 'x$@%or$@%WORDERASED', 'x$@%someone$@%mother', 'x$@%to$@%orbit', 'x$@%orbit$@%expect', 'x$@%nearby$@%orbit', 'x$@%to$@%care', 'x$@%care$@%orbit', 'x$@%for$@%WORDERASED', 'x$@%he$@%need', 'x$@%every$@%need', 'x$@%need$@%care', 'x$@%,$@%need', 'x$@%or$@%WORDERASED', 'x$@%desire$@%need', 'x$@%,$@%orbit', 'x$@%as$@%should', 'x$@%he$@%should', 'x$@%should$@%orbit', 'x$@%.$@%center']","['x$@%this$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%the$@%x', 'x$@%center$@%x', 'x$@%of$@%x', 'x$@%he$@%x', 'x$@%world$@%x', 'x$@%and$@%x', 'x$@%expect$@%x', 'x$@%he$@%x', 'x$@%mother$@%x', 'x$@%,$@%x', 'x$@%or$@%x', 'x$@%someone$@%x', 'x$@%to$@%x', 'x$@%orbit$@%x', 'x$@%nearby$@%x', 'x$@%to$@%x', 'x$@%care$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%every$@%x', 'x$@%need$@%x', 'x$@%,$@%x', 'x$@%or$@%x', 'x$@%desire$@%x', 'x$@%,$@%x', 'x$@%as$@%x', 'x$@%he$@%x', 'x$@%should$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p453-r2,The baby is crying for his mom.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	baby	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cry	_	VBG	VBG	_	0	root	_	_
-5	for	_	IN	IN	_	0	erased	_	_
-6	he	_	PRP$	PRP$	_	7	poss	_	_
-7	mom	_	NN	NN	_	4	prep_for	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%for$@%WORDERASED', 'poss$@%he$@%mom', 'prep_for$@%mom$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%for$@%WORDERASED', 'x$@%he$@%mom', 'x$@%mom$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%for$@%x', 'x$@%he$@%x', 'x$@%mom$@%x', 'x$@%.$@%x']"
-I10U-gNSC-p423-r2,A child is upset.,0,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+3	be	_	VBZ	VBZ	_	4	cop	_	_
+4	displeased	_	JJ	JJ	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	something	_	NN	NN	_	4	prep_about	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%this$@%baby', 'nsubj$@%baby$@%displeased', 'cop$@%be$@%displeased', 'root$@%displeased$@%VROOT', 'erased$@%about$@%WORDERASED', 'prep_about$@%something$@%displeased', 'punct$@%.$@%displeased']","['x$@%this$@%baby', 'x$@%baby$@%displeased', 'x$@%be$@%displeased', 'x$@%displeased$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%something$@%displeased', 'x$@%.$@%displeased']","['x$@%this$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%displeased$@%x', 'x$@%about$@%x', 'x$@%something$@%x', 'x$@%.$@%x']",0.542
+I10U-gNSC-p413-r1,The baby cries.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	cry	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.907
+I10U-gNSC-p364-r2,The crying baby needs assistance.,1,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	cry	_	JJ	JJ	_	3	amod	_	_
+3	baby	_	NN	NN	_	4	nsubj	_	_
+4	need	_	VBZ	VBZ	_	0	root	_	_
+5	assistance	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'amod$@%cry$@%baby', 'nsubj$@%baby$@%need', 'root$@%need$@%VROOT', 'dobj$@%assistance$@%need', 'punct$@%.$@%need']","['x$@%the$@%baby', 'x$@%cry$@%baby', 'x$@%baby$@%need', 'x$@%need$@%VROOT', 'x$@%assistance$@%need', 'x$@%.$@%need']","['x$@%the$@%x', 'x$@%cry$@%x', 'x$@%baby$@%x', 'x$@%need$@%x', 'x$@%assistance$@%x', 'x$@%.$@%x']",0.907
+I10U-gNSC-p429-r2,A baby cries.,1,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	cry	_	VBZ	VBZ	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.907
+I10U-gNSC-p352-r2,A child is naken. ,0,0,0,0,0,"1	a	_	DT	DT	_	2	det	_	_
 2	child	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	cop	_	_
-4	upset	_	JJ	JJ	_	0	root	_	_
-5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%upset', 'cop$@%be$@%upset', 'root$@%upset$@%VROOT', 'punct$@%.$@%upset']","['x$@%a$@%child', 'x$@%child$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%.$@%upset']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%.$@%x']"
+4	naken	_	JJ	JJ	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%child', 'nsubj$@%child$@%naken', 'cop$@%be$@%naken', 'root$@%naken$@%VROOT', 'punct$@%.$@%naken']","['x$@%a$@%child', 'x$@%child$@%naken', 'x$@%be$@%naken', 'x$@%naken$@%VROOT', 'x$@%.$@%naken']","['x$@%a$@%x', 'x$@%child$@%x', 'x$@%be$@%x', 'x$@%naken$@%x', 'x$@%.$@%x']",0
+I10U-gNSC-p393-r2,"The inconsolable baby is naked, but for a diaper.",0,0,1,1,1,"1	the	_	DT	DT	_	3	det	_	_
+2	inconsolable	_	JJ	JJ	_	3	amod	_	_
+3	baby	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	cop	_	_
+5	naked	_	JJ	JJ	_	0	root	_	_
+6	,	_	,	,	_	5	punct	_	_
+7	but	_	CC	CC	_	0	erased	_	_
+8	for	_	IN	IN	_	5	conj_but	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	diaper	_	NN	NN	_	8	pobj	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%baby', 'amod$@%inconsolable$@%baby', 'nsubj$@%baby$@%naked', 'cop$@%be$@%naked', 'root$@%naked$@%VROOT', 'punct$@%,$@%naked', 'erased$@%but$@%WORDERASED', 'conj_but$@%for$@%naked', 'det$@%a$@%diaper', 'pobj$@%diaper$@%for', 'punct$@%.$@%naked']","['x$@%the$@%baby', 'x$@%inconsolable$@%baby', 'x$@%baby$@%naked', 'x$@%be$@%naked', 'x$@%naked$@%VROOT', 'x$@%,$@%naked', 'x$@%but$@%WORDERASED', 'x$@%for$@%naked', 'x$@%a$@%diaper', 'x$@%diaper$@%for', 'x$@%.$@%naked']","['x$@%the$@%x', 'x$@%inconsolable$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%naked$@%x', 'x$@%,$@%x', 'x$@%but$@%x', 'x$@%for$@%x', 'x$@%a$@%x', 'x$@%diaper$@%x', 'x$@%.$@%x']",0.542
+I10U-gNSC-p436-r2,A baby is upset about something.,0,0,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubjpass	_	_
+3	be	_	VBZ	VBZ	_	4	auxpass	_	_
+4	upset	_	VBN	VBN	_	0	root	_	_
+5	about	_	IN	IN	_	0	erased	_	_
+6	something	_	NN	NN	_	4	prep_about	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubjpass$@%baby$@%upset', 'auxpass$@%be$@%upset', 'root$@%upset$@%VROOT', 'erased$@%about$@%WORDERASED', 'prep_about$@%something$@%upset', 'punct$@%.$@%upset']","['x$@%a$@%baby', 'x$@%baby$@%upset', 'x$@%be$@%upset', 'x$@%upset$@%VROOT', 'x$@%about$@%WORDERASED', 'x$@%something$@%upset', 'x$@%.$@%upset']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%upset$@%x', 'x$@%about$@%x', 'x$@%something$@%x', 'x$@%.$@%x']",0.542
+I10U-gNSC-p493-r2,A baby displays it's displeasure,0,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	3	nsubj	_	_
+3	display	_	VBZ	VBZ	_	0	root	_	_
+4	it	_	PRP	PRP	_	6	nsubj	_	_
+5	be	_	VBZ	VBZ	_	6	cop	_	_
+6	displeasure	_	JJ	JJ	_	3	ccomp	_	_
+7	.	_	.	.	_	3	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%display', 'root$@%display$@%VROOT', 'nsubj$@%it$@%displeasure', 'cop$@%be$@%displeasure', 'ccomp$@%displeasure$@%display', 'punct$@%.$@%display']","['x$@%a$@%baby', 'x$@%baby$@%display', 'x$@%display$@%VROOT', 'x$@%it$@%displeasure', 'x$@%be$@%displeasure', 'x$@%displeasure$@%display', 'x$@%.$@%display']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%display$@%x', 'x$@%it$@%x', 'x$@%be$@%x', 'x$@%displeasure$@%x', 'x$@%.$@%x']",0.486
+I10U-gNSC-p411-r2,"The baby, who has a diaper on, is crying",1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	11	nsubj	_	_
+3	,	_	,	,	_	2	punct	_	_
+4	who	_	WP	WP	_	0	erased	_	_
+5	have	_	VBZ	VBZ	_	2	rcmod	_	_
+6	a	_	DT	DT	_	7	det	_	_
+7	diaper	_	NN	NN	_	5	dobj	_	_
+8	on	_	IN	IN	_	5	prep	_	_
+9	,	_	,	,	_	2	punct	_	_
+10	be	_	VBZ	VBZ	_	11	aux	_	_
+11	cry	_	VBG	VBG	_	0	root	_	_
+12	.	_	.	.	_	11	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'punct$@%,$@%baby', 'erased$@%who$@%WORDERASED', 'rcmod$@%have$@%baby', 'det$@%a$@%diaper', 'dobj$@%diaper$@%have', 'prep$@%on$@%have', 'punct$@%,$@%baby', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%,$@%baby', 'x$@%who$@%WORDERASED', 'x$@%have$@%baby', 'x$@%a$@%diaper', 'x$@%diaper$@%have', 'x$@%on$@%have', 'x$@%,$@%baby', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%,$@%x', 'x$@%who$@%x', 'x$@%have$@%x', 'x$@%a$@%x', 'x$@%diaper$@%x', 'x$@%on$@%x', 'x$@%,$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",1

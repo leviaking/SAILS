@@ -1,53 +1,54 @@
-ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx
-I12T-gNSC-p163-r1,Cutting a piece of paper in half,1,1,1,0,1,"1	cut	_	VBG	VBG	_	0	root	_	_
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore
+I12T-gNSC-p222-r1,Cutting,0,1,1,0,1,"1	cut	_	VBG	VBG	_	0	root	_	_
+2	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%.$@%x']",0.411
+I12T-gNSC-p226-r1,The woman is destroying evidence.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	destroy	_	VBG	VBG	_	0	root	_	_
+5	evidence	_	NN	NN	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%destroy', 'aux$@%be$@%destroy', 'root$@%destroy$@%VROOT', 'dobj$@%evidence$@%destroy', 'punct$@%.$@%destroy']","['x$@%the$@%woman', 'x$@%woman$@%destroy', 'x$@%be$@%destroy', 'x$@%destroy$@%VROOT', 'x$@%evidence$@%destroy', 'x$@%.$@%destroy']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%destroy$@%x', 'x$@%evidence$@%x', 'x$@%.$@%x']",0.149
+I12T-gNSC-p261-r1,This woman is using scissors to cut paper.,1,0,1,1,1,"1	this	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	use	_	VBG	VBG	_	0	root	_	_
+5	scissors	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	7	aux	_	_
+7	cut	_	VB	VB	_	4	xcomp	_	_
+8	paper	_	NN	NN	_	7	dobj	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%this$@%woman', 'nsubj$@%woman$@%use', 'aux$@%be$@%use', 'root$@%use$@%VROOT', 'dobj$@%scissors$@%use', 'aux$@%to$@%cut', 'xcomp$@%cut$@%use', 'dobj$@%paper$@%cut', 'punct$@%.$@%use']","['x$@%this$@%woman', 'x$@%woman$@%use', 'x$@%be$@%use', 'x$@%use$@%VROOT', 'x$@%scissors$@%use', 'x$@%to$@%cut', 'x$@%cut$@%use', 'x$@%paper$@%cut', 'x$@%.$@%use']","['x$@%this$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%use$@%x', 'x$@%scissors$@%x', 'x$@%to$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",0.907
+I12T-gNSC-p254-r1,Cutting a piece of paper,1,1,1,1,1,"1	cut	_	VBG	VBG	_	0	root	_	_
 2	a	_	DT	DT	_	3	det	_	_
 3	piece	_	NN	NN	_	1	dobj	_	_
 4	of	_	IN	IN	_	0	erased	_	_
 5	paper	_	NN	NN	_	3	prep_of	_	_
-6	in	_	IN	IN	_	0	erased	_	_
-7	half	_	NN	NN	_	1	prep_in	_	_
-8	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'erased$@%in$@%WORDERASED', 'prep_in$@%half$@%cut', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%in$@%WORDERASED', 'x$@%half$@%cut', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%in$@%x', 'x$@%half$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p262-r1,She is cutting a piece of paper,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+6	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p175-r1,The woman is cutting a piece of paper with scissors.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cut	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	piece	_	NN	NN	_	4	dobj	_	_
+7	of	_	IN	IN	_	0	erased	_	_
+8	paper	_	NN	NN	_	6	prep_of	_	_
+9	with	_	IN	IN	_	0	erased	_	_
+10	scissors	_	NNS	NNS	_	4	prep_with	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'erased$@%with$@%WORDERASED', 'prep_with$@%scissors$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%with$@%WORDERASED', 'x$@%scissors$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%with$@%x', 'x$@%scissors$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p270-r1,She is cutting a paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cut	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	paper	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p245-r1,She is cutting a piece of paper with scissors.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	cut	_	VBG	VBG	_	0	root	_	_
 4	a	_	DT	DT	_	5	det	_	_
 5	piece	_	NN	NN	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	paper	_	NN	NN	_	5	prep_of	_	_
-8	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p276-r1,The woman is cutting paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cut	_	VBG	VBG	_	0	root	_	_
-5	paper	_	NN	NN	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p270-r1,She is cutting a paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
-2	be	_	VBZ	VBZ	_	3	aux	_	_
-3	cut	_	VBG	VBG	_	0	root	_	_
-4	a	_	DT	DT	_	5	det	_	_
-5	paper	_	NN	NN	_	3	dobj	_	_
-6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p222-r1,Cutting,0,1,1,0,1,"1	cut	_	VBG	VBG	_	0	root	_	_
-2	.	_	.	.	_	1	punct	_	_","['root$@%cut$@%VROOT', 'punct$@%.$@%cut']","['x$@%cut$@%VROOT', 'x$@%.$@%cut']","['x$@%cut$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p170-r1,The woman is cutting the paper,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cut	_	VBG	VBG	_	0	root	_	_
-5	the	_	DT	DT	_	6	det	_	_
-6	paper	_	NN	NN	_	4	dobj	_	_
-7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p213-r1,The woman is cutting paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cut	_	VBG	VBG	_	0	root	_	_
-5	paper	_	NN	NN	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p226-r2,The woman is cutting paper.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	cut	_	VBG	VBG	_	0	root	_	_
-5	paper	_	NN	NN	_	4	dobj	_	_
-6	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%the$@%woman', 'x$@%woman$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
+8	with	_	IN	IN	_	0	erased	_	_
+9	scissors	_	NNS	NNS	_	3	prep_with	_	_
+10	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'erased$@%with$@%WORDERASED', 'prep_with$@%scissors$@%cut', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%with$@%WORDERASED', 'x$@%scissors$@%cut', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%with$@%x', 'x$@%scissors$@%x', 'x$@%.$@%x']",1
 I12T-gNSC-p187-r2,She's cutting a piece of paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	cut	_	VBG	VBG	_	0	root	_	_
@@ -55,44 +56,42 @@ I12T-gNSC-p187-r2,She's cutting a piece of paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3
 5	piece	_	NN	NN	_	3	dobj	_	_
 6	of	_	IN	IN	_	0	erased	_	_
 7	paper	_	NN	NN	_	5	prep_of	_	_
-8	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p282-r2,The woman is making a paper doll.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	make	_	VBG	VBG	_	0	root	_	_
-5	a	_	DT	DT	_	7	det	_	_
-6	paper	_	NN	NN	_	7	nn	_	_
-7	doll	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%doll', 'nn$@%paper$@%doll', 'dobj$@%doll$@%make', 'punct$@%.$@%make']","['x$@%the$@%woman', 'x$@%woman$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%doll', 'x$@%paper$@%doll', 'x$@%doll$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%doll$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p257-r2,"Perhaps, she is making a paper mask.",0,1,0,0,0,"1	perhaps	_	RB	RB	_	5	advmod	_	_
-2	,	_	,	,	_	5	punct	_	_
-3	she	_	PRP	PRP	_	5	nsubj	_	_
-4	be	_	VBZ	VBZ	_	5	aux	_	_
-5	make	_	VBG	VBG	_	0	root	_	_
-6	a	_	DT	DT	_	8	det	_	_
-7	paper	_	NN	NN	_	8	nn	_	_
-8	mask	_	NN	NN	_	5	dobj	_	_
-9	.	_	.	.	_	5	punct	_	_","['advmod$@%perhaps$@%make', 'punct$@%,$@%make', 'nsubj$@%she$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%mask', 'nn$@%paper$@%mask', 'dobj$@%mask$@%make', 'punct$@%.$@%make']","['x$@%perhaps$@%make', 'x$@%,$@%make', 'x$@%she$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%mask', 'x$@%paper$@%mask', 'x$@%mask$@%make', 'x$@%.$@%make']","['x$@%perhaps$@%x', 'x$@%,$@%x', 'x$@%she$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%mask$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p270-r2,She is using scissors to cut.,0,1,1,0,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p253-r2,trimming a ripped piece of paper,1,1,1,1,1,"1	trim	_	VBG	VBG	_	0	root	_	_
+2	a	_	DT	DT	_	4	det	_	_
+3	rip	_	JJ	JJ	_	4	amod	_	_
+4	piece	_	NN	NN	_	1	dobj	_	_
+5	of	_	IN	IN	_	0	erased	_	_
+6	paper	_	NN	NN	_	4	prep_of	_	_
+7	.	_	.	.	_	1	punct	_	_","['root$@%trim$@%VROOT', 'det$@%a$@%piece', 'amod$@%rip$@%piece', 'dobj$@%piece$@%trim', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%trim']","['x$@%trim$@%VROOT', 'x$@%a$@%piece', 'x$@%rip$@%piece', 'x$@%piece$@%trim', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%trim']","['x$@%trim$@%x', 'x$@%a$@%x', 'x$@%rip$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p215-r2,She is cutting a piece of paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cut	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	piece	_	NN	NN	_	3	dobj	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	paper	_	NN	NN	_	5	prep_of	_	_
+8	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%a$@%piece', 'dobj$@%piece$@%cut', 'erased$@%of$@%WORDERASED', 'prep_of$@%paper$@%piece', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%a$@%piece', 'x$@%piece$@%cut', 'x$@%of$@%WORDERASED', 'x$@%paper$@%piece', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%a$@%x', 'x$@%piece$@%x', 'x$@%of$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p224-r2,She is cutting the paper.,1,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cut	_	VBG	VBG	_	0	root	_	_
+4	the	_	DT	DT	_	5	det	_	_
+5	paper	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%cut', 'aux$@%be$@%cut', 'root$@%cut$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%cut', 'punct$@%.$@%cut']","['x$@%she$@%cut', 'x$@%be$@%cut', 'x$@%cut$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%cut', 'x$@%.$@%cut']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%cut$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p262-r2,She is using scissors ,0,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
 2	be	_	VBZ	VBZ	_	3	aux	_	_
 3	use	_	VBG	VBG	_	0	root	_	_
 4	scissors	_	NNS	NNS	_	3	dobj	_	_
-5	to	_	TO	TO	_	6	aux	_	_
-6	cut	_	VB	VB	_	3	xcomp	_	_
-7	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%use', 'aux$@%be$@%use', 'root$@%use$@%VROOT', 'dobj$@%scissors$@%use', 'aux$@%to$@%cut', 'xcomp$@%cut$@%use', 'punct$@%.$@%use']","['x$@%she$@%use', 'x$@%be$@%use', 'x$@%use$@%VROOT', 'x$@%scissors$@%use', 'x$@%to$@%cut', 'x$@%cut$@%use', 'x$@%.$@%use']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%use$@%x', 'x$@%scissors$@%x', 'x$@%to$@%x', 'x$@%cut$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p168-r2,The woman is making a paper airplane.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%use', 'aux$@%be$@%use', 'root$@%use$@%VROOT', 'dobj$@%scissors$@%use', 'punct$@%.$@%use']","['x$@%she$@%use', 'x$@%be$@%use', 'x$@%use$@%VROOT', 'x$@%scissors$@%use', 'x$@%.$@%use']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%use$@%x', 'x$@%scissors$@%x', 'x$@%.$@%x']",0.635
+I12T-gNSC-p169-r2,the woman is snipping the paper,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
 2	woman	_	NN	NN	_	4	nsubj	_	_
 3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	make	_	VBG	VBG	_	0	root	_	_
-5	a	_	DT	DT	_	7	det	_	_
-6	paper	_	NN	NN	_	7	nn	_	_
-7	airplane	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%airplane', 'nn$@%paper$@%airplane', 'dobj$@%airplane$@%make', 'punct$@%.$@%make']","['x$@%the$@%woman', 'x$@%woman$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%airplane', 'x$@%paper$@%airplane', 'x$@%airplane$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%paper$@%x', 'x$@%airplane$@%x', 'x$@%.$@%x']"
-I12T-gNSC-p230-r2,The woman is making a greeting card.,0,1,1,1,0,"1	the	_	DT	DT	_	2	det	_	_
-2	woman	_	NN	NN	_	4	nsubj	_	_
-3	be	_	VBZ	VBZ	_	4	aux	_	_
-4	make	_	VBG	VBG	_	0	root	_	_
-5	a	_	DT	DT	_	7	det	_	_
-6	greet	_	JJ	JJ	_	7	amod	_	_
-7	card	_	NN	NN	_	4	dobj	_	_
-8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%make', 'aux$@%be$@%make', 'root$@%make$@%VROOT', 'det$@%a$@%card', 'amod$@%greet$@%card', 'dobj$@%card$@%make', 'punct$@%.$@%make']","['x$@%the$@%woman', 'x$@%woman$@%make', 'x$@%be$@%make', 'x$@%make$@%VROOT', 'x$@%a$@%card', 'x$@%greet$@%card', 'x$@%card$@%make', 'x$@%.$@%make']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%make$@%x', 'x$@%a$@%x', 'x$@%greet$@%x', 'x$@%card$@%x', 'x$@%.$@%x']"
+4	snip	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	paper	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%snip', 'aux$@%be$@%snip', 'root$@%snip$@%VROOT', 'det$@%the$@%paper', 'dobj$@%paper$@%snip', 'punct$@%.$@%snip']","['x$@%the$@%woman', 'x$@%woman$@%snip', 'x$@%be$@%snip', 'x$@%snip$@%VROOT', 'x$@%the$@%paper', 'x$@%paper$@%snip', 'x$@%.$@%snip']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%snip$@%x', 'x$@%the$@%x', 'x$@%paper$@%x', 'x$@%.$@%x']",1
+I12T-gNSC-p276-r2,She is using scissors.,0,1,1,1,1,"1	she	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	use	_	VBG	VBG	_	0	root	_	_
+4	scissors	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%she$@%use', 'aux$@%be$@%use', 'root$@%use$@%VROOT', 'dobj$@%scissors$@%use', 'punct$@%.$@%use']","['x$@%she$@%use', 'x$@%be$@%use', 'x$@%use$@%VROOT', 'x$@%scissors$@%use', 'x$@%.$@%use']","['x$@%she$@%x', 'x$@%be$@%x', 'x$@%use$@%x', 'x$@%scissors$@%x', 'x$@%.$@%x']",0.635

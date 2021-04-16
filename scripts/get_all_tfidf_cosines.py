@@ -180,7 +180,7 @@ def write_output(sname, rs, nm):
 	thisfile.close()
 
 
-samplename = "N14"
+samplename = "N50"
 testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/N70/')
 trainingdir=('/Users/leviking/Documents/dissertation/SAILS/training_data/'
 			 +samplename+"/")

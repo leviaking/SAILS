@@ -94,7 +94,7 @@ def write_output(rs, nm):
 
 
 def main():
-	train_sample = "N50"
+	train_sample = "F14"
 	test_sample = "N70"
 	## FOR WEIGHTED DEPENDENCIES:
 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
@@ -125,3 +125,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
