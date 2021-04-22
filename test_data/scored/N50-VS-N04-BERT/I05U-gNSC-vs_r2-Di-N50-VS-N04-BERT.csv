@@ -1,0 +1,43 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I05U-gNNS-p004-r1,A math teacher is teaching her student.,1,1,1,1,1,"1	a	_	DT	DT	_	3	det	_	_
+2	math	_	NN	NN	_	3	nn	_	_
+3	teacher	_	NN	NN	_	5	nsubj	_	_
+4	be	_	VBZ	VBZ	_	5	aux	_	_
+5	teach	_	VBG	VBG	_	0	root	_	_
+6	she	_	PRP$	PRP$	_	7	poss	_	_
+7	student	_	NN	NN	_	5	dobj	_	_
+8	.	_	.	.	_	5	punct	_	_","['det$@%a$@%teacher', 'nn$@%math$@%teacher', 'nsubj$@%teacher$@%teach', 'aux$@%be$@%teach', 'root$@%teach$@%VROOT', 'poss$@%she$@%student', 'dobj$@%student$@%teach', 'punct$@%.$@%teach']","['x$@%a$@%teacher', 'x$@%math$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%teach', 'x$@%teach$@%VROOT', 'x$@%she$@%student', 'x$@%student$@%teach', 'x$@%.$@%teach']","['x$@%a$@%x', 'x$@%math$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teach$@%x', 'x$@%she$@%x', 'x$@%student$@%x', 'x$@%.$@%x']",1.0,0.0,0.5923566818022509,0.6084265175045944,0.07342850331676287,0.6630492210388184,1
+I05U-gNNS-p007-r1,The teacher is trying to teach the students to do the basic math like plus and minors. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	teach	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	student	_	NNS	NNS	_	10	nsubj	_	_
+9	to	_	TO	TO	_	10	aux	_	_
+10	do	_	VB	VB	_	6	xcomp	_	_
+11	the	_	DT	DT	_	13	det	_	_
+12	basic	_	JJ	JJ	_	13	amod	_	_
+13	math	_	NN	NN	_	10	dobj	_	_
+14	like	_	IN	IN	_	0	erased	_	_
+15	plus	_	NN	NN	_	10	prep_like	_	_
+16	and	_	CC	CC	_	0	erased	_	_
+17	minor	_	NNS	NNS	_	15	conj_and	_	_
+18	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'xsubj$@%teacher$@%teach', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%teach', 'xcomp$@%teach$@%try', 'det$@%the$@%student', 'nsubj$@%student$@%do', 'aux$@%to$@%do', 'xcomp$@%do$@%teach', 'det$@%the$@%math', 'amod$@%basic$@%math', 'dobj$@%math$@%do', 'erased$@%like$@%WORDERASED', 'prep_like$@%plus$@%do', 'erased$@%and$@%WORDERASED', 'conj_and$@%minor$@%plus', 'punct$@%.$@%try']","['x$@%the$@%teacher', 'x$@%teacher$@%teach', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%teach', 'x$@%teach$@%try', 'x$@%the$@%student', 'x$@%student$@%do', 'x$@%to$@%do', 'x$@%do$@%teach', 'x$@%the$@%math', 'x$@%basic$@%math', 'x$@%math$@%do', 'x$@%like$@%WORDERASED', 'x$@%plus$@%do', 'x$@%and$@%WORDERASED', 'x$@%minor$@%plus', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%teach$@%x', 'x$@%the$@%x', 'x$@%student$@%x', 'x$@%to$@%x', 'x$@%do$@%x', 'x$@%the$@%x', 'x$@%basic$@%x', 'x$@%math$@%x', 'x$@%like$@%x', 'x$@%plus$@%x', 'x$@%and$@%x', 'x$@%minor$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.9165189391811676,0.8013505167561477,0.22994600509299776,0.5767174959182739,3
+I05U-gNNS-p012-r1,the teacher is teaching ,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	teacher	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	teaching	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%teacher', 'nsubj$@%teacher$@%teaching', 'aux$@%be$@%teaching', 'root$@%teaching$@%VROOT', 'punct$@%.$@%teaching']","['x$@%the$@%teacher', 'x$@%teacher$@%teaching', 'x$@%be$@%teaching', 'x$@%teaching$@%VROOT', 'x$@%.$@%teaching']","['x$@%the$@%x', 'x$@%teacher$@%x', 'x$@%be$@%x', 'x$@%teaching$@%x', 'x$@%.$@%x']",0.41100000000000003,3.0,0.8524308322902323,0.8474261216018297,0.7398300784694549,0.5809476375579834,2
+I05U-gNNS-p013-r1,The women is teachings math and the boy is learning. ,1,1,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NNS	NNS	_	5	nsubj	_	_
+3	be	_	VBZ	VBZ	_	5	cop	_	_
+4	teachings	_	JJ	JJ	_	5	amod	_	_
+5	math	_	NN	NN	_	0	root	_	_
+6	and	_	CC	CC	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	boy	_	NN	NN	_	10	nsubj	_	_
+9	be	_	VBZ	VBZ	_	10	aux	_	_
+10	learn	_	VBG	VBG	_	5	conj_and	_	_
+11	.	_	.	.	_	5	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%math', 'cop$@%be$@%math', 'amod$@%teachings$@%math', 'root$@%math$@%VROOT', 'erased$@%and$@%WORDERASED', 'det$@%the$@%boy', 'nsubj$@%boy$@%learn', 'aux$@%be$@%learn', 'conj_and$@%learn$@%math', 'punct$@%.$@%math']","['x$@%the$@%woman', 'x$@%woman$@%math', 'x$@%be$@%math', 'x$@%teachings$@%math', 'x$@%math$@%VROOT', 'x$@%and$@%WORDERASED', 'x$@%the$@%boy', 'x$@%boy$@%learn', 'x$@%be$@%learn', 'x$@%learn$@%math', 'x$@%.$@%math']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%be$@%x', 'x$@%teachings$@%x', 'x$@%math$@%x', 'x$@%and$@%x', 'x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%learn$@%x', 'x$@%.$@%x']",0.682,2.0,0.8631787096593596,0.8772933267026669,0.4417675013146056,0.5751570463180542,4

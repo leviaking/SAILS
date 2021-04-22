@@ -1,0 +1,24 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I10U-gNNS-p004-r1,A baby is crying.,1,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%a$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%a$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",1.0,0.0,0.05861492649348165,0.0614186785344315,0.015011522043976822,0.9119301438331604,1
+I10U-gNNS-p009-r1,Baby is crying.,1,1,0,1,1,"1	baby	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	cry	_	VBG	VBG	_	0	root	_	_
+4	.	_	.	.	_	3	punct	_	_","['nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'punct$@%.$@%cry']","['x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%.$@%cry']","['x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.0688538741042175,0.07191152951101287,0.015011537391465213,0.9070414900779724,2
+I10U-gNNS-p023-r1,The baby is crying because of boring.,1,1,0,1,0,"1	the	_	DT	DT	_	2	det	_	_
+2	baby	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	because	_	RB	RB	_	0	erased	_	_
+6	of	_	IN	IN	_	0	erased	_	_
+7	boring	_	JJ	JJ	_	4	prep_because_of	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%baby', 'nsubj$@%baby$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'erased$@%because$@%WORDERASED', 'erased$@%of$@%WORDERASED', 'prep_because_of$@%boring$@%cry', 'punct$@%.$@%cry']","['x$@%the$@%baby', 'x$@%baby$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%because$@%WORDERASED', 'x$@%of$@%WORDERASED', 'x$@%boring$@%cry', 'x$@%.$@%cry']","['x$@%the$@%x', 'x$@%baby$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%because$@%x', 'x$@%of$@%x', 'x$@%boring$@%x', 'x$@%.$@%x']",0.682,2.0,0.18354345400599487,0.1897826102739477,0.4132436651955493,0.6159284710884094,4
+I10U-gNNS-p040-r1,A boy is crying loudly.,0,1,1,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	cry	_	VBG	VBG	_	0	root	_	_
+5	loudly	_	NNS	NNS	_	4	dobj	_	_
+6	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%cry', 'aux$@%be$@%cry', 'root$@%cry$@%VROOT', 'dobj$@%loudly$@%cry', 'punct$@%.$@%cry']","['x$@%a$@%boy', 'x$@%boy$@%cry', 'x$@%be$@%cry', 'x$@%cry$@%VROOT', 'x$@%loudly$@%cry', 'x$@%.$@%cry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%cry$@%x', 'x$@%loudly$@%x', 'x$@%.$@%x']",0.635,3.0,0.5234755025466329,0.5411047498469177,0.6364266533027803,0.6562867760658264,3

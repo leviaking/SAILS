@@ -1,0 +1,25 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I15T-gNNS-p001-r1,The man is planting.,0,1,1,0,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	plant	_	VBG	VBG	_	0	root	_	_
+5	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'punct$@%.$@%plant']","['x$@%the$@%man', 'x$@%man$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%.$@%plant']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%.$@%x']",0.41100000000000003,3.0,0.28053532555827165,0.30303543664119825,0.3908839728885285,0.5822949409484863,3
+I15T-gNNS-p003-r1,he is planting trees,1,1,1,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	VBG	VBG	_	0	root	_	_
+4	tree	_	NNS	NNS	_	3	dobj	_	_
+5	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",1.0,0.0,0.2368491487002834,0.2518741527100445,0.11458258141451615,0.6757211089134216,1
+I15T-gNNS-p016-r1,He is plant a tree.,1,0,0,1,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	plant	_	NN	NN	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	tree	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%plant', 'aux$@%be$@%plant', 'root$@%plant$@%VROOT', 'det$@%a$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%plant']","['x$@%he$@%plant', 'x$@%be$@%plant', 'x$@%plant$@%VROOT', 'x$@%a$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%plant']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%plant$@%x', 'x$@%a$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.851,2.0,0.1616029146239506,0.1659625466188417,0.11457803506989896,0.6756950616836548,2
+I15T-gNNS-p020-r1,He wants to plant the little tree.,1,0,1,1,1,"1	he	_	PRP	PRP	_	4	xsubj	_	_
+2	want	_	VBZ	VBZ	_	0	root	_	_
+3	to	_	TO	TO	_	4	aux	_	_
+4	plant	_	VB	VB	_	2	xcomp	_	_
+5	the	_	DT	DT	_	7	det	_	_
+6	little	_	JJ	JJ	_	7	amod	_	_
+7	tree	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	2	punct	_	_","['xsubj$@%he$@%plant', 'root$@%want$@%VROOT', 'aux$@%to$@%plant', 'xcomp$@%plant$@%want', 'det$@%the$@%tree', 'amod$@%little$@%tree', 'dobj$@%tree$@%plant', 'punct$@%.$@%want']","['x$@%he$@%plant', 'x$@%want$@%VROOT', 'x$@%to$@%plant', 'x$@%plant$@%want', 'x$@%the$@%tree', 'x$@%little$@%tree', 'x$@%tree$@%plant', 'x$@%.$@%want']","['x$@%he$@%x', 'x$@%want$@%x', 'x$@%to$@%x', 'x$@%plant$@%x', 'x$@%the$@%x', 'x$@%little$@%x', 'x$@%tree$@%x', 'x$@%.$@%x']",0.907,1.0,0.8069139498561453,0.7455078767527996,0.16531514851569684,0.5721147656440735,4

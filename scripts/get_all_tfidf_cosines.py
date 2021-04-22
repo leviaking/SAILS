@@ -172,7 +172,7 @@ def get_TC_score(modelpairs, testpairs, terms_union_vec, vecs_path_name):
 
 def write_output(sname, rs, nm):
 	outdir =('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'
-			 +sname+'-VS-N70/')
+			 +sname+'-VS-'+test_sample_name+'/')
 	thisfile=open(outdir+nm, 'w')
 	thiswriter=csv.writer(thisfile, dialect=csv.excel)
 	for r in rs:
@@ -180,12 +180,13 @@ def write_output(sname, rs, nm):
 	thisfile.close()
 
 
-samplename = "N50"
-testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/N70/')
+train_sample_name = "N50"
+test_sample_name = "N02"
+testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/'+test_sample_name+'/')
 trainingdir=('/Users/leviking/Documents/dissertation/SAILS/training_data/'
-			 +samplename+"/")
+			 +train_sample_name+"/")
 scored_vecs_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'
-				 +samplename+'-VS-N70/')
+				 +train_sample_name+'-VS-'+test_sample_name+'/')
 refcorpusdir=('/Users/leviking/Documents/dissertation/SAILS_annex/brown/')
 depcols={'ldh':8, 'xdh':9, 'xdx':10}
 
@@ -234,8 +235,8 @@ def main():
 				origrow.append(xdx_scores[ni])
 				outputrows.append(origrow)
 				ni+=1
-			outname=trainingfn.replace(".csv", "-VS-N70.csv")
-			write_output(samplename, outputrows, outname)
+			outname=trainingfn.replace(".csv", "-VS-"+test_sample_name+".csv")
+			write_output(train_sample_name, outputrows, outname)
 
 
 if __name__ == "__main__":

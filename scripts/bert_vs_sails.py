@@ -20,7 +20,7 @@ model.eval()
 
 
 train_sample = 'N50'
-test_sample = 'N70'
+test_sample = 'N04'
 testdir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
 		 train_sample+'-VS-'+test_sample+'/')
 traindir=('/Users/leviking/Documents/dissertation/SAILS/training_data/'+

@@ -56,6 +56,9 @@ After examining these variables individually, in Section~\ref{sec:exp-combos} I 
 \section{Sampling NS response models}
 \label{sec:sampling}
 
+Throughout this chapter, the experiments are performed with randomly sampled NS models of two sizes in order to examine the effects of model size on system performance. The larger models contain 50 NS responses per PDT item. This is the maximum number of NS responses that are available across all PDT items and relevant system configurations. For example, item 26 in the corpus contains 290 total NS responses, but only roughly 90\% are \param{crowdsourced}, 50\% are \param{targeted}, and 50\% are \param{primary} responses, and selecting for this configuration leaves exactly 50 responses from which to form a model. The smaller models throughout this chapter contain 14 NS responses per item. This is the maximum number of responses available across all items from \param{familiar} NSs, so I chose this size in order to fairly compare \param{crowdsourced} and \param{familiar} responses (Section~\ref{tab:primacy-results}) and I retained it throughout this chapter to better contextualize the familiarity experiments.
+%I26: 158 Targeted, 132 Untargeted
+
 \section{Establishing a baseline}
 \label{sec:bert-baseline}
 The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations or to compare this work against similar research. In order to give some frame of reference for this work, I chose to use a BERT, a widely adopted state-of-the-art language modeling tool \cite{BertDevlin2018}. My system scores each single (NNS) test response according to its similarity with the set of (NS) model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting Spearman scores are discussed throughout to help contextualize my system's performance.
@@ -133,34 +136,71 @@ std dev & 0.249 	& 0.172 			& 0.207 	& 0.135 					& 0.195 	& 0.200 \\
 
 
 
+
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.6em}
+\begin{tabular}{|l|l||l|l|l||l|l|l|}
+\hline
+ && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
+\hline
+	&	& Intrans 	& Trans 	& Ditrans 		& Intrans 	& Trans 	& Ditrans 		\\
+\hline
+\multirow{3}{*}{\begin{sideways}Words/Response~ \end{sideways}} & responses	& 560  & 560 & 560 & 2000 & 2000 & 2000	 \\
+\cline{2-8}
+& mean 		& 4.9 	& 6.2		& \textbf{7.1} 	& 4.9		& 6.2 	& \textbf{7.3}	 \\
+\cline{2-8}
+& median 	& 4.0 	& 6.0		& \textbf{7.0} 	& 4.0		& 6.0 	& \textbf{7.0}	 \\
+\cline{2-8}
+& min 		& 1.0 	& 1.0		& 1.0 			& 1.0		& 1.0 	& 1.0	 \\
+\cline{2-8}
+& max 		& 19.0 	& 16.0	& \textbf{26.0} & \textbf{26.0}	& 24.0 	& \textbf{26.0}	 \\
+\cline{2-8}
+& std dev 	& 2.6 	& 2.5		& 3.2 			& 2.6		& 2.7 	& 3.2	 \\
+\hline
+\hline
+\multirow{3}{*}{\begin{sideways}Model TTR~~~~~ \end{sideways}} & models	& 40 & 40 & 40 	& 40 & 40 & 40	 \\
+\cline{2-8}
+& mean 		& 0.360 	& \textbf{0.329} 		& 0.334 	& 0.220		& 0.192 		& \textbf{0.189}	 \\
+\cline{2-8}
+& median 	& 0.369 	& \textbf{0.329}		& 0.337 	& 0.218		& 0.190 		& \textbf{0.184}	 \\
+\cline{2-8}
+& min 		& 0.169 	& \textbf{0.166}		& 0.210 	& 0.116		& 0.122 		& \textbf{0.084}	 \\
+\cline{2-8}
+& max 		& 0.543 	& 0.542			& \textbf{0.484} 	& 0.302		& \textbf{0.274} & 0.276	 \\
+\cline{2-8}
+& std dev 	& 0.101 	& 0.079					& 0.075 	& 0.046		& 0.040 		& 0.049	 \\
+\hline
+\end{tabular}
+\caption{\label{tab:transitivity-model-stats}Comparing the number of words per response and the model word type-to-token ratio (TTR) for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item.
+}
+\end{center}
+\end{table}
+
+
+
+
+
+
+
+
 \subsection{Transitivity results}
 \label{sec:transitivity-results}
 
 \bigskip
 
-\textbf{XYZ: Numbers have changed. Ensure that trends discussed here are still accurate.}
+\textbf{XYZ: 4/17/21. Numbers have changed. Ensure that trends discussed here are still accurate.}
 
 \bigskip
 
-Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here, mean and median Spearman scores. This is expected, as BERT and SBERT are powerful, highly developed, state-of-the-art approaches to language modeling and sentence similarity and are trained on web-scale datasets. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but it preserves a high degree of transparency and explainability. My system does, however, reach a higher maximum Spearman score than BERT in all cases.
+Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here: mean and median Spearman scores. This is expected, as BERT and SBERT are powerful, highly developed, state-of-the-art approaches to language modeling and sentence similarity and are trained on web-scale datasets. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but also has the advantage of preserving a high degree of transparency and explainability. My system does, however, reach a higher maximum Spearman score than BERT in all but one case.
 
 For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. My system achieves its highest mean and median Spearman scores on the intransitives using the smaller model, even beating out its performance using the larger model. For the larger model, performance on the ditransitives increases over the smaller model in terms of the mean and median Spearman scores. Transitives, as might be expected, fall in the middle: for the larger model, the mean is higher but the median is lower.
 
-Naturally, we can expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. We can confirm this difference in complexity via the type-to-text ratios (TTRs) for the terms in these NS models. This is presented in Table XYZ. Combined with the TTRs, the observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could better explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses, which is the maximum number available across all items in my dataset, given the configurations used throughout this chapter.
+Naturally, we can expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. As a metric of complexity, I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50 response models, this pattern was shown to be true, as seen in Table~\ref{tab:transitivity-model-stats}. Combined with the TTRs, the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
-Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used BERT embeddings corresponding to the nouns derived from sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. BERT is most accurate with \textit{agent} role subjects and objects, which are most consistently present in transitive items. BERT's lower accuracy at handling \textit{experiencer} subjects, commonly seen in intransitive sentences, explains the lower performance on intransitive items, despite their relative simplicity. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table XYZ-1: average sentence lengths for IN, TR, DI). \citet{warstadt2019} also used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that performance correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more.
-
-``Table XYZ-1'':
-
-For N14 models, average NS response lengths:
-
-intransitives avg length: xxxx
-
-transitives avg length: xxxx
-
-ditransitives avg length: xxxx
-
-N50 lengths to follow! 
+Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used BERT embeddings corresponding to the nouns derived from sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. BERT is most accurate with \textit{agent} role subjects and objects, which are most consistently present in transitive items. BERT's lower accuracy at handling \textit{experiencer} subjects, commonly seen in intransitive sentences, explains the lower performance on intransitive items, despite their relative simplicity. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:transitivity-model-stats}). \citet{warstadt2019} also used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that performance correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more.
 
 \section{Targeting experiments}
 \label{sec:exp-targeting}
@@ -191,11 +231,54 @@ max 	& 0.840 	& \textbf{0.879} 	& \textit{\textbf{0.900}}	& 0.881 	& 0.872 		& \
 std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 						& 0.234 		& 0.173						& 0.208 		& 0.172 \\
 \hline
 \end{tabular}
-\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{targeted} and \param{untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{Targeted} and \param{Untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
 \end{table}
+
+
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.6em}
+\begin{tabular}{|l|l||l|l||l|l|}
+\hline
+ && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
+\hline
+	&	& Targeted 	& Untarget 	& Targeted 	& Untargeted  	\\
+\hline
+\multirow{3}{*}{\begin{sideways}words / response \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
+\cline{2-6}
+& mean 		& 5.40 	& 6.85		& 5.49 	& 6.79	 \\
+\cline{2-6}
+& median 	& 5.0 	& 6.0		& 5.0 	& 6.0	\\
+\cline{2-6}
+& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
+\cline{2-6}
+& max 		& 18.0 	& 26.0		& 26.0 	& 26.0	 \\
+\cline{2-6}
+& std dev 	& 2.63 	& 3.16		& 2.84 	& 3.07	 \\
+\hline
+\hline
+\multirow{3}{*}{\begin{sideways} model TTR \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
+\cline{2-6}
+& mean 		& 0.316 	& 0.367		& 0.197 	& 0.205	 \\
+\cline{2-6}
+& median 	& 0.312 	& 0.371		& 0.196 	& 0.205	\\
+\cline{2-6}
+& min 		& 0.166 	& 0.180		& 0.084 	& 0.116	 \\
+\cline{2-6}
+& max 		& 0.543 	& 0.542		& 0.302 	& 0.292	 \\
+\cline{2-6}
+& std dev 	& 0.081 	& 0.085		& 0.049 	& 0.045	 \\
+\hline
+\end{tabular}
+\caption{\label{tab:targeting-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Targeted} and \param{Untargeted} PDT items, using NS models of either 14 or 50 random responses per item.
+}
+\end{center}
+\end{table}
+
 
 
 \section{Familiarity experiments}
@@ -203,6 +286,76 @@ std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 						& 0.234 		& 0.173						& 0.208
 Here we compare how well the system works when using different sources of NSs. 
 \subsection{Familiarity results}
 \label{sec:familiarity-results}
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+ & \multicolumn{4}{c|}{NS model sample size = 14} \\
+ \hline
+ & \multicolumn{2}{c||}{\param{Familiar} NS} & \multicolumn{2}{c|}{\param{Crowd} NS} \\
+\hline
+		& System 			& BERT 						& System 			& BERT 				\\
+\hline
+\hline
+count 	& 180 				& 60 						& 180 				& 60 				\\
+\hline
+mean 	& 0.338 		& \textit{\textbf{0.499}} 		& 0.339 			& \textbf{0.481} 	\\
+\hline
+median 	& 0.329 		& \textit{\textbf{0.513}} 		& 0.326 			& \textbf{0.500}   \\
+\hline
+min & -0.239 			& \textit{\textbf{-0.026}} 		& -0.181 			& \textbf{-0.125}  \\
+\hline
+max & \textit{\textbf{0.896}} & 0.880 					& 0.875 			& \textbf{0.879} 	\\
+\hline
+std dev & 0.217 			& 0.173 					& 0.224 			& 0.185 			\\
+\hline
+\end{tabular}
+\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} NS models contain only responses from participants \textit{familiar} to the researcher and \param{Crowd} NS models contain only responses from crowdsourced participants. Results are shown using NS models of 14 responses; note the models used here are \param{mixed} (containing first and second responses; see Section~\ref{sec:exp-primacy}) due to the sparsity of \param{familiar} data. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+%%% 4/16/21 LK OK
+}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l||l|l|}
+\hline
+ & \multicolumn{4}{c|}{NS model sample size = 14} \\
+ \hline
+ & \multicolumn{2}{c||}{words / response} & \multicolumn{2}{c|}{model TTR} \\
+\hline
+	& \param{Fam} 	& \param{Crowd} 	& \param{Fam} 			& \param{Crowd} 		\\
+\hline
+\hline
+count 	& 840 			& 840 				& 60 				& 60 		\\
+\hline
+mean 	& 6.76 			& 6.50 				& 0.180 			& 0.382 		\\
+\hline
+median 	& 6.0 			& 6.0 				& 0.225 			& 0.383   	\\
+\hline
+min 	& 2.0 			& 1.0 				& 0.134 			& 0.252  		\\
+\hline
+max 	& 31.0 			& 26.0 				& 0.292 			& 0.543 		\\
+\hline
+std dev & 2.78 			& 3.24 				& 0.042 			& 0.070 		\\
+\hline
+\end{tabular}
+\caption{\label{tab:familiarity-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Familiar} and \param{Crowdsourced} responses, using 14 responses per PDT item. \textit{Count} shows the total number of responses (840) and the total number of models (60) per participant group.
+}
+\end{center}
+\end{table}
+
+
+
+\section{Primacy experiments}
+\label{sec:exp-primacy}
+Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses.
+\subsection{Primacy results}
+\label{sec:primacy-results}
+
+
 
 \begin{table}[htb!]
 \begin{center}
@@ -235,41 +388,47 @@ std dev & 0.224 			& 0.207 	& 0.230 	& 0.185 					& 0.226 	& 0.186 					& 0.226 
 \end{table}
 
 
-\section{Primacy experiments}
-\label{sec:exp-primacy}
-Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses.
-\subsection{Primacy results}
-\label{sec:primacy-results}
-
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l|}
+\setlength{\tabcolsep}{.6em}
+\begin{tabular}{|l|l||l|l||l|l|}
 \hline
- & \multicolumn{4}{c|}{NS model sample size = 14} \\
- \hline
- & \multicolumn{2}{c||}{\param{Familiar} NS} & \multicolumn{2}{c|}{\param{Crowd} NS} \\
+ && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
 \hline
-		& System 			& BERT 						& System 			& BERT 				\\
+	&	& Primary 	& Mixed 	& Primary 	& Mixed  	\\
+\hline
+\multirow{3}{*}{\begin{sideways}words / response~ \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
+\cline{2-6}
+& mean 		& 5.76 	& 6.5		& 5.83 	& 6.46	 \\
+\cline{2-6}
+& median 	& 5.0 	& 6.0		& 6.0 	& 6.0	\\
+\cline{2-6}
+& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
+\cline{2-6}
+& max 		& 20.0 	& 26.0		& 26.0 	& 26.0	 \\
+\cline{2-6}
+& std dev 	& 2.67 	& 3.24		& 2.74 	& 3.26	 \\
 \hline
 \hline
-count 	& 180 				& 60 						& 180 				& 60 				\\
-\hline
-mean 	& 0.338 		& \textit{\textbf{0.499}} 		& 0.339 			& \textbf{0.481} 	\\
-\hline
-median 	& 0.329 		& \textit{\textbf{0.513}} 		& 0.326 			& \textbf{0.500}   \\
-\hline
-min & -0.239 			& \textit{\textbf{-0.026}} 		& -0.181 			& \textbf{-0.125}  \\
-\hline
-max & \textit{\textbf{0.896}} & 0.880 					& 0.875 			& \textbf{0.879} 	\\
-\hline
-std dev & 0.217 			& 0.173 					& 0.224 			& 0.185 			\\
+\multirow{3}{*}{\begin{sideways} model TTR~ \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
+\cline{2-6}
+& mean 		& 0.301 	& 0.382		& 0.180 	& 0.221	 \\
+\cline{2-6}
+& median 	& 0.297 	& 0.383		& 0.181 	& 0.225	\\
+\cline{2-6}
+& min 		& 0.166 	& 0.252		& 0.084 	& 0.134	 \\
+\cline{2-6}
+& max 		& 0.534 	& 0.543		& 0.292 	& 0.302	 \\
+\cline{2-6}
+& std dev 	& 0.082 	& 0.705		& 0.042 	& 0.043	 \\
 \hline
 \end{tabular}
-\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} NS models contain only responses from participants \textit{familiar} to the researcher and \param{Crowd} NS models contain only responses from crowdsourced participants. Results are shown using NS models of 14 responses; note the models used here are \param{mixed} (containing first and second responses; see Section~\ref{sec:exp-primacy}) due to the sparsity of \param{familiar} data. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
-%%% 4/16/21 LK OK
+\caption{\label{tab:primacy-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{primary} and \param{mixed} models, using NS models of either 14 or 50 random responses per item.
 }
 \end{center}
 \end{table}
+
+
 
 
 \section{Term normalization experiments}
@@ -429,8 +588,88 @@ std dev & 0.229 		& 0.236 			& 0.213 				& 0.177 \\
 \end{table}
 
 
+
+
+
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.6em}
+\begin{tabular}{|l|l||l|l|l||l|l|l|}
+\hline
+ && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
+\hline
+	&	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 		\\
+\hline
+\multirow{3}{*}{\begin{sideways}model TTR \end{sideways}} & model	& 120 & 120 & 120 	& 120 & 120 & 120	 \\
+\cline{2-8}
+& mean 		& 0.525 	& 0.513		& 0.279 			& 0.367		& 0.354 	& 0.157	 \\
+\cline{2-8}
+& median 	& 0.538 	& 0.525		& 0.286 			& 0.366		& 0.358 	& 0.157	 \\
+\cline{2-8}
+& min 		& 0.177 	& 0.177		& 0.136 			& 0.150		& 0.141 	& 0.063	 \\
+\cline{2-8}
+& max 		& 0.825 	& 0.818		& 0.437 			& 0.570		& 0.562 	& 0.228	 \\
+\cline{2-8}
+& std dev 	& 0.145 	& 0.144		& 0.068 			& 0.099		& 0.096 	& 0.037	 \\
+\hline
+\end{tabular}
+\caption{\label{tab:termrep-model-stats}Comparing the model-level dependency type-to-token ratios (TTRs) for all NS models when dependencies are formatted in the three different \param{term representations}: \param{ldh} (labeled dependencies) and \param{xdh} (unlabeled dependencies) and \param{xdx} (dependents only), using NS models of either 14 or 50 random responses per item.
+}
+\end{center}
+\end{table}
+
+
+
+
+
+
+
+
+
 \section{Combined settings experiments}
 \label{sec:exp-combos}
 \subsection{Combined settings results}
 \label{sec:combos-results}
 
+
+
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.6em}
+%\begin{tabular}{|l|l||l|l|l||l|l|l|}
+%\hline
+% && \multicolumn{3}{c||}{NS model sample size = 14} & \multicolumn{3}{c|}{NS model sample size = 50} \\
+%\hline
+%	&	& Intrans 	& Trans 	& Ditrans 	& Intrans 	& Trans 	& Ditrans 		\\
+%\hline
+%\multirow{3}{*}{\begin{sideways}words / response \end{sideways}} & responses	& ct  & ct & ct & ct & ct & ct	 \\
+%\cline{2-8}
+%& mean 	& mean 	& mean		& mean 	& mean		& mean 	& mean	 \\
+%\cline{2-8}
+%& median 	& md 	& md		& md 	& md		& md 	& md	 \\
+%\cline{2-8}
+%& min 	& min 	& min		& min 	& min		& min 	& min	 \\
+%\cline{2-8}
+%& max 	& max 	& max		& max 	& max		& max 	& max	 \\
+%\cline{2-8}
+%& std dev & sd 	& sd		& sd 	& sd		& sd 	& sd	 \\
+%\hline
+%\hline
+%\multirow{3}{*}{\begin{sideways}model TTR \end{sideways}} & model	& ct & ct & ct 	& ct & ct & ct	 \\
+%\cline{2-8}
+%& mean 	& mean 	& mean		& mean 	& mean		& mean 	& mean	 \\
+%\cline{2-8}
+%& median 	& med 	& med		& med 	& med		& med 	& med	 \\
+%\cline{2-8}
+%& min 	& min 	& min		& min 	& min		& min 	& min	 \\
+%\cline{2-8}
+%& max 	& max 	& max		& max 	& max		& max 	& max	 \\
+%\cline{2-8}
+%& std dev & sd 	& sd		& sd 	& sd		& sd 	& sd	 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:transitivity-model-stats} .
+%}
+%\end{center}
+%\end{table}

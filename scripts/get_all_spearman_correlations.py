@@ -94,18 +94,18 @@ def write_output(rs, nm):
 
 
 def main():
-	train_sample = "F14"
-	test_sample = "N70"
-	## FOR WEIGHTED DEPENDENCIES:
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
-			   train_sample+'-VS-'+test_sample+'-W/')
-	statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+
-			   train_sample+'-VS-'+test_sample+'-W/')
-	# ## FOR UNWEIGHTED DEPENDENCIES:
+	train_sample = "N50"
+	test_sample = "N02"
+	# ## FOR WEIGHTED DEPENDENCIES:
 	# sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
-	# 		   train_sample+'-VS-'+test_sample+'/')
+	# 		   train_sample+'-VS-'+test_sample+'-W/')
 	# statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+
-	# 		   train_sample+'-VS-'+test_sample+'/')
+	# 		   train_sample+'-VS-'+test_sample+'-W/')
+	## FOR UNWEIGHTED DEPENDENCIES:
+	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
+			   train_sample+'-VS-'+test_sample+'/')
+	statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+
+			   train_sample+'-VS-'+test_sample+'/')
 	input_files = get_infile_names(sourcedir)
 	spearman_rows = [["Source", "ldh_spear", "ldh_p", "xdh_spear", "xdh_p", "xdx_spear", "xdx_p"]]
 	for inf in input_files:
@@ -115,12 +115,12 @@ def main():
 		spearman_row.insert(0, out_label)
 		spearman_rows.append(spearman_row)
 		# write_output(output_rows, sourcedir+inf)
-	## FOR WEIGHTED DEPENDENCIES:
-	write_output(spearman_rows, statsdir+"/all_spearman_"+
-				 train_sample+'-VS-'+test_sample+"-W.csv")
-	# ## FOR UNWEIGHTED DEPENDENCIES:
+	# ## FOR WEIGHTED DEPENDENCIES:
 	# write_output(spearman_rows, statsdir+"/all_spearman_"+
-	# 			 train_sample+'-VS-'+test_sample+".csv")
+	# 			 train_sample+'-VS-'+test_sample+"-W.csv")
+	## FOR UNWEIGHTED DEPENDENCIES:
+	write_output(spearman_rows, statsdir+"/all_spearman_"+
+				 train_sample+'-VS-'+test_sample+".csv")
 
 
 if __name__ == "__main__":

@@ -53,19 +53,19 @@ def write_output(hd, rs, nm):
 	thisfile.close()
 
 
-def main():
-	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/')
-	input_files = get_infile_names(sourcedir)
-	for inp in input_files:
-		header, new_source_rows = get_source_rows(sourcedir+"pool/"+inp)
-		header.append("AnnoRank")
-		sample_size = 70
-		sample_fn = inp.replace("pool", "N"+str(sample_size))
-		sample_fn = sample_fn.replace("_", "-")
-		nsr = new_source_rows[:sample_size]
-		output_rows = get_annotation_ranks(nsr)
-		print(inp+":   "+str(len(nsr)))
-		write_output(header, output_rows, sourcedir+"/N"+str(sample_size)+"/"+sample_fn)
+# def main():
+# 	sourcedir=('/Users/leviking/Documents/dissertation/SAILS/test_data/')
+# 	input_files = get_infile_names(sourcedir)
+# 	for inp in input_files:
+# 		header, new_source_rows = get_source_rows(sourcedir+"pool/"+inp)
+# 		header.append("AnnoRank")
+# 		sample_size = 70
+# 		sample_fn = inp.replace("pool", "N"+str(sample_size))
+# 		sample_fn = sample_fn.replace("_", "-")
+# 		nsr = new_source_rows[:sample_size]
+# 		output_rows = get_annotation_ranks(nsr)
+# 		print(inp+":   "+str(len(nsr)))
+# 		write_output(header, output_rows, sourcedir+"/N"+str(sample_size)+"/"+sample_fn)
 
 
 if __name__ == "__main__":

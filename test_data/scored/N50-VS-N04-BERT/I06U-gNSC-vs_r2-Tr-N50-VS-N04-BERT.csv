@@ -1,0 +1,49 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I06U-gNNS-p004-r1,A boy is carrying a bag with full of fruits.,1,1,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	bag	_	NN	NN	_	4	dobj	_	_
+7	with	_	IN	IN	_	0	erased	_	_
+8	full	_	JJ	JJ	_	4	prep_with	_	_
+9	of	_	IN	IN	_	0	erased	_	_
+10	fruit	_	NNS	NNS	_	8	prep_of	_	_
+11	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'dobj$@%bag$@%carry', 'erased$@%with$@%WORDERASED', 'prep_with$@%full$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%full', 'punct$@%.$@%carry']","['x$@%a$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%bag$@%carry', 'x$@%with$@%WORDERASED', 'x$@%full$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%full', 'x$@%.$@%carry']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%bag$@%x', 'x$@%with$@%x', 'x$@%full$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.4896839250410992,0.5031834003380653,0.6808435305957793,0.6012693047523499,1
+I06U-gNNS-p005-r1,The boy is carrying a large bag of fruit.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	carry	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	large	_	JJ	JJ	_	7	amod	_	_
+7	bag	_	NN	NN	_	4	dobj	_	_
+8	of	_	IN	IN	_	0	erased	_	_
+9	fruit	_	NN	NN	_	7	prep_of	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%carry', 'aux$@%be$@%carry', 'root$@%carry$@%VROOT', 'det$@%a$@%bag', 'amod$@%large$@%bag', 'dobj$@%bag$@%carry', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%bag', 'punct$@%.$@%carry']","['x$@%the$@%boy', 'x$@%boy$@%carry', 'x$@%be$@%carry', 'x$@%carry$@%VROOT', 'x$@%a$@%bag', 'x$@%large$@%bag', 'x$@%bag$@%carry', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%bag', 'x$@%.$@%carry']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%be$@%x', 'x$@%carry$@%x', 'x$@%a$@%x', 'x$@%large$@%x', 'x$@%bag$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",1.0,0.0,0.4380705152542909,0.4520560458745597,0.6753047515398214,0.5885609984397888,2
+I06U-gNNS-p006-r1,A boy just went to the grocery store and on his way home.,0,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	4	nsubj	_	_
+3	just	_	RB	RB	_	4	advmod	_	_
+4	go	_	VBD	VBD	_	4	conj_and	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	the	_	DT	DT	_	8	det	_	_
+7	grocery	_	NN	NN	_	8	nn	_	_
+8	store	_	NN	NN	_	4	prep_to	_	_
+9	and	_	CC	CC	_	0	erased	_	_
+10	on	_	IN	IN	_	0	erased	_	_
+11	he	_	PRP$	PRP$	_	13	poss	_	_
+12	way	_	NN	NN	_	13	nn	_	_
+13	home	_	NN	NN	_	4	prep_on	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%a$@%boy', 'nsubj$@%boy$@%go', 'advmod$@%just$@%go', 'conj_and$@%go$@%go', 'erased$@%to$@%WORDERASED', 'det$@%the$@%store', 'nn$@%grocery$@%store', 'prep_to$@%store$@%go', 'erased$@%and$@%WORDERASED', 'erased$@%on$@%WORDERASED', 'poss$@%he$@%home', 'nn$@%way$@%home', 'prep_on$@%home$@%go', 'punct$@%.$@%go']","['x$@%a$@%boy', 'x$@%boy$@%go', 'x$@%just$@%go', 'x$@%go$@%go', 'x$@%to$@%WORDERASED', 'x$@%the$@%store', 'x$@%grocery$@%store', 'x$@%store$@%go', 'x$@%and$@%WORDERASED', 'x$@%on$@%WORDERASED', 'x$@%he$@%home', 'x$@%way$@%home', 'x$@%home$@%go', 'x$@%.$@%go']","['x$@%a$@%x', 'x$@%boy$@%x', 'x$@%just$@%x', 'x$@%go$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%grocery$@%x', 'x$@%store$@%x', 'x$@%and$@%x', 'x$@%on$@%x', 'x$@%he$@%x', 'x$@%way$@%x', 'x$@%home$@%x', 'x$@%.$@%x']",0.486,3.0,0.952822640056648,0.9511649202914292,0.18279585272625545,0.5116166472434998,4
+I06U-gNNS-p017-r1,The boy holds a big bag which contains a lot of fruit. ,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	boy	_	NN	NN	_	3	nsubj	_	_
+3	hold	_	VBZ	VBZ	_	0	root	_	_
+4	a	_	DT	DT	_	6	det	_	_
+5	big	_	JJ	JJ	_	6	amod	_	_
+6	bag	_	NN	NN	_	8	nsubj	_	_
+7	which	_	WDT	WDT	_	0	erased	_	_
+8	contain	_	VBZ	VBZ	_	6	rcmod	_	_
+9	a	_	DT	DT	_	10	det	_	_
+10	lot	_	NN	NN	_	8	dobj	_	_
+11	of	_	IN	IN	_	0	erased	_	_
+12	fruit	_	NN	NN	_	10	prep_of	_	_
+13	.	_	.	.	_	3	punct	_	_","['det$@%the$@%boy', 'nsubj$@%boy$@%hold', 'root$@%hold$@%VROOT', 'det$@%a$@%bag', 'amod$@%big$@%bag', 'nsubj$@%bag$@%contain', 'erased$@%which$@%WORDERASED', 'rcmod$@%contain$@%bag', 'det$@%a$@%lot', 'dobj$@%lot$@%contain', 'erased$@%of$@%WORDERASED', 'prep_of$@%fruit$@%lot', 'punct$@%.$@%hold']","['x$@%the$@%boy', 'x$@%boy$@%hold', 'x$@%hold$@%VROOT', 'x$@%a$@%bag', 'x$@%big$@%bag', 'x$@%bag$@%contain', 'x$@%which$@%WORDERASED', 'x$@%contain$@%bag', 'x$@%a$@%lot', 'x$@%lot$@%contain', 'x$@%of$@%WORDERASED', 'x$@%fruit$@%lot', 'x$@%.$@%hold']","['x$@%the$@%x', 'x$@%boy$@%x', 'x$@%hold$@%x', 'x$@%a$@%x', 'x$@%big$@%x', 'x$@%bag$@%x', 'x$@%which$@%x', 'x$@%contain$@%x', 'x$@%a$@%x', 'x$@%lot$@%x', 'x$@%of$@%x', 'x$@%fruit$@%x', 'x$@%.$@%x']",0.907,2.0,0.8687501344496253,0.8523299276801478,0.7432987593123159,0.5165619850158691,3

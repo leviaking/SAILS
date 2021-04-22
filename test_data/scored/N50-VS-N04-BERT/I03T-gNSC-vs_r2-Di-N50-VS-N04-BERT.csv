@@ -1,0 +1,32 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I03T-gNNS-p001-r1,The man is delivering the package to the woman.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	deliver	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	package	_	NN	NN	_	4	dobj	_	_
+7	to	_	TO	TO	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	woman	_	NN	NN	_	4	prep_to	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%deliver', 'aux$@%be$@%deliver', 'root$@%deliver$@%VROOT', 'det$@%the$@%package', 'dobj$@%package$@%deliver', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%deliver', 'punct$@%.$@%deliver']","['x$@%the$@%man', 'x$@%man$@%deliver', 'x$@%be$@%deliver', 'x$@%deliver$@%VROOT', 'x$@%the$@%package', 'x$@%package$@%deliver', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%deliver', 'x$@%.$@%deliver']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%deliver$@%x', 'x$@%the$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",1.0,0.0,0.3293678527242273,0.3639261864858334,0.07323494878405146,0.6454465985298157,1
+I03T-gNNS-p002-r1,The man is handing package to the woman.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	man	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	hand	_	VBG	VBG	_	0	root	_	_
+5	package	_	NN	NN	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	woman	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%man', 'nsubj$@%man$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'dobj$@%package$@%hand', 'erased$@%to$@%WORDERASED', 'det$@%the$@%woman', 'prep_to$@%woman$@%hand', 'punct$@%.$@%hand']","['x$@%the$@%man', 'x$@%man$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%package$@%hand', 'x$@%to$@%WORDERASED', 'x$@%the$@%woman', 'x$@%woman$@%hand', 'x$@%.$@%hand']","['x$@%the$@%x', 'x$@%man$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%package$@%x', 'x$@%to$@%x', 'x$@%the$@%x', 'x$@%woman$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.8872420332899399,0.8798943779547052,0.2221441561499271,0.589978814125061,3
+I03T-gNNS-p008-r1,He is handing a package.,1,1,0,0,1,"1	he	_	PRP	PRP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	hand	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%he$@%hand', 'aux$@%be$@%hand', 'root$@%hand$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%hand', 'punct$@%.$@%hand']","['x$@%he$@%hand', 'x$@%be$@%hand', 'x$@%hand$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%hand', 'x$@%.$@%hand']","['x$@%he$@%x', 'x$@%be$@%x', 'x$@%hand$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.72,2.0,0.7155310703072411,0.6446191915979691,0.2049456764247204,0.6260592937469482,2
+I03T-gNNS-p010-r1,the woman get a package,0,0,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	woman	_	NN	NN	_	3	nsubj	_	_
+3	get	_	VBP	VBP	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	package	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['det$@%the$@%woman', 'nsubj$@%woman$@%get', 'root$@%get$@%VROOT', 'det$@%a$@%package', 'dobj$@%package$@%get', 'punct$@%.$@%get']","['x$@%the$@%woman', 'x$@%woman$@%get', 'x$@%get$@%VROOT', 'x$@%a$@%package', 'x$@%package$@%get', 'x$@%.$@%get']","['x$@%the$@%x', 'x$@%woman$@%x', 'x$@%get$@%x', 'x$@%a$@%x', 'x$@%package$@%x', 'x$@%.$@%x']",0.486,3.0,0.7349463826189744,0.7052822857230356,0.21917656303225674,0.5529232621192932,4

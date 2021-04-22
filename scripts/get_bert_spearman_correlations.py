@@ -34,17 +34,8 @@ def process_spearman(raw_bird):
 	return bsp, bpv
 
 
-def combine_csvs(bfull):
-	# oldie = pd.read_csv(statsdir+"all_spearman_N70.csv", index_col=0)
-	b = pd.DataFrame([bfull["BERT_spear"], bfull["BERT_p"]])
-	oldie = pd.read_csv(statsdir+"all_spearman_N70.csv")
-	newdf = pd.concat([oldie, b], axis=1)
-	print(newdf)
-	newdf.to_csv(statsdir+"/combined_spearman_"+test_sample+".csv", index=False)
-
-
-train_sample = "F14"
-test_sample = "N70"
+train_sample = "N50"
+test_sample = "N04"
 bert_dir=('/Users/leviking/Documents/dissertation/SAILS/test_data/scored/'+
 		  train_sample+'-VS-'+test_sample+'-BERT/')
 statsdir=('/Users/leviking/Documents/dissertation/SAILS/stats/'+

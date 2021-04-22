@@ -1,0 +1,51 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I23T-gNNS-p004-r1,The doctor is about to do an injection to a girl.,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	doctor	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	do	_	VB	VB	_	4	xcomp	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	injection	_	NN	NN	_	6	dobj	_	_
+9	to	_	TO	TO	_	0	erased	_	_
+10	a	_	DT	DT	_	11	det	_	_
+11	girl	_	NN	NN	_	6	prep_to	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%doctor', 'xsubj$@%doctor$@%do', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%do', 'xcomp$@%do$@%about', 'det$@%a$@%injection', 'dobj$@%injection$@%do', 'erased$@%to$@%WORDERASED', 'det$@%a$@%girl', 'prep_to$@%girl$@%do', 'punct$@%.$@%about']","['x$@%the$@%doctor', 'x$@%doctor$@%do', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%do', 'x$@%do$@%about', 'x$@%a$@%injection', 'x$@%injection$@%do', 'x$@%to$@%WORDERASED', 'x$@%a$@%girl', 'x$@%girl$@%do', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%doctor$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%do$@%x', 'x$@%a$@%x', 'x$@%injection$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.8813819686581315,0.8759577472470186,0.5277596586098267,0.5966982245445251,2
+I23T-gNNS-p005-r1,The doctor is taking a shot for the girl.,0,1,1,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	doctor	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	take	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	shot	_	NN	NN	_	4	dobj	_	_
+7	for	_	IN	IN	_	0	erased	_	_
+8	the	_	DT	DT	_	9	det	_	_
+9	girl	_	NN	NN	_	6	prep_for	_	_
+10	.	_	.	.	_	4	punct	_	_","['det$@%the$@%doctor', 'nsubj$@%doctor$@%take', 'aux$@%be$@%take', 'root$@%take$@%VROOT', 'det$@%a$@%shot', 'dobj$@%shot$@%take', 'erased$@%for$@%WORDERASED', 'det$@%the$@%girl', 'prep_for$@%girl$@%shot', 'punct$@%.$@%take']","['x$@%the$@%doctor', 'x$@%doctor$@%take', 'x$@%be$@%take', 'x$@%take$@%VROOT', 'x$@%a$@%shot', 'x$@%shot$@%take', 'x$@%for$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%shot', 'x$@%.$@%take']","['x$@%the$@%x', 'x$@%doctor$@%x', 'x$@%be$@%x', 'x$@%take$@%x', 'x$@%a$@%x', 'x$@%shot$@%x', 'x$@%for$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%.$@%x']",0.149,2.0,0.7137809586938381,0.7095011610052522,0.052115666103420666,0.6087503433227539,1
+I23T-gNNS-p007-r1,The doctor is trying to calming the girl down then eject the medical. ,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	doctor	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	try	_	VBG	VBG	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	calming	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	girl	_	NN	NN	_	6	dobj	_	_
+9	down	_	RP	RP	_	6	prt	_	_
+10	then	_	RB	RB	_	6	advmod	_	_
+11	eject	_	VB	VB	_	6	dep	_	_
+12	the	_	DT	DT	_	13	det	_	_
+13	medical	_	JJ	JJ	_	6	dobj	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%doctor', 'xsubj$@%doctor$@%calming', 'aux$@%be$@%try', 'root$@%try$@%VROOT', 'aux$@%to$@%calming', 'xcomp$@%calming$@%try', 'det$@%the$@%girl', 'dobj$@%girl$@%calming', 'prt$@%down$@%calming', 'advmod$@%then$@%calming', 'dep$@%eject$@%calming', 'det$@%the$@%medical', 'dobj$@%medical$@%calming', 'punct$@%.$@%try']","['x$@%the$@%doctor', 'x$@%doctor$@%calming', 'x$@%be$@%try', 'x$@%try$@%VROOT', 'x$@%to$@%calming', 'x$@%calming$@%try', 'x$@%the$@%girl', 'x$@%girl$@%calming', 'x$@%down$@%calming', 'x$@%then$@%calming', 'x$@%eject$@%calming', 'x$@%the$@%medical', 'x$@%medical$@%calming', 'x$@%.$@%try']","['x$@%the$@%x', 'x$@%doctor$@%x', 'x$@%be$@%x', 'x$@%try$@%x', 'x$@%to$@%x', 'x$@%calming$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', 'x$@%down$@%x', 'x$@%then$@%x', 'x$@%eject$@%x', 'x$@%the$@%x', 'x$@%medical$@%x', 'x$@%.$@%x']",0.09300000000000001,3.0,0.901326534121932,0.9014156545807234,0.741102895000608,0.2774476110935211,4
+I23T-gNNS-p009-r1,The doctor is about to inject the needle into the girl's arm.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	doctor	_	NN	NN	_	6	xsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	about	_	IN	IN	_	0	root	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	inject	_	VB	VB	_	4	xcomp	_	_
+7	the	_	DT	DT	_	8	det	_	_
+8	needle	_	NN	NN	_	6	dobj	_	_
+9	into	_	IN	IN	_	0	erased	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	girl	_	NN	NN	_	13	poss	_	_
+12	's	_	POS	POS	_	0	erased	_	_
+13	arm	_	NN	NN	_	6	prep_into	_	_
+14	.	_	.	.	_	4	punct	_	_","['det$@%the$@%doctor', 'xsubj$@%doctor$@%inject', 'aux$@%be$@%about', 'root$@%about$@%VROOT', 'aux$@%to$@%inject', 'xcomp$@%inject$@%about', 'det$@%the$@%needle', 'dobj$@%needle$@%inject', 'erased$@%into$@%WORDERASED', 'det$@%the$@%girl', 'poss$@%girl$@%arm', ""erased$@%'s$@%WORDERASED"", 'prep_into$@%arm$@%inject', 'punct$@%.$@%about']","['x$@%the$@%doctor', 'x$@%doctor$@%inject', 'x$@%be$@%about', 'x$@%about$@%VROOT', 'x$@%to$@%inject', 'x$@%inject$@%about', 'x$@%the$@%needle', 'x$@%needle$@%inject', 'x$@%into$@%WORDERASED', 'x$@%the$@%girl', 'x$@%girl$@%arm', ""x$@%'s$@%WORDERASED"", 'x$@%arm$@%inject', 'x$@%.$@%about']","['x$@%the$@%x', 'x$@%doctor$@%x', 'x$@%be$@%x', 'x$@%about$@%x', 'x$@%to$@%x', 'x$@%inject$@%x', 'x$@%the$@%x', 'x$@%needle$@%x', 'x$@%into$@%x', 'x$@%the$@%x', 'x$@%girl$@%x', ""x$@%'s$@%x"", 'x$@%arm$@%x', 'x$@%.$@%x']",1.0,0.0,0.8645932007875491,0.8588869232188137,0.6553378789631417,0.5627247095108032,3

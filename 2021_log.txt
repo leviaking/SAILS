@@ -410,6 +410,93 @@ update N14 highlighting: DONE
 update N50 system numbers: DONE
 update N50 BERT numbers: DONE
 update N50 highlighting: DONE
+################################################################################
+
+4/17/2021. Saturday.
+Today I'm putting ALL the TTR and word length tables together in Ch 6.
+DONE
+
+################################################################################
+4/19/2021. Monday.
+Still need:
+Why do some rankings have such high p-values?
+What is going on with the negative Spearman correlations?
+
+For now, I'm working through the experiment sections, discussing trends, sentence lengths and TTRs.
+
+I'm getting frustrated because I'm not finding obvious trends.
+The TTRs for intransitives, transitives and ditransitives are opposite what I'd expect: the intransitives have the highest TTR and the ditransitives have the lowest TTR, meaning the intransitives have the highest complexity or lexical density, and the ditransitives have the lowest.
+For each of the experiments laid out in Ch 6, I made a scatterplot graph where the TTR is the x axis and the Spearman is the y axis. This didn't reveal a strong pattern.
+I wrote a script (ttr_vs_spearman.py) where I generated a csv of the TTR and Spearman for all 120 models. Then I made a scatterplot of this. It's ugly, revealing no clear trends.
+
+So now, in frustration, I'm trying this:
+**sample_test_sets_unique_annotation.py**
+Instead of ranking a test set of 70 NNS responses, I've sampled test sets of 4 NNS responses. I ensured that each of the 4 responses has a different annotation score (*actually, this wasn't always possible; see I13U--only 2 annotation scores exist because all responses were perfect or nearly perfect (ceiling effect)). My hope is that this will make any patterns more obvious.
+Now I have the samples, so I need to complete the pipeline...
+For now, I'm going to start with N50 vs N04:
+get_all_tfidf_cosines.py
+DONE
+get_all_spearman_correlations.py
+DONE
+thesis_spearman_stats.py
+DONE
+bert_vs_sails.py
+DONE
+
+get_bert_spearman_correlations.py
+DONE
+
+combined_thesis_spearman_stats.py
+DONE
+
+SKIP: training_stats.py No need to repeat this
+
+ttr_vs_spearman.py
+DONE
+
+
+OK, I still don't quite grasp why a given ranking gets a negative Spearman score, but granted I'm not at 100%.
+I'm going to repeat the above for test samples of N02, which should make this blaringly obvious.
+sample_test_sets_unique_annotation.py
+DONE
+get_all_tfidf_cosines.py
+DONE
+
+get_all_spearman_correlations.py
+DONE
+
+thesis_spearman_stats.py
+DONE
+
+ttr_vs_spearman.py
+DONE
+
+Maybe later:
+	bert_vs_sails.py
+	get_bert_spearman_correlations.py
+	combined_thesis_spearman_stats.py
+
+
+
+################################################################################
+Still frustrated and searching for trends here... I have a few other ideas to try.
+
+BIG IDEAS:
+1. Plot NS avg response length vs Spearman: YES! trend: lower words per response trends with higher (better) Spearman!
+	(I recently did NS average TTR vs Spearman but it's not promising)
+2. Get NNS avg response length & NNS TTR;
+	3. Plot NNS avg response length vs Spearman;
+	4. Plot NNS TTR vs Spearman
+5. Calculate (mean) average precision for Core Event (instead of Spearman based on weighted annotation ranking);
+	(This shows how well my system can separate Core=1 responses from Core=0 responses)
+6. More granular analysis: For example, compare: Targ+r1, Targ+r2, Untarg+r1, Untarg+r2;
+
+
+TO DO:
+1. Get a grasp of the p values (for Spearman); if possible, explain why some are so high (that's bad!); regardless, address the concern in a Ch. 6 section.
+2. Negative Spearman correlations: Address this phenomenon in a Ch. 6 section; use examples or toy examples;
+
+
 
 
 ################################################################################

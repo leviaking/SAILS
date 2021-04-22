@@ -1,0 +1,33 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I16T-gNNS-p004-r1,The frog is eating a fly.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	frog	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	eat	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	6	det	_	_
+6	fly	_	NN	NN	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%frog', 'nsubj$@%frog$@%eat', 'aux$@%be$@%eat', 'root$@%eat$@%VROOT', 'det$@%a$@%fly', 'dobj$@%fly$@%eat', 'punct$@%.$@%eat']","['x$@%the$@%frog', 'x$@%frog$@%eat', 'x$@%be$@%eat', 'x$@%eat$@%VROOT', 'x$@%a$@%fly', 'x$@%fly$@%eat', 'x$@%.$@%eat']","['x$@%the$@%x', 'x$@%frog$@%x', 'x$@%be$@%x', 'x$@%eat$@%x', 'x$@%a$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",1.0,0.0,0.4469981722020993,0.4111539975062733,0.1003847374059088,0.6110745668411255,2
+I16T-gNNS-p007-r1,the frog is catching the flyers.,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	frog	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	catch	_	VBG	VBG	_	0	root	_	_
+5	the	_	DT	DT	_	6	det	_	_
+6	flyer	_	NNS	NNS	_	4	dobj	_	_
+7	.	_	.	.	_	4	punct	_	_","['det$@%the$@%frog', 'nsubj$@%frog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%the$@%flyer', 'dobj$@%flyer$@%catch', 'punct$@%.$@%catch']","['x$@%the$@%frog', 'x$@%frog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%the$@%flyer', 'x$@%flyer$@%catch', 'x$@%.$@%catch']","['x$@%the$@%x', 'x$@%frog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%the$@%x', 'x$@%flyer$@%x', 'x$@%.$@%x']",0.09300000000000001,3.0,0.4711128512392251,0.4854313830378555,0.3455224710735251,0.6000612378120422,3
+I16T-gNNS-p009-r1,The frog is pulling out his tongue to eat the insect. ,1,1,0,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	frog	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	pull	_	VBG	VBG	_	0	root	_	_
+5	out	_	RP	RP	_	4	prt	_	_
+6	he	_	PRP$	PRP$	_	7	poss	_	_
+7	tongue	_	NN	NN	_	4	dobj	_	_
+8	to	_	TO	TO	_	9	aux	_	_
+9	eat	_	VB	VB	_	7	infmod	_	_
+10	the	_	DT	DT	_	11	det	_	_
+11	insect	_	NN	NN	_	9	dobj	_	_
+12	.	_	.	.	_	4	punct	_	_","['det$@%the$@%frog', 'nsubj$@%frog$@%pull', 'aux$@%be$@%pull', 'root$@%pull$@%VROOT', 'prt$@%out$@%pull', 'poss$@%he$@%tongue', 'dobj$@%tongue$@%pull', 'aux$@%to$@%eat', 'infmod$@%eat$@%tongue', 'det$@%the$@%insect', 'dobj$@%insect$@%eat', 'punct$@%.$@%pull']","['x$@%the$@%frog', 'x$@%frog$@%pull', 'x$@%be$@%pull', 'x$@%pull$@%VROOT', 'x$@%out$@%pull', 'x$@%he$@%tongue', 'x$@%tongue$@%pull', 'x$@%to$@%eat', 'x$@%eat$@%tongue', 'x$@%the$@%insect', 'x$@%insect$@%eat', 'x$@%.$@%pull']","['x$@%the$@%x', 'x$@%frog$@%x', 'x$@%be$@%x', 'x$@%pull$@%x', 'x$@%out$@%x', 'x$@%he$@%x', 'x$@%tongue$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%the$@%x', 'x$@%insect$@%x', 'x$@%.$@%x']",0.9440000000000001,1.0,0.7864247722608977,0.7831575377056917,0.3398445061919242,0.5666159391403198,4
+I16T-gNNS-p012-r1,Frog is catching a fly.,1,0,0,1,1,"1	frog	_	NNP	NNP	_	3	nsubj	_	_
+2	be	_	VBZ	VBZ	_	3	aux	_	_
+3	catch	_	VBG	VBG	_	0	root	_	_
+4	a	_	DT	DT	_	5	det	_	_
+5	fly	_	NN	NN	_	3	dobj	_	_
+6	.	_	.	.	_	3	punct	_	_","['nsubj$@%frog$@%catch', 'aux$@%be$@%catch', 'root$@%catch$@%VROOT', 'det$@%a$@%fly', 'dobj$@%fly$@%catch', 'punct$@%.$@%catch']","['x$@%frog$@%catch', 'x$@%be$@%catch', 'x$@%catch$@%VROOT', 'x$@%a$@%fly', 'x$@%fly$@%catch', 'x$@%.$@%catch']","['x$@%frog$@%x', 'x$@%be$@%x', 'x$@%catch$@%x', 'x$@%a$@%x', 'x$@%fly$@%x', 'x$@%.$@%x']",0.851,2.0,0.2933598888569502,0.2935702465102188,0.046169588716801324,0.6530368328094482,1

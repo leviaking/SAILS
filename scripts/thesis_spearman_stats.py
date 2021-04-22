@@ -155,8 +155,8 @@ def from_exp_get_stats_csvs_unweighted(wd, exp, all_sources, sd, trr, tss):
 
 def main():
 	train_sample = "N50"
-	weighted = "yes"
-	test_sample = "N70"
+	weighted = "no"
+	test_sample = "N02"
 	if weighted == "yes":
 		working_dir=("/Users/leviking/Documents/dissertation/SAILS/stats/"+
 					 train_sample+'-VS-'+test_sample+'-W/')

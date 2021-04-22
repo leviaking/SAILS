@@ -143,9 +143,9 @@ def from_experiment_get_stats_csvs_weighted(wd, exp, all_sources, sd, trr, tss):
 
 
 def main():
-	train_sample = "N14"
+	train_sample = "N50"
 	weighted = "no"
-	test_sample = "N70"
+	test_sample = "N04"
 	## WEIGHTED version
 	if weighted == "yes":
 		working_dir=("/Users/leviking/Documents/dissertation/SAILS/stats/"+

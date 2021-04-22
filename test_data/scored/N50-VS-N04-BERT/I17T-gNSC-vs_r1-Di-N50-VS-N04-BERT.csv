@@ -1,0 +1,34 @@
+ResponseID,Response,Core,Answer,Gramm,Interp,Verif,parse,ldh,xdh,xdx,AnnoScore,AnnoRank,ldh TC,xdh TC,xdx TC,BERT_score,BERT_rank
+I17T-gNNS-p004-r1,The girl is feeding carrots to a horse.,1,1,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	carrot	_	NNS	NNS	_	4	dobj	_	_
+6	to	_	TO	TO	_	0	erased	_	_
+7	a	_	DT	DT	_	8	det	_	_
+8	horse	_	NN	NN	_	4	prep_to	_	_
+9	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'dobj$@%carrot$@%feed', 'erased$@%to$@%WORDERASED', 'det$@%a$@%horse', 'prep_to$@%horse$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%carrot$@%feed', 'x$@%to$@%WORDERASED', 'x$@%a$@%horse', 'x$@%horse$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%a$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",1.0,0.0,0.29822671763806896,0.1435863349657931,0.07649856416457357,0.7137137651443481,1
+I17T-gNNS-p017-r1,The girl gives carrot to this horse.,1,0,1,1,1,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	give	_	VBZ	VBZ	_	0	root	_	_
+4	carrot	_	NN	NN	_	3	dobj	_	_
+5	to	_	TO	TO	_	0	erased	_	_
+6	this	_	DT	DT	_	7	det	_	_
+7	horse	_	NN	NN	_	3	prep_to	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%give', 'root$@%give$@%VROOT', 'dobj$@%carrot$@%give', 'erased$@%to$@%WORDERASED', 'det$@%this$@%horse', 'prep_to$@%horse$@%give', 'punct$@%.$@%give']","['x$@%the$@%girl', 'x$@%girl$@%give', 'x$@%give$@%VROOT', 'x$@%carrot$@%give', 'x$@%to$@%WORDERASED', 'x$@%this$@%horse', 'x$@%horse$@%give', 'x$@%.$@%give']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%give$@%x', 'x$@%carrot$@%x', 'x$@%to$@%x', 'x$@%this$@%x', 'x$@%horse$@%x', 'x$@%.$@%x']",0.907,1.0,0.9466702362325674,0.9410295119902404,0.2459392965445727,0.6101914048194885,2
+I17T-gNNS-p021-r1,The girl is feeding a house robbort ,0,1,0,0,0,"1	the	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	4	nsubj	_	_
+3	be	_	VBZ	VBZ	_	4	aux	_	_
+4	feed	_	VBG	VBG	_	0	root	_	_
+5	a	_	DT	DT	_	7	det	_	_
+6	house	_	NN	NN	_	7	nn	_	_
+7	robbort	_	NN	NN	_	4	dobj	_	_
+8	.	_	.	.	_	4	punct	_	_","['det$@%the$@%girl', 'nsubj$@%girl$@%feed', 'aux$@%be$@%feed', 'root$@%feed$@%VROOT', 'det$@%a$@%robbort', 'nn$@%house$@%robbort', 'dobj$@%robbort$@%feed', 'punct$@%.$@%feed']","['x$@%the$@%girl', 'x$@%girl$@%feed', 'x$@%be$@%feed', 'x$@%feed$@%VROOT', 'x$@%a$@%robbort', 'x$@%house$@%robbort', 'x$@%robbort$@%feed', 'x$@%.$@%feed']","['x$@%the$@%x', 'x$@%girl$@%x', 'x$@%be$@%x', 'x$@%feed$@%x', 'x$@%a$@%x', 'x$@%house$@%x', 'x$@%robbort$@%x', 'x$@%.$@%x']",0.09300000000000001,3.0,0.4694400077591699,0.5328392473092198,0.7191717383219276,0.5080529451370239,4
+I17T-gNNS-p023-r1,A girl give giraffe to eat carrot,0,0,0,1,1,"1	a	_	DT	DT	_	2	det	_	_
+2	girl	_	NN	NN	_	3	nsubj	_	_
+3	give	_	VBP	VBP	_	0	root	_	_
+4	giraffe	_	NN	NN	_	3	dobj	_	_
+5	to	_	TO	TO	_	6	aux	_	_
+6	eat	_	VB	VB	_	3	xcomp	_	_
+7	carrot	_	NN	NN	_	6	dobj	_	_
+8	.	_	.	.	_	3	punct	_	_","['det$@%a$@%girl', 'nsubj$@%girl$@%give', 'root$@%give$@%VROOT', 'dobj$@%giraffe$@%give', 'aux$@%to$@%eat', 'xcomp$@%eat$@%give', 'dobj$@%carrot$@%eat', 'punct$@%.$@%give']","['x$@%a$@%girl', 'x$@%girl$@%give', 'x$@%give$@%VROOT', 'x$@%giraffe$@%give', 'x$@%to$@%eat', 'x$@%eat$@%give', 'x$@%carrot$@%eat', 'x$@%.$@%give']","['x$@%a$@%x', 'x$@%girl$@%x', 'x$@%give$@%x', 'x$@%giraffe$@%x', 'x$@%to$@%x', 'x$@%eat$@%x', 'x$@%carrot$@%x', 'x$@%.$@%x']",0.486,2.0,0.9829756212263504,0.98358832734209,0.6660063699399608,0.5266323089599609,3

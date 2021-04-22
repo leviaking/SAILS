@@ -42,7 +42,41 @@ def string_list_to_real_list(pylist):
 	return pylist
 
 
+def quick_clean_response_list(resp_l):
+	resp_l = [g.replace(".", " ") for g in resp_l]
+	resp_l = [g.replace(",", " ") for g in resp_l]
+	resp_l = [g.replace(";", " ") for g in resp_l]
+	resp_l = [g.replace(":", " ") for g in resp_l]
+	resp_l = [g.replace("!", " ") for g in resp_l]
+	resp_l = [g.replace("?", " ") for g in resp_l]
+	resp_l = [g.replace("  ", " ") for g in resp_l]
+	resp_l = [g.replace("  ", " ") for g in resp_l]
+	resp_l = [g.replace("  ", " ") for g in resp_l]
+	resp_l = [g.replace("  ", " ") for g in resp_l]
+	resp_l = [g.strip() for g in resp_l]
+	return resp_l
+
+
+## words per response
 def get_length_stats(tr_samp, train_fns, tdict, param_dict):
+	##this is ugly but it's okay for now... I'm iterating through more than would be necessary if this were handled more elegantly...
+	tf_lengths = []
+	tfns_cute = []
+	for tfx in train_fns:
+		tfx_cute = tfx.replace(".csv", "")
+		tfns_cute.append(tfx_cute)
+		tfxd = tdict[tfx]
+		tfx_responses = list(tfxd["Response"])
+		tfx_responses = quick_clean_response_list(tfx_responses)
+		tfx_lengths = [len(h.split(" ")) for h in tfx_responses]
+		tfx_avg_length = float(sum(tfx_lengths)/len(tfx_lengths))
+		# tf_lengths.append([tfx_cute, tfx_avg_length])
+		tf_lengths.append(tfx_avg_length)
+	tf_lengths_dict = {}
+	tf_lengths_dict["AvgWdsPerResp"] = tf_lengths
+	tf_lengths_df = pandas.DataFrame(tf_lengths_dict, index=tfns_cute)
+	tf_lengths_df.to_csv(stats_dir+tr_samp+'_lengths.csv', encoding='utf-8')
+	## this is where it starts iterating again...
 	alldf = pandas.DataFrame([])
 	mycols = []
 	for exp in my_exps:
@@ -58,17 +92,7 @@ def get_length_stats(tr_samp, train_fns, tdict, param_dict):
 					else:
 						sgdf = sgdf.append(tfd)
 			sg_sents = list(sgdf["Response"])
-			sg_sents = [g.replace(".", " ") for g in sg_sents]
-			sg_sents = [g.replace(",", " ") for g in sg_sents]
-			sg_sents = [g.replace(";", " ") for g in sg_sents]
-			sg_sents = [g.replace(":", " ") for g in sg_sents]
-			sg_sents = [g.replace("!", " ") for g in sg_sents]
-			sg_sents = [g.replace("?", " ") for g in sg_sents]
-			sg_sents = [g.replace("  ", " ") for g in sg_sents]
-			sg_sents = [g.replace("  ", " ") for g in sg_sents]
-			sg_sents = [g.replace("  ", " ") for g in sg_sents]
-			sg_sents = [g.replace("  ", " ") for g in sg_sents]
-			sg_sents = [g.strip() for g in sg_sents]
+			sg_sents = quick_clean_response_list(sg_sents)
 			sg_lengths = []
 			sg_sorter = []
 			for gx in sg_sents:
@@ -84,15 +108,18 @@ def get_length_stats(tr_samp, train_fns, tdict, param_dict):
 				alldf = pandas.DataFrame(lenstats)
 			else:
 				alldf = pandas.concat([alldf, lenstats], axis=1)
-	print(alldf)
+	# print(alldf)
 	alldf.to_csv(stats_dir+tr_samp+'_length_stats.csv', encoding='utf-8')
 
 
-### for each FILE, get 1 TTR; based on the sg, we add TTR to the appropriate list;
-### then we run DataFrame.describe() on the lists...
-
+### for each training FILE (NS model), get 1 word TTR; based on the setting,
+## we add TTR to the appropriate list; then we run DataFrame.describe() on the lists...
 def get_word_ttrs(tr_samp, train_fns, tdict, param_dict):
-	alldf = pandas.DataFrame([])
+	# tfns_cute = [y.replace(".csv", "") for y in train_fns]
+	describe_df = pandas.DataFrame([])
+	# model_ttrs_dict = {}
+	model_ttrs = []
+	tfns_cute = []
 	mycols = []
 	for exp in my_exps:
 		settings = param_dict[exp]
@@ -104,42 +131,45 @@ def get_word_ttrs(tr_samp, train_fns, tdict, param_dict):
 			for tf in train_fns:
 				tfd = tdict[tf]
 				tsents = list(tfd["Response"])
-				tsents = [g.lower() for g in tsents]
-				tsents = [g.replace(".", " ") for g in tsents]
-				tsents = [g.replace(",", " ") for g in tsents]
-				tsents = [g.replace(";", " ") for g in tsents]
-				tsents = [g.replace(":", " ") for g in tsents]
-				tsents = [g.replace("!", " ") for g in tsents]
-				tsents = [g.replace("?", " ") for g in tsents]
-				tsents = [g.replace("  ", " ") for g in tsents]
-				tsents = [g.replace("  ", " ") for g in tsents]
-				tsents = [g.replace("  ", " ") for g in tsents]
-				tsents = [g.replace("  ", " ") for g in tsents]
-				tsents = [g.strip() for g in tsents]
+				tsents = quick_clean_response_list(tsents)
 				tstring = " ".join(tsents)
 				ttokens = tstring.split(" ")
 				ttypes = list(set(ttokens))
 				t_ttr = float(len(ttypes)/len(ttokens))
+				tcute = tf.replace(".csv", "")
+				if tcute not in tfns_cute:
+					model_ttrs.append(t_ttr)
+					tfns_cute.append(tcute)
+				else:
+					pass
+				# model_ttrs_dict[tf] = t_ttr
 				# print(tf, "\n", tstring, "\n", t_ttr, "\n\n\n\n\n\n")
 				if sg in tf:
 					sgttrs.append([tf, t_ttr])
 				else:
 					pass
-			print("\n\n\n", sg)
+			# print("\n\n\n", sg)
 			sgdf = pandas.DataFrame(sgttrs, columns=['Source', 'Word_TTR'])
-			print(sgdf)
+			# print(sgdf)
 			ttrdf = pandas.DataFrame(sgdf, columns=["Word_TTR"])
 			# print("\n\n\n\n\n\n\n\n\n\n\n\nSETTINGS LEVEL STATS for "+exp+sg+":")
 			ttrstats = ttrdf.describe(percentiles=[.5])
 			ttrstats.columns = [sg]
-			if alldf.empty:
-				alldf = pandas.DataFrame(ttrstats)
+			if describe_df.empty:
+				describe_df = pandas.DataFrame(ttrstats)
 			else:
-				alldf = pandas.concat([alldf, ttrstats], axis=1)
-	print(alldf)
-	alldf.to_csv(stats_dir+tr_samp+'_word_ttr_stats.csv', encoding='utf-8')
+				describe_df = pandas.concat([describe_df, ttrstats], axis=1)
+	model_dict = {}
+	model_dict["Word_TTR"] = model_ttrs
+	model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
+	model_ttrs_df.to_csv(stats_dir+tr_samp+'_word_ttrs.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+tr_samp+'_word_ttr_stats.csv', encoding='utf-8')
 
 
+## for each training file (NS model), get TTRs (ldh, xdh, xdx); based on the setting,
+## we add TTR to the appropriate list; then we run DataFrame.describe() on the lists;
+## this function currently writes out a descriptive stats csv for each model size
+## showing the stats for each isolated parameter setting; it aso writes out a 
 def get_termrep_ttrs(tr_samp, train_fns, t_dict):
 	exp = 'termrep'
 	settings = ['ldh', 'xdh', 'xdx']
@@ -160,13 +190,13 @@ def get_termrep_ttrs(tr_samp, train_fns, t_dict):
 		termrep_ttrs[setting] = setting_ttrs
 		setting_ttrs_df = pandas.DataFrame(setting_ttrs, columns=[setting])
 		ttrstats = setting_ttrs_df.describe(percentiles=[.5])
-		ttrstats.columns = [setting]
+		ttrstats.columns = [setting+"_ttr"]
 
 		if statsdf.empty:
 			statsdf = pandas.DataFrame(ttrstats)
 		else:
 			statsdf = pandas.concat([statsdf, ttrstats], axis=1)
-	print(statsdf)
+	# print(statsdf)
 	statsdf.to_csv(stats_dir+tr_samp+'_termrep_ttr_stats.csv', encoding='utf-8')
 	termrepdf = pandas.DataFrame(termrep_ttrs, index=tfns_cute)
 	termrepdf.to_csv(stats_dir+tr_samp+'_termrep_ttrs.csv', encoding='utf-8')
