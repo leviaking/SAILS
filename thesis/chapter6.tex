@@ -3,7 +3,9 @@
 %\section{Introduction}
 \chapter{Optimization}
 \label{chap:optimization}
-In this chapter, I discuss experiments intended to optimize my system for rating and ranking responses automatically, first introduced in Chapter~\ref{chap:pilot}. My earliest attempts were rule-based and relied on strict matching with a pre-established set of acceptable responses, described in Section~\ref{sec:pilot-study}. This found moderate success, leading to the improved approach described in Section~\ref{sec:2016work}, which is data-driven and relies on more flexible methods of comparison.
+In this chapter, I discuss experiments intended to optimize my system for rating and ranking responses automatically, first introduced in Chapter~\ref{chap:pilot}. In practical terms, this means looking for correlations between the performance of my system (and its particular settings) and observable features of the response data, such as NS model size, type-to-token ratios and mean response lengths. Where sufficient data allows, I also look for patterns indicating correlations between pairs of parameter settings used in a given system configuration. 
+
+My earliest attempts at ranking responses were rule-based and relied on strict matching with a pre-established set of acceptable responses, described in Section~\ref{sec:pilot-study}. This found moderate success, leading to the improved approach described in Section~\ref{sec:2016work}, which is data-driven and relies on more flexible methods of comparison.
 In Section~\ref{sec:current-method}, I give an overview of the updates to this approach used here to process the dataset described in Chapter~\ref{chap:data}, where the goal is now to approximate the benchmark rankings described in Section~\ref{sec:holistic-scoring}. In the sections beyond, I discuss the experiments isolating each parameter, followed by a look at overall trends.
 
 
@@ -631,6 +633,142 @@ std dev & 0.229 		& 0.236 			& 0.213 				& 0.177 \\
 \label{sec:exp-combos}
 \subsection{Combined settings results}
 \label{sec:combos-results}
+
+
+\section{Annotation features experiments}
+\label{sec:exp-annotations}
+In this section, I revisit the five annotation features discussed in Chapter~\ref{chap:annotation} to see how they correlate with my system's performance. For a given feature, I use average precision to see how well the system rankings separate the positively and negatively annotated responses.
+
+\subsection{Annotation features results}
+\label{sec:annotations-results}
+
+%% CORE EVENT MAP
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l||l|l|l||l|}
+\hline
+    		& WAR	& ldh	& xdh &	xdx & BERT \\ \hline
+\hline
+Intrans    & 0.865 & \textbf{0.855} & 0.854 & 0.852 & 0.831 \\ \hline
+Trans      & 0.742 & \textbf{0.737} & 0.733 & 0.725 & 0.701 \\ \hline
+Ditrans    & 0.660 & 0.657 & 0.656 & \textbf{0.661} & 0.629 \\ \hline
+\hline
+Target    & 0.735 & \textbf{0.737} & 0.735 & 0.729 & 0.704 \\ \hline
+Untarg    & 0.777 & 0.762 & 0.759 & \textbf{0.763} & 0.736 \\ \hline
+\hline
+Primary    & 0.756 & \textbf{0.750} & 0.748 & 0.745 & 0.719 \\ \hline
+Mixed      & 0.756 & \textbf{0.749} & 0.746 & 0.746 & 0.721 \\ \hline
+\hline
+Total 		& 0.756 & \textbf{0.750} & 0.747 & 0.746 & 0.720 \\ \hline
+\end{tabular}
+\caption{\label{tab:core-ap}Mean Average Precision (MAP) scores for the \feat{Core Event} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+}
+\end{center}
+\end{table}
+
+%%ANSWERHOOD MAP
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l||l|l|l||l|}
+\hline
+    		& WAR	& ldh	& xdh &	xdx & BERT \\ \hline
+\hline
+Intrans        & 0.881 & 0.866 & 0.868 & \textbf{0.874} & 0.868 \\ \hline
+Trans        & 0.845 & 0.818 & 0.823 & \textbf{0.851} & 0.838 \\ \hline
+Ditrans        & 0.837 & 0.821 & 0.822 & \textbf{0.840} & 0.833 \\ \hline
+\hline
+Target    & 0.817 & 0.787 & 0.789 & \textbf{0.811} & 0.798 \\ \hline
+Untarg    & 0.892 & 0.883 & 0.886 & \textbf{0.899} & 0.895 \\ \hline
+\hline
+Primary        & 0.854 & 0.837 & 0.840 & \textbf{0.854} & 0.846 \\ \hline
+Mixed        & 0.854 & 0.833 & 0.835 & \textbf{0.856} & 0.847 \\ \hline
+\hline
+Total & 0.854 & 0.835 & 0.838 & \textbf{0.855} & 0.846 \\ \hline
+\end{tabular}
+\caption{\label{tab:answerhood-ap}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+}
+\end{center}
+\end{table}
+
+%%GRAMMATICALITY MAP
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l||l|l|l||l|}
+\hline
+    		& WAR	& ldh	& xdh &	xdx & BERT \\ \hline
+\hline
+Intrans        & 0.887 & 0.863 & 0.864 & \textbf{0.866} & 0.864 \\ \hline
+Trans       & 0.781 & 0.758 & 0.760 & \textbf{0.761} & 0.757 \\ \hline
+Ditrans       & 0.695 & 0.679 & 0.685 & \textbf{0.697} & 0.693 \\ \hline
+\hline
+Target    & 0.800 & 0.776 & 0.776 & \textbf{0.783} & 0.781 \\ \hline
+Untarget    & 0.776 & 0.757 & 0.762 & \textbf{0.766} & 0.761 \\ \hline
+\hline
+Primary        & 0.788 & 0.768 & 0.770 & \textbf{0.774} & 0.770 \\ \hline
+Mixed        & 0.788 & 0.765 & 0.768 & \textbf{0.775} & 0.772 \\ \hline
+\hline
+Total & 0.788 & 0.767 & 0.769 & \textbf{0.775} & 0.771 \\ \hline
+\end{tabular}
+\caption{\label{tab:grammaticality-ap}Mean Average Precision (MAP) scores for the \feat{Grammaticality} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+}
+\end{center}
+\end{table}
+
+
+%%INTERPRETABILITY MAP
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l||l|l|l||l|}
+\hline
+    		& WAR	& ldh	& xdh &	xdx & BERT \\ \hline
+\hline
+Intrans  & 0.930 & 0.928 & 0.927 & \textbf{0.933} & 0.923 \\ \hline
+Trans & 0.803 & \textbf{0.821} & 0.816 & 0.812 & 0.804 \\ \hline
+Ditrans & 0.721 & 0.786 & 0.782 & \textbf{0.792} & 0.772 \\ \hline
+\hline
+Target & 0.804 & 0.833 & 0.829 & \textbf{0.834} & 0.826 \\ \hline
+Untarget & 0.833 & \textbf{0.857} & 0.855 & \textbf{0.857} & 0.840 \\ \hline
+\hline
+Primary & 0.818 & 0.845 & 0.842 & \textbf{0.846} & 0.833 \\ \hline
+Mixed & 0.818 & 0.844 & 0.841 & \textbf{0.845} & 0.833 \\ \hline
+\hline
+Total & 0.818 & \textbf{0.845} & 0.842 & \textbf{0.845} & 0.833 \\ \hline
+\end{tabular}
+\caption{\label{tab:interpretability-ap}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+}
+\end{center}
+\end{table}
+
+
+%%VERIFIABILITY MAP
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l||l|l|l||l|}
+\hline
+    		& WAR	& ldh	& xdh &	xdx & BERT \\ \hline
+\hline
+Intrans & 0.866 & 0.849 & 0.849 & \textbf{0.851} & 0.836 \\ \hline
+Trans & 0.798 & \textbf{0.807} & \textbf{0.807} & 0.803 & 0.785 \\ \hline
+Ditrans & 0.780 & 0.811 & 0.809 & \textbf{0.812} & 0.796 \\ \hline
+\hline
+Target & 0.815 & \textbf{0.825} & 0.824 & 0.823 & 0.810 \\ \hline
+Untarget & 0.815 & \textbf{0.820} & 0.819 & \textbf{0.820} & 0.802 \\ \hline
+\hline
+Primary & 0.815 & \textbf{0.824} & 0.823 & 0.822 & 0.806 \\ \hline
+Mixed & 0.815 & \textbf{0.821} & \textbf{0.821} & \textbf{0.821} & 0.805 \\ \hline
+\hline
+Total & 0.815 & \textbf{0.823} & 0.822 & 0.822 & 0.806 \\ \hline
+\end{tabular}
+\caption{\label{tab:verifiability-ap}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+}
+\end{center}
+\end{table}
+
+
+
+
+
+
 
 
 

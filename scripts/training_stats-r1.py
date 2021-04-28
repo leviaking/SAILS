@@ -6,7 +6,7 @@
 ## For a given sample size that we've used (so far: N14, N50, F14), this finds all the training files and generates response length, word TTR and termrep TTR descriptive stats for the various variables/parameter settings. Note that the termnorm (aka weighting) parameter does not apply here -- we do not operate on any kind of special weighted version of the training files, only the basic versions.
 
 
-import sys, math, csv, pandas
+import sys, math, csv, pandas, random
 from os import walk
 from scipy.stats import rankdata
 from scipy.stats import spearmanr
@@ -168,6 +168,84 @@ def get_word_ttrs(tr_samp, train_fns, tdict, param_dict):
 	describe_df.to_csv(stats_dir+"NS-"+tr_samp+'-r1_word_ttr_stats.csv', encoding='utf-8')
 
 
+# this is my implementation of "standardized type/token ratio" from:
+# https://lexically.net/downloads/version5/HTML/index.html?type_token_ratio_proc.htm
+# note that this is a modified version of get_word_ttrs (above).
+def get_word_standardized_ttrs(tr_samp, train_fns, tdict, param_dict):
+	## token_window here is "n" in "Standardized TTR"; here i've chosen 40 because
+	## some of my smaller models (N14) have as few as 43 tokens per model; in this
+	## implementation, I calculate TTR for each token_window (roughly, a sample),
+	## and the final TTR is the average of these; note that remainder tokens are ignored
+	token_window = 40
+	# tfns_cute = [y.replace(".csv", "") for y in train_fns]
+	describe_df = pandas.DataFrame([])
+	# model_ttrs_dict = {}
+	model_ttrs = []
+	tfns_cute = []
+	mycols = []
+	for exp in my_exps:
+		settings = param_dict[exp]
+		for sg in settings:
+			mycols.append(sg)
+			# sgdf = pandas.DataFrame([], columns=['ResponseID', 'Response', 'ldh', 'xdh', 'xdx'])
+			# sgdf = pandas.DataFrame([], columns=['Source', 'Word_TTR'])
+			sgttrs = []
+			for tf in train_fns:
+				tcute = tf.replace(".csv", "")
+				tfd = tdict[tf]
+				tsents = list(tfd["Response"])
+				tsents = quick_clean_response_list(tsents)
+				random.shuffle(tsents)
+				tstring = " ".join(tsents)
+				ttokens = tstring.split(" ")
+				tf_windows = []
+				current_window = []
+				while len(ttokens) > token_window:
+					while len(current_window) < token_window:
+						current_window.append(ttokens.pop(0))
+					tf_windows.append(current_window)
+					current_window = []
+				window_ttrs = []
+				for cwtokens in tf_windows:
+					if len(cwtokens) != token_window:
+						pass
+					else:
+						cwtypes = list(set(cwtokens))
+						cwttr = float(len(cwtypes)/token_window)
+						window_ttrs.append(cwttr)
+				# print("\n\n\n\n\n\n"+tcute)
+				# print(window_ttrs)
+				t_ttr = float(sum(window_ttrs)/len(window_ttrs))
+				# print(t_ttr)
+				if tcute not in tfns_cute:
+					model_ttrs.append(t_ttr)
+					tfns_cute.append(tcute)
+				else:
+					pass
+				# model_ttrs_dict[tf] = t_ttr
+				# print(tf, "\n", tstring, "\n", t_ttr, "\n\n\n\n\n\n")
+				if sg in tf:
+					sgttrs.append([tf, t_ttr])
+				else:
+					pass
+			# print("\n\n\n", sg)
+			sgdf = pandas.DataFrame(sgttrs, columns=['Source', 'Word_STTR'])
+			# print(sgdf)
+			ttrdf = pandas.DataFrame(sgdf, columns=["Word_STTR"])
+			# print("\n\n\n\n\n\n\n\n\n\n\n\nSETTINGS LEVEL STATS for "+exp+sg+":")
+			ttrstats = ttrdf.describe(percentiles=[.5])
+			ttrstats.columns = [sg]
+			if describe_df.empty:
+				describe_df = pandas.DataFrame(ttrstats)
+			else:
+				describe_df = pandas.concat([describe_df, ttrstats], axis=1)
+	model_dict = {}
+	model_dict["Word_STTR"] = model_ttrs
+	model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
+	model_ttrs_df.to_csv(stats_dir+"NS-"+tr_samp+'-r1_word_sttrs.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+"NS-"+tr_samp+'-r1_word_sttr_stats.csv', encoding='utf-8')
+
+
 ## for each training file (NS model), get TTRs (ldh, xdh, xdx); based on the setting,
 ## we add TTR to the appropriate list; then we run DataFrame.describe() on the lists;
 ## this function currently writes out a descriptive stats csv for each model size
@@ -227,6 +305,7 @@ def main():
 		train_dict = get_training_dfs(train_dir, train_file_names)
 		get_length_stats(train_sample, train_file_names, train_dict, paramd)
 		get_word_ttrs(train_sample, train_file_names, train_dict, paramd)
+		get_word_standardized_ttrs(train_sample, train_file_names, train_dict, paramd)
 		get_termrep_ttrs(train_sample, train_file_names, train_dict)
 
 
