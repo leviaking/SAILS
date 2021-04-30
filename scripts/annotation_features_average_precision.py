@@ -47,7 +47,7 @@ def get_input_dfs(input_dir, input_fns):
 
 def for_rank_df_get_avg_precisions(input_fn, rank_df):
 	feats = ['Core', 'Answer', 'Gramm', 'Interp', 'Verif']
-	rankers = ['AnnoRank', 'ldh_rank', 'xdh_rank', 'xdx_rank', 'BERT_rank']
+	rankers = ['ldh_rank', 'xdh_rank', 'xdx_rank', 'AnnoRank', 'BERT_rank']
 	source = input_fn.replace("-BERT.csv", "")
 	new_ap_row = [source]
 	for ft in feats:
@@ -75,11 +75,12 @@ def write_output(rs, nm):
 
 def main():
 	my_input_dir = ("/Users/leviking/Documents/dissertation/SAILS/test_data/"+
-					"scored/N50-VS-N70-BERT/")
-	# my_inputs = ["I01T-gNSC-vs_r1-In-N50-VS-N70-BERT.csv"]
+					# "scored/N50-VS-N70-BERT/")
+					# "scored/N14-VS-N70-BERT/")
+					"scored/F14-VS-N70-BERT/")
 	my_inputs = get_input_file_names(my_input_dir)
 	my_input_df = get_input_dfs(my_input_dir, my_inputs)
-	ap_header =['Source', 'Core_Anno_AP', 'Core_ldh_AP', 'Core_xdh_AP', 'Core_xdx_AP', 'Core_BERT_AP', 'Answer_Anno_AP', 'Answer_ldh_AP', 'Answer_xdh_AP', 'Answer_xdx_AP', 'Answer_BERT_AP', 'Gramm_Anno_AP', 'Gramm_ldh_AP', 'Gramm_xdh_AP', 'Gramm_xdx_AP', 'Gramm_BERT_AP', 'Interp_Anno_AP', 'Interp_ldh_AP', 'Interp_xdh_AP', 'Interp_xdx_AP', 'Interp_BERT_AP', 'Verif_Anno_AP', 'Verif_ldh_AP', 'Verif_xdh_AP', 'Verif_xdx_AP', 'Verif_BERT_AP']
+	ap_header =['Source', 'Core_ldh_AP', 'Core_xdh_AP', 'Core_xdx_AP', 'Core_Anno_AP', 'Core_BERT_AP', 'Answer_ldh_AP', 'Answer_xdh_AP', 'Answer_xdx_AP', 'Answer_Anno_AP', 'Answer_BERT_AP', 'Gramm_ldh_AP', 'Gramm_xdh_AP', 'Gramm_xdx_AP', 'Gramm_Anno_AP', 'Gramm_BERT_AP', 'Interp_ldh_AP', 'Interp_xdh_AP', 'Interp_xdx_AP', 'Interp_Anno_AP', 'Interp_BERT_AP', 'Verif_ldh_AP', 'Verif_xdh_AP', 'Verif_xdx_AP', 'Verif_Anno_AP', 'Verif_BERT_AP']
 	ap_csv = [ap_header]
 	# ap_df = pandas.DataFrame(columns = ap_header)
 	for mi in my_inputs:
@@ -87,7 +88,9 @@ def main():
 		# print(my_input_df[mi])
 		mi_ap_row = for_rank_df_get_avg_precisions(mi, my_input_df[mi])
 		ap_csv.append(mi_ap_row)
-	write_output(ap_csv, 'NS50-vs-NNS70-average_precision.csv')
+	# write_output(ap_csv, 'NS50-vs-NNS70-average_precision.csv')
+	# write_output(ap_csv, 'NS14-vs-NNS70-average_precision.csv')
+	write_output(ap_csv, 'NSF14-vs-NNS70-average_precision.csv')
 
 
 
