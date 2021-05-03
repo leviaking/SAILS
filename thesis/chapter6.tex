@@ -79,7 +79,7 @@ I did explore an implementation of my system's similarity scoring that is more c
 
 \section{Annotation features experiments}
 \label{sec:exp-annotations}
-In this section, I revisit the five annotation features discussed in Chapter~\ref{chap:annotation} to see how they correlate with the performance of my system. For a given feature, I use mean average precision (MAP) to see how well the system rankings separate the positively and negatively annotated responses. In other words, when calculating MAP for the \feat{core event} feature, a ``0'' annotation for \feat{core event} is treated as an error. I isolate these MAP scores for each setting within the \param{transitivity}, \param{targeting}, and \param{primacy} variables, as well as in total. I also compare across \param{term representations}. To contextualize these scores, I include MAP scores for the weighted annotation rankings (WAR) and BERT rankings. Note that the superior WAR MAP scores seen here are to be expected, given that the annotation weights reflected in the WAR were tuned according to the judgements of the same annotators who developed the annotation scheme.
+In this section, I revisit the five annotation features discussed in Chapter~\ref{chap:annotation} to see how they correlate with the performance of my system. For a given feature, I use mean average precision (MAP) to see how well the system rankings separate the positively and negatively annotated responses. In other words, when calculating MAP for the \feat{core event} feature, a ``0'' annotation for \feat{core event} is treated as an error. I isolate these MAP scores for each setting within the \param{transitivity}, \param{targeting}, and \param{primacy} variables, as well as in total. I also compare across \param{term representations}. To contextualize these scores, I include MAP scores for the weighted annotation rankings (WAR) and BERT rankings. Note that the superior WAR MAP scores seen here are to be expected. First, the weights are based on the preference judgments of the same annotators who developed the annotation scheme. More importantly, the WAR is derived from weighting and combining the five feature annotations for each response, so precision in assessing any one of these features is inherently correlated to the WAR. In some sense, this means I am training and testing on the same data, but I believe these scores still provide valuable insight. The function of combining a response's five binary annotations into a single annotation score using weights is a form of lossy compression; the WAR MAP gives a sense of just how lossy this weighted compression function is in terms of recovering the annotations for the five individual features and across different item types. 
 
 These experiments would be useful to anyone considering an approach to content analysis like mine. In an intelligent computer-assisted language learning (ICALL) game, for example, there may be times when \feat{core event} is the main concern, or others where \feat{answerhood} or another feature is most relevant. By isolating each annotation feature and examining how model sizes and term representations effect MAP---both overall and for individual variables, such as \param{intransitives} or \param{targeted} items---I observe a number of trends that would be helpful in designing an ICALL game that selects an optimal system configuration for handling each user response.
 
@@ -89,13 +89,11 @@ Overall, a few trends stand out. First, both as a trend and a caveat, note that 
 %Within all 10 of the tables presented in this section, the maximum difference between any two MAP scores ranges between 0.08 and 0.24.
 The observations here are thus not intended to guide high stakes decisions, but as an indication of promising directions for future work, ideally with much more annotated data to confirm them.  Chief among these observations is the underperformance of unlabeled dependencies (xdh). In some cases, labeled dependencies (ldh) achieve the highest MAP, and in some cases dependents only (xdx) work best, but there are no cases in which unlabeled dependencies win. This suggests that future iterations of my system could safely eliminate the use of unlabeled dependencies for the sake of simplicity. The MAP scores also show that with only one exception, BERT underperforms the system. 
 %It is worth noting, however, that no attempts were made to optimize BERT for this task, beyond the use of the two different size NS models.
-This shows that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. Finally, \param{crowdsourced} models usually outperform \param{familiar} models with regard to MAP. This may seem counterintuitive, as I expected all familiar participants to complete the PDT most faithfully. However, it may be that crowdsourced responses are more like NNS responses than are familiar responses. For one, crowdsourced participants are less motivated than familiar participants, and this manifests in lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
+This shows that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. The MAP scores also show that \param{crowdsourced} models usually outperform \param{familiar} models. This may seem counterintuitive, as I expected familiar participants to complete the PDT most faithfully. However, it may be that crowdsourced responses are more like NNS responses than are familiar responses. For one, crowdsourced participants are less motivated than familiar participants, and this manifests in a higher rate of lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
+Another salient pattern seen in all 10 tables is that MAP scores for intransitives are always the highest, and MAP scores for transitives are always higher than for ditransitives. In other words, as sentence complexity increases, there is a monotonic decrease in system performance. Because transitives and intransitives cannot simply be avoided, this trend suggests that an ICALL application or similar should carefully consider how to best optimize for more complex items, e.g., by selecting the best term representation.
 
 \subsection{\feat{Core Event} experiments}
 \label{sec:map-core}
-\feat{Core event}, as discussed in Section~\ref{sec:scheme}, assesses whether a response captures the main action of the PDT item and requires that the event is linked to a subject (and an object or objects where necessary).
-
-Table~\ref{tab:core-map} presents \param{Core event} MAP scores for the 14-response and 50-response crowdsourced models. These scores show that for assessing \param{core event}, the smaller model, used with labeled dependencies is superior across the board. The 50-response model comes closest for transitives, but never outperforms the 14-response model. We can also observe here that the term representation setting is more relevant in the larger model, with \param{xdx} besting \param{ldh} in the case of ditransitives and untargeted items. NS responses to ditransitives and untargeted items tend to  be the least homogenous; they have higher type-to-token ratios \lk{xyz} than their counterparts. Moving from \param{ldh} to \param{xdx} representations results in a lower type to type-to-token ratio \lk{xyz}, so it is unsurprising that it improves performance for these items.
 
 %% CORE EVENT MAP - N14 & N50
 \begin{table}[htb!]
@@ -125,6 +123,10 @@ Total 	 & \textit{\textbf{0.753}} & 0.751 & 0.748 & 0.756 & 0.724 	& \textbf{0.7
 \end{table}
 
 
+\feat{Core event}, as discussed in Section~\ref{sec:scheme}, assesses whether a response captures the main action of the PDT item and requires that the event is linked to a subject (and an object or objects where necessary).
+
+Table~\ref{tab:core-map} presents \feat{Core event} MAP scores for the 14-response and 50-response crowdsourced models. These scores show that for assessing \feat{core event}, the smaller model, used with labeled dependencies is superior across the board. The 50-response model comes closest for transitives, but never outperforms the 14-response model. We can also observe here that the term representation setting is more relevant in the larger model, with \param{xdx} besting \param{ldh} in the case of ditransitives and untargeted items. NS responses to ditransitives and untargeted items tend to  be the least homogenous; they have higher type-to-token ratios \lk{xyz} than their counterparts. Moving from \param{ldh} to \param{xdx} representations results in a lower type to type-to-token ratio,\lk{xyz} so it is unsurprising that it improves performance for these items.
+
 %% CORE EVENT MAP - F14 & N14
 \begin{table}[htb!]
 \begin{center}
@@ -150,8 +152,14 @@ Total & 0.750                   & 0.748 & \textbf{0.751}          & 0.756 & 0.72
 \end{table}
 
 
+Table~\ref{tab:core-fam-map} compares \feat{core event} MAP scores for \param{familiar} and \param{crowdsourced} models. As seen in the total MAP scores, the crowdsourced models outperform the familiar models overall, but the difference is slight. The table also shows that for \feat{core event}, the familiar models generally perform best with the dependent-only (xdx) term representation, whereas the crowdsourced models generally perform best with labeled dependencies. As seen in Table~\ref{tab:core-map}, the trend is unchanged for the crowdsourced 50-response models, but more data is needed to see how larger familiar models behave.
+
+
+
 \subsection{\feat{Answerhood} experiments}
 \label{sec:map-answer}
+
+\feat{Answerhood}, as discussed in Section~\ref{sec:scheme}, assesses whether a response presents a direct answer to the question asked in the PDT prompt.
 
 %%ANSWERHOOD MAP - N14 & N50
 \begin{table}[htb!]
@@ -173,12 +181,15 @@ Untg  & 0.885 & 0.890 & \textit{\textbf{0.900}} & 0.892 & 0.894 & 0.883 & 0.886 
 Prim  & 0.837 & 0.840 & \textit{\textbf{0.854}} & 0.854 & 0.845 & 0.837 & 0.840 & \textit{\textbf{0.854}} & 0.854 & 0.846 \\ \hline
 Mix   & 0.835 & 0.838 & \textit{\textbf{0.857}} & 0.854 & 0.848 & 0.833 & 0.835 & \textbf{0.856} & 0.854 & 0.847 \\ \hline
 \hline
-Total & 0.836 & 0.839 & \textit{\textbf{0.855}} & 0.854 & 0.847 & 0.835 & 0.838 & \textit{\textbf{0.855}} & 0.854 & 0.846 \\ \hline
+Total & 0.836 & 0.839 & \textit{\textbf{0.855}} & 0.854 & 0.847 & 0.835 & 0.838 & \textbf{0.855} & 0.854 & 0.846 \\ \hline
 \end{tabular}
-\caption{\label{tab:answerhood-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:answer-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
+
+Table~\ref{tab:answer-map} presents \feat{Answerhood} MAP scores for the 14-response and 50-response crowdsourced models. The dependents-only (xdx) models outperform the others across the board here. We can also observe that unlabeled dependencies outperform labeled dependencies in every case. This would indicate that identifying a direct answer based on my similarity metrics is a relatively simple task that works best with the simplest representations. The scores also show that model size has little bearing here; in the interest of space, the total MAP scores are both shown rounded to 0.855, but the smaller model score is in fact 0.0005 higher.
+
 
 %% ANSWERHOOD MAP - F14 & N14
 \begin{table}[htb!]
@@ -204,9 +215,14 @@ Total & 0.837 & 0.840 & \textit{\textbf{0.860}} & 0.854 & 0.847 & 0.835 & 0.838 
 \end{center}
 \end{table}
 
+Table~\ref{tab:answer-fam-map}, which compares familiar and crowdsourced models, confirms the higher performance of dependent-only models. We also see a slight but consistent advantage for the familiar models on this task.
+The scores here also confirm the relative ease of assessing this feature. The top scores seen in the two the \feat{Answerhood} MAP tables are only bested by MAP scores for one other feature---\feat{Interpretability}. The fact that the highest \feat{Answerhood} MAP scores come from the smaller 14-response models (both familiar and crowdsourced) again support this idea. The task is simple enough for small models, and larger models risk adding noise.
+
 
 \subsection{\feat{Grammaticality} experiments}
 \label{sec:map-gramm}
+
+The \feat{Grammaticality} feature, as discussed in Section~\ref{sec:scheme}, indicates whether a response is free from any grammatical errors. 
 
 %%GRAMMATICALITY MAP - N14 & N50
 \begin{table}[htb!]
@@ -235,6 +251,7 @@ Total & 0.768 & 0.770 & \textit{\textbf{0.776}} & 0.788 & 0.772 & 0.767 & 0.769 
 \end{center}
 \end{table}
 
+Table~\ref{tab:gramm-map} presents \feat{Grammaticality} MAP scores for the 14-response and 50-response crowdsourced models. These scores show a slight but consistent preference for dependent-only (xdx) models, with labeled dependencies consistently producing the lowest MAP and unlabeled dependencies falling in the middle. The table also shows that the smaller, 14-response models outperform the larger, 50-response models, but these differences are very small. There is one exception to this pattern, with the larger models performing slightly better for transitives. Keeping in mind that in all cases, the heads and dependents within dependencies are lemmatized, these observations suggest that like \feat{Answerhood}, \feat{Grammaticality} is relatively simple to asses, requiring only a small ``bag of lemmas'' model.
 
 
 %% GRAMMATICALITY MAP - F14 & N14
@@ -262,10 +279,12 @@ Total & 0.767 & 0.769 & \textit{\textbf{0.778}} & 0.788 & 0.773 & 0.766 & 0.768 
 \end{center}
 \end{table}
 
-
+Table~\ref{tab:gramm-fam-map} presents the \feat{Grammaticality} MAP scores for \param{familiar} and \param{crowdsourced} models. As before, the models here show a consistent preference for the dependent-only (xdx) term representation. The total MAP scores show that familiar models perform best overall. Transitives stand out again here, where the best familiar model score is approximately 0.005 higher than the best crowdsourced score, which is the largest such difference in the table;\lk{xyz: why is fam best for trans but not in-/ditrans?} for each intransitives and ditransitives, the crowdsourced models are higher by approximately 0.001 points. This suggests that in describing transitive events, familiar NSs behave more like NNSs than do crowdsourced NSs, at least with regard to grammar and grammatical errors. Participant motivation is mostly likely relevant again here.
 
 \subsection{\feat{Interpretability} experiments}
 \label{sec:map-interp}
+
+\feat{Interpretability}, as discussed in Section~\ref{sec:scheme}, assesses whether a response evokes a clear mental image, although it does not need to resemble the actual image in the PDT item. This feature also requires a response's verb to have all necessary arguments specified.
 
 %%INTERPRETABILITY MAP - N14 & N50
 \begin{table}[htb!]
@@ -277,7 +296,7 @@ Total & 0.767 & 0.769 & \textit{\textbf{0.778}} & 0.788 & 0.773 & 0.766 & 0.768 
 \hline
     		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
 \hline
-Intr  & 0.932                   & 0.931 & \textit{\textbf{0.933}} & 0.930 & 0.922 & 0.928          & 0.927 & \textit{\textbf{0.933}} & 0.930 & 0.923 \\
+Intr  & 0.932                   & 0.931 & \textit{\textbf{0.933}} & 0.930 & 0.922 & 0.928          & 0.927 & \textbf{0.933} & 0.930 & 0.923 \\
 \hline
 Tran  & \textit{\textbf{0.823}} & 0.821 & 0.811                   & 0.803 & 0.806 & \textbf{0.821} & 0.816 & 0.812                   & 0.803 & 0.804 \\
 \hline
@@ -298,10 +317,27 @@ Mix   & \textit{\textbf{0.849}} & 0.846 & 0.846                   & 0.818 & 0.83
 Total & \textit{\textbf{0.848}} & 0.845 & 0.846                   & 0.818 & 0.835 & \textbf{0.845} & 0.842 & \textbf{0.845}          & 0.818 & 0.833 \\
 \hline
 \end{tabular}
-\caption{\label{tab:interpretability-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:interp-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
+
+Table~\ref{tab:interp-map} presents \feat{Interpretability} MAP scores for the 14-response and 50-response crowdsourced models. The most prominent trend here is that the smaller, 14-response models outperform the 50-response models in all cases. (The top intransitive scores are both shown as 0.933, but these are truncated for space and the smaller model score is higher by 0.0003.) These differences across model sizes are small, at roughly 0.002 points or less each; the \param{untargeted} setting is the only exception, with a difference of approximately 0.005 points. This suggests that with regard to \feat{interpretability}, the untargeted PDT setting elicits a greater degree of noise than does the targeted setting, and this plays a larger role in the larger models. In other words, the larger the sample size of the crowdsourced NS model, the more likely it will include responses which do not align well with those of NNSs. Thus, when attempting to infer the \feat{interpretability} of an NNS response based on models containing outlier NS responses, performance suffers. This is almost certainly tied to motivation, and it tracks with my own observations from the data. An untargeted prompt gives the participant greater freedom---or perhaps ``creative license''---to describe the image. NNSs and familiar NSs  stick to the spirit of the task, whereas off-target responses are easy to find among the crowdsourced NS data. For example, for the item showing a woman teaching a math class to a student, crowdsourced NSs in the targeted setting overwhelmingly refer to the action of teaching. Responses in the untargeted setting include several that do not address the action (and incidentally, fail at \feat{Answerhood} as well), like ``school'' and ``Time for math''; multiple others simply transcribe the math problems shown on the chalkboard or comment inappropriately on the teacher's appearance. None of these responses are helpful in capturing the more constrained behavior of the NNS participants.
+Another trend seen here is that although the effect of term representation is small, the highest MAP scores for transitives come from labeled dependencies, whereas dependent-only representations work best for intransitives and ditransitives. This indicates that the NNS participants and crowdsourced NS participants exhibit more convergent behavior in response to transitive items (as opposed to intransitives and ditransitives), and thus a relatively granular representation (labeled dependencies) can perform well in similarity measures. For intransitives and ditransitives, the dependent-only representation better captures the interpretability feature via similarity measures because it collapses labeled dependencies into a smaller number of terms, reducing the distance between NS models and NNS responses. This trend is confirmed by examining my system's response similarity scores, shown in Table~XYZ. Taking the response scores for each term representation, averaging these across all items and system configurations, it is clear that dependent-only models result in higher similarity scores.
+
+LK: XYZ: the average distances for the termreps:
+
+ldh: 0.513, xdh: 0.503, xdx: 0.353
+
+LK: It occurs to me that these kind of average similarity scores may help explain trends throughout this chapter... I think I should calculate average distances for other parameters, too: r1 vs r2, t vs u, etc. I think it makes sense to present this early in the chapter so I can refer to it when I need to help explain trends.
+
+\bigskip
+
+Table~\ref{tab:interp-fam-map} (interp fam vs crowd):
+\begin{itemize}
+\item{as before, ldh best for transitives, xdx best for in/di-}
+\item{very little diff between familiar and crowd, but crowd is slightly better}
+\end{itemize}
 
 
 %% INTERPRETABILITY MAP - F14 & N14
@@ -317,11 +353,13 @@ Total & \textit{\textbf{0.848}} & 0.845 & 0.846                   & 0.818 & 0.83
 Intr  & 0.930          & 0.930 & \textit{\textbf{0.934}} & 0.930 & 0.923 & \textbf{0.933}          & 0.931 & 0.932          & 0.930 & 0.922 \\ \hline
 Tran  & \textbf{0.822} & 0.819 & 0.811                   & 0.803 & 0.805 & \textit{\textbf{0.826}} & 0.824 & 0.811          & 0.803 & 0.805 \\ \hline
 Ditr  & 0.787          & 0.786 & \textit{\textbf{0.796}} & 0.721 & 0.782 & 0.788                   & 0.783 & \textbf{0.795} & 0.721 & 0.772 \\ \hline
+\hline
 Targ  & 0.835          & 0.833 & \textit{\textbf{0.836}} & 0.804 & 0.830 & \textbf{0.835}          & 0.832 & \textbf{0.835} & 0.804 & 0.825 \\ \hline
 Untg  & \textbf{0.858} & 0.857 & \textbf{0.858}          & 0.833 & 0.843 & \textit{\textbf{0.863}} & 0.859 & 0.857          & 0.833 & 0.841 \\ \hline
+\hline
 Total & \textbf{0.847} & 0.845 & \textbf{0.847}          & 0.818 & 0.837 & \textit{\textbf{0.849}} & 0.846 & 0.846          & 0.818 & 0.833 \\ \hline
 \end{tabular}
-\caption{\label{tab:gramm-fam-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:interp-fam-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
@@ -332,6 +370,15 @@ Total & \textbf{0.847} & 0.845 & \textbf{0.847}          & 0.818 & 0.837 & \text
 
 \subsection{\feat{Verifiability} experiments}
 \label{sec:map-verif}
+
+Table~\ref{tab:verif-map} (Verif NS14 vs NS50):
+\begin{itemize}
+\item NS14 $>$ NS50, always, but diffs small
+\item verif hardest to predict for transitives
+\item xdx better for intrans and ditrans; ldh better for trans
+\item very little diffs for targ/untarg, prim/mix
+\item moving from targeted to untargeted or primary to mixed makes very little difference for NS14, but a larger difference for NS50.
+\end{itemize}
 
 %%VERIFIABILITY MAP - N14 & N50
 \begin{table}[htb!]
@@ -363,10 +410,19 @@ Mix   & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.80
 Total & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.808 & \textbf{0.823}          & 0.822          & 0.822          & 0.815 & 0.806 \\
 \hline
 \end{tabular}
-\caption{\label{tab:verifiability-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:verif-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
+
+
+Table~\ref{tab:verif-fam-map} (Verif fam vs crowd):
+\begin{itemize}
+\item{overall, slightly: crowd $>$ fam}
+\item{only exception to above: transitives}
+\item{for transitives, ldh slightly higher; for in/di-, xdx slightly higher}
+\item{for targ, xdx slightly higher; for untarg, ldh slightly higher}
+\end{itemize}
 
 
 %% VERIFIABILITY MAP - F14 & N14
@@ -382,11 +438,13 @@ Total & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.80
 Intr  & 0.847                   & 0.847 & \textbf{0.852} & 0.866 & 0.836 & 0.852                   & 0.852 & \textit{\textbf{0.854}} & 0.866 & 0.843 \\ \hline
 Tran  & \textit{\textbf{0.808}} & 0.807 & 0.803          & 0.798 & 0.787 & \textbf{0.807}          & 0.807 & 0.802                   & 0.798 & 0.786 \\ \hline
 Ditr  & 0.811                   & 0.811 & \textbf{0.812} & 0.780 & 0.802 & 0.815                   & 0.812 & \textit{\textbf{0.817}} & 0.780 & 0.796 \\ \hline
+\hline
 Targ  & 0.821                   & 0.821 & \textbf{0.822} & 0.815 & 0.814 & 0.824                   & 0.824 & \textit{\textbf{0.826}} & 0.815 & 0.811 \\ \hline
 Untg  & \textbf{0.824}          & 0.822 & 0.823          & 0.815 & 0.803 & \textit{\textbf{0.825}} & 0.824 & 0.823                   & 0.815 & 0.806 \\ \hline
+\hline
 Total & 0.822                   & 0.822 & \textbf{0.823} & 0.815 & 0.808 & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.808 \\ \hline
 \end{tabular}
-\caption{\label{tab:gramm-fam-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:verif-fam-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}

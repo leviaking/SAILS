@@ -243,7 +243,119 @@ def get_word_standardized_ttrs(tr_samp, train_fns, tdict, param_dict):
 	describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_word_sttr_stats.csv', encoding='utf-8')
 	
 	
-	
+
+# this is my implementation of "standardized type/token ratio" from:
+# https://lexically.net/downloads/version5/HTML/index.html?type_token_ratio_proc.htm
+## from this one, I need to get a descriptive stats file with a header like this:
+## ["ldh-In-", "xdh-In-", "xdx-In-", "word-In-", "ldh-Tr-"...	-Di-...	T-...	U-...	-r1-...	-r2-] 4*7=28
+def get_standardized_ttrs(tr_samp, train_fns, tdict, param_dict):
+	## token_window here is "n" in "Standardized TTR"; here i've chosen 40 because
+	## some of my smaller NS models (N14) have as few as 43 tokens per model; in this
+	## implementation, I calculate TTR for each token_window (roughly, a sample),
+	## and the final TTR is the average of these; note that remainder tokens are ignored
+	token_window = 40
+	myreps = ["Response", "ldh", "xdh", "xdx"]
+	describe_df = pandas.DataFrame([])
+	allmycols = []  ##4/30
+	for mr in myreps:
+		# describe_df = pandas.DataFrame([])
+		if mr == "Response":
+			mrtag = "word"
+		else:
+			mrtag = mr
+		model_ttrs = []
+		tfns_cute = []
+		mycols = []
+		### my_exps = ['transitivity', 'targeting', 'primacy']
+		for exp in my_exps:
+			settings = param_dict[exp]
+			for sg in settings:
+				coltag = mrtag+"-"+sg
+				coltag = coltag.replace("--", "-")
+				allmycols.append(coltag)
+				# mycols.append(coltag)
+				# mycols.append(sg)
+				# sgdf = pandas.DataFrame([], columns=['ResponseID', 'Response', 'ldh', 'xdh', 'xdx'])
+				# sgdf = pandas.DataFrame([], columns=['Source', 'Word_TTR'])
+				sgttrs = []
+				for tf in train_fns:
+					tcute = tf.replace(".csv", "")
+					tfd = tdict[tf]  ##tfd is a dataframe of the training or testing file
+					## handle Responses differently from ldh/xdh/xdx here
+					
+					# tsents = list(tfd["Response"])
+					tsents = list(tfd[mr])  ## selects currently relevant column from  ["Response", "ldh", "xdh", "xdx"]
+					# print(tsents)
+					# if mr != 'Response':
+					# 	print(tsents)
+					# print(type(tsents))
+					# print("\n\n\n\n\n\n\n")
+					if mr == "Response":
+						tsents = quick_clean_response_list(tsents)
+					else:
+						newtsents = []
+						for oldthing in tsents:
+							newthing = string_list_to_real_list(oldthing)
+							newthing = " ".join(newthing)
+							# print(newthing)
+							# newtsents.append([nt for nt in newthing])
+							newtsents.append(newthing)
+						tsents = newtsents
+					# print(tsents)
+					random.shuffle(tsents)
+					tstring = " ".join(tsents)
+					ttokens = tstring.split(" ")
+					tf_windows = []
+					current_window = []
+					while len(ttokens) > token_window:
+						while len(current_window) < token_window:
+							current_window.append(ttokens.pop(0))
+						tf_windows.append(current_window)
+						current_window = []
+					window_ttrs = []
+					for cwtokens in tf_windows:
+						if len(cwtokens) != token_window:
+							pass
+						else:
+							cwtypes = list(set(cwtokens))
+							cwttr = float(len(cwtypes)/token_window)
+							window_ttrs.append(cwttr)
+					# print("\n\n\n\n\n\n"+tcute)
+					# print(window_ttrs)
+					t_ttr = float(sum(window_ttrs)/len(window_ttrs))
+					# print(t_ttr)
+					#### NOT SURE about this -- is it going to the right place? is model_ttrs in the correct loop?
+					if tcute not in tfns_cute:
+						model_ttrs.append(t_ttr)
+						tfns_cute.append(tcute)
+					else:
+						pass
+					# model_ttrs_dict[tf] = t_ttr
+					# print(tf, "\n", tstring, "\n", t_ttr, "\n\n\n\n\n\n")
+					if sg in tf:
+						sgttrs.append([tf, t_ttr])
+					else:
+						pass
+				# print("\n\n\n", sg)
+
+				sgdf = pandas.DataFrame(sgttrs, columns=['Source', coltag+'_STTR'])
+				# print(sgdf)
+				ttrdf = pandas.DataFrame(sgdf, columns=[coltag+"_STTR"])
+				# print("\n\n\n\n\n\n\n\n\n\n\n\nSETTINGS LEVEL STATS for "+exp+sg+":")
+				ttrstats = ttrdf.describe(percentiles=[.5])
+				ttrstats.columns = [coltag]
+				if describe_df.empty:
+					describe_df = pandas.DataFrame(ttrstats)
+				else:
+					describe_df = pandas.concat([describe_df, ttrstats], axis=1)
+				
+		model_dict = {}
+		# model_dict["Word_STTR"] = model_ttrs
+		model_dict["Term_STTR"] = model_ttrs
+		model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
+		model_ttrs_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttrs.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttr_stats.csv', encoding='utf-8')
+
 
 
 ## for each test file, get TTRs (ldh, xdh, xdx); based on the setting,
@@ -283,6 +395,7 @@ def get_termrep_ttrs(ts_samp, ts_fns, t_dict):
 
 
 my_exps = ['transitivity', 'targeting']
+# my_exps = ['transitivity', 'targeting', 'primacy']
 ## Use this param_dict for any crowdsourced training runs
 paramd = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'], 'familiarity': ["-gNSC-", "-gNSF-"], 'primacy': ["-r1-", "-r2-"], 'termrep': ['ldh', 'xdh', 'xdx']}
 # transdict = {
@@ -303,7 +416,8 @@ def main():
 		test_dict = get_test_dfs(test_dir, test_file_names)
 		get_length_stats(test_sample, test_file_names, test_dict, paramd)
 		get_word_ttrs(test_sample, test_file_names, test_dict, paramd)
-		get_word_standardized_ttrs(test_sample, test_file_names, test_dict, paramd)
+		# get_word_standardized_ttrs(test_sample, test_file_names, test_dict, paramd)
+		get_standardized_ttrs(test_sample, test_file_names, test_dict, paramd)
 		get_termrep_ttrs(test_sample, test_file_names, test_dict)
 
 

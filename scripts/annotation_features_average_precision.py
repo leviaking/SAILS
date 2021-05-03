@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
 
-## 2021/04/27. Adapted from training_stats.py
-## totally incomplete now...
-
 ## 2021/04/12. Adapted from thesis_spearman_stats.py
 ## For a given sample size that we've used (so far: N14, N50, F14), this finds all the training files and generates response length, word TTR and termrep TTR descriptive stats for the various variables/parameter settings. Note that the termnorm (aka weighting) parameter does not apply here -- we do not operate on any kind of special weighted version of the training files, only the basic versions.
 
