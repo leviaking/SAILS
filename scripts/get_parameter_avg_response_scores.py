@@ -56,14 +56,14 @@ def get_param_avg_scores(input_dir, input_fns):
 		z_bert += list(ipdf['BERT_score'])
 		curr_scores = curr_ldh+curr_xdh+curr_xdx
 		curr_avg = sum(curr_scores)/len(curr_scores) ## for other params, we can just pass the average of the three termreps
-		print(curr_avg)
+		# print(curr_avg)
 		for mx in my_exps:
 			settings = paramd[mx]
-			print('\t'+mx)
+			# print('\t'+mx)
 			for sg in settings:
-				print('\t\t'+sg)
+				# print('\t\t'+sg)
 				if sg in ipf:
-					print('\t\t\tMATCH')
+					# print('\t\t\tMATCH')
 					setting_list_d[sg].append(curr_avg)
 					# print(setting_list_d[sg])
 	av_ldh = sum(z_ldh)/len(z_ldh)
@@ -110,15 +110,15 @@ def write_output(rs):
 	thisfile.close()
 
 
-
+my_exps = ['transitivity', 'targeting', 'primacy']
 paramd = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'], 'familiarity': ["-gNSC-", "-gNSF-"], 'primacy': ["r1-", "r2-"], 'termrep': ['ldh', 'xdh', 'xdx']}
 labeld = {'T-': 'Targ', 'U-': 'Untarg', '-In-': 'Intrans', '-Tr-': 'Trans', '-Di-': 'Ditrans', '-gNSC-': 'Crowd', '-gNSF-': 'Fam', 'r1-': 'Prim', 'r2-': 'Mix'}
 
 my_samples = ['F14', 'N14', 'N50']
 def main():
-	index_col = ['Intrans', 'Trans', 'Ditrans', 'Targ', 'Untarg', 'Prim',
+	index_col = ['param', 'Intrans', 'Trans', 'Ditrans', 'Targ', 'Untarg', 'Prim',
 				 'Mixed', 'ldh', 'xdh', 'xdx', 'BERT']
-	sample_columns = []
+	sample_columns = [index_col]
 	for my_sample in my_samples:
 		my_input_dir = ("/Users/leviking/Documents/dissertation/SAILS/"+
 						"test_data/scored/"+my_sample+"-VS-N70-BERT/")
