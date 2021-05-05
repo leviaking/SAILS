@@ -190,7 +190,7 @@ This is as expected, as ditransitive sentences are longer and have more verbal a
 
 \subsection{Targeting} 
 \label{sec:prompts}
-Grouping the annotations into targeted and untargeted sets, the raw agreement scores are comparable ($94.9\%$ vs. $95.2\%$). However, despite a greater degree of response variation, the untargeted group has a higher kappa score ($0.872$ vs. $0.823$).
+Grouping the annotations into targeted and untargeted sets, the raw agreement scores are comparable ($94.9\%$ and $95.2\%$, respectively). However, despite a greater degree of response variation, the untargeted group has a higher kappa score ($0.872$ versus $0.823$).
 
 When asked to compare the annotation process for targeted and untargeted items, A2 noted that targeted responses require more concentration and closer consultation of the guidelines. For example, \feat{answerhood} does not allow for targeted responses to modify the subject provided in the question in any way, whereas in answering \textit{What is happening?}, the respondent is free to speak of characters in the pictures in many different ways.  Both A1 and A2 thus describe the annotation of untargeted items as less restrictive and less time-consuming.
 
@@ -397,7 +397,7 @@ To calculate the weights, the total number of times a feature occurred with the 
 
 \begin{table*}[htb!]
 \begin{center}
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{tabular}{|l||l|l|l|l|l|l|}
 \hline
 	& \feat{Core} & \feat{Answer} & \feat{Gramm} & \feat{Interp} & \feat{Verif} & Total \\
 \hline
@@ -406,7 +406,9 @@ Tot. Pref. & 944 & 807 & 910 & 1021 & 1026 & 4708 \\
 \hline
 Tot. Dispref. & 367 & 660 & 822 & 667 & 611 & 3127 \\
 \hline
+\hline
 Net Pref. & 577 & 147 & 88 & 354 & 415 & 1581 \\ 
+\hline
 \hline
 Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \hline
@@ -446,7 +448,7 @@ Pizza is this boy's fav... & 0.000 & 0.000 & 0.056 & 0.000 & 0.000 & 0.056 & 4 \
 %or S$_{WA}$. 
 For each item, I rank the NNS responses according to this score. I call the resulting ranking a \textbf{weighted annotation ranking}. Because these rankings are based on human annotator decisions, they can serve as a benchmark for comparing the output of an automatic scoring system, as discussed in Chapter~\ref{chap:optimization}.
 
-The NS responses were also annotated for the binary features, but in the current work there is no practical use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare the holistic performance of NS and NNS participants. As shown in Table~\ref{tab:was1}, in terms of weighted annotation scores, \textit{familiar native speakers} (\textit{FNSs}; see Section~\ref{sec:participants}) outperform NNSs, who outperform \textit{crowdsourced native speakers} (\textit{CNSs}). The FNSs have the highest rate of perfect responses, the lowest rate of zero-scoring responses and the highest mean and median weighted annotation scores. Moreover, the standard deviation shows that FNSs have the least varied weighted annotation scores, which makes sense as scores for this group are heavily skewed toward the upper limit. In each of these measures, the FNSs are followed by the NNSs, then the CNSs. It should be noted that these scores cover the entire set of all responses for all items, which includes the two responses from NSs per item, whereas the NNSs provided only a single response per item.
+The NS responses were also annotated for the binary features, but in the current work there is no practical use for a weighted annotation ranking of the NS responses. However, by applying the weights and obtaining weighted annotation scores for the NS responses, I can compare the holistic performance of NS and NNS participants. As shown in Table~\ref{tab:was1}, in terms of weighted annotation scores, \textit{familiar native speakers} (\textit{FNSs}; see Section~\ref{sec:participants}) outperform NNSs, who outperform \textit{crowdsourced native speakers} (\textit{CNSs}). The FNSs have the highest rate of perfect responses, the lowest rate of zero-scoring responses and the highest mean weighted annotation scores. Moreover, the standard deviation shows that FNSs have the least varied weighted annotation scores, which makes sense as scores for this group are heavily skewed toward the upper limit. In each of these measures, the FNSs are followed by the NNSs, then the CNSs. It should be noted that these scores cover the entire set of all responses for all items, which includes the two responses from NSs per item, whereas the NNSs provided only a single response per item.
 
 
 \begin{table*}[htb!]
@@ -475,9 +477,9 @@ Std Dev & 0.248 & 0.323 & 0.226 & 0.312 \\
 \end{center}
 \end{table*}
 
-The relative performance of these three groups has important implications for how this data is used and how data for related purposes might be collected in the future. Because my work is geared toward communicative applications like intelligent computer-assisted language learning (ICALL) rather than grammatical error correction or placement testing, the models I use must be flexible enough to process NNS responses without heavily penalizing them for minor issues in form or usage. For my purposes, models built only from FNS responses would be overfitted to the near-perfect language usage of the FNS group. Models built from the slightly noisier CNS responses are preferable for my purposes. In effect, they will allow for more of the variations in form and usage that we see among the NNS responses. In other words, an FNS-based model will accurately identify those responses that closely match a limited set of well-formed possibilities, but it will harshly penalize minor deviations, resulting in scores that tend toward the high and low ranges. A CNS-based model will be less discriminatory; slight deviations from ideal, ``native-like'' possibilities will be penalized less harshly, and scores will be distributed more evenly across the range from 0.0 to 1.0.
+The relative performance of these three groups has important implications for how this data is used and how data for related purposes might be collected in the future. Because my work is geared toward communicative applications like intelligent computer-assisted language learning (ICALL) rather than grammatical error correction or placement testing, the models I use must be flexible enough to process NNS responses without heavily penalizing them for minor issues in form or usage. For my purposes, models built only from FNS responses would be overfitted to the near-perfect language usage of the FNS group. Models built from the slightly noisier CNS responses are preferable for my purposes. In effect, they will allow for more of the variations in form and usage that we see among the NNS responses. In other words, an FNS-based model will accurately identify those responses that closely match a limited set of well-formed possibilities, but it will harshly penalize minor deviations, resulting in scores that tend toward the high and low ranges. A CNS-based model will be less strict; slight deviations from ideal, ``native-like'' possibilities will be penalized less harshly, and scores will be distributed more evenly across the range from 0.0 to 1.0.
 
-Due to the sparsity of the FNS data, it is not possible to analyze it on a more granular level. With more data from this CNS group, however, it is possible to break down the CNS metrics seen in Table~\ref{tab:was1} for a closer look, as shown in Table~\ref{tab:was2}.
+Due to the sparsity of the FNS data, it is not possible to analyze it on a more granular level. With more data from the CNS group, however, it is possible to break down the CNS metrics seen in Table~\ref{tab:was1} for a closer look, as shown in Table~\ref{tab:was2}.
 
 The trends seen in the CNS table confirm my intuitions about the data---scores decrease as complexity and variation increase. First response scores are higher than second response scores. This makes sense given my observations from Chapter~\ref{chap:data}, where I found a higher rate of bad faith or low-effort answers among the second responses, likely owing to fatigue and boredom, and a higher type-to-token ratio, indicating a higher rate of unique responses (see Table~\ref{tab:ttr1v2}). This increase in variation means more creative responses, which are more likely to include unverifiable details, for example. Similarly, untargeted response scores are lower than targeted response scores. This can also be explained by the greater degree of variability among untargeted responses, as discussed in Chapter~\ref{chap:data} (see Tables~\ref{tab:ttr},~\ref{tab:ttr1v2} and~\ref{tab:ttr1v1}). This is expected, because the subject is provided in targeted prompts but not untargeted prompts, so naturally the untargeted responses include more cases where the subject is incorrect, irrelevant or unclear. Finally, among the item (verb) types shown in Table~\ref{tab:was2}, the scores decrease as the complexity increases; intransitive scores are highest, followed by transitives and then ditransitives. Again, this correlates with type-to-token ratios (see Tables~\ref{tab:ttr},~\ref{tab:ttr1v2} and~\ref{tab:ttr1v1}). 
 

@@ -510,6 +510,27 @@ Why are my max scores sometimes better than BERT?
 
 NTS: TODO: compare NNS STTRs vs Spearman; also NS STTRs vs NNS STTRs;
 
+################################################################################
+05/05. I've made a lot of progress since above...
+I'm currently reorganizing Ch 6 and tidying it up. I don't plan to add any more content there.
+
+Revisit parameter experiment sections and switch tables/discussions to STTR (not TTR).
+
+Super tired and ineffective today... Tomorrow, or later today:
+Do I have a table in Ch 5 that presents the percentage of responses that are positively annotated for each feature? I'd like to see this for Crowd, Familiar, and NNS. Also broken down by Targeting, Transitivity, Primacy...
+I think I'd rather move this to Ch 6...
+I think this necessitates 5 tables, one per feature; these can each go in the respective Ch 6 section.
+Each has:
+columns:
+	FNS14, CNS14, CNS50, NNS70, using the relevant sample sets.
+rows (positive annotation rates):
+	intrans, trans, ditrans; targ, untarg; primary, mixed;
+
+I think we could also get some mileage out of another with the same layout, where the values are instead average response length (words/response), and another where the values are STTR.
+
+EOD. Tomorrow, return to the table:
+\caption{\label{tab:sttr}Comparing average standardized type-to-token ratio (STTR) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.}
+I'll need to populate the rest of the table... this will likely require some scripting/calculating.
 
 ################################################################################
 ################################################################################

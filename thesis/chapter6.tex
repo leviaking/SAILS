@@ -134,6 +134,95 @@ BERT    & 0.675          & 0.640          & \textit{0.641}                   \\ 
 \end{center}
 \end{table}
 
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.5em}
+\begin{tabular}{|l||l|l|l||l|}
+\hline
+  & \multicolumn{2}{c|}{n=14} & n=50 & n=70\\
+\hline
+   & \param{Fam} & \param{Crowd} & \param{Crowd} 	& NNS			\\ \hline
+\hline
+Intrans & 5.5 	  		& 4.9 			& 4.9 		& 4.9 			\\ \hline
+Trans   & 6.9          	& 6.3          	& 6.2       & 6.7    	    \\ \hline
+Ditrans & 7.8          	& 7.2          	& 7.2       & 8.3    	    \\ \hline
+\hline
+Target  & 6.5 			& 5.4	 		& 5.4 		& 6.3			\\ \hline
+Untarg  & 6.9        	& 6.8        	& 6.8    	& 6.9        	\\ \hline
+\hline
+Primary & N/A        	& 5.7 			& 5.8		& 6.6		 	\\ \hline
+Mixed   & 6.7          	& 6.5          	& 6.4       & N/A	        \\ \hline
+\hline
+Total	& 6.7			& 6.1			& 6.1		& 6.6			\\ \hline
+\end{tabular}
+\caption{\label{tab:response-length}Comparing average response length for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.
+}
+\end{center}
+\end{table}
+
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.5em}
+\begin{tabular}{|l||l|l|l||l|}
+\hline
+ 	& \multicolumn{2}{c|}{n=14} & n=50 & n=70 \\
+\hline
+   	& \param{Fam} & \param{Crowd} & \param{Crowd} 	& NNS			\\ \hline
+\hline
+Intrans & in 	  		& in 			& in 		& 0.391 		\\ \hline
+Trans   & tr          	& tr          	& tr        & 0.517    	    \\ \hline
+Ditrans & di          	& di          	& di        & 0.606    	    \\ \hline
+\hline
+Target  & targ 			& targ	 		& targ 		& 0.481			\\ \hline
+Untarg  & untg        	& untg        	& untg    	& 0.528        	\\ \hline
+\hline
+Primary & N/A        	& prim 			& prim		& 0.505		 	\\ \hline
+Mixed   & mix          	& mix          	& mix       & N/A	        \\ \hline
+\hline
+ldh     & ldh          	& ldh          	& ldh       & 0.578	        \\ \hline
+xdh     & xdh          	& xdh          	& xdh       & 0.572	        \\ \hline
+xdx     & xdx 			& xdx 			& xdx		& 0.364			\\ \hline
+\hline
+Total    & tot          & tot          & tot      	& 0.505	        \\ \hline
+\end{tabular}
+\caption{\label{tab:sttr}Comparing average standardized type-to-token ratio (STTR) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.
+}
+\end{center}
+\end{table}
+
+
+
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.5em}
+%\begin{tabular}{|l||l|l|l||l|}
+%\hline
+% & \multicolumn{2}{c|}{NS = 14} & NS = 50 & NNS = 70\\
+%\hline
+%   & \param{Fam} & \param{Crowd} & \param{Crowd} 	& NNS			\\ \hline
+%\hline
+%Intrans & in 	  		& in 			& in 		& in 			\\ \hline
+%Trans   & tr          	& tr          	& tr        & tr    	    \\ \hline
+%Ditrans & di          	& di          	& di        & di    	    \\ \hline
+%\hline
+%Target  & targ 			& targ	 		& targ 		& targ			\\ \hline
+%Untarg  & untg        	& untg        	& untg    	& untg        	\\ \hline
+%\hline
+%Primary & N/A        	& prim 			& prim		& prim		 	\\ \hline
+%Mixed   & mix          	& mix          	& mix       & mix	        \\ \hline
+%\hline
+%ldh     & ldh          	& ldh          	& ldh       &ldh	        \\ \hline
+%xdh     & xdh          	& xdh          	& xdh       &xdh	        \\ \hline
+%xdx     & xdx 			& xdx 			& xdx		&xdx			\\ \hline
+%\hline
+%BERT    & bert          & bert          & bert      &bert	        \\ \hline
+%\end{tabular}
+%\caption{\label{tab:template1}This is the caption for my table template.
+%}
+%\end{center}
+%\end{table}
+
 
 \section{Annotation features experiments}
 \label{sec:exp-annotations}
@@ -614,9 +703,9 @@ Notably, my system does reach a higher maximum Spearman score than BERT in all b
 
 For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. My system achieves its highest mean and median Spearman scores on the intransitives using the smaller model. For the larger model, performance on the ditransitives increases over the smaller model in terms of the mean and median Spearman scores. Transitives fall in the middle: for the larger model, the mean is higher but the median is lower.
 
-We may expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. As a metric of complexity, I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50-response NS models, this pattern was shown to be true, as seen in Table~\ref{tab:transitivity-model-stats}. Combined with the TTRs, the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
+We may expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. As a metric of complexity, I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50-response NS models, this pattern was shown to be true, as seen in Table~\ref{tab:transitivity-model-stats}. Combined with the TTRs,\lk{Let's revisit this with STTR} the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
-Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain BERT's higher performance on transitives. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:transitivity-model-stats}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that performance correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more.
+Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain BERT's higher performance on transitives. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:transitivity-model-stats}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that the classifiers' ability to predict human judgments from the BERT sentence embeddings correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more. 
 
 \subsection{Targeting experiments}
 \label{sec:exp-targeting}
