@@ -75,7 +75,8 @@ def get_length_stats(ts_samp, ts_fns, tdict, param_dict):
 	tf_lengths_dict = {}
 	tf_lengths_dict["AvgWdsPerResp"] = tf_lengths
 	tf_lengths_df = pandas.DataFrame(tf_lengths_dict, index=tfns_cute)
-	tf_lengths_df.to_csv(stats_dir+"NNS-"+ts_samp+'_lengths.csv', encoding='utf-8')
+	# tf_lengths_df.to_csv(stats_dir+"NNS-"+ts_samp+'_lengths.csv', encoding='utf-8')
+	tf_lengths_df.to_csv(stats_dir+"NS-"+ts_samp+'_lengths.csv', encoding='utf-8')
 	## this is where it starts iterating again...
 	alldf = pandas.DataFrame([])
 	mycols = []
@@ -109,7 +110,8 @@ def get_length_stats(ts_samp, ts_fns, tdict, param_dict):
 			else:
 				alldf = pandas.concat([alldf, lenstats], axis=1)
 	# print(alldf)
-	alldf.to_csv(stats_dir+"NNS-"+ts_samp+'_length_stats.csv', encoding='utf-8')
+	# alldf.to_csv(stats_dir+"NNS-"+ts_samp+'_length_stats.csv', encoding='utf-8')
+	alldf.to_csv(stats_dir+"NS-"+ts_samp+'_length_stats.csv', encoding='utf-8')
 
 
 ### for each training FILE (NS model), get 1 word TTR; based on the setting,
@@ -162,8 +164,10 @@ def get_word_ttrs(ts_samp, ts_fns, tdict, param_dict):
 	model_dict = {}
 	model_dict["Word_TTR"] = model_ttrs
 	model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
-	model_ttrs_df.to_csv(stats_dir+"NNS-"+ts_samp+'_word_ttrs.csv', encoding='utf-8')
-	describe_df.to_csv(stats_dir+"NNS-"+ts_samp+'_word_ttr_stats.csv', encoding='utf-8')
+	# model_ttrs_df.to_csv(stats_dir+"NNS-"+ts_samp+'_word_ttrs.csv', encoding='utf-8')
+	# describe_df.to_csv(stats_dir+"NNS-"+ts_samp+'_word_ttr_stats.csv', encoding='utf-8')
+	model_ttrs_df.to_csv(stats_dir+"NS-"+ts_samp+'_word_ttrs.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+"NS-"+ts_samp+'_word_ttr_stats.csv', encoding='utf-8')
 
 
 # this is my implementation of "standardized type/token ratio" from:
@@ -239,9 +243,10 @@ def get_word_standardized_ttrs(tr_samp, train_fns, tdict, param_dict):
 	model_dict = {}
 	model_dict["Word_STTR"] = model_ttrs
 	model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
-	model_ttrs_df.to_csv(stats_dir+"NNS-"+tr_samp+'_word_sttrs.csv', encoding='utf-8')
-	describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_word_sttr_stats.csv', encoding='utf-8')
-	
+	# model_ttrs_df.to_csv(stats_dir+"NNS-"+tr_samp+'_word_sttrs.csv', encoding='utf-8')
+	# describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_word_sttr_stats.csv', encoding='utf-8')
+	model_ttrs_df.to_csv(stats_dir+"NS-"+tr_samp+'_word_sttrs.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+"NS-"+tr_samp+'_word_sttr_stats.csv', encoding='utf-8')	
 	
 
 # this is my implementation of "standardized type/token ratio" from:
@@ -353,8 +358,10 @@ def get_standardized_ttrs(tr_samp, train_fns, tdict, param_dict):
 		# model_dict["Word_STTR"] = model_ttrs
 		model_dict["Term_STTR"] = model_ttrs
 		model_ttrs_df = pandas.DataFrame(model_dict, index=tfns_cute)
-		model_ttrs_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttrs.csv', encoding='utf-8')
-	describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttr_stats.csv', encoding='utf-8')
+		# model_ttrs_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttrs.csv', encoding='utf-8')
+		model_ttrs_df.to_csv(stats_dir+"NS-"+tr_samp+'_term_sttrs.csv', encoding='utf-8')
+	# describe_df.to_csv(stats_dir+"NNS-"+tr_samp+'_term_sttr_stats.csv', encoding='utf-8')
+	describe_df.to_csv(stats_dir+"NS-"+tr_samp+'_term_sttr_stats.csv', encoding='utf-8')
 
 
 
@@ -389,13 +396,15 @@ def get_termrep_ttrs(ts_samp, ts_fns, t_dict):
 		else:
 			statsdf = pandas.concat([statsdf, ttrstats], axis=1)
 	# print(statsdf)
-	statsdf.to_csv(stats_dir+"NNS-"+ts_samp+'_termrep_ttr_stats.csv', encoding='utf-8')
+	# statsdf.to_csv(stats_dir+"NNS-"+ts_samp+'_termrep_ttr_stats.csv', encoding='utf-8')
+	statsdf.to_csv(stats_dir+"NS-"+ts_samp+'_termrep_ttr_stats.csv', encoding='utf-8')
 	termrepdf = pandas.DataFrame(termrep_ttrs, index=tfns_cute)
-	termrepdf.to_csv(stats_dir+"NNS-"+ts_samp+'_termrep_ttrs.csv', encoding='utf-8')
+	# termrepdf.to_csv(stats_dir+"NNS-"+ts_samp+'_termrep_ttrs.csv', encoding='utf-8')
+	termrepdf.to_csv(stats_dir+"NS-"+ts_samp+'_termrep_ttrs.csv', encoding='utf-8')
 
 
-my_exps = ['transitivity', 'targeting']
-# my_exps = ['transitivity', 'targeting', 'primacy']
+# my_exps = ['transitivity', 'targeting']
+my_exps = ['transitivity', 'targeting', 'primacy']
 ## Use this param_dict for any crowdsourced training runs
 paramd = {'transitivity': ["-In-", "-Tr-", "-Di-"], 'targeting': ['T-', 'U-'], 'familiarity': ["-gNSC-", "-gNSF-"], 'primacy': ["-r1-", "-r2-"], 'termrep': ['ldh', 'xdh', 'xdx']}
 # transdict = {
@@ -408,14 +417,16 @@ stats_dir="/Users/leviking/Documents/dissertation/SAILS/stats/"
 
 
 def main():
-	for test_sample in ["N70"]:
+	# for test_sample in ["N70"]:
+	for test_sample in ["F14", "N14", "N50"]:  ## NOTE these are actually TRAINING SAMPLES! But that's OK.
 		# print(train_sample)
-		test_dir = ('/Users/leviking/Documents/dissertation/SAILS/test_data/'
+		# test_dir = ('/Users/leviking/Documents/dissertation/SAILS/test_data/'
+		test_dir = ('/Users/leviking/Documents/dissertation/SAILS/training_data/'
 					 +test_sample+'/')
 		test_file_names = get_test_file_names(test_dir)
 		test_dict = get_test_dfs(test_dir, test_file_names)
-		get_length_stats(test_sample, test_file_names, test_dict, paramd)
-		get_word_ttrs(test_sample, test_file_names, test_dict, paramd)
+		# get_length_stats(test_sample, test_file_names, test_dict, paramd)
+		# get_word_ttrs(test_sample, test_file_names, test_dict, paramd)
 		# get_word_standardized_ttrs(test_sample, test_file_names, test_dict, paramd)
 		get_standardized_ttrs(test_sample, test_file_names, test_dict, paramd)
 		get_termrep_ttrs(test_sample, test_file_names, test_dict)

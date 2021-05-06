@@ -168,23 +168,23 @@ Total	& 6.7			& 6.1			& 6.1		& 6.6			\\ \hline
 \hline
  	& \multicolumn{2}{c|}{n=14} & n=50 & n=70 \\
 \hline
-   	& \param{Fam} & \param{Crowd} & \param{Crowd} 	& NNS			\\ \hline
+   	& \param{Fam} & \param{Crowd} & \param{Crowd} 			& NNS			\\ \hline
 \hline
-Intrans & in 	  		& in 			& in 		& 0.391 		\\ \hline
-Trans   & tr          	& tr          	& tr        & 0.517    	    \\ \hline
-Ditrans & di          	& di          	& di        & 0.606    	    \\ \hline
+Intrans & 0.558 	  	& 0.525 			& 0.535 		& 0.391 		\\ \hline
+Trans   & 0.569        	& 0.580          	& 0.581        	& 0.517    	    \\ \hline
+Ditrans & 0.598        	& 0.640          	& 0.637        	& 0.606    	    \\ \hline
 \hline
-Target  & targ 			& targ	 		& targ 		& 0.481			\\ \hline
-Untarg  & untg        	& untg        	& untg    	& 0.528        	\\ \hline
+Target  & 0.545 		& 0.535	 			& 0.545 		& 0.481			\\ \hline
+Untarg  & 0.610        	& 0.633        		& 0.621    		& 0.528        	\\ \hline
 \hline
-Primary & N/A        	& prim 			& prim		& 0.505		 	\\ \hline
-Mixed   & mix          	& mix          	& mix       & N/A	        \\ \hline
+Primary & N/A        	& 0.517 			& 0.523			& 0.505		 	\\ \hline
+Mixed   & 0.576         & 0.652          	& 0.645       	& N/A	        \\ \hline
 \hline
-ldh     & ldh          	& ldh          	& ldh       & 0.578	        \\ \hline
-xdh     & xdh          	& xdh          	& xdh       & 0.572	        \\ \hline
-xdx     & xdx 			& xdx 			& xdx		& 0.364			\\ \hline
+ldh     & 0.665        	& 0.664          	& 0.671       	& 0.578	        \\ \hline
+xdh     & 0.658        	& 0.661          	& 0.660       	& 0.572	        \\ \hline
+xdx     & 0.364			& 0.424 			& 0.421			& 0.364			\\ \hline
 \hline
-Total    & tot          & tot          & tot      	& 0.505	        \\ \hline
+Total    & 0.576        & 0.583          	& 0.584    		& 0.505	        \\ \hline
 \end{tabular}
 \caption{\label{tab:sttr}Comparing average standardized type-to-token ratio (STTR) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.
 }
@@ -232,11 +232,11 @@ These experiments would be useful to anyone considering an approach to content a
 
 I present here two tables for each of the five annotation features. For each feature, this first table presents MAP scores for models comprised of \param{crowdsourced} responses, showing both the 14-response and 50-response models. This table serves to examine whether the task of recognizing the feature is sensitive to differences in model size, and whether parameters like targeting or primacy interact with any such differences. The second table presents MAP scores for the \param{familiar} and \param{crowdsourced} NS models, using models of 14 responses each. This second table serves to compare the effectiveness of familiar and crowdsourced NS response models at recognizing the given annotation feature in an NNS response. Note that the first table covers both \param{primary} and \param{mixed} response models, but the second table covers only \param{mixed} response models (for both \param{familiar} and \param{crowdsourced} responses), because for some items, 14 is the maximum number of familiar responses available (including first and second responses). MAP differences between the crowdsourced 14-response models in each first table and corresponding second table owe to this difference. In all 10 tables, I use \textbf{bold} to indicate the highest term representation MAP \textit{within} each of the two models presented and \textit{\textbf{bold with italics}} to indicate the highest MAP \textit{between} the two models.
 
-Overall, a few trends stand out. First, both as a trend and a caveat, note that the differences in MAP scores observed here are small, and may not always be statistically significant.
+Overall, a few trends stand out. First, both as a trend and a caveat, note that in many cases the relevant differences in MAP scores observed here are small, and may not always be statistically significant.
 %Within all 10 of the tables presented in this section, the maximum difference between any two MAP scores ranges between 0.08 and 0.24.
 The observations here are thus not intended to guide high stakes decisions, but as an indication of promising directions for future work, ideally with much more annotated data to confirm them.  Chief among these observations is the underperformance of unlabeled dependencies (xdh). In some cases, labeled dependencies (ldh) achieve the highest MAP, and in some cases dependents only (xdx) work best, but there are no cases in which unlabeled dependencies win. This suggests that future iterations of my system could safely eliminate the use of unlabeled dependencies for the sake of simplicity. The MAP scores also show that with only one exception, BERT underperforms the system. 
 %It is worth noting, however, that no attempts were made to optimize BERT for this task, beyond the use of the two different size NS models.
-This shows that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. The MAP scores also show that \param{crowdsourced} models usually outperform \param{familiar} models. This may seem counterintuitive, as I expected familiar participants to complete the PDT most faithfully. However, it may be that crowdsourced responses are more like NNS responses than are familiar responses. For one, crowdsourced participants are less motivated than familiar participants, and this manifests in a higher rate of lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
+This shows that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. The MAP scores also show that \param{crowdsourced} models usually outperform \param{familiar} models. On the surface, this may seem counterintuitive, as familiar participants are expected to complete the PDT most faithfully. However, as seen in this chapter and Section~\ref{sec:holistic-scoring}, crowdsourced responses are more like NNS responses than are familiar responses. Crowdsourced participants are less motivated than familiar participants, and this manifests in a higher rate of lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
 Another salient pattern seen in all 10 tables is that MAP scores for intransitives are always the highest, and MAP scores for transitives are always higher than for ditransitives. In other words, as sentence complexity increases, there is a monotonic decrease in system performance. Because transitives and intransitives cannot simply be avoided, this trend suggests that an ICALL application or similar should carefully consider how to best optimize for more complex items, e.g., by selecting the best term representation.
 
 \subsection{\feat{Core Event} experiments}
