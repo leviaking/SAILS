@@ -192,11 +192,12 @@ xdx     & \textbf{0.382} & \textbf{0.383} & \textit{\textbf{0.353}} \\ \hline
 \hline
 BERT    & 0.675          & 0.640          & \textit{0.641}                   \\ \hline
 \end{tabular}
-\caption{\label{tab:param-response-distances}Comparing average NNS response scores across parameter settings and NS models. The same sets of 70 NNS responses per model and configuration were scored here and throughout this chapter. Scores represent the NNS \textit{distance} from the NS model, so lower scores are preferable. Within each parameter, the score for the setting that minimizes distance is \textbf{bolded}, and the score for the model that minimizes distance is \textit{italicized}.
+\caption{\label{tab:param-response-distances}Comparing average NNS response scores across parameter settings and NS models. The same sets of 70 NNS responses per model and configuration were scored here and throughout this chapter. Scores represent the NNS \textit{distance} from the NS model, so lower scores are closer to NS behavior. Within each parameter, the score for the setting that minimizes distance is \textbf{bolded}, and the score for the model that minimizes distance is \textit{italicized}.
 }
 \end{center}
 \end{table}
 
+\lk{In table caption: point to scoring in ch 5}
 
 The average response length and STTR statistics presented in Tables~\ref{tab:response-length} and~\ref{tab:sttr} are both calculated before any similarity scoring and ranking, and do not require annotation. This means that any predictive patterns observed there could be easily applied to new items before any scoring takes place. In Table~\ref{tab:param-response-distances}, I present similarly organized statistics for response scores. These scores are averages of response scores, which represent the \textit{distance} between an NNS test response and an NS model. Note that there is no column for the NNS sample here because the NS columns are calculated according to how they score that same NNS 70-response sample. Naturally, such figures would not be available for new items prior to scoring, but they also do not require annotation. By examining patterns here in comparison with those seen in the experiments that follow, we may find correlations that can guide the scoring of new items, however.\lk{return to this...}
 
