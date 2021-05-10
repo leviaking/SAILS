@@ -610,7 +610,6 @@ To help mitigate this fact, I report Spearman correlations not as, for example, 
 \label{sec:exp-transitivity}
 Here I examine the performance of my ranking system when applied to items that are canonically either intransitive, transitive, or ditransitive. Unlike the other variables throughout this chapter, transitivity is not a parameter setting. Individual PDT items are assumed to fit predominately only one of the three transitivity types here. In other words, I cannot choose to process a PDT given item with any of the three transitivity settings. Rather, the experiments in this section examine my system's performance across three sets of 10 items each, representing intransitive, transitive and ditransitive events.
 
-Sets of descriptive statistics for the Spearman rank correlation scores produced by my system and BERT using these models are presented in Table~\ref{tab:transitivity-results}. There are 10 items per type. Each item has a targeted and untargeted version, which are separate datasets. For each dataset, I sample both primary and mixed models. My system converts the response text to three different term representations (\param{ldh}, \param{xdh}, \param{xdx}). This results in 12 system configurations: 2 targeting settings $\times$ 2 primacy settings $\times$ 3 term representations. Using all 12 configurations results in 120 Spearman rank correlations per transitivity type. The system statistics presented in Table~\ref{tab:transitivity-results} cover these 120 scores. Because BERT operates on plain text and cannot make use of the term representation variable, it involves only four configurations, resulting in 40 Spearman scores per transitivity type.
 
 \begin{table}[htb!]
 \begin{center}
@@ -666,61 +665,69 @@ std dev & 0.249 	& 0.172 			& 0.207 	& 0.135 					& 0.195 	& 0.200 \\
 
 
 
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.6em}
+%\begin{tabular}{|l|l||l|l|l||l|l|l|}
+%\hline
+% && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
+%\hline
+%	&	& Intrans 	& Trans 	& Ditrans 		& Intrans 	& Trans 	& Ditrans 		\\
+%\hline
+%\multirow{3}{*}{\begin{sideways}Words/Response~ \end{sideways}} & responses	& 560  & 560 & 560 & 2000 & 2000 & 2000	 \\
+%\cline{2-8}
+%& mean 		& 4.9 	& 6.2		& \textbf{7.1} 	& 4.9		& 6.2 	& \textbf{7.3}	 \\
+%\cline{2-8}
+%& median 	& 4.0 	& 6.0		& \textbf{7.0} 	& 4.0		& 6.0 	& \textbf{7.0}	 \\
+%\cline{2-8}
+%& min 		& 1.0 	& 1.0		& 1.0 			& 1.0		& 1.0 	& 1.0	 \\
+%\cline{2-8}
+%& max 		& 19.0 	& 16.0	& \textbf{26.0} & \textbf{26.0}	& 24.0 	& \textbf{26.0}	 \\
+%\cline{2-8}
+%& std dev 	& 2.6 	& 2.5		& 3.2 			& 2.6		& 2.7 	& 3.2	 \\
+%\hline
+%\hline
+%\multirow{3}{*}{\begin{sideways}Model TTR~~~~~ \end{sideways}} & models	& 40 & 40 & 40 	& 40 & 40 & 40	 \\
+%\cline{2-8}
+%& mean 		& 0.360 	& \textbf{0.329} 		& 0.334 	& 0.220		& 0.192 		& \textbf{0.189}	 \\
+%\cline{2-8}
+%& median 	& 0.369 	& \textbf{0.329}		& 0.337 	& 0.218		& 0.190 		& \textbf{0.184}	 \\
+%\cline{2-8}
+%& min 		& 0.169 	& \textbf{0.166}		& 0.210 	& 0.116		& 0.122 		& \textbf{0.084}	 \\
+%\cline{2-8}
+%& max 		& 0.543 	& 0.542			& \textbf{0.484} 	& 0.302		& \textbf{0.274} & 0.276	 \\
+%\cline{2-8}
+%& std dev 	& 0.101 	& 0.079					& 0.075 	& 0.046		& 0.040 		& 0.049	 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:transitivity-model-stats}Comparing the number of words per response and the model word type-to-token ratio (TTR) for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item.
+%}
+%\end{center}
+%\end{table}
 
-\begin{table}[htb!]
-\begin{center}
-\setlength{\tabcolsep}{.6em}
-\begin{tabular}{|l|l||l|l|l||l|l|l|}
-\hline
- && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
-\hline
-	&	& Intrans 	& Trans 	& Ditrans 		& Intrans 	& Trans 	& Ditrans 		\\
-\hline
-\multirow{3}{*}{\begin{sideways}Words/Response~ \end{sideways}} & responses	& 560  & 560 & 560 & 2000 & 2000 & 2000	 \\
-\cline{2-8}
-& mean 		& 4.9 	& 6.2		& \textbf{7.1} 	& 4.9		& 6.2 	& \textbf{7.3}	 \\
-\cline{2-8}
-& median 	& 4.0 	& 6.0		& \textbf{7.0} 	& 4.0		& 6.0 	& \textbf{7.0}	 \\
-\cline{2-8}
-& min 		& 1.0 	& 1.0		& 1.0 			& 1.0		& 1.0 	& 1.0	 \\
-\cline{2-8}
-& max 		& 19.0 	& 16.0	& \textbf{26.0} & \textbf{26.0}	& 24.0 	& \textbf{26.0}	 \\
-\cline{2-8}
-& std dev 	& 2.6 	& 2.5		& 3.2 			& 2.6		& 2.7 	& 3.2	 \\
-\hline
-\hline
-\multirow{3}{*}{\begin{sideways}Model TTR~~~~~ \end{sideways}} & models	& 40 & 40 & 40 	& 40 & 40 & 40	 \\
-\cline{2-8}
-& mean 		& 0.360 	& \textbf{0.329} 		& 0.334 	& 0.220		& 0.192 		& \textbf{0.189}	 \\
-\cline{2-8}
-& median 	& 0.369 	& \textbf{0.329}		& 0.337 	& 0.218		& 0.190 		& \textbf{0.184}	 \\
-\cline{2-8}
-& min 		& 0.169 	& \textbf{0.166}		& 0.210 	& 0.116		& 0.122 		& \textbf{0.084}	 \\
-\cline{2-8}
-& max 		& 0.543 	& 0.542			& \textbf{0.484} 	& 0.302		& \textbf{0.274} & 0.276	 \\
-\cline{2-8}
-& std dev 	& 0.101 	& 0.079					& 0.075 	& 0.046		& 0.040 		& 0.049	 \\
-\hline
-\end{tabular}
-\caption{\label{tab:transitivity-model-stats}Comparing the number of words per response and the model word type-to-token ratio (TTR) for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item.
-}
-\end{center}
-\end{table}
+Sets of descriptive statistics for the Spearman rank correlation scores produced by my system and BERT using these models are presented in Table~\ref{tab:transitivity-results}. There are 10 items per type. Each item has a targeted and untargeted version, which are separate datasets. For each dataset, I sample both primary and mixed models. My system converts the response text to three different term representations (\param{ldh}, \param{xdh}, \param{xdx}). This results in 12 system configurations: 2 targeting settings $\times$ 2 primacy settings $\times$ 3 term representations. Using all 12 configurations results in 120 Spearman rank correlations per transitivity type. The system statistics presented in Table~\ref{tab:transitivity-results} cover these 120 scores. Because BERT operates on plain text and cannot make use of the term representation variable, it involves only four configurations, resulting in 40 Spearman scores per transitivity type.
 
-Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here: mean and median Spearman scores. This is expected, as BERT is a powerful, highly developed, state-of-the-art approach to language modeling and sentence similarity and is trained on web-scale data. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but also has the advantage of preserving a high degree of transparency and explainability. This would suggest that BERT is relatively good at scoring and ranking responses in a way that correlates with the WAR (and thus with human annotation). Future iterations of this work would be wise then to rely on BERT for scoring and ranking, and back off to my system when more transparency is needed, such as when providing feedback.
+Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here: mean and median Spearman scores. This is expected, as BERT is a powerful, highly developed, state-of-the-art approach to language modeling and sentence similarity and is trained on web-scale data. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but also has the advantage of preserving a high degree of transparency and explainability. This would suggest that BERT is relatively good at scoring and ranking responses in a way that correlates with the WAR (and thus with human annotation).
+%Future iterations of this work would be wise then to rely on BERT for scoring and ranking, and back off to my system when more transparency is needed, such as when providing feedback.
 
 Notably, my system does reach a higher maximum Spearman score than BERT in all but one case. However, leveraging this fact for unseen and unannotated items would require consistently predicting cases in which system scores outperform BERT scores, and I have not uncovered any pattern that would enable this.
 %\lk{WHY? what's going on there?}
 
-For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. My system achieves its highest mean and median Spearman scores on the intransitives using the smaller model. For the larger model, performance on the ditransitives increases over the smaller model in terms of the mean and median Spearman scores. Transitives fall in the middle: for the larger model, the mean is higher but the median is lower.
+For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. For intransitives, my system achieves its highest mean and median Spearman scores using the 14-response models. For transitives, the median is highest with the 14-response models, but the mean is highest with the 50-response models. For ditransitives, the mean and median are highest with the 50-response model. If we take standardized type-to-token ratio (STTR) as a metric of complexity (see Table~\ref{tab:sttr}), the observations here show a monotonic pattern in which more complex items are best handled with larger models. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
-We may expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. As a metric of complexity, I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50-response NS models, this pattern was shown to be true, as seen in Table~\ref{tab:transitivity-model-stats}. Combined with the TTRs,\lk{Let's revisit this with STTR} the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
+%We may expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50-response NS models, this pattern was shown to be true, as seen in Table~\ref{tab:sttr}. Combined with the TTRs,\lk{Let's revisit this with STTR} the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
-Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain BERT's higher performance on transitives. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:transitivity-model-stats}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that the classifiers' ability to predict human judgments from the BERT sentence embeddings correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more. 
+Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles in new sentences. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain BERT's higher performance on transitives. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:response-length}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that the classifiers' ability to predict human judgments from the BERT sentence embeddings correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more. 
 
 \subsection{Targeting experiments}
 \label{sec:exp-targeting}
-Here we compare the performance of my ranking system when applied to targeted vs untargeted data.
+
+Comparing Spearman rank correlations across the \param{targeting} parameter reveals that \param{targeted} settings consistently outperform \param{untargeted} settings, as shown in Table~\ref{tab:targeting-results}. That is, targeted settings allow my similarity-based ranking system to rank NNS responses in a way that better captures responses' ``overall goodness'' as represented by the weighted annotation rankings. Responses in \param{targeted} settings tend to be shorter and have lower standardized type-to-token ratios, as shown in Tables~\ref{tab:response-length} and~\ref{tab:sttr}; as seen with \param{transitivity}, these measures correlate with higher Spearman scores for \param{targeted} settings.
+
+These results also show that BERT generally outperforms my system at approximating the desired holistic response rankings. There are exceptions---as seen in the table, my system achieves higher maximum Spearman scores with both size models. Upon examining these cases, I found no discernible pattern that could predict when the system score will exceed the BERT score, but it is possible a pattern would emerge with more data.
+
+Comparing the results for the 14-response NS models and 50-response NS models here reveals that performance is consistently better with the 50-response models, both for my system and for BERT. For my system scores, if we compare the differences for \param{targeted} settings versus the differences for \param{untargeted} settings across these model sizes, Table~\ref{tab:targeting-results} shows that \param{targeted} settings benefit more from the increased model size than do \param{untargeted} settings. In fact, these mean and median differences for \param{targeted} settings are more than double the mean and median differences for \param{untargeted} settings. The ``signal'' here is a slight one; it may not be reliable or statistically significant, but given a larger dataset, future research should probe this finding. With more NS responses, one could try larger NS models to find the sizes that lead to optimal system performance for targeted settings and untargeted settings, which could inform design choices for applications relying on a system like mine.
 
 \begin{table}[htb!]
 \begin{center}
@@ -752,52 +759,52 @@ std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 						& 0.234 		& 0.173						& 0.208
 \end{table}
 
 
-
-\begin{table}[htb!]
-\begin{center}
-\setlength{\tabcolsep}{.6em}
-\begin{tabular}{|l|l||l|l||l|l|}
-\hline
- && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
-\hline
-	&	& Targeted 	& Untarget 	& Targeted 	& Untargeted  	\\
-\hline
-\multirow{3}{*}{\begin{sideways}words / response \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
-\cline{2-6}
-& mean 		& 5.40 	& 6.85		& 5.49 	& 6.79	 \\
-\cline{2-6}
-& median 	& 5.0 	& 6.0		& 5.0 	& 6.0	\\
-\cline{2-6}
-& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
-\cline{2-6}
-& max 		& 18.0 	& 26.0		& 26.0 	& 26.0	 \\
-\cline{2-6}
-& std dev 	& 2.63 	& 3.16		& 2.84 	& 3.07	 \\
-\hline
-\hline
-\multirow{3}{*}{\begin{sideways} model TTR \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
-\cline{2-6}
-& mean 		& 0.316 	& 0.367		& 0.197 	& 0.205	 \\
-\cline{2-6}
-& median 	& 0.312 	& 0.371		& 0.196 	& 0.205	\\
-\cline{2-6}
-& min 		& 0.166 	& 0.180		& 0.084 	& 0.116	 \\
-\cline{2-6}
-& max 		& 0.543 	& 0.542		& 0.302 	& 0.292	 \\
-\cline{2-6}
-& std dev 	& 0.081 	& 0.085		& 0.049 	& 0.045	 \\
-\hline
-\end{tabular}
-\caption{\label{tab:targeting-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Targeted} and \param{Untargeted} PDT items, using NS models of either 14 or 50 random responses per item.
-}
-\end{center}
-\end{table}
-
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.6em}
+%\begin{tabular}{|l|l||l|l||l|l|}
+%\hline
+% && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
+%\hline
+%	&	& Targeted 	& Untarget 	& Targeted 	& Untargeted  	\\
+%\hline
+%\multirow{3}{*}{\begin{sideways}words / response \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
+%\cline{2-6}
+%& mean 		& 5.40 	& 6.85		& 5.49 	& 6.79	 \\
+%\cline{2-6}
+%& median 	& 5.0 	& 6.0		& 5.0 	& 6.0	\\
+%\cline{2-6}
+%& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
+%\cline{2-6}
+%& max 		& 18.0 	& 26.0		& 26.0 	& 26.0	 \\
+%\cline{2-6}
+%& std dev 	& 2.63 	& 3.16		& 2.84 	& 3.07	 \\
+%\hline
+%\hline
+%\multirow{3}{*}{\begin{sideways} model TTR \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
+%\cline{2-6}
+%& mean 		& 0.316 	& 0.367		& 0.197 	& 0.205	 \\
+%\cline{2-6}
+%& median 	& 0.312 	& 0.371		& 0.196 	& 0.205	\\
+%\cline{2-6}
+%& min 		& 0.166 	& 0.180		& 0.084 	& 0.116	 \\
+%\cline{2-6}
+%& max 		& 0.543 	& 0.542		& 0.302 	& 0.292	 \\
+%\cline{2-6}
+%& std dev 	& 0.081 	& 0.085		& 0.049 	& 0.045	 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:targeting-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Targeted} and \param{Untargeted} PDT items, using NS models of either 14 or 50 random responses per item.
+%}
+%\end{center}
+%\end{table}
+%
 
 
 \subsection{Familiarity experiments}
 \label{sec:exp-familiarity}
-Here we compare how well the system works when using different sources of NSs. 
+
 \begin{table}[htb!]
 \begin{center}
 \begin{tabular}{|l||l|l||l|l|}
@@ -829,41 +836,48 @@ std dev & 0.217 			& 0.173 					& 0.224 			& 0.185 			\\
 \end{table}
 
 
+I used the limited amount of \param{familiar} NS data available to compare system performance when using \param{familiar} versus \param{crowdsourced} models. The \param{familiar} and \param{crowdsourced} models discussed here are all \param{mixed} (first and second responses), because too few \param{familiar} responses are available for adequate \param{primary} response models. The results, presented in Table~\ref{tab:familiarity-results}, show no practical difference between \param{familiar} NS models and \param{crowdsourced} models when it comes to system performance. The mean Spearman score is slightly higher for the \param{crowdsourced} NS model, but the median Spearman score is slightly higher for the \param{familiar} NS model. Future work should collect more \param{familiar} responses in order to explore whether this pattern holds for larger model sizes or not. If there are differences, it may be possible to pinpoint the optimal model size depending on whether the available NS responses come from \param{familiar} or \param{crowdsourced} NSs.
 
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l||l|l||l|l|}
-\hline
- & \multicolumn{4}{c|}{NS model sample size = 14} \\
- \hline
- & \multicolumn{2}{c||}{words / response} & \multicolumn{2}{c|}{model TTR} \\
-\hline
-	& \param{Fam} 	& \param{Crowd} 	& \param{Fam} 			& \param{Crowd} 		\\
-\hline
-\hline
-count 	& 840 			& 840 				& 60 				& 60 		\\
-\hline
-mean 	& 6.76 			& 6.50 				& 0.180 			& 0.382 		\\
-\hline
-median 	& 6.0 			& 6.0 				& 0.225 			& 0.383   	\\
-\hline
-min 	& 2.0 			& 1.0 				& 0.134 			& 0.252  		\\
-\hline
-max 	& 31.0 			& 26.0 				& 0.292 			& 0.543 		\\
-\hline
-std dev & 2.78 			& 3.24 				& 0.042 			& 0.070 		\\
-\hline
-\end{tabular}
-\caption{\label{tab:familiarity-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Familiar} and \param{Crowdsourced} responses, using 14 responses per PDT item. \textit{Count} shows the total number of responses (840) and the total number of models (60) per participant group.
-}
-\end{center}
-\end{table}
+BERT performance differs here in that it is clearly better for the \param{familiar} models than the \param{crowdsourced} models. Standardized type-to-token ratio may be informative here. For the NNS test sets, the mean STTR is 0.505, which is closer to that of the \param{familiar} models (0.576) than that of the \param{crowdsourced} models (0.652; Table~\ref{tab:sttr}). This suggests that BERT is more sensitive than my system to differences in complexity between the NS model and NNS test sample.
 
+
+
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|l||l|l||l|l|}
+%\hline
+% & \multicolumn{4}{c|}{NS model sample size = 14} \\
+% \hline
+% & \multicolumn{2}{c||}{words / response} & \multicolumn{2}{c|}{model TTR} \\
+%\hline
+%	& \param{Fam} 	& \param{Crowd} 	& \param{Fam} 			& \param{Crowd} 		\\
+%\hline
+%\hline
+%count 	& 840 			& 840 				& 60 				& 60 		\\
+%\hline
+%mean 	& 6.76 			& 6.50 				& 0.180 			& 0.382 		\\
+%\hline
+%median 	& 6.0 			& 6.0 				& 0.225 			& 0.383   	\\
+%\hline
+%min 	& 2.0 			& 1.0 				& 0.134 			& 0.252  		\\
+%\hline
+%max 	& 31.0 			& 26.0 				& 0.292 			& 0.543 		\\
+%\hline
+%std dev & 2.78 			& 3.24 				& 0.042 			& 0.070 		\\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:familiarity-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{Familiar} and \param{Crowdsourced} responses, using 14 responses per PDT item. \textit{Count} shows the total number of responses (840) and the total number of models (60) per participant group.
+%}
+%\end{center}
+%\end{table}
+%
 
 
 \subsection{Primacy experiments}
 \label{sec:exp-primacy}
-Here we compare how well the system works when using NSs' first responses vs a mix of first and second responses.
+I also compared how well my system approximates the weighted annotation ranking when using models comprised of NSs' first responses (\param{primary} models) versus models comprised of a mix of NSs' first and second responses (\param{mixed} models). Added due to the findings during the pilot study (see Chapter~\ref{chap:pilot}), I expected noticeably different performance from these two settings. The results, presented in Table~\ref{tab:primacy-results}, show that the parameter has less of an impact than I expected. For the 50-response models, the best setting is unclear: the mean Spearman score is slightly higher for the \param{primary} setting, but the median Spearman score is slightly higher for the \param{mixed} setting. For the 14-response models, the mean and median Spearman scores are both slightly higher for the \param{mixed} setting. These differences are likely too small to claim statistical significance, but it is reasonable that at smaller sample sizes, performance is improved by including secondary responses, as in the \param{mixed} models. These secondary responses elicit greater variety, as reflected in standardized type-to-token ratios (Table~\ref{tab:sttr}).
+
 
 \begin{table}[htb!]
 \begin{center}
@@ -896,46 +910,51 @@ std dev & 0.224 			& 0.207 	& 0.230 	& 0.185 					& 0.226 	& 0.186 					& 0.226 
 \end{table}
 
 
-\begin{table}[htb!]
-\begin{center}
-\setlength{\tabcolsep}{.6em}
-\begin{tabular}{|l|l||l|l||l|l|}
-\hline
- && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
-\hline
-	&	& Primary 	& Mixed 	& Primary 	& Mixed  	\\
-\hline
-\multirow{3}{*}{\begin{sideways}words / response~ \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
-\cline{2-6}
-& mean 		& 5.76 	& 6.5		& 5.83 	& 6.46	 \\
-\cline{2-6}
-& median 	& 5.0 	& 6.0		& 6.0 	& 6.0	\\
-\cline{2-6}
-& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
-\cline{2-6}
-& max 		& 20.0 	& 26.0		& 26.0 	& 26.0	 \\
-\cline{2-6}
-& std dev 	& 2.67 	& 3.24		& 2.74 	& 3.26	 \\
-\hline
-\hline
-\multirow{3}{*}{\begin{sideways} model TTR~ \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
-\cline{2-6}
-& mean 		& 0.301 	& 0.382		& 0.180 	& 0.221	 \\
-\cline{2-6}
-& median 	& 0.297 	& 0.383		& 0.181 	& 0.225	\\
-\cline{2-6}
-& min 		& 0.166 	& 0.252		& 0.084 	& 0.134	 \\
-\cline{2-6}
-& max 		& 0.534 	& 0.543		& 0.292 	& 0.302	 \\
-\cline{2-6}
-& std dev 	& 0.082 	& 0.705		& 0.042 	& 0.043	 \\
-\hline
-\end{tabular}
-\caption{\label{tab:primacy-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{primary} and \param{mixed} models, using NS models of either 14 or 50 random responses per item.
-}
-\end{center}
-\end{table}
+Examining this parameter across the two NS model sizes, it is clear that the 50-response model always results in better system performance than the 14-response model, regardless of the \param{primary} or \param{mixed} setting. The mean and median Spearman scores suggest that this increase in performance is greater for the \param{primary} setting than for the \param{mixed} setting. This is unsurprising; if increasing variety (to some extent) in the NS model can improve performance, the more constrained \param{primary} setting should benefit more from an increased sample size than should the (already relatively varied) \param{mixed} setting. More NS responses would be needed to fully explore this curve and establish statistical significance. The \param{mixed} models here all contain half primary responses and half secondary responses. This default 50-50 mix is unlikely to be optimal, and with enough data, it would even be possible to determine exactly how many primary and secondary responses to include when sampling NS models for new PDT items in order to optimize system performance.
 
+As seen in the other holistic experiments, BERT performance here generally exceeds system performance; given access to the same NS response models, BERT's similarity measures result in rankings that better approximate the weighted annotation rankings. My system does achieve higher maximum Spearman scores, but with no clear pattern to predict such cases, these higher maximums are not useful.
+
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.6em}
+%\begin{tabular}{|l|l||l|l||l|l|}
+%\hline
+% && \multicolumn{2}{c||}{NS model = 14} & \multicolumn{2}{c|}{NS model = 50} \\
+%\hline
+%	&	& Primary 	& Mixed 	& Primary 	& Mixed  	\\
+%\hline
+%\multirow{3}{*}{\begin{sideways}words / response~ \end{sideways}} & responses & 840 & 840 & 3000 & 3000  \\
+%\cline{2-6}
+%& mean 		& 5.76 	& 6.5		& 5.83 	& 6.46	 \\
+%\cline{2-6}
+%& median 	& 5.0 	& 6.0		& 6.0 	& 6.0	\\
+%\cline{2-6}
+%& min 		& 1.0 	& 1.0		& 1.0 	& 1.0	 \\
+%\cline{2-6}
+%& max 		& 20.0 	& 26.0		& 26.0 	& 26.0	 \\
+%\cline{2-6}
+%& std dev 	& 2.67 	& 3.24		& 2.74 	& 3.26	 \\
+%\hline
+%\hline
+%\multirow{3}{*}{\begin{sideways} model TTR~ \end{sideways}} & models	& 60  & 60 & 60 & 60  \\
+%\cline{2-6}
+%& mean 		& 0.301 	& 0.382		& 0.180 	& 0.221	 \\
+%\cline{2-6}
+%& median 	& 0.297 	& 0.383		& 0.181 	& 0.225	\\
+%\cline{2-6}
+%& min 		& 0.166 	& 0.252		& 0.084 	& 0.134	 \\
+%\cline{2-6}
+%& max 		& 0.534 	& 0.543		& 0.292 	& 0.302	 \\
+%\cline{2-6}
+%& std dev 	& 0.082 	& 0.705		& 0.042 	& 0.043	 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:primacy-model-stats}Comparing the number of words per response and the model type-to-token ratio (TTR) for \param{primary} and \param{mixed} models, using NS models of either 14 or 50 random responses per item.
+%}
+%\end{center}
+%\end{table}
+%
 
 
 
@@ -1040,7 +1059,7 @@ std dev & 0.226 		& 0.227 		& 0.196 							& 0.225 		& 0.230 				& 0.177		 \\
 
 \subsection{Term representation experiments}
 \label{sec:exp-term-reps}
-The current system allows for different \textit{term representations}, which are variations on syntactic dependencies. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching (see Table~\ref{tab:dist-ranked-parameters}). In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (\param{ldh}), \textit{dependent-head} only (\param{xdh}), and \textit{dependent} only (\param{xdx}). In other words, my system uses a ``bag of terms'' approach, where the bags contain either labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}) or words (\param{xdx}). The labeled and unlabeled dependencies were the top performers in my previous work, and the \param{xdx} format is included as a kind of baseline showing a bag of words approach.
+The current system allows for different \textit{term representations}, which are variations on syntactic dependencies. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching (see Table~\ref{tab:dist-ranked-parameters}). In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (\param{ldh}), \textit{dependent-head} only (\param{xdh}), and \textit{dependent} only (\param{xdx}). In other words, my system uses a ``bag of terms'' approach, where the bags contain either labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}) or words (\param{xdx}). The labeled and unlabeled dependencies were the top performers in my previous work, and the \param{xdx} format is included as a kind of baseline approximating a bag of words approach.
 
 \begin{table}[htb!]
 \begin{center}
@@ -1089,38 +1108,40 @@ std dev & 0.229 		& 0.236 			& 0.213 				& 0.177 \\
 \end{center}
 \end{table}
 
+The results in Table~\ref{tab:termrep-results} show that regardless of term representation, performance is best with the 50-response NS models. This difference is greatest for the \param{ldh} models and smallest for the \param{xdx} models. This makes sense, given that the \param{ldh} representations are the most complex and \param{xdx} representations are least complex, because we can expect the simpler \param{xdx} models to become ``saturated'' with relevant NNS response terms at smaller sample sizes as compared to \param{ldh} models. In Table~\ref{tab:sttr}, this is reflected in standardized type-to-token ratios. For the crowdsourced models, the greatest difference in STTR is seen when moving from the \param{ldh} 14-response models to 50-response models. For the \param{xdh} representation, the two sample sizes have nearly identical STTRs, and for the \param{xdx} representation, the 14-response model has the highest STTR. This suggests the optimal NS model size is correlated with the complexity. Considering Table~\ref{tab:sttr}, it appears that STTRs for the simpler \param{xdh} and \param{xdx}  representations likely peak somewhere between the 14-response sample and 50-response sample, but \param{ldh} samples may see increased STTR for samples larger than 50 responses.
+
+With more NS responses, future work could form larger samples and determine the size at which STTR reaches its maximum for \param{ldh} representations. The same could be done for \param{xdh} and \param{xdx} term representations as well. With such a ``map'' of the relationship between STTR and sample size for NS models, one could better explore the correlations between system performance and term representations across sample sizes. For processing new PDT items, this would make it possible to choose the optimal term representation based on the number of available NS responses.
 
 
 
-
-
-\begin{table}[htb!]
-\begin{center}
-\setlength{\tabcolsep}{.6em}
-\begin{tabular}{|l|l||l|l|l||l|l|l|}
-\hline
- && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
-\hline
-	&	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 		\\
-\hline
-\multirow{3}{*}{\begin{sideways}model TTR \end{sideways}} & model	& 120 & 120 & 120 	& 120 & 120 & 120	 \\
-\cline{2-8}
-& mean 		& 0.525 	& 0.513		& 0.279 			& 0.367		& 0.354 	& 0.157	 \\
-\cline{2-8}
-& median 	& 0.538 	& 0.525		& 0.286 			& 0.366		& 0.358 	& 0.157	 \\
-\cline{2-8}
-& min 		& 0.177 	& 0.177		& 0.136 			& 0.150		& 0.141 	& 0.063	 \\
-\cline{2-8}
-& max 		& 0.825 	& 0.818		& 0.437 			& 0.570		& 0.562 	& 0.228	 \\
-\cline{2-8}
-& std dev 	& 0.145 	& 0.144		& 0.068 			& 0.099		& 0.096 	& 0.037	 \\
-\hline
-\end{tabular}
-\caption{\label{tab:termrep-model-stats}Comparing the model-level dependency type-to-token ratios (TTRs) for all NS models when dependencies are formatted in the three different \param{term representations}: \param{ldh} (labeled dependencies) and \param{xdh} (unlabeled dependencies) and \param{xdx} (dependents only), using NS models of either 14 or 50 random responses per item.
-}
-\end{center}
-\end{table}
-
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.6em}
+%\begin{tabular}{|l|l||l|l|l||l|l|l|}
+%\hline
+% && \multicolumn{3}{c||}{NS model = 14} & \multicolumn{3}{c|}{NS model = 50} \\
+%\hline
+%	&	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 	& \param{ldh} 	& \param{xdh} 	& \param{xdx} 		\\
+%\hline
+%\multirow{3}{*}{\begin{sideways}model TTR \end{sideways}} & model	& 120 & 120 & 120 	& 120 & 120 & 120	 \\
+%\cline{2-8}
+%& mean 		& 0.525 	& 0.513		& 0.279 			& 0.367		& 0.354 	& 0.157	 \\
+%\cline{2-8}
+%& median 	& 0.538 	& 0.525		& 0.286 			& 0.366		& 0.358 	& 0.157	 \\
+%\cline{2-8}
+%& min 		& 0.177 	& 0.177		& 0.136 			& 0.150		& 0.141 	& 0.063	 \\
+%\cline{2-8}
+%& max 		& 0.825 	& 0.818		& 0.437 			& 0.570		& 0.562 	& 0.228	 \\
+%\cline{2-8}
+%& std dev 	& 0.145 	& 0.144		& 0.068 			& 0.099		& 0.096 	& 0.037	 \\
+%\hline
+%\end{tabular}
+%\caption{\label{tab:termrep-model-stats}Comparing the model-level dependency type-to-token ratios (TTRs) for all NS models when dependencies are formatted in the three different \param{term representations}: \param{ldh} (labeled dependencies) and \param{xdh} (unlabeled dependencies) and \param{xdx} (dependents only), using NS models of either 14 or 50 random responses per item.
+%}
+%\end{center}
+%\end{table}
+%
 
 
 
