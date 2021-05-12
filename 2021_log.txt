@@ -548,10 +548,38 @@ Here's what's up:
 
 ################################################################################
 
-SBERT:
-We train SBERT on the combination of the SNLI (Bowman et al., 2015) and the Multi-Genre NLI (Williams et al., 2018) dataset. The SNLI is a col- lection of 570,000 sentence pairs annotated with the labels contradiction, eintailment, and neu- tral. MultiNLI contains 430,000 sentence pairs and covers a range of genres of spoken and written text.
-...
-BERT (Devlin et al., 2018) is a pre-trained transformer network (Vaswani et al., 2017), which set for various NLP tasks new state-of-the-art re- sults, including question answering, sentence clas- sification, and sentence-pair regression. The input for BERT for sentence-pair regression consists of the two sentences, separated by a special [SEP] token. Multi-head attention over 12 (base-model
+5/12.
+All the words that appear in special contexts (\feat{}, \param{}) need to include "optional" hyphens, because they will not wrap otherwise---they may extend into the margins if they appear last on the line. So I'm going to do a find and replace, as follows:
+{transitivity}
+{intransitive}
+{intransitives}
+{transitive}
+{transitives}
+{ditransitive}
+{ditransitives}
+
+{targeting}
+{targeted}
+{untargeted}
+
+{primacy}
+{primary}
+{mixed}
+
+{term representation}
+{term normalization}
+{familiarity}
+{familiar}
+{crowdsourced}
+
+Features next...
+core event
+answerhood
+grammaticality
+interpretability
+verifiability
+
+
 ################################################################################
 ################################################################################
 Citations, Lit Review, etc.
