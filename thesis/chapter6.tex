@@ -3,30 +3,34 @@
 %\section{Introduction}
 \chapter{Optimization}
 \label{chap:optimization}
-In this chapter, I discuss experiments intended to optimize my system for rating and ranking responses automatically, first introduced in Chapter~\ref{chap:pilot}. In practical terms, this means looking for correlations between the performance of my system (and its particular settings) and known features of the NS responses, such as the transitivity of the PDT item event, the size of the NS model, and whether models contain only primary responses or a mix of primary and secondary responses. I also consider correlations between system performance and observable measures of the NS and NNS data, namely type-to-token ratios and mean response lengths.
+In this chapter, I discuss experiments aimed at optimizing the configuration of my system for rating and ranking responses automatically, first introduced in Chapter~\ref{chap:pilot}. In practical terms, this means looking for correlations between the performance of my system (and its particular settings) and known features of the native speaker (NS) and non-native speaker (NNS) responses, such as the transitivity of the PDT item event, the size of the NS model, and whether models contain only primary responses or a mix of primary and secondary responses. I also consider correlations between system performance and observable measures of the NS and NNS data, namely type-to-token ratios and mean response lengths.
 %Where sufficient data allows, I also look for patterns indicating correlations between pairs of parameter settings used in a given system configuration.
 
 My earliest attempts at ranking responses were rule-based and relied on strict matching with a pre-established set of acceptable responses, described in Section~\ref{sec:pilot-study}. This found moderate success, leading to the improved approach described in Section~\ref{sec:2016work}, which is data-driven and relies on more flexible methods of comparison.
 In Section~\ref{sec:current-method}, I give an overview of the updates to this approach used here to process the new, larger dataset described in Chapter~\ref{chap:data}.
 
-I present some initial statistics and observations regarding the NS models and NNS test sets in Section~\ref{sec:sample-stats}, because these observations may help explain trends seen in the experiments that follow.
-Ideally, for each of the five annotation features, my system rankings should maximize the separation of positively and negatively annotated NNS responses.
-In Section~\ref{sec:exp-annotations}, I use mean average precision to investigate how well each feature correlates with my dependency-based similarity results, and to see which system settings and model sizes work best for different types of items. In Section~\ref{sec:exp-holistic}, I use Spearman rank correlations between system rankings and the weighted annotation rankings to see how various system settings effect the ability to approximate holistic response rankings derived from human judgements.
+%I present some initial statistics and observations regarding the NS models and NNS test sets in Section~\ref{sec:sample-stats}, as these observations help explain trends seen in the experiments that follow. Ideally, for each of the five annotation features introduced in Chapter~\ref{chap:annotation}, my system rankings should maximize the separation of positively and negatively annotated NNS responses. In Section~\ref{sec:exp-annotations}, I investigate this using mean average precision to see how well each feature correlates with my dependency-based similarity results, and to see which system settings and model sizes work best for different types of items. Some use cases in ICALL or testing will place more or less importance on particular annotation features, so the findings here are useful in determining the system settings that best capture each feature. In Section~\ref{sec:exp-holistic}, I step back from the individual annotation features to compare my system's rankings against the weighted annotation rankings described in Section~\ref{sec:holistic-scoring}. These rankings are derived from human judgements and are intended to represent responses' overall quality, so these experiments seek to find the optimal settings for tasks where a holistic measure is desired. I use Spearman rank correlations between system rankings and the weighted annotation rankings for these experiments.
+
+I present some initial statistics and observations regarding the NS models and NNS test sets in Section~\ref{sec:sample-stats}, as these observations help explain trends seen in the experiments that follow. 
+Ideally, for each of the five annotation features introduced in Chapter~\ref{chap:annotation}, my system rankings should maximize the separation of positively and negatively annotated NNS responses.
+In Section~\ref{sec:exp-annotations}, I examine how well each annotation feature (see Chapter~\ref{chap:annotation}) correlates with my dependency-based similarity results and which system settings and model sizes maximize these correlations. In Section~\ref{sec:exp-holistic}, I step back from the individual annotation features to see how well my system can approximate the desired weighted annotation rankings described in Section~\ref{sec:holistic-scoring}.
 
 
 \section{Updated method}
 \label{sec:current-method}
-The work discussed in Chapter~\ref{chap:pilot} relied on a shaky implementation of ``correctness'' or ``appropriateness'' for responses, and this needed improvement, first and foremost. Developing a better and more reliable annotation scheme was a key goal for me in expanding the work to the current dissertation, in order to give the work more meaning and context and make my corpus useful for a broad range of uses. The annotation planning discussed in Section~\ref{sec:scheme} was a direct result of the challenges of working with an inadequate annotation scheme. 
+The work discussed in Chapter~\ref{chap:pilot} relied on a shaky implementation of ``correctness'' or ``appropriateness'' for responses, and this needed improvement, first and foremost. Developing a better and more reliable annotation scheme was a key goal for me in expanding the work to its current scale, in order to give the work more meaning and context and make my corpus useful for a broad range of uses. The annotation planning discussed in Section~\ref{sec:scheme} was a direct result of the challenges of working with an inadequate annotation scheme. 
 
-As discussed in Sections~\ref{sec:est-feat-weights} and~\ref{sec:holistic-scoring}, in the current corpus, annotations no longer encode for errors, but instead give a binary score for five different features, which can then be weighted and combined to produce a score between zero and one. This expands the range of metrics available for judging system performance. Mean average precision (MAP) can now be used to judge system performance focused on individual annotation features. I can now also compare system produced rankings against the weighted annotation rankings for a holistic approach to response scores; i.e., how well does the system rank responses in comparison to an ideal ranking based on manual annotations? I use Spearman rank correlation for these scores.\lk{expand on Spearman; what does it mean? Sp vs Pearson, etc}
+As discussed in Sections~\ref{sec:est-feat-weights} and~\ref{sec:holistic-scoring}, in the current corpus, annotations no longer directly encode for errors, but instead give a binary score for five different features, which can then be weighted and combined to produce a score between zero and one. This expands the range of metrics available for judging system performance. Mean average precision (MAP) can now be used to judge system performance focused on individual annotation features. I can now also compare system produced rankings against the weighted annotation rankings for a holistic approach to response scores; i.e., how well does the system rank responses in comparison to an ideal ranking based on manual annotations? I use Spearman rank correlation for these scores.\lk{expand on Spearman; what does it mean? Sp vs Pearson, etc}
 
 Because the annotations and evaluation are different in the current work, it does not exactly follow that findings from the pilot study work will hold true. However, I believe that the previous work has highlighted some of the system settings that are most likely to perform well, and I chose to focus my experiments on some of the best performing settings. For example, all of the current experiments rely on the tf-idf cosine (\param{TC}) approach, as this generally outperformed the others. As discussed in Section~\ref{sec:metrics}, the \param{TC} performance suffers for items where the non-native speaker (NNS) data is noisiest (with regard to spellings) and the native speaker (NS) data is relatively homogenous (particularly with regard to verb choice). Rather than continue experimenting with the underperforming approaches, I chose to address these issues directly instead. As discussed in Chapter~\ref{chap:data}, to address the spelling noise, I made sure that data collection participants had access to spelling correction while typing their responses. To address the uniformity of the NS responses, I surveyed a much larger group of participants and instructed each of them to provide two responses per picture description task (PDT) item.
 
-The current work retains just three of the five term representations previously used (see Section~\ref{sec:response-rep}): \param{ldh}, \param{xdh}, and \param{xdx}. The \param{ldh} and \param{xdh} forms performed best with the older dataset. Moreover, as these represent labeled and unlabeled dependencies, their use in linguistics is well established. The \param{xdx} representation is kept here as a rough equivalent of a bag-of-words model, another well established linguistic representation.
+The current work retains just three of the five term representations previously used (see Section~\ref{sec:response-rep}): \param{ldh}, \param{xdh}, and \param{xdx}. The \param{ldh} and \param{xdh} forms performed best with the older dataset. Moreover, as these represent labeled (\param{ldh}) and unlabeled (\param{xdh}) dependencies, their use in linguistics is well established. The \param{xdx} representation is kept here as a rough equivalent of a bag-of-words model, another well established linguistic representation.
 
 Finally, as the Brown Corpus overwhelmingly outperformed the Wall Street Journal corpus as a tf-idf reference, the current experiments rely exclusively on Brown. The larger PDT dataset follows a similar narrative style to that described in Section~\ref{sec:pilot-data}, so I am confident \param{Brown} is again the best option here.
 
-All experiments throughout this chapter score and rank 70 NNS responses per item; this is the maximum number of NNS responses available across all PDT items. Where more than 70 responses are available, a random sample of 70 is used. The large increase in the number of PDT items and the size of the datasets means that running an exhaustive search for the best parameters among all combinations is not feasible. The experiments in Chapter~\ref{chap:pilot} used 30 different combinations of system settings (i.e., \textbf{configurations}) for each of 10 items. By comparison, the variables and parameters used in this chapter result in up to 72 different configurations (see Table~\ref{tab:all-params}). Subtracting transitivity (which cannot be varied for a given item) leaves 24 configurations which apply to all items. To make sense of this large number of results, I have chosen to focus my optimization efforts on each parameter individually.
+All experiments throughout this chapter score and rank 70 NNS responses per item; this is the maximum number of NNS responses available across all PDT items. Where more than 70 responses are available, a random sample of 70 is used.
+%The large increase in the number of PDT items and the size of the datasets means that running an exhaustive search for the best parameters among all combinations is not feasible.
+The experiments in Chapter~\ref{chap:pilot} used 30 different combinations of system settings (i.e., \textbf{configurations}) for each of 10 items. By comparison, the variables and parameters used in this chapter result in up to 72 different configurations (see Table~\ref{tab:all-params}). Subtracting transitivity (which cannot be varied for a given item) leaves 24 configurations which apply to all items. To make sense of this large number of results, I have chosen to focus my optimization efforts on each parameter individually, rather than attempt an exhaustive search through all configurations.
 
 
 \begin{table*}
@@ -73,9 +77,9 @@ Ditransitive & & & & \param{xdx} \\
 %\label{chap:optimization}
 %In this chapter, I detail my research applying the methods discussed in Chapter~\ref{chap:pilot} to the much larger and more richly annotated dataset described in Chapters~\ref{chap:data} and \ref{chap:annotation}. The chapter primarily consists of a series of experiments focused on isolating and optimizing a number of parameters or variables in my picture description task (PDT) response analysis pipeline. 
 
-To help contextualize the results of these experiments, I used a state-of-the-art language modeling tool called BERT to rank responses according to their similarity to the NS model. I discuss this tool and its use as a benchmark in Section~\ref{sec:bert-benchmark}.
+To help contextualize the results of these experiments, I used a state-of-the-art language modeling tool called SBERT to rank responses according to their similarity to the NS model. I discuss this tool and its use as a benchmark in Section~\ref{sec:bert-benchmark}.
 
-The optimization experiments are organized here according to the sequence in which the variables are relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, in Section~\ref{sec:exp-transitivity}, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are \textit{crowdsourced}. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first (\param{primary}) responses, or an equal number of first and second (\param{mixed}) responses (also discussed in Section~\ref{sec:pdt}). I then evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-term-norm}; I call this variable \textit{term normalization}.\lk{Is this technically norming the terms or the responses?} For the final variable experiments, I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset.
+The optimization experiments in Section~\ref{sec:exp-holistic} are organized according to the sequence in which the variables are relevant in my process, which begins with data collection and ends with scoring and ranking non-native speaker (NNS) responses. Thus, in Section~\ref{sec:exp-transitivity}, I begin with the variable I refer to as \textit{transitivity}, which emerged during task design for the PDT described in Chapter~\ref{chap:data}; I look at the effects of applying my dependency-based tf-idf cosine pipeline to new item types, namely intransitives and ditransitives, and compare against performance on transitive items. Next, in Section~\ref{sec:exp-targeting}, I turn to experiments regarding \textit{targeting}, which refers to whether or not the PDT item subject was referenced in the prompt (as discussed in Section~\ref{sec:pdt}). In Section~\ref{sec:exp-familiarity}, I examine a variable I call \textit{familiarity}, which refers to whether the native speakers (NSs) contributing to the model are \textit{familiar} to me personally or are \textit{crowdsourced}. Another new variable follows in Section~\ref{sec:exp-primacy}; I call this \textit{primacy}, which refers to whether the NS model contains only first (\param{primary}) responses, or an equal number of first and second (\param{mixed}) responses (also discussed in Section~\ref{sec:pdt}). I return in Section~\ref{sec:exp-term-reps} to the best performing dependency \textit{term representations} from Section~\ref{sec:response-rep} to see how they perform with the current dataset. Finally, I evaluate the effects of a new innovation---normalizing the weight of each NS term in the model according to the length of the response in which it appeared, in Section~\ref{sec:exp-term-norm}; I call this variable \textit{term normalization}.
 
 %After examining these variables individually, in Section~\ref{sec:exp-combos} I consider the hypothesis that particular configurations \lk{Check research Qs and sync this up} will perform better than others in particular conditions. This is a ``non-exhaustive,'' mostly future-looking set of experiments, where I report some promising trends.
 
@@ -87,15 +91,17 @@ The optimization experiments are organized here according to the sequence in whi
 Throughout this chapter, the experiments are performed with randomly sampled NS models of two sizes in order to examine the effects of model size on system performance. The larger models contain 50 NS responses per PDT item. This is the maximum number of NS responses that are available across all PDT items using relevant system configurations. For example, item 26 in the corpus contains 290 total NS responses, but only roughly 90\% are \param{crowdsourced}, 50\% are \param{targeted}, and 50\% are first (\param{primary}) responses, and selecting for this configuration leaves exactly 50 responses from which to form a model. The smaller models throughout this chapter contain 14 NS responses per item. This is the maximum number of responses available across all items from \param{familiar} NSs, so I chose this size in order to fairly compare \param{crowdsourced} and \param{familiar} responses (Section~\ref{tab:primacy-results}) and I retained it throughout this chapter to best contextualize the familiarity experiments.
 %I26: 158 Targeted, 132 Untargeted
 
-\section{BERT as a benchmark}
+\section{SBERT as a benchmark}
 \label{sec:bert-benchmark}
-The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations or to compare this work against similar research. In order to give some frame of reference for this work, I chose to use BERT, a widely adopted state-of-the-art language modeling tool \cite{BertDevlin2018}. My system scores each single NNS test response according to its similarity with the set of NS model responses. Measuring sentence similarity is one of BERT's most used functions, so for each scoring and ranking experiment in this chapter, I use BERT to generate corresponding output. The resulting mean average precision (MAP) and Spearman rank correlation scores are discussed throughout to help contextualize my system's performance.
+The central task of my work---ranking NNS responses using a set of NS responses---is not a standard task with established metrics in any relevant field like natural language processing (NLP) or language testing. Moreover, this work relies on a custom dataset which has not been widely adopted. These facts make it challenging to assess the performance of my ranking system and its various configurations or to compare this work against similar research. In order to give some frame of reference for this work, I chose to use a widely adopted language embedding tool known as SBERT \cite{sbert2020}.
 
-XYZ: Include discussion of SBERT and exact version used here.\lk{XYZ}
+SBERT is a modified version of BERT (Bidirectional Encoder Representations from Transformers), which is a pre-trained transformer network that has set records on NLP tasks including semantic textual similarity (STS), topic modeling and question answering \cite{BertDevlin2018}. I choose SBERT over BERT because it is faster, more efficient and more readily usable on a typical personal computer. Specifically, I use the pre-trained version of SBERT distributed in the \texttt{sentence\_transformers} Python package \cite{sbert-python}. For semantic textual similarity, SBERT is trained on the Stanford Natural Language Inference (SNLI) corpus \cite{bowman2015} and the Multi-Genre Natural Language Inference (MultiNLI) corpus \cite{MultiNLI2018}. These two corpora consist of sentence pairs manually labeled as \textit{contradiction}, \textit{entailment}, or \textit{neutral}; the SNLI corpus contains 570,000 sentence pairs, and the MutliNLI corpus contains 430,000 sentence pairs.
+ 
+My system scores each single NNS test response according to its similarity with the set of NS model responses. Measuring semantic textual similarity is one of SBERT's most used functions, so for each scoring and ranking experiment in this chapter, I use SBERT to generate corresponding output. The resulting mean average precision (MAP) and Spearman rank correlation scores are discussed throughout to help contextualize my system's performance.
 
-For each experiment reported throughout this chapter, my system and BERT are given access to the same NS responses as the basis for their similarity measures. Naturally, however, each is trained on or makes use of very different language resources. The linguistic ``intelligence'' of my system comes largely from the Stanford Parser and its pre-trained grammar model, as discussed in Section~\ref{sec:pilot-study} \cite{klein:manning:03}. The model is trained on the standard training sections of the Penn Treebank, which contain over one million words of English text, manually part-of-speech tagged and parsed, sourced from the Wall Street Journal and the Brown Corpus \cite{marcus-et-al:93}. My approach also uses the Brown Corpus for tf-idf, meaning a word (or more accurately, dependency) frequency model extracted from the Brown Corpus also serves as a linguistic resource \cite{kucera:francis:67}. BERT, on the other hand, is trained on vastly larger amounts of unannotated text, from a much broader range of sources.
+For each experiment reported throughout this chapter, my system and SBERT are given access to the same NS responses as the basis for their similarity measures. Naturally, however, each is trained on or makes use of very different language resources. The linguistic ``intelligence'' of my system comes largely from the Stanford Parser and its pre-trained grammar model, as discussed in Section~\ref{sec:pilot-study} \cite{klein:manning:03}. The model is trained on the standard training sections of the Penn Treebank, which contain over one million words of English text, manually part-of-speech tagged and parsed, sourced from the Wall Street Journal and the Brown Corpus \cite{marcus-et-al:93}. My approach also uses the Brown Corpus for tf-idf, meaning a word (or more accurately, dependency) frequency model extracted from the Brown Corpus also serves as a linguistic resource \cite{kucera:francis:67}. SBERT, on the other hand, is trained on a million sentence pairs, each manually labeled to indicate similarity.
 
-My use of BERT here varies slightly from the way I implemented my own system's similarity measuring approach throughout most of this chapter. In my system, each NS response in the model is processed and dumped into a single ``bag of dependencies,'' which is then used to generate a single similarity score (via tf-idf cosine). BERT operates directly on plain text sentences, and because the use of punctuation in the PDT responses is not consistent, concatenating all NS model responses in order to generate a single similarity score is not ideal. Instead, I use BERT to do a pairwise comparison between the NNS test response and each NS response in the model and then average these similarity scores.
+My use of SBERT here varies slightly from the way I implemented my own system's similarity measuring approach throughout most of this chapter. In my system, each NS response in the model is processed and dumped into a single ``bag of dependencies,'' which is then used to generate a single similarity score (via tf-idf cosine). SBERT operates directly on plain text sentences, and because the use of punctuation in the PDT responses is not consistent, concatenating all NS model responses in order to generate a single similarity score is not ideal. Instead, I use SBERT to do a pairwise comparison between the NNS test response and each NS response in the model and then average these similarity scores.
 
 %I did explore an implementation of my system's similarity scoring that is more consistent with this individual treatment of model responses for BERT, and this is discussed in Section~\ref{sec:exp-term-norm}.
 
@@ -131,7 +137,7 @@ Total	& 6.7			& 6.1			& 6.1		& 6.6			\\ \hline
 
 Table~\ref{tab:response-length} presents average response length for the samples, in total and broken down by parameter settings. As expected, for all samples we see an increase in response length as we move from intransitives to transitives to ditransitives. The same is true in moving from targeted to untargeted settings, and from primary to mixed settings (where applicable). These numbers also show that in most cases, the familiar responses are the longest and the crowdsourced responses are the shortest, with NNS responses falling somewhere in between. The only exception is for ditransitive items, where the NNS responses are longest. By comparing the 14-response and 50-response crowdsourced samples, we can see that the response length is quite stable across sample sizes.
 
-As an indication of complexity or lexical density, in Table~\ref{tab:sttr}, I present the standardized type-to-token ratios (STTR) for the response samples. I use STTR as opposed to TTR as a means to normalize for large differences in size, with the smallest samples containing only 14 responses (per item), and the largest containing 70. A \textit{standardized} type-to-token ratio simply calculates the TTR for each window of \textit{n} words in the sample, then averages these TTRs at the end.\lk{cite} Here I use a window of 40 words, as this is the maximum available for all samples. 
+As an indication of complexity or lexical density, in Table~\ref{tab:sttr}, I present the standardized type-to-token ratios (STTR) for the response samples. I use STTR as opposed to TTR as a means to normalize for large differences in size, with the smallest samples containing only 14 responses (per item), and the largest containing 70. A \textit{standardized} type-to-token ratio, sometimes referred to as a \textit{mean segmental} type-to-token ratio, simply calculates the TTR for each segment of \textit{n} words in the sample, then averages these TTRs at the end \cite{johnson1944studies, richards2000accommodation}. Here I use a window of 40 words, as this is the maximum available for all samples. 
 
 \begin{table}[htb!]
 \begin{center}
@@ -165,7 +171,7 @@ Total    & 0.576        & 0.583          	& 0.584    		& 0.505	        \\ \hline
 
 Within each parameter, STTR shows a similar pattern to response length. Complexity increases as we move from intransitives to transitives to ditransitives, from targeted to untargeted settings, and from primary to mixed response models. As the representation is simplified from labeled dependencies to unlabeled dependencies to dependents only, STTRs decrease. This decrease is small when moving from labeled to unlabeled dependencies, indicating that for a given head and dependent, syntactic labels tend to be the same. A much larger decrease is observed when moving from unlabeled dependencies to dependents only, indicating that dependents occur with a wider variety of heads than labels. This is to be expected, but it may be useful in understanding differences in performance across transitivity types, for example; ditransitives mean more verb arguments than intransitives, and this means more variety in the combinations of heads and dependents.
 
-In comparing across the models, the story is complicated. First, STTR is less stable than response length across sample sizes, as seen between the 14-response and 50-response crowdsourced models. One consistent pattern seen here is that across the board, the 50-response crowdsourced models are least like the NNS test sets. This is a pattern which plays out in the following sections. In the STTRs seen here, the NNS test sets are sometimes closest to the 14-response familiar models, and at other times closest to the 14-response crowdsourced models. Again, this may correlate with some of the patterns seen in the feature and holistic experiments that follow.\lk{Does it? revisit this!}
+In comparing across the models, the story is complicated. First, STTR is less stable than response length across sample sizes, as seen between the 14-response and 50-response crowdsourced models. One consistent pattern seen here is that across the board, the 50-response crowdsourced models are least like the NNS test sets. This is a pattern which plays out in the following sections. In the STTRs seen here, the NNS test sets are sometimes closest to the 14-response familiar models, and at other times closest to the 14-response crowdsourced models. As I will point out in the following sections, this aligns with some of the patterns seen in the feature and holistic experiments.
 
 \begin{table}[htb!]
 \begin{center}
@@ -190,18 +196,17 @@ ldh     & 0.553          & 0.557          & 0.513                   \\ \hline
 xdh     & 0.541          & 0.546          & 0.503                   \\ \hline
 xdx     & \textbf{0.382} & \textbf{0.383} & \textit{\textbf{0.353}} \\ \hline
 \hline
-BERT    & 0.675          & 0.640          & \textit{0.641}                   \\ \hline
+SBERT    & 0.675          & 0.640          & \textit{0.641}                   \\ \hline
 \end{tabular}
-\caption{\label{tab:param-response-distances}Comparing average NNS response scores across parameter settings and NS models. The same sets of 70 NNS responses per model and configuration were scored here and throughout this chapter. Scores represent the NNS \textit{distance} from the NS model, so lower scores are closer to NS behavior. Within each parameter, the score for the setting that minimizes distance is \textbf{bolded}, and the score for the model that minimizes distance is \textit{italicized}.
+\caption{\label{tab:param-response-distances}Comparing average NNS response scores across parameter settings and NS models, using the dependency tf-idf cosine scoring approach introduced in Section~\ref{sec:scoring}. The same sets of 70 NNS responses per model and configuration were scored here and throughout this chapter. Scores represent the NNS \textit{distance} from the NS model, so lower scores are closer to NS behavior. Within each parameter, the score for the setting that minimizes distance is \textbf{bolded}, and the score for the model that minimizes distance is \textit{italicized}.
 }
 \end{center}
 \end{table}
 
-\lk{In table caption: point to scoring in ch 5}
+The average response length and STTR statistics presented in Tables~\ref{tab:response-length} and~\ref{tab:sttr} are both calculated before any similarity scoring and ranking, and do not require annotation. This means that any predictive patterns observed there could be easily applied to new items. In Table~\ref{tab:param-response-distances}, I present similarly organized statistics for response scores. These scores are averages of response scores, which represent the \textit{distance} between an NNS test response and an NS model. Note that there is no column for the NNS sample here because the NS columns are calculated according to how they score that same NNS 70-response sample. Naturally, such figures would not be available for new items, but they also do not require annotation, only similarity scoring.
+%By examining patterns here in comparison with those seen in the experiments that follow, we may find correlations that can guide the scoring of new items, however.\lk{return to this...}
 
-The average response length and STTR statistics presented in Tables~\ref{tab:response-length} and~\ref{tab:sttr} are both calculated before any similarity scoring and ranking, and do not require annotation. This means that any predictive patterns observed there could be easily applied to new items before any scoring takes place. In Table~\ref{tab:param-response-distances}, I present similarly organized statistics for response scores. These scores are averages of response scores, which represent the \textit{distance} between an NNS test response and an NS model. Note that there is no column for the NNS sample here because the NS columns are calculated according to how they score that same NNS 70-response sample. Naturally, such figures would not be available for new items prior to scoring, but they also do not require annotation. By examining patterns here in comparison with those seen in the experiments that follow, we may find correlations that can guide the scoring of new items, however.\lk{return to this...}
-
-These scores average over all NNS test response scores---the response scores that are used to rank responses. Because my work is more interested in the ranking of responses than the scores, a given average in the table is not particularly useful. In combination, however, they give an indication of how skewed the scores are for each model and parameter setting. In all cases, the 50-response crowdsourced models do best at minimizing the distance between NNS test responses and the model. As seen in the experiments that follow, this is does not clearly correlate with better rankings, however.\lk{return to this}
+These scores average over all NNS test response scores---the response scores that are used to rank responses. Because my work is more interested in the ranking of responses than the scores, a given average in the table is not particularly useful. In combination, however, they give an indication of how skewed the scores are for each model and parameter setting. In all cases, the 50-response crowdsourced models do best at minimizing the distance between NNS test responses and the model. As seen in the experiments in Section~\ref{sec:exp-holistic}, these average scores may be predictive of my system's performance at holistic ranking, where the larger NS models provide better response rankings.
 
 
 %\begin{table}[htb!]
@@ -237,18 +242,20 @@ These scores average over all NNS test response scores---the response scores tha
 
 \section{Annotation features experiments}
 \label{sec:exp-annotations}
-In this section, I revisit the five annotation features discussed in Chapter~\ref{chap:annotation} to see how they correlate with the performance of my system. For a given feature, I use mean average precision (MAP) to see how well the system rankings separate the positively and negatively annotated responses. In other words, when calculating MAP for the \feat{core event} feature, a ``0'' annotation for \feat{core event} is treated as an error. I isolate these MAP scores for each setting within the \param{transitivity}, \param{targeting}, and \param{primacy} variables, as well as in total. I also compare across \param{term representations}. To contextualize these scores, I include MAP scores for the weighted annotation rankings (WAR) and BERT rankings. Note that the superior WAR MAP scores seen here are to be expected. First, the weights are based on the preference judgments of the same annotators who developed the annotation scheme. More importantly, the WAR is derived from weighting and combining the five feature annotations for each response, so precision in assessing any one of these features is inherently correlated to the WAR. In some sense, this means I am training and testing on the same data, but I believe these scores still provide valuable insight. The function of combining a response's five binary annotations into a single annotation score using weights is a form of lossy compression; the WAR MAP gives a sense of just how lossy this weighted compression function is in terms of recovering the annotations for the five individual features and across different item types. 
+In this section, I revisit the five annotation features discussed in Chapter~\ref{chap:annotation} to see how they correlate with the performance of my system. For a given feature, I use mean average precision (MAP) to see how well the system rankings separate the positively and negatively annotated responses. In other words, for the purposes of  calculating MAP for the \feat{core event} feature, a ``0'' annotation for \feat{core event} is treated as an error. I isolate these MAP scores for each setting within the \param{transitivity}, \param{targeting}, and \param{primacy} variables, as well as in total. I also compare across \param{term representations}. To contextualize these scores, I include MAP scores for the weighted annotation rankings (WAR) and SBERT rankings. Note that the superior WAR MAP scores seen here are to be expected. First, the weights are based on the preference judgments of the same annotators who developed the annotation scheme. More importantly, the WAR is derived from weighting and combining the five feature annotations for each response, so precision in assessing any one of these features is inherently correlated to the WAR. In some sense, this means I am training and testing on the same data, but I believe these scores still provide valuable insight. The function of combining a response's five binary annotations into a single annotation score using weights is a form of lossy compression; the WAR MAP gives a sense of just how lossy this weighted compression function is in terms of recovering the annotations for the five individual features and across different item types. 
 
 These experiments would be useful to anyone considering an approach to content analysis like mine. In an intelligent computer-assisted language learning (ICALL) game, for example, there may be times when \feat{core event} is the main concern, or others where \feat{answerhood} or another feature is most relevant. By isolating each annotation feature and examining how model sizes and term representations effect MAP---both overall and for individual variables, such as \param{intransitives} or \param{targeted} items---I observe a number of trends that would be helpful in designing an ICALL game that selects an optimal system configuration for handling each user response.
 
-I present here two tables for each of the five annotation features. For each feature, this first table presents MAP scores for models comprised of \param{crowdsourced} responses, showing both the 14-response and 50-response models. This table serves to examine whether the task of recognizing the feature is sensitive to differences in model size, and whether parameters like targeting or primacy interact with any such differences. The second table presents MAP scores for the \param{familiar} and \param{crowdsourced} NS models, using models of 14 responses each. This second table serves to compare the effectiveness of familiar and crowdsourced NS response models at recognizing the given annotation feature in an NNS response. Note that the first table covers both \param{primary} and \param{mixed} response models, but the second table covers only \param{mixed} response models (for both \param{familiar} and \param{crowdsourced} responses), because for some items, 14 is the maximum number of familiar responses available (including first and second responses). MAP differences between the crowdsourced 14-response models in each first table and corresponding second table owe to this difference. In all 10 tables, I use \textbf{bold} to indicate the highest term representation MAP \textit{within} each of the two models presented and \textit{\textbf{bold with italics}} to indicate the highest MAP \textit{between} the two models.
+I present here two tables for each of the five annotation features. For each feature, this first table presents MAP scores for models comprised of \param{crowdsourced} responses, showing both the 14-response and 50-response models. This table serves to examine whether the task of recognizing the feature is sensitive to differences in model size, and whether parameters like \param{targeting} or \param{primacy} interact with any such differences. The second table compares MAP scores for the \param{familiar} and \param{crowdsourced} NS models, using models of 14 responses each. Note that the first table covers both \param{primary} and \param{mixed} response models, but the second table covers only \param{mixed} response models (for both \param{familiar} and \param{crowdsourced} responses), because for some items, 14 is the maximum number of familiar responses available (including first and second responses). MAP differences between the crowdsourced 14-response models in each first table and corresponding second table owe to this difference. In all 10 tables, I use \textbf{bold} to indicate the highest term representation MAP \textit{within} each of the two models presented and \textit{\textbf{bold with italics}} to indicate the highest MAP \textit{between} the two models.
 
 Overall, a few trends stand out. First, both as a trend and a caveat, note that in many cases the relevant differences in MAP scores observed here are small, and may not always be statistically significant.
 %Within all 10 of the tables presented in this section, the maximum difference between any two MAP scores ranges between 0.08 and 0.24.
-The observations here are thus not intended to guide high stakes decisions, but as an indication of promising directions for future work, ideally with much more annotated data to confirm them.  Chief among these observations is the underperformance of unlabeled dependencies (xdh). In some cases, labeled dependencies (ldh) achieve the highest MAP, and in some cases dependents only (xdx) work best, but there are no cases in which unlabeled dependencies win. This suggests that future iterations of my system could safely eliminate the use of unlabeled dependencies for the sake of simplicity. The MAP scores also show that with only one exception, BERT underperforms the system. 
+The observations here are thus not intended to guide high stakes decisions, but as an indication of promising directions for future work, ideally with much more annotated data to confirm them.  Chief among these observations is the underperformance of unlabeled dependencies (\param{xdh}). In some cases, labeled dependencies (\param{ldh}) achieve the highest MAP, and in some cases dependents only (\param{xdx}) work best, but there are no cases in which unlabeled dependencies win. This suggests that future iterations of my system could safely eliminate the use of unlabeled dependencies for the sake of simplicity.
+
+The MAP scores also show that with only one exception, SBERT underperforms the system. 
 %It is worth noting, however, that no attempts were made to optimize BERT for this task, beyond the use of the two different size NS models.
-This shows that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. The MAP scores also show that \param{crowdsourced} models usually outperform \param{familiar} models. On the surface, this may seem counterintuitive, as familiar participants are expected to complete the PDT most faithfully. However, as seen in this chapter and Section~\ref{sec:holistic-scoring}, crowdsourced responses are more like NNS responses than are familiar responses. Crowdsourced participants are less motivated than familiar participants, and this manifests in a higher rate of lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
-Another salient pattern seen in all 10 tables is that MAP scores for intransitives are always the highest, and MAP scores for transitives are always higher than for ditransitives. In other words, as sentence complexity increases, there is a monotonic decrease in system performance. Because transitives and intransitives cannot simply be avoided, this trend suggests that an ICALL application or similar should carefully consider how to best optimize for more complex items, e.g., by selecting the best term representation.
+This means that with regard to recognizing custom annotation features, a custom pipeline based on dependency parsing and tf-idf can outperform newer, more sophisticated machine learning approaches.  Another notable trend seen here is that transitive items are often an exception; where intransitives and ditransitives see higher performance with a given model size or term representation, transitives frequently differ. Yet another observation is that with regard to NS model size, less is overwhelmingly more. For each of the five features, the total MAP (which covers all rankings for all items, provided by all available system configurations) is highest for the smaller model. In some cases, the larger model may be better for a particular item type or parameter setting, but the total MAP is always highest for the smaller model. The MAP scores also show that \param{crowdsourced} models usually outperform \param{familiar} models. On the surface, this may seem counterintuitive, as familiar participants are expected to complete the PDT most faithfully. However, as seen in this chapter and Section~\ref{sec:holistic-scoring}, crowdsourced responses are more like NNS responses than are familiar responses. Crowdsourced participants are less motivated than familiar participants, and this manifests in a higher rate of lazy or bad faith responses; this noise may simply better model NNS responses. Moreover, the familiar participants were all handpicked native English speakers, whereas the crowdsourced participants are anonymous, with no way of confirming that they are in fact native English speakers. It is possible that some ``NS'' responses come from non-native speakers, which could explain why crowdsourced models achieve higher MAP.
+Another salient pattern seen in all 10 tables is that MAP scores are highest for intransitives and lowest for ditransitives. In other words, as sentence complexity increases, there is a monotonic decrease in system performance. Because transitives and ditransitives cannot simply be avoided or transformed to intransitives, this trend suggests that an ICALL tool or similar application should carefully consider how to best optimize for more complex items, e.g., by selecting the best term representation, as this correlates with item complexity.
 
 \subsection{\feat{Core Event} experiments}
 \label{sec:map-core}
@@ -261,7 +268,7 @@ Another salient pattern seen in all 10 tables is that MAP scores for intransitiv
 \hline
  & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr   & \textit{\textbf{0.859}} & 0.856 & 0.854 & 0.865 & 0.835  & \textbf{0.855} & 0.854 & 0.852 & 0.865 & 0.831 \\ \hline
 Tran    & \textit{\textbf{0.737}} & 0.735 & 0.728 & 0.742 & 0.703   & \textbf{0.736} & 0.733 & 0.725 & 0.742 & 0.701 \\ \hline
@@ -275,7 +282,7 @@ Mix      & \textit{\textbf{0.753}} & 0.749 & 0.750 & 0.756 & 0.725  & \textbf{0.
 \hline
 Total 	 & \textit{\textbf{0.753}} & 0.751 & 0.748 & 0.756 & 0.724 	& \textbf{0.750} & 0.747 & 0.746 & 0.756 & 0.720 \\ \hline
 \end{tabular}
-\caption{\label{tab:core-map}Mean Average Precision (MAP) scores for the \feat{Core Event} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:core-map}Mean Average Precision (MAP) scores for the \feat{Core Event} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
@@ -283,7 +290,7 @@ Total 	 & \textit{\textbf{0.753}} & 0.751 & 0.748 & 0.756 & 0.724 	& \textbf{0.7
 
 \feat{Core event}, as discussed in Section~\ref{sec:scheme}, assesses whether a response captures the main action of the PDT item and requires that the event is linked to a subject (and an object or objects where necessary).
 
-Table~\ref{tab:core-map} presents \feat{Core event} MAP scores for the 14-response and 50-response crowdsourced models. These scores show that for assessing \feat{core event}, the smaller model, used with labeled dependencies is superior across the board. The 50-response model comes closest for transitives, but never outperforms the 14-response model. We can also observe here that the term representation setting is more relevant in the larger model, with \param{xdx} besting \param{ldh} in the case of ditransitives and untargeted items. NS responses to ditransitives and untargeted items tend to  be the least homogenous; they have higher type-to-token ratios \lk{xyz} than their counterparts. Moving from \param{ldh} to \param{xdx} representations results in a lower type to type-to-token ratio,\lk{xyz} so it is unsurprising that it improves performance for these items.
+Table~\ref{tab:core-map} presents \feat{Core event} MAP scores for the 14-response and 50-response crowdsourced models. These scores show that for assessing \feat{core event}, the smaller model, used with labeled dependencies is superior across the board. The 50-response model comes closest for transitives, but never outperforms the 14-response model. We can also observe here that the term representation setting is more relevant in the larger model, with \param{xdx} besting \param{ldh} in the case of ditransitives and untargeted items. Responses to ditransitives and untargeted items tend to  be the least homogenous; they have higher standardized type-to-token ratios than their counterparts (see Table~\ref{tab:sttr}). Moving from \param{ldh} to \param{xdx} representations results in a lower standardized type-to-token ratio (Table~\ref{tab:sttr}), so it is unsurprising that doing so improves performance for these items.
 
 %% CORE EVENT MAP - F14 & N14
 \begin{table}[htb!]
@@ -293,7 +300,7 @@ Table~\ref{tab:core-map} presents \feat{Core event} MAP scores for the 14-respon
 \hline
  & \multicolumn{5}{c||}{\param{Familiar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.859                   & 0.859 & \textit{\textbf{0.865}} & 0.865 & 0.838 & \textbf{0.857}          & 0.852 & 0.848                   & 0.865 & 0.833 \\ \hline
 Tran  & \textit{\textbf{0.740}} & 0.737 & 0.726                   & 0.742 & 0.703 & \textbf{0.738}          & 0.735 & 0.728                   & 0.742 & 0.702 \\ \hline
@@ -304,7 +311,7 @@ Untg  & 0.767                   & 0.764 & \textit{\textbf{0.769}} & 0.777 & 0.73
 \hline
 Total & 0.750                   & 0.748 & \textbf{0.751}          & 0.756 & 0.722 & \textit{\textbf{0.753}} & 0.749 & 0.750                   & 0.756 & 0.725 \\ \hline
 \end{tabular}
-\caption{\label{tab:core-fam-map}Mean Average Precision (MAP) scores for the \feat{Core Event} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:core-fam-map}Mean Average Precision (MAP) scores for the \feat{Core Event} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
@@ -327,7 +334,7 @@ Table~\ref{tab:core-fam-map} compares \feat{core event} MAP scores for \param{fa
 \hline
  & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.868 & 0.871 & \textit{\textbf{0.878}} & 0.881 & 0.869 & 0.866 & 0.868 & \textbf{0.874} & 0.881 & 0.868 \\ \hline
 Tran  & 0.816 & 0.819 & \textbf{0.846} & 0.845 & 0.838 & 0.818 & 0.823 & \textit{\textbf{0.851}} & 0.845 & 0.838 \\ \hline
@@ -341,12 +348,12 @@ Mix   & 0.835 & 0.838 & \textit{\textbf{0.857}} & 0.854 & 0.848 & 0.833 & 0.835 
 \hline
 Total & 0.836 & 0.839 & \textit{\textbf{0.855}} & 0.854 & 0.847 & 0.835 & 0.838 & \textbf{0.855} & 0.854 & 0.846 \\ \hline
 \end{tabular}
-\caption{\label{tab:answer-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:answer-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
 
-Table~\ref{tab:answer-map} presents \feat{Answerhood} MAP scores for the 14-response and 50-response crowdsourced models. The dependents-only (xdx) models outperform the others across the board here. We can also observe that unlabeled dependencies outperform labeled dependencies in every case. This would indicate that identifying a direct answer based on my similarity metrics is a relatively simple task that works best with the simplest representations. The scores also show that model size has little bearing here; in the interest of space, the total MAP scores are both shown rounded to 0.855, but the smaller model score is in fact 0.0005 higher.
+Table~\ref{tab:answer-map} presents \feat{Answerhood} MAP scores for the 14-response and 50-response crowdsourced models. The dependent-only (xdx) models outperform the others across the board here. We can also observe that unlabeled dependencies outperform labeled dependencies in every case. This would indicate that identifying a direct answer based on my similarity metrics is a relatively simple task that works best with the simplest representations. The scores also show that model size has little bearing here; overall, the smaller model's MAP is just 0.0005 higher.
 
 
 %% ANSWERHOOD MAP - F14 & N14
@@ -357,7 +364,7 @@ Table~\ref{tab:answer-map} presents \feat{Answerhood} MAP scores for the 14-resp
 \hline
  & \multicolumn{5}{c||}{\param{Familiar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.868 & 0.871 & \textit{\textbf{0.882}} & 0.881 & 0.868 & 0.869 & 0.873 & \textbf{0.878} & 0.881 & 0.870 \\ \hline
 Tran  & 0.824 & 0.826 & \textit{\textbf{0.852}} & 0.845 & 0.840 & 0.817 & 0.818 & \textbf{0.847} & 0.845 & 0.840 \\ \hline
@@ -368,7 +375,7 @@ Untg  & 0.889 & 0.892 & \textit{\textbf{0.904}} & 0.892 & 0.896 & 0.885 & 0.889 
 \hline
 Total & 0.837 & 0.840 & \textit{\textbf{0.860}} & 0.854 & 0.847 & 0.835 & 0.838 & \textbf{0.857} & 0.854 & 0.848 \\ \hline
 \end{tabular}
-\caption{\label{tab:answer-fam-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:answer-fam-map}Mean Average Precision (MAP) scores for the \feat{Answerhood} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
@@ -390,7 +397,7 @@ The \feat{Grammaticality} feature, as discussed in Section~\ref{sec:scheme}, ind
 \hline
  & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.868 & 0.870 & \textit{\textbf{0.872}} & 0.887 & 0.866 & 0.863 & 0.864 & \textbf{0.866} & 0.887 & 0.864 \\ \hline
 Tran  & 0.753 & 0.756 & \textbf{0.757} & 0.781 & 0.757 & 0.758 & 0.760 & \textit{\textbf{0.761}} & 0.781 & 0.757 \\ \hline
@@ -404,12 +411,12 @@ Mix   & 0.766 & 0.768 & \textit{\textbf{0.776}} & 0.788 & 0.774 & 0.765 & 0.768 
 \hline
 Total & 0.768 & 0.770 & \textit{\textbf{0.776}} & 0.788 & 0.772 & 0.767 & 0.769 & \textbf{0.775} & 0.788 & 0.771 \\ \hline
 \end{tabular}
-\caption{\label{tab:gramm-map}Mean Average Precision (MAP) scores for the \feat{Grammaticality} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:gramm-map}Mean Average Precision (MAP) scores for the \feat{Grammaticality} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
 
-Table~\ref{tab:gramm-map} presents \feat{Grammaticality} MAP scores for the 14-response and 50-response crowdsourced models. These scores show a slight but consistent preference for dependent-only (xdx) models, with labeled dependencies consistently producing the lowest MAP and unlabeled dependencies falling in the middle. The table also shows that the smaller, 14-response models outperform the larger, 50-response models, but these differences are very small. There is one exception to this pattern, with the larger models performing slightly better for transitives. Keeping in mind that in all cases, the heads and dependents within dependencies are lemmatized, these observations suggest that like \feat{Answerhood}, \feat{Grammaticality} is relatively simple to asses, requiring only a small ``bag of lemmas'' model.
+Table~\ref{tab:gramm-map} presents \feat{Grammaticality} MAP scores for the 14-response and 50-response crowdsourced models. These scores show a slight but consistent preference for dependent-only (\param{xdx}) models, with labeled dependencies consistently producing the lowest MAP and unlabeled dependencies falling in the middle. The table also shows that the smaller, 14-response models outperform the larger, 50-response models, but these differences are very small. There is one exception to this pattern, with the larger models performing slightly better for transitives. Keeping in mind that in all cases, the heads and dependents within dependencies are lemmatized, these observations suggest that like \feat{Answerhood}, \feat{Grammaticality} is relatively simple to asses, requiring only a small ``bag of lemmatized dependents'' model.
 
 
 %% GRAMMATICALITY MAP - F14 & N14
@@ -420,7 +427,7 @@ Table~\ref{tab:gramm-map} presents \feat{Grammaticality} MAP scores for the 14-r
 \hline
  & \multicolumn{5}{c||}{\param{Familiar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.863 & 0.864 & \textbf{0.873}          & 0.887 & 0.863 & 0.868 & 0.869 & \textit{\textbf{0.874}} & 0.887 & 0.869 \\ \hline
 Tran  & 0.760 & 0.759 & \textit{\textbf{0.762}} & 0.781 & 0.760 & 0.752 & 0.754 & \textbf{0.757}          & 0.781 & 0.758 \\ \hline
@@ -432,12 +439,13 @@ Untg  & 0.757 & 0.762 & \textit{\textbf{0.768}} & 0.776 & 0.764 & 0.756 & 0.759 
 Total & 0.767 & 0.769 & \textit{\textbf{0.778}} & 0.788 & 0.773 & 0.766 & 0.768 & \textbf{0.776}          & 0.788 & 0.774 \\ \hline
 \end{tabular}
 
-\caption{\label{tab:gramm-fam-map}Mean Average Precision (MAP) scores for the \feat{Grammaticality} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:gramm-fam-map}Mean Average Precision (MAP) scores for the \feat{Grammaticality} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
 
-Table~\ref{tab:gramm-fam-map} presents the \feat{Grammaticality} MAP scores for \param{familiar} and \param{crowdsourced} models. As before, the models here show a consistent preference for the dependent-only (xdx) term representation. The total MAP scores show that familiar models perform best overall. Transitives stand out again here, where the best familiar model score is approximately 0.005 higher than the best crowdsourced score, which is the largest such difference in the table;\lk{xyz: why is fam best for trans but not in-/ditrans?} for each intransitives and ditransitives, the crowdsourced models are higher by approximately 0.001 points. This suggests that in describing transitive events, familiar NSs behave more like NNSs than do crowdsourced NSs, at least with regard to grammar and grammatical errors. Participant motivation is mostly likely relevant again here.
+Table~\ref{tab:gramm-fam-map} presents the \feat{Grammaticality} MAP scores for \param{familiar} and \param{crowdsourced} models. As before, the models here show a consistent preference for the dependent-only (xdx) term representation. The total MAP scores show that familiar models perform best overall. Transitives stand out again here, where the best familiar model score is approximately 0.005 higher than the best crowdsourced score, which is the largest such difference in the table;for each intransitives and ditransitives, the crowdsourced models are higher by approximately 0.001 points. This suggests that in describing transitive events, familiar NSs behave more like NNSs than do crowdsourced NSs, at least with regard to grammar and grammatical errors. Participant motivation is the mostly likely factor here.
+%\lk{xyz: why is fam best for trans but not in-/ditrans?} 
 
 \subsection{\feat{Interpretability} experiments}
 \label{sec:map-interp}
@@ -452,7 +460,7 @@ Table~\ref{tab:gramm-fam-map} presents the \feat{Grammaticality} MAP scores for 
 \hline
  & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.932                   & 0.931 & \textit{\textbf{0.933}} & 0.930 & 0.922 & 0.928          & 0.927 & \textbf{0.933} & 0.930 & 0.923 \\
 \hline
@@ -475,7 +483,7 @@ Mix   & \textit{\textbf{0.849}} & 0.846 & 0.846                   & 0.818 & 0.83
 Total & \textit{\textbf{0.848}} & 0.845 & 0.846                   & 0.818 & 0.835 & \textbf{0.845} & 0.842 & \textbf{0.845}          & 0.818 & 0.833 \\
 \hline
 \end{tabular}
-\caption{\label{tab:interp-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:interp-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
@@ -491,7 +499,7 @@ Table~\ref{tab:interp-map} presents \feat{Interpretability} MAP scores for the 1
 \hline
  & \multicolumn{5}{c||}{\param{Familiar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.930          & 0.930 & \textit{\textbf{0.934}} & 0.930 & 0.923 & \textbf{0.933}          & 0.931 & 0.932          & 0.930 & 0.922 \\ \hline
 Tran  & \textbf{0.822} & 0.819 & 0.811                   & 0.803 & 0.805 & \textit{\textbf{0.826}} & 0.824 & 0.811          & 0.803 & 0.805 \\ \hline
@@ -502,7 +510,7 @@ Untg  & \textbf{0.858} & 0.857 & \textbf{0.858}          & 0.833 & 0.843 & \text
 \hline
 Total & \textbf{0.847} & 0.845 & \textbf{0.847}          & 0.818 & 0.837 & \textit{\textbf{0.849}} & 0.846 & 0.846          & 0.818 & 0.833 \\ \hline
 \end{tabular}
-\caption{\label{tab:interp-fam-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:interp-fam-map}Mean Average Precision (MAP) scores for the \feat{Interpretability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
@@ -527,7 +535,7 @@ Turning to comparisons of \param{familiar} and \param{crowdsourced} NS models sh
 \hline
  & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.852                   & 0.852 & \textit{\textbf{0.853}} & 0.866 & 0.840 & 0.849                   & 0.849          & \textbf{0.851} & 0.866 & 0.836 \\
 \hline
@@ -549,16 +557,16 @@ Mix   & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.80
 Total & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.808 & \textbf{0.823}          & 0.822          & 0.822          & 0.815 & 0.806 \\
 \hline
 \end{tabular}
-\caption{\label{tab:verif-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
+\caption{\label{tab:verif-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, primary NS models), and for the full set (Total).
 }
 \end{center}
 \end{table}
 
 
-As seen in Table~\ref{tab:verif-map}, for discriminating the \feat{verifiability} feature, the smaller 14-response models consistently outperform the 50-response models by a slim margin. This effect is greatest for \param{untargeted} and \param{mixed} settings. As compared to their counterparts (\param{targeted} and \param{primary} settings), these settings result in greater response distances from the NS models (see Table~\ref{tab:param-response-distances}). These are relatively less-constrained settings, both eliciting a wider variety of responses and potential noise, and such ``creative'' responses have a greater chance of appearing in larger models. This is supported by the fact that MAP differences between targeted and untargeted settings and primary and mixed settings appear greater for the 50-response models than the 14-response models. The results seen here show that the \feat{verifiability} feature is sensitive to this pattern across model sizes. 
+As seen in Table~\ref{tab:verif-map}, for discriminating the \feat{verifiability} feature, the smaller 14-response models consistently outperform the 50-response models by a slim margin. This effect is greatest for \param{untargeted} and \param{mixed} settings. As compared to their counterparts (\param{targeted} and \param{primary} settings, respectively), these settings result in greater response distances from the NS models (see Table~\ref{tab:param-response-distances}). These are relatively unconstrained settings, both eliciting a wider variety of responses and potential noise, and such outlier responses have a greater chance of appearing in larger models. This is supported by the fact that MAP differences between targeted and untargeted settings and primary and mixed settings appear greater for the 50-response models than the 14-response models. The results seen here show that the \feat{verifiability} feature is sensitive to this pattern across model sizes. 
 
-These results also show that the effect of term representation has a very small effect on discriminating for \feat{verifiability}. The effect is greatest, however, when comparing intransitive, transitive and ditransitive items. While intransitives and ditransitives show a slight preference for dependents-only representation, transitive items 
-work best with labeled dependencies (ldh), regardless of model size. Again, this indicates that NS and NNS behavior is most convergent in response to transitive items, allowing for a relatively granular representation. Transitives also stand out here because they result in the lowest MAP scores for \feat{verifiability}. \lk{XYZ: Why? Maybe fewer trans are `1' for verif; i.e., annotators strictest for trans} The reasons for this are not obvious, but it may be that the relatively clear and concrete nature of transitive PDT items means annotators behave more strictly when marking \feat{verifiability} for transitives than for intransitives or ditransitives.
+These results also show that term representation has a very small effect on discriminating for \feat{verifiability}. The effect is greatest, however, when comparing intransitive, transitive and ditransitive items. While intransitives and ditransitives show a slight preference for dependents-only term representation, transitive items 
+work best with labeled dependencies (ldh), regardless of model size. Again, this indicates that NS and NNS behavior is most convergent in response to transitive items, allowing for a relatively granular representation. Transitives also stand out here because they result in the lowest MAP scores for \feat{verifiability}. The reasons for this are not obvious, but it may be that the relatively clear and concrete nature of transitive PDT items means annotators behave more strictly when marking \feat{verifiability} for transitives than for intransitives or ditransitives.
 
 
 %% VERIFIABILITY MAP - F14 & N14
@@ -569,7 +577,7 @@ work best with labeled dependencies (ldh), regardless of model size. Again, this
 \hline
  & \multicolumn{5}{c||}{\param{Familiar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
 \hline
-    		& ldh	& xdh &	xdx & WAR	& BERT & ldh	& xdh &	xdx & WAR	& BERT \\ \hline
+    		& ldh	& xdh &	xdx & WAR	& SBERT & ldh	& xdh &	xdx & WAR	& SBERT \\ \hline
 \hline
 Intr  & 0.847                   & 0.847 & \textbf{0.852} & 0.866 & 0.836 & 0.852                   & 0.852 & \textit{\textbf{0.854}} & 0.866 & 0.843 \\ \hline
 Tran  & \textit{\textbf{0.808}} & 0.807 & 0.803          & 0.798 & 0.787 & \textbf{0.807}          & 0.807 & 0.802                   & 0.798 & 0.786 \\ \hline
@@ -580,7 +588,7 @@ Untg  & \textbf{0.824}          & 0.822 & 0.823          & 0.815 & 0.803 & \text
 \hline
 Total & 0.822                   & 0.822 & \textbf{0.823} & 0.815 & 0.808 & \textit{\textbf{0.825}} & 0.824 & 0.824                   & 0.815 & 0.808 \\ \hline
 \end{tabular}
-\caption{\label{tab:verif-fam-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and BERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
+\caption{\label{tab:verif-fam-map}Mean Average Precision (MAP) scores for the \feat{Verifiability} annotation feature, comparing \param{familiar} and crowdsourced (\param{Crowd}) responses. MAP is derived from various response rankings: the three system term representation rankings (labeled dependencies (ldh), unlabeled dependencies (xdh), and dependents only (xdx)), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, intransitive items, targeted items), and for the full set (Total). Note that all models represented here are \param{mixed} due to the small number of familiar participants.
 }
 \end{center}
 \end{table}
@@ -594,21 +602,21 @@ The \param{crowdsourced} 14-response models covered in Table~\ref{tab:verif-fam-
 \label{sec:exp-holistic}
 In this section I turn from the use of similarity scoring to discriminate annotations for individual features to the use of similarity scoring to approximate an ideal holistic ranking of NNS responses. These experiments rely on the weighted annotation ranking (WAR), which is based on the weighted annotation score (WAS) for each NNS response, as described in Section~\ref{sec:holistic-scoring}. While in many use cases it may be preferable to focus on specific features, the experiments here provide insight into the feasibility of using annotation-free, surface-level similarity measures to approximate a determination of response ``goodness'' based on human judgment.
 
-This section is broken into subsections for each parameter, where I compare the performance of different settings for that parameter. Ideally, this would allow me to identify which parameter settings work best and in which contexts (i.e., with which item types and in combination with which other parameter settings). Such trends could then suggest how to optimize my system for new items. Clear trends are not always evident here, however, and the observations in this section are presented in the hopes that they can guide future investigations, rather than for immediate application.
+This section is broken into subsections for each parameter, where I compare the performance of different settings for that parameter. Ideally, this would allow me to identify which parameter settings work best and in which contexts (i.e., with which item types and in combination with which other parameter settings). Such trends could then suggest how to optimize my system for new items. Clear, predictive trends are not always evident here, however, and the observations in this section are presented in the hopes that they can guide future investigations, rather than for immediate application.
 
-As before, I compare models of two different sizes in order to see the effects of sample size on performance. The smaller of the two models contains 14 NS responses per item, and the larger model contains 50 NS responses per item. My system uses these models as the basis of its tf-idf cosine similarity measure that is used to score each response and in turn rank the full set of 70 NNS responses. As a benchmark, I also use BERT with the same NS models to produce similarity scores and rank the NNS responses.
+As before, I compare models of two different sizes in order to see the effects of sample size on performance. The smaller of the two models contains 14 NS responses per item, and the larger model contains 50 NS responses per item. My system uses these models as the basis of its tf-idf cosine similarity measure that is used to score each response and in turn rank the full set of 70 NNS responses. As a benchmark, I also use SBERT with the same NS models to produce similarity scores and rank the NNS responses.
 
-The metric used throughout this section is Spearman's rank correlation coefficient, as implemented in the SciPy Python package \cite{2020scipy} and described in \citet{zwillinger1999crc}. I use this metric to assess how well each system (or BERT) ranking of the NNS responses correlates with the weighted annotation ranking (WAR).
+The metric used throughout this section is Spearman's rank correlation coefficient, as implemented in the SciPy Python package \cite{2020scipy} and described in \citet{zwillinger1999crc}. I use this metric to assess how well each system (or SBERT) ranking of the NNS responses correlates with the weighted annotation ranking (WAR).
 
-A caveat is in order here. A Spearman score is always accompanied by a p-value, which is a measure of statistical significance. The p-value gives some indication of the probability of achieving the correlation score under the null hypothesis; in other words, how likely is the observed correlation score (or a stronger one) if there is no real relationship between the two rankings? A long-standing tenet holds that p-values should be less than 0.05 to indicate statistical significance.\lk{cite} In recent years, the use of p-values and claims around them has been the subject of much debate, and the reliance on p-values in linguistic research has slipped from an unassailable orthodoxy to a point of contention.\lk{cite} For the results presented here, roughly half of p-values fall below 0.05, but many exceed it by varying degrees. This is largely a function of the relatively small size of the test sets (70 NNS responses); the SciPy authors note that p-values ``are not entirely reliable but are probably reasonable for datasets larger than 500 or so'' \cite{2020scipy}. Higher p-values also occur in cases where the scores underlying the rankings are heavily skewed. Many of the PDT items in this study exhibit a ceiling effect, where half or more of NNS responses receive perfect annotations. This results in an unevenly distributed weighted annotation ranking, with the perfect responses tied in rank. Tied ranks are also common among less-than-perfect responses. For example, it is common for NNS responses to receive positive annotations for all features except \feat{grammaticality}, and thus these responses share a weighted annotation rank, which also leads to skewed rankings and high p-values. Applying the annotation feature weights helps differentiate response scores, but with only five features, such ties are common. Moreover, skewedness is common in the system produced rankings as well, because it is common for NNSs to provide identical responses, especially in \param{targeted} PDT settings.
+A caveat is in order here. A Spearman score is always accompanied by a p-value, which is a measure of statistical significance. The p-value gives some indication of the probability of achieving the correlation score under the null hypothesis; in other words, how likely is the observed correlation (or a stronger one) if there is no real relationship between the two rankings? A long-standing tenet holds that p-values should be less than 0.05 to indicate statistical significance.\lk{cite} In recent years, the use of p-values and claims around them has been the subject of much debate, and the reliance on p-values in linguistic research has slipped from an unassailable orthodoxy to a point of contention.\lk{cite} For the results presented here, roughly half of p-values fall below 0.05, but many exceed it by varying degrees. This is largely a function of the relatively small size of the test sets (70 NNS responses); the SciPy authors note that p-values ``are not entirely reliable but are probably reasonable for datasets larger than 500 or so'' \cite{2020scipy}. Higher p-values also occur in cases where the scores underlying the rankings are heavily skewed. Many of the PDT items in this study exhibit a ceiling effect, where half or more of NNS responses receive perfect annotations. This results in an unevenly distributed weighted annotation ranking, with the perfect responses tied in rank. Tied ranks are also common among less-than-perfect responses. For example, it is common for NNS responses to receive positive annotations for all features except \feat{grammaticality}, and thus these responses share a weighted annotation rank, which leads to skewed rankings and high p-values. Applying the annotation feature weights helps differentiate response scores, but with only five features, such ties are common. Moreover, skewedness is common in the system produced rankings as well, because it is common for NNSs to provide identical responses, especially in \param{targeted} PDT settings.
 
-With regard to the analysis in this section, one could opt to handle this concern by omitting any results where the Spearman correlation p-value is above the 0.05 threshold. This leaves a patchwork of results that are unevenly distributed with regard to the various item types, parameter settings, and model sizes that I am interested in comparing, effectively complicating and limiting the analysis. Another option would be to point out and attempt to explain wherever results involve p-values above 0.05, but this is simply not practically feasible. I opt instead to avoid discussions or interpretations of p-values and the significance of Spearman correlations and instead present my findings here with the caveat that they may not always be statistically significant. They should not be relied upon for any immediate decision making. These findings are likely to indicate useful trends, but analysis with much larger datasets should be explored before making any determinations about the statistical significance of these results or the reliability and predictive power of trends seen here.
+With regard to the analysis in this section, one could opt to handle this concern by omitting any results where the Spearman correlation p-value is above the 0.05 threshold. This leaves a patchwork of results that are unevenly distributed with regard to the various item types, parameter settings, and model sizes that I am interested in comparing, effectively complicating and limiting the analysis. Another option would be to point out and attempt to explain wherever results involve p-values above 0.05, but this is not practically feasible. I opt instead to avoid presenting or interpreting p-values and the significance of Spearman correlations altogether and instead present my findings here with the caveat that they may not always be statistically significant. They should not be relied upon for any immediate decision making. These findings are likely to indicate useful trends, but analysis with much larger datasets should be explored before making any determinations about the statistical significance of these results or the reliability and predictive power of trends seen here.
 
 To help mitigate this fact, I report Spearman correlations not as, for example, a single mean for each setting within a parameter, but as a set of descriptive statistics including mean, median, minimum, maximum and standard deviation. These figures should give a better depiction of the shape of the results than a single mean score and thus better indicate potential trends and guide future research.
 
 \subsection{Transitivity experiments}
 \label{sec:exp-transitivity}
-Here I examine the performance of my ranking system when applied to items that are canonically either intransitive, transitive, or ditransitive. Unlike the other variables throughout this chapter, transitivity is not a parameter setting. Individual PDT items are assumed to fit predominately only one of the three transitivity types here. In other words, I cannot choose to process a PDT given item with any of the three transitivity settings. Rather, the experiments in this section examine my system's performance across three sets of 10 items each, representing intransitive, transitive and ditransitive events.
+Here I examine the performance of my ranking system when applied to items that are canonically either intransitive, transitive, or ditransitive. Unlike the other variables throughout this chapter, transitivity is not a parameter setting. Individual PDT items are assumed to fit predominately only one of the three transitivity types here. In other words, I cannot choose to process a given PDT item with any of the three transitivity settings. Rather, the experiments in this section examine my system's performance across three sets of 10 items each, representing intransitive, transitive and ditransitive events.
 
 
 \begin{table}[htb!]
@@ -619,7 +627,7 @@ Here I examine the performance of my ranking system when applied to items that a
 \hline
  & \multicolumn{2}{c||}{Intransitives} & \multicolumn{2}{c||}{Transitives} & \multicolumn{2}{c|}{Ditransitives} \\
 \hline
-		& System 	& BERT 		& System 	& BERT 		& System 	& BERT 		\\
+		& System 	& SBERT 		& System 	& SBERT 		& System 	& SBERT 		\\
 \hline
 \hline
 count 	& 120 		& 40 		& 120 		& 40 		& 120 		& 40		 \\
@@ -640,7 +648,7 @@ std dev & 0.228 	& 0.189		& 0.218 	& 0.134		& 0.198 	& 0.222	 \\
 \hline
  & \multicolumn{2}{c||}{Intransitives} & \multicolumn{2}{c||}{Transitives} & \multicolumn{2}{c|}{Ditransitives} \\
 \hline
-		& System 	& BERT 				& System 	& BERT 						& System 	& BERT \\
+		& System 	& SBERT 				& System 	& SBERT 						& System 	& SBERT \\
 \hline
 \hline
 count 	& 120 		& 40 				& 120 		& 40 						& 120 		& 40 	\\
@@ -656,7 +664,7 @@ max & \textit{\textbf{0.898}} & 0.881	& \textbf{0.778} & 0.771	 			& 0.708 	& \t
 std dev & 0.249 	& 0.172 			& 0.207 	& 0.135 					& 0.195 	& 0.200 \\
 \hline
 \end{tabular}
-\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 40 rankings (4 system configurations $\times$ 10 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:transitivity-results} Comparing Spearman rank correlation scores for \param{intransitive}, \param{transitive} and \param{ditransitive} PDT items, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 120 different rankings (12 system configurations $\times$ 10 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 40 rankings (4 system configurations $\times$ 10 items; SBERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
@@ -706,53 +714,73 @@ std dev & 0.249 	& 0.172 			& 0.207 	& 0.135 					& 0.195 	& 0.200 \\
 %\end{center}
 %\end{table}
 
-Sets of descriptive statistics for the Spearman rank correlation scores produced by my system and BERT using these models are presented in Table~\ref{tab:transitivity-results}. There are 10 items per type. Each item has a targeted and untargeted version, which are separate datasets. For each dataset, I sample both primary and mixed models. My system converts the response text to three different term representations (\param{ldh}, \param{xdh}, \param{xdx}). This results in 12 system configurations: 2 targeting settings $\times$ 2 primacy settings $\times$ 3 term representations. Using all 12 configurations results in 120 Spearman rank correlations per transitivity type. The system statistics presented in Table~\ref{tab:transitivity-results} cover these 120 scores. Because BERT operates on plain text and cannot make use of the term representation variable, it involves only four configurations, resulting in 40 Spearman scores per transitivity type.
+Sets of descriptive statistics for the Spearman rank correlation scores produced by my system and SBERT using these models are presented in Table~\ref{tab:transitivity-results}. There are 10 items per type. Each item has a targeted and untargeted version, which are separate datasets. For each dataset, I sample both primary and mixed models. My system converts the response text to three different term representations (\param{ldh}, \param{xdh}, \param{xdx}). This results in 12 system configurations: 2 targeting settings $\times$ 2 primacy settings $\times$ 3 term representations. Using all 12 configurations results in 120 Spearman rank correlations per transitivity type. The system statistics presented in Table~\ref{tab:transitivity-results} cover these 120 scores. Because SBERT operates on plain text and cannot make use of the term representation variable, it involves only four configurations, resulting in 40 Spearman scores per transitivity type.
 
-Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, BERT outperforms my system on the most important metrics here: mean and median Spearman scores. This is expected, as BERT is a powerful, highly developed, state-of-the-art approach to language modeling and sentence similarity and is trained on web-scale data. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but also has the advantage of preserving a high degree of transparency and explainability. This would suggest that BERT is relatively good at scoring and ranking responses in a way that correlates with the WAR (and thus with human annotation).
+Table~\ref{tab:transitivity-results} shows some notable patterns. In all cases, SBERT outperforms my system on the most important metrics here: mean and median Spearman scores. This is expected, as SBERT is a powerful, highly developed, state-of-the-art approach to language modeling and sentence similarity and is trained on much more data. My similarity measure is far less sophisticated and involves tools trained on much smaller datasets, but also has the advantage of preserving a high degree of transparency and explainability. This would suggest that SBERT is relatively good at scoring and ranking responses in a way that correlates with the WAR (and thus with human annotation).
 %Future iterations of this work would be wise then to rely on BERT for scoring and ranking, and back off to my system when more transparency is needed, such as when providing feedback.
 
-Notably, my system does reach a higher maximum Spearman score than BERT in all but one case. However, leveraging this fact for unseen and unannotated items would require consistently predicting cases in which system scores outperform BERT scores, and I have not uncovered any pattern that would enable this.
+Notably, my system does reach a higher maximum Spearman score than SBERT in all but one case. However, leveraging this fact for unseen and unannotated items would require consistently predicting cases in which system scores outperform SBERT scores, and I have not uncovered any pattern that would enable this.
 %\lk{WHY? what's going on there?}
 
 For both size models, my system performs best on intransitives, followed by transitives and then ditransitives. For intransitives, my system achieves its highest mean and median Spearman scores using the 14-response models. For transitives, the median is highest with the 14-response models, but the mean is highest with the 50-response models. For ditransitives, the mean and median are highest with the 50-response model. If we take standardized type-to-token ratio (STTR) as a metric of complexity (see Table~\ref{tab:sttr}), the observations here show a monotonic pattern in which more complex items are best handled with larger models. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
 %We may expect intransitives to be the simplest of these types, and ditransitives the most complex, because ditransitive verbs require more arguments. I examined type-to-token ratios (TTRs) for the words in NS models, and for the 50-response NS models, this pattern was shown to be true, as seen in Table~\ref{tab:sttr}. Combined with the TTRs,\lk{Let's revisit this with STTR} the performance observations above suggest a trend: where the responses can be expected to be relatively simple and constrained, my system performs better with a smaller sample, but where the responses are relatively varied, my system performs better with a larger sample. Future research could explore this curve by sampling a wider range of model sizes, ideally including models larger than 50 responses.
 
-Like my system, BERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, BERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT. \citet{papadimitriou2021multilingual} examine BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles in new sentences. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with BERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain BERT's higher performance on transitives. For ditransitives, BERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:response-length}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that the classifiers' ability to predict human judgments from the BERT sentence embeddings correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more. 
+Like my system, SBERT achieves its highest mean and median Spearman scores with the smaller model. For both size models, SBERT performs best on transitives, however, followed by intransitives and then ditransitives, which research suggests is an inherent feature of BERT architectures. \citet{papadimitriou2021multilingual} examine a BERT's accuracy in encoding nouns as either a subject or an object. BERT does not produce these labels, so the researchers used embeddings corresponding to the nouns derived from BERT sentence embeddings and used them to train classifiers to recognize these noun roles in new sentences. They found that BERT is highly accurate at the task overall, but least accurate at handling intransitive subjects; the most common errors being when the classifiers label these noun embeddings as objects. This is consistent with SBERT performance peaking on transitives in my study. The researchers found that BERT is more accurate with \textit{agent} role subjects than with \textit{experiencer} subjects. As the former are more consistently present in transitive items, this helps explain SBERT's higher performance on transitives. For ditransitives, SBERT's lower performance may be influenced by the increased complexity, but research suggests this is more directly related to sentence length, and ditransitive items, naturally, are the longest in my dataset, as they require more verb arguments (see Table~\ref{tab:response-length}). \citet{warstadt2019} used classifiers trained on a corpus of sentences with corresponding BERT output and human grammaticality judgments and found that the classifiers' ability to predict human judgments from the BERT sentence embeddings correlates strongly with sentence length, with a sharp drop appearing for sentences of 11 words or more. 
 
 \subsection{Targeting experiments}
 \label{sec:exp-targeting}
 
-Comparing Spearman rank correlations across the \param{targeting} parameter reveals that \param{targeted} settings consistently outperform \param{untargeted} settings, as shown in Table~\ref{tab:targeting-results}. That is, targeted settings allow my similarity-based ranking system to rank NNS responses in a way that better captures responses' ``overall goodness'' as represented by the weighted annotation rankings. Responses in \param{targeted} settings tend to be shorter and have lower standardized type-to-token ratios, as shown in Tables~\ref{tab:response-length} and~\ref{tab:sttr}; as seen with \param{transitivity}, these measures correlate with higher Spearman scores for \param{targeted} settings.
+Comparing Spearman rank correlations across the \param{targeting} parameter reveals that \param{targeted} settings consistently outperform \param{untargeted} settings, as shown in Table~\ref{tab:targeting-results}. That is, targeted settings allow my similarity-based ranking system to rank NNS responses in a way that better captures responses' overall quality as represented by the weighted annotation rankings. Responses in \param{targeted} settings tend to be shorter and have lower standardized type-to-token ratios, as shown in Tables~\ref{tab:response-length} and~\ref{tab:sttr}; as seen with \param{transitivity}, these measures correlate with higher Spearman scores for \param{targeted} settings.
 
-These results also show that BERT generally outperforms my system at approximating the desired holistic response rankings. There are exceptions---as seen in the table, my system achieves higher maximum Spearman scores with both size models. Upon examining these cases, I found no discernible pattern that could predict when the system score will exceed the BERT score, but it is possible a pattern would emerge with more data.
+These results also show that SBERT generally outperforms my system at approximating the desired holistic response rankings. There are exceptions---as seen in the table, my system achieves higher maximum Spearman scores with both size models. Upon examining these cases, I found no discernible pattern that could predict when the system score will exceed the SBERT score, but it is possible a pattern would emerge with more data.
 
-Comparing the results for the 14-response NS models and 50-response NS models here reveals that performance is consistently better with the 50-response models, both for my system and for BERT. For my system scores, if we compare the differences for \param{targeted} settings versus the differences for \param{untargeted} settings across these model sizes, Table~\ref{tab:targeting-results} shows that \param{targeted} settings benefit more from the increased model size than do \param{untargeted} settings. In fact, these mean and median differences for \param{targeted} settings are more than double the mean and median differences for \param{untargeted} settings. The ``signal'' here is a slight one; it may not be reliable or statistically significant, but given a larger dataset, future research should probe this finding. With more NS responses, one could try larger NS models to find the sizes that lead to optimal system performance for targeted settings and untargeted settings, which could inform design choices for applications relying on a system like mine.
+Comparing the results for the 14-response NS models and 50-response NS models here reveals that performance is consistently better with the 50-response models, both for my system and for SBERT. For my system scores, if we compare the differences for \param{targeted} settings versus the differences for \param{untargeted} settings across these model sizes, Table~\ref{tab:targeting-results} shows that \param{targeted} settings benefit more from the increased model size than do \param{untargeted} settings. In fact, these mean and median differences for \param{targeted} settings are more than double the mean and median differences for \param{untargeted} settings. The ``signal'' here is a slight one; it may not be reliable or statistically significant, but given a larger dataset, future research should probe this finding. With more NS responses, one could try larger NS models to find the sizes that lead to optimal system performance for targeted settings and untargeted settings, which could inform design choices for applications relying on a system like mine.
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l||l|l||l|l|}
+\begin{tabular}{|l||l|l||l|l|}
 \hline
-& \multicolumn{4}{c||}{NS model sample size = 14} & \multicolumn{4}{c|}{NS model sample size = 50} \\
+& \multicolumn{4}{c|}{NS model sample size = 14} \\
 \hline
- & \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c||}{Untargeted} & \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c|}{Untargeted} \\
+ & \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c|}{Untargeted} \\
 \hline
-	& System 		& BERT 		& System 	& BERT 								& System 		& BERT 						& System 		& BERT \\
+	& System 		& SBERT 		& System 	& SBERT \\
 \hline
-count 	& 180 		& 60 		& 180 		& 60 								& 180 			& 60 						& 180 			& 60 \\
+count 	& 180 		& 60 		& 180 		& 60 \\
 \hline
-mean 	& 0.380 	& \textit{\textbf{0.530}} 	& 0.300 	& \textbf{0.444} 	& 0.393 		& \textit{\textbf{0.550}} 	& 0.305 		& \textbf{0.469}  \\
+mean 	& 0.380 	& \textit{\textbf{0.530}} 	& 0.300 	& \textbf{0.444} \\
 \hline
-median 	& 0.369 	& \textit{\textbf{0.545}} 	& 0.314 	& \textbf{0.472} 	& 0.389 		& \textit{\textbf{0.564}} 	& 0.323			& \textbf{0.496} \\
+median 	& 0.369 	& \textit{\textbf{0.545}} 	& 0.314 	& \textbf{0.472} \\
 \hline
-min & -0.147 	& \textbf{-0.138} & -0.181 	& \textit{\textbf{-0.107}} 			& \textbf{-0.048} & -0.090					& -0.185 		& \textit{\textbf{0.132}} \\
+min & -0.147 	& \textbf{-0.138} & -0.181 	& \textit{\textbf{-0.107}} \\
 \hline
-max 	& 0.840 	& \textbf{0.879} 	& \textit{\textbf{0.900}}	& 0.881 	& 0.872 		& \textbf{0.881}			& \textit{\textbf{0.898}} 	& 0.880 \\
+max 	& 0.840 	& \textbf{0.879} 	& \textit{\textbf{0.900}}	& 0.881 \\
 \hline
-std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 						& 0.234 		& 0.173						& 0.208 		& 0.172 \\
+std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 \\
+\hline
+\multicolumn{5}{c}{} \\
+\hline
+& \multicolumn{4}{c|}{NS model sample size = 50} \\
+\hline
+& \multicolumn{2}{c||}{Targeted} & \multicolumn{2}{c|}{Untargeted} \\
+\hline
+		& System 		& SBERT 						& System 		& SBERT \\
+\hline
+count	& 180 			& 60 						& 180 			& 60 \\
+\hline
+mean 	& 0.393 		& \textit{\textbf{0.550}} 	& 0.305 		& \textbf{0.469}  \\
+\hline
+median 	& 0.389 		& \textit{\textbf{0.564}} 	& 0.323			& \textbf{0.496} \\
+\hline
+min 	& \textbf{-0.048} & -0.090					& -0.185 		& \textit{\textbf{0.132}} \\
+\hline
+max 	& 0.872 		& \textbf{0.881}			& \textit{\textbf{0.898}} 	& 0.880 \\
+\hline
+std dev 				& 0.234 		& 0.173		& 0.208 		& 0.172 \\
 \hline
 \end{tabular}
-\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{Targeted} and \param{Untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{Targeted} and \param{Untargeted} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 60 rankings (2 system configurations $\times$ 30 items; SBERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
@@ -813,7 +841,7 @@ std dev 	& 0.241 	& 0.192 	& 0.204 	& 0.191 						& 0.234 		& 0.173						& 0.208
  \hline
  & \multicolumn{2}{c||}{\param{Familiar} NS} & \multicolumn{2}{c|}{\param{Crowd} NS} \\
 \hline
-		& System 			& BERT 						& System 			& BERT 				\\
+		& System 			& SBERT 						& System 			& SBERT 				\\
 \hline
 \hline
 count 	& 180 				& 60 						& 180 				& 60 				\\
@@ -829,16 +857,16 @@ max & \textit{\textbf{0.896}} & 0.880 					& 0.875 			& \textbf{0.879} 	\\
 std dev & 0.217 			& 0.173 					& 0.224 			& 0.185 			\\
 \hline
 \end{tabular}
-\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} NS models contain only responses from participants \textit{familiar} to the researcher and \param{Crowd} NS models contain only responses from crowdsourced participants. Results are shown using NS models of 14 responses; note the models used here are \param{mixed} (containing first and second responses; see Section~\ref{sec:exp-primacy}) due to the sparsity of \param{familiar} data. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:familiarity-results} Comparing Spearman rank correlation scores where \param{Familiar} NS models contain only responses from participants \textit{familiar} to the researcher and \param{Crowd} NS models contain only responses from crowdsourced participants. Results are shown using NS models of 14 responses; note the models used here are \param{mixed} (containing first and second responses; see Section~\ref{sec:exp-primacy}) due to the sparsity of \param{familiar} data. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 60 rankings (2 system configurations $\times$ 30 items; SBERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
 \end{table}
 
 
-I used the limited amount of \param{familiar} NS data available to compare system performance when using \param{familiar} versus \param{crowdsourced} models. The \param{familiar} and \param{crowdsourced} models discussed here are all \param{mixed} (first and second responses), because too few \param{familiar} responses are available for adequate \param{primary} response models. The results, presented in Table~\ref{tab:familiarity-results}, show no practical difference between \param{familiar} NS models and \param{crowdsourced} models when it comes to system performance. The mean Spearman score is slightly higher for the \param{crowdsourced} NS model, but the median Spearman score is slightly higher for the \param{familiar} NS model. Future work should collect more \param{familiar} responses in order to explore whether this pattern holds for larger model sizes or not. If there are differences, it may be possible to pinpoint the optimal model size depending on whether the available NS responses come from \param{familiar} or \param{crowdsourced} NSs.
+I used the limited amount of \param{familiar} NS data available to compare system performance when using \param{familiar} versus \param{crowdsourced} models. The \param{familiar} and \param{crowdsourced} models discussed here are all \param{mixed} (first and second responses), because too few \param{familiar} responses are available for adequate \param{primary} response models. The results, presented in Table~\ref{tab:familiarity-results}, show no practical difference between \param{familiar} NS models and \param{crowdsourced} NS models when it comes to system performance. The mean Spearman score is slightly higher for the \param{crowdsourced} NS model, but the median Spearman score is slightly higher for the \param{familiar} NS model. Future work should collect more \param{familiar} responses in order to explore whether this pattern holds for larger model sizes or not. If there are differences, it may be possible to pinpoint the optimal model size depending on whether the available NS responses come from \param{familiar} or \param{crowdsourced} NSs.
 
-BERT performance differs here in that it is clearly better for the \param{familiar} models than the \param{crowdsourced} models. Standardized type-to-token ratio may be informative here. For the NNS test sets, the mean STTR is 0.505, which is closer to that of the \param{familiar} models (0.576) than that of the \param{crowdsourced} models (0.652; Table~\ref{tab:sttr}). This suggests that BERT is more sensitive than my system to differences in complexity between the NS model and NNS test sample.
+SBERT performance differs here in that it is clearly better for the \param{familiar} models than the \param{crowdsourced} models. Standardized type-to-token ratio may be informative here. For the NNS test sets, the mean STTR is 0.505, which is closer to that of the \param{familiar} models (0.576) than that of the \param{crowdsourced} models (0.652; Table~\ref{tab:sttr}). This suggests that SBERT is more sensitive than my system to differences in complexity between the NS model and NNS test sample.
 
 
 
@@ -876,43 +904,63 @@ BERT performance differs here in that it is clearly better for the \param{famili
 
 \subsection{Primacy experiments}
 \label{sec:exp-primacy}
-I also compared how well my system approximates the weighted annotation ranking when using models comprised of NSs' first responses (\param{primary} models) versus models comprised of a mix of NSs' first and second responses (\param{mixed} models). Added due to the findings during the pilot study (see Chapter~\ref{chap:pilot}), I expected noticeably different performance from these two settings. The results, presented in Table~\ref{tab:primacy-results}, show that the parameter has less of an impact than I expected. For the 50-response models, the best setting is unclear: the mean Spearman score is slightly higher for the \param{primary} setting, but the median Spearman score is slightly higher for the \param{mixed} setting. For the 14-response models, the mean and median Spearman scores are both slightly higher for the \param{mixed} setting. These differences are likely too small to claim statistical significance, but it is reasonable that at smaller sample sizes, performance is improved by including secondary responses, as in the \param{mixed} models. These secondary responses elicit greater variety, as reflected in standardized type-to-token ratios (Table~\ref{tab:sttr}).
+I also compared how well my system approximates the weighted annotation ranking when using models comprised of NSs' first responses (\param{primary} models) versus models comprised of a mix of NSs' first and second responses (\param{mixed} models). Added due to the findings during the pilot study (see Chapter~\ref{chap:pilot}), I expected noticeably different performance from these two settings. The results, presented in Table~\ref{tab:primacy-results}, show that the parameter has little impact. For the 50-response models, the best setting is unclear: the mean Spearman score is slightly higher for the \param{primary} setting, but the median Spearman score is slightly higher for the \param{mixed} setting. For the 14-response models, the mean and median Spearman scores are both slightly higher for the \param{mixed} setting. These differences are likely too small to claim statistical significance, but it is reasonable that at smaller sample sizes, performance is improved by including secondary responses, as in the \param{mixed} models. These secondary responses elicit greater variety, as reflected in standardized type-to-token ratios (Table~\ref{tab:sttr}).
 
 
 \begin{table}[htb!]
 \begin{center}
-\begin{tabular}{|l||l|l||l|l||l|l||l|l|}
+\begin{tabular}{|l||l|l||l|l|}
 \hline
- & \multicolumn{4}{c||}{NS model sample size = 14} & \multicolumn{4}{c|}{NS model sample size = 50} \\
+ & \multicolumn{4}{c|}{NS model sample size = 14} \\
  \hline
- & \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c||}{Mixed} & \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c|}{Mixed} \\
+ & \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c|}{Mixed} \\
 \hline
-			& System 		& BERT 		& System 	& BERT 						& System 		& BERT 				& System 			& BERT \\
+			& System 		& SBERT 		& System 	& SBERT \\
 \hline
 \hline
-count 		& 180 			& 60 		& 180 		& 60 						& 180 			& 60 				& 180 				& 60 \\
+count 		& 180 			& 60 		& 180 		& 60 \\
 \hline
-mean 		& 0.339 & \textit{\textbf{0.493}} 	& 0.340 	& \textbf{0.481} 	& 0.354 	& \textit{\textbf{0.514}} 	& 0.344 	& \textbf{0.505} \\
+mean 		& 0.339 & \textit{\textbf{0.493}} 	& 0.340 	& \textbf{0.481} \\
 \hline
-median 	& 0.326 & \textit{\textbf{0.517}} & 0.334 	& \textbf{0.500}  			& 0.345 	& \textit{\textbf{0.532}} 	& 0.350 	& \textbf{0.518}  \\
+median 	& 0.326 & \textit{\textbf{0.517}} & 0.334 	& \textbf{0.500} \\
 \hline
-min 	& -0.181 & \textbf{-0.138} 		& -0.158 	& \textit{\textbf{-0.125}}  & -0.185 	& \textbf{-0.090} 		& -0.147 		& \textit{\textbf{0.049}}  \\
+min 	& -0.181 & \textbf{-0.138} 		& -0.158 	& \textit{\textbf{-0.125}} \\
 \hline
-max & \textbf{0.875} & 0.881 & \textit{\textbf{0.900}} & 0.879 					& \textit{\textbf{0.898}} & 0.880 	& \textbf{0.894} 	& 0.881 \\
+max & \textbf{0.875} & 0.881 & \textit{\textbf{0.900}} & 0.879 \\
 \hline
-std dev & 0.224 			& 0.207 	& 0.230 	& 0.185 					& 0.226 	& 0.186 					& 0.226 		& 0.168 \\
+std dev & 0.224 			& 0.207 	& 0.230 	& 0.185 \\
+\hline
+\multicolumn{5}{c}{} \\
+\hline
+& \multicolumn{4}{c|}{NS model sample size = 50} \\
+\hline
+& \multicolumn{2}{c||}{Primary} & \multicolumn{2}{c|}{Mixed} \\
+\hline
+ 			& System 		& SBERT 				& System 			& SBERT \\
+\hline
+count 		& 180 			& 60 				& 180 				& 60 \\
+\hline
+mean 		& 0.354 	& \textit{\textbf{0.514}} 	& 0.344 	& \textbf{0.505} \\
+\hline
+median  	& 0.345 	& \textit{\textbf{0.532}} 	& 0.350 	& \textbf{0.518}  \\
+\hline
+min  		& -0.185 	& \textbf{-0.090} 		& -0.147 		& \textit{\textbf{0.049}}  \\
+\hline
+max 		& \textit{\textbf{0.898}} & 0.880 	& \textbf{0.894} 	& 0.881 \\
+\hline
+std dev 	& 0.226 	& 0.186 					& 0.226 		& 0.168 \\
 \hline
 \end{tabular}
-\caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain only first responses from NSs and \param{mixed} models contain an equal mix of first and second responses from NSs. Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 60 rankings (2 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:primacy-results} Comparing Spearman rank correlation scores where \param{primary} models contain only first responses from NSs and \param{mixed} models contain an equal mix of first and second responses from NSs. Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 60 rankings (2 system configurations $\times$ 30 items; SBERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
 \end{table}
 
 
-Examining this parameter across the two NS model sizes, it is clear that the 50-response model always results in better system performance than the 14-response model, regardless of the \param{primary} or \param{mixed} setting. The mean and median Spearman scores suggest that this increase in performance is greater for the \param{primary} setting than for the \param{mixed} setting. This is unsurprising; if increasing variety (to some extent) in the NS model can improve performance, the more constrained \param{primary} setting should benefit more from an increased sample size than should the (already relatively varied) \param{mixed} setting. More NS responses would be needed to fully explore this curve and establish statistical significance. The \param{mixed} models here all contain half primary responses and half secondary responses. This default 50-50 mix is unlikely to be optimal, and with enough data, it would even be possible to determine exactly how many primary and secondary responses to include when sampling NS models for new PDT items in order to optimize system performance.
+Examining this parameter across the two NS model sizes, it is clear that the 50-response model always results in better system performance than the 14-response model, regardless of the \param{primary} or \param{mixed} setting. The mean and median Spearman scores show that this increase in performance is greater for the \param{primary} setting than for the \param{mixed} setting. This is unsurprising; if increasing variety (to some extent) in the NS model can improve performance, the more constrained \param{primary} setting should benefit more from an increased sample size than should the (already relatively varied) \param{mixed} setting. More NS responses would be needed to fully explore this curve and establish statistical significance. The \param{mixed} models here all contain half primary responses and half secondary responses. This default 50-50 mix is unlikely to be optimal, and with enough data, it would even be possible to determine exactly how many primary and secondary responses to include when sampling NS models for new PDT items in order to optimize system performance.
 
-As seen in the other holistic experiments, BERT performance here generally exceeds system performance; given access to the same NS response models, BERT's similarity measures result in rankings that better approximate the weighted annotation rankings. My system does achieve higher maximum Spearman scores, but with no clear pattern to predict such cases, these higher maximums are not useful.
+As seen in the other holistic experiments, SBERT performance here generally exceeds system performance; given access to the same NS response models, SBERT's similarity measures result in rankings that better approximate the weighted annotation rankings. My system does achieve higher maximum Spearman scores, but with no clear pattern to predict such cases, these higher maximums are not useful.
 
 %
 %\begin{table}[htb!]
@@ -957,14 +1005,66 @@ As seen in the other holistic experiments, BERT performance here generally excee
 %
 
 
+\subsection{Term representation experiments}
+\label{sec:exp-term-reps}
+The current system allows for different \textit{term representations}, which are variations on syntactic dependencies. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching (see Table~\ref{tab:dist-ranked-parameters}). In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (\param{ldh}), \textit{dependent-head} only (\param{xdh}), and \textit{dependent} only (\param{xdx}). In other words, my system uses a ``bag of terms'' approach, where the bags contain either labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}) or words (\param{xdx}). The labeled and unlabeled dependencies were the top performers in my previous work, and the \param{xdx} format is included as a kind of baseline approximating a bag of words approach, although, as seen throughout this chapter, \param{xdx} models are among the top performers in many cases.
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||l|l|l||l|}
+\hline
+ & \multicolumn{4}{c|}{NS model sample size = 14} \\
+\hline
+			& \param{ldh} 	& \param{xdh} 			& \param{xdx} 		& SBERT \\
+\hline
+\hline
+count 			& 120 		& 120 					& 120 				& 120 \\
+\hline
+mean 			& 0.333 	& 0.336 			& \textbf{0.351} 	& \textit{\textbf{0.487}} \\
+\hline
+median 			& 0.318 	& \textbf{0.344} 		& 0.330 		& \textit{\textbf{0.507}} \\
+\hline
+min & \textit{\textbf{-0.108}} 	& -0.181 				& -0.158 	& 	-0.138 \\
+\hline
+max 			& 0.871 	& 0.875 & \textit{\textbf{0.900}} 			& 0.881 \\
+\hline
+std dev 		& 0.223 	& 0.227 				& 0.231 			& 0.196 \\
+\hline
+\multicolumn{5}{c}{} \\
+\hline
+ & \multicolumn{4}{c|}{NS model sample size = 50} \\
+\hline
+& \param{ldh} & \param{xdh} & \param{xdx} & SBERT \\
+\hline
+\hline
+count 	& 120 			& 120 				& 120 					& 120 \\
+\hline
+mean & \textbf{0.350} 	& 0.349 			& 0.348 			& \textit{\textbf{0.509}} \\
+\hline
+median 	& 0.364 		& \textbf{0.374} 	& 0.331 			& \textit{\textbf{0.523}} \\
+\hline
+min 	& -0.147 		& -0.185 			& \textit{\textbf{-0.062}} & -0.090 \\
+\hline
+max 	& 0.892 		& 0.893 			& \textit{\textbf{0.898}} 		& 0.881 \\
+\hline
+std dev & 0.229 		& 0.236 			& 0.213 				& 0.177 \\
+\hline
+\end{tabular}
+\caption{\label{tab:termrep-results} Comparing Spearman rank correlation scores where system configurations use different term representations: \param{ldh} (labeled dependencies), \param{xdh} (unlabeled dependencies), or \param{xdx} (dependents only; i.e., \textit{words}). Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} and \textit{SBERT} column represents 120 different rankings (4 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. 
+%%% 4/16/21 LK OK
+}
+\end{center}
+\end{table}
+
+The results in Table~\ref{tab:termrep-results} show that regardless of term representation, performance is best with the 50-response NS models. This difference is greatest for the \param{ldh} models and smallest for the \param{xdx} models. This makes sense, given that the \param{ldh} representations are the most complex and \param{xdx} representations are least complex, because we can expect the simpler \param{xdx} models to become ``saturated'' with relevant NNS response terms at smaller sample sizes as compared to \param{ldh} models. In Table~\ref{tab:sttr}, this is reflected in standardized type-to-token ratios. For the crowdsourced models, the greatest difference in STTR is seen when moving from the \param{ldh} 14-response models to 50-response models. For the \param{xdh} representation, the two sample sizes have nearly identical STTRs, and for the \param{xdx} representation, the 14-response model has the highest STTR. This suggests the optimal NS model size is correlated with the complexity. Considering Table~\ref{tab:sttr}, it appears that STTRs for the simpler \param{xdh} and \param{xdx}  representations likely peak somewhere between the 14-response sample and 50-response sample, but \param{ldh} samples may see increased STTR for samples larger than 50 responses.
+
+With more NS responses, future work could form larger samples and determine the size at which STTR reaches its maximum for \param{ldh} representations. The same could be done for \param{xdh} and \param{xdx} term representations as well. With such a ``map'' of the relationship between STTR and sample size for NS models, one could better explore the correlations between system performance and term representations across sample sizes. For processing new PDT items, this would make it possible to choose the optimal term representation based on the number of available NS responses.
+
 
 \subsection{Term normalization experiments}
 \label{sec:exp-term-norm}
 
-In my pipeline, the NS model for each PDT item is comprised of some number of NS responses.  The length of these responses can vary; some valid responses contain only one or two words\footnote{Participants were instructed to provide complete sentences, but incomplete sentences were still judged valid where appropriate; see Chapter~\ref{chap:data} and the Annotation Guide in Appendix~\ref{appendix:annotation_guide}.}, while the longest perfectly annotated responses top out at around 15 words and some less-than-perfect responses exceed 30 words. These longer responses are relatively uncommon, but understanding their impact on a model is an important step in optimizing my response rating process. So far, I have treated each NS model as a flat ``bag of terms'' in which each term (cf. \textit{dependency}; see Section~\ref{sec:response-rep}) contributes equally, meaning longer responses carry more weight in the model. This has the potential to introduce noise. 
-
-My hypothesis is that system performance should improve by using NS models where each term token is re-weighted by $1/\textit{n}$ before it is added to the model, where \textit{n} is the number of term tokens in the response containing the term token. In other words, I believe dependencies should be re-weighted to ensure that every NS \textit{response}---not \textit{term}---contributes equal weight to the model. The rationale here is simple. Every response used in the NS model is assumed to contain the information that is crucial for satisfying the PDT prompt, and the number of terms conveying this information is roughly equivalent from one response to another. Thus, as the number of terms in a response increases (above some minimum number), the likelihood that any given term in that response is crucial decreases.
-
+In my pipeline, the NS model for each PDT item is comprised of some number of NS responses.  The length of these responses can vary; some valid responses contain only one or two words\footnote{Participants were instructed to provide complete sentences, but incomplete sentences were still judged valid where appropriate; see Chapter~\ref{chap:data} and the Annotation Guide in Appendix~\ref{appendix:annotation_guide}.}, while the longest perfectly annotated responses top out at around 15 words and some less-than-perfect responses exceed 30 words. Understanding the impact of response lengths on a model is an important step in optimizing my response rating process. So far, I have treated each NS model as a flat ``bag of terms'' in which each term (roughly, \textit{dependency}; see Sections~\ref{sec:response-rep} and~\ref{sec:exp-term-reps}) contributes equally, meaning longer responses carry more weight than shorter responses in the model. This has the potential to introduce noise. 
 
 \begin{table}[htb!]
 \begin{center}
@@ -1009,24 +1109,10 @@ root(sing, ROOT) & root(sing, ROOT) & 0.175 & 0.143 \\
 \end{center}
 \end{table}
 
+My hypothesis is that system performance should improve by using NS models where each term token is re-weighted by $1/\textit{n}$ before it is added to the model, where \textit{n} is the number of term tokens in the response containing the term token. In other words, I believe dependencies should be re-weighted to ensure that every NS \textit{response}---not \textit{term}---contributes equal weight to the model. The rationale here is simple. Every response used in the NS model is assumed to contain the information that is crucial for satisfying the PDT prompt, and the number of terms conveying this information is roughly equivalent from one response to another. Thus, as the number of terms in a response increases (above some minimum number), the likelihood that any given term in that response is crucial decreases.
+
 This is illustrated by the responses in Table~\ref{tab:normalize-responses-deps}. If we take these two responses to constitute one NS model, Response A contributes four dependencies, each of which is necessary to satisfy the five annotated features and contributes meaningfully to the model. Response B, however, contributes 10 dependencies, some of which, like \textit{amod(purple, dress)}, add non-critical detail. In a non-normalized setting, this dependency constitutes one out of a total 14 dependencies in the NS model, approximately 0.071. In a normalized setting, however, this dependency appears as zero of four (0.0) dependencies in Response A, and one of 10 (0.1) in Response B, making it 0.05 of the overall model (0.1 divided by two responses). This should have the effect of making extraneous information in the model less impactful on response ratings.
 
-Taking this example further, consider the dependency \textit{nsubj(girl, sing)}, also from Table~\ref{tab:normalize-responses-deps}. In the non-normalized setting, this dependency appears as two out of a total 14 dependencies, or 0.143 of the NS model. In the normalized setting, the dependency appears as one out of four (0.25) dependencies in Response A, and one out of 10 (0.1) dependencies in Response B, equating to 0.175 of the NS model (0.35 divided by two responses). Because this dependency is critical, raising its weight from 0.143 to 0.175 should have a positive impact on system performance; NNS responses containing the dependency should rise in the rankings relative to those without it. 
-
-To test my hypothesis, I compared the performance of normalized and non-normalized models. This followed my standard design of ranking NNS responses by their system scores, then comparing this ranking with the weighted annotation ranking using Spearman rank correlation. I isolate this variable as before: for all system configurations, I generate a Spearman score. Then I obtain an average score for all normalized configurations and an average score for all non-normalized configurations and compare the two.
-
-Such normalization can be sensitive to the effects of size\lk{XYZ: Citation?}, so I conducted two experiments: one in which each NS model contains a sample 50 responses, and one in which each model contains 14 responses.
-
-%This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
-
-%
-%To account for this and examine whether or not it poses a problem, I conducted experiments in which each \textit{response}, not each \textit{dependency}, contributes equally to the XGS. This meant simply normalizing for the length of the response by applying a weight to each dependency token as it was added to the XGS, where the weight is equal to 1 divided by the total number of dependencies in the response. The responses were then ranked by these scores, and Spearman's rank correlation coefficient (``Spearman'') was used to compare the ranking against the ``true'' GS (TGS), which is the result of ranking the responses using the weighted annotations (discussed in Chapter~\ref{chap:annotation}). This experiment was conducted with the largest XGS (\textit{all NS responses}) and the smallest XGS (\textit{all familiar NS responses}) to ensure that the effect of normalization is consistent. \lk{Get avg \# responses for All NS vs Familiar NS} This process was repeated for the same data sets without the normalization; the Spearman scores for the normalized and non-normalized GSs were compared.
-
-The results of this experiment are shown in Table~\ref{tab:term-norm-results}. The comparisons show very little difference in the correlations, with only one of the 12 experiments showing a slightly stronger correlation for the normalized model. The simplest explanation for this is the fact that longer responses with extraneous information are relatively uncommon, so we can expect this normalization to have a low impact.
-%\lk{XYZ. For different test responses, find some examples where the non-normalized config is rated/ranked higher than in the normalized config?}
-\lk{XYZ. Add examples}
-
-Because the non-normalized GSs outperform their normalized counterparts, and for the sake of simplicity, this parameter was not adopted in the other experiments discussed in this chapter; only non-normalized configurations were used in all other experiments.
 \begin{table}[htb!]
 \begin{center}
 %\begin{tabular}{|l||p{0.12\textwidth}|p{0.12\textwidth}|p{0.12\textwidth}||l|l|l|}
@@ -1034,7 +1120,7 @@ Because the non-normalized GSs outperform their normalized counterparts, and for
 \hline
  & \multicolumn{3}{c||}{NS model sample size = 14} & \multicolumn{3}{c|}{NS model sample size = 50} \\
 \hline
-		& Non-n. 		& Norm 			& BERT 								& Non-n. 			& Norm 				& BERT 		\\
+		& Non-n. 		& Norm 			& SBERT 								& Non-n. 			& Norm 				& SBERT 		\\
 \hline
 \hline
 count 	& 360 			& 360 			& 120 								& 360 				& 360 				& 120		 \\
@@ -1050,67 +1136,36 @@ max	& \textit{\textbf{0.900}} & 0.891 	& 0.881 							& 0.898 	& \textit{\textbf
 std dev & 0.226 		& 0.227 		& 0.196 							& 0.225 		& 0.230 				& 0.177		 \\
 \hline
 \end{tabular}
-\caption{\label{tab:term-norm-results} Comparing Spearman rank correlation scores where all dependencies (terms) in \textit{Non-n(ormalized)} NS models carry equal weight, and all dependencies in \textit{Norm(alized)} NS models have their scores normalized proportionally to the length of the parent response. Results are shown using NS models of 14 responses and 50 responses. Each \textit{Norm(alized)} and \textit{Non-n(ormalized)} column represents 360 different rankings (12 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{BERT} column represents 120 rankings (4 system configurations $\times$ 30 items; BERT operates on plain text, so the \param{term representation} parameter does not apply).
+\caption{\label{tab:term-norm-results} Comparing Spearman rank correlation scores where all dependencies (terms) in \textit{Non-n(ormalized)} NS models carry equal weight, and all dependencies in \textit{Norm(alized)} NS models have their scores normalized proportionally to the length of the parent response. Results are shown using NS models of 14 responses and 50 responses. Each \textit{Norm(alized)} and \textit{Non-n(ormalized)} column represents 360 different rankings (12 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 120 rankings (4 system configurations $\times$ 30 items; SBERT operates on plain text, so the \param{term representation} parameter does not apply).
 %%% 4/16/21 LK OK
 }
 \end{center}
 \end{table}
 
 
-\subsection{Term representation experiments}
-\label{sec:exp-term-reps}
-The current system allows for different \textit{term representations}, which are variations on syntactic dependencies. A dependency consists of a \textit{head}, \textit{dependent}, and \textit{label}. In past work, I experimented with omitting one or more of these elements to allow for less restrictive matching (see Table~\ref{tab:dist-ranked-parameters}). In the current dissertation, I compare the system performance using the three formats: \textit{label-dependent-head} (\param{ldh}), \textit{dependent-head} only (\param{xdh}), and \textit{dependent} only (\param{xdx}). In other words, my system uses a ``bag of terms'' approach, where the bags contain either labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}) or words (\param{xdx}). The labeled and unlabeled dependencies were the top performers in my previous work, and the \param{xdx} format is included as a kind of baseline approximating a bag of words approach.
+Taking this example further, consider the dependency \textit{nsubj(girl, sing)}, also from Table~\ref{tab:normalize-responses-deps}. In the non-normalized setting, this dependency appears as two out of a total 14 dependencies, or 0.143 of the NS model. In the normalized setting, the dependency appears as one out of four (0.25) dependencies in Response A, and one out of 10 (0.1) dependencies in Response B, equating to 0.175 of the NS model (0.35 divided by two responses). Because this dependency is critical, raising its weight from 0.143 to 0.175 should have a positive impact on system performance; NNS responses containing the dependency should rise in the rankings relative to those without it. 
 
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l||l|l|l||l|}
-\hline
- & \multicolumn{4}{c|}{NS model sample size = 14} \\
-\hline
-			& \param{ldh} 	& \param{xdh} 			& \param{xdx} 		& BERT \\
-\hline
-\hline
-count 			& 120 		& 120 					& 120 				& 120 \\
-\hline
-mean 			& 0.333 	& 0.336 			& \textbf{0.351} 	& \textit{\textbf{0.487}} \\
-\hline
-median 			& 0.318 	& \textbf{0.344} 		& 0.330 		& \textit{\textbf{0.507}} \\
-\hline
-min & \textit{\textbf{-0.108}} 	& -0.181 				& -0.158 	& 	-0.138 \\
-\hline
-max 			& 0.871 	& 0.875 & \textit{\textbf{0.900}} 			& 0.881 \\
-\hline
-std dev 		& 0.223 	& 0.227 				& 0.231 			& 0.196 \\
-\hline
-\multicolumn{5}{c}{} \\
-\hline
- & \multicolumn{4}{c|}{NS model sample size = 50} \\
-\hline
-& \param{ldh} & \param{xdh} & \param{xdx} & BERT \\
-\hline
-\hline
-count 	& 120 			& 120 				& 120 					& 120 \\
-\hline
-mean & \textbf{0.350} 	& 0.349 			& 0.348 			& \textit{\textbf{0.509}} \\
-\hline
-median 	& 0.364 		& \textbf{0.374} 	& 0.331 			& \textit{\textbf{0.523}} \\
-\hline
-min 	& -0.147 		& -0.185 			& \textit{\textbf{-0.062}} & -0.090 \\
-\hline
-max 	& 0.892 		& 0.893 			& \textit{\textbf{0.898}} 		& 0.881 \\
-\hline
-std dev & 0.229 		& 0.236 			& 0.213 				& 0.177 \\
-\hline
-\end{tabular}
-\caption{\label{tab:termrep-results} Comparing Spearman rank correlation scores where system configurations use different term representations: \param{ldh} (labeled dependencies), \param{xdh} (unlabeled dependencies), or \param{xdx} (dependents only; i.e., \textit{words}). Results are shown using NS models of 14 responses and 50 responses. Each \textit{System} and \textit{BERT} column represents 120 different rankings (4 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. 
-%%% 4/16/21 LK OK
-}
-\end{center}
-\end{table}
+To test my hypothesis, I compared the performance of normalized and non-normalized models. 
+%This followed my standard design of ranking NNS responses by their system scores, then comparing this ranking with the weighted annotation ranking using Spearman rank correlation. I isolate this variable as before: for all system configurations, I generate a Spearman score. Then I obtain an average score for all normalized configurations and an average score for all non-normalized configurations and compare the two.
+%Such normalization can be sensitive to the effects of size\lk{XYZ: Citation?}, so I conducted two experiments: one in which each NS model contains a sample 50 responses, and one in which each model contains 14 responses.
+The results of this experiment are shown in Table~\ref{tab:term-norm-results}. This re-weighting does not apply to SBERT, but SBERT scores are included as a benchmark. For both sample sizes, the comparisons show slightly higher mean and median Spearman correlations for the non-normalized NS models, disproving my hypothesis. This means that the desired NNS response ranking---the weighted annotation ranking---is best approximated via similarity comparisons with the non-normalized NS responses. In other words, the level of noise in the NS responses is already optimal, and with its impact reduced via term normalization, the NS models are less like the NNS responses. Because the non-normalized NS models outperform their normalized counterparts, and for the sake of simplicity, this parameter was not included in the other experiments discussed in this chapter; only non-normalized configurations were used elsewhere.
 
-The results in Table~\ref{tab:termrep-results} show that regardless of term representation, performance is best with the 50-response NS models. This difference is greatest for the \param{ldh} models and smallest for the \param{xdx} models. This makes sense, given that the \param{ldh} representations are the most complex and \param{xdx} representations are least complex, because we can expect the simpler \param{xdx} models to become ``saturated'' with relevant NNS response terms at smaller sample sizes as compared to \param{ldh} models. In Table~\ref{tab:sttr}, this is reflected in standardized type-to-token ratios. For the crowdsourced models, the greatest difference in STTR is seen when moving from the \param{ldh} 14-response models to 50-response models. For the \param{xdh} representation, the two sample sizes have nearly identical STTRs, and for the \param{xdx} representation, the 14-response model has the highest STTR. This suggests the optimal NS model size is correlated with the complexity. Considering Table~\ref{tab:sttr}, it appears that STTRs for the simpler \param{xdh} and \param{xdx}  representations likely peak somewhere between the 14-response sample and 50-response sample, but \param{ldh} samples may see increased STTR for samples larger than 50 responses.
 
-With more NS responses, future work could form larger samples and determine the size at which STTR reaches its maximum for \param{ldh} representations. The same could be done for \param{xdh} and \param{xdx} term representations as well. With such a ``map'' of the relationship between STTR and sample size for NS models, one could better explore the correlations between system performance and term representations across sample sizes. For processing new PDT items, this would make it possible to choose the optimal term representation based on the number of available NS responses.
+\section{Optimization conclusion}
+\label{sec:optimization-conclusion}
+Here I sum up a few observations:
+
+Let's say some stuff about complexity.
+
+performance generally correlates with complexity: STTR vs Spearman; STTR correlates with transitivity, targeting, primacy, and term representation, this can be leveraged to choose the optimal parameter setting.
+
+For features (MAP), smaller models work best.
+
+For holistic ranking, larger models work best.
+
+For holistic ranking (but NOT MAP stuff), increased complexity correlates with higher scores for larger models. In other words, higher complexity requires larger NS models. We see this with ditransitives, untargeted, mixed models, ldh... For less complexity, smaller models often perform better.
+
+SBERT outperforms my system for holistic ranking. My system outperforms SBERT for predicting feature values, however.
 
 
 
