@@ -65,35 +65,97 @@
 \label{sec:motivation}
 
 
-This work is motivated by the desire to bridge a disconnect between the fields of second language acquisition (SLA) and intelligent computer-assisted language learning (ICALL), with most SLA research supporting communicative and task-based learning methods, while many existing ICALL applications focus on explicit grammar instruction and correction. By combining existing language resources and natural language processing (NLP) tools to form an evaluation system and then investigating the results, my work aims to demonstrate that reliable, automatic, contextual, meaning-based analysis of non-native speaker (NNS) sentences (whether for testing, tutoring or otherwise) is possible without the need for developing expensive new datasets or processing tools, and thus encourage the use of such approaches in ICALL systems. 
+This work is motivated by the desire to bridge a disconnect between the fields of second language acquisition (SLA) and intelligent computer-assisted language learning (ICALL), with most SLA research supporting communicative and task-based learning methods, while many existing ICALL applications focus on vocabulary exercises and explicit grammar instruction and correction. By combining existing language resources and natural language processing (NLP) tools to form an evaluation system and then investigating the results, my work aims to demonstrate that reliable, automatic, contextual, meaning-based analysis of non-native speaker (NNS) sentences (whether for testing, tutoring or otherwise) is possible without the need for developing expensive new datasets or processing tools, and thus encourage the use of such approaches in ICALL systems. 
 
-Within SLA and language pedagogy, tasks and task-based language teaching (TBLT) have been recognized for decades for their effectiveness and ability to elicit natural interlanguage \cite{ellis2003task}. In the context of language learning, whereas an \textit{exercise} is an activity focused on language form, a \textit{task} is ``an activity which requires learners to use language, with an emphasis on meaning, to attain an objective'' \cite{bygate2001researching}. Since the inception of ICALL as a concept roughly 40 years ago, it has largely failed to incorporate task-based learning or the findings of SLA, relying on exercises instead. Nearly three decades ago, \citet{oxford1993intelligent} lamented that ICALL research relied on ``outdated language learning and teaching references'' and urged the field to ``devote as much attention to its language learning/teaching principles as it does to its exciting technology''. A number of researchers have worked to narrow this gap, but it remains a major obstacle today. \citet{ziegler2017interdisciplinary} argue that the ``current lack of a stronger connection between SLA and the NLP research underlying ICALL is indeed a missed opportunity,'' not only because the implications of SLA research can lead to more effective ICALL systems, but also because ICALL, with its ability to administer interesting tasks and collect large amounts of learner data in a variety of forms, can unlock new methodological opportunities in SLA.
+Within SLA and language pedagogy, tasks and task-based language teaching (TBLT) have been recognized for decades for their effectiveness and ability to elicit natural interlanguage \cite{ellis2003task}. In the context of language learning, whereas an \textit{exercise} is an activity focused on language form, a \textit{task} is ``an activity which requires learners to use language, with an emphasis on meaning, to attain an objective'' \cite{bygate2001researching}. Since the inception of ICALL roughly 40 years ago, it has largely failed to incorporate task-based approaches or the findings of SLA, relying on exercises instead. Summarizing the state of ICALL nearly three decades ago, \citet{oxford1993intelligent} lamented that most projects relied on ``outdated language learning and teaching references'' and urged the field to ``devote as much attention to its language learning/teaching principles as it does to its exciting technology''. A number of researchers have worked to narrow this gap between ICALL and TBLT, but it remains a major obstacle today. \citet{ziegler2017interdisciplinary} argue that the ``current lack of a stronger connection between SLA and the NLP research underlying ICALL is indeed a missed opportunity,'' not only because the implications of SLA research can lead to more effective ICALL systems, but also because ICALL, with its ability to administer interesting tasks and collect large amounts of learner data in a variety of forms, can unlock new methodological opportunities in SLA.
 
 I begin in Chapter~\ref{chap:lit} with an examination of a few ICALL projects that focus on meaning or are otherwise informed by SLA. Assessing why such projects have not gained traction, \citet{schulze2010taking} points out numerous concerns. First, these projects tend to require tremendous time and effort and are tailored for highly specific situations, meaning they do not easily transfer to new learners, languages, or activities. Moreover, they tend to rely on academic research funding, meaning development stops when the funding is exhausted. Because this dissertation does not present a full ICALL system nor a specific learning module but rather a mechanism for collecting and assessing responses to visual prompts, my hope is that it will inspire ICALL developers to adapt it to a range of visual learning situations or even new languages.
 
 The main vision of this work is the automatic meaning-focused evaluation of the appropriateness of English NNSs' responses to visual cues by comparing the responses to those of native speakers (NSs).
 To overcome the many barriers to development and adoption of meaning-focused ICALL systems, a guiding principle of my work is that any system based on it should be easy to use and expand. If the ultimate goal is something like a story-based ICALL system in which users respond to images, an English language instructor should be able to easily add new stories by importing images and text prompts, then administering the task to NSs to automatically crowdsource a model, which would then be used to automatically evaluate NNS responses. Such an ICALL end product would certainly require a team of developers. What I present instead in this dissertation is a proof-of-concept using picture description task (PDT) responses from NSs and NNSs and a prototype evaluation system.
 
+\section{Research questions}
+\label{sec:RQ}
+This work investigates the six major research questions listed below. In the overview in Section~\ref{sec:overview}, I point out where these questions are addressed.
+%Given both the practical need to develop a GS and the theoretical issues surrounding nativeness and ultimate attainment, the first research question is:
+
+\begin{itemize}
+%\setbeamercovered{transparent}
+%%%**in this PDT environment (which is a proxy for more real settings) or other constrained setting, what are appropriate representations and GS that allow one to provide (non-grammar-based) feedback (or for some "useful" evaluation)?
+\item[RQ1.]{Are the responses of advanced second language learners of English sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a PDT setting?} %What differences exist and what NLP tools are needed to account for them?
+\end{itemize}
+%The images of the communication task serve as a rough simulation of real world scenes; given the lack (and desirability) of learner tools that analyze language content in visual contexts, the second research question is:
+
+\begin{itemize}
+\item[RQ2.]{In the constrained communicative environment of a PDT, what are appropriate response and model representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
+\end{itemize}
+%As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
+
+\begin{itemize}
+\item[RQ3.]{What kinds of existing NLP tools and language resources can be integrated to form a content analysis system for open response language learning tasks?}
+\end{itemize}
+%As discussed later, this work attempts to take statistical methods traditionally used to analyze the frequencies of individual words in sentences and apply those methods to the frequencies of syntactic dependencies in sentences, as one means of deriving semantic information from syntactic tools. Thus, the fourth research question is:
+
+\begin{itemize}
+\item[RQ4.]{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance? Is a bag-of-words approach alone adequate for our needs?}
+\end{itemize}
+%Given that the system has thus far relied primarily on a parser, lemmatizer and spelling correction module, without the inclusion of semantic tools, the fifth research question is: %and given NLP trends that focus on surface forms over deeper processing...
+
+\begin{itemize}
+\item[RQ5.]{Can the accuracy of the system be improved by the inclusion of semantic information from tools like semantic role labelers, WordNet, or word and sentence embeddings?}
+\end{itemize}
+%%Are increases in performance valuable enough to offset the computational costs? In other words, how deep should the processing be in order to achieve our goal of providing a meaning-based ICALL component that is lightweight and practical?} %%%**How deep should the processing be?
+%To evaluate the system, it will be necessary to have humans annotate the NNS responses, then compare this annotation to system output. In light of the specific nature of the PDT and the goal of analyzing semantic appropriateness, the sixth research question is:
+
+\begin{itemize}
+\item[RQ6.]{What is the annotation scheme for this task and can the system perform within the range of human performance? Relatedly, what does it mean for a response to be \textit{appropriate} and how can this be captured with annotation?}
+\end{itemize}
+
+
 \section{Overview}
 \label{sec:overview}
 
+\subsection{Chapter~\ref{chap:lit}: Related Work}
 
 In Chapter~\ref{chap:lit}, I examine related work from the fields of SLA, ICALL, language testing, NLP, corpus linguistics, and image analysis, pointing out where my work is similar to or inspired by others, and where my work diverges. I begin the chapter with a look at research and discussions from SLA that support the use of task-based and communicative approaches to second language learning, along with a look back at the methods they replaced. I follow with a brief overview of the history of computer-assisted language learning (CALL) and an examination of the shift to \textit{intelligent} CALL, or \textit{I}CALL, and what this shift means and entails. I give examples of past and present systems that rely on grammar and lexical drills, and contrast these with more sophisticated systems that attempt to focus on meaning over form. Much of the outside work relevant to this dissertation comes from the field of language testing, so I include an overview of testing research involving methods for automatically evaluating the sentences of language learners, focusing on systems that prioritize meaning.
 
 I include a review of the NLP topics and technologies that my work is built on and explain why they are suited for my goals. This includes discussions of semantic textual similarity, bag-of-words analysis, topic analysis, dependency grammars and syntactic dependency parsing, lemmatization, and language modeling. I describe the tools available for these tasks, point to their use in ICALL and language testing, and present my rationale for relying on them in my work. Because my work involves handling human descriptions of images, I also look at exciting current work in automatic image captioning and discuss why I chose not to rely on such technologies.
 
+Chapter~\ref{chap:lit} most directly addresses research questions \textit{RQ3} and \textit{RQ6}.
+
+\subsection{Chapter~\ref{chap:pilot}: Pilot Study}
+
 My ambitions for this project present an unavoidable chicken-and-egg problem, which I attempt to take on in Chapter~\ref{chap:pilot}. In order to determine if a semantic similarity rating system can work for image-based data, one needs such data, and in order to determine if image-based data is suitable for a semantic similarity rating system, one needs such a system. This is not a standard NLP task like sentence parsing or part-of-speech tagging for which appropriate datasets are available, so I began with a pilot study in which I collected a small set of data and developed a handful of working scoring approaches. This chapter describes the pilot data and its collection and annotation. It then looks at my initial, rule-based system for extracting \textit{verb-subject-object} triples from dependency parses and attempting to match these NNS triples with NS triples. I examine the weaknesses of this system and explain how my initial findings lead to an improved approach. This new approach is more robust and adaptable, using term frequency-inverse document frequency (tf-idf) on dependency-parsed sentences to score NNS sentences according to their distance from a collection of NS parsed sentences. This found moderate success, but was limited by the small dataset and its inadequate \textit{error-nonerror} annotation, leading to the expanded dataset, more detailed annotation, and refined scoring system covered in the remainder of this dissertation. 
+
+Chapter~\ref{chap:pilot} addresses research questions \textit{RQ1}, \textit{RQ2}, \textit{RQ3}, \textit{RQ4}, and \textit{RQ6}.
+
+
+\subsection{Chapter~\ref{chap:data}: Data Collection}
 
 In Chapter~\ref{chap:data}, I present the data collection instrument and the resulting dataset. In this PDT, I took even greater care to strip unnecessary detail from the images and thus elicit a more constrained range of responses. More importantly, whereas the pilot PDT depicted 10 transitive events only, this version included 10 each of intransitive, transitive, and ditransitive events. Additionally, I varied between \textit{targeted} prompts, which ask about the subject specifically, and \textit{untargeted} prompts, which simply ask the respondent to describe the event. I also collected responses from many more participants: 499 participants versus 54 in the pilot study. This resulted in 13,533 responses, where the pilot dataset contained only 530. The participants included 141 NNSs (university level English as a Second Language students---overwhelmingly native speakers of Chinese) and 358 NSs. Of these NSs, 329 were crowdsourced and 29 were personally known to me; this distinction allowed me to compare the behavior of these groups for suitability for this project. I discuss this and other modifications in the data collection, and I describe surface level features of the dataset like the frequency of identical responses.
 
+Chapter~\ref{chap:data} most directly addresses research questions \textit{RQ1} and \textit{RQ4}.
+
+\subsection{Chapter~\ref{chap:annotation}: Annotation \& Weighting}
+
 The development and implementation of the annotation scheme for this project is detailed in Chapter~\ref{chap:annotation}. I explain the evolution of my scheme, which began as a three-point scale indicating \textit{accurate and native-like}, \textit{accurate but not native-like}, and \textit{neither accurate nor native-like}. This was unreliable, and I describe how the constructs of \textit{accurate} and \textit{native-like} were ultimately split into five binary features, which I call \feat{core event}, \feat{answerhood}, \feat{grammaticality}, \feat{interpretability}, and \feat{verifiability}. This chapter explains how these features and the annotation guidelines developed through an iterative process with annotators. I present inter-annotator reliability data, with all features showing satisfactory raw agreement scores above 91\% and Cohen's kappas above 0.74. I also examine how the different participant groups compare with regard to the annotation features. The final section of this chapter discusses how I used a paired-response preference task to determine weights for each feature, allowing me to interpolate a holistic score for each response, which can in turn be used to produce a benchmark ranking of NNS responses. It is worth noting here that while the goal of my project is a system that can operate reliably on \textit{unannotated} (or \textit{unsupervised}) data, an important step to that end is producing a reliably annotated dataset to allow for evaluation of such systems.
+
+Chapter~\ref{chap:annotation} addresses research questions \textit{RQ1}, \textit{RQ2}, and \textit{RQ6}.
+
+
+\subsection{Chapter~\ref{chap:optimization}: Optimization}
 
 In Chapter~\ref{chap:optimization}, I return to automatic content analysis, applying it to the new dataset. This begins with discussion of the ways in which I modified my system and expanded its settings. The general focus of this chapter is the search for correlations between the performance of particular system settings on particular items. Essentially, this is an attempt to answer questions like, \textit{For predicting \feat{core event} annotations, should responses be represented internally as labeled dependencies or unlabeled dependencies?} and \textit{For evaluating NNS intransitive sentences, do crowdsourced or familiar NS responses work best as a model?} By identifying such trends, I show that not only can my system successfully operate as intended, but it can even leverage these correlations to automatically choose the optimal settings for new items.
 
 I offer two methods for evaluating my system. First, for the individual binary annotation features, I use mean average precision to determine how well system-produced rankings separate positively and negatively annotated responses. For comparison, I use a state-of-the-art statistical language modeling tool, SBERT, to rank NNS sentences by their similarity to the NS sentences. These experiments show that my system generally outperforms SBERT at assessing annotation features. For evaluating my system's performance at holistically ranking responses, I use Spearman's rank correlation to compare against the benchmark rankings derived from weighted annotations. I also compare SBERT response rankings with the benchmark rankings. These experiments show that SBERT generally outperforms my system at holistic ranking. Taken together, these results show that my system is preferable for identifying custom features, which may be very useful in particular ICALL tasks, but for more general purposes, a sophisticated tool like SBERT is more effective. Importantly, as the differences in performance of my system and SBERT are generally small, my system can offer a parallel analysis that is more accessible and explainable than SBERT's, and thus better suited for developing a feedback module for end users.
-%
-%
-%
+
+Chapter~\ref{chap:pilot} addresses research questions \textit{RQ1}, \textit{RQ2}, \textit{RQ3}, \textit{RQ4}, and \textit{RQ5}.
+
+
+\subsection{Chapter~\ref{chap:conclusion}: Conclusion}
+In Chapter~\ref{chap:conclusion}, I summarize the work and findings presented throughout this dissertation. I revisit each of the six research questions introduced in Section~\ref{sec:RQ} and discuss how they were answered by my research. I conclude with an outlook on how future research can build on the successes of the similarity-based content analysis approach introduced in this dissertation.
+
+
 %\bigskip 
 %
 %and the I took the findings from this pilot study, collected a much larger dataset, developed and applied an annotation system, refined my rating system, used it to process the new data, then examined trends in the performance. By showing that reasonable correlations exist between the features of the data and the performance of the rating system and its settings, I believe the work validates both the data and the rating system overall.
@@ -111,40 +173,6 @@ I offer two methods for evaluating my system. First, for the individual binary a
 %\par A major focus of the research will be establishing representations of NS and NNS sentences and a corresponding gold standard (GS) by which NNS responses can be evaluated. Many ICALL systems primarily handle grammar, in which case a grammar model is sufficient for conducting the analysis and providing feedback. Other systems are menu based, with users choosing responses from a pre-defined set. However, as the system under development allows for novel responses and addresses content over form, the defining of a meaning-based GS for communicative tasks will be both a central challenge and a major contribution to ICALL and to other areas of NLP that handle user sentences in communicative and visual contexts, such as dialog systems, translation systems and speech-to-text engines. Other major tasks will include refining the overall approach to handle a wide variety of PDT items eliciting many different sentence forms, establishing methods for discriminating between acceptable and non-acceptable responses, and automatically determining the optimal system settings for processing responses. The designing of a robust, pedagogically sound feedback module is beyond the scope of this dissertation, but the system will include a lightweight feedback module that at minimum provides the user with one or more of the NS responses that is most similar to the user's response. Beyond dependency parsing, this work will also examine the effect of incorporating semantic role labeling (SRL) tools and lexical information (hyper-/hypo-/synonyms via WordNet or similar resources) on coverage and overall performance.\\
 %%%elaborate a little more -- motivation, framing
 %
-%\section{Research questions}
-%Given both the practical need to develop a GS and the theoretical issues surrounding nativeness and ultimate attainment, the first research question is:
-%
-%\begin{enumerate}
-%%\setbeamercovered{transparent}
-%%%%**in this PDT environment (which is a proxy for more real settings) or other constrained setting, what are appropriate representations and GS that allow one to provide (non-grammar-based) feedback (or for some "useful" evaluation)?
-%\item{Are the responses of intermediate and advanced L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a PDT setting?} %What differences exist and what NLP tools are needed to account for them?
-%\end{enumerate}
-%The images of the communication task serve as a rough simulation of real world scenes; given the lack (and desirability) of learner tools that analyze language content in visual contexts, the second research question is:
-%
-%\begin{enumerate}\setcounter{enumi}{1}
-%\item{In the constrained communicative environment of a PDT, what are appropriate response and GS representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
-%\end{enumerate}
-%As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
-%
-%\begin{enumerate}\setcounter{enumi}{2}
-%\item{What kinds of existing NLP tools and language resources can be integrated to form a content analysis system for open response language learning tasks?}
-%\end{enumerate}
-%As discussed later, this work attempts to take statistical methods traditionally used to analyze the frequencies of individual words in sentences and apply those methods to the frequencies of syntactic dependencies in sentences, as one means of deriving semantic information from syntactic tools. Thus, the fourth research question is:
-%
-%\begin{enumerate}\setcounter{enumi}{3}
-%\item{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance? Is a bag-of-words approach alone adequate for our needs?}
-%\end{enumerate}
-%Given that the system has thus far relied primarily on a parser, lemmatizer and spelling correction module, without the inclusion of semantic tools, the fifth research question is: %and given NLP trends that focus on surface forms over deeper processing...
-%
-%\begin{enumerate}\setcounter{enumi}{4}
-%\item{Can the accuracy of the system be improved by the inclusion of semantic information from tools like semantic role labelers or WordNet?}
-%\end{enumerate}
-%%%Are increases in performance valuable enough to offset the computational costs? In other words, how deep should the processing be in order to achieve our goal of providing a meaning-based ICALL component that is lightweight and practical?} %%%**How deep should the processing be?
-%To evaluate the system, it will be necessary to have humans annotate the NNS responses, then compare this annotation to system output. In light of the specific nature of the PDT and the goal of analyzing semantic appropriateness, the sixth research question is:
-%
-%\begin{enumerate}\setcounter{enumi}{5}
-%\item{What is the annotation scheme for this task and can the system perform within the range of inter-annotator reliability? Relatedly, what does it mean for a response to be \textit{appropriate} and how can this be captured with annotation?}
-%\end{enumerate}
 %
 %\section{Organization}
 %The dissertation will be organized as shown in section \ref{overview}. Discussion of the core issues in each section of the dissertation follows, in section \ref{discussion}.
