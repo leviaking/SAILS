@@ -13,10 +13,11 @@
 
 \vspace{1.5\baselineskip}
 
-%Insert your abstract here
- \citet{king:dickinson:14}... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+An intelligent computer-assisted language learning (ICALL) system is an application to provide users instruction and practice as they learn a second language. ICALL systems have been around since the early 1980s, but today most still rely heavily on outdated and ineffective methods like grammar and vocabulary drills. I believe that in order to be more effective and more widely adopted, ICALL must become more closely aligned with second language acquisition (SLA) research, moving away from menu-based or fill-in-the-blank exercises and toward the task-based and communicative methods the research supports.
 
+As a first step in this direction, this dissertation presents a mechanism by which an ICALL system can judge the appropriateness of an advanced English learner's response to image-based prompts simply by comparison with a collection of crowdsourced native speaker (NS) responses. It relies on well-established natural language processing (NLP), namely syntactic dependency parsing, lemmatization and term frequency-inverse document frequency (tf-idf). To ensure broader success, this method seeks to be flexible, expandable and low-cost by relying on readily available tools and using crowdsourced models instead of custom rules or expert knowledge. Compared to more sophisticated machine learning NLP approaches, my system maintains a high degree of transparency, making it ideal for integration with an ICALL feedback module.
 
+To evaluate my approach, I collected a corpus of over 13,000 picture description task (PDT) responses from NSs and NNSs. I developed and applied an annotation scheme of five binary features intended to capture aspects of nativelikeness and semantic appropriateness, and showed these features to have a high degree of inter-annotator agreement. I used a preference task to establish feature weights and benchmark rankings of learner responses. I showed that my system output generally correlates well with the benchmark rankings and shows a promising degree of accuracy in predicting the annotations. 
 
 \ifdefined\committeeMemberFourTypedName
 
