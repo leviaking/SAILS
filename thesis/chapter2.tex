@@ -111,8 +111,8 @@ To overcome variations in lexical items and their phrasing, c-rater uses a word 
 
 The work on c-rater led to later research at ETS on evaluating responses to visual prompts that is more directly applicable to the kinds of contexts I pursue in this dissertation. \citet{somasundaran:chodorow:14} present work in which they automatically score L2 learner responses to a picture description task (PDT) on a four-point scale, using much of the same processing as c-rater. A common concern for any content evaluation system is the handling of the wide variety of ways a concept can be expressed. Here, the researchers constrain the range of input by providing users with two lexical items and instructing them to use those words in their responses. Like c-rater, this system relies on expert response models, but in this case a more robust model is used. The researchers call this a \textit{reference text corpus}, where the expert lists all items and events in the image and thoroughly describes any events and relationships depicted. The researchers reported a kappa of 0.63 for the system's agreement with human scores, versus 0.83 for human-human agreement.
 
-In my own work here, which also uses PDTs, I considered providing users lexical items, but ultimately did not directly pursue it. Instead, I focused on constraining the responses by limiting the amount of information in the image prompts, and I relied on crowdsourcing a corpus of native speaker responses instead of a single expert's exhaustive description (Sections~\ref{sec:participants} and~\ref{sec:pdt}).
-.
+In my own work here, which also uses PDTs, I considered providing users lexical items, but ultimately did not directly pursue it. Instead, I focused on constraining the responses by limiting the amount of information in the image prompts, and I relied on crowdsourcing a corpus of native speaker responses instead of a single expert's exhaustive description (Sections~\ref{sec:pdt} and~\ref{sec:participants}).
+
 %\cite{somasundaran:ea:15} %% 6-image spoken image narration.
 
 
@@ -122,7 +122,7 @@ Robo-Sensei is an ICALL system for English-speaking learners of Japanese that wa
 
 The system's main exercise centers on ``communicative contexts,'' presented to the user in the L1 (English) in the second person, e.g., ``Your teacher asked how your weekend was.'' These contexts also provide the content for the user's response, e.g., ``You had a big party for your father's birthday and had to wash many dishes afterward.'' The user must then provide a short answer in the L2 (Japanese) consisting of one or more sentences. Like the provided lexical items in \citet{somasundaran:chodorow:14}, this provided information is a strategy for constraining the range of acceptable responses. The user response is processed into the system's representation and compared against the elements in the expanded expert model; the results of this comparison are passed to Robo-sensei's feedback module, which uses a relatively complex system of templates to generate form-focused feedback. 
 
-The system's pipeline of normalizing word forms and parsing sentences into subcomponents representing meaning influenced my own work, but I diverged from many of the strategic choices made in Robo-Sensei. The use of the L1, while understandable from a practical point of view, more closely resembles the Grammar Translation Method than I wish for my own work. 
+The system's pipeline of normalizing word forms and parsing sentences into subcomponents representing meaning influenced my approach, but I diverged from many of the strategic choices made in Robo-Sensei. The use of the L1, while understandable from a practical point of view, more closely resembles the Grammar Translation Method than I wish for my own work. 
 
 \subsection{TAGARELA}
 \label{section:tagarela}
@@ -130,7 +130,7 @@ One relatively well-documented and SLA-informed ICALL system is TAGARELA (\texti
 
 A crucial component to TAGARELA is its ``Unstructured Information Management Architecture (UIMA),'' which is effectively a collection of text relevant to the tasks that are enriched with multiple annotations relating to both form and meaning. For most tasks, this means TAGARELA relies on a small number of carefully chosen and annotated model responses. This \textit{UIMA} approach means TAGARELA can use a given model in different tasks by varying the NLP pipeline and the selecting the appropriate annotation layers. This approach is also its biggest obstacle, however: each new lesson in TAGARELA requires the careful, deliberate development and testing of expertly annotated model responses. In other words, the system must be ``told'' explicitly what to look for in a user response.
 
-In fairness, TAGARELA was not designed to be a fully-fledged ICALL system ready for widespread use, but rather as an experiment and a data collection tool for ICALL researchers, and in this regard, it stands as a successful project and an important step toward handling meaning in ICALL with cleverly-implemented NLP. Prior to any system development, the TAGARELA team began their work with the creation of a ``taxonomy of expected errors,'' gleaned from an analysis of a corpus of written assignments from learners of Portuguese. The authors describe this development approach as ``data-driven rather than process-driven''. This bucks a tendency among many ICALL developers to simply address the kinds of errors NLP tools can readily identify. 
+In fairness, TAGARELA was not designed to be a fully-fledged ICALL system ready for widespread use, but rather as an experiment and a data collection tool for ICALL researchers, and in this regard, it stands as a successful project and an important step toward handling meaning in ICALL with cleverly-implemented NLP. Prior to any system development, the TAGARELA team began their work with the creation of a ``taxonomy of expected errors,'' gleaned from an analysis of a corpus of written assignments from learners of Portuguese. The authors describe this development approach as ``data-driven rather than process-driven.'' This bucks a tendency among many ICALL developers to simply address the kinds of errors NLP tools can readily identify. 
 %\lk{cite DuoLingo? etc.}
 %What is needed instead is ICALL development informed by SLA research and by the kinds of challenges learners face, as borne out by real data.
 %\lk{cite Ellis, Meurers}
@@ -139,8 +139,16 @@ My work was inspired by TAGARELA's data-driven approach, and especially by its p
 
 \subsection{E-Tutor}
 \label{section:e-tutor}
-\cite{heift2010}
-%
+
+E-Tutor is an ICALL workbook-style application for English-speaking L2 German learners designed to parallel a widely-used textbook series \cite{heift:01,heift2010,heift2018querying}. The program relies on English for instruction and scaffolding around the grammar and vocabulary lessons it presents. It includes activities with varying degrees of free-input. The simplest are grammar and vocabulary exercises that ask users to complete sentences or build their own using provided lexical items. More sophisticated exercises ask users to write their own sentences in response to reading comprehension questions.
+
+Most of E-Tutor's exercises require a robust set of pre-stored answers provided by an expert. The system relies on string matching to evaluate user responses. To handle variations not covered in the expert set, E-Tutor passes unmatched user responses through what the researchers call its ``error sieve,'' a pipeline of modules that either apply variations (or corrections) to punctuation, spelling, or word order, or check for missing or extra words or ungrammatical constructions. When one of these modules results in a string match with the expert set, a form-focused feedback message is presented to the user.
+
+An appealing feature of this system is its ability to expand its models over time by identifying learner responses that do not match an expert response but also do not trigger its error detection modules. My work does not reach the stage of development where such a strategy could be applied, but my reliance on crowdsourcing to compile models is partly inspired by E-Tutor's approach of using non-expert responses collected from users. In terms of methodology, E-Tutor could benefit from more authentic communicative tasks and content-focused feedback. With regard to its application of NLP, the system handles a considerable range of activities with its modular pipeline. However, E-Tutor uses the technology almost exclusively for error identification rather than attempting to address meaning. 
+
+
+
+
 %For instance, the activity types in the E-Tutor (Heift, 2010b)
 %allow for grammar practice as well as reading comprehension and/or cultural knowledge
 %and also supports discovery learning in the form of exploration of learner language. For
