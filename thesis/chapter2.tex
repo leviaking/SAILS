@@ -172,7 +172,12 @@ An appealing feature of this system is its ability to expand its models over tim
 
 
 
-\subsection{(Ken Peterson)}
+\subsection{Sasha dialog agent}
+\citet{petersen:10} presented \textit{Sasha}, an ICALL system for simulating dialogs with L2 English learners in visual contexts. The system was designed specifically for eliciting questions about images; in these scenarios, the learner is instructed to ask Sasha questions about objects, relationships and events in the image prompt. Sasha serves as the interlocutor and asks for clarification, provides recasts, and responds to the user question with appropriate information in sentence form. The task is a kind of information gap task in which the user is presented with multiple images and must determine which of the images Sasha is viewing. These interactions are not sustained discourse, but rather unordered dyads that continue until the user is ready to identify the correct image.
+
+The system uses standard NLP modules combined in a custom, rule-based pipeline to process user input. The modules generate a rich internal representation that includes spelling correction, part of speech tagging, word sense disambiguation, synonym set identification, and syntactic dependency parse information. To generate an appropriate response, Sasha relies on an expert-produced  list describing objects and relationships in the images. Sasha also uses a set of rules and templates for generating responses to various question types by filling templates with the appropriate content from the expert descriptions.
+
+My work was partly inspired by Sasha's use of images to focus ``discussion'' and its use of dependency parse information and rules for extracting elements like subjects and objects in order to generate internal representations of meaning that abstract over specific forms, particularly in my pilot study (Section~\ref{sec:pilot-study}.)
 
 \section{NLP for task-based ICALL}
 \label{section:NLP-considerations}
@@ -181,9 +186,13 @@ What kinds of processing are necessary and useful for my ICALL needs?
 
 Address interpretability;
 
+auto image-captioning;
+
 Dependencies;
 
 tf-idf and distributional semantics;
+
+
 
 
 %
