@@ -7,23 +7,6 @@ This dissertation lies at the intersection of several fields including second la
 
 %I begin in Section~\ref{section:ICALLinterp} with a discussion of the importance of transparency and interpretability in ICALL and language testing. In  Section~\ref{section:ICALLoverview}, I examine approaches to ICALL that relate to and inform this dissertation. In Section~\ref{section:learnerCorpora}, I summarize research involving the collection, annotation or content analysis of task-based learner corpora. A brief overview of the NLP tools and methods used in my work is given in Section~\ref{section:NLP}.
 
-%\section{On interpretability for learner applications}
-%\label{section:ICALLinterp}
-%
-%(See also Section~\ref{section:imageProcessing}; this should address the use of sentence encoders like BERT and their use in conjunction with image recognition technology).
-%
-%This work would be remiss without discussing the role of machine learning (ML) in current NLP, given that such technologies are largely absent from this dissertation. Recent years have seen the rapid development of ML technologies like neural networks and deep learning. \lk{What is ML good at? citations!} These technologies have been widely implemented in areas like NLP and computer vision, often with impressive gains in performance. They can also lead to reductions in the amount of human expertise needed to automate tasks like syntactic labeling, voice recognition and synthesis, and object and facial recognition. \lk{cite stuff} Naturally, this also means significant reductions in the cost of such systems. A major drawback with many such ML technologies, however is the loss of interpretability. For example, \textit{word embeddings} (such as Word2Vec) \lk{cite} are ML based NLP tools suitable for many tasks involving the processing of linguistic meaning or structures. Word2Vec essentially ``learns'' an approximation of the meanings and grammatical usage of words by observing them in context. Instead of relying on expert annotation of features like part-of-speech, sentence structure and morphology to train a model, the system needs only large amounts of raw text. From this text, it observes large numbers of features, such as the average distance between instances of \textit{Word A} and \textit{Word B}. It reduces these raw features to a (still quite large) number of abstract features, or ``latent variables'', which form a vector of numeric values; this vector then serves as a representation of a word's ``meaning''. In a classic example, if one takes the vector for ``queen'', subtracts the vector for ``female'' and adds the vector for ``male'', the resulting vector is roughly equivalent to that of ``king''.
-%
-%\lk{this is all very cf Brian Riordan's alumni talk... similar sources would be ideal}
-%For many applications, the capabilities and cost reduction of ML make it an attractive and suitable choice; this is certainly the case with many NLP tasks. The use of ML tools with learner language is problematic on at least two fronts, however. First, such tools are typically designed for and trained on well-formed, native-like text (or speech). As mentioned, these tools generally do not rely on annotation in their training data; instead, they make up for this lack of expertise by the sheer volume of training data they consume. Including real learner data on the scale required by ML tools would be impractical if not impossible for most researchers. As a result of ML tools' training on mostly native-like data, they are ill-equipped for processing the variability and ambiguity of learner language. For example, native English trained NLP tools expect regular sentence punctuation; text from a beginning English learner lacking in punctuation could therefore be misconstrued as having longer sentences and thus higher proficiency \cite{MeurersDickinson2017}. Second, and perhaps more importantly, tools that rely heavily on ML are inherently less interpretable than ``classical'' NLP tools. Because classical NLP tools are trained on expert annotation, their output is generally determined by the kinds of features that are annotated in the training corpus. This means linguistic researchers can design NLP tools and pipelines that produce output precisely suited for their research questions, so long as they have the resources to produce adequate training corpora. This is not the case with ML based tools, however. Due to their reliance on abstract features and latent variables, these newer tools are largely ``black box'' technologies; raw data goes in and processed data comes out, but even the architect of such a system cannot explain exactly how or why the analysis was produced. In a language learning application, this is problematic because it means the development of a pedagogically sound feedback system for the learner is not possible; the features underlying the analysis are not accessible or interpretable. The outcomes of language testing can have a tremendous impact on a test taker's future, and in such a high stakes application, the lack of interpretability can be even more problematic. Arguably, it is far better for all stakeholders if a language test can deliver not only a score, but also a rationale for that score, such as which kinds of errors a test taker makes and in what contexts. This need for interpretable features was one of a few major factors in the decision to choose classical NLP over newer ML tools in this dissertation, and most of the related studies discussed here take similar approaches.
-
-
-%\section{Image processing}
-%\label{section:imageProcessing}
-%This should probably include discussion of ML approaches at image ``encoding/decoding'' and their use in tandem with sentence encoders (BERT, etc.). Ask Ben S. for reading suggestions?
-%
-%We want to touch on image processing / automatic captioning / use of semantic primatives, etc. -- linguistic annotation of images. NOT a deep discussion, but we need to acknowledge that there are other fields working on the relations between images and text, and give an idea of what some approaches are and how they work, and how they might relate to my work and the work discussed in my lit review.
-
 \section{SLA \& Teaching Methodologies}
 \label{section:SLA-overview}
 
@@ -173,228 +156,67 @@ An appealing feature of this system is its ability to expand its models over tim
 
 
 \subsection{Sasha dialog agent}
+\label{section:sasha}
 \citet{petersen:10} presented \textit{Sasha}, an ICALL system for simulating dialogs with L2 English learners in visual contexts. The system was designed specifically for eliciting questions about images; in these scenarios, the learner is instructed to ask Sasha questions about objects, relationships and events in the image prompt. Sasha serves as the interlocutor and asks for clarification, provides recasts, and responds to the user question with appropriate information in sentence form. The task is a kind of information gap task in which the user is presented with multiple images and must determine which of the images Sasha is viewing. These interactions are not sustained discourse, but rather unordered dyads that continue until the user is ready to identify the correct image.
 
 The system uses standard NLP modules combined in a custom, rule-based pipeline to process user input. The modules generate a rich internal representation that includes spelling correction, part of speech tagging, word sense disambiguation, synonym set identification, and syntactic dependency parse information. To generate an appropriate response, Sasha relies on an expert-produced  list describing objects and relationships in the images. Sasha also uses a set of rules and templates for generating responses to various question types by filling templates with the appropriate content from the expert descriptions.
 
 My work was partly inspired by Sasha's use of images to focus ``discussion'' and its use of dependency parse information and rules for extracting elements like subjects and objects in order to generate internal representations of meaning that abstract over specific forms, particularly in my pilot study (Section~\ref{sec:pilot-study}.)
 
-\section{NLP for task-based ICALL}
-\label{section:NLP-considerations}
+\section{NLP for content-focused ICALL}
+\label{section:NLP-for-content}
+In this section, I discuss the considerations involved in selecting NLP tools and methods for assembling a content-focused analysis pipeline for L2 learner input. A fundamental consideration here concerns the accuracy of tools that are trained on NS data and then used to process learner data.
 
-What kinds of processing are necessary and useful for my ICALL needs?
+\subsection{NLP accuracy for L2 data}
+\label{section:NLP-accuracy}
+A preponderance of ICALL projects, including those discussed throughout Section~\ref{section:CALL-ICALL}, rely on such tools to process learner input, but is this use justified? This question has been addressed directly in the release of high-profile learner corpora as well as smaller research studies. For the initial release of the Education First Cambridge Open Language Database (EFCAMDAT), a 33 million word database of L2 English essays, \citet{geertzen2013automatic} investigated the accuracy of the widely-used Stanford tools for dependency parsing \cite{demarneffe:ea:06} and part-of-speech (POS) tagging \cite{stanford-pos}. They found that the POS tagger performed within the range for L1 text, at 96.1\%, and the labeled and unlabeled attachment scores for dependencies reached 89.6\% and 92.1\%, exceeding the scores it produced for the Wall Street Journal Corpus on which it was trained. The corpus includes writings from L2 English learners at all levels of the Common European Framework of Reference for languages (CEFR). The researchers grouped these into three proficiency levels, and found that the parser was only roughly 2\% more accurate on the highest proficiency level compared to the lowest, demonstrating a remarkable robustness. More recently, for the release of the International Corpus of Learner English (ICLE) Version 3, \citet{granger2020international} reported POS-tagging accuracy on a sample of L2 English essays ranging between 95 and 99.1\%. With numerous other studies reporting similar accuracy with parsers, POS taggers and lemmatizers trained on NS data and applied to L2 learner data, the suitability of such tools for ICALL purposes is well-established (\citealp[see][]{meurers2009automatic,ott2010evaluating,diaz2010towards,alexopoulou2017task,huang2018dependency}).
 
-Address interpretability;
+\section{NLP tool selection}
+\label{section:NLP-tool-selection}
 
-auto image-captioning;
+I discuss my system in greater detail in Chapters~\ref{chap:pilot} and~\ref{chap:optimization}, but some broad considerations regarding the selection of NLP tools are in order here. Performance is a chief concern, and the proven performance of POS taggers, lemmatizers, and dependency parsers for L2 data was an important factor in my choice of these tools in assembling a pipeline for handling learner sentences. The majority of projects discussed in Section~\ref{section:ICALL-overview} use a combination of these tools, but other relevant NLP tools are available.
 
-Dependencies;
+E-Tutor is a notable exception, as it relies on a Head-driven Phrase Structure Grammar (HPSG) parser \cite{heift:01,heift2010}. Although the authors report success at identifying errors, HPSG parsers have never seen widespread adoption like constituency or dependency parsers, and their use for L2 data and ICALL is not well-documented.
 
-tf-idf and distributional semantics;
+Constituency parsers for producing syntactic tree structures have been in use for decades. In fact, the work discussed above by \citet{geertzen2013automatic} on the L2 parse accuracy of the Stanford Dependency Parser also confirms the accuracy of the Stanford Constituency Parser \citep{klein:manning:03,stanford2014shift}, because the tool first produces constituency parses internally before converting them to dependency parses. 
+
+In my pilot study, I first settled on dependency parsing as an NLP ``window'' into the semantic and syntactic content of a sentence due to the fact that it clearly labels subjects and objects, and my initial foray into this work involved extracting these elements for simple string matching. In my ensuing work, I kept the use of dependencies, a decision which was inspired by promising work on distributional semantics (\citealp[cf.][]{word2vec,mikolov2013distributed,levy2014dependency}). For my purposes, dependencies are good fit because they capture overlapping pieces of syntactic information in the form of labeled relationships, and these \textit{label-dependent-head} units can be used as the ``atomic'' unit of comparison for distance based metrics of similarity. In contrast with large, language-model-scale applications like those in \citet{word2vec} and \citet{levy2014dependency}, however, the ``vocabulary'' of dependencies that I need to handle at one time is constrained by a PDT and tops out around 300. This results in vectors that are manageable for comparison without the need for dimensionality reduction. This is important because it means dependencies can be represented in raw text rather than as mathematical embeddings, which leaves a high degree of transparency and explainability.
+
+\section{NLP explainability for ICALL}
+\label{section:NLP-explain}
+
+this dissertation primarily relies on ``classical'' NLP, but it would be remiss without discussing the role of machine learning (ML) in NLP. Recent years have seen the rapid development of ML technologies like neural networks and deep learning. These technologies have been widely implemented in areas like NLP and computer vision, often with impressive gains in performance. They can also lead to reductions in the amount of human expertise needed to automate tasks like syntactic labeling, voice recognition and synthesis, and object and facial recognition. Naturally, this also means significant reductions in the cost of such systems. A major drawback with many such ML technologies, however is the loss of explainability. For example, \textit{word embeddings} (such as Word2Vec; \citealp{word2vec}) are ML NLP tools suitable for many tasks involving the processing of linguistic meaning or structures. Word2Vec essentially ``learns'' an approximation of the meanings and grammatical usage of words by observing them in context. Instead of relying on expert annotation of features like part-of-speech, sentence structure and morphology to train a model, the system needs only large amounts of raw text. From this text, it observes large numbers of features, such as the average distance between instances of \textit{Word A} and \textit{Word B}. It reduces these raw features to a smaller number of abstract features, or ``latent variables,'' which form a vector of numeric values; this vector then serves as a representation of a word's meaning. In a classic example, if one takes the vector for ``queen'', subtracts the vector for ``female'' and adds the vector for ``male'', the resulting vector is roughly equivalent to that of ``king''.
+
+%\lk{this is all very cf Brian Riordan's alumni talk... similar sources would be ideal}
+%For many applications, the capabilities and cost reduction of ML make it an attractive and suitable choice; this is certainly the case with many NLP tasks. The use of ML tools with learner language is problematic on at least two fronts, however. First, such tools are typically designed for and trained on well-formed, native-like text (or speech). As mentioned, these tools generally do not rely on annotation in their training data; instead, they make up for this lack of expertise by the sheer volume of training data they consume. Including real learner data on the scale required by ML tools would be impractical if not impossible for most researchers. As a result of ML tools' training on mostly native-like data, they are ill-equipped for processing the variability and ambiguity of learner language. For example, native English trained NLP tools expect regular sentence punctuation; text from a beginning English learner lacking in punctuation could therefore be misconstrued as having longer sentences and thus higher proficiency \cite{MeurersDickinson2017}.
+
+%Second, and perhaps more importantly, 
+
+Crucially, tools that rely heavily on ML are inherently less interpretable than ``classical'' NLP tools. Because classical NLP tools are trained on expert annotation, their output is generally determined by the kinds of features that are annotated in the training data. This means linguistic researchers can design NLP tools and pipelines that produce output precisely suited for their research questions, so long as they have the resources to produce adequate training corpora. This is not the case with ML based tools, however. Due to their reliance on abstract features and latent variables, these newer tools are largely ``black box'' technologies; raw data goes in and processed data comes out, but even the architect of such a system cannot explain exactly how or why the analysis was produced. Indeed, bringing explainability to ML NLP tools has only recently become an active area of research (\citealp[cf.][]{liu2018towards,danilevsky2020survey}).
 
 
+In an ICALL application, this is problematic because it means the development of a methodologically-sound feedback system for the learner is not currently possible for a system relying on ML tools; the features underlying the analysis are not accessible or interpretable. In the context of the automated scoring of language tests, an area where research on the use of NLP overlaps heavily with ICALL, the stakes are much higher and the lack of explainability can be even more problematic. Arguably, it is far better for all stakeholders if an ICALL system or test scoring system can deliver not only a score, but also a rationale for that score, such as which kinds of errors a user makes and in what contexts. This need for interpretable features was one of a few major factors in my decision to choose classical NLP tools over newer ML tools in this dissertation. I do, however, investigate the use SBERT, of a state-of-the-art sentence encoder \citep{sbert2020} both for comparison with my own system and in the hopes that future systems will investigate combining ML and classical approaches to achieve a balance of performance and explainability (see Section~\ref{sec:bert-benchmark}).
 
 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BELOW: \cite{meurers:12} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\bigskip
-%NOTES:
-%\bigskip
-%
-%for the wide range of language activities supporting significant well-formed
-%or ill-formed variation of form, meaning, or task-appropriateness of learner responses, it is
-%necessary to abstract away from the specific string entered by the learner to more general
-%classes of properties by automatically analyzing the learner input using NLP algorithms and
-%resources. 
-%
-%...
-%
-%Nagata, N. (2009). Robo-Sensei’s NLP-Based Error Detection and Feedback Generation.
-%CALICO Journal 26(3), 562–579. URL http://purl.org/calico/nagata09.pdf.
-%
-%Nagata (2009, pp. 563f) provides a clear illustration of this with an exercise taken from her
-%Japanese tutor ROBO-SENSEI in which the learner reads a short communicative context and
-%is asked to produce a sentence in Japanese that is provided in English by the system. The
-%learner response in this exercise is directly dependent on the input provided by the exercise
-%(a direct response in the terminology of Bachman \& Palmer, 1996), so that a short, seven
-%word sentence can be defined as target answer. Yet after considering possible well-formed
-%lexical, orthographic, and word order variants, one already obtains 6048 correct sentences
-%which could be entered by the learner. Considering incorrect options, even if one restricts
-%ill-formed patterns to wrong particle and conjugation choices, one obtains almost a million
-%sentences.
-%
-%...
-%
-%Complementing the analysis of form, for an ILTS to offer meaning-based, contextualized ac
-%tivities
-%it is important to provide an automatic analysis of meaning aspects, e.g., to determine
-%whether the answer given by the learner for a reading comprehension question makes sense
-%given the reading.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABOVE: \cite{meurers:12} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Image processing}
+\label{section:imageProcessing}
+
+Automatic image captioning is another active area of ML research that involves NLP and shows potential for ICALL in visual contexts. Various approaches to the problem have been proposed or implemented, with many relying on deep neural nets \cite{bai2018survey}. A common approach for these systems is to train on large libraries of captioned images, projecting the image and the text into a common embedding space to learn correlations between features of an image and its accompanying caption, and new images are captioned either by retrieving elements from known captions to complete a template, or by using a sentence encoder-decoder approach to generate a sentence directly from an image embedding (\citealp[cf.][]{karpathy2014deep,yan2015deep}). These technologies are accelerating rapidly and may one day be suitable for L2 applications like ICALL, but for now they have even more of the explainability problems seen with ML approaches to NLP like word and sentence embeddings. Moreover, given that my work pursues a data-driven approach to assessing the appropriateness of learner sentences via comparison with NS language, relying on an automatic captioning tool to provide the expertise for analysis would not be in keeping with the goals of this dissertation.
 
 
 
-%\section{Learner corpora}
-%\label{section:learnerCorpora}
-%Here I will discuss task-based learner corpora research that relates to my work. This includes discussions of task design, data collection, annotation schemes, and automatic processing. I focus in particular on the learner content analysis research conducted by two clusters of researchers: one primarily associated with The Ohio State University and consisting of Detmar Meurers and colleagues, and the other primarily associated with Educational Testing Services (ETS) and consisting of Martin Chodorow, Swapna Somasundaran and Joel Tetrault and colleagues. 
-%
-%Here are some papers I discussed briefly in my BEA 2018 paper:
-%
-%\cite{leacock:ea:14}
-%
-%\cite{kyle2015automatically}
-%
-%\cite{weigle2013english}
-%
-%\cite{amaral:meurers:user:07}
-%
-%\cite{Meurers.Dickinson-17}
-%
-%\cite{heift:schulze:07}
-%
-%\cite{somasundaran:ea:15}
-%
-%\cite{bailey:meurers:08}
-%
-%\cite{meurers2011evaluating}
-%
-%\cite{somasundaran:chodorow:14}
-%
-%\cite{cahill-et-al:14}
-%
-%\cite{ragheb:dickinson:14a}
-%
-%\cite{foster2009native}
-%
-%\cite{cho2013investigating}
-%
-%\cite{landis1977measurement}
-%
-%\cite{artstein:massimo:2008}
-%
-%\cite{tetreault-chodorow:2008:HJCL}
-%
-%\cite{tetreault:chodorow:08}
-%
-%\section{Language assessment}
-%\label{section:languageAssessment}
-%
-%\section{NLP tools and methods}
-%\label{section:NLP}
-%
-%\section{My previous work}
-%\label{section:myPreviousWork}
-%Here I will discuss the work I have previously done in this area, including the papers given in the subsections below.
-%
-%\subsection{2013}
-%\cite{king:dickinson:13}
-%
-%\begin{figure}
-%\includegraphics[width=.7\textwidth]{figures/exampleprompt2.jpg}
-%\caption{This is an example figure from \citet{king:dickinson:13}.}
-%\label{figure:KandD2013}
-%\end{figure}
-%
-%\subsection{2014}
-%\citet{king:dickinson:14}
-%
-%\subsection{2016}
-%\citep{king:dickinson:16}
-%
 %\subsubsection{Bag-of-dependencies}
 %Here we could discuss the switch to a bag-of-dependencies approach, the use of tf-idf and the use of vector cosine distance for ranking responses.
 %
 %\subsubsection{Clustering}
 %Here we could briefly mention the clustering experiments we did in the 2016 paper. But really, I'd rather not, because I don't intend to repeat them in the dissertation.
-%
-%\subsection{2018}
-%\cite{king:dickinson:18}
-%
-%\begin{figure}
-%\includegraphics[width=.7\textwidth]{figures/I29.jpg}
-%\caption{This is an example figure from \citet{king:dickinson:18}.}
-%\label{figure:KandD2018}
-%\end{figure}
 
 
-% This is a figure in landscape orientation
-%\begin{sidewaysfigure}
-%\includegraphics[width=\textwidth]{figures/exampleFigure.png}
-%\caption{This is another example Figure, rotated to landscape orientation.}
-%\label{LandscapeFigure}
-%\end{sidewaysfigure}
-
-%While there is much current work on analyzing learner language, it
-%usually focuses on grammatical error detection and correction
-%\citep[e.g.,][]{HOO2012} and less on semantic analysis.  At the same
-%time, Intelligent Computer-Assisted Language Learning (ICALL) and
-%Intelligent Language Tutoring (ILT) systems
-%\citep[e.g.,][]{heift:schulze:07, meurers:12} also tend to focus more
-%on grammatical feedback. An exception to this rule is \textit{Herr
-%  Komissar}, an ILT for German learners that includes rather robust
-%content analysis and sentence generation \citep{desmedt:95}, but this
-%involves a great deal of hand-built tools and does not connect to
-%modern NLP.  Some work addresses content assessment for short answer
-%tasks \citep{Meurers.Ziai.ea-11}, but this is still far from naturalistic,
-%more conversational interactions \citep[though, see][]{petersen:10}.
-%
-%Our overarching goal is to facilitate ILTs and language assessment tools that maximize free
-%interaction, building as much as possible from existing NLP resources.
-%While that goal is in the distant future, the more immediate goal in
-%this paper is to pinpoint the precise challenges which interactive
-%learner sentences present to constructing semantic analyses, even when
-%greatly constrained.  We approximate this by collecting data from a
-%task which models some aspects of interaction, namely a picture
-%description task (PDT), parsing it with an off-the-shelf parser,
-%extracting semantic forms, and noting the challenges throughout.
-%
-%The focus towards interaction is in accord with contemporary theory
-%and research in Second Language Acquisition (SLA) and best practices
-%in second language instruction, which emphasize the limiting of
-%explicit grammar instruction and feedback in favor of an approach that
-%subtly integrates the teaching of form with conversation and
-%task-based learning \citep{CelceMurcia:1991:GrammarPedagogy,
-%  CelceMurcia:2002:GrammarThroughContext,
-%  LarsenFreeman:1991:TeachingGrammar}.  Indeed,
+%\citep{CelceMurcia:1991:GrammarPedagogy,CelceMurcia:2002:GrammarThroughContext,LarsenFreeman:1991:TeachingGrammar}.
 %\citet{Ellis:2006:CurrentIssues} states, ``a traditional approach to
 %teaching grammar based on explicit explanations and drill-like
 %practice is unlikely to result in the acquisition of the implicit
-%knowledge needed for fluent and accurate communication.''  For our
-%purposes, this means shifting the primary task of an ICALL application
-%from analyzing grammar to evaluating semantic appropriateness and
-%accuracy.
-%
-%The data for error detection work is ideal for developing systems
-%which provide feedback on essays, but not necessarily for more
-%interactive communication.  Thus, our first step is to collect data
-%similar to what we envision processing in something like an ILT game,
-%data which---as far as we know---does not exist.  While we desire
-%relatively free production, there are still constraints; for games,
-%for example, this comes in the form of contextual knowledge (pictures,
-%rules, previous interactions).  To get a handle on variability under a
-%set of known constraints and to systematically monitor deviations from
-%target meanings, we select a PDT as a constrained task that still
-%promotes interactive communication.
-%Collecting and analyzing this data is our first major contribution, as
-%described in section~\ref{sec:data}.
-%
-%Once we have the data, we can begin to extract semantic forms, and our
-%second major contribution is to outline successes and pitfalls in
-%obtaining shallow semantic forms in interactive learner data, as
-%described in section~\ref{sec:method}, working from existing tools.
-%Although we observe a lot of grammatical variation, we will
-%demonstrate in section~\ref{sec:evaluation} how careful selection of
-%output representations (e.g., the treatment of prepositions) from an
-%off-the-shelf parser and a handful of syntax-to-semantics rules allow
-%us to derive accurate semantic forms for most types of transitive verb
-%constructions in our data.  At the same time, we will discuss the
-%difficulties in defining a true gold standard of meanings for such a
-%task.  Finally, we examine methods for automatically correcting misspellings, showing that preprocessing with spelling correction tools and language modeling can significantly reduce downstream errors. This work paves the way for increasing the range of
-%constructions and further exploring the space between free and
-%constrained productions \citep[see also the discussion
-%in][]{Amaral.Meurers-11}.
-
+%knowledge needed for fluent and accurate communication.''
 %\section{Related Work}
 %
 %In terms of our overarching goals of developing an interactive ILT,
@@ -448,21 +270,7 @@ tf-idf and distributional semantics;
 %However, prior studies have shown that native language taggers and parsers perform fairly well on the learner data in EFCAMDAT (Geertzen et al., 2014). For example, Alexopoulou, Geertzen, Korhonen, and Meurers (2015) evaluated the accuracy of extraction of relative clauses, reporting an F score of 83.9%, and found that state-of-the-art NLP tools provide reasonable quality.
 %
 %#####
-%
-%
-%
-%
-%@article{papadimitriou2021multilingual,
-%  title={Multilingual BERT, Ergativity, and Grammatical Subjecthood},
-%  author={Papadimitriou, Isabel and Chi, Ethan A and Futrell, Richard and Mahowald, Kyle},
-%  journal={Proceedings of the Society for Computation in Linguistics},
-%  volume={4},
-%  number={1},
-%  pages={425--426},
-%  year={2021}
-%}
-%###
-%
+
 %@article{yamazaki2014,
 %  title={Toward integrative CALL: A progressive outlook on the history, trends, and issues of CALL},
 %  author={Yamazaki, Kasumi},
@@ -499,32 +307,4 @@ tf-idf and distributional semantics;
 %2 CALL-related projects at CTT
 %The CALL research at the Centre for Speech Technology (CTT) focuses on building a Virtual Language Tutor, using an animated talking agent, that addresses these issues, serving as a conversa- tional partner, teacher and an untiring model of pronunciation, who can pick exercises from a training library depending on the user’s needs.
 %#####
-%#####
-%@article{heift2001intelligent,
-%  title={Intelligent language tutoring systems for grammar practice},
-%  author={Heift, Trude},
-%  journal={Zeitschrift f{\"u}r Interkulturellen Fremdsprachenunterricht},
-%  volume={6},
-%  number={2},
-%  year={2001}
-%}
-%The present paper discusses building a more flexible Web-based grammar practice environment around an Intelligent Language Tutoring System (ILTS). While ILTSs employ Natural Language Processing (NLP) and thus require programming and linguistic expertise, they provide error-specific feedback and flexibility in handling student answers. Sound, graphics and/or videos can also be implemented to achieve a more varied, authentic and contextualized learning environment.
-%#####
-%#####
-%@article{nagata:02,
-%	Author = {Noriko Nagata},
-%	Date-Added = {2010-08-12 15:04:17 -0400},
-%	Date-Modified = {2010-10-19 12:57:46 -0400},
-%	Journal = {{CALICO} Journal},
-%	Key = {system},
-%	Keywords = {ICALL, Japanese},
-%	Note = {\url{http://www.usfca.edu/japanese/CALICO02.pdf}},
-%	Number = 3,
-%	Pages = {583-599},
-%	Title = {{BANZAI}: An Application of Natural Language Processing to Web based Language Learning},
-%	Volume = 19,
-%	Year = 2002}
-%
-%The BANZAI program, however, is written in Java, which pro- vides excellent support both for sophisticated NLP programming and ap- pealing multimedia applications. As a result, the BANZAI interface is user friendly and visually appealing, making full use of digital photographs, computer graphics, pull down menus, button selections, and Japanese sounds. Each exercise in BANZAI is framed in a conversational setting, along with a relevant photographic or graphical image of Japan, and asks learners to produce a target sentence that is likely to be uttered in real communicative situations.
-
 
