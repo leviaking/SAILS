@@ -15,7 +15,7 @@ In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on 
 %In short, my earlier approach assessed each non-native speaker (NNS) response by extracting a \textit{verb(subject,object)} triple and looking for a match among triples from the native speaker (NS) responses. This involved dependency parsing the sentence then applying custom rules based on the labels, relationships and parts of speech in order to find each element of the triple. This process found moderate success, correctly assessing roughly half of NNS responses with a very small number of NS responses. Considerable weaknesses emerged, however; the rule based approach meant that it was limited in its ability to handle variation, and the use of simple triples was a hacky simplification of meaning. This lead me to the current approach, which uses a more robust representation of meaning and replaces the rule based matching with measures of semantic similarity. These changes make for a more generalizable approach.
 
 %%%% BEGIN material from Qual Paper (BEA 2013) %%%%
-\section{Rule-based study}
+\section{Rule-Based Study}
 \label{sec:pilot-study}
 This study focused on analyzing English NNS responses to a picture description task (PDT) by comparison with NS responses. It was largely intended to determine if such a task would be feasible for a single researcher using off-the-shelf tools. This meant identifying problem areas and gauging whether variation in the form and content of responses could be manageable.
 
@@ -58,7 +58,7 @@ I collected responses from 53 participants for a total of 530 sentences. There w
 Once the data had been collected, I removed a small number of low quality responses from the NS set and annotated the NNS responses for appropriateness, with respect to the content of the picture. My annotation guidelines for this labeling were minimal: \textit{Given the prompt, would the response be acceptable to most English speakers?} This simplistic approach to annotation was admittedly a weak point in the study, and in subsequent work I sought to correct it (see Chapter~\ref{chap:annotation}). The resulting corpus was used in the experiments described next.
 
 
-\subsection{Rule-based method}
+\subsection{Rule-Based Method}
 \label{sec:rule-method}
 
 The processing behind my work was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text \citep{nastase2006,bailey:meurers:08,dicaro2013}. Because dependency parsing focuses on identifying dependency relations, rather than constituents or phrase structure, it clearly labels the subject, verb and object of a sentence, which can then map to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In this study, I took a na\"ive approach in which subject, verb and object were considered sufficient for deciding whether or not a response accurately describes the visual prompt. My idea was to extract and lemmatize a \textit{verb(subj,obj)} semantic triple from the dependency parse for each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be labeled automatically as ``correct,'' while a non-match would be labeled ``incorrect.''
@@ -107,7 +107,7 @@ As for propagating relations across conjunctions, this option is less important 
 
 %Given the rule-based approach to matching \textit{verb(subject,object)} triples, many dependency relations are irrelevant for the next step of obtaining a semantic form.  For example, in this work I ignored determiner (\texttt{det}) relations between a noun and its determiner, allowing for variability in how a learner produces noun phrases. 
 
-\subsection{Semantic triple representation}
+\subsection{Semantic Triple Representation}
 \label{sec:semantic-form}
 %
 %\subsubsection{Sentence types}
@@ -356,7 +356,7 @@ Determining the sentence type was accomplished by arranging a small set of binar
 %%\textit{a man shooting a bird} vs. \textit{a man reading the
 %%  newspaper}.
 
-\subsection{Rule-based results}
+\subsection{Rule-Based Results}
 \label{sec:rule-results}
 
 Evaluating this work required addressing two major questions.  First,
@@ -469,7 +469,7 @@ Ultimately, I was not satisfied with the effectiveness of the rule-based approac
 
 
 %%%% BEGIN material from BEA 2016 %%%%
-\section{Semantic similarity study}
+\section{Semantic Similarity Study}
 \label{sec:2016work}
 %%%% 2020/05/21. Resume here. %%%% 
 
@@ -482,7 +482,7 @@ In particular, using available NLP tools, I moved away from discrete representat
 
 %Starting in Section~\ref{sec:ranking}, I explain a set of revised methods, and in Section~\ref{sec:metrics}, I discuss the results of those methods applied to the same 530 response dataset. The work and findings here became the basis of the much larger study discussed in Chapters~\ref{chap:data} through~\ref{chap:optimization}. 
 
-\subsection{Generalizing the methods}
+\subsection{Generalizing the Methods}
 \label{sec:ranking}
 
 The previous work assumed that the assessment of NNS responses
@@ -525,7 +525,7 @@ determine the importance of a piece of information among the set of NS responses
 %\label{fig:example-picture2}
 %\end{figure}
 %
-\subsection{Term representation}
+\subsection{Term Representation}
 \label{sec:response-rep}
 
 %To overcome the limitations of an incomplete GS,
@@ -582,7 +582,7 @@ This processing was applied to the collection of NS responses as well. For each 
 %The \param{xdx} model is on a par with treating the sentence as a ``bag
 %of words'' (or more accurately, a bag of lemmas), except that some function words not receiving parses (e.g., prepositions) are not included (see section~\ref{sec:syntactic-form}).
 
-\subsection{Scoring responses}
+\subsection{Scoring Responses}
 \label{sec:scoring}
 
 Taking the five term representations, my next step was to automatically score them in a way which ranks responses from most to least appropriate.  I devised four scoring approaches, each using one of two methods to \textbf{weight} response terms combined with one of two methods to \textbf{compare} the weighted NNS terms with the NS data.
