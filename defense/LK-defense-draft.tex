@@ -1,4 +1,4 @@
-\documentclass[xcolor={dvipsnames}]{beamer}
+\documentclass[handout,xcolor={dvipsnames}]{beamer}
 % MD: we can mess with this ...
 %\usetheme{Berlin}
 %\usetheme{Goettingen}
@@ -50,10 +50,10 @@
 % \usepackage{rotating}
 % \usepackage{booktabs}
 
-\title{Toward automatic content analysis of L2 English learners' sentences}
+\title{Semantic Analysis of Image-Based Learner Sentences}
 \author[Levi King]{Levi King\\
 Indiana University  }
-\date{November 3, 2020}
+\date{August 6, 2021}
 
 
 \setbeamerfont{page number in head/foot}{size=\footnotesize}
@@ -67,22 +67,22 @@ Indiana University  }
 %\vspace{-4ex}
 \begin{itemize}
 \pause
-\item Language tutoring applications (\textit{Rosetta Stone}, \textit{Duo Lingo}, etc.) rely on outdated, ineffective methods:
+\item Most intelligent computer-assisted language learning (ICALL) applications (\textit{Rosetta Stone}, \textit{Duo Lingo}, etc.) rely on outdated, ineffective methods:
 \begin{itemize}
 \pause
 \item rote memorization \& grammatical error detection; menu-based vs. free input;
 \pause
-\item \textit{pure engineering approaches}
+\item \textit{``engineering first''}
 \pause
-\item not informed by linguistic expertise, pedagogy, psychometrics
+\item not informed by second language acquisition (SLA), pedagogy, psychometrics
 \end{itemize}
 \pause
-\item Second Language Acquisition (SLA) research $\rightarrow$ communicative \& task based learning
+\item  SLA research $\rightarrow$ communicative \& task based learning
 \end{itemize}
 
 \small
 \pause
-\textit{How can we bridge this gap between engineers and SLA researchers?}
+\textit{How can we bridge this gap between ICALL and SLA researchers?}
 
 \begin{itemize}
 \pause
@@ -114,38 +114,89 @@ Indiana University  }
 %\end{itemize}
 %\end{frame}
 
-
 \begin{frame}
-\frametitle{Accomplishments}
+\frametitle{Research Questions}
 %\vspace{-4ex}
 \small
 \pause
-Developed basic mechanism:
+%My work here relies on images to constrain the range of responses to a predictable and manageable set of meanings. For semantic analysis of these image-based sentences to proceed, one must have a notion of what are necessary and sufficient parts of the image for NNSs to describe. To annotate this by hand is costly, whereas collecting comparable responses from NSs is relatively easy. This leads directly to the first two research questions:
 \begin{itemize}
 \pause
-\item dependency parsing \& lemmatization \pause $\rightarrow$ dependency-level tf-idf \pause $\rightarrow$ vectorize NS \& NNS responses \pause $\rightarrow$ cosine $=$ response score;
+\vspace{2em}
+\item[RQ1.]{Are the responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a PDT setting?} %What differences exist and what NLP tools are needed to account for them?
+\vspace{2em}
 \pause
-\item Optimized system settings:
+\item[RQ2.]{In the constrained communicative environment of a PDT, what are appropriate response and model representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
+%As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
+
+%With the goal of automatic response scoring, these desired components of linguistic analysis and representation can guide decisions regarding the forming of an appropriate NLP pipeline. The next three research questions primarily address the relevant NLP concerns:
 \pause
-\begin{itemize}
-\item item type: intransitive, transitive, ditransitive actions
-\pause
-\item item complexity (type-to-token ratios, avg NS response length)
-\end{itemize}
-\end{itemize}
-\pause
-But first -- \textit{all of this required appropriate data!}
-\begin{itemize}
-\pause
-\item evaluating my system, finding trends, optimizing;
-\pause
-\item created task, collected data from 499 participants; $\approxeq$14,000 responses, NS $+$ NNS;
-\pause
-\item developed \& implemented meaning-focused annotation scheme;
-\pause
-\item established feature weights for scoring \& ranking NNS (benchmark);
+\vspace{2em}
+\item[RQ3.]{What kinds of existing NLP tools and language resources can be integrated to form a content analysis system for open response language learning tasks?}
+%As discussed later, this work attempts to take statistical methods traditionally used to analyze the frequencies of individual words in sentences and apply those methods to the frequencies of syntactic dependencies in sentences, as one means of deriving semantic information from syntactic tools. Thus, the fourth research question is:
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Research Questions}
+%\vspace{-4ex}
+\small
+\begin{itemize}
+\pause
+\item[RQ4.]{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance? Is a bag-of-words approach alone adequate for our needs?}
+%Given that the system has thus far relied primarily on a parser, lemmatizer and spelling correction module, without the inclusion of semantic tools, the fifth research question is: %and given NLP trends that focus on surface forms over deeper processing...
+\pause
+\vspace{2em}
+\item[RQ5.]{Can the accuracy of the system be improved by the inclusion of semantic information from tools like semantic role labelers, WordNet, or word and sentence embeddings?}
+%%Are increases in performance valuable enough to offset the computational costs? In other words, how deep should the processing be in order to achieve our goal of providing a meaning-based ICALL component that is lightweight and practical?} %%%**How deep should the processing be?
+
+%The processing of unannotated responses is a primary goal of this work, but in order to evaluate the output of my system, manually annotated responses are necessary. In keeping with the motivations of this dissertation, the annotation should capture response accuracy and appropriateness. My sixth and final research question focuses on these concerns:
+\pause
+\vspace{2em}
+\item[RQ6.]{What is the annotation scheme for this task and can the system perform within the range of human performance? Relatedly, what does it mean for a response to be \textit{appropriate} and how can this be captured with annotation?}
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Accomplishments}
+%%\vspace{-4ex}
+%\small
+%\pause
+%Developed basic mechanism:
+%\begin{itemize}
+%\pause
+%\item dependency parsing \& lemmatization \pause $\rightarrow$ dependency-level tf-idf \pause $\rightarrow$ vectorize NS \& NNS responses \pause $\rightarrow$ cosine $=$ response score;
+%\pause
+%\item Optimized system settings:
+%\pause
+%\begin{itemize}
+%\item item type: intransitive, transitive, ditransitive actions
+%\pause
+%\item item complexity (type-to-token ratios, avg NS response length)
+%\end{itemize}
+%\end{itemize}
+%\pause
+%But first -- \textit{all of this required appropriate data!}
+%\begin{itemize}
+%\pause
+%\item evaluating my system, finding trends, optimizing;
+%\pause
+%\item created task, collected data from 499 participants; $\approxeq$14,000 responses, NS $+$ NNS;
+%\pause
+%\item developed \& implemented meaning-focused annotation scheme;
+%\pause
+%\item established feature weights for scoring \& ranking NNS (benchmark);
+%\end{itemize}
+%\end{frame}
+%
+
+\begin{frame}
+\frametitle{Pilot Study}
+
+(all in 1 slide if possible)
+
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Data collection}
@@ -153,7 +204,7 @@ But first -- \textit{all of this required appropriate data!}
 I chose to use picture description task (PDT) data because:
 \begin{itemize}
 \pause
-\item Most tutoring applications rely on images;
+\item Most ICALL applications rely on images;
 \pause
 \item Simple images constrain the range of likely responses.
 \end{itemize}
@@ -181,49 +232,66 @@ What is the girl doing? & What is the boy doing? & What is the boy doing? \\
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Task design}
-\vspace{-2ex}
-\pause
-\begin{table}
-\small
-\begin{center}
-\begin{tabular}{c r}
-& \multirow{3}{*}{\includegraphics[width=0.22\columnwidth]{figures/rake.png}} \\
-     \multirow{3}{*}{The importance of task design; one example:} & \\
-& \\
-& \\
-What is the man doing? & \\
-\end{tabular}
-\end{center}
-\end{table}
-\pause
-NS responses:
-\begin{itemize}
-\pause
-\item He's \textbf{raking} the leaves.
-\pause
-\item The man is \textbf{raking} leaves.
-\end{itemize}
-\pause
-\smallskip
-NNS responses:
-\pause
-\begin{itemize}
-\item The man is cleaning the yard.
-\pause
-\item He is piling up leaves.
-\end{itemize}
-\smallskip
-\pause
-This is a coverage problem for my approach.
-\pause
+%\begin{frame}
+%\frametitle{Task design}
+%\vspace{-2ex}
+%\pause
+%\begin{table}
+%\small
+%\begin{center}
+%\begin{tabular}{c r}
+%& \multirow{3}{*}{\includegraphics[width=0.22\columnwidth]{figures/rake.png}} \\
+%     \multirow{3}{*}{The importance of task design; one example:} & \\
+%& \\
+%& \\
+%What is the man doing? & \\
+%\end{tabular}
+%\end{center}
+%\end{table}
+%\pause
+%NS responses:
+%\begin{itemize}
+%\pause
+%\item He's \textbf{raking} the leaves.
+%\pause
+%\item The man is \textbf{raking} leaves.
+%\end{itemize}
+%\pause
+%\smallskip
+%NNS responses:
+%\pause
+%\begin{itemize}
+%\item The man is cleaning the yard.
+%\pause
+%\item He is piling up leaves.
+%\end{itemize}
+%\smallskip
+%\pause
+%This is a coverage problem for my approach.
+%\pause
+%
+%Solution? \pause Ask NS for \textbf{two} different responses.
+%\end{frame}
 
-Solution? \pause Ask NS for \textbf{two} different responses.
+\begin{frame}
+\frametitle{Data collection}
+
+NTS:
+
+Explain:
+\begin{itemize}
+\item{targeted vs untargeted}
+\item{familiar vs crowdsourced}
+\item{first vs second responses}
+\end{itemize}
+Describe:
+\begin{itemize}
+\item{participants, resulting dataset: total responses, demographics}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Features}
+\frametitle{Annotation Features}
 \pause
 Feature requirements:
 \begin{itemize}
@@ -233,15 +301,15 @@ Feature requirements:
 \item \textit{validity}: directly testing for the desired constructs;
 \end{itemize}
 \pause
-First iteration:
+First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
 \begin{itemize}
 \pause
-\item \textbf{accuracy} \& \textbf{native-likeness}: \pause not operationalizable;
+\item \textbf{2}: $+$A, $+$NL $>$ \textbf{1}: $+$A, $-$NL $>$ \textbf{0}: $-$A, $-$NL
 \pause
-\item e.g., response is accurate w.r.t. prompt but \textit{adds unverifiable details}; is this \textit{accurate}?
+\item Not operationalizable: e.g., response is accurate w.r.t. prompt but adds unverifiable details; is this still \textit{accurate}?
 \end{itemize}
 \pause
-Several iterations later:
+Several iterations later; 5 binary features:
 \begin{itemize}
 \pause
 \item \textbf{Core event}: \pause captures main action
@@ -259,7 +327,7 @@ Several iterations later:
 \end{frame}
 
 \begin{frame}
-\frametitle{Feature annotation}
+\frametitle{Annotation}
 \begin{table}[htb!]
 \small
 \begin{center}
@@ -564,6 +632,22 @@ p5 & 0.85 & 3 & 0.77 & 3 & 0.20 & 3 \\
 \item \textit{first} for models containing only the first response from NS (vs a \textit{mix} of first and second responses)
 \end{itemize}
 \endgroup
+\end{frame}
+
+\begin{frame}
+\frametitle{Results \& Optimization}
+NTS: Multiple slides; describe most salient findings
+\end{frame}
+
+\begin{frame}
+\frametitle{Summary}
+NTS: one slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Outlook}
+NTS: one slide
+\end{frame}
 
 %\begingroup
 %\setlength{\tabcolsep}{4pt} % Default value: 6pt
@@ -589,44 +673,44 @@ p5 & 0.85 & 3 & 0.77 & 3 & 0.20 & 3 \\
 %\end{center}
 %\end{table}
 %\endgroup
-\end{frame}
+%\end{frame}
 
-\begin{frame}
-\frametitle{Finding trends}
-From the full set of 360 Spearman correlation scores, I used various subsets of scores to generate hierarchical clusters of the 30 items. I've found some clustering according to verb type (intransitive, transitive or ditransitive), but this trend is not very strong.
-
-\medskip
-
-\medskip
-I'm currently exploring features other than verb type to see if they correlate with Spearman and can thus help predict optimal system configurations for new items. These features relate to item complexity: type-to-token ratios for the collection of NS responses; mean/median leave-one-out system scores for the NS collection.
-\end{frame}
-
-\begin{frame}
-\frametitle{Future directions}
-Other predictive features: image complexity (compression; entropy)
-
-\medskip
-
-Feedback: Responses scoring below a threshold should be ``recast'' as the most similar NS response (with S_{wa} $=$ 1).
-
-Augment this with SBERT but rely on my system to find appropriate feedback.
-
-\medskip
-
-For some contexts (e.g., tutoring vs testing), an oracle ranking by the \textit{core event} feature alone may be preferable. Because the feature is binary, Spearman would not be appropriate, so average precision or T-test scores could be used to optimize configurations.
-
-\medskip
-
-My NNS participants were $>$90\% L1 Chinese. I'd love to have an equivalent dataset for another L1 for comparison and to attempt L1-specific optimization.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Generalizing}
-
-In a globalized world, we need to be able to analyze speech and text from NNS of English (and other languages). In high stakes contexts, processing should be adaptable, able to abstract from surface form to meaning, and maintain a degree of transparency and explainability. 
-
-\end{frame}
+%\begin{frame}
+%\frametitle{Finding trends}
+%From the full set of 360 Spearman correlation scores, I used various subsets of scores to generate hierarchical clusters of the 30 items. I've found some clustering according to verb type (intransitive, transitive or ditransitive), but this trend is not very strong.
+%
+%\medskip
+%
+%\medskip
+%I'm currently exploring features other than verb type to see if they correlate with Spearman and can thus help predict optimal system configurations for new items. These features relate to item complexity: type-to-token ratios for the collection of NS responses; mean/median leave-one-out system scores for the NS collection.
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Future directions}
+%Other predictive features: image complexity (compression; entropy)
+%
+%\medskip
+%
+%Feedback: Responses scoring below a threshold should be ``recast'' as the most similar NS response (with S_{wa} $=$ 1).
+%
+%Augment this with SBERT but rely on my system to find appropriate feedback.
+%
+%\medskip
+%
+%For some contexts (e.g., tutoring vs testing), an oracle ranking by the \textit{core event} feature alone may be preferable. Because the feature is binary, Spearman would not be appropriate, so average precision or T-test scores could be used to optimize configurations.
+%
+%\medskip
+%
+%My NNS participants were $>$90\% L1 Chinese. I'd love to have an equivalent dataset for another L1 for comparison and to attempt L1-specific optimization.
+%
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Generalizing}
+%
+%In a globalized world, we need to be able to analyze speech and text from NNS of English (and other languages). In high stakes contexts, processing should be adaptable, able to abstract from surface form to meaning, and maintain a degree of transparency and explainability. 
+%
+%\end{frame}
 
 
 
