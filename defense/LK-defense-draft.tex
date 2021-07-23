@@ -121,7 +121,7 @@ Indiana University  }
 \begin{itemize}
 \pause
 \vspace{2em}
-\item[RQ1.]{Are the responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a PDT setting?} %What differences exist and what NLP tools are needed to account for them?
+\item[RQ1.]{Are the responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a picture description task (PDT) setting?} %What differences exist and what NLP tools are needed to account for them?
 \vspace{2em}
 \pause
 \item[RQ2.]{In the constrained communicative environment of a PDT, what are appropriate response and model representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
@@ -189,11 +189,158 @@ Indiana University  }
 %
 
 \begin{frame}
-\frametitle{Pilot Study}
-
-(all in 1 slide if possible)
-
+\frametitle{Pilot Study Data}
+\begin{small}
+\begin{figure}[htb!]
+\begin{center}
+\bgroup
+\def\arraystretch{1.45}
+\begin{tabular}{|c|c|}
+\hline
+%[trim=1200 400 1500 1500,clip,width=\textwidth]
+\multirow{5}{*}{\includegraphics[trim=0 50 0 20,clip,width=0.28\columnwidth]{figures/exampleprompt.jpg}} &
+\textbf{Response (L1)} \\
+\cline{2-2}
+& He is droning his wife pitcher. (Ar) \\
+\cline{2-2}
+& The artist is drawing a pretty women. (Ch) \\
+\cline{2-2}
+& The artist is painting a portrait of a lady. (En) \\
+\cline{2-2}
+& The painter is painting a woman's paint. (Sp) \\
+%\cline{2-2}
+%& The man is painting a woman's picture. (Ko) \\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+\caption{Example item from the pilot study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
+\label{fig:example-picture}
+\end{figure}
+\end{small}
+\vspace{-1em}
+\pause
+\begin{itemize}
+\item 10 (transitive) PDT items $\times$ 53 participants $=$ 530 responses;
+\pause
+\begin{itemize}
+\item 14 NSs (IU grad students), 39 NNSs (IEP students);
+\end{itemize}
+\pause
+\item Annotation: \textit{Given the prompt, would the response be acceptable to most English speakers? Acceptable/unacceptable}
+\begin{itemize}
+\item 1 annotator (me)
+\end{itemize}
+\pause
+\end{itemize}
+%\begin{figure}[htb!]
+%\begin{center}
+%\begin{tabular}{|c||c|}
+%\hline
+%\includegraphics[width=0.40\columnwidth]{figures/exampleprompt.jpg} & \includegraphics[width=0.40\columnwidth]{figures/exampleprompt2.jpg}\\
+%\hline
+%\textbf{Response (L1)} & \textbf{Response (L1)} \\
+%\hline
+%He is droning his wife pitcher. (Ar) & The man killing the beard. (Ar) \\
+%\hline
+%The artist is drawing a pretty women. (Ch) & A man is shutting a bird. (Ch) \\
+%\hline
+%The artist is painting a portrait of a lady. (En) & A man is shooting a bird. (En) \\
+%\hline
+%The painter is painting a woman's paint. (Sp) & The man shouted the bird. (Sp)\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\caption{Example items from the previous study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
+%\label{fig:example-picture}
+%\end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{Pilot Study Processing}
+\textbf{Rule-based} triple extraction and matching
+
+\medskip
+\pause
+Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ \textit{V(S,O)} extraction rules;
+
+\pause
+\medskip
+Compare NNS \textit{V(S,O)} \& NS \textit{V(S,O)} list $\rightarrow$ covered / not covered;
+\pause
+
+\begin{itemize}
+\pause
+\item Dependency-based
+\begin{itemize}
+\pause
+\item Captures aspects of form and meaning;
+\pause
+\item Subjects, objects, verbs clearly labeled;
+\end{itemize}
+\pause
+\item V(S,O) extraction
+\begin{itemize}
+\pause
+\item Decision tree based on dependency indexing \& labels, POS;
+\pause
+\item Custom for my transitive PDT, not generalizable, not robust;
+\pause
+\item $\approx$92\% accurate, $\approx$8\% extraction errors;
+\end{itemize}
+\pause
+\item Overall accuracy: 58.9\%
+\pause
+\begin{itemize}
+\pause
+\item I.e., \textit{Acceptable} covered, \textit{unacceptable} not covered;
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot Study Processing}
+\textbf{Semantic similarity} scoring
+
+\medskip
+\pause
+Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ term frequency-inverse document frequency (tf-idf; ``term'' $=$ lemmatized dependency);
+
+\pause
+\medskip
+NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
+\pause
+
+\begin{itemize}
+\pause
+\item tf-idf: Score dependencies according to importance; 
+%\begin{itemize}
+%\pause
+%\item Score dependencies according to importance/salience;
+%\end{itemize}
+\pause
+\item Vectorize \& Score
+\begin{itemize}
+\pause
+\item Get \textit{sorted union set} of NS and NNS dependencies;
+\pause
+\item NNS vector: Replace deps with their \textbf{NNS} tf-idf scores;
+\pause
+\item NS vector: Replace deps with their \textbf{NS} tf-idf scores;
+%\end{itemize}
+%\pause
+%\item Score
+%\pause
+%\begin{itemize}
+\pause
+\item Response score $=$ \textit{cosine distance} for NNS \& NS vectors;
+\end{itemize}
+\item Mean Average Precision (MAP) \textit{acceptable} responses: $\approx$51\%
+\item Process is more robust \& generalizable;
+\item Dataset (especially NS models) and annotation are weak;
+\end{itemize}
+\end{frame}
+
 
 
 \begin{frame}
@@ -307,7 +454,7 @@ First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
 \item Not operationalizable: e.g., response is accurate w.r.t. prompt but adds unverifiable details; is this still \textit{accurate}?
 \end{itemize}
 \pause
-Several iterations later; 5 binary features:
+Several iterations later, 5 binary features:
 \begin{itemize}
 \pause
 \item \textbf{Core event}: \pause captures main action
@@ -325,7 +472,7 @@ Several iterations later; 5 binary features:
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation}
+\frametitle{Annotation Features}
 \begin{table}[htb!]
 \small
 \begin{center}
