@@ -33,6 +33,15 @@
 
 \makeatother
 
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newcommand{\feat}[1]{\textsc{#1}}
+\newcommand{\param}[1]{\texttt{#1}}
+\newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
+\newcommand{\lk}[1]{\marginpar{\scriptsize LK: #1}}
+% for removing all marginpars ==> good for final submission! %%nice trick!
+\renewcommand{\marginpar}[1]{}
+
 %%%
 \setbeamertemplate{itemize/enumerate body begin}{\small}
 \setbeamertemplate{itemize/enumerate subbody begin}{\small}
@@ -189,7 +198,7 @@ Indiana University  }
 %
 
 \begin{frame}
-\frametitle{Pilot Study Data}
+\frametitle{Pilot study: Data}
 \begin{small}
 \begin{figure}[htb!]
 \begin{center}
@@ -257,8 +266,8 @@ Indiana University  }
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot Study Processing}
-\textbf{Rule-based} triple extraction and matching
+\frametitle{Pilot study: Processing}
+First approach: \textbf{Rule-based} triple extraction and matching
 
 \medskip
 \pause
@@ -299,8 +308,8 @@ Compare NNS \textit{V(S,O)} \& NS \textit{V(S,O)} list $\rightarrow$ covered / n
 \end{frame}
 
 \begin{frame}
-\frametitle{Pilot Study Processing}
-\textbf{Semantic similarity} scoring
+\frametitle{Pilot study: Processing}
+Second approach: \textbf{Semantic similarity} scoring
 
 \medskip
 \pause
@@ -335,47 +344,15 @@ NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
 \pause
 \item Response score $=$ \textit{cosine distance} for NNS \& NS vectors;
 \end{itemize}
-\item Mean Average Precision (MAP) \textit{acceptable} responses: $\approx$51\%
+\item Rank by scores \& calculate Mean Average Precision (MAP);
+\begin{itemize}
+\item MAP \textit{acceptable} responses: $\approx$51\%
+\end{itemize}
 \item Process is more robust \& generalizable;
 \item Dataset (especially NS models) and annotation are weak;
 \end{itemize}
 \end{frame}
 
-
-
-\begin{frame}
-\frametitle{Data collection}
-\pause
-I chose to use picture description task (PDT) data because:
-\begin{itemize}
-\pause
-\item Most ICALL applications rely on images;
-\pause
-\item Simple images constrain the range of likely responses.
-\end{itemize}
-\pause
-\begin{table}[width=.8\columnwidth]\small
-\begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-10 intransitive items & 10 transitive items & 10 ditransitive items \\
-\hline
-{\includegraphics[width=0.2\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.2\columnwidth]{figures/I02.jpg}} & {\includegraphics[width=0.25\columnwidth]{figures/I21.jpg}} \\
-\hline
-What is the girl doing? & What is the boy doing? & What is the boy doing? \\
-\hline
-\end{tabular}
-%\caption{\label{tab:example-pdt-items} PDT example images with their targeted questions. In the untargeted form, the question for each is \textit{What is happening?} From left to right, the examples represent one intransitive, transitive and ditransitive item.}
-\end{center}
-\end{table}
-\smallskip
-\begin{itemize}
-\pause
-\item 499 participants: 358 NS (crowdsourced), 141 NNS (ESL students)
-\pause
-\item 30 items: Roughly 300 NS responses \& 140 NNS responses per item
-\end{itemize}
-\end{frame}
 
 %\begin{frame}
 %\frametitle{Task design}
@@ -419,41 +396,210 @@ What is the girl doing? & What is the boy doing? & What is the boy doing? \\
 %\end{frame}
 
 \begin{frame}
-\frametitle{Data collection}
+\frametitle{Main study: Data collection}
+\medskip
 
-NTS:
+PDT with very simple images only:
 
-Explain:
+\begin{figure}[htb!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+{\includegraphics[width=0.38\columnwidth]{figures/throw-original.jpg}} & {\includegraphics[width=0.38\columnwidth]{figures/I21cropped.jpg}} \\
+\hline
+Original image & Simplified PDT image \\
+\hline
+\end{tabular}
+%\caption{\label{fig:image-prep} All non-essential details were removed from the PDT images in order to focus participants' attention on the main action.}
+\end{center}
+\end{figure}
+
+Intended to focus participants' attention on the main action
+\end{frame}
+
+\begin{frame}
+\frametitle{Main study: Data collection}
+
+Two PDT prompt versions:
+%\begin{itemize}
+%\item \textbf{Targeted} 
+%\begin{itemize}
+%\item \textit{What is the $<$subject$>$ doing?} 
+%\end{itemize}
+%\item \textbf{Untargeted} 
+%\begin{itemize}
+%\item \textit{What is happening?} 
+%\end{itemize}
+%\end{itemize}
+\begin{figure}[htb!]
+\begin{center}
+%\begin{tabular}{|c|c|}
+\begin{tabular}{|C{50mm}|C{50mm}|}
+\hline
+\textbf{Targeted} & \textbf{Untargeted} \\
+\hline
+{\includegraphics[trim=0 50 0 50,clip,width=0.33\columnwidth]{figures/I10.jpg}} & {\includegraphics[trim=0 50 0 50,clip,width=0.33\columnwidth]{figures/I10.jpg}} \\
+\hline
+\textit{What is \textbf{the baby} doing?} & \textit{What is happening?} \\
+\hline
+\end{tabular}
+%\caption{\label{fig:image-prep} All non-essential details were removed from the PDT images in order to focus participants' attention on the main action.}
+\end{center}
+\end{figure}
+
+Intended for exploring the specificity needed for my approach
+
+\end{frame}
+%
+%\item{familiar vs crowdsourced}
+%\item{first vs second responses}
+%\end{itemize}
+%Describe:
+%\begin{itemize}
+%\item{participants, resulting dataset: total responses, demographics}
+%\end{itemize}
+%\end{frame}
+
+
+\begin{frame}{Main study: Data collection}
+
+The pilot study \textit{rake} problem:
+
+
+\begin{figure}[htb!]
+%[width=0.8\columnwidth]
+\begin{center}
+\bgroup
+\def\arraystretch{1.25}
+\begin{tabular}{|C{35mm}|C{65mm}|}
+\hline
+\multirow{5}{*}{\includegraphics[trim=270 90 300 100,clip,width=0.34\columnwidth]{figures/rake.jpg}} &
+\textbf{NNS Responses} \\
+\cline{2-2}
+& The gardener is \textit{cleaning} the street. \\
+\cline{2-2}
+& a man \textit{removing} the tree leafs. \\
+\cline{2-2}
+& The man is \textit{sweeping} the floor. \\
+\cline{2-2}
+& A man is \textit{gathering} lots of leafs. \\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+%\caption{NNSs described this item in a variety of ways, while 100\% of NSs used the verb \textit{rake}.}
+\label{fig:pilot-raking}
+\end{figure}
+
 \begin{itemize}
-\item{targeted vs untargeted}
-\item{familiar vs crowdsourced}
-\item{first vs second responses}
+\item 100\% of NS used the verb \textit{rake};
+\begin{itemize}
+\item NNS responses without \textit{rake} are penalized;
 \end{itemize}
-Describe:
-\begin{itemize}
-\item{participants, resulting dataset: total responses, demographics}
+\item I address this by instructing NS to provide two non-identical responses;
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation Features}
-\pause
-Feature requirements:
+\frametitle{Main study: Data collection}
+
+3 verb types:
+
+\begin{table}[width=.8\columnwidth]\small
+\begin{center}
+\begin{tabular}{|C{33.5mm}|C{34mm}|C{33.5mm}|}
+\hline
+10 \textbf{intransitive} items & 10 \textbf{transitive} items & 10 \textbf{ditransitive} items \\
+\hline
+{\includegraphics[width=0.2\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.2\columnwidth]{figures/I02.jpg}} &
+{\includegraphics[trim=21 90 65 110,clip,width=0.25\columnwidth]{figures/I17.jpg}} \\
+\hline
+What is the girl doing? & What is the boy doing? & What is the girl doing? \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%\smallskip
+%\begin{itemize}
+%\pause
+%\item 499 participants: 358 NS (crowdsourced), 141 NNS (ESL students)
+%\pause
+%\item 30 items: Roughly 300 NS responses \& 140 NNS responses per item
+%\end{itemize}
+
+Intended for exploring whether my approach can generalize to a broader range of sentence types
+\end{frame}
+
+\begin{frame}
+\frametitle{Main study: Data collection}
+\vspace{.5em}
+499 participants, 13,533 responses:
 \begin{itemize}
-\pause
-\item \textit{reliablity}: consistently annotated by multiple humans;
-\pause
-\item \textit{validity}: directly testing for the desired constructs;
+\item 141 NNSs (English Language Improvement Program at IU);
+\begin{itemize}
+\item 125 Mandarin, 4 Korean, 3 Burmese, 2 Hindi; 1 each: Arabic, Indonesian, German, Gujarati, Spanish, Thai, Vietnamese;
 \end{itemize}
+\vspace{.2em}
+\item 358 NSs:
+\begin{itemize}
+\item 329 \param{crowdsourced}, purchased via SurveyMonkey;
+\item 29 \param{familiar}, unpaid colleagues;
+\end{itemize}
+\end{itemize}
+
+\vspace{-.2em}
+\begin{small}
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l||r|r||r|}
+\hline
+& \multicolumn{3}{c|}{Response Counts} \\
+\hline
+ Group & First & Second & Total \\
+\hline
+\hline
+NNS & 4290 & 0 & 4290 \\
+\hline
+\hline
+NS (all) & 4634 & 4609 & 9243 \\ %%LK: Yes, 0.949 is correct in both cases here
+\hline
+\multicolumn{1}{|r||}{\param{Familiar}} & 642 & 641 & 1283 \\ 
+\hline
+\multicolumn{1}{|r||}{\param{Crowdsrc}} & 3992 & 3968 & 7960 \\
+\hline
+\hline
+Total & 8924 & 4609 & \textbf{13,533} \\
+\hline
+\end{tabular}
+%\caption{\label{tab:response-counts} First and second response counts for the SAILS Corpus participant groups. Familiar (FNS) and crowdsourced (CNS) are subgroups of NS. NNS participants are not asked to provide a second response.}
+\end{center}
+\end{table}
+\end{small}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Annotation features}
 \pause
+%Feature requirements:
+%\begin{itemize}
+%\pause
+%\item \textit{reliablity}: consistently annotated by multiple humans;
+%\pause
+%\item \textit{validity}: directly testing for the desired constructs;
+%\end{itemize}
+%\pause
 First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
 \begin{itemize}
 \pause
 \item \textbf{2}: $+$A, $+$NL $>$ \textbf{1}: $+$A, $-$NL $>$ \textbf{0}: $-$A, $-$NL
 \pause
 \item Not operationalizable: e.g., response is accurate w.r.t. prompt but adds unverifiable details; is this still \textit{accurate}?
+\item Not \textit{reliable}, not \textit{valid};
 \end{itemize}
 \pause
+\vspace{.6em}
 Several iterations later, 5 binary features:
 \begin{itemize}
 \pause
@@ -472,7 +618,7 @@ Several iterations later, 5 binary features:
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation Features}
+\frametitle{Annotation features}
 \begin{table}[htb!]
 \small
 \begin{center}
@@ -499,7 +645,7 @@ He may get fat eating. & 0 & 0 & 1 & 1 & 0 \\
 \end{frame}
 
 \begin{frame}
-\frametitle{Feature reliability}
+\frametitle{Annotation features}
 \pause
 Inter-rater reliability for two annotators and 10\% of the dataset:
 \pause
@@ -523,7 +669,7 @@ Interpretability & 0.818 & 0.682 & 0.919 & 0.744 \\
 \hline
 Verifiability & 0.845 & 0.719 & 0.968 & 0.884 \\
 \hline
-\pause \\
+%\pause \\
 \hline
 Intransitive & 0.863 & 0.758 & 0.978 & 0.910 \\
 \hline
@@ -538,20 +684,50 @@ Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\
 
 \begin{frame}
 \frametitle{Weighting features}
-\pause
+
+%\vspace{-2em}
+Problem: My system provides a similarity score between 0 and 1. How can I evaluate system performance?
+
+\vspace{1em}
+Feature-level performance:
 \begin{itemize}
-\item Features do not contribute equally to response ``goodness''
-\pause
-\item Raters perform holistic preference test (with annotations hidden)
+\item \textbf{MAP} to see how system rankings predict \textbf{individual features};
+\begin{itemize}
+\item Compare with? Some \textit{holistic benchmark ranking} MAP;
 \end{itemize}
+\end{itemize}
+
+\vspace{.3em}
+Holistic performance (response quality):
+\begin{itemize}
+\item \textbf{Spearman} rank correlation: Compare system rankings with some \textit{holistic benchmark ranking};
+%\begin{itemize}
+%\item 
+\end{itemize}
+%\end{itemize}
+
+I need \textbf{benchmark response rankings} for the NNS test set.
+
+\vspace{1em}
+Solution: Determine feature weights and apply to annotations to obtain benchmark holistic scores and then rankings.
+\end{frame}
+
+\begin{frame}
+\frametitle{Weighting features}
+\begin{small}
+\vspace{1ex}
+Raters perform holistic preference test (blind to annotations)
 \pause
 \vspace{-2ex}
 \begin{table}
-\scriptsize
+%\scriptsize
+\footnotesize
 \begin{center}
+\bgroup
+\def\arraystretch{1.1}
 \begin{tabular}{|=l|+c||+c|+c|+c|+c|+c|}
 \hline
-\textit{What is the boy doing?} & Pref? & C & A & G & I & V \\
+\textit{What is the boy doing?} & Pref? & Core & Ansr & Gram & Intrp & Verif \\
 \hline
 \hline
 \rowstyle{\color{RoyalBlue}}He is eating food. & \textbf{yes} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} \\
@@ -566,7 +742,7 @@ Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\
 \hline
 \pause \\
 \hline
-\only<3->{\rowstyle{\color{RoyalBlue}}The child is about to eat pizza. & \textbf{yes} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1}} \\
+\only<3->{\rowstyle{\color{RoyalBlue}}{\scriptsize The child is about to eat pizza.} & \textbf{yes} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1}} \\
 \hline
 \uncover<3->{\rowstyle{\color{Maroon}}he eating. & no & 0 & 1 & 0 & 1 & 1} \\
 \hline
@@ -586,83 +762,204 @@ Feature weight &  & .333 & .167 & .167 & .167 & .167} \\
 \uncover<5->{$^*$Real feature weight &  & .365 & .093 & .055 & .224 & .263} \\
 \hline
 \end{tabular}
+\egroup
 \end{center}
 \end{table}
+\end{small}
 \end{frame}
 
 \begin{frame}
-\frametitle{Preference reliability (feature weights)}
+\frametitle{Weighting features}
+
+\vspace{1em}
+
+Preferences are reliable:
+
+\vspace{1em}
+
+Agreement for two annotators on a sample of 300 response pairs:
+
+\vspace{1em}
+
 \begin{table}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
- Chance Agree & Observed Agree & Kappa \\
+ Chance Agree & Observed Agree & Cohen's Kappa \\
 \hline
 0.621 & 0.883 (265/300) & 0.692 \\
 \hline
 \end{tabular}
-\caption{\label{tab:ABAgreement} Preference task agreement scores for two annotators on a sample of 300 response pairs; expected chance agreement, observed agreement and Cohen's Kappa.}
+%\caption{\label{tab:ABAgreement} Preference task agreement scores for two annotators on a sample of 300 response pairs; expected chance agreement, observed agreement and Cohen's Kappa.}
 \end{center}
 \end{table}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Weighted annotation scores}
+\frametitle{Benchmark rankings}
 \small
 \begin{itemize}
 \pause
-\item Calculate weighted annotation score (S_{wa}) for each NNS response;
+\item Obtain weighted annotation scores (WAS) by applying feature weights to binary annotations;
 \pause
-\item Rank by S_{wa} ($\rightarrow$ R_{wa}); use this as gold standard or benchmark;
+\item Rank NNS test set responses by WAS to obtain weighted annotation ranking (WAR);
 \pause
-\begin{itemize}
-\item Score system output: R_{wa} vs. system ranking $\rightarrow$ Spearman $\rho$
 \end{itemize}
-\end{itemize}
-\pause
-\begingroup
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
-\begin{table}
-%\tiny
-%\begin{table}[t!] This line is giving me trouble when I go to typeset
+
+
+\vspace{-1em}
+\begin{footnotesize}
+\begin{table}[htb!]
+%Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \begin{center}
-%\begin{tabular}{|p{3.7cm}|c|c|c|c|c|}
-\begin{tabular}{|l|c|c|c|c|c||l|c|}
-%\hline
-%\multicolumn{6}{|c|}{\includegraphics[width=0.45\columnwidth]{figures/I02.jpg}} \\
-%\multicolumn{6}{|c|}{\includegraphics[width=0.3\columnwidth]{figures/I02.jpg}} \\
+%\begin{tabular}{|l||r|r|r|r|r||r|r|}
+\begin{tabular}{|p{2.7cm}||p{.7cm}|p{.7cm}|p{.7cm}|p{.7cm}|p{.7cm}|p{.7cm}|p{.6cm}|}
 \hline
-%\multicolumn{3}{|l|}{What is the woman doing? [Intransitive]} \\
-\textit{What is the boy doing?} & C & A & G & I & V & S_{wa} & R_{wa} \\
+\textit{What is happening?} & C & A & G & I & V & WAS & WAR \\
 \hline
 \hline
-The boy is eating. & 0 & 1 & 1 & 1 & 1 & 0.635 & 4 \\
+The boy is eating pizza & 0.365 & 0.093 & 0.055 & 0.224 & 0.263 & 1.000 & 1 \\
 \hline
-A baby is eating pizza & 0 & 0 & 1 & 1 & 0 & 0.279 & 5 \\
+Child is eating pizza & 0.365 & 0.093 & 0.000 & 0.224 & 0.263 & 0.945 & 2 \\
 \hline
-The boy enjoys his pizza. & 1 & 0 & 1 & 1 & 1 & 0.907 & 2 \\
+Tommy is eating pizza & 0.365 & 0.093 & 0.055 & 0.224 & 0.000 & 0.737 & 3 \\
 \hline
-the boy is eating pizza & 1 & 1 & 1 & 1 & 1 & 1.0 & 1 \\
+The boy's eating his favorite food & 0.000 & 0.093 & 0.055 & 0.000 & 0.000 & 0.513 & 4 \\
 \hline
-The kid is eats pizza & 1 & 0 & 0 & 1 & 1 & 0.852 & 3 \\
+Pizza is this boy's favorite food & 0.000 & 0.000 & 0.055 & 0.000 & 0.000 & 0.055 & 5 \\
 \hline
 \end{tabular}
-%\caption{\label{tab:dev-transitive} \scriptsize Annotated for five features: Core event (\textit{C}), Verifiability (\textit{V}), Answerhood (\textit{A}), Interpretability (\textit{I}) and Grammaticality (\textit{G}).}
+%\caption{\label{tab:applied-weights} Example NNS responses (see Table~\ref{tab:dev-transitive}) with feature weights applied to the binary annotations, resulting in weighted annotation scores (\textit{WAS}) and a weighted annotation ranking (\textit{WAR}).}
 \end{center}
 \end{table}
-\endgroup
+\end{footnotesize}
+
+\pause
+\begin{itemize}
+\item Use WAR as benchmark;
+\begin{itemize}
+\item Features: Get MAP for WAR, compare against system MAP;
+\pause
+\item Holistic: Get Spearman for system ranking vs. WAR;
+\end{itemize}
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Analyzing NNS responses}
+\frametitle{System configuration}
 \small
-At this point, my goal is a system that scores and ranks NNS responses via comparison with the crowdsourced NS responses. The system produced ranking should correlate highly with the R_{wa}.
 
-\bigskip
+%\vspace{-1em}
+%\pause
+Optimizing my system means searching for the settings that yield the best performance;
+i.e., system output best approximates benchmark (WAR). \\
 
-If particular system configuration settings correlate highly with item features (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
+\begin{itemize}
+\pause
+\item \textbf{Transitivity}: \param{intransitive}, \param{transitive}, \param{ditransitive};
+\pause
+\item \textbf{Targeting}: 
+\begin{itemize}
+\item \param{targeted}: \textit{What is $<$the subject$>$ doing?}
+\item \param{untargeted}: \textit{What is happening?}
+\end{itemize}
+\pause
+\item \textbf{Familiarity}: \param{familiar}, \param{crowdsourced}
+\pause
+\item \textbf{Primacy}:
+\begin{itemize}
+\item \param{primary}: NS model contains only 1st responses;
+\item \param{mixed}: NS model: 50\% 1st $+$ 50\% 2nd responses;
+\end{itemize}
+\pause
+\item \textbf{Term Representation}:
+\begin{itemize}
+\item \param{ldh}: label-dependent-head; i.e., labeled dependencies;
+\item \param{xdh}: dependent-head; i.e., unlabeled dependencies;
+\item \param{xdx}: dependent only;
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{System configuration}
+\small
+
+\vspace{-.5em}
+\pause
+All parameters or variables and their settings:
+
+\vspace{-.7em}
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Trans\-i\-ti\-vi\-ty} & \textbf{Tar\-get\-ing} & \textbf{Fam\-il\-iar\-i\-ty} & \textbf{Prim\-a\-cy} & \textbf{Term Rep.} \\
+\hline
+\hline
+\param{in\-trans\-i\-tive} & \param{tar\-get\-ed} & \param{familar} & \param{prim\-a\-ry} & \param{ldh} \\
+\hline
+\param{trans\-i\-tive} & \param{un\-tar\-get\-ed} & \param{crowd\-sourced} & \param{mix\-ed} & \param{xdh} \\
+\hline
+\param{di\-trans\-i\-tive} & & & & \param{xdx} \\
+\hline
+\end{tabular}
+\label{tab:all-params}
+\end{center}
+\end{table}
+
+\vspace{1.2em}
+A \textbf{system configuration} combines one setting from each column.
+
+\vspace{1.2em}
+If particular settings correlate highly with item features (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
+
+\end{frame}
+
+
+
+%\begin{frame}
+%\frametitle{Analyzing NNS responses}
+%\small
+%At this point, my goal is a system that scores and ranks NNS responses via comparison with the crowdsourced NS responses. The system produced ranking should correlate highly with the R_{wa}.
+%
+%\bigskip
+%
+%If particular system configuration settings correlate highly with item features (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
+%\end{frame}
+
+
+\begin{frame}
+\frametitle{Sampling data}
+
+\pause
+\textbf{NNS test sets}:
+\begin{itemize}
+\item All experiments rank the same randomly sampled NNS test sets;
+\item 70 responses per PDT item (max available for NNS data);
+\end{itemize}
+
+\vspace{1.5em}
+
+\pause
+\textbf{NS models}:
+\begin{itemize}
+\item 14-response models (max available for \param{familiar} data);
+\begin{itemize}
+\item I.e., I compare 14-response \param{familiar} models and 14-response \param{crowd\-sourced} models;
+\end{itemize}
+\item 50-response models (max available for \param{crowdsourced} data);
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Annotation features experiments}
+
+
 \end{frame}
 
 \begin{frame}
