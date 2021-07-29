@@ -1,4 +1,5 @@
 \documentclass[handout,xcolor={dvipsnames}]{beamer}
+\usepackage{lmodern}
 % MD: we can mess with this ...
 %\usetheme{Berlin}
 %\usetheme{Goettingen}
@@ -233,7 +234,7 @@ Indiana University  }
 \item 10 (transitive) PDT items $\times$ 53 participants $=$ 530 responses;
 \pause
 \begin{itemize}
-\item 14 NSs (IU grad students), 39 NNSs (IEP students);
+\item 14 NSs (grad students), 39 NNSs (ESL students);
 \end{itemize}
 \pause
 \item Annotation: \textit{Given the prompt, would the response be acceptable to most English speakers? Acceptable/unacceptable}
@@ -354,47 +355,6 @@ NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
 \end{frame}
 
 
-%\begin{frame}
-%\frametitle{Task design}
-%\vspace{-2ex}
-%\pause
-%\begin{table}
-%\small
-%\begin{center}
-%\begin{tabular}{c r}
-%& \multirow{3}{*}{\includegraphics[width=0.22\columnwidth]{figures/rake.png}} \\
-%     \multirow{3}{*}{The importance of task design; one example:} & \\
-%& \\
-%& \\
-%What is the man doing? & \\
-%\end{tabular}
-%\end{center}
-%\end{table}
-%\pause
-%NS responses:
-%\begin{itemize}
-%\pause
-%\item He's \textbf{raking} the leaves.
-%\pause
-%\item The man is \textbf{raking} leaves.
-%\end{itemize}
-%\pause
-%\smallskip
-%NNS responses:
-%\pause
-%\begin{itemize}
-%\item The man is cleaning the yard.
-%\pause
-%\item He is piling up leaves.
-%\end{itemize}
-%\smallskip
-%\pause
-%This is a coverage problem for my approach.
-%\pause
-%
-%Solution? \pause Ask NS for \textbf{two} different responses.
-%\end{frame}
-
 \begin{frame}
 \frametitle{Main study: Data collection}
 \medskip
@@ -463,9 +423,17 @@ Intended for exploring the specificity needed for my approach
 
 \begin{frame}{Main study: Data collection}
 
+\vspace{1em}
 The pilot study \textit{rake} problem:
 
+\begin{itemize}
+\item For one PDT item, 100\% of NS used the verb \textit{rake};
+\begin{itemize}
+\item NNS responses without \textit{rake} are penalized;
+\end{itemize}
+\end{itemize}
 
+\vspace{-1em}
 \begin{figure}[htb!]
 %[width=0.8\columnwidth]
 \begin{center}
@@ -492,11 +460,7 @@ The pilot study \textit{rake} problem:
 \end{figure}
 
 \begin{itemize}
-\item 100\% of NS used the verb \textit{rake};
-\begin{itemize}
-\item NNS responses without \textit{rake} are penalized;
-\end{itemize}
-\item I address this by instructing NS to provide two non-identical responses;
+\item I address this by asking NSs for two non-identical responses.
 \end{itemize}
 \end{frame}
 
@@ -603,15 +567,15 @@ First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
 Several iterations later, 5 binary features:
 \begin{itemize}
 \pause
-\item \textbf{Core event}: \pause captures main action
+\item \feat{Core event}: \pause Does response capture main action?
 \pause
-\item \textbf{Answerhood}: \pause directly answers prompt
+\item \feat{Answerhood}: \pause Does response directly answer prompt?
 \pause
-\item \textbf{Grammaticality}: \pause no grammar problems
+\item \feat{Grammaticality}: \pause Is response free from grammar problems?
 \pause
-\item \textbf{Interpretability}: \pause evokes clear mental image
+\item \feat{Interpretability}: \pause Does response evoke a clear mental image?
 \pause
-\item \textbf{Verifiability}: \pause info is supported by image
+\item \feat{Verifiability}: \pause Is all response info supported by image?
 \end{itemize}
 
 
@@ -871,14 +835,14 @@ i.e., system output best approximates benchmark (WAR). \\
 \item \textbf{Primacy}:
 \begin{itemize}
 \item \param{primary}: NS model contains only 1st responses;
-\item \param{mixed}: NS model: 50\% 1st $+$ 50\% 2nd responses;
+\item \param{mixed}: NS model: 1st \& 2nd responses (50-50);
 \end{itemize}
 \pause
 \item \textbf{Term Representation}:
 \begin{itemize}
 \item \param{ldh}: label-dependent-head; i.e., labeled dependencies;
 \item \param{xdh}: dependent-head; i.e., unlabeled dependencies;
-\item \param{xdx}: dependent only;
+\item \param{xdx}: dependent only; cf. \textit{bag of words};
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -940,6 +904,9 @@ If particular settings correlate highly with item features (intransitive / trans
 \begin{itemize}
 \item All experiments rank the same randomly sampled NNS test sets;
 \item 70 responses per PDT item (max available for NNS data);
+\begin{itemize}
+\item 70 \param{targeted}, 70 \param{untargeted}
+\end{itemize}
 \end{itemize}
 
 \vspace{1.5em}
@@ -957,129 +924,180 @@ If particular settings correlate highly with item features (intransitive / trans
 
 
 \begin{frame}
+\frametitle{Annotation features experiments: \feat{Core event}}
+
+\small
+%\begin{table}[htb!]
+%\begin{center}
+%\setlength{\tabcolsep}{.35em}
+%\begin{tabular}{|l||l|l|l||l|l|}
+%\hline
+% & \multicolumn{5}{c|}{\param{Crowdsourced} NS model = 50} \\
+%\hline
+% & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& SBERT \\ \hline
+%\hline
+%\param{Intr}   	& \textbf{0.855} & 0.854 & 0.852 & 0.865 & 0.831 \\ \hline
+%\param{Tran}    & \textbf{0.736} & 0.733 & 0.725 & 0.742 & 0.701 \\ \hline
+%\param{Ditr}    & 0.657 & 0.656 & \textbf{0.661} & 0.660 & 0.629 \\ \hline
+%\hline
+%\param{Targ}    & \textbf{0.737} & 0.735 & 0.729 & 0.735 & 0.704 \\ \hline
+%\param{Untg}    & 0.762 & 0.759 & \textbf{0.763} & 0.777 & 0.736 \\ \hline
+%\hline
+%\param{Prim}    & \textbf{0.750} & 0.748 & 0.745 & 0.756 & 0.719 \\ \hline
+%\param{Mix}     & \textbf{0.749} & 0.746 & 0.746 & 0.756 & 0.721 \\ \hline
+%\hline
+%Total 	 & \textbf{0.750} & 0.747 & 0.746 & 0.756 & 0.720 \\ \hline
+%\end{tabular}
+%%\caption{\label{tab:core-map}Mean Average Precision (MAP) scores for the \feat{core e\-vent} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+%\end{center}
+%\end{table}
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}   & \textbf{\textit{0.85}} & 0.85 & 0.85 & 0.86 & 0.83  & \textbf{0.85} & 0.85 & 0.85 & 0.86 & 0.83 \\ \hline
+\param{Tran}    & \textit{\textbf{0.73}} & 0.73 & 0.72 & 0.74 & 0.70   & \textbf{0.73} & 0.73 & 0.72 & 0.74 & 0.70 \\ \hline
+\param{Ditr}    & \textit{\textbf{0.66}} & 0.66 & 0.66 & 0.66 & 0.63  & 0.65 & 0.65 & \textbf{0.66} & 0.66 & 0.62 \\ \hline
+\hline
+\param{Targ}    & \textit{\textbf{0.73}} & 0.73 & 0.73 & 0.73 & 0.70  & \textbf{0.73} & 0.73 & 0.72 & 0.73 & 0.70 \\ \hline
+\param{Untg}    & \textit{\textbf{0.76}} & 0.76 & 0.76 & 0.77 & 0.74  & 0.76 & 0.75 & \textbf{0.76} & 0.77 & 0.73 \\ \hline
+\hline
+\param{Prim}    & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72  & \textbf{0.75} & 0.74 & 0.74 & 0.75 & 0.71 \\ \hline
+\param{Mix}      & \textit{\textbf{0.75}} & 0.74 & 0.75 & 0.75 & 0.72  & \textbf{0.74} & 0.74 & 0.74 & 0.75 & 0.72 \\ \hline
+\hline
+Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 0.74 & 0.74 & 0.75 & 0.72 \\ \hline
+\end{tabular}
+%\caption{\label{tab:core-map}Mean Average Precision (MAP) scores for the \feat{core e\-vent} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+\end{center}
+\end{table}
+
+\begin{itemize}
+\item In all cases, \param{ldh} $+$ 14NS is best;
+\item \param{xdx} becomes more competitive for larger model (50NS);
+\begin{itemize}
+\item \param{ditransitive}, \param{untargeted}: response to these are \textit{least homogenous}---i.e., highest TTRs;
+\item In general: \param{ldh} TTR $>$ \param{xdh} TTR $>$ \param{xdx} TTR
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Annotation features experiments: \feat{Core event}}
+
+\small
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Fam\-il\-iar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & 0.85                   & 0.85 & \textit{\textbf{0.86}} & 0.86 & 0.83 & \textbf{0.85}          & 0.85 & 0.84                   & 0.86 & 0.83 \\ \hline
+\param{Tran}  & \textit{\textbf{0.74}} & 0.73 & 0.72                   & 0.74 & 0.70 & \textbf{0.73}          & 0.73 & 0.72                   & 0.74 & 0.70 \\ \hline
+\param{Ditr}  & 0.65                   & 0.64 & \textbf{0.66}          & 0.66 & 0.62 & 0.66                   & 0.65 & \textit{\textbf{0.67}} & 0.66 & 0.64 \\ \hline
+\hline
+\param{Targ}  & \textbf{0.73}          & 0.73 & 0.73                   & 0.73 & 0.70 & \textit{\textbf{0.73}} & 0.73 & 0.73                   & 0.73 & 0.70 \\ \hline
+\param{Untg}  & 0.76                   & 0.76 & \textit{\textbf{0.76}} & 0.77 & 0.73 & \textbf{0.76}          & 0.76 & \textbf{0.76}          & 0.77 & 0.74 \\ \hline
+\hline
+Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \textit{\textbf{0.75}} & 0.74 & 0.75                   & 0.75 & 0.72 \\ \hline
+\end{tabular}
+%\caption{\label{tab:core-fam-map}Mean Average Precision (MAP) scores for the \feat{core e\-vent} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.
+%}
+
+\end{center}
+\end{table}
+
+\begin{itemize}
+\item Totals: \param{crowdsourced} outperforms \param{familiar} (slightly);
+\item \param{crowdsourced} works best with \param{ldh};
+\item \param{familiar} works best with \param{xdx};
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\vspace{-1em}
 \frametitle{Annotation features experiments}
 
+\feat{Answerhood}, in \textit{all} cases:
+\begin{itemize}
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\item Model size makes no difference;
+\item \param{familiar} $>$ \param{crowdsourced};
+\end{itemize}
+
+\vspace{1em}
+
+\feat{Grammaticality}, in \textit{most} cases:
+\begin{itemize}
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\item \param{familiar} 14NS $>$ \param{crowd} 14NS $>$ \param{crowd} 50NS;
+\end{itemize}
+
+\vspace{1em}
+
+Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requires only small model and bag-of-words representation.
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Annotation features experiments}
+\vspace{-.5em}
+\feat{Interpretability}:
+\begin{itemize}
+\item 14NS \param{crowd} $>$ 14NS \param{familiar} $>$ 50NS \param{crowd};
+%\item \param{transitives} work best with \param{ldh};
+%\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\end{itemize}
+
+\vspace{1em}
+
+\feat{Verifiability}:
+\begin{itemize}
+\item 14NS \param{crowd} $>$ 50NS \param{crowd} $>$ 14NS \param{familiar};
+\item Model size effect is most pronounced with \param{untargeted} \& \param{mixed};
+\begin{itemize}
+\item Unconstrained settings; larger models have more noise;
+\end{itemize}
+%\item \param{transitives} work best with \param{ldh};
+%\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\end{itemize}
+
+\vspace{1em}
+
+For both:
+\begin{itemize}
+\item \param{transitives} work best with \param{ldh};
+%\begin{itemize}
+%\item 
+%\end{itemize}
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\begin{itemize}
+\item For \param{transitives}: Responses are relatively homogenous; Annotators relatively strict;
+\end{itemize}
+\end{itemize}
+
+%Given this fact, the trend here suggests that the NNS participants and crowd- sourced NS participants exhibit more convergent behavior in response to transitive items (as opposed to intransitives and ditransitives), and thus a relatively granular representation (labeled dependencies) works well in similarity measures, leading to better discriminatory power for the INTERPRETABILITY feature.
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Analyzing NNS responses}
-\small
-The system works like this; for each item:
-
-\medskip
-Generate a NS model:
-\begin{enumerate}
-\item dependency parse the collection of NS responses;
-\item get tf-idf score for each unique dependency (via a large balanced corpus).
-\end{enumerate}
-
-\medskip
-
-Score each NNS response:
-\begin{enumerate}
-\item As above: dependency parse, tf-idf;
-\item Compare NS vs NNS tf-idf vectors: 1 - cosine $=$ response score.
-\end{enumerate}
-
-Finally, the NNS responses are ranked by score, and the Spearman rank correlation between R_{wa} and the system is taken as the system configuration score for the item.
-
-\bigskip
-
-By selecting different parameter settings in this approach, I arrive at 12 different system configurations. Each configuration scores and ranks all NNS responses.
-
+\frametitle{Holistic experiments}
+NTS: one slide
 \end{frame}
 
-\begin{frame}
-\frametitle{System configurations}
-\small
-
-Consider this simplified set of 2 parameters $x$ 2 settings $=$ 4 configurations.
-\medskip
-
-\begin{itemize}
-\item \textbf{Dependency format}:
-\begin{itemize}
-\item \textbf{labeled}: e.g., nsubj(eat,boy); nobj(eat,pizza)
-\item \textbf{unlabeled}: e.g., $\langle$null$\rangle$(eat,boy); $\langle$null$\rangle$(eat,pizza)
-\end{itemize}
-\smallskip
-
-\item \textbf{NS response model}:
-Note: Each NS participant gave \textit{two} responses per PDT item
-\begin{itemize}
-\item \textbf{first}: Model contains only the first response from NS
-\item \textbf{mixed}: Model is half first reponses and half second responses
-\end{itemize}
-\end{itemize}
-\begin{table}[htb!]
-\small
-\begin{center}
-%\begin{tabular}{|p{3.7cm}|c|c|c|c|c|}
-\begin{tabular}{|l||l|l|}
-\hline
-dep\textbackslash model & first & mixed \\
-\hline
-\hline
-labeled & lab\_first & lab\_mixed \\
-\hline
-unlabeled & unlab\_first & unlab\_mixed \\
-\hline
-\end{tabular}
-%\caption{\scriptsize Four system configurations for scoring NNS responses.}
-\end{center}
-\end{table}
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{System configurations}
-\small
-\begin{itemize}
-\item Score \& rank NNS responses using different configurations;
-\item Compare with R_{wa} to get a Spearman correlation.
-\end{itemize}
-\begingroup
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
-\begin{table}
-\begin{center}
-\begin{tabular}{|l||l|c||l|c||l|c|}
-\hline
-NNS & S_{wa} & R_{wa} & S_{lf} & R_{lf} & S_{uf} & R_{uf} \\
-\hline
-\hline
-p1 & 0.63 & 4 & 0.53 & 4 & 0.11 & 5 \\
-\hline
-p2 & 0.27 & 5 & 0.13 & 5 & 0.15 & 4 \\
-\hline
-p3 & 0.90 & 2 & 0.91 & 1 & 0.68 & 1 \\
-\hline
-p4 & 1.0 & 1 & 0.80 & 2 & 0.41 & 2 \\
-\hline
-p5 & 0.85 & 3 & 0.77 & 3 & 0.20 & 3 \\
-\hline
-\hline
-\multicolumn{3}{|l||}{Spearman $\rho$} & \multicolumn{2}{r||}{.899} & \multicolumn{2}{r|}{.799} \\
-\hline
-\multicolumn{3}{|l||}{Spearman p-val} & \multicolumn{2}{r||}{.037} & \multicolumn{2}{r|}{.104}  \\
-\hline
-\end{tabular}
-%\caption{\label{tab:modelranks} Response scores and ranks for: weighted annotation; system configurations: labeled\_first (\textit{lf}) and unlabeled\_first (\textit{uf}).}
-\end{center}
-\end{table}
-\begin{itemize}
-\item \textit{lf} is \textit{labeled\_first}; \textit{uf} is \textit{unlabeled\_first}:
-\item \textit{labeled} for labeled dependencies (vs. \textit{unlabeled})
-\item \textit{first} for models containing only the first response from NS (vs a \textit{mix} of first and second responses)
-\end{itemize}
-\endgroup
-\end{frame}
-
-\begin{frame}
-\frametitle{Results \& Optimization}
-NTS: Multiple slides; describe most salient findings
-\end{frame}
 
 \begin{frame}
 \frametitle{Summary}
@@ -1090,70 +1108,6 @@ NTS: one slide
 \frametitle{Outlook}
 NTS: one slide
 \end{frame}
-
-%\begingroup
-%\setlength{\tabcolsep}{4pt} % Default value: 6pt
-%\begin{table}
-%\begin{center}
-%\begin{tabular}{|l||l|c||l|c||l|c||l|c||l|c|}
-%\hline
-%P & S_{wa} & R_{wa} & S_{lf} & R_{lf} & S_{uf} & R_{uf} & S_{lm} & R_{lm} & S_{um} & R_{um} \\
-%\hline
-%\hline
-%p1 & 0.63 & 4 & 0.53 & 4 & 0.11 & 5 & 0.29 & 4 & 0.39 & 3 \\
-%\hline
-%p2 & 0.27 & 5 & 0.13 & 5 & 0.15 & 4 & 0.15 & 5 & 0.53 & 5 \\
-%\hline
-%p3 & 0.90 & 2 & 0.91 & 1 & 0.68 & 1 & 0.33 & 3 & 0.55 & 1 \\
-%\hline
-%p4 & 1.0 & 1 & 0.80 & 2 & 0.41 & 2 & 0.70 & 1 & 0.24 & 2 \\
-%\hline
-%p5 & 0.85 & 3 & 0.77 & 3 & 0.20 & 3 & 0.63 & 2 & 0.22 & 4 \\
-%\hline
-%\end{tabular}
-%\caption{\label{tab:modelranks} Response scores and ranks for: weighted annotation; system configurations: labeled\_first (\textit{lf}), unlabeled\_first (\textit{uf}), labeled\_mixed (\textit{lm}), unlabeled\_mixed (\textit{um}).}
-%\end{center}
-%\end{table}
-%\endgroup
-%\end{frame}
-
-%\begin{frame}
-%\frametitle{Finding trends}
-%From the full set of 360 Spearman correlation scores, I used various subsets of scores to generate hierarchical clusters of the 30 items. I've found some clustering according to verb type (intransitive, transitive or ditransitive), but this trend is not very strong.
-%
-%\medskip
-%
-%\medskip
-%I'm currently exploring features other than verb type to see if they correlate with Spearman and can thus help predict optimal system configurations for new items. These features relate to item complexity: type-to-token ratios for the collection of NS responses; mean/median leave-one-out system scores for the NS collection.
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Future directions}
-%Other predictive features: image complexity (compression; entropy)
-%
-%\medskip
-%
-%Feedback: Responses scoring below a threshold should be ``recast'' as the most similar NS response (with S_{wa} $=$ 1).
-%
-%Augment this with SBERT but rely on my system to find appropriate feedback.
-%
-%\medskip
-%
-%For some contexts (e.g., tutoring vs testing), an oracle ranking by the \textit{core event} feature alone may be preferable. Because the feature is binary, Spearman would not be appropriate, so average precision or T-test scores could be used to optimize configurations.
-%
-%\medskip
-%
-%My NNS participants were $>$90\% L1 Chinese. I'd love to have an equivalent dataset for another L1 for comparison and to attempt L1-specific optimization.
-%
-%\end{frame}
-%
-%\begin{frame}
-%\frametitle{Generalizing}
-%
-%In a globalized world, we need to be able to analyze speech and text from NNS of English (and other languages). In high stakes contexts, processing should be adaptable, able to abstract from surface form to meaning, and maintain a degree of transparency and explainability. 
-%
-%\end{frame}
-
 
 
 \begin{beamercolorbox}{title}
