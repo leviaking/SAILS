@@ -1,3 +1,4 @@
+%\documentclass[xcolor={dvipsnames}]{beamer}
 \documentclass[handout,xcolor={dvipsnames}]{beamer}
 \usepackage{lmodern}
 % MD: we can mess with this ...
@@ -60,7 +61,7 @@
 % \usepackage{rotating}
 % \usepackage{booktabs}
 
-\title{Semantic Analysis of Image-Based Learner Sentences}
+\title{Semantic Analysis of \\ Image-Based Learner Sentences}
 \author[Levi King]{Levi King\\
 Indiana University  }
 \date{August 6, 2021}
@@ -345,11 +346,15 @@ NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
 \pause
 \item Response score $=$ \textit{cosine distance} for NNS \& NS vectors;
 \end{itemize}
+\pause
 \item Rank by scores \& calculate Mean Average Precision (MAP);
 \begin{itemize}
+\pause
 \item MAP \textit{acceptable} responses: $\approx$51\%
 \end{itemize}
+\pause
 \item Process is more robust \& generalizable;
+\pause
 \item Dataset (especially NS models) and annotation are weak;
 \end{itemize}
 \end{frame}
@@ -498,15 +503,21 @@ Intended for exploring whether my approach can generalize to a broader range of 
 \frametitle{Main study: Data collection}
 \vspace{.5em}
 499 participants, 13,533 responses:
+\pause
 \begin{itemize}
+\pause
 \item 141 NNSs (English Language Improvement Program at IU);
 \begin{itemize}
+\pause
 \item 125 Mandarin, 4 Korean, 3 Burmese, 2 Hindi; 1 each: Arabic, Indonesian, German, Gujarati, Spanish, Thai, Vietnamese;
 \end{itemize}
 \vspace{.2em}
+\pause
 \item 358 NSs:
 \begin{itemize}
+\pause
 \item 329 \param{crowdsourced}, purchased via SurveyMonkey;
+\pause
 \item 29 \param{familiar}, unpaid colleagues;
 \end{itemize}
 \end{itemize}
@@ -652,26 +663,33 @@ Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\
 %\vspace{-2em}
 Problem: My system provides a similarity score between 0 and 1. How can I evaluate system performance?
 
+\pause
 \vspace{1em}
 Feature-level performance:
 \begin{itemize}
+\pause
 \item \textbf{MAP} to see how system rankings predict \textbf{individual features};
 \begin{itemize}
+\pause
 \item Compare with? Some \textit{holistic benchmark ranking} MAP;
 \end{itemize}
 \end{itemize}
 
 \vspace{.3em}
+\pause
 Holistic performance (response quality):
 \begin{itemize}
+\pause
 \item \textbf{Spearman} rank correlation: Compare system rankings with some \textit{holistic benchmark ranking};
 %\begin{itemize}
 %\item 
 \end{itemize}
 %\end{itemize}
 
+\pause
 I need \textbf{benchmark response rankings} for the NNS test set.
 
+\pause
 \vspace{1em}
 Solution: Determine feature weights and apply to annotations to obtain benchmark holistic scores and then rankings.
 \end{frame}
@@ -812,6 +830,33 @@ Pizza is this boy's favorite food & 0.000 & 0.000 & 0.055 & 0.000 & 0.000 & 0.05
 \end{frame}
 
 \begin{frame}
+\frametitle{SBERT as benchmark}
+I also use SBERT as a kind of ``benchmark'' for comparing my system's performance.
+\pause
+\vspace{.3em}
+\begin{itemize}
+\pause
+\item State-of-the-art sentence embeddings for semantic textual similarity.
+\vspace{.3em}
+\vspace{-1.2em}
+\pause
+\item Replaces dependency parser $+$ lemmatizer $+$ tf-idf cosine pipeline. 
+\vspace{.3em}
+\pause
+\item Provides distance between NNS response and NS model.
+\vspace{.3em}
+\pause
+\item Operates directly on text, not dependencies.
+\begin{itemize}
+\vspace{.3em}
+\pause
+\item Term representation parameter (\param{ldh}, \param{xdh}, \param{xdx}) does not apply.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{System configuration}
 \small
 
@@ -879,7 +924,7 @@ All parameters or variables and their settings:
 A \textbf{system configuration} combines one setting from each column.
 
 \vspace{1.2em}
-If particular settings correlate highly with item features (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
+If particular settings correlate highly with item characteristics (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
 
 \end{frame}
 
@@ -922,9 +967,62 @@ If particular settings correlate highly with item features (intransitive / trans
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Sampling data: Complexity}
+
+\small
+Standardized type-to-token ratio (STTR) for the response samples. Tokens here are \textit{dependencies}. \\
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.5em}
+\begin{tabular}{|l||l|l|l||l|}
+\hline
+ 	& \multicolumn{2}{c|}{n14} & n50 & n70 \\
+\cline{2-5}
+   	& \param{Fam} & \param{Crd} & \param{Crd} 			& NNS			\\ \hline
+\hline
+
+
+\param{Intrans} & 0.55 	  		& 0.52 			& 0.53 		& 0.39 		\\ \hline
+\param{Trans}   & 0.56        	& 0.58          & 0.58      & 0.51    	    \\ \hline
+\param{Ditrans} & 0.59        	& 0.64          & 0.63      & 0.60    	    \\ \hline
+\hline
+\param{Target}  & 0.54 			& 0.53	 		& 0.54 		& 0.48			\\ \hline
+\param{Untarg}  & 0.61        	& 0.63        	& 0.62    	& 0.52        	\\ \hline
+\hline
+\param{prim\-a\-ry} & N/A       & 0.51 			& 0.52		& 0.50		 	\\ \hline
+\param{mix\-ed}   & 0.57        & 0.65          & 0.64      & N/A	        \\ \hline
+\hline
+\param{xdx}     & 0.36			& 0.42 			& 0.42		& 0.36			\\ \hline
+\param{xdh}     & 0.65        	& 0.66          & 0.66      & 0.57	        \\ \hline
+\param{ldh}     & 0.66        	& 0.66          & 0.67      & 0.57	        \\ \hline
+\hline
+Total    		& 0.57        	& 0.58         	& 0.58    	& 0.50	        \\ \hline
+%\param{Intrans} & 0.558 	  	& 0.525 			& 0.535 		& 0.391 		\\ \hline
+%\param{Trans}   & 0.569        	& 0.580          	& 0.581        	& 0.517    	    \\ \hline
+%\param{Ditrans} & 0.598        	& 0.640          	& 0.637        	& 0.606    	    \\ \hline
+%\hline
+%\param{Target}  & 0.545 		& 0.535	 			& 0.545 		& 0.481			\\ \hline
+%\param{Untarg}  & 0.610        	& 0.633        		& 0.621    		& 0.528        	\\ \hline
+%\hline
+%\param{prim\-a\-ry} & N/A        	& 0.517 			& 0.523			& 0.505		 	\\ \hline
+%\param{mix\-ed}   & 0.576         & 0.652          	& 0.645       	& N/A	        \\ \hline
+%\hline
+%\param{ldh}     & 0.665        	& 0.664          	& 0.671       	& 0.578	        \\ \hline
+%\param{xdh}     & 0.658        	& 0.661          	& 0.660       	& 0.572	        \\ \hline
+%\param{xdx}     & 0.364			& 0.424 			& 0.421			& 0.364			\\ \hline
+%\hline
+%Total    & 0.576        & 0.583          	& 0.584    		& 0.505	        \\ \hline
+\end{tabular}
+%\caption{\label{tab:sttr}Comparing average standardized type-to-token ratio (STTR) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting. Tokens here are \textit{dependencies}.}
+\end{center}
+\end{table}
+
+\end{frame}
 
 \begin{frame}
-\frametitle{Annotation features experiments: \feat{Core event}}
+\frametitle{Annotation features experiments: \feat{Core event} MAP}
 
 \small
 %\begin{table}[htb!]
@@ -981,7 +1079,7 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \item In all cases, \param{ldh} $+$ 14NS is best;
 \item \param{xdx} becomes more competitive for larger model (50NS);
 \begin{itemize}
-\item \param{ditransitive}, \param{untargeted}: response to these are \textit{least homogenous}---i.e., highest TTRs;
+\item \param{ditransitive}, \param{untargeted}: responses to these are \textit{least homogenous}---i.e., highest TTRs;
 \item In general: \param{ldh} TTR $>$ \param{xdh} TTR $>$ \param{xdx} TTR
 \end{itemize}
 \end{itemize}
@@ -989,7 +1087,7 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation features experiments: \feat{Core event}}
+\frametitle{Annotation features experiments: \feat{Core event} MAP}
 
 \small
 \begin{table}[htb!]
@@ -1025,27 +1123,38 @@ Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \
 \end{frame}
 
 \begin{frame}
-
+\frametitle{Annotation features experiments: MAP Results}
 \vspace{-1em}
-\frametitle{Annotation features experiments}
 
+\pause
+For all 5 features, my system outperforms SBERT. \\
+
+\vspace{1em}
+\pause
 \feat{Answerhood}, in \textit{all} cases:
 \begin{itemize}
+\pause
 \item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\pause
 \item Model size makes no difference;
+\pause
 \item \param{familiar} $>$ \param{crowdsourced};
 \end{itemize}
 
 \vspace{1em}
 
+\pause
 \feat{Grammaticality}, in \textit{most} cases:
 \begin{itemize}
+\pause
 \item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\pause
 \item \param{familiar} 14NS $>$ \param{crowd} 14NS $>$ \param{crowd} 50NS;
 \end{itemize}
 
 \vspace{1em}
 
+\pause
 Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requires only small model and bag-of-words representation.
 
 \end{frame}
@@ -1053,10 +1162,12 @@ Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requ
 
 
 \begin{frame}
-\frametitle{Annotation features experiments}
+\frametitle{Annotation features experiments: MAP Results}
 \vspace{-.5em}
+\pause
 \feat{Interpretability}:
 \begin{itemize}
+\pause
 \item 14NS \param{crowd} $>$ 14NS \param{familiar} $>$ 50NS \param{crowd};
 %\item \param{transitives} work best with \param{ldh};
 %\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
@@ -1064,11 +1175,15 @@ Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requ
 
 \vspace{1em}
 
+\pause
 \feat{Verifiability}:
 \begin{itemize}
+\pause
 \item 14NS \param{crowd} $>$ 50NS \param{crowd} $>$ 14NS \param{familiar};
+\pause
 \item Model size effect is most pronounced with \param{untargeted} \& \param{mixed};
 \begin{itemize}
+\pause
 \item Unconstrained settings; larger models have more noise;
 \end{itemize}
 %\item \param{transitives} work best with \param{ldh};
@@ -1077,25 +1192,180 @@ Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requ
 
 \vspace{1em}
 
-For both:
+\pause
+For both \feat{interpretability} \& \feat{verifiability}:
 \begin{itemize}
-\item \param{transitives} work best with \param{ldh};
+\pause
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
 %\begin{itemize}
 %\item 
 %\end{itemize}
-\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\pause
+\item \param{transitives} work best with \param{ldh};
 \begin{itemize}
-\item For \param{transitives}: Responses are relatively homogenous; Annotators relatively strict;
+\pause
+\item Why? \param{Transitive} responses are relatively homogenous; Annotators relatively strict;
 \end{itemize}
 \end{itemize}
-
-%Given this fact, the trend here suggests that the NNS participants and crowd- sourced NS participants exhibit more convergent behavior in response to transitive items (as opposed to intransitives and ditransitives), and thus a relatively granular representation (labeled dependencies) works well in similarity measures, leading to better discriminatory power for the INTERPRETABILITY feature.
-
 \end{frame}
 
 \begin{frame}
 \frametitle{Holistic experiments}
-NTS: one slide
+
+\pause
+Holistic experiments use one set of 360 Spearman correlations: \\
+\vspace{.5em}
+targeting (2) $\times$ primacy (2) $\times$ term rep (3) $\times$ items (30) $=$ 360. \\
+\pause
+\vspace{.5em}
+\pause
+(\param{Familiar} vs. \param{Crowd} handled separately due to sparse data.) \\
+
+\pause
+\vspace{1.4em}
+Each experiment focuses on one variable, e.g., targeting: \\
+\vspace{.5em}
+Divide 360 into 180 \param{targeted} scores and 180 \param{untargeted} scores; compare mean, median, etc. \\
+
+\pause
+\vspace{1.4em}
+SBERT uses plain text (no term rep), thus only 120 total. \\
+
+\pause
+\vspace{.5em}
+(SBERT always wins over system.)
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Holistic experiments: \param{Transitivity}}
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|c|l||l|l||l|l||l|l|}
+\hline
+& & \multicolumn{2}{c||}{\param{in\-trans}} & \multicolumn{2}{c||}{\param{trans}} & \multicolumn{2}{c|}{\param{di\-trans}} \\
+\cline{3-8}
+& 		& Sys 	& {\scriptsize SBERT} 		& Sys 	& {\scriptsize SBERT} 		& Sys 	& {\scriptsize SBERT} 		\\
+\hline
+& count 	& 120 		& 40 		& 120 		& 40 		& 120 		& 40		 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{14NS}} & mean 	& \textit{\textbf{0.439}} 	& 0.497 	& 0.314 	& 0.563		& 0.267 	& 0.400	 \\
+\cline{2-8}
+& median 	& \textbf{0.416} 	& 0.479 	& 0.304 	& 0.555		& 0.276 	& 0.444	 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{50NS}} & mean 	& \textbf{0.423} 	& 0.516 	& \textit{0.345} 	& 0.566	& \textit{0.278} 	& 0.446 \\
+\cline{2-8}
+& median 	& \textit{\textbf{0.426}} 	& 0.517	& \textit{0.331} 	& 0.561	& \textit{0.286} 	& 0.471 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{-.5em}
+\begin{itemize}
+%\item (SBERT always wins over system)
+\pause
+\item SBERT, regardless of model size: \param{trans} $>$ \param{intrans} $>$ \param{ditrans};
+\pause
+\item System, regardless of model size: \param{intrans} $>$ \param{trans} $>$ \param{ditrans};
+\pause
+\item More complex items (TTR) work best with larger models; 
+\begin{itemize}
+\pause
+\item {\small \param{trans} \& \param{ditrans}: 50NS model is best;}
+\vspace{.2em}
+\pause
+\item {\small \param{intrans}: 14NS gives best median, 50NS gives best mean;}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Holistic experiments: Results}
+
+\vspace{-.5em}
+
+\pause
+\textbf{Targeting}:
+\begin{itemize}
+\pause
+\item \param{targeted} $>$ \param{untargeted}
+\pause
+\item 50NS models $>$ 14NS models
+\begin{itemize}
+\pause
+\item Model size effect is most pronounced for \param{targeted}
+\end{itemize}
+\end{itemize}
+
+\vspace{1em}
+
+\pause
+\textbf{Familiarity} (14NS models only):
+\begin{itemize}
+\pause
+\item System: No discernible difference for \param{familiar} vs \param{crowdsourced}
+\pause
+\item SBERT: \param{familiar} $>$ \param{crowdsourced}
+\begin{itemize}
+\pause
+\item NNS STTR $<$ \param{familiar} STTR $<$ \param{crowdsourced} STTR
+%\item \param{transitives} work best with \param{ldh};
+%\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Holistic experiments: Results}
+
+\vspace{-.5em}
+
+\pause
+\textbf{Primacy}:
+\begin{itemize}
+\pause
+\item System: 14NS: \param{primary} $<$ \param{mixed} (slight difference)
+\pause
+\item System: 50NS: \param{primary} $\approx$ \param{mixed}
+\pause
+\item SBERT: \param{primary} $>$ \param{mixed}
+\pause
+\item System \& SBERT: 50NS $>$ 14NS
+\begin{itemize}
+\pause
+\item System: model size effect is greatest for \param{primary}
+\end{itemize}
+\end{itemize}
+
+\vspace{1em}
+
+\pause
+\textbf{Term representation}:
+\begin{itemize}
+\pause
+\item SBERT: 50NS $>$ 14NS
+\pause
+\item System: for \param{ldh} \& \param{xdh}: 50NS $>$ 14NS;
+\begin{itemize}
+\pause
+\item Model size effect is greater for \param{ldh}
+\end{itemize}
+\pause
+\item System: for \param{xdx}: NS14 $>$ NS50 (very slight)
+\end{itemize}
+%\item NNS %STTR $<$ \param{familiar} STTR $<$ \param{crowdsourced} STTR
+%\item \param{transitives} work best with \param{ldh};
+%\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+%\end{itemize}
+
 \end{frame}
 
 
@@ -1118,5 +1388,38 @@ NTS: one slide
 \scriptsize
 \bibliographystyle{styles/myaclnat}
 \bibliography{levi-bib}
+
+\begin{frame}
+\frametitle{Sampling data: Response length}
+\small
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.5em}
+\begin{tabular}{|l||l|l|l||l|}
+\hline
+  & \multicolumn{2}{c|}{n=14} & n=50 & n=70\\
+\hline
+   & \param{Fam} & \param{Crowd} & \param{Crowd} 	& NNS			\\ \hline
+\hline
+\param{Intrans} & 5.5 	  		& 4.9 			& 4.9 		& 4.9 			\\ \hline
+\param{Trans}   & 6.9          	& 6.3          	& 6.2       & 6.7    	    \\ \hline
+\param{Ditrans} & 7.8          	& 7.2          	& 7.2       & 8.3    	    \\ \hline
+\hline
+\param{Target}  & 6.5 			& 5.4	 		& 5.4 		& 6.3			\\ \hline
+\param{Untarg}  & 6.9        	& 6.8        	& 6.8    	& 6.9        	\\ \hline
+\hline
+\param{prim\-a\-ry} & N/A        	& 5.7 			& 5.8		& 6.6		 	\\ \hline
+\param{mix\-ed}   & 6.7          	& 6.5          	& 6.4       & N/A	        \\ \hline
+\hline
+Total	& 6.7			& 6.1			& 6.1		& 6.6			\\ \hline
+\end{tabular}
+\caption{\label{tab:response-length}Comparing average response length (in words) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.
+}
+\end{center}
+\end{table}
+
+\end{frame}
+
+
 
 \end{document}
