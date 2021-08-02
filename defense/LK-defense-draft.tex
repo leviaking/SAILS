@@ -83,7 +83,7 @@ Indiana University  }
 \pause
 \item rote memorization \& grammatical error detection; menu-based vs. free input;
 \pause
-\item \textit{``engineering first''}: not informed by second language acquisition (SLA), pedagogy, psychometrics
+\item \textit{``engineering first''}: no second language acquisition (SLA), pedagogy, psychometrics
 \end{itemize}
 \pause
 \item  SLA research $\rightarrow$ communicative \& task based learning
@@ -91,7 +91,7 @@ Indiana University  }
 
 \small
 \pause
-\textit{How can we bridge this gap between ICALL and SLA researchers?}
+\textit{How can we bridge this gap?}
 
 \begin{itemize}
 \pause
@@ -99,7 +99,7 @@ Indiana University  }
 \pause
 \item teachers create new games/stories by adding visual prompts and crowdsourcing native speaker (NS) responses;
 \pause
-\item trains NS model to evaluate non-native speaker (NNS) responses
+\item use NS model to evaluate non-native speaker (NNS) responses
 \end{itemize}
 \end{frame}
 
@@ -131,38 +131,34 @@ Indiana University  }
 %My work here relies on images to constrain the range of responses to a predictable and manageable set of meanings. For semantic analysis of these image-based sentences to proceed, one must have a notion of what are necessary and sufficient parts of the image for NNSs to describe. To annotate this by hand is costly, whereas collecting comparable responses from NSs is relatively easy. This leads directly to the first two research questions:
 \begin{itemize}
 \pause
-\vspace{2em}
-\item[RQ1.]{Are the responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a picture description task (PDT) setting?} %What differences exist and what NLP tools are needed to account for them?
-\vspace{2em}
+\vspace{1em}
+\item[RQ1.]{Are the picture description task (PDT) responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses?}
+%In other words, do learners demonstrate significant overlap with native-like usage in a picture description task (PDT) setting?} %What differences exist and what NLP tools are needed to account for them?
+\vspace{1em}
 \pause
-\item[RQ2.]{In the constrained communicative environment of a PDT, what are appropriate response and model representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
+\item[RQ2.]{For PDT responses, what are appropriate representations for the purpose of providing meaning-oriented feedback or evaluation?}
+% In other words, which linguistic components are crucial and which are superfluous?}
 %As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
 
 %With the goal of automatic response scoring, these desired components of linguistic analysis and representation can guide decisions regarding the forming of an appropriate NLP pipeline. The next three research questions primarily address the relevant NLP concerns:
 \pause
-\vspace{2em}
-\item[RQ3.]{What kinds of existing NLP tools and language resources can be integrated to form a content analysis system for open response language learning tasks?}
+\vspace{1em}
+\item[RQ3.]{What kinds of NLP tools are appropriate here?}
 %As discussed later, this work attempts to take statistical methods traditionally used to analyze the frequencies of individual words in sentences and apply those methods to the frequencies of syntactic dependencies in sentences, as one means of deriving semantic information from syntactic tools. Thus, the fourth research question is:
-\end{itemize}
-\end{frame}
 
-\begin{frame}
-\frametitle{Research Questions}
-%\vspace{-4ex}
-\small
-\begin{itemize}
 \pause
-\item[RQ4.]{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance? Is a bag-of-words approach alone adequate for our needs?}
+\vspace{1em}
+\item[RQ4.]{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance?}
 %Given that the system has thus far relied primarily on a parser, lemmatizer and spelling correction module, without the inclusion of semantic tools, the fifth research question is: %and given NLP trends that focus on surface forms over deeper processing...
 \pause
-\vspace{2em}
-\item[RQ5.]{Can the accuracy of the system be improved by the inclusion of semantic information from tools like semantic role labelers, WordNet, or word and sentence embeddings?}
+\vspace{1em}
+\item[RQ5.]{Can the accuracy of the system be improved with information from semantic tools (e.g., BERT)?}
 %%Are increases in performance valuable enough to offset the computational costs? In other words, how deep should the processing be in order to achieve our goal of providing a meaning-based ICALL component that is lightweight and practical?} %%%**How deep should the processing be?
 
 %The processing of unannotated responses is a primary goal of this work, but in order to evaluate the output of my system, manually annotated responses are necessary. In keeping with the motivations of this dissertation, the annotation should capture response accuracy and appropriateness. My sixth and final research question focuses on these concerns:
 \pause
-\vspace{2em}
-\item[RQ6.]{What is the annotation scheme for this task and can the system perform within the range of human performance? Relatedly, what does it mean for a response to be \textit{appropriate} and how can this be captured with annotation?}
+\vspace{1em}
+\item[RQ6.]{What is the annotation scheme for this task and can the system perform within the range of human performance?}
 \end{itemize}
 \end{frame}
 
@@ -199,170 +195,9 @@ Indiana University  }
 %\end{frame}
 %
 
-\begin{frame}
-\frametitle{BACKUP: Pilot study: Data}
-\begin{small}
-\begin{figure}[htb!]
-\begin{center}
-\bgroup
-\def\arraystretch{1.45}
-\begin{tabular}{|c|c|}
-\hline
-%[trim=1200 400 1500 1500,clip,width=\textwidth]
-\multirow{5}{*}{\includegraphics[trim=0 50 0 20,clip,width=0.28\columnwidth]{figures/exampleprompt.jpg}} &
-\textbf{Response (L1)} \\
-\cline{2-2}
-& He is droning his wife pitcher. (Ar) \\
-\cline{2-2}
-& The artist is drawing a pretty women. (Ch) \\
-\cline{2-2}
-& The artist is painting a portrait of a lady. (En) \\
-\cline{2-2}
-& The painter is painting a woman's paint. (Sp) \\
-%\cline{2-2}
-%& The man is painting a woman's picture. (Ko) \\
-\hline
-\end{tabular}
-\egroup
-\end{center}
-\caption{Example item from the pilot study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
-\label{fig:example-picture}
-\end{figure}
-\end{small}
-\vspace{-1em}
-\pause
-\begin{itemize}
-\item 10 (transitive) PDT items $\times$ 53 participants $=$ 530 responses;
-\pause
-\begin{itemize}
-\item 14 NSs (grad students), 39 NNSs (ESL students);
-\end{itemize}
-\pause
-\item Annotation: \textit{Given the prompt, would the response be acceptable to most English speakers? Acceptable/unacceptable}
-\begin{itemize}
-\item 1 annotator (me)
-\end{itemize}
-\pause
-\end{itemize}
-%\begin{figure}[htb!]
-%\begin{center}
-%\begin{tabular}{|c||c|}
-%\hline
-%\includegraphics[width=0.40\columnwidth]{figures/exampleprompt.jpg} & \includegraphics[width=0.40\columnwidth]{figures/exampleprompt2.jpg}\\
-%\hline
-%\textbf{Response (L1)} & \textbf{Response (L1)} \\
-%\hline
-%He is droning his wife pitcher. (Ar) & The man killing the beard. (Ar) \\
-%\hline
-%The artist is drawing a pretty women. (Ch) & A man is shutting a bird. (Ch) \\
-%\hline
-%The artist is painting a portrait of a lady. (En) & A man is shooting a bird. (En) \\
-%\hline
-%The painter is painting a woman's paint. (Sp) & The man shouted the bird. (Sp)\\
-%\hline
-%\end{tabular}
-%\end{center}
-%\caption{Example items from the previous study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
-%\label{fig:example-picture}
-%\end{figure}
-\end{frame}
 
 \begin{frame}
-\frametitle{BACKUP: Pilot study: Processing}
-
-First approach: \textbf{Rule-based} triple extraction and matching
-
-\medskip
-\pause
-Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ \textit{V(S,O)} extraction rules;
-
-\pause
-\medskip
-Compare NNS \textit{V(S,O)} \& NS \textit{V(S,O)} list $\rightarrow$ covered / not covered;
-\pause
-
-\begin{itemize}
-\pause
-\item Dependency-based
-\begin{itemize}
-\pause
-\item Captures aspects of form and meaning;
-\pause
-\item Subjects, objects, verbs clearly labeled;
-\end{itemize}
-\pause
-\item V(S,O) extraction
-\begin{itemize}
-\pause
-\item Decision tree based on dependency indexing \& labels, POS;
-\pause
-\item Custom for my transitive PDT, not generalizable, not robust;
-\pause
-\item $\approx$92\% accurate, $\approx$8\% extraction errors;
-\end{itemize}
-\pause
-\item Overall accuracy: 58.9\%
-\pause
-\begin{itemize}
-\pause
-\item I.e., \textit{Acceptable} covered, \textit{unacceptable} not covered;
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{BACKUP: Pilot study: Processing}
-Second approach: \textbf{Semantic similarity} scoring
-
-\medskip
-\pause
-Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ term frequency-inverse document frequency (tf-idf; ``term'' $=$ lemmatized dependency);
-
-\pause
-\medskip
-NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
-\pause
-
-\begin{itemize}
-\pause
-\item tf-idf: Score dependencies according to importance; 
-%\begin{itemize}
-%\pause
-%\item Score dependencies according to importance/salience;
-%\end{itemize}
-\pause
-\item Vectorize \& Score
-\begin{itemize}
-\pause
-\item Get \textit{sorted union set} of NS and NNS dependencies;
-\pause
-\item NNS vector: Replace deps with their \textbf{NNS} tf-idf scores;
-\pause
-\item NS vector: Replace deps with their \textbf{NS} tf-idf scores;
-%\end{itemize}
-%\pause
-%\item Score
-%\pause
-%\begin{itemize}
-\pause
-\item Response score $=$ \textit{cosine distance} for NNS \& NS vectors;
-\end{itemize}
-\pause
-\item Rank by scores \& calculate Mean Average Precision (MAP);
-\begin{itemize}
-\pause
-\item MAP \textit{acceptable} responses: $\approx$51\%
-\end{itemize}
-\pause
-\item Process is more robust \& generalizable;
-\pause
-\item Dataset (especially NS models) and annotation are weak;
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{BACKUP, combine 1/4; Main study: Data collection}
+\frametitle{Data collection}
 \medskip
 
 PDT with very simple images only:
@@ -384,7 +219,7 @@ Intended to focus participants' attention on the main action
 \end{frame}
 
 \begin{frame}
-\frametitle{BACKUP, combine 2/4; Main study: Data collection}
+\frametitle{Data collection}
 
 Two PDT prompt versions:
 %\begin{itemize}
@@ -416,18 +251,32 @@ Two PDT prompt versions:
 Intended for exploring the specificity needed for my approach
 
 \end{frame}
-%
-%\item{familiar vs crowdsourced}
-%\item{first vs second responses}
-%\end{itemize}
-%Describe:
-%\begin{itemize}
-%\item{participants, resulting dataset: total responses, demographics}
-%\end{itemize}
-%\end{frame}
+
+\begin{frame}
+\frametitle{Data collection}
+
+3 verb types:
+
+\begin{table}[width=.8\columnwidth]\small
+\begin{center}
+\begin{tabular}{|C{33.5mm}|C{34mm}|C{33.5mm}|}
+\hline
+10 \textbf{intransitive} items & 10 \textbf{transitive} items & 10 \textbf{ditransitive} items \\
+\hline
+{\includegraphics[width=0.2\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.2\columnwidth]{figures/I02.jpg}} &
+{\includegraphics[trim=21 90 65 110,clip,width=0.25\columnwidth]{figures/I17.jpg}} \\
+\hline
+What is the girl doing? & What is the boy doing? & What is the girl doing? \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Intended for exploring whether my approach can generalize to a range of sentence types
+\end{frame}
 
 
-\begin{frame}{BACKUP, combine 3/4; Main study: Data collection}
+\begin{frame}{Data collection}
 
 \vspace{1em}
 The pilot study \textit{rake} problem:
@@ -441,7 +290,6 @@ The pilot study \textit{rake} problem:
 
 \vspace{-1em}
 \begin{figure}[htb!]
-%[width=0.8\columnwidth]
 \begin{center}
 \bgroup
 \def\arraystretch{1.25}
@@ -470,59 +318,35 @@ The pilot study \textit{rake} problem:
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{BACKUP, combine 4/4; Main study: Data collection}
 
-3 verb types:
-
-\begin{table}[width=.8\columnwidth]\small
-\begin{center}
-\begin{tabular}{|C{33.5mm}|C{34mm}|C{33.5mm}|}
-\hline
-10 \textbf{intransitive} items & 10 \textbf{transitive} items & 10 \textbf{ditransitive} items \\
-\hline
-{\includegraphics[width=0.2\columnwidth]{figures/I20.jpg}} & {\includegraphics[width=0.2\columnwidth]{figures/I02.jpg}} &
-{\includegraphics[trim=21 90 65 110,clip,width=0.25\columnwidth]{figures/I17.jpg}} \\
-\hline
-What is the girl doing? & What is the boy doing? & What is the girl doing? \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-%\smallskip
-%\begin{itemize}
-%\pause
-%\item 499 participants: 358 NS (crowdsourced), 141 NNS (ESL students)
-%\pause
-%\item 30 items: Roughly 300 NS responses \& 140 NNS responses per item
-%\end{itemize}
-
-Intended for exploring whether my approach can generalize to a broader range of sentence types
-\end{frame}
 
 \begin{frame}
 \frametitle{Main study: Data collection}
 \vspace{.5em}
 499 participants, 13,533 responses:
+\vspace{.5em}
 \pause
 \begin{itemize}
 \pause
 \item 141 NNSs (ELIP at IU), 4,290 responses;
+\vspace{.5em}
 \begin{itemize}
 \pause
 \item 125 Mandarin, 4 Korean, 3 Burmese, 2 Hindi; 1 each: Arabic, Indonesian, German, Gujarati, Spanish, Thai, Vietnamese;
 \end{itemize}
-\vspace{.2em}
+\vspace{.5em}
 \pause
 \item 358 NSs, 9,243 responses:
 \begin{itemize}
 \pause
+\vspace{.5em}
 \item 329 \param{crowdsourced}, purchased via SurveyMonkey;
 \pause
 \begin{itemize}
 \item 7,960 responses;
 \end{itemize}
 \pause
+\vspace{.5em}
 \item 29 \param{familiar}, unpaid colleagues;
 \begin{itemize}
 \item 1,283 responses;
@@ -563,36 +387,22 @@ Intended for exploring whether my approach can generalize to a broader range of 
 
 \begin{frame}
 \frametitle{Annotation features}
-\pause
-%Feature requirements:
-%\begin{itemize}
-%\pause
-%\item \textit{reliablity}: consistently annotated by multiple humans;
-%\pause
-%\item \textit{validity}: directly testing for the desired constructs;
-%\end{itemize}
-%\pause
-First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
+5 binary features:
 \begin{itemize}
 \pause
-\item \textbf{2}: $+$A, $+$NL $>$ \textbf{1}: $+$A, $-$NL $>$ \textbf{0}: $-$A, $-$NL
-\pause
-\item Not operationalizable: e.g., response is accurate w.r.t. prompt but adds unverifiable details; is this still \textit{accurate}?
-\item Not \textit{reliable}, not \textit{valid};
-\end{itemize}
-\pause
-\vspace{.6em}
-Several iterations later, 5 binary features:
-\begin{itemize}
-\pause
+\vspace{.8em}
 \item \feat{Core event}: \pause Does response capture main action?
 \pause
+\vspace{.8em}
 \item \feat{Answerhood}: \pause Does response directly answer prompt?
 \pause
+\vspace{.8em}
 \item \feat{Grammaticality}: \pause Is response free from grammar problems?
 \pause
+\vspace{.8em}
 \item \feat{Interpretability}: \pause Does response evoke a clear mental image?
 \pause
+\vspace{.8em}
 \item \feat{Verifiability}: \pause Is all response info supported by image?
 \end{itemize}
 
@@ -603,6 +413,9 @@ Several iterations later, 5 binary features:
 \frametitle{Annotation features}
 \begin{table}[htb!]
 \small
+\textbf{C}ore event, \textbf{A}nswerhood, \textbf{G}rammaticality, \textbf{I}nterpretability, \textbf{V}erifiability \\
+
+\vspace{.3em}
 \begin{center}
 %\begin{tabular}{|p{3.7cm}|c|c|c|c|c|}
 \begin{tabular}{|l|c|c|c|c|c|}
@@ -621,47 +434,13 @@ The boy is smiling pizza. & 0 & 1 & 0 & 0 & 0 \\
 He may get fat eating. & 0 & 0 & 1 & 1 & 0 \\
 \hline
 \end{tabular}
-\caption{\label{tab:dev-transitive} \small Annotated for five features: Core event (\textit{C}), Answerhood (\textit{A}), Grammaticality (\textit{G}), Interpretability (\textit{I}) and Verifiability (\textit{V}).}
+%\caption{\label{tab:dev-transitive} \small Annotated for five features: Core event (\textit{C}), Answerhood (\textit{A}), Grammaticality (\textit{G}), Interpretability (\textit{I}) and Verifiability (\textit{V}).}
 \end{center}
 \end{table}
-\end{frame}
+\vspace{.3em}
 
-\begin{frame}
-\frametitle{Annotation features}
-\pause
-Inter-rater reliability for two annotators and 10\% of the dataset:
-\pause
+Inter-rater reliability (Cohen's kappa): 0.744 (\textbf{I}) -- 0.936 (\textbf{A}) \\
 
-\textit{yes} annotations for Annotator 1 (note skewedness), expected chance agreement (\textit{Chance}), actual observed agreement (\textit{Observed}) and Cohen's kappa (\textit{Kappa})
-
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|l||l|l||l|}
-\hline
-Set	& A1Yes & Chance & Observed & Kappa \\
-\hline
-\hline
-Core Event & 0.733 & 0.601 & 0.923 & 0.808 \\
-\hline
-Answerhood & 0.834 & 0.721 & 0.982 & 0.936 \\
-\hline
-Grammaticality & 0.861 & 0.768 & 0.960 & 0.827 \\
-\hline
-Interpretability & 0.818 & 0.682 & 0.919 & 0.744 \\
-\hline
-Verifiability & 0.845 & 0.719 & 0.968 & 0.884 \\
-\hline
-%\pause \\
-\hline
-Intransitive & 0.863 & 0.758 & 0.978 & 0.910 \\
-\hline
-Transitive & 0.780 & 0.653 & 0.949 & 0.853 \\
-\hline
-Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\ 
-\hline
-\end{tabular}
-\end{center}
-\end{table}
 \end{frame}
 
 \begin{frame}
@@ -703,62 +482,6 @@ Solution: Determine feature weights and apply to annotations to obtain benchmark
 \end{frame}
 
 \begin{frame}
-\frametitle{BACKUP: Weighting features}
-\begin{small}
-\vspace{1ex}
-Raters perform holistic preference test (blind to annotations)
-\pause
-\vspace{-2ex}
-\begin{table}
-%\scriptsize
-\footnotesize
-\begin{center}
-\bgroup
-\def\arraystretch{1.1}
-\begin{tabular}{|=l|+c||+c|+c|+c|+c|+c|}
-\hline
-\textit{What is the boy doing?} & Pref? & Core & Ansr & Gram & Intrp & Verif \\
-\hline
-\hline
-\rowstyle{\color{RoyalBlue}}He is eating food. & \textbf{yes} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} \\
-\hline
-\rowstyle{\color{Maroon}}He may get fat eating. & no & 0 & 0 & 1 & 1 & 0 \\
-\hline
-\pause \\
-\hline
-\only<2->{\rowstyle{\color{Maroon}}He is hungry. & no & 0 & 0 & 1 & 0 & 1} \\
-\hline
-\uncover<2->{\rowstyle{\color{RoyalBlue}}the boy is eating pizza & \textbf{yes} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1}} \\
-\hline
-\pause \\
-\hline
-\only<3->{\rowstyle{\color{RoyalBlue}}{\scriptsize The child is about to eat pizza.} & \textbf{yes} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1}} \\
-\hline
-\uncover<3->{\rowstyle{\color{Maroon}}he eating. & no & 0 & 1 & 0 & 1 & 1} \\
-\hline
-\pause \\
-\hline
-\only<4->{\rowstyle{\color{RoyalBlue}}Totals preferred responses & & 2 & 2 & 3 & 3 & 3} \\
-\hline
-\uncover<4->{\rowstyle{\color{Maroon}}Totals dispreferred responses & & 0 & 1 & 2 & 2 & 2 \\
-\hline
-\rowstyle{\color{RoyalBlue}}Net preferred (pref {\color{black}-} {\color{Maroon}dispref}) & & 2 & 1 & 1 & 1 & 1 \\
-\hline
-Feature weight &  & .333 & .167 & .167 & .167 & .167} \\
-\hline \pause \\
-%\multicolumn{7}{c}{} \\
-\hline
-\only<5->{}
-\uncover<5->{$^*$Real feature weight &  & .365 & .093 & .055 & .224 & .263} \\
-\hline
-\end{tabular}
-\egroup
-\end{center}
-\end{table}
-\end{small}
-\end{frame}
-
-\begin{frame}
 \frametitle{Weighting features}
 
 \vspace{1em}
@@ -767,10 +490,11 @@ Annotators performed a preference task for pairs of responses. \\
 
 \vspace{.7em}
 
+\pause
 Feature weights were derived according to how frequently each feature is ``yes'' among preferred responses. \\
 
 \vspace{1em}
-
+\pause
 \begin{table}[htb!]
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
@@ -785,11 +509,13 @@ Core & Answr & Gramm & Interp & Verif \\
 
 \vspace{1em}
 
+\pause
+
 Preferences are reliable:
 
 \vspace{1em}
 
-Agreement for two annotators on a sample of 300 response pairs:
+Agreement for two annotators on a sample of 300 pairs:
 
 \vspace{1em}
 
@@ -862,13 +588,12 @@ Pizza is this boy's favorite food & 0.000 & 0.000 & 0.055 & 0.000 & 0.000 & 0.05
 \begin{frame}
 \frametitle{SBERT for comparison}
 I also use SBERT for comparing my system's performance.
-\pause
 \vspace{.3em}
 \begin{itemize}
 \pause
-\item State-of-the-art sentence embeddings for semantic textual similarity.
+\item State-of-the-art sentence embedding for semantic textual similarity.
 \vspace{.3em}
-\vspace{-1.2em}
+%\vspace{-1.2em}
 \pause
 \item Replaces dependency parser $+$ lemmatizer $+$ tf-idf cosine pipeline. 
 \vspace{.3em}
@@ -924,41 +649,6 @@ Optimizing means finding the best system settings:
 \end{frame}
 
 
-\begin{frame}
-\frametitle{BACKUP: System configuration}
-\small
-
-\vspace{-.5em}
-\pause
-All parameters or variables and their settings:
-
-\vspace{-.7em}
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\textbf{Trans\-i\-ti\-vi\-ty} & \textbf{Tar\-get\-ing} & \textbf{Fam\-il\-iar\-i\-ty} & \textbf{Prim\-a\-cy} & \textbf{Term Rep.} \\
-\hline
-\hline
-\param{in\-trans\-i\-tive} & \param{tar\-get\-ed} & \param{familar} & \param{prim\-a\-ry} & \param{ldh} \\
-\hline
-\param{trans\-i\-tive} & \param{un\-tar\-get\-ed} & \param{crowd\-sourced} & \param{mix\-ed} & \param{xdh} \\
-\hline
-\param{di\-trans\-i\-tive} & & & & \param{xdx} \\
-\hline
-\end{tabular}
-\label{tab:all-params}
-\end{center}
-\end{table}
-
-\vspace{1.2em}
-A \textbf{system configuration} combines one setting from each column.
-
-\vspace{1.2em}
-If particular settings correlate highly with item characteristics (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
-
-\end{frame}
-
 
 
 %\begin{frame}
@@ -974,6 +664,7 @@ If particular settings correlate highly with item characteristics (intransitive 
 
 \begin{frame}
 \frametitle{Sampling data}
+\normalsize
 
 \pause
 \textbf{NNS test sets}:
@@ -998,12 +689,13 @@ If particular settings correlate highly with item characteristics (intransitive 
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Sampling data: Complexity}
-
 \small
-Standardized type-to-token ratio (STTR) for the response samples. Tokens here are \textit{dependencies}. \\
 
+\begin{columns}
+\begin{column}{0.6\textwidth}
 \begin{table}[htb!]
 \begin{center}
 \setlength{\tabcolsep}{.5em}
@@ -1013,42 +705,47 @@ Standardized type-to-token ratio (STTR) for the response samples. Tokens here ar
 \cline{2-5}
    	& \param{Fam} & \param{Crd} & \param{Crd} 			& NNS			\\ \hline
 \hline
-
-
-\param{Intrans} & 0.55 	  		& 0.52 			& 0.53 		& 0.39 		\\ \hline
-\param{Trans}   & 0.56        	& 0.58          & 0.58      & 0.51    	    \\ \hline
-\param{Ditrans} & 0.59        	& 0.64          & 0.63      & 0.60    	    \\ \hline
+\param{Intrans} & .558 	  		& .525 			& .535 		& .391 		\\ \hline
+\param{Trans}   & .569        	& .580          & .581      & .517    	    \\ \hline
+\param{Ditrans} & .598        	& .640          & .637      & .606    	    \\ \hline
 \hline
-\param{Target}  & 0.54 			& 0.53	 		& 0.54 		& 0.48			\\ \hline
-\param{Untarg}  & 0.61        	& 0.63        	& 0.62    	& 0.52        	\\ \hline
+\param{Target}  & .545 			& .535	 		& .545 		& .481			\\ \hline
+\param{Untarg}  & .610        	& .633        	& .621    	& .528        	\\ \hline
 \hline
-\param{prim\-a\-ry} & N/A       & 0.51 			& 0.52		& 0.50		 	\\ \hline
-\param{mix\-ed}   & 0.57        & 0.65          & 0.64      & N/A	        \\ \hline
+\param{Prim\-a\-ry} & N/A       & .517 			& .523		& .505		 	\\ \hline
+\param{Mix\-ed}   & .576        & .652          & .645      & N/A	        \\ \hline
 \hline
-\param{xdx}     & 0.36			& 0.42 			& 0.42		& 0.36			\\ \hline
-\param{xdh}     & 0.65        	& 0.66          & 0.66      & 0.57	        \\ \hline
-\param{ldh}     & 0.66        	& 0.66          & 0.67      & 0.57	        \\ \hline
+\param{xdx}     & .364			& .424 			& .421		& .364			\\ \hline
+\param{xdh}     & .658        	& .661          & .660      & .572	        \\ \hline
+\param{ldh}     & .665        	& .664          & .671      & .578	        \\ \hline
 \hline
-Total    		& 0.57        	& 0.58         	& 0.58    	& 0.50	        \\ \hline
-%\param{Intrans} & 0.558 	  	& 0.525 			& 0.535 		& 0.391 		\\ \hline
-%\param{Trans}   & 0.569        	& 0.580          	& 0.581        	& 0.517    	    \\ \hline
-%\param{Ditrans} & 0.598        	& 0.640          	& 0.637        	& 0.606    	    \\ \hline
-%\hline
-%\param{Target}  & 0.545 		& 0.535	 			& 0.545 		& 0.481			\\ \hline
-%\param{Untarg}  & 0.610        	& 0.633        		& 0.621    		& 0.528        	\\ \hline
-%\hline
-%\param{prim\-a\-ry} & N/A        	& 0.517 			& 0.523			& 0.505		 	\\ \hline
-%\param{mix\-ed}   & 0.576         & 0.652          	& 0.645       	& N/A	        \\ \hline
-%\hline
-%\param{ldh}     & 0.665        	& 0.664          	& 0.671       	& 0.578	        \\ \hline
-%\param{xdh}     & 0.658        	& 0.661          	& 0.660       	& 0.572	        \\ \hline
-%\param{xdx}     & 0.364			& 0.424 			& 0.421			& 0.364			\\ \hline
-%\hline
-%Total    & 0.576        & 0.583          	& 0.584    		& 0.505	        \\ \hline
+Total    		& .576        	& .583         	& .584    	& .505	        \\ \hline
 \end{tabular}
-%\caption{\label{tab:sttr}Comparing average standardized type-to-token ratio (STTR) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting. Tokens here are \textit{dependencies}.}
 \end{center}
 \end{table}
+
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+Standardized type-to-token ratio (STTR) for the response samples. \\
+Tokens here are \textit{dependencies}. \\
+\vspace{.8em}
+
+\pause
+Complexity often correlates with parameter settings in terms of system performance. \\
+
+\vspace{.8em}
+\pause
+Within each parameter block, complexity increases as we move down the rows. E.g.: \\
+\vspace{.3em}
+\pause
+\param{Intrans} $<$ \param{Trans} $<$ \param{Ditrans} \\
+\vspace{.8em}
+
+\pause
+In some settings (e.g., \param{Intrans}), \param{Crowd} complexity is closer to NNS than is \param{Familiar}; other settings vice versa (e.g., \param{Ditrans}). \\
+ 
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -1107,11 +804,11 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \end{table}
 
 \begin{itemize}
-\item In all cases, \param{ldh} $+$ 14NS is best;
+\item In all cases, \param{ldh} $+$ 14NS is best (slightly);
 \item \param{xdx} becomes more competitive for larger model (50NS);
 \begin{itemize}
-\item \param{ditransitive}, \param{untargeted}: responses to these are \textit{least homogenous}---i.e., highest TTRs;
-\item In general: \param{ldh} TTR $>$ \param{xdh} TTR $>$ \param{xdx} TTR
+\item \param{ditrans}, \param{untarg}: \textit{least homogenous}---i.e., highest STTRs;
+\item In general: \param{ldh} STTR $>$ \param{xdh} STTR $>$ \param{xdx} STTR
 \end{itemize}
 \end{itemize}
 
@@ -1135,7 +832,7 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \param{Ditr}  & 0.65                   & 0.64 & \textbf{0.66}          & 0.66 & 0.62 & 0.66                   & 0.65 & \textit{\textbf{0.67}} & 0.66 & 0.64 \\ \hline
 \hline
 \param{Targ}  & \textbf{0.73}          & 0.73 & 0.73                   & 0.73 & 0.70 & \textit{\textbf{0.73}} & 0.73 & 0.73                   & 0.73 & 0.70 \\ \hline
-\param{Untg}  & 0.76                   & 0.76 & \textit{\textbf{0.76}} & 0.77 & 0.73 & \textbf{0.76}          & 0.76 & \textbf{0.76}          & 0.77 & 0.74 \\ \hline
+\param{Untg}  & 0.76                   & 0.76 & \textit{\textbf{0.76}} & 0.77 & 0.73 & 0.76          & 0.76 & \textbf{0.76}          & 0.77 & 0.74 \\ \hline
 \hline
 Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \textit{\textbf{0.75}} & 0.74 & 0.75                   & 0.75 & 0.72 \\ \hline
 \end{tabular}
@@ -1146,6 +843,7 @@ Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \
 \end{table}
 
 \begin{itemize}
+\item *\param{mixed} only (due to sparse \param{familiar} data);
 \item Totals: \param{crowdsourced} outperforms \param{familiar} (slightly);
 \item \param{crowdsourced} works best with \param{ldh};
 \item \param{familiar} works best with \param{xdx};
@@ -1420,6 +1118,253 @@ NTS: one slide
 \bibliographystyle{styles/myaclnat}
 \bibliography{levi-bib}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% BACKUP SLIDES BELOW %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Dependency parsing}
+\begin{figure}[htb!]
+\begin{center}
+    \begin{dependency}[arc edge,text only label,label style={above}]
+    \begin{deptext}[column sep=.5em]
+      \textit{vroot} \& The \& boy \& is \&[1em] eating \& pizza \\
+    \end{deptext}
+    \depedge[arc angle=78]{1}{5}{root}
+    \depedge[arc angle=35]{3}{2}{det}
+    \depedge[arc angle=65,edge style={double}]{5}{3}{nsubj}
+    \depedge[arc angle=20]{5}{4}{aux}
+    \depedge[edge style={double}]{5}{6}{dobj}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+  \end{dependency}
+\end{center}
+\caption{The dependency parse}
+\label{fig:prep-dependency}
+\end{figure}
+
+\end{frame}
+%1	the	_	DT	DT	_	2	det	_	_
+%2	boy	_	NN	NN	_	4	nsubj	_	_
+%3	be	_	VBZ	VBZ	_	4	aux	_	_
+%4	eat	_	VBG	VBG	_	0	root	_	_
+%5	pizza	_	NN	NN	_	4	dobj	_	_
+%6	.	_	.	.	_	4	punct	_	_
+
+
+\begin{frame}
+\frametitle{Research Questions}
+%\vspace{-4ex}
+\small
+\pause
+%My work here relies on images to constrain the range of responses to a predictable and manageable set of meanings. For semantic analysis of these image-based sentences to proceed, one must have a notion of what are necessary and sufficient parts of the image for NNSs to describe. To annotate this by hand is costly, whereas collecting comparable responses from NSs is relatively easy. This leads directly to the first two research questions:
+\begin{itemize}
+\pause
+\vspace{2em}
+\item[RQ1.]{Are the responses of L2 English learners sufficiently similar to those of NSs to allow automatic evaluation based on a collection of NS responses? In other words, do learners demonstrate significant overlap with native-like usage in a picture description task (PDT) setting?} %What differences exist and what NLP tools are needed to account for them?
+\vspace{2em}
+\pause
+\item[RQ2.]{In the constrained communicative environment of a PDT, what are appropriate response and model representations for the purpose of providing meaning-oriented feedback or evaluation? In other words, which linguistic components are crucial and which are superfluous?}
+%As mentioned above, one goal of this project is to show that content-based evaluation of learner sentences is possible without the expense of developing major new tools or language resources; in this vein, the third research question is: 
+
+%With the goal of automatic response scoring, these desired components of linguistic analysis and representation can guide decisions regarding the forming of an appropriate NLP pipeline. The next three research questions primarily address the relevant NLP concerns:
+\pause
+\vspace{2em}
+\item[RQ3.]{What kinds of existing NLP tools and language resources can be integrated to form a content analysis system for open response language learning tasks?}
+%As discussed later, this work attempts to take statistical methods traditionally used to analyze the frequencies of individual words in sentences and apply those methods to the frequencies of syntactic dependencies in sentences, as one means of deriving semantic information from syntactic tools. Thus, the fourth research question is:
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Research Questions}
+%\vspace{-4ex}
+\small
+\begin{itemize}
+\pause
+\item[RQ4.]{How do ``bag-of-words'' and ``bag-of-dependencies'' approaches compare in terms of performance? Is a bag-of-words approach alone adequate for our needs?}
+%Given that the system has thus far relied primarily on a parser, lemmatizer and spelling correction module, without the inclusion of semantic tools, the fifth research question is: %and given NLP trends that focus on surface forms over deeper processing...
+\pause
+\vspace{2em}
+\item[RQ5.]{Can the accuracy of the system be improved by the inclusion of semantic information from tools like semantic role labelers, WordNet, or word and sentence embeddings?}
+%%Are increases in performance valuable enough to offset the computational costs? In other words, how deep should the processing be in order to achieve our goal of providing a meaning-based ICALL component that is lightweight and practical?} %%%**How deep should the processing be?
+
+%The processing of unannotated responses is a primary goal of this work, but in order to evaluate the output of my system, manually annotated responses are necessary. In keeping with the motivations of this dissertation, the annotation should capture response accuracy and appropriateness. My sixth and final research question focuses on these concerns:
+\pause
+\vspace{2em}
+\item[RQ6.]{What is the annotation scheme for this task and can the system perform within the range of human performance? Relatedly, what does it mean for a response to be \textit{appropriate} and how can this be captured with annotation?}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Pilot study: Data}
+\begin{small}
+\begin{figure}[htb!]
+\begin{center}
+\bgroup
+\def\arraystretch{1.45}
+\begin{tabular}{|c|c|}
+\hline
+\multirow{5}{*}{\includegraphics[trim=0 50 0 20,clip,width=0.28\columnwidth]{figures/exampleprompt.jpg}} &
+\textbf{Response (L1)} \\
+\cline{2-2}
+& He is droning his wife pitcher. (Ar) \\
+\cline{2-2}
+& The artist is drawing a pretty women. (Ch) \\
+\cline{2-2}
+& The artist is painting a portrait of a lady. (En) \\
+\cline{2-2}
+& The painter is painting a woman's paint. (Sp) \\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+\caption{Example item from the pilot study showing responses from native speakers of Arabic (Ar), Chinese (Ch), English (En) and Spanish (Sp).}
+\label{fig:example-picture}
+\end{figure}
+\end{small}
+\vspace{-1em}
+\pause
+\begin{itemize}
+\item 10 (transitive) PDT items $\times$ 53 participants $=$ 530 responses;
+\pause
+\begin{itemize}
+\item 14 NSs (grad students), 39 NNSs (ESL students);
+\end{itemize}
+\pause
+\item Annotation: \textit{Given the prompt, would the response be acceptable to most English speakers? Acceptable/unacceptable}
+\begin{itemize}
+\item 1 annotator (me)
+\end{itemize}
+\pause
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot study: Processing}
+\normalsize
+
+First approach: \textbf{Rule-based} triple extraction and matching
+
+\medskip
+\pause
+Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ \textit{V(S,O)} extraction rules;
+
+\pause
+\medskip
+Compare NNS \textit{V(S,O)} \& NS \textit{V(S,O)} list $\rightarrow$ covered / not covered;
+\pause
+
+\begin{itemize}
+\pause
+\item Dependency-based
+\begin{itemize}
+\pause
+\item Captures aspects of form and meaning;
+\pause
+\item Subjects, objects, verbs clearly labeled;
+\end{itemize}
+\pause
+\item V(S,O) extraction
+\begin{itemize}
+\pause
+\item Decision tree based on dependency indexing \& labels, POS;
+\pause
+\item Custom for my transitive PDT, not generalizable, not robust;
+\pause
+\item $\approx$92\% accurate, $\approx$8\% extraction errors;
+\end{itemize}
+\pause
+\item Overall accuracy: 58.9\%
+\pause
+\begin{itemize}
+\pause
+\item I.e., \textit{Acceptable} covered, \textit{unacceptable} not covered;
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pilot study: Processing}
+
+\normalsize
+Second approach: \textbf{Semantic similarity} scoring
+
+\medskip
+\pause
+Dependency parser $\rightarrow$ lemmatizer $\rightarrow$ term frequency-inverse document frequency (tf-idf; ``term'' $=$ lemmatized dependency);
+
+\pause
+\medskip
+NNS response score $=$ cosine distance of NS and NNS tf-idf scores;
+\pause
+
+\begin{itemize}
+\pause
+\item tf-idf: Score dependencies according to importance; 
+\pause
+\item Vectorize \& Score
+\begin{itemize}
+\pause
+\item Get \textit{sorted union set} of NS and NNS dependencies;
+\pause
+\item NNS vector: Replace deps with their \textbf{NNS} tf-idf scores;
+\pause
+\item NS vector: Replace deps with their \textbf{NS} tf-idf scores;
+\pause
+\item Response score $=$ \textit{cosine distance} for NNS \& NS vectors;
+\end{itemize}
+\pause
+\item Rank by scores \& calculate Mean Average Precision (MAP);
+\begin{itemize}
+\pause
+\item MAP \textit{acceptable} responses: $\approx$51\%
+\end{itemize}
+\pause
+\item Process is more robust \& generalizable;
+\pause
+\item Dataset (especially NS models) and annotation are weak;
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{System configuration}
+\small
+
+\vspace{-.5em}
+\pause
+All parameters or variables and their settings:
+
+\vspace{-.7em}
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Trans\-i\-ti\-vi\-ty} & \textbf{Tar\-get\-ing} & \textbf{Fam\-il\-iar\-i\-ty} & \textbf{Prim\-a\-cy} & \textbf{Term Rep.} \\
+\hline
+\hline
+\param{in\-trans\-i\-tive} & \param{tar\-get\-ed} & \param{familar} & \param{prim\-a\-ry} & \param{ldh} \\
+\hline
+\param{trans\-i\-tive} & \param{un\-tar\-get\-ed} & \param{crowd\-sourced} & \param{mix\-ed} & \param{xdh} \\
+\hline
+\param{di\-trans\-i\-tive} & & & & \param{xdx} \\
+\hline
+\end{tabular}
+\label{tab:all-params}
+\end{center}
+\end{table}
+
+\vspace{1.2em}
+A \textbf{system configuration} combines one setting from each column.
+
+\vspace{1.2em}
+If particular settings correlate highly with item characteristics (intransitive / transitive / ditransitive; response complexity), I can optimize the system for new items.
+
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Sampling data: Response length}
 \small
@@ -1444,13 +1389,135 @@ NTS: one slide
 \hline
 Total	& 6.7			& 6.1			& 6.1		& 6.6			\\ \hline
 \end{tabular}
-\caption{\label{tab:response-length}Comparing average response length (in words) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.
-}
+\caption{\label{tab:response-length}Comparing average response length (in words) for the samples used throughout this chapter as NS models and NNS test sets, in total and by parameter setting.}
 \end{center}
 \end{table}
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Annotation features}
+
+\normalsize
+\pause
+%Feature requirements:
+%\begin{itemize}
+%\pause
+%\item \textit{reliablity}: consistently annotated by multiple humans;
+%\pause
+%\item \textit{validity}: directly testing for the desired constructs;
+%\end{itemize}
+%\pause
+First iteration: \textbf{accuracy (A)} \& \textbf{native-likeness (NL)}
+\begin{itemize}
+\pause
+\item \textbf{2}: $+$A, $+$NL $>$ \textbf{1}: $+$A, $-$NL $>$ \textbf{0}: $-$A, $-$NL
+\pause
+\item Not operationalizable: e.g., response is accurate w.r.t. prompt but adds unverifiable details; is this still \textit{accurate}?
+\item Not \textit{reliable}, not \textit{valid};
+\end{itemize}
+\pause
+This was scrapped and I settled on the 5 binary features.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Annotation features}
+
+\normalsize
+\pause
+Inter-rater reliability for two annotators and 10\% of the dataset:
+\pause
+
+\textit{yes} annotations for Annotator 1 (note skewedness), expected chance agreement (\textit{Chance}), actual observed agreement (\textit{Observed}) and Cohen's kappa (\textit{Kappa})
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l||l|l||l|}
+\hline
+Set	& A1Yes & Chance & Observed & Kappa \\
+\hline
+\hline
+Core Event & 0.733 & 0.601 & 0.923 & 0.808 \\
+\hline
+Answerhood & 0.834 & 0.721 & 0.982 & 0.936 \\
+\hline
+Grammaticality & 0.861 & 0.768 & 0.960 & 0.827 \\
+\hline
+Interpretability & 0.818 & 0.682 & 0.919 & 0.744 \\
+\hline
+Verifiability & 0.845 & 0.719 & 0.968 & 0.884 \\
+\hline
+%\pause \\
+\hline
+Intransitive & 0.863 & 0.758 & 0.978 & 0.910 \\
+\hline
+Transitive & 0.780 & 0.653 & 0.949 & 0.853 \\
+\hline
+Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Weighting features}
+\begin{small}
+\vspace{1ex}
+Raters perform holistic preference test (blind to annotations)
+\pause
+\vspace{-2ex}
+\begin{table}
+%\scriptsize
+\footnotesize
+\begin{center}
+\bgroup
+\def\arraystretch{1.1}
+\begin{tabular}{|=l|+c||+c|+c|+c|+c|+c|}
+\hline
+\textit{What is the boy doing?} & Pref? & Core & Ansr & Gram & Intrp & Verif \\
+\hline
+\hline
+\rowstyle{\color{RoyalBlue}}He is eating food. & \textbf{yes} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} \\
+\hline
+\rowstyle{\color{Maroon}}He may get fat eating. & no & 0 & 0 & 1 & 1 & 0 \\
+\hline
+\pause \\
+\hline
+\only<2->{\rowstyle{\color{Maroon}}He is hungry. & no & 0 & 0 & 1 & 0 & 1} \\
+\hline
+\uncover<2->{\rowstyle{\color{RoyalBlue}}the boy is eating pizza & \textbf{yes} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1}} \\
+\hline
+\pause \\
+\hline
+\only<3->{\rowstyle{\color{RoyalBlue}}{\scriptsize The child is about to eat pizza.} & \textbf{yes} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1}} \\
+\hline
+\uncover<3->{\rowstyle{\color{Maroon}}he eating. & no & 0 & 1 & 0 & 1 & 1} \\
+\hline
+\pause \\
+\hline
+\only<4->{\rowstyle{\color{RoyalBlue}}Totals preferred responses & & 2 & 2 & 3 & 3 & 3} \\
+\hline
+\uncover<4->{\rowstyle{\color{Maroon}}Totals dispreferred responses & & 0 & 1 & 2 & 2 & 2 \\
+\hline
+\rowstyle{\color{RoyalBlue}}Net preferred (pref {\color{black}-} {\color{Maroon}dispref}) & & 2 & 1 & 1 & 1 & 1 \\
+\hline
+Feature weight &  & .333 & .167 & .167 & .167 & .167} \\
+\hline \pause \\
+%\multicolumn{7}{c}{} \\
+\hline
+\only<5->{}
+\uncover<5->{$^*$Real feature weight &  & .365 & .093 & .055 & .224 & .263} \\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+\end{table}
+\end{small}
+\end{frame}
 
 
 \end{document}
