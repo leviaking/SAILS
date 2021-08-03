@@ -1,5 +1,5 @@
-%\documentclass[xcolor={dvipsnames}]{beamer}
-\documentclass[handout,xcolor={dvipsnames}]{beamer}
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\documentclass[handout,xcolor={dvipsnames}]{beamer}
 \usepackage{lmodern}
 % MD: we can mess with this ...
 %\usetheme{Berlin}
@@ -194,7 +194,134 @@ Indiana University  }
 %\end{itemize}
 %\end{frame}
 %
+\begin{frame}
+\frametitle{System}
 
+%\vspace{-1.2em}
+\textbf{Step 1: Dependency parse:}
+
+\begin{figure}[htb!]
+\begin{center}
+    \begin{dependency}[arc edge,text only label,label style={above}]
+    \begin{deptext}[column sep=.5em]
+      \textit{vroot} \& The \& boy \& is \&[1em] eating \& pizza \\
+    \end{deptext}
+    \depedge[arc angle=78]{1}{5}{root}
+    \depedge[arc angle=35]{3}{2}{det}
+    \depedge[arc angle=65,edge style={double}]{5}{3}{nsubj}
+    \depedge[arc angle=20]{5}{4}{aux}
+    \depedge[edge style={double}]{5}{6}{dobj}
+%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
+%    \depedge[edge style={dotted}]{3}{2}{det}
+  \end{dependency}
+\end{center}
+%\caption{The dependency parse}
+\label{fig:prep-dependency}
+\end{figure}
+
+\begin{columns}
+\pause
+\column{0.2\textwidth}
+
+    \column{0.4\textwidth}
+%        \centering
+\begin{table}
+\begin{tabular}{l}
+\textbf{Get dependencies:} \\
+% & \\
+root(eating, \textit{vroot}) \\
+det(the, boy) \\
+nsubj(boy, eating) \\
+aux(is, eating) \\
+dobj(pizza, eating) \\
+\end{tabular}
+\end{table}
+
+%\column{0.3\textwidth}
+%        \centering
+%\begin{table}
+%\begin{tabular}{l}
+%Step 2: Lemmatize:
+%\\
+%\\
+%$\rightarrow$ \\
+%\\
+%\end{tabular}
+%\end{table}
+
+\pause
+\column{0.4\textwidth}
+%        \centering
+\begin{table}
+\begin{tabular}{cl}
+\multicolumn{2}{c}{\textbf{Step 2: Lemmatize:}} \\
+% & \\
+$\rightarrow$ & root(\textbf{eat}, \textit{vroot}) \\
+$\rightarrow$ & det(the, boy) \\
+$\rightarrow$ & nsubj(boy, \textbf{eat}) \\
+$\rightarrow$ & aux(\textbf{be}, \textbf{eat}) \\
+$\rightarrow$ & dobj(pizza, \textbf{eat}) \\
+\end{tabular}
+\end{table}
+
+\column{0.2\textwidth}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{System}
+%\vspace{-2em}
+\small
+\textbf{Step 3: tf-idf} (term frequency-inverse document frequency) \\
+\vspace{.5em}
+\pause
+NS model: [He is eating pizza. The boy is eating pizza.] \\ 
+\vspace{.5em}
+\pause
+NNS 1: He is eating food. \hspace{1.4em} \pause NNS 2: He is eating pizza. \\
+
+\pause
+\vspace{-.6em}
+\footnotesize
+\begin{table}[htb!]
+%\vspace{.3em}
+\begin{center}
+\begin{tabular}{|c||c|c||c|c||c|c|}
+\hline
+ & \multicolumn{2}{c||}{NS model} & \multicolumn{2}{c||}{NNS 1} & \multicolumn{2}{c|}{NNS 2} \\
+\cline{2-7}
+NS $\cup$ NNSs & tf & tf-idf & tf & tf-idf & tf & tf-idf \\
+\hline
+aux(be,eat) & 2 & .04 & 1  &  .02 &  1 & .02 \\ 
+\hline
+det(the,boy) & 1 & .04 &  -  & 0 & - & 0 \\
+\hline
+dobj(food,eat) & - & 0 & 1   & .06 & - & 0 \\
+\hline
+dobj(pizza,eat) & 2 & .16 & -   & 0 & 1 & .08 \\
+\hline
+nsubj(boy,eat) & 1 & .08 & -  & 0 & - & 0 \\
+\hline
+nsubj(he,eat) & 1 & .04 & 1   & .02 & 1 & .02 \\
+\hline
+root(eat,vroot) & 2 & .02 & 1   & .01 & 1 & .01 \\ %.02
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\vspace{.5em}
+
+\small
+Response scores: cosine(NS model tf-idf, NNS tf-idf) \\
+\vspace{.5em}
+
+\pause
+NNS 1: 0.139 \hspace{.6em} \pause NNS 2: 0.886 \pause \hspace{.6em} $\rightarrow$ \hspace{.6em} \textit{NNS 2 is closest to the model.} \\
+
+\end{frame}
 
 \begin{frame}
 \frametitle{Data collection}
@@ -279,16 +406,9 @@ Intended for exploring whether my approach can generalize to a range of sentence
 \begin{frame}{Data collection}
 
 \vspace{1em}
-The pilot study \textit{rake} problem:
+The pilot study \textit{rake} problem; 100\% of NS used the verb \textit{rake}:
 
-\begin{itemize}
-\item For one PDT item, 100\% of NS used the verb \textit{rake};
-\begin{itemize}
-\item NNS responses without \textit{rake} are penalized;
-\end{itemize}
-\end{itemize}
 
-\vspace{-1em}
 \begin{figure}[htb!]
 \begin{center}
 \bgroup
@@ -309,11 +429,12 @@ The pilot study \textit{rake} problem:
 \end{tabular}
 \egroup
 \end{center}
-%\caption{NNSs described this item in a variety of ways, while 100\% of NSs used the verb \textit{rake}.}
 \label{fig:pilot-raking}
 \end{figure}
 
+
 \begin{itemize}
+\item NNS responses without \textit{rake} are penalized;
 \item I address this by asking NSs for two non-identical responses.
 \end{itemize}
 \end{frame}
@@ -624,11 +745,11 @@ Optimizing means finding the best system settings:
 \pause
 \item \textbf{Transitivity}: \param{intransitive}, \param{transitive}, \param{ditransitive};
 \pause
-\item \textbf{Targeting}: 
-\begin{itemize}
-\item \param{targeted}: \textit{What is $<$the subject$>$ doing?}
-\item \param{untargeted}: \textit{What is happening?}
-\end{itemize}
+\item \textbf{Targeting}: \param{targeted}, \param{untargeted};
+%\begin{itemize}
+%\item \param{targeted}: \textit{What is $<$the subject$>$ doing?}
+%\item \param{untargeted}: \textit{What is happening?}
+%\end{itemize}
 \pause
 \item \textbf{Familiarity}: \param{familiar}, \param{crowdsourced}
 \pause
@@ -646,6 +767,11 @@ Optimizing means finding the best system settings:
 \item Does not apply to SBERT (operates on plain text);
 \end{itemize}
 \end{itemize}
+
+\vspace{.3em}
+\pause
+A \textbf{system configuration} combines one setting from each.
+
 \end{frame}
 
 
