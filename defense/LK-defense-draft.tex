@@ -76,21 +76,19 @@ Indiana University  }
 \begin{frame}
 \frametitle{Background \& Motivation}
 %\vspace{-4ex}
-\begin{itemize}
 \pause
-\item Most intelligent computer-assisted language learning (ICALL) applications (\textit{Rosetta Stone}, \textit{Duo Lingo}, etc.) rely on outdated, ineffective methods:
+Most intelligent computer-assisted language learning (ICALL) applications (\textit{Rosetta Stone}, \textit{Duolingo}, etc.) rely on outdated, ineffective methods:
 \begin{itemize}
 \pause
 \item rote memorization \& grammatical error detection; menu-based vs. free input;
 \pause
-\item \textit{``engineering first''}: no second language acquisition (SLA), pedagogy, psychometrics
+\item \textit{``engineering first''}: no second language acquisition, pedagogy;
 \end{itemize}
 \pause
-\item  SLA research $\rightarrow$ communicative \& task based learning
-\end{itemize}
+SLA research $\rightarrow$ communicative \& task-based learning \\
 
-\small
 \pause
+\vspace{1em}
 \textit{How can we bridge this gap?}
 
 \begin{itemize}
@@ -127,7 +125,6 @@ Indiana University  }
 \frametitle{Research Questions}
 %\vspace{-4ex}
 \small
-\pause
 %My work here relies on images to constrain the range of responses to a predictable and manageable set of meanings. For semantic analysis of these image-based sentences to proceed, one must have a notion of what are necessary and sufficient parts of the image for NNSs to describe. To annotate this by hand is costly, whereas collecting comparable responses from NSs is relatively easy. This leads directly to the first two research questions:
 \begin{itemize}
 \pause
@@ -208,11 +205,11 @@ Indiana University  }
     \end{deptext}
     \depedge[arc angle=78]{1}{5}{root}
     \depedge[arc angle=35]{3}{2}{det}
-    \depedge[arc angle=65,edge style={double}]{5}{3}{nsubj}
+%    \depedge[arc angle=65,edge style={double}]{5}{3}{nsubj}
+    \depedge[arc angle=65]{5}{3}{nsubj}
     \depedge[arc angle=20]{5}{4}{aux}
-    \depedge[edge style={double}]{5}{6}{dobj}
-%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
-%    \depedge[edge style={dotted}]{3}{2}{det}
+%    \depedge[edge style={double}]{5}{6}{dobj}
+    \depedge{5}{6}{dobj}
   \end{dependency}
 \end{center}
 %\caption{The dependency parse}
@@ -446,7 +443,6 @@ The pilot study \textit{rake} problem; 100\% of NS used the verb \textit{rake}:
 \vspace{.5em}
 499 participants, 13,533 responses:
 \vspace{.5em}
-\pause
 \begin{itemize}
 \pause
 \item 141 NNSs (ELIP at IU), 4,290 responses;
@@ -579,7 +575,7 @@ I need \textbf{benchmark rankings} for the NNS test set. \\
 Feature-level performance:
 \begin{itemize}
 \pause
-\item \textbf{MAP} to see how system rankings predict \textbf{individual features};
+\item Mean average precision (\textbf{MAP}) to see how system rankings predict \textbf{individual features};
 \begin{itemize}
 \pause
 \item Compare with? Some \textit{holistic benchmark ranking} MAP;
@@ -620,7 +616,7 @@ Feature weights were derived according to how frequently each feature is ``yes''
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-Core & Answr & Gramm & Interp & Verif \\
+\feat{Core} & \feat{Answer} & \feat{Gramm.} & \feat{Interp.} & \feat{Verif.} \\
 \hline
 .365 & .093 & .055 & .224 & .263 \\
 \hline
@@ -658,13 +654,13 @@ Agreement for two annotators on a sample of 300 pairs:
 \begin{frame}
 \frametitle{Benchmark rankings}
 \small
-\begin{itemize}
+\begin{enumerate}
 \pause
 \item Apply feature weights for weighted annotation scores (WAS);
 \pause
 \item Rank NNS test set by WAS for weighted annotation ranking (WAR);
 \pause
-\end{itemize}
+\end{enumerate}
 
 
 \vspace{-1em}
@@ -719,7 +715,7 @@ I also use SBERT for comparing my system's performance.
 \item Replaces dependency parser $+$ lemmatizer $+$ tf-idf cosine pipeline. 
 \vspace{.3em}
 \pause
-\item Provides distance between NNS response and NS model.
+\item Provides distance between NNS response and NS model; rankable.
 %\vspace{.3em}
 %\pause
 %\item Operates directly on text, not dependencies.
@@ -751,7 +747,7 @@ Optimizing means finding the best system settings:
 %\item \param{untargeted}: \textit{What is happening?}
 %\end{itemize}
 \pause
-\item \textbf{Familiarity}: \param{familiar}, \param{crowdsourced}
+\item \textbf{Familiarity}: \param{familiar}, \param{crowdsourced};
 \pause
 \item \textbf{Primacy}:
 \begin{itemize}
@@ -796,10 +792,7 @@ A \textbf{system configuration} combines one setting from each.
 \textbf{NNS test sets}:
 \begin{itemize}
 \item All experiments rank the same randomly sampled NNS test sets;
-\item 70 responses per PDT item (max available for NNS data);
-\begin{itemize}
-\item 70 \param{targeted}, 70 \param{untargeted}
-\end{itemize}
+\item 70 \param{targeted}, 70 \param{untargeted} per PDT item (max available for NNS data);
 \end{itemize}
 
 \vspace{1.5em}
@@ -808,9 +801,9 @@ A \textbf{system configuration} combines one setting from each.
 \textbf{NS models}:
 \begin{itemize}
 \item 14-response models (max available for \param{familiar} data);
-\begin{itemize}
-\item I.e., I compare 14-response \param{familiar} models and 14-response \param{crowd\-sourced} models;
-\end{itemize}
+%\begin{itemize}
+%\item I.e., I compare 14-response \param{familiar} models and 14-response \param{crowd\-sourced} models;
+%\end{itemize}
 \item 50-response models (max available for \param{crowdsourced} data);
 \end{itemize}
 \end{frame}
@@ -822,6 +815,11 @@ A \textbf{system configuration} combines one setting from each.
 
 \begin{columns}
 \begin{column}{0.6\textwidth}
+\begin{center}
+\small
+Standardized type-to-token ratio (STTR) for response samples. Tokens here are \textit{dependencies}. \\
+\end{center}
+\vspace{-1em}
 \begin{table}[htb!]
 \begin{center}
 \setlength{\tabcolsep}{.5em}
@@ -833,7 +831,8 @@ A \textbf{system configuration} combines one setting from each.
 \hline
 \param{Intrans} & .558 	  		& .525 			& .535 		& .391 		\\ \hline
 \param{Trans}   & .569        	& .580          & .581      & .517    	    \\ \hline
-\param{Ditrans} & .598        	& .640          & .637      & .606    	    \\ \hline
+\param{Ditrans} & .598        	& .640          & .637      & .606    	    \\ 
+\hline
 \hline
 \param{Target}  & .545 			& .535	 		& .545 		& .481			\\ \hline
 \param{Untarg}  & .610        	& .633        	& .621    	& .528        	\\ \hline
@@ -851,21 +850,21 @@ Total    		& .576        	& .583         	& .584    	& .505	        \\ \hline
 \end{table}
 
 \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-Standardized type-to-token ratio (STTR) for the response samples. \\
-Tokens here are \textit{dependencies}. \\
-\vspace{.8em}
+
+\begin{column}{0.45\textwidth}  %%<--- here
 
 \pause
+\vspace{-2em}
+
 Complexity often correlates with parameter settings in terms of system performance. \\
 
-\vspace{.8em}
+\vspace{1em}
 \pause
 Within each parameter block, complexity increases as we move down the rows. E.g.: \\
-\vspace{.3em}
+\vspace{.5em}
 \pause
 \param{Intrans} $<$ \param{Trans} $<$ \param{Ditrans} \\
-\vspace{.8em}
+\vspace{1em}
 
 \pause
 In some settings (e.g., \param{Intrans}), \param{Crowd} complexity is closer to NNS than is \param{Familiar}; other settings vice versa (e.g., \param{Ditrans}). \\
@@ -933,7 +932,7 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \item In all cases, \param{ldh} $+$ 14NS is best (slightly);
 \item \param{xdx} becomes more competitive for larger model (50NS);
 \begin{itemize}
-\item \param{ditrans}, \param{untarg}: \textit{least homogenous}---i.e., highest STTRs;
+\item \param{ditrans}, \param{untarg}: \textit{most complex}---i.e., highest STTRs;
 \item In general: \param{ldh} STTR $>$ \param{xdh} STTR $>$ \param{xdx} STTR
 \end{itemize}
 \end{itemize}
