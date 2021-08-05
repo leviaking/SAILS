@@ -1,5 +1,5 @@
-\documentclass[xcolor={dvipsnames}]{beamer}
-%\documentclass[handout,xcolor={dvipsnames}]{beamer}
+%\documentclass[xcolor={dvipsnames}]{beamer}
+\documentclass[handout,xcolor={dvipsnames}]{beamer}
 \usepackage{lmodern}
 % MD: we can mess with this ...
 %\usetheme{Berlin}
@@ -74,7 +74,7 @@ Indiana University  }
 \maketitle
 %\section{Background}
 \begin{frame}
-\frametitle{Background \& Motivation}
+\frametitle{Motivation}
 %\vspace{-4ex}
 \pause
 Most intelligent computer-assisted language learning (ICALL) applications (\textit{Rosetta Stone}, \textit{Duolingo}, etc.) rely on outdated, ineffective methods:
@@ -312,11 +312,11 @@ root(eat,vroot) & 2 & .02 & 1   & .01 & 1 & .01 \\ %.02
 \vspace{.5em}
 
 \small
-Response scores: cosine(NS model tf-idf, NNS tf-idf) \\
-\vspace{.5em}
+Response scores: cosine(NS model tf-idf vector, NNS tf-idf vector) \\
+\vspace{.5em} 
 
 \pause
-NNS 1: 0.139 \hspace{.6em} \pause NNS 2: 0.886 \pause \hspace{.6em} $\rightarrow$ \hspace{.6em} \textit{NNS 2 is closest to the model.} \\
+NNS 1: 0.139; \hspace{.6em} \pause NNS 2: 0.886 \pause \hspace{.6em} $\rightarrow$ \hspace{.6em} \textit{NNS 2 is closest to the model.} \\
 
 \end{frame}
 
@@ -563,108 +563,107 @@ Inter-rater reliability (Cohen's kappa): 0.744 (\textbf{I}) -- 0.936 (\textbf{A}
 \begin{frame}
 \frametitle{Evaluating performance}
 
-%\vspace{-2em}
-Problem: My system scores are between 0 and 1, but annotation is 5 binary scores. How can I evaluate system performance? \\
+%\vspace{-1em}
+To evaluate system performance, I need \textbf{benchmark rankings} for the NNS test set. \\
 
-\vspace{1em}
-\pause
-I need \textbf{benchmark rankings} for the NNS test set. \\
-
-\pause
-\vspace{1em}
-Feature-level performance:
 \begin{itemize}
 \pause
+%\vspace{-.2em}
 \item Mean average precision (\textbf{MAP}) to see how system rankings predict \textbf{individual features};
 \begin{itemize}
-\pause
-\item Compare with? Some \textit{holistic benchmark ranking} MAP;
-\end{itemize}
+\item Also need MAP from benchmark rankings (\textit{upper bound});
 \end{itemize}
 
-\vspace{.3em}
 \pause
-Holistic performance (response quality):
-\begin{itemize}
-\pause
-\item \textbf{Spearman} rank correlation: Compare system rankings with some \textit{holistic benchmark ranking};
+\item \textbf{Spearman} rank correlation: Compare system rankings with benchmark rankings to see how system predicts overall quality;
 %\begin{itemize}
 %\item 
 \end{itemize}
 %\end{itemize}
 
 \pause
-\vspace{1em}
-Solution: Determine feature weights and apply to annotations to obtain benchmark holistic scores and then rankings. \\
+%\vspace{-.2em}
+How do we get benchmark rankings from 5 binary annotations? \\
+
+\pause
+\begin{itemize}
+\item Determine feature weights and apply to annotations to obtain benchmark holistic scores and then rankings.
+\pause
+\item Annotators performed a preference task for pairs of responses.
+\pause
+\item Feature weights were derived according to how frequently each feature is ``yes'' among preferred responses. 
+\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Weighting features}
-
-\vspace{1em}
-
-Annotators performed a preference task for pairs of responses. \\
-
-\vspace{.7em}
-
-\pause
-Feature weights were derived according to how frequently each feature is ``yes'' among preferred responses. \\
-
-\vspace{1em}
-\pause
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\feat{Core} & \feat{Answer} & \feat{Gramm.} & \feat{Interp.} & \feat{Verif.} \\
-\hline
-.365 & .093 & .055 & .224 & .263 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\vspace{1em}
-
-\pause
-
-Preferences are reliable:
-
-\vspace{1em}
-
-Agreement for two annotators on a sample of 300 pairs:
-
-\vspace{1em}
-
-\begin{table}[htb!]
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
- Chance Agree & Observed Agree & Cohen's Kappa \\
-\hline
-0.621 & 0.883 (265/300) & 0.692 \\
-\hline
-\end{tabular}
-%\caption{\label{tab:ABAgreement} Preference task agreement scores for two annotators on a sample of 300 response pairs; expected chance agreement, observed agreement and Cohen's Kappa.}
-\end{center}
-\end{table}
-
-\end{frame}
+%\begin{frame}
+%\frametitle{Weighting features}
+%
+%\vspace{1em}
+%
+%Annotators performed a preference task for pairs of responses. \\
+%
+%\vspace{.7em}
+%
+%\pause
+%Feature weights were derived according to how frequently each feature is ``yes'' among preferred responses. \\
+%
+%\vspace{1em}
+%\pause
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|l|l|l|l|l|}
+%\hline
+%\feat{Core} & \feat{Answer} & \feat{Gramm.} & \feat{Interp.} & \feat{Verif.} \\
+%\hline
+%.365 & .093 & .055 & .224 & .263 \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%
+%\vspace{1em}
+%
+%\pause
+%
+%Preferences are reliable:
+%
+%\vspace{1em}
+%
+%Agreement for two annotators on a sample of 300 pairs:
+%
+%\vspace{1em}
+%
+%\begin{table}[htb!]
+%\begin{center}
+%\begin{tabular}{|l|l|l|}
+%\hline
+% Chance Agree & Observed Agree & Cohen's Kappa \\
+%\hline
+%0.621 & 0.883 (265/300) & 0.692 \\
+%\hline
+%\end{tabular}
+%%\caption{\label{tab:ABAgreement} Preference task agreement scores for two annotators on a sample of 300 response pairs; expected chance agreement, observed agreement and Cohen's Kappa.}
+%\end{center}
+%\end{table}
+%
+%\end{frame}
 
 \begin{frame}
 \frametitle{Benchmark rankings}
 \small
-\begin{enumerate}
-\pause
-\item Apply feature weights for weighted annotation scores (WAS);
-\pause
-\item Rank NNS test set by WAS for weighted annotation ranking (WAR);
-\pause
-\end{enumerate}
+%\begin{enumerate}
+%\pause
+%\item Apply feature weights for weighted annotation scores (WAS);
+%\pause
+%\item Rank NNS test set by WAS for weighted annotation ranking (WAR);
+%\pause
+%\end{enumerate}
 
 
-\vspace{-1em}
+\vspace{.8em}
+\textit{Weighted annotation score} (WAS); \textit{weighted annotation ranking} (WAR) \\
 \begin{footnotesize}
+\vspace{-.5em}
 \begin{table}[htb!]
 %Weight & 0.365 & 0.093 & 0.056 & 0.224 & 0.263 & 1.0 \\
 \begin{center}
@@ -690,15 +689,24 @@ Pizza is this boy's favorite food & 0.000 & 0.000 & 0.055 & 0.000 & 0.000 & 0.05
 \end{table}
 \end{footnotesize}
 
-%\pause
-%\begin{itemize}
-%\item Use WAR as benchmark;
-%\begin{itemize}
-%\item Features: Get MAP for WAR, compare against system MAP;
-%\pause
-%\item Holistic: Get Spearman for system ranking vs. WAR;
-%\end{itemize}
-%\end{itemize}
+\vspace{1em}
+
+\pause
+Agreement for two annotators on a sample of 300 pairs: \\
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+ Chance Agree & Observed Agree & Cohen's Kappa \\
+\hline
+0.621 & 0.883 (265/300) & 0.692 \\
+\hline
+\end{tabular}
+%\caption{\label{tab:ABAgreement} Preference task agreement scores for two annotators on a sample of 300 response pairs; expected chance agreement, observed agreement and Cohen's Kappa.}
+\end{center}
+\end{table}
+
 
 \end{frame}
 
@@ -862,7 +870,6 @@ Complexity often correlates with parameter settings in terms of system performan
 \pause
 Within each parameter block, complexity increases as we move down the rows. E.g.: \\
 \vspace{.5em}
-\pause
 \param{Intrans} $<$ \param{Trans} $<$ \param{Ditrans} \\
 \vspace{1em}
 
@@ -875,7 +882,7 @@ In some settings (e.g., \param{Intrans}), \param{Crowd} complexity is closer to 
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation features experiments: \feat{Core event} MAP}
+\frametitle{Predicting features: \feat{Core event} MAP}
 
 \small
 %\begin{table}[htb!]
@@ -912,17 +919,17 @@ In some settings (e.g., \param{Intrans}), \param{Crowd} complexity is closer to 
 \hline
     		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
 \hline
-\param{Intr}   & \textbf{\textit{0.85}} & 0.85 & 0.85 & 0.86 & 0.83  & \textbf{0.85} & 0.85 & 0.85 & 0.86 & 0.83 \\ \hline
-\param{Tran}    & \textit{\textbf{0.73}} & 0.73 & 0.72 & 0.74 & 0.70   & \textbf{0.73} & 0.73 & 0.72 & 0.74 & 0.70 \\ \hline
-\param{Ditr}    & \textit{\textbf{0.66}} & 0.66 & 0.66 & 0.66 & 0.63  & 0.65 & 0.65 & \textbf{0.66} & 0.66 & 0.62 \\ \hline
+\param{Intr}   & \textbf{\textit{.859}} & .856 & .854 & .865 & .835  & \textbf{.855} & .854 & .852 & .865 & .831 \\ \hline
+\param{Tran}    & \textit{\textbf{.737}} & .735 & .728 & .742 & .703   & \textbf{.736} & .733 & .725 & .742 & .701 \\ \hline
+\param{Ditr}    & \textit{\textbf{.665}} & .661 & .664 & .660 & .634  & .657 & .656 & \textbf{.661} & .660 & .629 \\ \hline
 \hline
-\param{Targ}    & \textit{\textbf{0.73}} & 0.73 & 0.73 & 0.73 & 0.70  & \textbf{0.73} & 0.73 & 0.72 & 0.73 & 0.70 \\ \hline
-\param{Untg}    & \textit{\textbf{0.76}} & 0.76 & 0.76 & 0.77 & 0.74  & 0.76 & 0.75 & \textbf{0.76} & 0.77 & 0.73 \\ \hline
+\param{Targ}    & \textit{\textbf{.739}} & .738 & .732 & .735 & .708  & \textbf{.737} & .735 & .729 & .735 & .704 \\ \hline
+\param{Untg}    & \textit{\textbf{.768}} & .763 & .765 & .777 & .740  & .762 & .759 & \textbf{.763} & .777 & .736 \\ \hline
 \hline
-\param{Prim}    & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72  & \textbf{0.75} & 0.74 & 0.74 & 0.75 & 0.71 \\ \hline
-\param{Mix}      & \textit{\textbf{0.75}} & 0.74 & 0.75 & 0.75 & 0.72  & \textbf{0.74} & 0.74 & 0.74 & 0.75 & 0.72 \\ \hline
+\param{Prim}    & \textit{\textbf{.754}} & .752 & .747 & .756 & .723  & \textbf{.750} & .748 & .745 & .756 & .719 \\ \hline
+\param{Mix}      & \textit{\textbf{.753}} & .749 & .750 & .756 & .725  & \textbf{.749} & .746 & .746 & .756 & .721 \\ \hline
 \hline
-Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 0.74 & 0.74 & 0.75 & 0.72 \\ \hline
+Total 	 & \textit{\textbf{.735}} & .751 & .748 & .756 & .724 	& \textbf{.750} & .747 & .746 & .756 & .720 \\ \hline
 \end{tabular}
 %\caption{\label{tab:core-map}Mean Average Precision (MAP) scores for the \feat{core e\-vent} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
 \end{center}
@@ -940,7 +947,7 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation features experiments: \feat{Core event} MAP}
+\frametitle{Predicting features: \feat{Core event} MAP}
 
 \small
 \begin{table}[htb!]
@@ -952,14 +959,14 @@ Total 	 & \textit{\textbf{0.75}} & 0.75 & 0.74 & 0.75 & 0.72 	& \textbf{0.75} & 
 \hline
     		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
 \hline
-\param{Intr}  & 0.85                   & 0.85 & \textit{\textbf{0.86}} & 0.86 & 0.83 & \textbf{0.85}          & 0.85 & 0.84                   & 0.86 & 0.83 \\ \hline
-\param{Tran}  & \textit{\textbf{0.74}} & 0.73 & 0.72                   & 0.74 & 0.70 & \textbf{0.73}          & 0.73 & 0.72                   & 0.74 & 0.70 \\ \hline
-\param{Ditr}  & 0.65                   & 0.64 & \textbf{0.66}          & 0.66 & 0.62 & 0.66                   & 0.65 & \textit{\textbf{0.67}} & 0.66 & 0.64 \\ \hline
+\param{Intr}  & .859                   & .859 & \textit{\textbf{.865}} & .865 & .838 & \textbf{.857}          & .852 & .848                   & .865 & .833 \\ \hline
+\param{Tran}  & \textit{\textbf{.740}} & .737 & .726                   & .742 & .703 & \textbf{.738}          & .735 & .728                   & .742 & .702 \\ \hline
+\param{Ditr}  & .651                   & .648 & \textbf{.660}          & .660 & .625 & .663                   & .659 & \textit{\textbf{.673}} &  .660 & .641 \\ \hline
 \hline
-\param{Targ}  & \textbf{0.73}          & 0.73 & 0.73                   & 0.73 & 0.70 & \textit{\textbf{0.73}} & 0.73 & 0.73                   & 0.73 & 0.70 \\ \hline
-\param{Untg}  & 0.76                   & 0.76 & \textit{\textbf{0.76}} & 0.77 & 0.73 & 0.76          & 0.76 & \textbf{0.76}          & 0.77 & 0.74 \\ \hline
+\param{Targ}  & \textbf{.733}          & .732 & .732                   & .735 & .707 & \textit{\textbf{.739}} & .736 & .733                   & .735 & .709 \\ \hline
+\param{Untg}  & .767                   & .764 & \textit{\textbf{.769}} & .777 & .737 & .767          & .761 & \textbf{.767}          & .777 & .742 \\ \hline
 \hline
-Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \textit{\textbf{0.75}} & 0.74 & 0.75                   & 0.75 & 0.72 \\ \hline
+Total & .750                   & .748 & \textbf{.751}          & .756 & .722 & \textit{\textbf{.753}} & .749 & .750                   & .756 & .725 \\ \hline
 \end{tabular}
 %\caption{\label{tab:core-fam-map}Mean Average Precision (MAP) scores for the \feat{core e\-vent} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.
 %}
@@ -977,7 +984,7 @@ Total & 0.75                   & 0.74 & \textbf{0.75}          & 0.75 & 0.72 & \
 \end{frame}
 
 \begin{frame}
-\frametitle{Annotation features experiments: MAP Results}
+\frametitle{Predicting features: MAP Results}
 \vspace{-1em}
 
 \pause
@@ -1016,7 +1023,7 @@ Predicting \feat{answerhood} or \feat{grammaticality} is relatively simple; requ
 
 
 \begin{frame}
-\frametitle{Annotation features experiments: MAP Results}
+\frametitle{Predicting features: MAP Results}
 \vspace{-.5em}
 \pause
 \feat{Interpretability}:
@@ -1064,10 +1071,10 @@ For both \feat{interpretability} \& \feat{verifiability}:
 \end{frame}
 
 \begin{frame}
-\frametitle{Holistic experiments}
+\frametitle{Predicting quality}
 
 \pause
-Holistic experiments use one set of 360 Spearman correlations: \\
+Holistic quality experiments use one set of 360 Spearman correlations: \\
 \vspace{.5em}
 targeting (2) $\times$ primacy (2) $\times$ term rep (3) $\times$ items (30) $=$ 360. \\
 \pause
@@ -1093,8 +1100,10 @@ SBERT uses plain text (no term rep), thus only 120 total. \\
 
 
 \begin{frame}
-\frametitle{Holistic experiments: \param{Transitivity}}
+\frametitle{Predicting quality: \param{Transitivity}}
 \small
+
+Spearman rank correlations: System vs. WAR (benchmark)
 
 \begin{table}[htb!]
 \begin{center}
@@ -1140,7 +1149,7 @@ SBERT uses plain text (no term rep), thus only 120 total. \\
 \end{frame}
 
 \begin{frame}
-\frametitle{Holistic experiments: Results}
+\frametitle{Predicting quality: Results}
 
 \vspace{-.5em}
 
@@ -1178,7 +1187,7 @@ SBERT uses plain text (no term rep), thus only 120 total. \\
 
 
 \begin{frame}
-\frametitle{Holistic experiments: Results}
+\frametitle{Predicting quality: Results}
 
 \vspace{-.5em}
 
@@ -1234,49 +1243,20 @@ NTS: one slide
 \end{frame}
 
 
-\begin{beamercolorbox}{title}
-\mbox{}\\[1ex]%\vspace{1ex}
-\usebeamerfont{title}References
-\end{beamercolorbox}
-\medskip
-\scriptsize
-\bibliographystyle{styles/myaclnat}
-\bibliography{levi-bib}
+%\begin{beamercolorbox}{title}
+%\mbox{}\\[1ex]%\vspace{1ex}
+%\usebeamerfont{title}References
+%\end{beamercolorbox}
+%\medskip
+%\scriptsize
+%\bibliographystyle{styles/myaclnat}
+%\bibliography{levi-bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% BACKUP SLIDES BELOW %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{Dependency parsing}
-\begin{figure}[htb!]
-\begin{center}
-    \begin{dependency}[arc edge,text only label,label style={above}]
-    \begin{deptext}[column sep=.5em]
-      \textit{vroot} \& The \& boy \& is \&[1em] eating \& pizza \\
-    \end{deptext}
-    \depedge[arc angle=78]{1}{5}{root}
-    \depedge[arc angle=35]{3}{2}{det}
-    \depedge[arc angle=65,edge style={double}]{5}{3}{nsubj}
-    \depedge[arc angle=20]{5}{4}{aux}
-    \depedge[edge style={double}]{5}{6}{dobj}
-%    \depedge[arc angle=35,edge style={dotted}]{7}{6}{det}
-%    \depedge[edge style={dotted}]{3}{2}{det}
-  \end{dependency}
-\end{center}
-\caption{The dependency parse}
-\label{fig:prep-dependency}
-\end{figure}
-
-\end{frame}
-%1	the	_	DT	DT	_	2	det	_	_
-%2	boy	_	NN	NN	_	4	nsubj	_	_
-%3	be	_	VBZ	VBZ	_	4	aux	_	_
-%4	eat	_	VBG	VBG	_	0	root	_	_
-%5	pizza	_	NN	NN	_	4	dobj	_	_
-%6	.	_	.	.	_	4	punct	_	_
 
 
 \begin{frame}
@@ -1546,6 +1526,8 @@ This was scrapped and I settled on the 5 binary features.
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{frame}
 \frametitle{Annotation features}
@@ -1587,6 +1569,7 @@ Ditransitive & 0.812 & 0.678 & 0.924 & 0.764 \\
 \end{table}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 \frametitle{Weighting features}
@@ -1644,5 +1627,528 @@ Feature weight &  & .333 & .167 & .167 & .167 & .167} \\
 \end{small}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Answerhood} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .868 & .871 & \textit{\textbf{.878}} & .881 & .869 & .866 & .868 & \textbf{.874} & .881 & .868 \\ \hline
+\param{Tran}  & .816 & .819 & \textbf{.846} & .845 & .838 & .818 & .823 & \textit{\textbf{.851}} & .845 & .838 \\ \hline
+\param{Ditr}  & .824 & .826 & \textit{\textbf{.841}} & .837 & .833 & .821 & .822 & \textbf{.840} & .837 & .833 \\ \hline
+\hline
+\param{Targ}  & .787 & .788 & \textbf{.810} & .817 & .799 & .787 & .789 & \textit{\textbf{.811}} & .817 & .798 \\ \hline
+\param{Untg}  & .885 & .890 & \textit{\textbf{.900}} & .892 & .894 & .883 & .886 & \textbf{.899} & .892 & .895 \\ \hline
+\hline
+\param{Prim}  & .837 & .840 & \textit{\textbf{.854}} & .854 & .845 & .837 & .840 & \textit{\textbf{.854}} & .854 & .846 \\ \hline
+\param{Mix}   & .835 & .838 & \textit{\textbf{.857}} & .854 & .848 & .833 & .835 & \textbf{.856} & .854 & .847 \\ \hline
+\hline
+Total & .836 & .839 & \textit{\textbf{.855}} & .854 & .847 & .835 & .838 & \textbf{.855} & .854 & .846 \\ \hline
+\end{tabular}
+%\caption{\label{tab:answer-map}Mean Average Precision (MAP) scores for the \feat{an\-swer\-hood} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+\end{center}
+\end{table}
+
+\begin{itemize}
+\pause
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\pause
+\item Model size makes little difference;
+\end{itemize}
+
+Predicting \feat{answerhood} is relatively simple; requires only small model and bag-of-words representation.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Answerhood} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Fam\-il\-iar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .868 & .871 & \textit{\textbf{.882}} & .881 & .868 & .869 & .873 & \textbf{.878} & .881 & .870 \\ \hline
+\param{Tran}  & .824 & .826 & \textit{\textbf{.852}} & .845 & .840 & .817 & .818 & \textbf{.847} & .845 & .840 \\ \hline
+\param{Ditr}  & .820 & .822 & \textit{\textbf{.846}} & .837 & .832 & .820 & .822 & \textbf{.845} & .837 & .835 \\ \hline
+\hline
+\param{Targ}  & .786 & .787 & \textit{\textbf{.815}} & .817 & .798 & .785 & .787 & \textbf{.813} & .817 & .802 \\ \hline
+\param{Untg}  & .889 & .892 & \textit{\textbf{.904}} & .892 & .896 & .885 & .889 & \textbf{.900} & .892 & .894 \\ \hline
+\hline
+Total & .837 & .840 & \textit{\textbf{.860}} & .854 & .847 & .835 & .838 & \textbf{.857} & .854 & .848 \\ \hline
+\end{tabular}
+%\caption{\label{tab:answer-fam-map}Mean Average Precision (MAP) scores for the \feat{an\-swer\-hood} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.}
+\end{center}
+\end{table}
+
+\begin{itemize}
+\pause
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\pause
+\item \param{familiar} $>$ \param{crowdsourced};
+\end{itemize}
+
+Predicting \feat{answerhood} is relatively simple; requires only small model and bag-of-words representation.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Grammaticality} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .868 & .870 & \textit{\textbf{.872}} & .887 & .866 & .863 & .864 & \textbf{.866} & .887 & .864 \\ \hline
+\param{Tran}  & .753 & .756 & \textbf{.757} & .781 & .757 & .758 & .760 & \textit{\textbf{.761}} & .781 & .757 \\ \hline
+\param{Ditr}  & .682 & .685 & \textit{\textbf{.700}} & .695 & .694 & .679 & .685 & \textbf{.697} & .695 & .693 \\ \hline
+\hline
+\param{Targ}  & .777 & .778 & \textit{\textbf{.784}} & .800 & .782 & .776 & .776 & \textbf{.783} & .800 & .781 \\ \hline
+\param{Untg}  & .758 & .763 & \textit{\textbf{.769}} & .776 & .762 & .757 & .762 & \textbf{.766} & .776 & .761 \\ \hline
+\hline
+\param{Prim}  & .769 & .773 & \textit{\textbf{.776}} & .788 & .770 & .768 & .770 & \textbf{.774} & .788 & .770 \\ \hline
+\param{Mix}   & .766 & .768 & \textit{\textbf{.776}} & .788 & .774 & .765 & .768 & \textbf{.775} & .788 & .772 \\ \hline
+\hline
+Total & .768 & .770 & \textit{\textbf{.776}} & .788 & .772 & .767 & .769 & \textbf{.775} & .788 & .771 \\ \hline
+\end{tabular}
+%\caption{\label{tab:gramm-map}Mean Average Precision (MAP) scores for the \feat{gram\-mat\-i\-cal\-ity} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+\end{center}
+\end{table}
+
+\pause
+In \textit{most} cases:
+\begin{itemize}
+\pause
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\end{itemize}
+
+\vspace{1em}
+
+\pause
+Predicting \feat{grammaticality} is relatively simple; requires only small model and bag-of-words representation.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Predicting features: \feat{Grammaticality} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Fam\-il\-iar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .863 & .864 & \textbf{.873}          & .887 & .863 & .868 & .869 & \textit{\textbf{.874}} & .887 & .869 \\ \hline
+\param{Tran}  & .760 & .759 & \textit{\textbf{.762}} & .781 & .760 & .752 & .754 & \textbf{.757}          & .781 & .758 \\ \hline
+\param{Ditr}  & .678 & .685 & \textbf{.698}          & .695 & .698 & .678 & .680 & \textit{\textbf{.699}} & .695 & .696 \\ \hline
+\hline
+\param{Targ}  & .776 & .776 & \textit{\textbf{.787}} & .800 & .783 & .776 & .777 & \textbf{.786}          & .800 & .786 \\ \hline
+\param{Untg}  & .757 & .762 & \textit{\textbf{.768}} & .776 & .764 & .756 & .759 & \textbf{.767}          & .776 & .763 \\ \hline
+\hline
+Total & .767 & .769 & \textit{\textbf{.778}} & .788 & .773 & .766 & .768 & \textbf{.776}          & .788 & .774 \\ \hline
+\end{tabular}
+
+%\caption{\label{tab:gramm-fam-map}Mean Average Precision (MAP) scores for the \feat{gram\-mat\-i\-cal\-ity} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.}
+\end{center}
+\end{table}
+
+
+\pause
+In \textit{most} cases:
+\begin{itemize}
+\pause
+\item \param{xdx} $>$ \param{xdh} $>$ \param{ldh};
+\pause
+\item \param{familiar} 14NS $>$ \param{crowd} 14NS $>$ \param{crowd} 50NS;
+\end{itemize}
+
+\vspace{1em}
+
+\pause
+Predicting \feat{grammaticality} is relatively simple; requires only small model and bag-of-words representation. \\
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Interpretability} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .932                   & .931 & \textit{\textbf{.933}} & .930 & .922 & .928          & .927 & \textbf{.933} & .930 & .923 \\
+\hline
+\param{Tran}  & \textit{\textbf{.823}} & .821 & .811                   & .803 & .806 & \textbf{.821} & .816 & .812                   & .803 & .804 \\
+\hline
+\param{Ditr}  & .789                   & .784 & \textit{\textbf{.794}} & .721 & .777 & .786          & .782 & 
+\textbf{.792}          & .721 & .772 \\
+\hline
+\hline
+\param{Targ}  & .835                   & .832 & \textit{\textbf{.836}} & .804 & .828 & .833          & .829 & \textbf{.834}          & .804 & .826 \\
+\hline
+\param{Untg}  & \textit{\textbf{.862}} & .858 & .856                   & .833 & .842 & \textbf{.857} & .855 & \textbf{.857}          & .833 & .840 \\
+\hline
+\hline
+\param{Prim}  & \textit{\textbf{.847}} & .845 & .846                   & .818 & .837 & .845          & .842 & \textbf{.846}          & .818 & .833 \\
+\hline
+\param{Mix}   & \textit{\textbf{.849}} & .846 & .846                   & .818 & .833 & .844          & .841 & \textbf{.845}          & .818 & .833 \\
+\hline
+\hline
+Total & \textit{\textbf{.848}} & .845 & .846                   & .818 & .835 & \textbf{.845} & .842 & \textbf{.845}          & .818 & .833 \\
+\hline
+\end{tabular}
+%\caption{\label{tab:interp-map}Mean Average Precision (MAP) scores for the \feat{in\-ter\-pret\-a\-bil\-ity} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+\end{center}
+\end{table}
+
+
+\begin{itemize}
+\pause
+\item 14NS \param{crowdsourced} $>$ 50NS \param{crowdsourced};
+\pause
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\pause
+\item \param{transitives} work best with \param{ldh};
+\begin{itemize}
+\pause
+\item Why? \param{Transitive} responses are relatively homogenous; Annotators relatively strict;
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Interpretability} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Fam\-il\-iar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .930          & .930 & \textit{\textbf{.934}} & .930 & .923 & \textbf{.933}          & .931 & .932          & .930 & .922 \\ \hline
+\param{Tran}  & \textbf{.822} & .819 & .811                   & .803 & .805 & \textit{\textbf{.826}} & .824 & .811          & .803 & .805 \\ \hline
+\param{Ditr}  & .787          & .786 & \textit{\textbf{.796}} & .721 & .782 & .788                   & .783 & \textbf{.795} & .721 & .772 \\ \hline
+\hline
+\param{Targ}  & .835          & .833 & \textit{\textbf{.836}} & .804 & .830 & \textbf{.835}          & .832 & \textbf{.835} & .804 & .825 \\ \hline
+\param{Untg}  & \textbf{.858} & .857 & \textbf{.858}          & .833 & .843 & \textit{\textbf{.863}} & .859 & .857          & .833 & .841 \\ \hline
+\hline
+Total & \textbf{.847} & .845 & \textbf{.847}          & .818 & .837 & \textit{\textbf{.849}} & .846 & .846          & .818 & .833 \\ \hline
+\end{tabular}
+%\caption{\label{tab:interp-fam-map}Mean Average Precision (MAP) scores for the \feat{in\-ter\-pret\-a\-bil\-ity} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.}
+\end{center}
+\end{table}
+
+
+\begin{itemize}
+\pause
+\item 14NS \param{crowdsourced} $>$ 14NS \param{familiar};
+\pause
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\pause
+\item \param{transitives} work best with \param{ldh};
+\begin{itemize}
+\pause
+\item Why? \param{Transitive} responses are relatively homogenous; Annotators relatively strict;
+\end{itemize}
+\end{itemize}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting features: \feat{Verifiability} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Crowd} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 50} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .852                   & .852 & \textit{\textbf{.853}} & .866 & .840 & .849                   & .849          & \textbf{.851} & .866 & .836 \\
+\hline
+\param{Tran}  & \textit{\textbf{.809}} & .808 & .803                   & .798 & .787 & \textbf{.807}          & .806 & .803          & .798 & .785 \\
+\hline
+\param{Ditr}  & .814                   & .812 & \textit{\textbf{.815}} & .780 & .798 & .811                   & .809          & \textbf{.812} & .780 & .796 \\
+\hline
+\hline
+\param{Targ}  & \textit{\textbf{.825}} & .824 & .825 & .815 & .812 & \textbf{.825} & .824          & .823          & .815 & .810 \\
+\hline
+\param{Untg}  & \textit{\textbf{.825}} & .824 & .822                   & .815 & .805 & \textbf{.820}          & .819          & .820 & .815 & .802 \\
+\hline
+\hline
+\param{Prim}  & \textit{\textbf{.826}} & .824 & .823                   & .815 & .808 & \textbf{.824}          & .823          & .822          & .815 & .806 \\
+\hline
+\param{Mix}   & \textit{\textbf{.825}} & .824 & .824                   & .815 & .808 & \textbf{.821}          & .821 & .821 & .815 & .805 \\
+\hline
+\hline
+Total & \textit{\textbf{.825}} & .824 & .824                   & .815 & .808 & \textbf{.823}          & .822          & .822          & .815 & .806 \\
+\hline
+\end{tabular}
+%\caption{\label{tab:verif-map}Mean Average Precision (MAP) scores for the \feat{ver\-i\-fi\-a\-bil\-ity} annotation feature, derived from various response rankings: weighted annotation ranking (WAR), the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{prim\-a\-ry} NS models), and for the full set (Total).}
+\end{center}
+\end{table}
+
+
+\begin{itemize}
+\pause
+\item 14NS \param{crowd} $>$ 50NS \param{crowd};
+\pause
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\pause
+\item \param{transitives} work best with \param{ldh};
+\begin{itemize}
+\pause
+\item Why? \param{Transitive} responses are relatively homogenous; Annotators relatively strict;
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Predicting features: \feat{Verifiability} MAP}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{|l||l|l|l||l|l||l|l|l||l|l|}
+\hline
+ & \multicolumn{5}{c||}{\param{Fam\-il\-iar} NS model = 14} & \multicolumn{5}{c|}{\param{Crowd} NS model = 14} \\
+\hline
+    		& \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} & \param{ldh}	& \param{xdh} &	\param{xdx} & WAR	& {\scriptsize SBERT} \\ \hline
+\hline
+\param{Intr}  & .847                   & .847 & \textbf{.852} & .866 & .836 & .852                   & .852 & \textit{\textbf{.854}} & .866 & .843 \\ \hline
+\param{Tran}  & \textit{\textbf{.808}} & .807 & .803          & .798 & .787 & \textbf{.807}          & .807 & .802                   & .798 & .786 \\ \hline
+\param{Ditr}  & .811                   & .811 & \textbf{.812} & .780 & .802 & .815                   & .812 & \textit{\textbf{.817}} & .780 & .796 \\ \hline
+\hline
+\param{Targ}  & .821                   & .821 & \textbf{.822} & .815 & .814 & .824                   & .824 & \textit{\textbf{.826}} & .815 & .811 \\ \hline
+\param{Untg}  & \textbf{.824}          & .822 & .823          & .815 & .803 & \textit{\textbf{.825}} & .824 & .823                   & .815 & .806 \\ \hline
+\hline
+Total & .822                   & .822 & \textbf{.823} & .815 & .808 & \textit{\textbf{.825}} & .824 & .824                   & .815 & .808 \\ \hline
+\end{tabular}
+%\caption{\label{tab:verif-fam-map}Mean Average Precision (MAP) scores for the \feat{ver\-i\-fi\-a\-bil\-ity} annotation feature, comparing \param{fam\-il\-iar} and \param{crowd\-sourced} responses. MAP is derived from various response rankings: the three system \param{term rep\-re\-sent\-a\-tion} rankings (labeled dependencies (\param{ldh}), unlabeled dependencies (\param{xdh}), and dependents only (\param{xdx})), weighted annotation ranking (WAR), and SBERT rankings. MAP scores are shown for each item type or parameter setting (e.g, \param{in\-trans\-i\-tive} items, \param{tar\-get\-ed} items), and for the full set (Total). Note that all models represented here are \param{mix\-ed} due to the small number of \param{fam\-il\-iar} participants.}
+\end{center}
+\end{table}
+
+\pause
+\begin{itemize}
+\item 14NS \param{crowd} $>$ 14NS \param{familiar};
+\pause
+\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\pause
+\item \param{transitives} work best with \param{ldh};
+\begin{itemize}
+\pause
+\item Why? \param{Transitive} responses are relatively homogenous; Annotators relatively strict;
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting quality: \param{Targeting}}
+
+\small
+
+Spearman rank correlations: System vs. WAR (benchmark)
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|c|l||l|l||l|l|}
+\hline
+& & \multicolumn{2}{c||}{\param{targeted}} & \multicolumn{2}{c|}{\param{untargeted}} \\
+\cline{3-6}
+& 		& System 	& SBERT 		& System 	& SBERT \\
+\hline
+& count 	& 180 		& 60 		& 180 		& 60 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{14NS}} & mean 	& \textbf{.380} 	& .530 	& .300 	& .444 \\
+\cline{2-6}
+& median 	& \textbf{.369} 	& .545 	& .314 	& .472 \\
+\hline
+%\multicolumn{5}{c}{} \\
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{50NS}} & mean 	& \textbf{\textit{.393}} 		& .550 	& \textit{.305} 		& .469  \\
+\cline{2-6}
+& median 	& \textbf{\textit{.389}} 		& .564 	& \textit{.323}			& .496 \\
+\hline
+\end{tabular}
+%\caption{\label{tab:targeting-results} Comparing Spearman rank correlation scores for \param{tar\-get\-ed} and \param{un\-tar\-get\-ed} versions of the PDT data, using NS models of either 14 or 50 random responses per item. Each \textit{System} column represents 180 different rankings (6 system configurations $\times$ 30 items) of 70 NNS responses, where each ranking receives a Spearman score via comparison with the weighted annotation ranking. Each \textit{SBERT} column represents 60 rankings (2 system configurations $\times$ 30 items; SBERT operates on plain text, so the \param{term rep\-re\-sent\-a\-tion} parameter does not apply).}
+\end{center}
+\end{table}
+
+
+\begin{itemize}
+\pause
+\item \param{targeted} $>$ \param{untargeted}
+\pause
+\item 50NS models $>$ 14NS models
+\begin{itemize}
+\pause
+\item Model size effect is most pronounced for \param{targeted}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting quality: \param{Familiarity}}
+
+\small
+
+Spearman rank correlations: System vs. WAR (benchmark)
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|c|l||l|l||l|l|}
+\hline
+& & \multicolumn{2}{c||}{\param{familiar}} & \multicolumn{2}{c|}{\param{crowdsourced}} \\
+\cline{3-6}
+& 		& System 	& SBERT 		& System 	& SBERT \\
+\hline
+& count 	& 180 		& 60 		& 180 		& 60 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{14NS}} & mean 	& .338 	& .499 	& \textbf{.339} 	& .481 \\
+\cline{2-6}
+& median 	& \textbf{.329} 	& .513 	& .326 	& .500 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{itemize}
+\pause
+\item System: No discernible difference for \param{familiar} vs \param{crowdsourced}
+\pause
+\item SBERT: \param{familiar} $>$ \param{crowdsourced}
+\begin{itemize}
+\pause
+\item NNS STTR $<$ \param{familiar} STTR $<$ \param{crowdsourced} STTR
+%\item \param{transitives} work best with \param{ldh};
+%\item \param{intransitives} \& \param{ditransitives} work best with \param{xdx};
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Predicting quality: \param{Primacy}}
+
+\small
+
+Spearman rank correlations: System vs. WAR (benchmark)
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|c|l||l|l||l|l|}
+\hline
+& & \multicolumn{2}{c||}{\param{primary}} & \multicolumn{2}{c|}{\param{mixed}} \\
+\cline{3-6}
+& 		& System 	& SBERT 		& System 	& SBERT \\
+\hline
+& count 	& 180 		& 60 		& 180 		& 60 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{14NS}} & mean 		& 0.339 & 0.493 	& \textbf{0.340} 	& 0.481 \\
+\cline{2-6}
+& median 	& 0.326 & 0.517 & \textbf{0.334} 	& 0.500 \\
+\hline
+\hline
+\multirow{2}{*}{\rotatebox[origin=c]{90}{50NS}} & mean 		& \textit{\textbf{0.354}} 	& 0.514 	& 0.344 	& 0.505 \\
+\cline{2-6}
+& median  	& 0.345 	& 0.532 	& \textit{\textbf{0.350}} 	& 0.518  \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pause
+\begin{itemize}
+\pause
+\item System: 14NS: \param{primary} $<$ \param{mixed} (slight difference)
+\pause
+\item System: 50NS: \param{primary} $\approx$ \param{mixed}
+\pause
+\item SBERT: \param{primary} $>$ \param{mixed}
+\pause
+\item System \& SBERT: 50NS $>$ 14NS
+\begin{itemize}
+\pause
+\item System: model size effect is greatest for \param{primary}
+\end{itemize}
+\end{itemize}
+
+\end{frame}
 
 \end{document}
