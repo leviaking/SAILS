@@ -1672,6 +1672,47 @@ Feature weight &  & .333 & .167 & .167 & .167 & .167} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
+\frametitle{Mean Average Precision}
+\small
+\textit{Average precision} represents the area under the precision-recall curve. \textit{Mean} average precision is an average over multiple average precisions (here it's from multiple PDT items or datasets). \\
+
+\vspace{.8em}
+
+This is a simplification, but for our purposes here, we can think of MAP as a measure of how well a ranking separates "yes" and "no" annotations. \\
+
+\begin{table}[htb!]
+\begin{center}
+\setlength{\tabcolsep}{.35em}
+\begin{tabular}{l|l||l||l|}
+\cline{2-4}
+& Bad & Okay & Good \\
+\cline{2-4}
+\multicolumn{4}{l}{}  \\
+\cline{2-4}
+& \textbf{yes} & \textbf{yes} & \textbf{yes} \\
+\cline{2-4}
+& no & \textbf{yes} & \textbf{yes} \\
+\cline{2-4}
+& no & no & \textbf{yes} \\
+\cline{2-4}
+& \textbf{yes} & \textbf{yes} & no \\
+\cline{2-4}
+& \textbf{yes} & no & no \\
+\cline{2-4}
+\multicolumn{4}{l}{}  \\
+\cline{2-4}
+AP $\rightarrow$ & .51 & .64 & 1.0 \\
+\cline{2-4}
+\end{tabular}
+\end{center}
+\end{table}
+
+\hspace{8em}MAP = (0.51 + 0.64 + 1.00)/3 $\approx$ 0.72
+
+\end{frame}
+
+
+\begin{frame}
 \frametitle{Predicting features: \feat{Answerhood} MAP}
 
 \small
@@ -2238,6 +2279,52 @@ Spearman rank correlations: System vs. WAR (benchmark)
 \pause
 \item System: for \param{xdx}: NS14 $>$ NS50 (very slight)
 \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Predicting quality: \param{Term Normalization}}
+
+\small
+
+\begin{table}[htb!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Response A & Response B & \param{Non-norm} & \param{Normal} \\
+\cline{0-1}
+\multirow{2}{*}{The girl is singing} & \footnotesize{The girl in the cute purple} & \param{-alized} & \param{-ized} \\
+& dress is singing a song & weight & weight \\
+\hline
+\hline
+det(the, girl) & det(the, girl) & 				.143 (2/14) & .175 \\
+\hline
+nsubj(girl, sing) & nsubj(girl, sing) & 		.143 & .175 \\
+\hline
+& det(the, dress) & 							.071  & .050 \\
+\hline
+& \textbf{amod(cute, dress)} & 				\textbf{.071} (1/14) & \textbf{.050} \\
+\hline
+& \textbf{amod(purple, dress)} & 			\textbf{.071} & \textbf{.050} \\
+\hline
+& prep\_in(dress, girl) & 						.071 & .050 \\
+\hline
+aux(be, sing) & aux(be, sing) & 				.143 & .175 \\
+\hline
+root(sing, ROOT) & root(sing, ROOT) & 			.143 & .175 \\
+\hline
+& det(a, song) & 								.071 & .050 \\
+\hline
+& dobj(song, sing) & 							.071 & .050 \\
+\hline
+\hline
+4 & 10 & 1.0 (14/14) & 1.0 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+A 2-response toy NS model. Normalizing for response length so each \textit{response} (not \textit{dependency}) in model carries equal weight reduces weight of some extraneous dependencies, but performance suffers overall.
 
 \end{frame}
 
