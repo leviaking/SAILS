@@ -19,13 +19,13 @@ In Section~\ref{sec:pilot-study}, I discuss a set of experiments that relied on 
 \label{sec:pilot-study}
 This study focused on analyzing English NNS responses to a picture description task (PDT) by comparison with NS responses. It was largely intended to determine if such a task would be feasible for a single researcher using off-the-shelf tools. This meant identifying problem areas and gauging whether variation in the form and content of responses could be manageable.
 
-This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussions. However, please note that some experiments included in those papers are omitted here, and thus some results involving the averaging or ranking of scores differ slightly here.
+This section summarizes relevant work first presented in \citet{king:dickinson:13} and \citet{king:dickinson:14}; please see those papers for deeper discussions. (However, please note that some experiments included in those papers are omitted here, and thus some results involving the averaging or ranking of scores differ slightly here.)
 
 \subsection{Data}
 \label{sec:pilot-data}
 My work is inspired by various intelligent computer-assisted language learning (ICALL) projects and their reliance on visual stimuli \citep{nagata:02, granstrom2004, yamazaki2014}. ICALL itself is heavily influenced by video games, which tend to be visual and interactive \citep{collentine2011}. Thus, a dataset of responses to visual prompts was needed to develop the kind of content analysis pipeline I envisioned.
 
-Without an appropriate dataset available, I opted to collect my own using a PDT. Linguistic research often relies on the ability of task design to induce particular behavior \citep{skehan1998assessing}, and a PDT can be used to induce behavior similar to that of an ICALL application.  Moreover, the use of the PDT as a reliable language research tool is well-established in areas of study ranging from language acquisition to Alzheimer's disease \citep{ellis2000task,forbes2005detecting}. Crucially, a PDT constrains the range of potential responses to contain only information depicted in the image, which greatly reduces the kind of processing needed to ``understand'' and assess responses with an automated system. Relatedly, particularly simple images should restrict elicited responses to a an even tighter range of expected contents.
+Without an appropriate dataset available, I opted to collect my own using a PDT. Linguistic research often relies on the ability of task design to induce particular behavior \citep{skehan1998assessing}, and while PDT responses do not constitute \textit{communicative} language, a PDT can be used to elicit behavior and linguistic forms similar to that of an ICALL application.  Moreover, the use of the PDT as a reliable language research tool is well-established in areas of study ranging from language acquisition to Alzheimer's disease \citep{ellis2000task,forbes2005detecting}. Crucially, a PDT constrains the range of potential responses to contain only information depicted in the image, which greatly reduces the kind of processing needed to ``understand'' and assess responses with an automated system. Particularly simple images, then, should restrict elicited responses to an even tighter range of expected contents.
 
 I designed a data collection instrument consisting of a brief background questionnaire and 10 PDT items (eight line drawings and two photographs). Examples are given in Figure~\ref{fig:example-picture}. Each item was intended to elicit a single sentence and consisted of an image depicting an action canonically framed as a transitive event in English, along with the question, ``What is happening?'' The instructions simply asked participants to ``view the image and describe the action in either past or present tense'' alone and without the use of any resources. The task was administered in a computer lab, where participants typed their own responses. Automatic spelling correction was intentionally disabled on the machines.
 
@@ -61,7 +61,7 @@ Once the data had been collected, I removed a small number of low quality respon
 \subsection{Rule-Based Method}
 \label{sec:rule-method}
 
-The processing behind my work was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text \citep{nastase2006,bailey:meurers:08,dicaro2013}. Because dependency parsing focuses on identifying dependency relations, rather than constituents or phrase structure, it clearly labels the subject, verb and object of a sentence, which can then map to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In this study, I took a na\"ive approach in which subject, verb and object were considered sufficient for deciding whether or not a response accurately describes the visual prompt. My idea was to extract and lemmatize a \textit{verb(subj,obj)} semantic triple from the dependency parse for each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be labeled automatically as ``correct,'' while a non-match would be labeled ``incorrect.''
+The processing behind this pilot study was inspired by research from areas such as sentiment analysis, topic modeling, and content assessment that used rule-based approaches to extract important elements from dependency-parsed text \citep{nastase2006,bailey:meurers:08,dicaro2013}. Because dependency parsing focuses on identifying dependency relations, rather than constituents or phrase structure, it clearly labels the subject, verb and object of a sentence, which can then map to a semantic form \citep{Kuebler.McDonald.Nivre-09}. In this pilot study, I took a na\"ive approach in which subject, verb and object were considered sufficient for deciding whether or not a response accurately describes the visual prompt. My idea was to extract and lemmatize a \textit{verb(subj,obj)} semantic triple from the dependency parse for each sentence. Each NNS triple could be compared against the list of NS triples for a match; a NNS response with a NS triple match would be labeled automatically as ``correct,'' while a non-match would be labeled ``incorrect.''
 
 For lemmatization, I used the pre-trained tool in the Stanford Core NLP package \citep{stanford-corenlp-2014}.\footnote{\url{https://stanfordnlp.github.io/CoreNLP/}} The purpose of lemmatization is to minimize data sparsity by reducing the number of word forms. For example, the main verb in the forms \textit{kicks}, \textit{kicked}, \textit{has kicked} and \textit{is kicking} was reduced to \textit{kick} in all cases, increasing the likelihood of finding matches. For parsing, I used the Stanford Parser, trained on the Penn Treebank \citep{demarneffe:ea:06, klein:manning:03}.\footnote{\url{http://nlp.stanford.edu/software/lex-parser.shtml}}
 
@@ -77,7 +77,7 @@ learners often omit, insert, or otherwise use the wrong preposition
 obscuring what the object is; with the options set as above, however,
 the dependency representation folds the preposition into the label
 (\textit{prep\_with}), instead of keeping it in the parsed string, as
-shown in Figure~\ref{fig:prep-dependency}. Importantly, this option results in a direct relationship between the verb \textit{played} and the object \textit{ball}.
+shown in Figure~\ref{fig:prep-dependency}. Importantly, this option results in a direct relationship between the verb \textit{played} and the object \textit{ball}. Like lemmatization, this step also serves to reduce sparsity and was retained in all the variations described throughout this dissertation.
 
 \begin{figure}[htb!]
 \begin{center}
@@ -159,7 +159,7 @@ syntactic features, leading to predictable patterns in the dependency
 parses. A sentence type indicates that the subject,
 verb, and object can be found in a consistent place in the parse,
 such as under a particular dependency label.
-For simple transitive sentences (type \textit{A} in Table~\ref{tab:sentence-type}), for example, the dependents labeled \textit{nsubj}, \textit{root}, and \textit{dobj} 
+For simple declarative sentences where the object is contained in a prepositional phrase (type \textit{B} in Table~\ref{tab:sentence-type} and the example in Figure~\ref{fig:prep-dependency}), for example, the dependents labeled \textit{nsubj}, \textit{root}, and \textit{prep\_\**} 
 pinpoint the necessary information.
 Thus, the patterns for extracting semantic information---in the form
 of \textit{verb(subj,obj)} triples---reference particular Stanford
@@ -241,10 +241,12 @@ relative to word indices (see Figure~\ref{fig:conll}).
     \depedge{3}{2}{det}
   \end{dependency}} \\
 \hline
+\multicolumn{3}{|l|}{Sentence type: \textit{A} (see Table~\ref{tab:sentence-type})} & \multicolumn{3}{|l|}{Extracted triple: \textit{kick(boy,ball)}} \\
+\hline
 \end{tabular}
 \end{center}
 %\caption{The dependency parse of an example NNS response in CoNLL\footnote{Standard dependency parse format established by the Conference on Computational Natural Language Learning (CoNLL).} format and the corresponding visual representation.}
-\caption{The dependency parse of an example NNS response in a standard format (CoNLL) and the corresponding visual representation}
+\caption{The dependency parse of an example NNS response in a standard format (CoNLL) and the corresponding visual representation, and the resulting sentence type and semantic triple.}
 \label{fig:conll}
 \end{figure}
 
@@ -253,7 +255,17 @@ relative to word indices (see Figure~\ref{fig:conll}).
 %complicated extraction rules, but, since this work examined only transitive
 %verbs, these still boiled down to identifying the
 %sentence type and extracting the appropriate triple.
-Determining the sentence type was accomplished by arranging a small set of binary decisions into a tree, as shown in Figure~\ref{fig:decision-tree}. This decision tree checks for the presence of various dependency labels. The extraction rules for the particular sentence type were then applied to obtain the semantic triple. Finally, for each NNS response, the resulting triple was lemmatized and checked against the list of lemmatized NS triples. Ideally, each acceptable response will find a match, and unacceptable responses will not.
+Determining the sentence type was accomplished by arranging a small set of binary decisions into a tree, as shown in Figure~\ref{fig:decision-tree}. This decision tree checks for the presence of various dependency labels. The extraction rules for the particular sentence type were then applied to obtain the semantic triple. 
+
+To illustrate this extraction process, consider Figure~\ref{fig:prep-dependency}.  I pass this
+sentence through the parser to obtain the dependency parse shown. The parsed sentence then moves to the decision tree shown in Figure~\ref{fig:decision-tree}.
+At the top of the tree, the sentence is checked for an {\tt expl}
+(expletive) label; having none, it moves rightward to the {\tt
+  nsubjpass} (noun subject, passive) node. Because we do not find an {\tt
+  nsubjpass} label, the sentence moves rightward to the {\tt dobj} (direct object)
+node. This label is not found, so the sentence is passed rightward to the {\tt nsubj} (noun subject) node. This label is found, so the sentence is passed leftward to the {\tt prep\_\**} node. The {\tt prep\_with} label is found, so the sentence is passed leftward to the terminal node that labels it as a type B sentence, as shown in Table~\ref{tab:sentence-type}.
+
+Finally, for each NNS response, the resulting triple was lemmatized and checked against the list of lemmatized NS triples. Ideally, each acceptable response will find a match, and unacceptable responses will not.
 
 \begin{figure*}[htb!]
 \begin{center}
@@ -320,7 +332,7 @@ Determining the sentence type was accomplished by arranging a small set of binar
 ]
 \end{tikzpicture}
 \end{center}
-\caption{Decision tree for determining sentence type and extracting semantic triple based on the presence of syntactic dependency labels}
+\caption{Decision tree for determining sentence type and extracting semantic triple based on the presence of syntactic dependency labels.}
 \label{fig:decision-tree}
 \end{figure*}
 
@@ -366,7 +378,7 @@ innovative sentences?
 Second, how many semantic forms does one need in order to capture the variability in meaning in NNS sentences? I operationalized this second question by asking how well a given set of NS semantic forms functions as an ``answer key'' or gold standard.
 % (section~\ref{sec:eval:coverage})?
 
-An accurate extraction was defined as one in which the extraction rules chose the desired subject, verb, and object given the sentence at hand and without regard to the PDT image. Accuracy was 92.3\% for NNS responses and 92.9\% for NS responses. I attribute the high extraction scores to the constrained nature of the task and the relatively small range of sentence types it elicits. As seen in Table~\ref{tab:sentence-type}, only three sentence types (A, B, and C) account for more than 90\% of all responses.
+An accurate extraction was defined as one in which the extraction rules chose the desired subject, verb, and object given the sentence at hand and without regard to the PDT image. Accuracy was 92.3\% for NNS responses and 92.9\% for NS responses. I attribute the high extraction scores to the constrained nature of the task and the relatively small range of sentence types it elicits. As seen in Table~\ref{tab:sentence-type}, a mere three sentence types (A, B, and C) account for more than 90\% of all responses.
 
 Assessing the coverage of NNS forms required first manually determining which extracted triples \textit{should} be matched given a hypothetical perfect gold standard set of triples. To separate the problem of coverage from extraction, I first removed any incorrectly extracted triples from the NNS set and the NS gold standard.
 
@@ -389,7 +401,7 @@ how many NS sentences are needed to obtain good coverage, \textbf{coverage} was 
 \end{tabular}
 \end{center}
 \caption{Contingency table comparing presence of NS forms (Y/N) with
-  appropriateness ($+$/$-$) of NNS forms}
+  appropriateness ($+$/$-$) of NNS forms.}
 \label{tab:contingencies}
 \end{table}
 
@@ -437,7 +449,7 @@ pragmatically native-like language is often much lower
 \citep{BardoviDornyei1998}. These findings highlighted the need for a more flexible approach.
 %that considers how native-like a sentence is as well as how appropriate its meaning is.
 
-Moreover, evaluating this strict matching approach required an annotator to decide whether a given response is correct or incorrect. Partial matching is not allowed; this is an inherent weakness of the approach, because while a complete triple gives some indication of the meaning of the sentence, any single element of the triple taken alone does not provide enough context to indicate meaning. This inflexibility means that using this approach would effectively require the manual curation of a robust gold standard set of acceptable responses, which is counter to my goal of producing an approach that can be expanded to new PDT items simply by crowdsourcing responses from NSs.
+Moreover, evaluating this strict matching approach required an annotator to decide whether a given response is correct or incorrect. Partial matching is not allowed; this is an inherent weakness of the approach, because while a complete triple gives some indication of the meaning of the sentence, any single element of the triple taken alone does not provide enough context to indicate meaning. This inflexibility means that using this approach would effectively require the manual curation of a robust gold standard set of acceptable responses, which is counter to my goal of producing a resource-light approach that can be expanded to new PDT items simply by crowdsourcing responses from NSs.
 
 %\begin{table}[htb!]
 %\begin{center}
@@ -478,7 +490,7 @@ semantic analysis \citep[cf.][]{bailey:meurers:08} for image-based learner produ
 
 A second issue regarding content analysis, beyond correctness, stems
 from using an incomplete gold standard. The productive nature of language means that a sentence can be expressed in countless ways, and thus a gold standard can never really be ``complete.'' For this reason, it is necessary to assume that novel NNS productions will occur, and the methods of analysis should be robust enough to differentiate between responses that do not appear in the gold standard because they are bad responses, and those that do not appear in the gold standard simply because they are infrequent.
-In particular, using available NLP tools, I moved away from discrete representations of correctness in the form of a NS gold standard set of semantic triples to a more continuous notion of correctness using a NS model comprised of smaller, overlapping pieces of information. This obviates the need for a rule-based extraction of semantic triples, which is a source of errors and must be customized for a limited range of expected sentence types. It also allows for graded scoring of results, meaning that a response is not outright rejected because only one argument of a triple is not found. On the other hand, it means that the system does not provide a discrete ``thumbs up'' or ``thumbs down'' decision for each response, which may be desirable in some situations. %use cases.
+In particular, using available NLP tools, I moved away from discrete representations of correctness in the form of a NS gold standard set of semantic triples to a more continuous notion of correctness using a NS model comprised of smaller, overlapping pieces of information. This obviates the need for a rule-based extraction of semantic triples, which is a potential error source and must be customized for a limited range of expected sentence types. It also allows for graded scoring of results, meaning that a response is not outright rejected because only one argument of a triple is not found. On the other hand, it means that the system does not provide a discrete ``thumbs up'' or ``thumbs down'' decision for each response, which may be desirable in some situations. %use cases.
 
 %Starting in Section~\ref{sec:ranking}, I explain a set of revised methods, and in Section~\ref{sec:metrics}, I discuss the results of those methods applied to the same 530 response dataset. The work and findings here became the basis of the much larger study discussed in Chapters~\ref{chap:data} through~\ref{chap:optimization}. 
 
@@ -490,13 +502,13 @@ involves determining whether a NS gold standard set contains the same
 semantic triple that the NNS produced, i.e., whether a triple
 is \textit{covered} or \textit{non-covered}.  In such a situation the
 gold standard need only be comprised of \textit{types} (not \textit{tokens}) of semantic triples. Here the gold standard is comprised of the small set of NS responses---only 14. This means that exact matching is going to miss many cases,
-and indeed as discussed in Section~\ref{sec:rule-results}, coverage was only 51\%. Even with a much larger gold standard, we can expect responses to follow Zipf's law; a sample of language data will always be incomplete because it will not contain all ``long tail,'' low-frequency phenomena.
+and indeed as discussed in Section~\ref{sec:rule-results}, coverage was only 51\%. Even with a much larger gold standard, we can expect responses to follow Zipf's law; a sample of language data will always be incomplete because it will not contain all ``long tail,'' low-frequency phenomena \cite{zipf2016human}.
 
-Additionally, relying on matching of triples limits the utility of the method to specific semantic constraints, namely transitive sentences. By dropping the exact matching approach and instead comparing the frequencies of elements in the NNS response with those of the gold standard, I moved into a gradable, or ranking, approach to the analysis, which is agnostic with regard to an item's transitivity or sentence type (see Table~\ref{tab:sentence-type}). For this reason, I shift terminology here from NS \textit{\textbf{gold standard}} to NS \textit{\textbf{model}}. A gold standard is roughly akin to an answer key, which was appropriate for my strict triple-matching approach. A model is typically a richer data structure containing statistics from observations of known correct data. This distinction and its relevance will be more apparent with the discussion of response representations in Section~\ref{sec:response-rep}.
+Additionally, relying on matching of triples limits the utility of the method to specific semantic constraints, namely transitive sentences. By dropping the exact matching approach and instead comparing the frequencies of elements in the NNS response with those of the gold standard, I moved into a gradable, or ranking, approach to the analysis, which is agnostic with regard to an item's transitivity or sentence type (see Table~\ref{tab:sentence-type}). For this reason, I shift terminology here from NS \textit{\textbf{gold standard}} to NS \textit{\textbf{model}}. A gold standard is roughly akin to an answer key, which was appropriate for my strict triple-matching approach. A model, however, denotes a richer data structure containing statistics from observations of known correct data. This distinction and its relevance will be more apparent with the discussion of response representations in Section~\ref{sec:response-rep}.
 
 My goal is to emphasize the degree to which a NNS response conveys the same
 meaning as the set of NS responses, necessitating an approach which can automatically
-determine the importance of a piece of information among the set of NS responses.  This required two major decisions: 1) how to \textbf{represent} each response as a set of sub-elements, and 2) how exactly to \textbf{score} these sub-elements via comparison with the NS data. In Section~\ref{sec:response-rep}, I detail how I represented the information and in Section~\ref{sec:scoring}, I discuss comparing NNS information to NS information, which allowed me to rank responses from most to least similar to the NS model. In Section~\ref{sec:parameters}, I describe the system parameters that I combined to generate scores, and in Section~\ref{sec:metrics} I present and interpret the results of the various settings.
+determine the importance of a piece of information among the set of NS responses.  This required two major decisions: 1) how to \textbf{represent} each response as a set of its smaller subcomponents (such as words, n-grams, or dependencies), and 2) how exactly to \textbf{score} these subcomponents via comparison with the NS data. In Section~\ref{sec:response-rep}, I detail how I represented the information and in Section~\ref{sec:scoring}, I discuss comparing NNS information to NS information, which allowed me to rank responses from most to least similar to the NS model. In Section~\ref{sec:parameters}, I describe the system parameters that I combined to generate scores, and in Section~\ref{sec:metrics} I present and interpret the results of the various settings.
 %to rank responses from least to most similar to the NS gold standard.
 %\footnote{Although rankings often go from highest to lowest, I prioritize identifying problematic cases, so I rank accordingly.}
 %I also discuss the handling of various other system parameters (section~\ref{sec:parameters}).
@@ -572,7 +584,7 @@ dobj(ball,kick) & \textit{x}(ball,kick) & dobj(\textit{x},kick) & dobj(ball,\tex
 Next, I obtained five different representations from the lemmatized dependencies, as shown in Table~\ref{tab:dep-rep}. I refer to this variable as \textbf{term representation}, in keeping with \textit{term} frequency-inverse document frequency, discussed in Section~\ref{sec:scoring}.
 %I first tokenized and lemmatized a response to a list of dependencies that represents the response.
 The five term representations are then variations on dependencies. The
-full form is the \textbf{labeled dependency} and includes the \textbf{l}abel, \textbf{d}ependent and \textbf{h}ead, so I refer to it in shorthand as \textbf{ldh}. The remaining four forms abstract over either the label, dependent and/or head. I refer to these forms as \textbf{xdh} (i.e., unlabeled dependency), \textbf{lxh} (label+head), \textbf{ldx} (label+dependent), and \textbf{xdx} (dependent only, roughly equivalent to \textit{word} in a bag-of-words approach).
+full form is the \textbf{labeled dependency} and includes the \textbf{l}abel, \textbf{d}ependent and \textbf{h}ead, so I refer to it in shorthand as \textbf{ldh}. The remaining four forms abstract over either the label, dependent and/or head. I refer to these forms as \textbf{xdh} (i.e., unlabeled dependency), \textbf{lxh} (label+head), \textbf{ldx} (label+dependent), and \textbf{xdx} (dependent only, roughly equivalent to a \textit{word} in a bag-of-words approach).
 
 The goal in choosing these five representations was to find the optimal combination of dependency features and the right level of detail to obtain the best system performance. The bag-of-words representation was implemented largely to provide a baseline by which to compare the others.
 
@@ -585,11 +597,11 @@ This processing was applied to the collection of NS responses as well. For each 
 \subsection{Scoring Responses}
 \label{sec:scoring}
 
-Taking the five term representations, my next step was to automatically score them in a way which ranks responses from most to least appropriate.  I devised four scoring approaches, each using one of two methods to \textbf{weight} response terms combined with one of two methods to \textbf{compare} the weighted NNS terms with the NS data.
+Utilizing the five separate term representations, my next step was to automatically score them in a way which ranks responses from most to least appropriate.  I devised four scoring approaches, each using one of two methods to \textbf{weight} response terms combined with one of two methods to \textbf{compare} the weighted NNS terms with the NS data.
 
-For weighting, the simplest method used the relative frequency of each term (i.e., dependency). This is the token count of a given term in a document normalized by the total count of tokens in the document.
+For weighting, the simplest method used the relative frequency of each term (i.e., dependency) in the model. This is the token count of a given term in a document normalized by the total count of tokens in the document.
 
-The other method of weighting was based on \textit{term frequency-inverse document frequency} (\textit{tf-idf}), which scores the importance of terms in a test document according to their frequencies in the language generally \citep[][ch. 6]{manning-et-al:08}. It approximates this by taking a large reference corpus comprised of many smaller documents, and counting the number of those documents in which the terms in question occur. Most commonly, a \textit{term} for tf-idf purposes would be a \textit{word}. However, \textit{term} here refers to a single syntactic dependency, and this is a central conceit of this dissertation:  the dependency, which captures aspects of semantic and syntactic relationships, is an ideal atomic unit for evaluating meaning by comparing distributions in crowdsourced data. As discussed in Section~\ref{sec:response-rep}, the dependencies were represented in one of the five term representations---some combination of label, dependent and head. For the NNS data, each response was treated as a tf-idf test document. For the NS data, the entire collection of NS responses was treated as one tf-idf test document. The idea here is to obtain a similarity measure between a single NNS response and the full collection of NS responses, so each is handled as a single document.
+The other method of weighting was based on \textit{term frequency-inverse document frequency} (\textit{tf-idf}), which scores the importance of terms in a test document according to their frequencies in the language generally \cite{schutze2008introduction}. It approximates this by taking a large reference corpus (see Section~\ref{sec:parameters}) comprised of many smaller documents, and counting the number of those documents in which the terms in question occur. Most commonly, a \textit{term} for tf-idf purposes would be a \textit{word}. However, \textit{term} here refers to a single syntactic dependency, and this is a central conceit of this dissertation:  the dependency, which (unlike individual words or n-grams) captures aspects of semantic and syntactic relationships, is well-suited as an atomic unit for evaluating meaning by comparing distributions in crowdsourced data. As discussed in Section~\ref{sec:response-rep}, the dependencies were represented in one of the five term representations---some combination of label, dependent and head. For the NNS data, each response was treated as a tf-idf test document. For the NS data, the entire collection of NS responses was treated as one tf-idf test document. The idea here is to obtain a similarity measure between a single NNS response and the full collection of NS responses, so each is handled as a single document.
 
 I used tf-idf as a measure of a term's importance with the expectation that it would reduce the impact
 of semantically less important terms---e.g., determiners like
@@ -606,22 +618,26 @@ Calculating tf-idf relies on both \emph{term frequency} ($tf$) and
 \emph{inverse document frequency} ($idf$).  Term frequency is simply
 the raw count of a term within a document. Inverse document frequency is derived from a reference corpus of documents, and it is based on the notion that appearing in more documents makes a term less informative with respect
 to distinguishing between documents.  The formula is shown in
-(\ref{ex:tfidf}) for a term $t$, where $N$ is the number of documents
-in the reference corpus, and $df_{t}$ is the number of documents
+(\ref{ex:tfidf}) for a term $t$ in an NNS response, where $tf_{NS}$ is the term frequency in the model of native speaker responses,
+$N$ is the number of documents
+in the reference corpus (see Section~\ref{sec:parameters}), and $df_{t}$ is the number of documents
 featuring the term ($idf_{t} = \log \frac{N}{df_{t}}$).  A term
 appearing in fewer documents will thus obtain a higher $idf$ weight,
-and this should readjust frequencies based on semantic importance.
+and this should readjust frequencies based on semantic importance
+(\citealp[][pp. 107-10]{schutze2008introduction}).
+%\cite{schutze2008introduction}
 
 \begin{exe}
-\ex\label{ex:tfidf} $tfidf(t) = tf_{GS} \log \frac{N}{df_{t}}$
+\ex\label{ex:tfidf} $tfidf(t) = tf_{NS} \log \frac{N}{df_{t}}$
 %, where $df_t = |\{d\in D, t \in d\}|$
 \end{exe}
 
 After this frequency counting or tf-idf weighting, the scores were then either
 \textbf{averaged} to yield a response score, or NNS term
 weights and NS term weights were treated as vectors and the response
-score was the \textbf{cosine distance} between them.  This
+score was the \textbf{cosine distance} between them. Cosine distance is calculated as the inner product space of two vectors; in tf-idf, this represents the vectors' similarity as a value between 0 and 1 \cite{singhal2001modern}. This
 yields the four approaches:
+
 
 %%former approach names: b = FA; m = IC (TC); c = FC; a = IA (TA)
 \paragraph{Frequency Average (FA).} 
@@ -695,13 +711,19 @@ Rank & Score & Sentence & Error \\
 3 & 0.996 & the man is hurting duck. & 1 \\
 4 & 0.990 & he is hurting the bird. & 1 \\
 \hline
+\multicolumn{4}{|c|}{...} \\
+\hline
 11 & 0.865 & the man is trying to hurt a bird & 1 \\
 12 & 0.856 & a man hunted a bird. & 0 \\
+\hline
+\multicolumn{4}{|c|}{...} \\
 \hline
 17 & 0.775 & the bird not shot dead.  & 1 \\
 18 & 0.706 & he shot at the bird & 0 \\
 19 & 0.669 & a bird is shot by a un & 1 \\
 20 & 0.646 & the old man shooting the birds & 0 \\
+\hline
+\multicolumn{4}{|c|}{...} \\
 \hline
 37 & 0.086 & the old man shot a bird. & 0 \\
 38 & 0.084 & a old man shot a bird. & 0 \\
