@@ -257,6 +257,8 @@ relative to word indices (see Figure~\ref{fig:conll}).
 %sentence type and extracting the appropriate triple.
 Determining the sentence type was accomplished by arranging a small set of binary decisions into a tree, as shown in Figure~\ref{fig:decision-tree}. This decision tree checks for the presence of various dependency labels. The extraction rules for the particular sentence type were then applied to obtain the semantic triple. 
 
+\lk{change this example to the one used in 3.3}
+\lk{add a sentence explaining how sentence types are connected to ``templates'' that allow us to ID the triple parts}
 To illustrate this extraction process, consider Figure~\ref{fig:prep-dependency}.  I pass this
 sentence through the parser to obtain the dependency parse shown. The parsed sentence then moves to the decision tree shown in Figure~\ref{fig:decision-tree}.
 At the top of the tree, the sentence is checked for an {\tt expl}
@@ -749,7 +751,9 @@ identified, and both are errors ($\frac{2}{2}$). At the 11th- and
 not an error.
 AP averages over the precisions for all $m$ responses ($m=39$ for the
 NNS data), as shown in (\ref{ex:ap}), with each response notated as
-$R_k$.  Averaging over all 10 items results in the Mean AP (MAP).
+$R_k$.  Averaging over all 10 items results in the Mean AP (MAP).\footnote{Note that while the scores shown in Tables~\ref{tab:i10responses-avgprec}, \ref{tab:all-dist-ranked-settings}, and \ref{tab:dist-ranked-parameters} may appear unimpressive as precision scores, the upper bound for (M)AP, as implemented here, is not 1.0 but is instead much closer to the top ranking values shown.}
+
+
 
 \begin{exe}
 \ex\label{ex:ap} $AP(item) = \frac{1}{m} \sum\limits_{k=1}^m
@@ -802,7 +806,7 @@ Rank & MAP & Approach & Reference & Term rep.\\
 30 & 0.4530 & \param{FA} & \textit{na} & \param{lxh} \\ 
 \hline
 \end{tabular}
-\caption{Based on Mean Average Precision, the five best and five worst system configurations across all 10 PDT items.}
+\caption{Based on Mean Average Precision (MAP), the five best and five worst system configurations across all 10 PDT items.}
 \label{tab:all-dist-ranked-settings}
 \end{center}
 \end{table}
