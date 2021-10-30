@@ -1,17 +1,19 @@
 Revision Notes
 
+################################################################################
 Chapter 1 (Intro)
 
+################################################################################
 Chapter 2 (Related Work)
 Removed most Task-based/TBLT discussion (per Dr. Shin)
 Alphabetized all citations with multiple papers
 Added page numbers for all quotations cited
 
+################################################################################
 Chapter 3 (Pilot Study)
 Removed Task-based/TBLT mentions (per Dr. Shin)
 Addressed MD's comments
 Addressed DS's comments
-
 
 Probably want to add a footnote about MAP...
 MD: look into: is there an approach to MAP where you stop upon "total recall"? i.e., all extant errors are above that cut-off;
@@ -19,7 +21,7 @@ Point here is that 0.5168 (highest MAP) in Table 3.5 is actually quite good / cl
 https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2?gi=7b37efd0ab4a
 from link: “We plot the 11 points interpolated Precision-Recall curve.”
 
-
+################################################################################
 Chapter 4 (Data)
 Completed:
 Per DS: shift discussion of my work to past tense
@@ -27,3 +29,62 @@ Per DS: shift discussion of my work to past tense
 bad=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 pilot_perfect=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 pilot_true=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+################################################################################
+Chapter 5 (Annotation)
+Addressed DS comments;
+Shifted to past tense throughout (where appropriate)
+Addressed MD's comments;
+
+################################################################################
+Chapter 6 (Optimization)
+###
+MD has a comment on Table 6.7 (MAP for Answerhood, Crowd14 vs Crowd50):
+"Important that it's above WAR?", with a few scores circled where the highest system score exceeds the WAR (benchmark) score.
+Good question and I'm struggling to wrap my head around this.
+I think it means...
+In some cases, e.g., one MD circled: Answerhood, Crowd14 model in untargeted settings:
+Here my system (via its scores and ranking) can better predict Answerhood than can the WAR (the single score interpolated from weighted annotation);
+But what does this mean?
+This is at least partly indicative of the noise or compression in the WAR...
+It's interesting that for Answerhood, we see system MAPs above WAR MAPs for ditrans, untarg, and mixed settings; (also for transitive, but just barely, and not true for intransitives)... interesting because these are the settings that result in the most variation (STTR).
+I just did some counting... Not counting the "total" (average) rows, the MAP tables (6.5-6.14), present 24 rows per feature (MAP scores coming from different settings and model sizes, compared with the WAR MAP). For each feature I calculated n/24, where n is the number of rows where the highest system MAP exceeds the WAR MAP. Ranked, it looks like this:
+Interp: 	1.0
+Verif: 		0.833
+Answerhood:	0.625
+Core Event: 0.25
+Gramm:		0.208
+Note that this doesn't account for the *magnitude* of the differences between sys MAP and WAR MAP...
+And what does any of this mean...?
+I think it has something to do with *skewedness* and to what extent a given feature correlates directly with my approach to semantic textual similarity; i.e., to what extent a feature "comes out in the wash" when ranking by dependency tf-idf cosine.
+WAR MAP is based on A1's annotations. We can see skewedness for A1 in Table 5.2. It ranks like this, least to most skewed:
+Core Event
+Interp
+Answer
+Verif
+Gramm
+Hmm, that doesn't look particularly meaningful.
+OK, I think I could say this... the rate and degree to which system scores exceed the WAR MAP score can be seen as an indication of the interaction between a feature's weight carried within the WAR and the correlation between the feature and my approach to semantic textual similarity. This correlation, in other words, indicates how reliably STS can incidentally predict the feature.
+
+Maybe what I'm saying is something like: In the context of this PDT data, Interpretability and Verifiability appear to correlate relatively highly with STS scores as compared to how they correlate with WAR. For Core Event and Grammaticality, however, this is not the case, and the WAR MAP more often outperforms the STS scores. 
+We should be able to corroborate this by looking at the SBERT MAPs.
+If we rank the features for SBERT exceeding WAR MAP (n/24, as above):
+Interp 			0.833
+Verif / Answer: 0.166
+Gramm:			0.083
+Core Event: 	0.0
+
+This is very close to the corresponding ranking for my system above.
+###
+
+Completed:
+Addressed all MD's comments;
+Addressed all DS's comments;
+Shifted to past tense where appropriate
+
+
+
+
+
+
+
