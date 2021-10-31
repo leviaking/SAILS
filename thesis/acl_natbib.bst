@@ -663,8 +663,8 @@ FUNCTION {format.names}
     { s nameptr
       duplicate$ #1 >
         { "{ff~}{vv~}{ll}{, jj}" }
-        { "{ff~}{vv~}{ll}{, jj}" }	% first name first for first author 
-%        { "{vv~}{ll}{, ff}{, jj}" }	% last name first for first author
+        { "{ff~}{vv~}{ll}{, jj}" }	% first name first for first author  %% LK: This is ACL default
+%        { "{vv~}{ll}{, ff}{, jj}" }	% last name first for first author  %% LK: Not default
       if$
       format.name$
       bibinfo bibinfo.check

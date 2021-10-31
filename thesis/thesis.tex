@@ -25,6 +25,7 @@
 \usepackage{graphicx}
 \usepackage{tikz-dependency}
 \usepackage{natbib}
+%\usepackage[natbib=true,backend=biber,style=apa]{biblatex}
 \usepackage{url}
 \usepackage{gb4e} % MD: some versions of latex need this package to be loaded last
 \usepackage{amsmath}
@@ -92,7 +93,7 @@
 \newcommand{\md}[1]{\marginpar{\scriptsize MD: #1}}
 \newcommand{\lk}[1]{\marginpar{\linespread{1}\scriptsize LK: #1}}
 % for removing all marginpars ==> good for final submission! %%nice trick!
-%\renewcommand{\marginpar}[1]{}
+\renewcommand{\marginpar}[1]{}
 
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
@@ -134,10 +135,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Acknowledgments
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Acknowledgements}
-%\input{acknowledgements.tex}
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{acknowledgements.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract
@@ -179,23 +180,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % List of figures and tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-\begin{singlespace}
-\setlength\cftbeforetabskip{\baselineskip}  %manually set spacing between entries
-\listoftables
-\end{singlespace}
-
-\clearpage
-
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
-\begin{singlespace}
-\setlength\cftbeforefigskip{\baselineskip}  %manually set spacing between entries
-\listoffigures
-\end{singlespace}
-
-\clearpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\begin{singlespace}
+%\setlength\cftbeforetabskip{\baselineskip}  %manually set spacing between entries
+%\listoftables
+%\end{singlespace}
+%
+%\clearpage
+%
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\begin{singlespace}
+%\setlength\cftbeforefigskip{\baselineskip}  %manually set spacing between entries
+%\listoffigures
+%\end{singlespace}
+%
+%\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -270,12 +271,6 @@
 \input{chapter7.tex}
 
 %%%%%%%%%%%%%%%%
-% Appendices
-%%%%%%%%%%%%%%%%
-
-\input{appendix.tex}
-
-%%%%%%%%%%%%%%%%
 % References
 %%%%%%%%%%%%%%%%
 %\begin{singlespace}  % use single-line spacing for multi-line text within a single reference
@@ -285,7 +280,16 @@
 %%\printbibliography[heading=bibintoc,title={References}]
 %\addcontentsline{toc}{chapter}{References}  %add References section to Table of Contents
 \bibliographystyle{acl_natbib}
+%\bibliographystyle
 \bibliography{levi.bib}
+
+%%%%%%%%%%%%%%%%
+% Appendices
+%%%%%%%%%%%%%%%%
+
+\input{appendix.tex}
+
+
 %%%%%%%%%%%%%%%%
 % Vita 
 % Only for PhD students

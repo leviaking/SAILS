@@ -102,10 +102,11 @@
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+\setcounter{page}{174}
 \usepackage{gb4e} % MD: some versions of latex need this package to be loaded last
 
 %
-\title{\large{Semantic Analysis of Image-Based Learner Sentences (SAILS)} \\ Annotation Guide \\ Version 1.0, December 19, 2017}
+\title{\large{Semantic Analysis of Image-Based Learner Sentences (SAILS)} \\ Annotation Guide \\ Version 1.1}
 %
 \date{}
 %%%%%%annotation guide preamble ends above%%%%%%%%%%%%%
@@ -220,7 +221,10 @@ The terms \textit{targeted} and \textit{untargeted} are never used in the task, 
 \clearpage
 \section{Annotating Features}
 
-Each response is annotated according to five dimensions, or \textit{features}. These features, explained below, are referred to as \textit{\textbf{core event, verifiability, answerhood, interpretability}} and \textit{\textbf{grammaticality}}. Annotations for each feature have only two possible values, \textit{yes} or \textit{no} (or \textit{1} or \textit{0}). The annotation for each response is thus an ordered list (i.e., a vector) of zeros and ones. For example, [1, 1, 1, 1, 0] would represent a response that was annotated \textit{no} for grammaticality and \textit{yes} for all other features.
+%Each response is annotated according to five dimensions, or \textit{features}. These features, explained below, are referred to as \textit{\textbf{core event, verifiability, answerhood, interpretability}} and \textit{\textbf{grammaticality}}. Annotations for each feature have only two possible values, \textit{yes} or \textit{no} (or \textit{1} or \textit{0}). The annotation for each response is thus an ordered list (i.e., a vector) of zeros and ones. For example, [1, 1, 1, 1, 0] would represent a response that was annotated \textit{no} for grammaticality and \textit{yes} for all other features.
+
+Each response is annotated according to five dimensions, or \textit{features}. These features, explained below, are referred to as \textit{\textbf{core event, answerhood, grammaticality, interpretability}} and \textit{\textbf{verifiability}}. Annotations for each feature have only two possible values, \textit{yes} or \textit{no} (or \textit{1} or \textit{0}). The annotation for each response is thus an ordered list (i.e., a vector) of zeros and ones. For example, [1, 1, 0, 1, 1] would represent a response that was annotated \textit{no} for grammaticality and \textit{yes} for all other features.
+
 
 \subsection{Core event} \label{subsec:core-event}
 The core event feature primarily considers the following question: \textit{Exactly as written, does the response capture the core event of the item?}
@@ -233,7 +237,7 @@ Each image depicts a single \feat{core event} that could be captured by a simple
 \paragraph{Subjects} \label{para:core-event-subjects} The form of a core event is generally similar to that of a \textit{predicate} in traditional grammar. The core event describes what the subject (or agent) is doing. Thus, when annotating for core event, the predicate of the sentence is the most important consideration. However, there are some rules pertaining to the subject. The sentence must include a subject. In the case of targeted items, the subject may be omitted if it can be understood from the question. Annotators should be quite flexible with regard to the subject, with a few restrictions. Even for targeted items, the subject in the response does not need to be identical to the subject provided in the question. For example, in response to \textit{What is the boy doing?}, responses that restate the subject as \textit{guy} or \textit{kid} or proper names like \textit{Peter} should be accepted. Much flexibility with regard to age should be given as well; infants aside, \textit{man}/\textit{boy} should be treated interchangeably, as should \textit{woman}/\textit{girl}. Crucially, the meaning of the subject in the response should not be in conflict with what is shown in the image. Thus, a response that restates the male subject as female or assigns an exclusively female name should not be accepted. More flexibility is allowed for number; a response that depicts a singular subject as plural or vice versa is still acceptable. The rationale for this decision is that the core event feature should avoid penalizing responses for concerns covered by other features. Concerns about number would primarily be covered with the grammaticality and verifiability features. Moreover, while a subject is necessary to fulfill the core event, the focus of this feature is the event itself. In short, responses that assign an incorrect number to the subject  are acceptable, but those that change a subject's gender are not.
 
 \paragraph{Verb forms}
-The core event is best fulfilled with a present progressive verb form, but responses that use other verb forms may be acceptable. Crucially, the response should allow for an interpretation in which the verb refers to the specific event displayed in the image. For example, in most contexts, \textit{He enjoys dancing to music} would be interpreted to mean that \textit{in general}, the subject enjoys the activity of dancing to music. However, in this context, it could refer to the event displayed in the image; the sentence could be intended as a narration of the image. Likewise, responses that describe the event in past or future terms might be acceptable; annotatos should use their own best judgment. Responses that use modality or hedging (e.g., \textit{He must be dancing}; \textit{I think he's dancing}), and those that are formed as questions (e.g., \textit{Is he dancing?}) are also acceptable, as long as the core event is present and clearly tied to the appropriate subject (or agent).
+The core event is best fulfilled with a present progressive verb form, but responses that use other verb forms may be acceptable. Crucially, the response should allow for an interpretation in which the verb refers to the specific event displayed in the image. For example, in most contexts, \textit{He enjoys dancing to music} would be interpreted to mean that \textit{in general}, the subject enjoys the activity of dancing to music. However, in this context, it could refer to the event displayed in the image; the sentence could be intended as a narration of the image. Likewise, responses that describe the event in past or future terms might be acceptable; annotators should use their own best judgment. Responses that use modality or hedging (e.g., \textit{He must be dancing}; \textit{I think he's dancing}), and those that are formed as questions (e.g., \textit{Is he dancing?}) are also acceptable, as long as the core event is present and clearly tied to the appropriate subject (or agent).
 
 \begin{figure}[htb!]
 \begin{center}
@@ -258,7 +262,7 @@ Core events are not predefined; annotators should decide what each core event is
 
 Given the simplicity of the images, the core event should be clear for each. None of the images depicts any background events that are unrelated to the core event. Any non-core event that could be described either supports the core event or is a cause or effect of the core event. In Figure~\ref{fig:instructions2}, for example, the untargeted question (\textit{What is happening?}) could be answered with \textit{The patient is smiling}, but this is clearly an effect of the core event, in which a nurse is giving the patient flowers. Thus, \textit{The patient is smiling} should be annotated \textit{no} here.
 
-\subsubsection{Alternative interpretations \& inaccurate information} Although every effort was made to produce unambiguous PDT images, reasonable alternative interpretations are seen among the responses for a very small number of items. For example, Figure~\ref{fig:deliver-package} shows a woman seated behind a desk and a man holding a package in front of the desk. Most participants interpret the scene as the man delivering a package to the woman. However, a small number of participants interpret this scene as a man picking up a package from the woman -- a reasonable alternative. Such reasonable alternatives should be annotated \textit{yes} for core event. An even smaller number of participants describe the scene as a student giving a gift to his teacher. However, the ``student'' here is wearing a work uniform and holding a brown parcel with a visible shipping label, so this interpretation should be rejected. Annotators should use their own in judgement in annotating responses that contain variations in interpretation.
+\subsubsection{Alternative interpretations \& inaccurate information} Although every effort was made to produce unambiguous PDT images, reasonable alternative interpretations are seen among the responses for a very small number of items. For example, Figure~\ref{fig:deliver-package} shows a woman seated behind a desk and a man holding a package in front of the desk. Most participants interpret the scene as the man delivering a package to the woman. However, a small number of participants interpret this scene as a man picking up a package from the woman -- a reasonable alternative. Such reasonable alternatives should be annotated \textit{yes} for core event. An even smaller number of participants describe the scene as a student giving a gift to his teacher. However, the ``student'' here is wearing a work uniform and holding a brown parcel with a visible shipping label, so this interpretation should be rejected. Annotators should use their own judgement in annotating responses that contain variations in interpretation.
 
 As long as the core event is present and linked to a reasonable subject (or agent), inaccurate information in a response should be ignored and the response should be accepted. For Figure~\ref{fig:dance}, for example, \textit{A boy is dancing at a birthday party} should be annotated \textit{yes}. Although we see no evidence of a party, the response nonetheless covers the core event, which is \textit{(boy) is dancing} or something equivalent. Likewise, the (hypothetical) response \textit{The guy is dancing on the moon} should be accepted, because the core event and a reasonable subject are present.
 
@@ -301,7 +305,7 @@ As another example, in response to a targeted item \textit{What is the professor
 
 \subsubsection{Pronouns} Pronouns as subjects are acceptable in responses to both targeted and untargeted items. A pronoun that clearly assigns the wrong gender to a subject or object should result in a \textit{no} for the core event feature. Otherwise, annotators should retain a high degree of flexibility with regard to pronouns. The item in Figure~\ref{fig:ask-question}, for example, depicts an \textit{ask} action involving two males, one as the subject and the other as an object. The pronoun \textit{he} could thus lead to ambiguity, but nonetheless the response \textit{He is asking him a question} should be annotated as \textit{yes}. Additionally, as discussed in Section~\ref{para:core-event-subjects}, the incorrect use of plural or singular forms to describe subjects (and objects) is not penalized under the core event annotation, and this applies to pronoun forms as well. 
 
-\subsubsection{Targeted items and passive responses} \label{sec:core-targeted} In targeted items, a subject is provided in the question. This provided subject (or its replacement) will be the subject of most responses. However, this is not a hard requirement for annotating a targeted response as \textit{yes} for the core event. The crucial requirement is that the provided subject (or its replacement) be indicated as the agent of the core event predicate, even if it is not expressed as the syntactic subject in the response. For example, the targeted item in Figure~\ref{fig:ask-question} asks \textit{What is \textbf{the boy} doing?} A passivized response may move this subject to a textit{by} phrase, as in \textit{The man is being asked a question by a boy}. Because the provided subject \textit{(the) boy} can be understood as the agent of the core event, this response should be annotated as \textit{yes} here. Omitting this \textit{by} phrase (i.e., \textit{The man is being asked a question}) would result in a \textit{no} annotation, however, because the provided subject is lost. 
+\subsubsection{Targeted items and passive responses} \label{sec:core-targeted} In targeted items, a subject is provided in the question. This provided subject (or its replacement) will be the subject of most responses. However, this is not a hard requirement for annotating a targeted response as \textit{yes} for the core event. The crucial requirement is that the provided subject (or its replacement) be indicated as the agent of the core event predicate, even if it is not expressed as the syntactic subject in the response. For example, the targeted item in Figure~\ref{fig:ask-question} asks \textit{What is \textbf{the boy} doing?} A passivized response may move this subject to a \textit{by} phrase, as in \textit{The man is being asked a question by a boy}. Because the provided subject \textit{(the) boy} can be understood as the agent of the core event, this response should be annotated as \textit{yes} here. Omitting this \textit{by} phrase (i.e., \textit{The man is being asked a question}) would result in a \textit{no} annotation, however, because the provided subject is lost. 
 A response that reframes the event like \textit{The man is listening to a boy's question}, is annotated \textit{no}, because \textit{boy} is not expressed as the agent of the core event. 
 
 \subsubsection{Untargeted item leniency} In general, with regard to the core event feature, a greater variety of responses may be annotated as \textit{yes} under the untargeted version of an item than under the targeted version, because the untargeted question is less specific than the targeted question. This may include passivizations, such as \textit{A man is being asked a question} (for Figure~\ref{fig:ask-question}). Likewise, responses that simply cast the core event from a different angle may be appropriate and may be annotated as \textit{yes} for an untargeted item. For example, \textit{The man is listening to the boy's question} would be annotated as \textit{yes} for the untargeted version of this item. Responses that do not somehow convey the notion of the core event, however, should still be rejected. For example, \textit{The man is crossing his arms} and \textit{The boy is gesturing with his hands} do not cover the core event and should be rejected.
@@ -372,6 +376,212 @@ Untargeted (I11U): What is happening? \\
 %%\caption{\feat{core event} annotations for the targeted and untargeted versions of Item 11.}
 %%\label{tab:core-event-cases}
 %%\end{table}
+
+\subsection{Answerhood} \label{subsec:answerhood}
+
+The answerhood feature primarily considers the following question: \textit{Exactly as written, does the response make an attempt to answer the specific question asked?}
+
+\subsubsection{Contextuality of answerhood} Annotation for the answerhood feature is contextual; it must consider the question presented in the item. The image is mostly irrelevant and is only used for targeted items to confirm that when a response replaces the subject with a pronoun, an appropriate pronoun is used.
+
+\subsubsection{Defining \feat{answerhood}} As noted above, responses should address the specific question in the prompt. In other words, the response must answer the exact question given; merely answering a \textit{similar} or \textit{related} question is not adequate. Responses should make a positive assertion; responses that merely point out a negative fact are not acceptable (e.g., \textit{The boy is not wearing a helmet}.) In general, because all of the PDT questions use a present progressive verb, responses should either use a present progressive verb \textit{or} indicate an imminent action; see Section~\ref{subsubsection:answerhood-verbs}. Figure~\ref{fig:answerhood-examples} presents a number of example responses and answerhood annotations. 
+
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tabular}{|r|l|c|l|}
+\hline
+\multicolumn{4}{|c|}{\includegraphics[width=0.4\columnwidth,trim=-4 0 -4 -4]{figures/ex01.jpg}}\\
+\hline
+& \textbf{Response} & \textbf{An.} & \textbf{Appropriate question} \\
+\hline
+1 & Giving a patient flowers. & yes & (prompt) \\
+\hline
+2 & She's giving flowers to a patient. & yes & (prompt) \\
+\hline
+3 & The nurse is giving away flowers. & yes & (prompt) \\
+\hline
+4 & A nurse is giving away flowers. & no & What is happening? \\
+\hline
+5 & A young nurse is giving away flowers. & no & What is happening? \\
+\hline
+6 & The woman is giving the patient flowers. & no & What is the woman doing? \\
+\hline
+7 & The nurse is happy. & no & How is the nurse? \\
+\hline
+8 & The nurse is smiling. & yes & (prompt) \\
+\hline
+9 & The nurse gives flowers away. & no & What does the nurse do? \\
+\hline
+10 & The nurse gave the patient roses. & no & What did the nurse do? \\
+\hline
+11 & The young nurse is giving out flowers. & no & What is the young nurse doing? \\
+\hline
+12 & The smiling nurse is giving away roses. & no & What is the smiling nurse doing? \\
+\hline
+13 & This nurse is giving away flowers. & no & What is this nurse doing? \\
+\hline
+14 & That nurse is giving her patient flowers. & no & What is that nurse doing? \\
+\hline
+15 & Nurse is giving away flowers. & no & What is Nurse doing? \\
+\hline
+16 & The patient is receiving roses from the nurse. & no & What is the patient doing?\\
+\hline
+%17 & The nurse is about to give the woman roses. & no & What is the nurse about to do? \\
+%\hline
+\end{tabular}
+\end{center}
+\caption{Example responses to targeted Item 2 (\textit{What is the nurse doing?}) and their answerhood annotations (\textit{An}). A particular response could be appropriate for multiple questions, but a likely example is given for each.}
+\label{fig:answerhood-examples}
+\end{figure}
+\clearpage
+
+
+\subsubsection{Accuracy} Answerhood should be annotated without regard to the accuracy of the response. Consider Figure~\ref{fig:eat-pizza}, for example. The targeted version asks \textit{What is the boy doing?}; the response \textit{He's eating a sandwich} should be annotated \textit{yes} because it does attempt to answer the question, even though the boy is clearly eating pizza. Moreover, \textit{The boy is riding a bicycle} would also be annotated \textit{yes}, despite the fact that no bicycle appears. The accuracy of the response is accounted for with the core event and verifiability features.
+
+\subsubsection{Targeted vs. untargeted items} The answerhood feature, like \feat{core event}, is dependent on the differences in the targeted and untargeted versions of the items. In other words, a sentence that may receive a \textit{no} annotation as a targeted response could receive a \textit{yes} annotation as an untargeted response. (The opposite should not be possible, as the targeted version of an item always asks a more specific question than its untargeted counterpart.) For example, consider Figure~\ref{fig:deliver-package} and the targeted and untargeted questions: \textit{What is the man doing?} and \textit{What is happening?} The response \textit{The man is delivering a package} would be annotated \textit{yes} for answerhood for either version, while \textit{The woman is receiving a package} would be annotated \textit{yes} only for the untargeted version.
+
+%\subsubsection{Common answerhood concerns}
+
+\subsubsection{Verb forms}
+\label{subsubsection:answerhood-verbs}
+The PDT items ask what \textit{is happening} or what a particular figure in the image \textit{is doing}, and these present progressive verb forms limit the range of acceptable responses. For the purposes of answerhood, acceptable responses should either employ a progressive verb form,  indicate imminent action, or present an appropriate event. These forms and related considerations are explained below.
+
+\paragraph{Progressive verbs} The majority of responses use a dynamic verb in the progressive form. Dynamic verbs are appropriate for responses because they describe an event or action that happens and typically has a beginning and end. Dynamic verbs often take the (present) progressive form (\textit{(is) eating}, \textit{(is) dancing}). This is in contrast with stative verbs, which are inappropriate for this task as they describe a state or condition. Stative verbs cannot be used in the progressive form (with rare and arguably non-stative exceptions). Roughly speaking, stative verbs can be categorized as verbs of cognition (\textit{Susan knows karate}; \textit{Sabrina believes in the team}) and verbs of relation (\textit{Josh resembles his father}). Responses that rely on a stative verb should be annotated \textit{no} for answerhood. These responses (and any others) that simply describe a state of affairs in the image should be annotated \textit{no}, because they do not directly answer the question. For example, \textit{The boy loves pizza}, a response to Item 2 (Figure~\ref{fig:eat-pizza}) is annotated \textit{no} for answerhood, because it does not directly answer the question. Likewise, \textit{The nurse seems happy}, shown in Figure~\ref{fig:answerhood-examples}, should receive a \textit{no} annotation (for both the targeted and untargeted versions) because it describes a state depicted in the image but does not directly answer the question of what the nurse is \textit{doing}.
+
+Although most responses use a present progressive verb (e.g., \textit{He \textbf{is eating} pizza}), responses using the simple present form of a verb (\textit{He eats pizza}) are also common among the data. This form is commonly used to describe general truths or habitual actions, like \textit{The horse eats grass} or \textit{The river flows east}. Responses that use the simple present should be annotated \textit{no} for answerhood. In most situations, in English the simple present would not be used to describe the actions in the PDT items, and particularly not in response to the present progressive questions in the PDT.
+
+With the exception of \textit{event} responses (see Section~\ref{subsubsection:answerhood-events}) and \textit{imminent action} responses (see Section~\ref{subsubsection:answerhood-imminent}), responses that lack a progressive verb should be annotated \textit{no}, even if this is the only problem with the response. For example, \textit{The boy is hold a pizza} and \textit{The boy seems to eat pizza} would both be annotated \textit{no}. The mere appearance of a progressive form verb in a response does not automatically satisfy the answerhood feature, however. The necessary progressive verb must appear in a linguistic context that indicates that the verb directly responds to the question. For \textit{What is the dog doing?}, for example, the response \textit{The dog likes to chase the running cat} contains an \textit{-ing} verb form, but not in this context it is an adjective and does not satisfy the answerhood feature.
+
+Responses that omit a \textit{be} verb but include a progressive verb form in an otherwise appropriate context (e.g., \textit{The boy holding a pizza}) should generally be annotated \textit{yes} for answerhood. (The grammatical concerns are covered with the grammaticality feature.)
+
+For handling misspelled verbs, see Section~\ref{para:answerhood-misspellings}
+
+\subsubsection{Events and activities}
+\label{subsubsection:answerhood-events} In some cases, a noun phrase may be an adequate and natural response to the PDT questions. For targeted items (\textit{What is the X doing?}), a response in the form of a noun or noun phrase that can be \textit{done} should be accepted. For example, \textit{gymnastics}, \textit{origami} and \textit{the laundry} are acceptable in response to \textit{What is the woman doing?}. Likewise, for untargeted items, a response in the form of a noun or noun phrase that can \textit{happen} should be accepted. For example, \textit{an interview}, \textit{a volleyball game} and \textit{a math class} are acceptable responses to \textit{What is happening?}.
+
+For targeted and untargeted items, such event and activity responses should be properly formed as a grammatical response to the question, with any necessary determiners or articles. Grammar is not strictly considered for answerhood, but because these responses tend to be very short, proper form is used to differentiate between low-effort responses and those that appear to offer a thoughtful answer to the question. Such low-effort responses may simply describe some element of the image without considering the question. For example, \textit{a baseball game} should be accepted in response to the question \textit{What is happening?}, but \textit{baseball} and \textit{baseball game} should not.
+
+\subsubsection{Imminent actions}
+\label{subsubsection:answerhood-imminent}
+Some responses describe the item in terms of an imminent action rather than a progressive action, e.g., \textit{The boy is about to eat the pizza}. Such imminent action responses are common among the responses from both native and non-native speakers. Some items elicit more of this type of response than others; Figure~\ref{fig:eat-pizza}, for example, shows a boy holding a slice of pizza near his mouth. Perhaps because the \textit{eating} action has not yet begun here, many responses indicate this as an imminent action rather than a progressive action. In general, responses that describe the subject's state in relation to an imminent action should be accepted, provided they otherwise fulfill the requirements for answerhood. However, responses that use a future aspect to describe the actions (e.g., \textit{The boy will eat the pizza}) do \textit{not} meet the requirements for answerhood.
+
+Some responses do use a progressive form to indicate an imminent action, such as \textit{The boy is fixin' to eat the pizza} and \textit{The doctor is preparing to treat the patient}. Such responses should be annotated \textit{yes}, and annotators should be flexible in accepting variations and informal forms; for example, \textit{preparing, fixin', fixin}, and \textit{gonna} are all acceptable here.
+
+In general, responses that describe the subject's state in relation to an imminent action are acceptable, with or without a progressive form. This includes responses that use these phrases (or others like them) followed by an action: \textit{is ready to, is getting ready to, is preparing to, is fixing to, is about to, is gonna}, etc. In the case of \textit{ready to} and \textit{about to}, because these expressions lack an actual verb, they must be preceded by a copular verb (\textit{is, seems}, etc.), which cannot be dropped. Likewise, the subject cannot be dropped. For example, \textit{preparing to eat the pizza} is acceptable in response to the question, \textit{What is the boy doing?}, but \textit{about to eat the pizza} is not acceptable.
+
+
+\paragraph{Targeted subject variations and pronouns}
+All targeted questions take the form of \textit{What is the X doing?}. Responses should use the same subject provided in the question, or an appropriate pronoun. This subject should be in the subject position of the response; if the response contains only a predicate, the subject of the question should be understood as the subject of the response. Responses should not alter the subject in any way, or move it from the subject position (as in passivization). This is in keeping with the requirement to answer the question exactly as it is asked. Several relevant examples are presented in Figure~\ref{fig:answerhood-examples}.
+
+To put this concisely, responses to targeted items must either repeat the subject exactly as presented in the question, or use an appropriate pronoun, or drop the subject so that it is understood from the question. To clarify, the subject should not be altered in terms of definiteness, number, specificity, role or any other characteristic. Such responses add context to the question, and in order to evaluate answerhood, this new information would need to verified to ensure that the subject presented in the response is indeed the subject provided in the question. Verifying information for the sake of answerhood adds noise and complication, so verifiability is left to its own feature. For answerhood purposes, \textit{a nurse} is not the same as \textit{the nurse}. Likewise, neither \textit{nurse}, \textit{the young nurse}, \textit{the blond nurse}, \textit{the nurse who is standing}, or \textit{this nurse} is the same as \textit{the nurse}. Additionally, a targeted subject should not be expanded to include other persons or entities; in response to \textit{What is the man doing?}, \textit{The man is greeting the woman} is acceptable, while \textit{The man and woman are saying hello} is not.
+
+Regarding pronouns, all humans presented in the PDT images are clearly male or female, and any targeted response that replaces the subject with a pronoun should use a pronoun that matches the subject's gender. Exceptions may be made for babies and animals portrayed in the PDT; the gender is not evident, and any third person singular pronoun is acceptable. For many items, the gender of the subject is clear from the question (\textit{What is the man/woman/boy/girl doing?}). Some items present a human subject in non-gendered terms, however, such as \textit{the nurse}, \textit{the teacher} and \textit{the doctor}. In these cases, annotators should check the image to ensure that appropriate gender pronouns are used. Pronouns should also match the subject in number, and all subjects in the PDT are singular. When a response presents a subject with a non-matching pronoun, annotators should mark this as \textit{no} for answerhood, because it is not possible to know if the response was indeed an attempt to answer the question asked. 
+
+\paragraph{Misspellings}
+\label{para:answerhood-misspellings}
+The answerhood feature addresses whether or not a response \textit{makes an attempt} to answer the PDT question, so misspellings do not automatically result in a \textit{no} annotation. 
+
+Annotators should be strict in handling misspelled subjects for targeted items. The subject is provided on screen for the participant, so misspellings should be avoidable. Only misspellings that are very clearly typos should be accepted here, such as \textit{t.he girl}. Misspellings that change the subject or leave it ambiguous in any way should be rejected. Pronouns must be properly spelled, but pronoun contractions that simply omit or misuse an apostrophe (e.g., \textit{Its} for \textit{It is}) should be accepted.
+
+Verbs, even when misspelled, should appear to have the appropriate form (i.e., progressive). Annotators should be lenient with regard to misspelled verbs when a response appears to attempt to answer the question, even if the intended verb is not obvious. For example, \textit{The boy is steeaching his arms in bed} should be accepted, despite the badly misspelled attempt at \textit{stretching}.
+
+When other elements of a response are misspelled, annotators should be lenient. The key consideration should be whether or not the response attempts to answer the question.
+
+\subsection{Grammaticality} \label{subsec:grammaticality}
+The grammaticality feature primarily considers the following question: \textit{Exactly as written, does the response convey a proposition and does it lack any grammar or spelling errors?}
+
+\subsubsection{Non-contextuality of grammaticality} This feature considers only the response, regardless of the item or question. In other words, a response that is grammatical but  irrelevant given the specific item image and question should still be annotated as \textit{yes} for this feature.
+
+However, grammaticality should be annotated within the bounds of the very general context of the task; the PDT elicits descriptions of common events, so responses should convey a proposition and be grammatical when interpreted accordingly.
+
+Moreover, the item question may be taken into consideration when it is necessary for assessing the grammaticality of a particular response. Responses to targeted questions (\textit{What is the X doing}), for example, commonly drop the subject. Such responses can be grammatical; see Section~\ref{subsubsec:gram-incomplete-sentences}.
+
+\subsubsection{Defining \feat{grammaticality}} For the current annotation purposes, a \textit{grammatical} response is one that is free from grammar errors or misspellings, and conveys a reasonable meaning (given the very general context of the task). Grammar errors come in many forms, including omitted words, out-of-place words, incorrect word forms, and syntactic disagreement, among others. This feature does not directly consider \textit{meaning}. However, the events depicted in the PDT images are all common, unsurprising events that might occur under normal circumstances, and a response that requires an unreasonable interpretation in order to be grammatical should be annotated \textit{no} for grammaticality. For example, \textit{The boy is dancing on music} is probably not grammatical without resorting to a fairly unusual interpretation -- perhaps involving a boy dancing on a floor covered with sheet music or vinyl records.
+
+Annotators will need to make judgment calls, but should be lenient in judging grammaticality and the necessary interpretation of meaning. If there is a reasonable reading of the sentence under which it is grammatical (and has none of the specific grammaticality problems outlined below), it should be annotated as \textit{yes}. (Annotators should keep in mind that concerns other than grammar are likely to be captured under the annotation of other features.) For example, consider this response to the item in Figure~\ref{fig:dance}: \textit{A boy listens to music and dancing}. Given the image, one could point out that the meaning conveyed by the response is not the intended meaning (presumably \textit{A boy listens to music and (he) dances}), and thus argue that the response is ungrammatical. However, because the response is not ungrammatical without the item context, and it conveys an arguably reasonable meaning, such a response should be annotated \textit{yes}. This also commonly applies to responses that use an incorrect (but grammatical) pronoun. For example, \textit{The boy is talking to her brother}, in response to Figure~\ref{fig:ask-question} (where no female is pictured or otherwise indicated as a potential antecedent to \textit{her}), should be annotated \textit{yes} for grammaticality.
+
+\subsubsection{Incomplete sentences} \label{subsubsec:gram-incomplete-sentences} Although the task asks participants to provide a complete sentence, incomplete sentences (which are mostly verb phrases among the data) may nonetheless be annotated as \textit{yes} for grammaticality, so long as the content of the response is indeed grammatical. For example, \textit{eating pizza} is an incomplete sentence but a grammatical response. This also applies to any one word responses, but as explained in Section~\ref{para:non-propositional}, a grammatical response should be interpretable as a proposition. For example, \textit{eating} should be considered a grammatical response, because it conveys some propositional meaning, but \textit{pizza} is not grammatical here because it does not indicate any action or event. Incomplete sentences are subject to all of the same grammaticality considerations as complete sentences.
+
+\subsubsection{Punctuation and capitalization} Responses have been converted to all lowercase letters. Final punctuation has been removed from most responses. Annotators should ignore these concerns when annotating grammaticality. 
+
+Sentence-internal punctuation should be considered for this feature, but annotators should be lenient and keep in mind that many punctuation decisions may simply be a matter of style rather than grammar. Punctuation (or lack thereof) that results in ambiguity or leads the annotator to question the overall grammaticality of the sentence should result in a \textit{no} annotation for the response. Annotators should use their own best judgment in assessing such cases.
+
+\subsubsection{Common grammaticality concerns}
+
+\paragraph{Events and activities}
+\label{para:gram-events} In some cases, a noun phrase may be an adequate and natural response to the PDT questions. For targeted items (\textit{What is the X doing?}), a response in the form of a noun or noun phrase that can be \textit{done} should be considered grammatical. For example, \textit{gymnastics}, \textit{origami} and \textit{the laundry} are acceptable in response to \textit{What is the woman doing?}. Likewise, for untargeted items, a response in the form of a noun or noun phrase that can \textit{happen} should be accepted. For example, \textit{an interview}, \textit{a volleyball game} and \textit{a math class} are acceptable responses to \textit{What is happening?}.
+
+For targeted and untargeted items, such event and activity responses should be properly formed as a grammatical response to the question, with any necessary determiners or articles. For example, \textit{a baseball game} should be accepted in response to the question \textit{What is happening?}, but \textit{baseball} and \textit{baseball game} should not.
+
+\paragraph{Non-propositional responses} \label{para:non-propositional} A response that lacks a grammatical interpretation \textit{as a proposition} should be annotated \textit{no} for grammaticality. A proposition typically requires a verb and a subject; for the current task, a response may be judged as grammatical if it lacks a subject so long as it indicates an action or event. Non-propositional responses do not fit the general context of the task. These responses typically lack a verb and some appear to be well-formed noun phrases, such as \textit{A boy with pizza}.
+
+\paragraph{Bare nouns} A bare noun that is missing a determiner should result in a \textit{no} for grammaticality. Examples include \textit{Boy is eating pizza} and \textit{A man is delivering package}.
+
+\paragraph{Missing \textit{be} verbs} Common among the data are responses that omit a necessary copula (or \textit{be} verb). These often result in what could be interpreted as well-formed noun clauses, such as \textit{A little boy eating pizza}. If, as in this case (and most others), one can reasonably assume that the apparent noun clause is an ungrammatical expression of a copular sentence (\textit{A little boy \textbf{is} eating pizza}), the response should be annotated \textit{no} for grammaticality. 
+
+Note that incomplete sentences that omit the subject may also omit a \textit{be} verb. In other words, while \textit{A little boy eating pizza} should be annotated \textit{no} for grammaticality, simply \textit{eating pizza} may be annotated as \textit{yes} if appropriate. (See Section~\ref{subsubsec:gram-incomplete-sentences}.)
+
+\paragraph{Misspellings} Misspellings generally result in a \textit{no} for grammaticality. Misspellings sometimes result in real but unintended words, so it is not always clear if a word is in fact a misspelling. A response containing a suspected real word misspelling should be annotated \textit{no} for grammaticality only if it results in a grammar error.
+
+Some responses use proper names for persons, places or objects in the images. When a proper noun appears to be misspelled, annotators should be less strict. If the proper noun is reasonably interpretable, the response should still be annotated \textit{yes}, provided it has no other disqualifying problems. Annotators should use their own judgment in assessing such cases.
+
+
+\subsection{Interpretability} \label{subsec:interpretability}
+The interpretability feature primarily considers the following question: \textit{Exactly as written, is the response interpretable enough to evoke a clear image?} 
+
+\subsubsection{Semi-contextuality of interpretability} \label{subsubsec:semicontext-interp} This feature is largely non-contextual, but because the task asks participants about events, responses must convey a proposition. In other words, a response must be interpretable as an event, or as a statement about the state of affairs in the image. Annotators may find it useful to view the PDT image, but interpretability should be judged without regard to its contents; to meet the criteria for this feature, a response should evoke \textit{an image}, regardless of how similar that image is to \textit{the image} in the PDT.
+
+For targeted items only, when the subject of the response is omitted, it should generally be understood to be the same subject given in the targeted question. (This is not appropriate for \textit{all} responses that lack a subject, and annotators should use their judgment to decide if the respondent intended the subject to be understood.) For example, \textit{eating pizza} should be annotated as interpretable (according to the criteria below) as a response to the targeted question, \textit{What is the boy doing?}
+
+In contrast, for the untargeted question (\textit{What is happening?}), a response like \textit{eating pizza} would not be interpretable, because a reader could not confidently conjure an image of the subject. (See Section~\ref{para:interp-incomplete} for more discussion of incomplete sentences.)
+
+\subsubsection{Defining \feat{interpretability}} The interpretability feature is concerned with whether or not a response can be adequately understood and visualized. Because a response is based on an image, its interpretation should evoke a concrete image. A response should be considered interpretable if it A) includes any arguments that are syntactically required by the verb, and B) provides enough semantic content to derive a reasonably specific, unambiguous illustration.
+
+\paragraph{Verb arguments} \label{para:interp-arguments} For this first requirement, \textit{A man is delivering a package to a woman} is interpretable. \textit{Delivering} is used as a ditransitive verb here, and all syntactically required arguments are specified; the sentence has a subject, direct object and indirect object. \textit{The man is delivering a package} should also be considered interpretable. This sentence does not include an indirect object, but in this transitive use of \textit{deliver}, the syntax does not require one. However, \textit{A man is delivering} is not interpretable, because the verb \textit{deliver} is missing one or more syntactically necessary arguments. This consideration requires a grammaticality judgment on the part of annotators. Annotators may have differing judgments with regard to the arguments required by given verbs; this is expected. Native speakers would likely agree that \textit{The man is cooking} is grammatical as is (without an object), and that \textit{The girl is telling} is not grammatical, because it requires an object (or more context). However, native speakers may disagree on the grammaticality of sentences like \textit{The boy is washing} or \textit{The woman is buying}.
+
+\paragraph{Content and composition} Interpretable responses are statements that could be illustrated with a canonical composition, without the need to infer any critical elements. Responses that provide only a broad description are likely to fail this criterion. A sentence like \textit{The man is working} is not specific enough to evoke a clear image. An illustrator could show a man picking fruit, building a bridge, typing at a computer, etc., so long as the image contained a man doing some kind of work. A significant amount of information concerning the action in the image would need to be inferred.
+
+Likewise, a sentence that uses vague references (\textit{someone/something}, unspecified \textit{it}, etc.) for essential elements or simply leaves them out is not interpretable. Such a response could not be illustrated as a canonical, representational painting, because some essential elements would have to be guessed or inferred. The response could, however, be represented as an abstract painting. 
+
+It may be helpful for annotators to think of this as ``The Norman Rockwell Rule.'' That is, \textit{Would Norman Rockwell illustrate this response?} Straightforward composition and a clear representational style are hallmarks of Rockwell's paintings. A response like \textit{The man is delivering a package to a woman} fits this style of illustration. \textit{A man is delivering a package} also fulfills the Rockwell Rule, because a painting of a delivery man leaving a package in a mailbox or on a doorstep could easily be imagined as a Rockwell painting. (Annotators should keep in mind that interpretability annotation should not be influenced by the PDT image and the image evoked by the response is not judged here for how well it matches the actual PDT image.) For a response like \textit{Someone is delivering things to a woman}, a Rockwell painting simply would not fit; both the deliverer and the thing being delivered would have to be out of frame, obscured, somehow abstracted, or purely guessed at. Annotators should rely on their own judgment when considering these content and composition concerns.
+
+\subsubsection{Common interpretability concerns}
+
+\paragraph{Grammar and spelling} \label{para:interp-grammar} Grammar and spelling problems do not automatically result in a \textit{no} here; these concerns are covered by the grammaticality feature. Major or multiple grammar or spelling problems are likely to result in an uninterpretable sentence, but minor grammar or spelling problems may leave a sentence's interpretation intact. Annotators will vary in judging the severity of such problems, but in general, an annotator should mark a response as \textit{yes} for interpretability only when he or she can be reasonably confident in the intended meaning. In other words, a grammar or spelling problem that could be corrected in multiple ways to result in multiple reasonable corrected sentences should be marked \textit{no} for interpretability. As a reminder, for this feature, responses should be judged blindly, without influence from the image or previously seen responses.
+
+For example, \textit{The boy is danceing} contains a spelling error, but a reader can be quite confident that the intended meaning is \textit{dancing}. \textit{The boy is dacing}, however, would likely be judged uninterpretable, because without more context, the error has numerous plausible candidates for correction -- \textit{racing, pacing, daring}, etc.
+
+Responses that contain contradictory information should generally be marked \textit{no} for interpretability, but annotators should use their own discretion in handling these cases. Such problems often take the form of a noun phrase containing disagreement. For example, in \textit{The man is giving the package to a women}, it is impossible to determine if the indirect object would be illustrated as one woman or multiple women. If an annotator feels confident that other information in the response disambiguates the intended meaning, the annotator may rate the response \textit{yes} for interpretability. For example, in \textit{A young girls feeds a tasty carrot to her pony}, the determiner, the verb form and the later singular pronoun all indicate that \textit{girls} should be singular here.
+
+Annotators should be lenient with subject-verb disagreement, unless they feel that such disagreement derails the interpretation of the response. For example, \textit{The children is playing ball} is unambiguous, despite the error.
+
+\paragraph{Incomplete sentences} \label{para:interp-incomplete} Incomplete sentences should be annotated \textit{yes} for interpretability, so long as they fulfill the requirements explained above.
+
+In general, responses may rely on information understood from the question. This means that for targeted items, where the question is of the form \textit{What is X doing?}, \textit{X is} may be understood for responses like \textit{washing the car} or \textit{jogging}. For certain responses, like \textit{the laundry} or \textit{the foxtrot}, \textit{X is doing} can be understood instead. In these cases, note that the response must be an action or event that is commonly described as being \textit{done}; \textit{do the laundry} is common expression, while \textit{do the baseball game} is not. 
+
+Untargeted responses may also rely on information understood from the question, \textit{What is happening?} In these cases, \textit{is happening} may be understood when appropriate. This means that noun phrases that can \textit{happen} as events may be judged as interpretable, provided they otherwise fulfill the requirements of the feature. Therefore, \textit{A fight between a cat and a dog} would probably be marked \textit{yes} for interpretability, because it can \textit{happen} and it contains adequate information about the event participants. However, \textit{A fight}, which can also \textit{happen}, would be marked \textit{no}, because it cannot be illustrated confidently without more information.
+
+Also common among the data are noun phrases resulting from a sentence with an omitted copular verb (\textit{be}), such as \textit{A man delivering a package} (as opposed to \textit{A man \textbf{is} delivering a package}). An omitted copula generally does not affect comprehension, so such a response should be annotated \textit{yes} for interpretability, provided it meets the above requirements for this feature.
+
+Other forms of incomplete sentences appear in the data. Annotators should use their best judgment for these, but keep in mind that it is difficult for incomplete sentences to satisfy the criteria, especially for untargeted items, where very little information can be understood from the question.
+
+\paragraph{States and actions} \label{para:interp-question} The PDT is designed to elicit responses that describe an action; as a result, most responses contain an active verb. Some responses, however, describe a state of affairs in the image, such as \textit{The boy is wearing a green shirt} or \textit{The boy is ready to eat his pizza}. Responses that describe a state are nonetheless interpretable, so long as they fulfill the remaining criteria.
+
+\paragraph{Questions and modals} \label{para:interp-question} A small number of responses among the data take the form of a question. Some of these responses nonetheless present an assertion. For example, \textit{Why is the baby crying?} indicates that \textit{the baby is crying}. This response should be annotated \textit{yes} for interpretability, because the assertion it contains meets the criteria for interpretability.
+
+Some responses in the form of a question lack an assertion that can be judged for interpretability, e.g., \textit{Do you think the boy likes pizza?} Such responses are not interpretable.
+
+Responses that use modality may be considered interpretable if the modality does not affect information crucial to producing a visual representation. For example, in \textit{The boy is eating so much pizza he may get fat}, it is stated as fact that a boy is eating pizza, so this could be visually represented. The modal part of this sentence contains unnecessary detail and could be ignored. In contrast, in \textit{The man may be proposing marriage to the woman} the modality has scope over the whole predicate, so this response should be marked \textit{no} for interpretability. (The man \textit{may} be proposing marriage to the woman, but there is no limit to the number of things he \textit{may} be doing.)
+
+\paragraph{First and second person} All entities in the PDT items should be represented in the third person. Responses that use the first or second person to indicate a participant in the image should be considered uninterpretable. For example, \textit{A young man will mail a package for you} should be marked \textit{no}. 
+
+\paragraph{Slang} Some responses contain what may be considered slang. Such responses are interpretable if they meet the other requirements for interpretability. For example, \textit{The boy is getting his groove on} would probably be taken to mean that the boy is dancing intensely and could thus be considered interpretable. A response that contains unclear or unknown slang should be considered uninterpretable. Annotators must rely on their own judgment regarding slang.
+
+\paragraph{Impossible or unknowable information} All PDT items consist of a single image. They present information in a straightforward manner and are almost completely devoid of any text, signs or symbols. Thus all responses should present information that can be learned from such an image. Responses that present important information (not details) that could not be known from or represented with a single image should be marked \textit{no} for interpretability. For example, \textit{He is sending a box to a woman} could not be easily represented in a single image, as the man sending the box and the woman receiving the box would be in different locations. Moreover, the man and woman (and box) are arguably equally important arguments, so choosing whether to omit the subject or indirect object when illustrating the image would be problematic.
+
+Responses that present an interpretable proposition but embellish it with unknowable details should be considered interpretable. (Note that concerns about unverifiable information are captured under the verifiability feature.) For example, \textit{As the man hands the package to the woman, their eyes meet and a passionate romance ensues} presents a simple, illustratable event -- a man handing a package to a woman, perhaps while making eye contact. The remaining details are unnecessary for assessing interpretability. Annotators must use their own judgment in such cases.
+
+
 \subsection{Verifiability} \label{subsec:verifiability}
 
 The verifiability feature primarily considers the following question: \textit{Exactly as written, is all information in the response verifiable (or reasonably inferred) based on the image?}
@@ -443,7 +653,7 @@ If, after removing the modal portions, a response is not verifiable, it should b
 
 Similarly, some creative responses assign names or other unknowable descriptors to persons in the PDT images. Such responses should be annotated \textit{no} for verifiability.
 
-Some unverifiable inferences are arguably unavoidable based on the PDT item. For example, Figure~\ref{fig:ask-question} depicts a male child speaking to a male adult. Few participants could be expected to describe these figures as \textit{a male child} and \textit{a male adult} or something similarly unnatural. Instead, the image lends itself to reasonable inferences that describe the figures based on a relationship: a father and son, a big brother and little brother, or a student and teacher would all be reasonable and practically unavoidable inferences. 
+Some unverifiable inferences are arguably unavoidable based on the PDT item and should be accepted. For example, Figure~\ref{fig:ask-question} depicts a male child speaking to a male adult. Few participants could be expected to describe these figures as \textit{a male child} and \textit{a male adult} or something similarly unnatural. Instead, the image lends itself to reasonable inferences that describe the figures based on a relationship: a father and son, a big brother and little brother, or a student and teacher would all be reasonable and practically unavoidable inferences. 
 
 Responses may contain other ``creative'' inferences, like \textit{He is asking the man where babies come from} (Figure~\ref{fig:ask-question}). This information is not verifiable, so the response is annotated \textit{no} for this feature.
 
@@ -454,212 +664,9 @@ In the second example response, \textit{He's eating pizza, yuck}, the word \text
 \subsubsection{Irrelevant information} 
 A less common problem to be considered under this feature is the presentation of irrelevant information. A response should be annotated \textit{no} for verifiability if it contains mostly irrelevant information, given the item. In Figure~\ref{fig:eat-pizza}, the third response, \textit{He will get fat eating pizza}, should be annotated \textit{no} because the event described is not relevant based on the PDT image and question.
 
-
-\subsection{Answerhood} \label{subsec:answerhood}
-
-The answerhood feature primarily considers the following question: \textit{Exactly as written, does the response make an attempt to answer the specific question asked?}
-
-\subsubsection{Contextuality of answerhood} Annotation for the answerhood feature is contextual; it must consider the question presented in the item. The image is mostly irrelevant and is only used for targeted items to confirm that when a response replaces the subject with a pronoun, an appropriate pronoun is used.
-
-\subsubsection{Defining \feat{answerhood}} As noted above, responses should address the specific question in the prompt. In other words, the response must answer the exact question given; merely answering a \textit{similar} or \textit{related} question is not adequate. Responses should make a positive assertion; responses that merely point out a negative fact are not acceptable (e.g., \textit{The boy is not wearing a helmet}.) In general, because all of the PDT questions use a present progressive verb, responses should either use a present progressive verb \textit{or} indicate an imminent action; see Section~\ref{subsubsection:answerhood-verbs}. Figure~\ref{fig:answerhood-examples} presents a number of example responses and answerhood annotations. 
-
-
-\begin{figure}[h!]
-\begin{center}
-\begin{tabular}{|r|l|c|l|}
-\hline
-\multicolumn{4}{|c|}{\includegraphics[width=0.4\columnwidth,trim=-4 0 -4 -4]{figures/ex01.jpg}}\\
-\hline
-& \textbf{Response} & \textbf{An.} & \textbf{Appropriate question} \\
-\hline
-1 & Giving a patient flowers. & yes & (prompt) \\
-\hline
-2 & She's giving flowers to a patient. & yes & (prompt) \\
-\hline
-3 & The nurse is giving away flowers. & yes & (prompt) \\
-\hline
-4 & A nurse is giving away flowers. & no & What is happening? \\
-\hline
-5 & A young nurse is giving away flowers. & no & What is happening? \\
-\hline
-6 & The woman is giving the patient flowers. & no & What is the woman doing? \\
-\hline
-7 & The nurse is happy. & no & How is the nurse? \\
-\hline
-8 & The nurse is smiling. & yes & (prompt) \\
-\hline
-9 & The nurse gives flowers away. & no & What does the nurse do? \\
-\hline
-10 & The nurse gave the patient roses. & no & What did the nurse do? \\
-\hline
-11 & The young nurse is giving out flowers. & no & What is the young nurse doing? \\
-\hline
-12 & The smiling nurse is giving away roses. & no & What is the smiling nurse doing? \\
-\hline
-13 & This nurse is giving away flowers. & no & What is this nurse doing? \\
-\hline
-14 & That nurse is giving her patient flowers. & no & What is that nurse doing? \\
-\hline
-15 & Nurse is giving away flowers. & no & What is Nurse doing? \\
-\hline
-16 & The patient is receiving roses from the nurse. & no & What is the patient doing?\\
-\hline
-%17 & The nurse is about to give the woman roses. & no & What is the nurse about to do? \\
-%\hline
-\end{tabular}
-\end{center}
-\caption{Example responses to targeted Item 2 (\textit{What is the nurse doing?}) and their answerhood annotations (\textit{An}). A particular response could be appropriate for multiple questions, but a likely example is given for each.}
-\label{fig:answerhood-examples}
-\end{figure}
 \clearpage
 
 
-\subsubsection{Accuracy} Answerhood should be annotated without regard to the accuracy of the response. Consider Figure~\ref{fig:eat-pizza} for example. The targeted version asks \textit{What is the boy doing?}; the response \textit{He's eating a sandwich} should be annotated \textit{yes} because it does attempt to answer the question, even though the boy is clearly eating pizza. Moreover, \textit{The boy is riding a bicycle} would also be annotated \textit{yes}, despite the fact that no bicycle appears. The accuracy of the response is accounted for with the core event and verifiability features.
-
-\subsubsection{Targeted vs. untargeted items} The answerhood feature, like \feat{core event}, is dependent on the differences in the targeted and untargeted versions of the items. In other words, a sentence that may receive a \textit{no} annotation as a targeted response could receive a \textit{yes} annotation as an untargeted response. (The opposite should not be possible, as the targeted version of an item always asks a more specific question than its untargeted counterpart.) For example, consider Figure~\ref{fig:deliver-package} and the targeted and untargeted questions: \textit{What is the man doing?} and \textit{What is happening?} The response \textit{The man is delivering a package} would be annotated \textit{yes} for answerhood for either version, while \textit{The woman is receiving a package} would be annotated \textit{yes} only for the untargeted version.
-
-%\subsubsection{Common answerhood concerns}
-
-\subsubsection{Verb forms}
-\label{subsubsection:answerhood-verbs}
-The PDT items ask what \textit{is happening} or what a particular figure in the image \textit{is doing}, and these present progressive verb forms limit the range of acceptable responses. For the purposes of answerhood, acceptable responses should either employ a progressive verb form,  indicate imminent action, or present an appropriate event. These forms and related considerations are explained below.
-
-\paragraph{Progressive verbs} The majority of responses use a dynamic verb in the progressive form. Dynamic verbs are appropriate for responses because they describe an event or action that happens and typically has a beginning and end. Dynamic verbs often take the (present) progressive form (\textit{(is) eating}, \textit{(is) dancing}). This is in contrast with stative verbs, which are inappropriate for this task as they describe a state or condition. Stative verbs cannot be used in the progressive form (with rare and arguably non-stative exceptions). Roughly speaking, stative verbs can be categorized as verbs of cognition (\textit{Susan knows karate}; \textit{Sabrina believes in the team}) and verbs of relation (\textit{Josh resembles his father}). Responses that rely on a stative verb should be annotated \textit{no} for answerhood. These responses (and any others) that simply describe a state of affairs in the image should be annotated \textit{no}, because they do not directly answer the question. For example, \textit{The boy loves pizza}, a response to Item 2 (Figure~\ref{fig:eat-pizza}) is annotated \textit{no} for answerhood, because it does not directly answer the question. Likewise, \textit{The nurse seems happy}, shown in Figure~\ref{fig:answerhood-examples}, should receive a \textit{no} annotation (for both the targeted and untargeted versions) because it describes a state depicted in the image but does not directly answer the question of what the nurse is \textit{doing}.
-
-Although most responses use a present progressive verb (e.g., \textit{He \textbf{is eating} pizza}), responses using the simple present form of a verb (\textit{He eats pizza}) are also common among the data. This form is commonly used to describe general truths or habitual actions, like \textit{The horse eats grass} or \textit{The river flows east}. Responses that use the simple present should be annotated \textit{no} for answerhood. In most situations, in English the simple present would not be used to describe the actions in the PDT items, and particularly not in response to the present progressive questions in the PDT.
-
-With the exception of \textit{event} responses (see Section~\ref{subsubsection:answerhood-events}) and \textit{imminent action} responses (see Section~\ref{subsubsection:answerhood-imminent}), responses that lack a progressive verb should be annotated \textit{no}, even if this is the only problem with the response. For example, \textit{The boy is hold a pizza} and \textit{The boy seems to eat pizza} would both be annotated \textit{no}. The mere appearance of a progressive form verb in a response does not automatically satisfy the answerhood feature, however. The necessary progressive verb must appear in a linguistic context that indicates that the verb directly responds to the question. For \textit{What is the dog doing?}, for example, the response \textit{The dog likes to chase the running cat} contains a progressive verb form, but not in a context that satisfies the answerhood feature.
-
-Responses that omit a \textit{be} verb but include a progressive verb form in an otherwise appropriate context (e.g., \textit{The boy holding a pizza}) should generally be annotated \textit{yes} for answerhood. (The grammatical concerns are covered with the grammaticality feature.)
-
-For handling misspelled verbs, see Section~\ref{para:answerhood-misspellings}
-
-\subsubsection{Events and activities}
-\label{subsubsection:answerhood-events} In some cases, a noun phrase may be an adequate and natural response to the PDT questions. For targeted items (\textit{What is the X doing?}), a response in the form of a noun or noun phrase that can be \textit{done} should be accepted. For example, \textit{gymnastics}, \textit{origami} and \textit{the laundry} are acceptable in response to \textit{What is the woman doing?}. Likewise, for untargeted items, a response in the form of a noun or noun phrase that can \textit{happen} should be accepted. For example, \textit{an interview}, \textit{a volleyball game} and \textit{a math class} are acceptable responses to \textit{What is happening?}.
-
-For targeted and untargeted items, such event and activity responses should be properly formed as a grammatical response to the question, with any necessary determiners or articles. Grammar is not strictly considered for answerhood, but because these responses tend to be very short, proper form is used to differentiate between low-effort responses and those that appear to offer a thoughtful answer to the question. Such low-effort responses may simply describe some element of the image without considering the question. For example, \textit{a baseball game} should be accepted in response to the question \textit{What is happening?}, but \textit{baseball} and \textit{baseball game} should not.
-
-\subsubsection{Imminent actions}
-\label{subsubsection:answerhood-imminent}
-Some responses describe the item in terms of an imminent action rather than a progressive action, e.g., \textit{The boy is about to eat the pizza}. Such imminent action responses are common among the responses from both native and non-native speakers. Some items elicit more of this type of response than others; Figure~\ref{fig:eat-pizza}, for example, shows a boy holding a slice of pizza near his mouth. Perhaps because the \textit{eating} action has not yet begun here, many responses indicate this as an imminent action rather than a progressive action. In general, responses that describe the subject's state in relation to an imminent action should be accepted, provided they otherwise fulfill the requirements for answerhood. However, responses that use a future aspect to describe the actions (e.g., \textit{The boy will eat the pizza}) do \textit{not} meet the requirements for answerhood.
-
-Some responses do use a progressive form to indicate an imminent action, such as \textit{The boy is fixin' to eat the pizza} and \textit{The doctor is preparing to treat the patient}. Such responses should be annotated \textit{yes}, and annotators should be flexible in accepting variations and informal forms; for example, \textit{preparing, fixin', fixin}, and \textit{gonna} are all acceptable here.
-
-In general, responses that describe the subject's state in relation to an imminent action are acceptable, with or without a progressive form. This includes responses that use these phrases (or others like them) followed by an action: \textit{is ready to, is getting ready to, is preparing to, is fixing to, is about to, is gonna}, etc. In the case of \textit{ready to} and \textit{about to}, because these expressions lack an actual verb, they must be preceded by a copular verb (\textit{is, seems}, etc.), which cannot be dropped. Likewise, the subject cannot be dropped. For example, \textit{preparing to eat the pizza} is acceptable in response to the question, \textit{What is the boy doing?}, but \textit{about to eat the pizza} is not acceptable.
-
-
-\paragraph{Targeted subject variations and pronouns}
-All targeted questions take the form of \textit{What is the X doing?}. Responses should use the same subject provided in the question, or an appropriate pronoun. This subject should be in the subject position of the response; if the response contains only a predicate, the subject of the question should be understood as the subject of the response. Responses should not alter the subject in any way, or move it from the subject position (as in passivization). This is in keeping with the requirement to answer the question exactly as it is asked. Several relevant examples are presented in Figure~\ref{fig:answerhood-examples}.
-
-To put this concisely, responses to targeted items must either repeat the subject exactly as presented in the question, or use an appropriate pronoun, or drop the subject so that it is understood from the question. To clarify, the subject should not be altered in terms of definiteness, number, specificity, role or any other characteristic. Such responses add context to the question, and in order to evaluate answerhood, this new information would need to verified to ensure that the subject presented in the response is indeed the subject provided in the question. Verifying information for the sake of answerhood adds noise and complication, so verifiability is left to its own feature. For answerhood purposes, \textit{a nurse} is not the same as \textit{the nurse}. Likewise, neither \textit{nurse}, \textit{the young nurse}, \textit{the blond nurse}, \textit{the nurse who is standing}, or \textit{this nurse} is the same as \textit{the nurse}. Additionally, a targeted subject should not be expanded to include other persons or entities; in response to \textit{What is the man doing?}, \textit{The man is greeting the woman} is acceptable, while \textit{The man and woman are saying hello} is not.
-
-Regarding pronouns, all humans presented in the PDT images are clearly male or female, and any targeted response that replaces the subject with a pronoun should use a pronoun that matches the subject's gender. Exceptions may be made for babies and animals portrayed in the PDT; the gender is not evident, and any third person singular pronoun is acceptable. For many items, the gender of the subject is clear from the question (\textit{What is the man/woman/boy/girl doing?}). Some items present a human subject in non-gendered terms, however, such as \textit{the nurse}, \textit{the teacher} and \textit{the doctor}. In these cases, annotators should check the image to ensure that appropriate gender pronouns are used. Pronouns should also match the subject in number, and all subjects in the PDT are singular. When a response presents a subject with a non-matching pronoun, annotators should mark this as \textit{no} for answerhood, because it is not possible to know if the response was indeed an attempt to answer the question asked. 
-
-\paragraph{Misspellings}
-\label{para:answerhood-misspellings}
-The answerhood feature addresses whether or not a response \textit{makes an attempt} to answer the PDT question, so misspellings do not automatically result in a \textit{no} annotation. 
-
-Annotators should be strict in handling misspelled subjects for targeted items. The subject is provided on screen for the participant, so misspellings should be avoidable. Only misspellings that are very clearly typos should be accepted here, such as \textit{t.he girl}. Misspellings that change the subject or leave it ambiguous in any way should be rejected. Pronouns must be properly spelled, but pronoun contractions that simply omit or misuse an apostrophe (e.g., \textit{Its} for \textit{It is}) should be accepted.
-
-Verbs, even when misspelled, should appear to have the appropriate form (i.e., progressive). Annotators should be lenient with regard to misspelled verbs when a response appears to attempt to answer the question, even if the intended verb is not obvious. For example, \textit{The boy is steeaching his arms in bed} should be accepted, despite the badly misspelled attempt at \textit{stretching}.
-
-When other elements of a response are misspelled, annotators should be lenient. The key consideration should be whether or not the response attempts to answer the question.
-
-\subsection{Interpretability} \label{subsec:interpretability}
-The interpretability feature primarily considers the following question: \textit{Exactly as written, is the response interpretable enough to evoke a clear image?} 
-
-\subsubsection{Semi-contextuality of interpretability} \label{subsubsec:semicontext-interp} This feature is largely non-contextual, but because the task asks participants about events, responses must convey a proposition. In other words, a response must be interpretable as an event, or as a statement about the state of affairs in the image. Annotators may find it useful to view the PDT image, but interpretability should be judged without regard to its contents; to meet the criteria for this feature, a response should evoke \textit{an image}, regardless of how similar that image is to \textit{the image} in the PDT.
-
-For targeted items only, when the subject of the response is omitted, it should generally be understood to be the same subject given in the targeted question. (This is not appropriate for \textit{all} responses that lack a subject, and annotators should use their judgment to decide if the respondent intended the subject to be understood.) For example, \textit{eating pizza} should be annotated as interpretable (according to the criteria below) as a response to the targeted question, \textit{What is the boy doing?}
-
-In contrast, for the untargeted question (\textit{What is happening?}), a response like \textit{eating pizza} would not be interpretable, because a reader could not confidently conjure an image of the subject. (See Section~\ref{para:interp-incomplete} for more discussion of incomplete sentences.)
-
-\subsubsection{Defining \feat{interpretability}} The interpretability feature is concerned with whether or not a response can be adequately understood and visualized. Because a response is based on an image, its interpretation should evoke a concrete image. A response should be considered interpretable if it A) includes any arguments that are syntactically required by the verb, and B) provides enough semantic content to derive a reasonably specific, unambiguous illustration.
-
-\paragraph{Verb arguments} \label{para:interp-arguments} For this first requirement, \textit{A man is delivering a package to a woman} is interpretable. \textit{Delivering} is used as a ditransitive verb here, and all syntactically required arguments are specified; the sentence has a subject, direct object and indirect object. \textit{The man is delivering a package} should also be considered interpretable. This sentence does not include an indirect object, but in this transitive use of \textit{deliver}, the syntax does not require one. However, \textit{A man is delivering} is not interpretable, because the verb \textit{deliver} is missing one or more syntactically necessary arguments. This consideration requires a grammaticality judgment on the part of annotators. Annotators may have differing judgments with regard to the arguments required by given verbs; this is expected. Native speakers would likely agree that \textit{The man is cooking} is grammatical as is (without an object), and that \textit{The girl is telling} is not grammatical, because it requires an object (or more context). However, native speakers may disagree on the grammaticality of sentences like \textit{The boy is washing} or \textit{The woman is buying}.
-
-\paragraph{Content and composition} Interpretable responses are statements that could be illustrated with a canonical composition, without the need to infer any critical elements. Responses that provide only a broad description are likely to fail this criterion. A sentence like \textit{The man is working} is not specific enough to evoke a clear image. An illustrator could show a man picking fruit, building a bridge, typing at a computer, etc., so long as the image contained a man doing some kind of work. A significant amount of information concerning the action in the image would need to be inferred.
-
-Likewise, a sentence that uses vague references (\textit{someone/something}, unspecified \textit{it}, etc.) for essential elements or simply leaves them out is not interpretable. Such a response could not be illustrated as a canonical, representational painting, because some essential elements would have to be guessed or inferred. The response could, however, be represented as an abstract painting. 
-
-It may be helpful for annotators to think of this as ``The Norman Rockwell Rule.'' That is, \textit{Would Norman Rockwell illustrate this response?} Straightforward composition and a clear representational style are hallmarks of Rockwell's paintings. A response like \textit{The man is delivering a package to a woman} fits this style of illustration. \textit{A man is delivering a package} also fulfills the Rockwell Rule, because a painting of a delivery man leaving a package in a mailbox or on a doorstep could easily be imagined as a Rockwell painting. (Annotators should keep in mind that interpretability annotation should not be influenced by the PDT image and the image evoked by the response is not judged here for how well it matches the actual PDT image.) For a response like \textit{Someone is delivering things to a woman}, a Rockwell painting simply would not fit; both the deliverer and the thing being delivered would have to be out of frame, obscured, somehow abstracted, or purely guessed at. Annotators should rely on their own judgment when considering these content and composition concerns.
-
-\subsubsection{Common interpretability concerns}
-
-\paragraph{Grammar and spelling} \label{para:interp-grammar} Grammar and spelling problems do not automatically result in a \textit{no} here; these concerns are covered by the grammaticality feature. Major or multiple grammar or spelling problems are likely to result in an uninterpretable sentence, but minor grammar or spelling problems may leave a sentence's interpretation intact. Annotators will vary in judging the severity of such problems, but in general, an annotator should mark a response as \textit{yes} for interpretability only when he or she can be reasonably confident in the intended meaning. In other words, a grammar or spelling problem that could be corrected in multiple ways to result in multiple reasonable corrected sentences should be marked \textit{no} for interpretability. As a reminder, for this feature, responses should be judged blindly, without influence from the image or previously seen responses.
-
-For example, \textit{The boy is danceing} contains a spelling error, but a reader can be quite confident that the intended meaning is \textit{dancing}. \textit{The boy is dacing}, however, would likely be judged uninterpretable, because without more context, the error has numerous plausible candidates for correction -- \textit{racing, pacing, daring}, etc.
-
-Responses that contain contradictory information should generally be marked \textit{no} for interpretability, but annotators should use their own discretion in handling these cases. Such problems often take the form of a noun phrase containing disagreement. For example, in \textit{The man is giving the package to a women}, it is impossible to determine if the indirect object would be illustrated as one woman or multiple women. If an annotator feels confident that other information in the response disambiguates the intended meaning, the annotator may rate the response \textit{yes} for interpretability. For example, in \textit{A young girls feeds a tasty carrot to her pony}, the determiner, the verb form and the later singular pronoun all indicate that \textit{girls} should be singular here.
-
-Annotators should be lenient with subject-verb disagreement, unless they feel that such disagreement derails the interpretation of the response. For example, \textit{The children is playing ball} is unambiguous, despite the error.
-
-\paragraph{Incomplete sentences} \label{para:interp-incomplete} Incomplete sentences should be annotated \textit{yes} for interpretability, so long as they fulfill the requirements explained above.
-
-In general, responses may rely on information understood from the question. This means that for targeted items, where the question is of the form \textit{What is X doing?}, \textit{X is} may be understood for responses like \textit{washing the car} or \textit{jogging}. For certain responses, like \textit{the laundry} or \textit{the foxtrot}, \textit{X is doing} can be understood instead. In these cases, note that the response must be an action or event that is commonly described as being \textit{done}; \textit{do the laundry} is common expression, while \textit{do the baseball game} is not. 
-
-Untargeted responses may also rely on information understood from the question, \textit{What is happening?} In these cases, \textit{is happening} may be understood when appropriate. This means that noun phrases that can \textit{happen} as events may be judged as interpretable, provided they otherwise fulfill the requirements of the feature. Therefore, \textit{A fight between a cat and a dog} would probably be marked \textit{yes} for interpretability, because it can \textit{happen} and it contains adequate information about the event participants. However, \textit{A fight}, which can also \textit{happen}, would be marked \textit{no}, because it cannot be illustrated confidently without more information.
-
-Also common among the data are noun phrases resulting from a sentence with an omitted copular verb (\textit{be}), such as \textit{A man delivering a package} (as opposed to \textit{A man \textbf{is} delivering a package}). An omitted copula generally does not affect comprehension, so such a response should be annotated \textit{yes} for interpretability, provided it meets the above requirements for this feature.
-
-Other forms of incomplete sentences appear in the data. Annotators should use their best judgment for these, but keep in mind that it is difficult for incomplete sentences to satisfy the criteria, especially for untargeted items, where very little information can be understood from the question.
-
-\paragraph{States and actions} \label{para:interp-question} The PDT is designed to elicit responses that describe an action; as a result, most responses contain an active verb. Some responses, however, describe a state of affairs in the image, such as \textit{The boy is wearing a green shirt} or \textit{The boy is ready to eat his pizza}. Responses that describe a state are nonetheless interpretable, so long as they fulfill the remaining criteria.
-
-\paragraph{Questions and modals} \label{para:interp-question} A small number of responses among the data take the form of a question. Some of these responses nonetheless present an assertion. For example, \textit{Why is the baby crying?} indicates that \textit{the baby is crying}. This response should be annotated \textit{yes} for interpretability, because the assertion it contains meets the criteria for interpretability.
-
-Some responses in the form of a question lack an assertion that can be judged for interpretability, e.g., \textit{Do you think the boy likes pizza?} Such responses are not interpretable.
-
-Responses that use modality may be considered interpretable if the modality does not effect information crucial to producing a visual representation. For example, in \textit{The boy is eating so much pizza he may get fat}, it is stated as fact that a boy is eating pizza, so this could be visually represented. The modal part of this sentence contains unnecessary detail and could be ignored. In contrast, in \textit{The man may be proposing marriage to the woman} the modality has scope over the whole predicate, so this response should be marked \textit{no} for interpretability. (The man \textit{may} be proposing marriage to the woman, but there is no limit to the number of things he \textit{may} be doing.)
-
-\paragraph{First and second person} All entities in the PDT items should be represented in the third person. Responses that use the first or second person to indicate a participant in the image should be considered uninterpretable. For example, \textit{A young man will mail a package for you} should be marked \textit{no}. 
-
-\paragraph{Slang} Some responses contain what may be considered slang. Such responses are interpretable if they meet the other requirements for interpretability. For example, \textit{The boy is getting his groove on} would probably be taken to mean that the boy is dancing intensely and could thus be considered interpretable. A response that contains unclear or unknown slang should be considered uninterpretable. Annotators must rely on their own judgment regarding slang.
-
-\paragraph{Impossible or unknowable information} All PDT items consist of a single image. They present information in a straightforward manner and are almost completely devoid of any text, signs or symbols. Thus all responses should present information that can be learned from such an image. Responses that present important information (not details) that could not be known from or represented with a single image should be marked \textit{no} for interpretability. For example, \textit{He is sending a box to a woman} could not be easily represented in a single image, as the man sending the box and the woman receiving the box would be in different locations. Moreover, the man and woman (and box) are arguably equally important arguments, so choosing whether to omit the subject or indirect object when illustrating the image would be problematic.
-
-Responses that present an interpretable proposition but embellish it with unknowable details should be considered interpretable. (Note that concerns about unverifiable information are captured under the verifiability feature.) For example, \textit{As the man hands the package to the woman, their eyes meet and a passionate romance ensues} presents a simple, illustratable event -- a man handing a package to a woman, perhaps while making eye contact. The remaining details are unnecessary for assessing interpretability. Annotators must use their own judgment in such cases.
-
-
-\subsection{Grammaticality} \label{subsec:grammaticality}
-The grammaticality feature primarily considers the following question: \textit{Exactly as written, does the response convey a proposition and does it lack any grammar or spelling errors?}
-
-\subsubsection{Non-contextuality of grammaticality} This feature considers only the response, regardless of the item or question. In other words, a response that is grammatical but  irrelevant given the specific item image and question should still be annotated as \textit{yes} for this feature.
-
-However, grammaticality should be annotated within the bounds of the very general context of the task; the PDT elicits descriptions of common events, so responses should convey a proposition and be grammatical when interpreted accordingly.
-
-Moreover, the item question may be taken into consideration when it is necessary for assessing the grammaticality of a particular response. Responses to targeted questions (\textit{What is the X doing}), for example, commonly drop the subject. Such responses can be grammatical; see Section~\ref{subsubsec:gram-incomplete-sentences}.
-
-\subsubsection{Defining \feat{grammaticality}} For the current annotation purposes, a \textit{grammatical} response is one that is free from grammar errors or misspellings, and conveys a reasonable meaning (given the very general context of the task). Grammar errors come in many forms, including omitted words, out-of-place words, incorrect word forms, and syntactic disagreement, among others. This feature does not directly consider \textit{meaning}. However, the events depicted in the PDT images are all common, unsurprising events that might occur under normal circumstances, and a response that requires an unreasonable interpretation in order to be grammatical should be annotated \textit{no} for grammaticality. For example, \textit{The boy is dancing on music} is probably not grammatical without resorting to a fairly unusual interpretation -- perhaps involving a boy dancing on a floor covered with sheet music or vinyl records.
-
-Annotators will need to make judgment calls, but should be lenient in judging grammaticality and the necessary interpretation of meaning. If there is a reasonable reading of the sentence under which it is grammatical (and has none of the specific grammaticality problems outlined below), it should be annotated as \textit{yes}. (Annotators should keep in mind that concerns other than grammar are likely to be captured under the annotation of other features.) For example, consider this response to the item in Figure~\ref{fig:dance}: \textit{A boy listens to music and dancing}. Given the image, one could point out that the meaning conveyed by the response is not the intended meaning (presumably \textit{A boy listens to music and (he) dances}), and thus argue that the response is ungrammatical. However, because the response is not ungrammatical without the item context, and it conveys an arguably reasonable meaning, such a response should be annotated \textit{yes}. This also commonly applies to responses that use an incorrect (but grammatical) pronoun. For example, \textit{The boy is talking to her brother}, in response to Figure~\ref{fig:ask-question} (where no female is pictured or otherwise indicated as a potential antecedent to \textit{her}), should be annotated \textit{yes} for grammaticality.
-
-\subsubsection{Incomplete sentences} \label{subsubsec:gram-incomplete-sentences} Although the task asks participants to provide a complete sentence, incomplete sentences (which are mostly verb phrases among the data) may nonetheless be annotated as \textit{yes} for grammaticality, so long as the content of the response is indeed grammatical. For example, \textit{eating pizza} is an incomplete sentence but a grammatical response. This also applies to any one word responses, but as explained in Section~\ref{para:non-propositional}, a grammatical response should be interpretable as a proposition. For example, \textit{eating} should be considered a grammatical response, because it conveys some propositional meaning, but \textit{pizza} is not grammatical here because it does not indicate any action or event. Incomplete sentences are subject to all of the same grammaticality considerations as complete sentences.
-
-\subsubsection{Punctuation and capitalization} Responses have been converted to all lowercase letters. Final punctuation has been removed from most responses. Annotators should ignore these concerns when annotating grammaticality. 
-
-Sentence internal punctuation should be considered for this feature, but annotators should be lenient and keep in mind that many punctuation decisions may simply be a matter of style rather than grammar. Punctuation (or lack thereof) that results in ambiguity or leads the annotator to question the overall grammaticality of the sentence should result in a \textit{no} annotation for the response. Annotators should use their own best judgment in assessing such cases.
-
-\subsubsection{Common grammaticality concerns}
-
-\paragraph{Events and activities}
-\label{para:gram-events} In some cases, a noun phrase may be an adequate and natural response to the PDT questions. For targeted items (\textit{What is the X doing?}), a response in the form of a noun or noun phrase that can be \textit{done} should be considered grammatical. For example, \textit{gymnastics}, \textit{origami} and \textit{the laundry} are acceptable in response to \textit{What is the woman doing?}. Likewise, for untargeted items, a response in the form of a noun or noun phrase that can \textit{happen} should be accepted. For example, \textit{an interview}, \textit{a volleyball game} and \textit{a math class} are acceptable responses to \textit{What is happening?}.
-
-For targeted and untargeted items, such event and activity responses should be properly formed as a grammatical response to the question, with any necessary determiners or articles. For example, \textit{a baseball game} should be accepted in response to the question \textit{What is happening?}, but \textit{baseball} and \textit{baseball game} should not.
-
-\paragraph{Non-propositional responses} \label{para:non-propositional} A response that lacks a grammatical interpretation \textit{as a proposition} should be annotated \textit{no} for grammaticality. A proposition typically requires a verb and a subject; for the current task, a response may be judged as grammatical if it lacks a subject so long as it indicates an action or event. Non-propositional responses do not fit the general context of the task. These responses typically lack a verb and some appear to be well-formed noun phrases, such as \textit{A boy with pizza}.
-
-\paragraph{Bare nouns} A bare noun that is missing a determiner should result in a \textit{no} for grammaticality. Examples include \textit{Boy is eating pizza} and \textit{A man is delivering package}.
-
-\paragraph{Missing \textit{be} verbs} Common among the data are responses that omit a necessary copula (or \textit{be} verb). These often result in what could be interpreted as well-formed noun clauses, such as \textit{A little boy eating pizza}. If, as in this case (and most others), one can reasonably assume that the apparent noun clause is an ungrammatical expression of a copular sentence (\textit{A little boy \textbf{is} eating pizza}), the response should be annotated \textit{no} for grammaticality. 
-
-Note that incomplete sentences that omit the subject may also omit a \textit{be} verb. In other words, while \textit{A little boy eating pizza} should be annotated \textit{no} for grammaticality, simply \textit{eating pizza} may be annotated as \textit{yes} if appropriate. (See Section~\ref{subsubsec:gram-incomplete-sentences}.)
-
-\paragraph{Misspellings} Misspellings generally result in a \textit{no} for grammaticality. Misspellings sometimes result in real but unintended words, so it is not always clear if a word is in fact a misspelling. A response containing a suspected real word misspelling should be annotated \textit{no} for grammaticality only if it results in a grammar error.
-
-Some responses use proper names for persons, places or objects in the images. When a proper noun appears to be misspelled, annotators should be less strict. If the proper noun is reasonably interpretable, the response should still be annotated \textit{yes}, provided it has no other disqualifying problems. Annotators should use their own judgment in assessing such cases.
-
-\clearpage
 
 \subsection{Example items}
 
